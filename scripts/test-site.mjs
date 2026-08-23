@@ -51,6 +51,21 @@ const game = await readJson(latestGame.file);
 validateGame(game, { expectedDate: latestGame.date });
 assert(latestGame.date <= beijingDate(), "最新游戏日报日期不得晚于北京时间当天");
 
+const gameBriefs = [];
+for (const edition of gameManifest.editions) {
+  const brief = await readJson(edition.file);
+  validateGame(brief, { expectedDate: edition.date });
+  gameBriefs.push(brief);
+}
+for (let index = 1; index < gameBriefs.length; index += 1) {
+  const newer = gameBriefs[index - 1];
+  const older = gameBriefs[index];
+  for (const section of ["features", "news", "packs", "mods", "deals", "trends"]) {
+    const overlap = gameSectionOverlap(newer[section], older[section]);
+    assert(overlap < 0.9, `${newer.date} 与 ${older.date} 游戏日报 ${section} 重合率 ${(overlap * 100).toFixed(1)}%，疑似复制补档`);
+  }
+}
+
 assertThrows(() => assertGamePublishTime("2026-08-24", new Date("2026-08-24T10:59:59+08:00")), "游戏日报必须拒绝11:00前发布");
 assertThrows(() => assertMinshengPublishTime("2026-08-24", new Date("2026-08-24T10:59:59+08:00")), "民生日报必须拒绝11:00前发布");
 assertGamePublishTime("2026-08-24", new Date("2026-08-24T11:00:00+08:00"));
@@ -139,4 +154,10 @@ function titleOverlap(left, right) {
   const leftTitles = new Set(Object.values(left.sections).flat().map((story) => story.title.trim()));
   const rightTitles = Object.values(right.sections).flat().map((story) => story.title.trim());
   return rightTitles.filter((title) => leftTitles.has(title)).length / rightTitles.length;
+}
+function gameSectionOverlap(left, right) {
+  const identity = (item) => typeof item === "string" ? item.trim() : String(item.title || item.name || "").trim();
+  const leftItems = new Set(left.map(identity));
+  const rightItems = right.map(identity);
+  return rightItems.filter((item) => leftItems.has(item)).length / rightItems.length;
 }

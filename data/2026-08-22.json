@@ -4,53 +4,53 @@
   "backfilledAt": "2026-08-23T23:51:00+08:00",
   "cutoff": "2026-08-22 23:59（北京时间）",
   "dataWindow": "2026-08-21 00:00 — 2026-08-22 23:59",
-  "sources": ["游民星空", "MC百科", "MineBBS", "哔哩哔哩", "什么值得买", "Steam"],
+  "sources": ["游民星空", "MC百科", "MineBBS", "Modrinth", "Steam", "SteamDB"],
   "features": [
-    {"title":"《诡秘之主》开服首小时在线超 70 万","summary":"官方披露开服首小时新增玩家突破 100 万，同时在线人数超过 70 万；相关数据刷新快手游戏历史表现。","source":"游民星空／游戏官方","date":"2026-08-22","image":"game-brief-assets/feature-game.jpg","url":"https://www.gamersky.com/news/202608/2194300.shtml"},
-    {"title":"《勇者之章 III》领跑 8 月 22 日整合包热度观察","summary":"MC百科与国内视频社区的攻略、流程和讨论信号活跃；高难战斗、多路线职业构筑与 Boss 挑战持续吸引玩家。","source":"MC百科／哔哩哔哩","date":"2026-08-22","image":"game-brief-assets/feature-mc.jpg","url":"https://www.mcmod.cn/modpack/1054.html"}
+    {"title":"《使命召唤：现代战争 4》登顶 Steam 国区热销榜","summary":"测试抢先体验于 8 月 22 日开启；报道显示本作登上 Steam 国区热销榜首，覆盖 PC、PS5 与 Xbox Series 平台。","source":"游民星空／Steam","date":"2026-08-22","image":"game-brief-assets/2026-08-22-feature-game.jpg","url":"https://www.gamersky.com/news/202608/2194131.shtml"},
+    {"title":"《真理之路》领跑 8 月 22 日整合包热度观察","summary":"这套高难科技、魔法与冒险整合包在 MC百科保持较高浏览和推荐信号，任务线与资源管理讨论活跃。","source":"MC百科","date":"2026-08-22","image":"game-brief-assets/2026-08-22-feature-mc.jpg","url":"https://www.mcmod.cn/modpack/826.html"}
   ],
   "news": [
-    {"title":"《诡秘之主》首小时在线超 70 万","summary":"官方称新增玩家破 100 万，同时在线人数超过 70 万。","source":"游民星空／游戏官方","date":"2026-08-22","image":"game-brief-assets/news-01.jpg","url":"https://www.gamersky.com/news/202608/2194300.shtml"},
-    {"title":"海外制作人称赞《黑神话：钟馗》技术表现","summary":"拥有约 260 万粉丝的游戏视频作者 MaxMRM 发布实机演示观看与技术点评内容。","source":"游民星空／MaxMRM","date":"2026-08-22","image":"game-brief-assets/2026-08-22-news-02.jpg","url":"https://www.gamersky.com/news/202608/2194302.shtml"},
-    {"title":"PlayStation 中国再度介绍《影之刃零》","summary":"PlayStation 中国分享制作人梁其伟访谈，并表示游戏正逐步接近与玩家见面。","source":"游民星空／PlayStation 中国","date":"2026-08-22","image":"game-brief-assets/2026-08-22-news-03.jpg","url":"https://www.gamersky.com/news/202608/2194324.shtml"},
-    {"title":"《花满楼》Steam 好评率达 99%","summary":"国产真人互动影游 8 月 21 日上线，报道时评价为“好评如潮”。","source":"游民星空／Steam","date":"2026-08-22","image":"game-brief-assets/news-04.jpg","url":"https://www.gamersky.com/news/202608/2194355.shtml"},
-    {"title":"曝《GTA6》出现加油与维修交互","summary":"网传泄露片段展示轻量化载具选项；内容未获 Rockstar 官方确认。","source":"游民星空／海外社区（泄露）","date":"2026-08-22","image":"game-brief-assets/news-05.jpg","url":"https://www.gamersky.com/news/202608/2194333.shtml"},
-    {"title":"《The Duskbloods》测试反馈两极","summary":"部分测试玩家称 PVE 占比和移动手感超预期，也有人担忧长线内容与平衡。","source":"游民星空／玩家社区","date":"2026-08-22","image":"game-brief-assets/news-06.jpg","url":"https://www.gamersky.com/news/202608/2194279.shtml"},
-    {"title":"《隐藏真探》Steam Demo 上线","summary":"民国谍战真人互动影游开放试玩，多名《隐形守护者》演员参与。","source":"游民星空／Steam","date":"2026-08-22","image":"game-brief-assets/news-07.jpg","url":"https://www.gamersky.com/news/202608/2194319.shtml"},
-    {"title":"《湮灭之潮》剧情预告定档","summary":"国产动作冒险游戏首支剧情预告将于 8 月 26 日科隆展开幕夜公开。","source":"湮灭之潮官方 TapTap 论坛","date":"2026-08-22","image":"game-brief-assets/news-08.jpg","url":"https://www.taptap.cn/app/742190/topic?page=29"},
-    {"title":"百度地图上线《仙剑 3》龙葵双声线","summary":"红、蓝龙葵导航语音与对应主题车标正式上线。","source":"游民星空／百度地图","date":"2026-08-22","image":"game-brief-assets/news-09.jpg","url":"https://www.gamersky.com/news/202608/2194340.shtml"},
-    {"title":"法院批准调取 GTA6 泄露相关数据","summary":"纽约州法院批准司法传票申请，要求相关平台协助识别泄露主体。","source":"游民星空／法院公开文件","date":"2026-08-22","image":"game-brief-assets/news-10.jpg","url":"https://www.gamersky.com/news/202608/2194211.shtml"}
+    {"title":"《使命召唤：现代战争 4》登顶 Steam 国区热销榜","summary":"测试抢先体验于 8 月 22 日开启，报道时位列 Steam 国区热销榜首。","source":"游民星空／Steam","date":"2026-08-22","image":"game-brief-assets/2026-08-22-news-01.jpg","url":"https://www.gamersky.com/news/202608/2194131.shtml"},
+    {"title":"海外创作者称赞《黑神话：钟馗》技术表现","summary":"游戏视频作者 MaxMRM 分享演示观看与技术点评，聚焦画面与实时渲染表现。","source":"游民星空／MaxMRM","date":"2026-08-22","image":"game-brief-assets/2026-08-22-news-02.jpg","url":"https://www.gamersky.com/news/202608/2194302.shtml"},
+    {"title":"PlayStation 中国再度介绍《影之刃零》","summary":"PlayStation 中国分享制作人梁其伟访谈，并表示游戏正在逐步接近与玩家见面。","source":"游民星空／PlayStation 中国","date":"2026-08-22","image":"game-brief-assets/2026-08-22-news-03.jpg","url":"https://www.gamersky.com/news/202608/2194324.shtml"},
+    {"title":"韩国虚幻 5 动作新作《Woochi》公开演示","summary":"演示展示朝鲜时代背景下的法术、近战与怪物设计，成为科隆展期间关注的新作之一。","source":"游民星空／Nexon","date":"2026-08-22","image":"game-brief-assets/2026-08-22-news-04.jpg","url":"https://www.gamersky.com/news/202608/2194318.shtml"},
+    {"title":"《现代战争 4》Switch 2 版媒体试玩曝光","summary":"媒体测试聚焦掌机画面、帧率和操作适配，正式表现仍以发售版本为准。","source":"游民星空／媒体试玩","date":"2026-08-22","image":"game-brief-assets/2026-08-22-news-05.jpg","url":"https://www.gamersky.com/news/202608/2194306.shtml"},
+    {"title":"国产独立游戏《流浪狗：无人关心》获海外关注","summary":"海外媒体关注这款叙事独立游戏，其现实题材和手绘表现引发讨论。","source":"游民星空／IGN","date":"2026-08-22","image":"game-brief-assets/2026-08-22-news-06.jpg","url":"https://www.gamersky.com/news/202608/2194271.shtml"},
+    {"title":"《致命躯壳 2》加入游玩时长彩蛋","summary":"开发团队设置随累计游玩时间触发的隐藏内容，鼓励玩家探索多周目细节。","source":"游民星空／开发团队","date":"2026-08-22","image":"game-brief-assets/2026-08-22-news-07.jpg","url":"https://www.gamersky.com/news/202608/2194234.shtml"},
+    {"title":"《漫威金刚狼》宣布进厂压盘","summary":"作品完成主要开发并进入量产阶段，计划于 9 月 15 日登陆 PS5。","source":"游民星空／Insomniac Games","date":"2026-08-21","image":"game-brief-assets/2026-08-22-news-08.jpg","url":"https://www.gamersky.com/news/202608/2194151.shtml"},
+    {"title":"《命运石之门 Re:Boot》获游民星空 9 分评价","summary":"评测肯定重制后的视觉呈现与经典叙事，同时提醒老玩家关注新增内容占比。","source":"游民星空评测","date":"2026-08-21","image":"game-brief-assets/2026-08-22-news-09.jpg","url":"https://www.gamersky.com/news/202608/2193983.shtml"},
+    {"title":"LPL 选手 Bin 赛后话题引发社区讨论","summary":"围绕比赛状态、阵容发挥与后续赛程的讨论升温，相关观点以赛事官方信息为准。","source":"游民星空／电竞社区","date":"2026-08-22","image":"game-brief-assets/2026-08-22-news-10.jpg","url":"https://www.gamersky.com/news/202608/2193812.shtml"}
   ],
   "packs": [
-    {"name":"勇者之章 III｜Chapter of Yuusha III","summary":"多路线枪魔战斗与高难 Boss，攻略讨论持续。","category":"冒险／RPG","heat":98,"source":"MC百科·B站","image":"game-brief-assets/pack-01.jpg","url":"https://www.mcmod.cn/modpack/1054.html"},
-    {"name":"香草纪元：食旅纪行｜VanillaEra: FaresChron","summary":"种田、美食、收集与异界冒险并重，近期攻略密集。","category":"休闲／农业","heat":94,"source":"MC百科·B站","image":"game-brief-assets/pack-02.jpg","url":"https://www.mcmod.cn/modpack/1095.html"},
-    {"name":"脆骨症｜No Flesh Within Chest","summary":"围绕胸腔与器官改造展开的轻克系冒险体验。","category":"冒险／魔改","heat":90,"source":"MC百科·BBSMC","image":"game-brief-assets/pack-03.jpg","url":"https://www.mcmod.cn/modpack/722.html"},
-    {"name":"宁然一隅｜A Fragment of Peace","summary":"慢节奏种田、烹饪、建筑与轻冒险养老体验。","category":"休闲／建筑","heat":88,"source":"MC百科·B站","image":"game-brief-assets/pack-04.jpg","url":"https://www.mcmod.cn/modpack/837.html"},
-    {"name":"诡厄：使徒","summary":"巫术晋升、被动技能与拔刀剑构筑并行。","category":"冒险／巫术","heat":85,"source":"MC百科·BBSMC","image":"game-brief-assets/pack-05.jpg","url":"https://www.mcmod.cn/modpack/1241.html"},
-    {"name":"新星工程：世界｜Nova Engineering - World","summary":"大型科技魔法流程、自动化与研究体系。","category":"科技／硬核","heat":83,"source":"MC百科","image":"game-brief-assets/pack-06.jpg","url":"https://www.mcmod.cn/modpack/784.html"},
-    {"name":"魔金：探秘｜ManaMetalMod Exploration","summary":"围绕魔法金属扩展科技、饰品、遗迹与任务。","category":"科技／魔法","heat":80,"source":"MC百科","image":"game-brief-assets/pack-07.jpg","url":"https://www.mcmod.cn/modpack/829.html"},
-    {"name":"XPlus 2.0 基础整合｜XPlus 2.0 Modpack","summary":"跨多版本的性能优化与原版增强基础方案。","category":"优化／基础","heat":77,"source":"MC百科","image":"game-brief-assets/pack-08.jpg","url":"https://www.mcmod.cn/modpack/467.html"},
-    {"name":"星遥优化｜StarCarefree Optimized","summary":"轻量性能优化，可作为添加其他模组的底包。","category":"优化／轻量","heat":74,"source":"MC百科","image":"game-brief-assets/pack-09.jpg","url":"https://www.mcmod.cn/modpack/1230.html"},
-    {"name":"织彩钓月｜Aruori","summary":"农业、建筑与多人长期发展向的轻量内容体系。","category":"休闲／发展","heat":72,"source":"MC百科·B站","image":"game-brief-assets/pack-10.jpg","url":"https://www.mcmod.cn/modpack/626.html"}
+    {"name":"真理之路｜Path of Truth","summary":"高难科技、魔法与冒险并行，任务线强调资源规划与阶段推进。","category":"科技／魔法／冒险","heat":97,"source":"MC百科","image":"game-brief-assets/2026-08-22-pack-01.jpg","url":"https://www.mcmod.cn/modpack/826.html"},
+    {"name":"梦篡光阴｜Dreams Distort Overture","summary":"以剧情探索和多维度冒险为核心，兼顾养成、战斗与收集。","category":"剧情／冒险","heat":94,"source":"MC百科","image":"game-brief-assets/2026-08-22-pack-02.jpg","url":"https://www.mcmod.cn/modpack/949.html"},
+    {"name":"遗忘严冬｜ForgottenWinter","summary":"严寒生存压力贯穿流程，需要围绕温度、食物与据点逐步发展。","category":"生存／硬核","heat":92,"source":"MC百科","image":"game-brief-assets/2026-08-22-pack-03.jpg","url":"https://www.mcmod.cn/modpack/1078.html"},
+    {"name":"工匠：技艺革新｜Construct: Technological Innovation","summary":"围绕工匠工具和机械自动化展开，强调材料加工与生产线升级。","category":"科技／自动化","heat":90,"source":"MC百科","image":"game-brief-assets/2026-08-22-pack-04.jpg","url":"https://www.mcmod.cn/modpack/989.html"},
+    {"name":"格雷科技：新征程｜GregTech Odyssey","summary":"长线格雷科技流程，适合偏好复杂配方、产线规划和阶段目标的玩家。","category":"科技／专家","heat":88,"source":"MC百科","image":"game-brief-assets/2026-08-22-pack-05.svg","url":"https://www.mcmod.cn/modpack/1124.html"},
+    {"name":"平原化工厂｜Flat Factory","summary":"以平坦世界工厂为舞台，借助任务引导完成 GTM 与自动化生产。","category":"科技／任务","heat":86,"source":"MC百科","image":"game-brief-assets/2026-08-22-pack-06.jpg","url":"https://www.mcmod.cn/modpack/1483.html"},
+    {"name":"拔刀之旅｜Battou No Tabi","summary":"围绕拔刀剑成长与章节任务推进，兼顾探索、战斗和装备养成。","category":"冒险／拔刀剑","heat":84,"source":"MC百科","image":"game-brief-assets/2026-08-22-pack-07.jpg","url":"https://www.mcmod.cn/modpack/1314.html"},
+    {"name":"接入铁路网络：我的世界铁路｜MTR Railway Network Access","summary":"以铁路建设和线路运营为主，适合城市交通与大型工程创作。","category":"交通／建筑","heat":82,"source":"MC百科","image":"game-brief-assets/2026-08-22-pack-08.jpg","url":"https://www.mcmod.cn/modpack/885.html"},
+    {"name":"格雷：量子跃迁｜GregTech: Quantum Transition","summary":"以格雷科技为骨架扩展高阶材料、能源与量子阶段的长线流程。","category":"科技／硬核","heat":80,"source":"MC百科","image":"game-brief-assets/2026-08-22-pack-09.jpg","url":"https://www.mcmod.cn/modpack/590.html"},
+    {"name":"千界万锻｜Myriad Dimensional Forge","summary":"多维度探索与锻造构筑结合，串联 Tetra、科技与魔法内容。","category":"锻造／多维度","heat":78,"source":"MC百科","image":"game-brief-assets/2026-08-22-pack-10.jpg","url":"https://www.mcmod.cn/modpack/1426.html"}
   ],
   "mods": [
-    {"name":"中式甲兵 v1.1.6","summary":"加入多套中式盔甲与戈、偃月刀、方天画戟；本次修复甲兵锻造台无法合成的严重问题。","version":"1.20.1","loader":"Forge","date":"2026-08-22","source":"MineBBS","url":"https://www.minebbs.com/resources/forge-chinese-weapons.17475/"},
-    {"name":"Verity JE-CN 6.0.0 beta4","summary":"强化中文体验、动画、物品管理与运行性能，并针对原版模组体验进行合理性调整。","version":"1.20.1","loader":"Forge","date":"2026-08-22","source":"MineBBS","url":"https://www.minebbs.com/forums/jemods/"},
-    {"name":"Sparkle's Morpher 1.2.0","summary":"支持加载自定义玩家模型、动画和音效，并提供 Fabric 与 NeoForge 多版本构建。","version":"26.x／1.21","loader":"Fabric／NeoForge","date":"2026-08-18","source":"MineBBS","url":"https://www.minebbs.com/resources/sparkle-s-morpher.17739/"},
-    {"name":"自动消息 1.0","summary":"通过中文图形界面定时发送聊天消息或服务器命令，并在离开世界后自动停止。","version":"1.21.8","loader":"Fabric","date":"2026-08-17","source":"MineBBS","url":"https://www.minebbs.com/tags/mod/"},
-    {"name":"连接纹理 CTM 1.2.1","summary":"允许资源包添加连接纹理与高光渲染特性，为 Quilt 1.21 客户端扩展纹理表现。","version":"1.21","loader":"Quilt","date":"2026-08-12","source":"MineBBS","url":"https://www.minebbs.com/resources/categories/62/"},
-    {"name":"Carp 生电 2.10.2","summary":"集成精简寻路、搭路、移动、渲染与自动化功能，并覆盖多个 1.21 与 26.x 构建。","version":"26.2／1.21.8／1.21.11","loader":"Fabric","date":"2026-07-31","source":"MineBBS","url":"https://www.minebbs.com/resources/carp.17539/"}
+    {"name":"Anything but Fish 1.21.11","summary":"改变钓鱼竿机制，可拉取物品、生物、实体与经验；客户端可选装配置界面。","version":"1.21.11","loader":"Fabric","date":"2026-08-20","source":"MineBBS／Modrinth","url":"https://modrinth.com/mod/anything-but-fish/versions"},
+    {"name":"适航船 2026-08-13","summary":"可将船只逐级加固到下界合金等级，并在造船厂使用船板维修。","version":"1.21.x","loader":"Forge／Fabric","date":"2026-08-20","source":"MineBBS","url":"https://www.minebbs.com/threads/49049/"},
+    {"name":"Verity JE 5.7.3 正式版","summary":"为 Forge 1.20.1 分发 Verity JE 正式版，并列明 GeckoLib 与 YACL 前置。","version":"1.20.1","loader":"Forge","date":"2026-08-19","source":"MineBBS","url":"https://www.minebbs.com/forums/jemods/"},
+    {"name":"Hyper-Heartrate v1.3.0","summary":"读取 BLE 心率设备并显示在 HUD，可同步给联机玩家并接入 OBS。","version":"1.21／26.x","loader":"Fabric","date":"2026-08-07","source":"MineBBS","url":"https://www.minebbs.com/resources/hyper-heartrate.17664/"},
+    {"name":"Melodix 音乐播放器 v2.1.0","summary":"客户端本地音乐播放器，可在游戏内播放本地文件或 Minecraft 原声音乐。","version":"1.21.x","loader":"Fabric","date":"2026-08-04","source":"MineBBS","url":"https://www.minebbs.com/resources/categories/62/"},
+    {"name":"歌词播放器 0.1.1","summary":"在游戏内加载并播放 LRC 歌词文件，通过快捷键打开管理菜单。","version":"1.20","loader":"Fabric","date":"2026-08-03","source":"MineBBS","url":"https://www.minebbs.com/resources/17575/"}
   ],
   "deals": [
-    {"name":"僵尸部队 4","discount":"-95%","original":"¥168","price":"¥8.4","label":"新史低","ends":"截至 08-25","image":"game-brief-assets/steam-01.jpg","url":"https://store.steampowered.com/app/694280/Zombie_Army_4_Dead_War/?l=schinese"},
-    {"name":"天国：拯救 2","discount":"-60%","original":"¥228","price":"¥91.2","label":"史低价","ends":"截至 08-25","image":"game-brief-assets/steam-02.jpg","url":"https://store.steampowered.com/app/1771300/Kingdom_Come_Deliverance_II/?l=schinese"},
-    {"name":"全面战争：战锤 3","discount":"-85%","original":"¥298","price":"¥44.7","label":"史低价","ends":"截至 08-28","image":"game-brief-assets/steam-03.jpg","url":"https://store.steampowered.com/app/1142710/TOTAL_WAR_WARHAMMER_III/?l=schinese"},
-    {"name":"使命召唤：现代战争 III","discount":"-75%","original":"¥298","price":"¥74","label":"新史低","ends":"截至 08-25","image":"game-brief-assets/steam-04.jpg","url":"https://store.steampowered.com/app/2519060/Call_of_Duty_Modern_Warfare_III/?l=schinese"}
+    {"name":"女神异闻录 4 黄金版","discount":"-50%","original":"¥125","price":"¥62.5","label":"今日特惠","ends":"截至 08-27","image":"game-brief-assets/2026-08-22-steam-01.jpg","url":"https://store.steampowered.com/app/1113000/Persona_4_Golden/?l=schinese"},
+    {"name":"女神异闻录 5 皇家版","discount":"-70%","original":"¥298","price":"¥89.4","label":"今日特惠","ends":"截至 08-27","image":"game-brief-assets/2026-08-22-steam-02.jpg","url":"https://store.steampowered.com/app/1687950/Persona_5_Royal/?l=schinese"},
+    {"name":"潜水员戴夫","discount":"-50%","original":"¥80","price":"¥40","label":"今日特惠","ends":"截至 08-27","image":"game-brief-assets/2026-08-22-steam-03.jpg","url":"https://store.steampowered.com/app/1868140/DAVE_THE_DIVER/?l=schinese"},
+    {"name":"渔帆暗涌","discount":"-60%","original":"¥110","price":"¥44","label":"今日特惠","ends":"截至 08-27","image":"game-brief-assets/2026-08-22-steam-04.jpg","url":"https://store.steampowered.com/app/1562430/DREDGE/?l=schinese"}
   ],
   "trends": [
-    "国产游戏：新游运营数据、科隆展开幕夜预热与独立新作 Demo 成为焦点。",
-    "Minecraft 整合包：硬核冒险、养老美食与器官改造三类玩法同时维持高讨论度。",
-    "Mod 更新：近 7 天合格项目不足 6 个，按规则使用 2 个近 30 天内的回退项。",
-    "Steam 优惠：史低标签需核验历史价格，购买前仍应以国区实时页面为准。"
+    "中国玩家关注：测试期新作、国产独立游戏与主机大作开发进度构成当日资讯主线。",
+    "Minecraft 整合包：科技专家包与叙事冒险包并行，铁路建设和锻造构筑提供差异化选择。",
+    "Mod 更新：近 7 天内收录 3 项，其余 3 项按规则从近 30 天有效更新中回退补足。",
+    "Steam 优惠：统一标注为今日特惠，不宣称史低；价格与截止时间仍以国区商店实时页面为准。"
   ]
 }

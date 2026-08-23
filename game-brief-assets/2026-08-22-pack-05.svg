@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-label="格雷科技：新征程封面">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071827"/>
+      <stop offset="0.55" stop-color="#18374d"/>
+      <stop offset="1" stop-color="#5a2849"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e6f1f4"/>
+      <stop offset="0.5" stop-color="#8faab3"/>
+      <stop offset="1" stop-color="#425864"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="300" fill="url(#sky)"/>
+  <circle cx="394" cy="52" r="38" fill="#d5b8dc" opacity=".7"/>
+  <g fill="#0d202b" stroke="#38586a" stroke-width="2">
+    <path d="M0 230h480v70H0z"/>
+    <path d="M22 160h68v70H22zM105 122h52v108h-52zM173 146h72v84h-72zM262 104h56v126h-56zM333 137h102v93H333z"/>
+  </g>
+  <g stroke="#77d8f2" stroke-width="4" fill="none" opacity=".8">
+    <path d="M0 248h480M70 230v-42h61v42M214 230v-55h76v55M362 230v-48h73"/>
+    <circle cx="128" cy="187" r="16"/><circle cx="287" cy="174" r="21"/>
+  </g>
+  <rect x="30" y="28" width="420" height="92" rx="8" fill="#07121b" opacity=".84"/>
+  <text x="240" y="68" text-anchor="middle" fill="url(#metal)" font-family="Arial Black, sans-serif" font-size="34" letter-spacing="2">GREGTECH ODYSSEY</text>
+  <text x="240" y="102" text-anchor="middle" fill="#cbeeff" font-family="Microsoft YaHei, sans-serif" font-size="22" font-weight="700">格雷科技：新征程</text>
+  <text x="450" y="280" text-anchor="end" fill="#9ddbec" font-family="monospace" font-size="13">INDUSTRY · AUTOMATION</text>
+</svg>
