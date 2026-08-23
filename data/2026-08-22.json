@@ -1,17 +1,18 @@
 {
-  "date": "2026-08-23",
-  "issue": 2,
-  "cutoff": "2026-08-23 12:20（北京时间）",
-  "dataWindow": "2026-08-22 00:00 — 2026-08-23 12:20",
+  "date": "2026-08-22",
+  "issue": 1,
+  "backfilledAt": "2026-08-23T23:51:00+08:00",
+  "cutoff": "2026-08-22 23:59（北京时间）",
+  "dataWindow": "2026-08-21 00:00 — 2026-08-22 23:59",
   "sources": ["游民星空", "MC百科", "MineBBS", "哔哩哔哩", "什么值得买", "Steam"],
   "features": [
     {"title":"《诡秘之主》开服首小时在线超 70 万","summary":"官方披露开服首小时新增玩家突破 100 万，同时在线人数超过 70 万；相关数据刷新快手游戏历史表现。","source":"游民星空／游戏官方","date":"2026-08-22","image":"game-brief-assets/feature-game.jpg","url":"https://www.gamersky.com/news/202608/2194300.shtml"},
-    {"title":"《勇者之章 III》领跑今日整合包热度观察","summary":"MC百科页面昨日指数 5508，为本期样本中最高；高难战斗、多路线职业构筑与 Boss 挑战持续吸引攻略与讨论。","source":"MC百科／哔哩哔哩","date":"2026-08-23","image":"game-brief-assets/feature-mc.jpg","url":"https://www.mcmod.cn/modpack/1054.html"}
+    {"title":"《勇者之章 III》领跑 8 月 22 日整合包热度观察","summary":"MC百科与国内视频社区的攻略、流程和讨论信号活跃；高难战斗、多路线职业构筑与 Boss 挑战持续吸引玩家。","source":"MC百科／哔哩哔哩","date":"2026-08-22","image":"game-brief-assets/feature-mc.jpg","url":"https://www.mcmod.cn/modpack/1054.html"}
   ],
   "news": [
     {"title":"《诡秘之主》首小时在线超 70 万","summary":"官方称新增玩家破 100 万，同时在线人数超过 70 万。","source":"游民星空／游戏官方","date":"2026-08-22","image":"game-brief-assets/news-01.jpg","url":"https://www.gamersky.com/news/202608/2194300.shtml"},
-    {"title":"《黑神话：钟馗》民乐制作花絮公开","summary":"8082 音频工作室展示实机演示背后的民族乐器录制与氛围塑造。","source":"游民星空／8082 音频工作室","date":"2026-08-23","image":"game-brief-assets/news-02.jpg","url":"https://www.gamersky.com/news/202608/2194369.shtml"},
-    {"title":"《全速以赴》延期至 12 月 19 日","summary":"国产天津原型开放世界驾驶游戏因优化与验证需要调整发售计划。","source":"游民星空／AZGames","date":"2026-08-23","image":"game-brief-assets/news-03.jpg","url":"https://www.gamersky.com/news/202608/2194365.shtml"},
+    {"title":"海外制作人称赞《黑神话：钟馗》技术表现","summary":"拥有约 260 万粉丝的游戏视频作者 MaxMRM 发布实机演示观看与技术点评内容。","source":"游民星空／MaxMRM","date":"2026-08-22","image":"game-brief-assets/2026-08-22-news-02.jpg","url":"https://www.gamersky.com/news/202608/2194302.shtml"},
+    {"title":"PlayStation 中国再度介绍《影之刃零》","summary":"PlayStation 中国分享制作人梁其伟访谈，并表示游戏正逐步接近与玩家见面。","source":"游民星空／PlayStation 中国","date":"2026-08-22","image":"game-brief-assets/2026-08-22-news-03.jpg","url":"https://www.gamersky.com/news/202608/2194324.shtml"},
     {"title":"《花满楼》Steam 好评率达 99%","summary":"国产真人互动影游 8 月 21 日上线，报道时评价为“好评如潮”。","source":"游民星空／Steam","date":"2026-08-22","image":"game-brief-assets/news-04.jpg","url":"https://www.gamersky.com/news/202608/2194355.shtml"},
     {"title":"曝《GTA6》出现加油与维修交互","summary":"网传泄露片段展示轻量化载具选项；内容未获 Rockstar 官方确认。","source":"游民星空／海外社区（泄露）","date":"2026-08-22","image":"game-brief-assets/news-05.jpg","url":"https://www.gamersky.com/news/202608/2194333.shtml"},
     {"title":"《The Duskbloods》测试反馈两极","summary":"部分测试玩家称 PVE 占比和移动手感超预期，也有人担忧长线内容与平衡。","source":"游民星空／玩家社区","date":"2026-08-22","image":"game-brief-assets/news-06.jpg","url":"https://www.gamersky.com/news/202608/2194279.shtml"},

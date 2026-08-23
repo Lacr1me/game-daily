@@ -5,11 +5,20 @@
   "editions": [
     {
       "date": "2026-08-23",
-      "issue": 1,
+      "issue": 2,
       "publishAt": "2026-08-23T11:00:00+08:00",
       "title": "游戏与 Minecraft 每日简报",
       "headline": "《诡秘之主》开服首小时在线超 70 万",
       "file": "data/2026-08-23.json"
+    },
+    {
+      "date": "2026-08-22",
+      "issue": 1,
+      "publishAt": "2026-08-22T11:00:00+08:00",
+      "backfilledAt": "2026-08-23T23:51:00+08:00",
+      "title": "游戏与 Minecraft 每日简报",
+      "headline": "《诡秘之主》开服首小时在线超 70 万",
+      "file": "data/2026-08-22.json"
     }
   ]
 }

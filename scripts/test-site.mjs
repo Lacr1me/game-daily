@@ -14,10 +14,15 @@ for (const [name, manifest] of [["民生", civicManifest], ["游戏", gameManife
   assert(manifest.publishAt === "11:00", `${name}频道必须在 11:00 发布`);
   assert(Array.isArray(manifest.editions) && manifest.editions.length > 0, `${name}频道必须至少有一期归档`);
   assert(new Set(manifest.editions.map((edition) => edition.date)).size === manifest.editions.length, `${name}归档日期不能重复`);
+  assert(new Set(manifest.editions.map((edition) => edition.issue)).size === manifest.editions.length, `${name}归档期号不能重复`);
   assert(isSorted(manifest.editions), `${name}归档必须按日期倒序`);
   for (const edition of manifest.editions) {
     assert(edition.publishAt === `${edition.date}T11:00:00+08:00`, `${name} ${edition.date} 发布时间必须为北京时间11:00`);
     assert(new Date(edition.publishAt).getTime() <= Date.now(), `${name} ${edition.date} 尚未到发布时间，不得进入公开归档`);
+    if (edition.backfilledAt) {
+      assert(Number.isFinite(new Date(edition.backfilledAt).getTime()), `${name} ${edition.date} 补档时间无效`);
+      assert(new Date(edition.backfilledAt) > new Date(edition.publishAt), `${name} ${edition.date} 补档时间必须晚于计划发布时间`);
+    }
     await access(path.join(root, edition.file));
   }
 }
@@ -89,6 +94,7 @@ assert(gameHtml.includes("brand-assets/springhues-logo.png") && civicHtml.includ
 await access(path.join(root, "brand-assets", "springhues-logo.png"));
 
 const gameApp = await readFile(path.join(root, "app.js"), "utf8");
+assert(gameApp.includes("历史补档"), "游戏日报必须诚实标记后补的历史期次");
 assert(!/\.innerHTML\s*=/.test(gameApp), "游戏页面不得使用 innerHTML 拼接日报数据");
 assert(gameApp.includes("textContent") && gameApp.includes("replaceChildren"), "游戏页面必须使用安全 DOM API 渲染");
 assert(gameApp.includes('parsed.protocol !== "https:"'), "游戏页面必须限制外链为 HTTPS");

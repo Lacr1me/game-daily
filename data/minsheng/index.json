@@ -5,11 +5,20 @@
   "editions": [
     {
       "date": "2026-08-23",
-      "issue": 1,
+      "issue": 2,
       "publishAt": "2026-08-23T11:00:00+08:00",
       "title": "民生日报 · 每日35条精选新闻",
       "headline": "北京发布暴雨蓝色与雷电黄色预警",
       "file": "data/minsheng/2026-08-23.json"
+    },
+    {
+      "date": "2026-08-22",
+      "issue": 1,
+      "publishAt": "2026-08-22T11:00:00+08:00",
+      "backfilledAt": "2026-08-23T23:51:00+08:00",
+      "title": "民生日报 · 每日35条精选新闻",
+      "headline": "北京公布2026年度社保缴费基数上下限",
+      "file": "data/minsheng/2026-08-22.json"
     }
   ]
 }

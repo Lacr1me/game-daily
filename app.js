@@ -53,7 +53,9 @@ async function loadBrief(edition) {
 
 function render(brief) {
   document.title = `${brief.date} 游戏方块日报`;
-  $("#editionLabel").textContent = `今日刊 · ${brief.date} · 11:00 发布`;
+  $("#editionLabel").textContent = brief.backfilledAt
+    ? `历史补档 · ${brief.date}`
+    : `今日刊 · ${brief.date} · 11:00 发布`;
   $("#navDate").textContent = brief.date;
   $("#dateLabel").textContent = cnDate(brief.date);
 
