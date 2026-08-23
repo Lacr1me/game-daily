@@ -29,7 +29,7 @@ node scripts/validate-minsheng.mjs data/minsheng/2026-08-23.json
 
 ```powershell
 node scripts/validate-game.mjs data/2026-08-23.json
-node scripts/check-daily-health.mjs --live=https://lacr1me.github.io/game-daily
+node scripts/check-daily-health.mjs --live=https://springhues.com
 ```
 
 ## 每日自动更新
