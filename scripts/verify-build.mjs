@@ -5,7 +5,7 @@ import { validateMinsheng } from "./minsheng-lib.mjs";
 
 const root = process.cwd();
 const output = path.join(root, "dist");
-for (const file of ["index.html", "portal.js", "app.js", "game/index.html", "minsheng/index.html", "brand-assets/springhues-logo.png", "data/index.json", "data/minsheng/index.json", ".nojekyll"]) {
+for (const file of ["index.html", "portal.js", "app.js", "game/index.html", "minsheng/index.html", "brand-assets/springhues-logo.png", "brand-assets/springhues-mark.png", "data/index.json", "data/minsheng/index.json", ".nojekyll"]) {
   await access(path.join(output, file));
 }
 await access(path.join(output, "data", ".pending")).then(

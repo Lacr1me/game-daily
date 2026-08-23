@@ -14,3 +14,14 @@
   height: 100%;
   object-fit: cover;
 }
+
+.portal-brand .brand-logo {
+  display: block;
+  width: 43px;
+  height: 43px;
+  flex: 0 0 43px;
+}
+
+.portal-brand .brand-logo img {
+  object-fit: contain;
+}
