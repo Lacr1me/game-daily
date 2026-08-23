@@ -1,35 +1,54 @@
-# 游戏方块日报
+# 每日简报双频道网站
 
-一个每天北京时间 11:00 更新的中国游戏与 Minecraft 日报网站。首页自动展示最新已发布一期，也可以从日期归档查看历史日报。
+一个每天北京时间 11:00 更新的静态日报网站，包含两个独立频道：
 
-## 公网部署
+- `/minsheng/`：民生日报，每期固定 35 条中国时政与民生、全球国际、中国科技和 AI 科技新闻，并包含数据速览。
+- `/game/`：游戏方块日报，保留中国游戏、Minecraft、Mod 与 Steam 优惠内容。
+- `/`：双频道门户，显示两个频道最新已发布期次。
 
-网站通过 GitHub Pages 发布。`main` 分支每次更新都会触发 `.github/workflows/pages.yml`，由 `scripts/build-site.mjs` 生成只包含网页运行文件的 `dist` 发布目录。
+两个频道都支持 `?date=YYYY-MM-DD` 历史日期链接。前端按照 `publishAt` 隐藏未到发布时间的内容。
 
-## 本地预览
-
-可以直接双击 `index.html` 离线打开。开发调试时也可以启动本地 HTTP 服务：
+## 本地预览与验证
 
 ```powershell
+node scripts/build-embedded.mjs
+node scripts/build-site.mjs
+node scripts/test-site.mjs
 node scripts/serve.mjs
 ```
 
-然后访问 `http://localhost:4173`。
+然后访问 `http://localhost:4173`。构建产物位于 `dist/`，只包含公开网页和已发布数据，不包含 `data/.pending/` 草稿。
+
+单独校验民生日报：
+
+```powershell
+node scripts/validate-minsheng.mjs data/minsheng/2026-08-23.json
+```
 
 ## 每日自动更新
 
-项目内置一个完整的日报 GitHub Actions 工作流：
+`.github/workflows/daily-brief.yml` 在北京时间 10:50 启动：
 
-- 北京时间 10:50：在 Actions 运行器内联网检索并生成草稿。
-- 北京时间 11:00：校验栏目数量、发布到 `data/YYYY-MM-DD.json` 并更新归档索引。
-- 草稿不会提交到公开仓库，因此不能在 11:00 前绕过首页读取。
+1. 游戏日报和民生日报并行调用 OpenAI Responses API，通过 Web Search 检索并生成严格结构化草稿。
+2. 两个频道独立校验；一个频道失败不会阻塞另一个频道。
+3. 成功草稿保存在未公开、被 Git 忽略的 `data/.pending/`。
+4. 工作流等待至北京时间 11:00，再发布成功频道并一次性提交数据。
+5. `main` 分支更新触发 GitHub Pages 构建。
 
-需要在仓库的 **Settings → Secrets and variables → Actions** 中添加 `OPENAI_API_KEY`。未配置密钥时，定时任务会正常跳过且保留现有网站。生成脚本使用 Responses API、Web Search 与严格 JSON Schema。
+需要在仓库 **Settings → Secrets and variables → Actions** 添加 `OPENAI_API_KEY`。未配置密钥或当天生成失败时，网站继续展示最近一期有效内容，不发布空日报。
 
-> GitHub 的定时任务可能有数分钟排队延迟。如果必须精确到 11:00:00，建议将相同脚本部署到支持精确定时的云函数；前端仍会依据 `publishAt` 隐藏未到发布时间的期次。
+GitHub Actions 的计划任务可能排队，因此 11:00 是目标发布时间而非秒级保证。
 
-## 数据约定
+## 民生日报数据约定
 
-`data/index.json` 是归档索引。每期 JSON 固定包含 2 条头条、10 条游戏新闻、10 个 Minecraft 整合包、6 个 Mod、4 个 Steam 优惠和 4 条趋势观察。网站按 `publishAt` 判断期次是否可见。
+`data/minsheng/index.json` 是民生归档索引。每期 `YYYY-MM-DD.json` 固定包含：
 
-`data/embedded.js` 是供 `file://` 直接打开使用的离线数据包，会在每日发布时自动重建。
+- 中国时政与民生 10 条
+- 全球国际 10 条
+- 中国科技 10 条
+- AI 科技 5 条
+- 从正文 ID 引用的今日 3 件大事
+- 国内金价、中国油价、国际油价和人民币兑美元／欧元／日元等数据
+- 今日观察、来源、检索截止和制作时间
+
+网页不请求定位或天气服务，也不显示天气区域。

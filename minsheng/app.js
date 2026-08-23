@@ -1,0 +1,201 @@
+const state = { manifest: null, edition: null, activeDate: null };
+const categoryConfig = {
+  domestic: { target: "domesticStories", color: "#d71920" },
+  international: { target: "internationalStories", color: "#6a19d8" },
+  tech: { target: "techStories", color: "#079447" },
+  ai: { target: "aiStories", color: "#0876d1" }
+};
+
+const $ = (selector) => document.querySelector(selector);
+const publishedEditions = () => [...state.manifest.editions]
+  .filter((edition) => new Date(edition.publishAt).getTime() <= Date.now())
+  .sort((a, b) => b.date.localeCompare(a.date));
+const cnDate = (iso) => {
+  const [year, month, day] = iso.split("-");
+  return `${year}年${Number(month)}月${Number(day)}日`;
+};
+
+async function init() {
+  try {
+    state.manifest = await fetch("../data/minsheng/index.json", { cache: "no-store" }).then((response) => {
+      if (!response.ok) throw new Error("无法读取民生日报归档");
+      return response.json();
+    });
+    const editions = publishedEditions();
+    if (!editions.length) throw new Error("今日日报将在 11:00 后发布");
+    buildArchive(editions);
+    const requested = new URLSearchParams(location.search).get("date");
+    const selected = editions.find((edition) => edition.date === requested) || editions[0];
+    if (requested && selected.date !== requested) showToast("该日期尚未发布，已为你打开最新一期", 4200);
+    await loadEdition(selected, false);
+    scheduleRefresh();
+  } catch (error) {
+    showToast(error.message, 6000);
+    $("#loading p").textContent = error.message;
+  }
+}
+
+async function loadEdition(edition, scroll = true) {
+  $("#loading").classList.remove("hidden");
+  try {
+    const brief = await fetch(`../${edition.file}`, { cache: "no-store" }).then((response) => {
+      if (!response.ok) throw new Error("这期日报暂时无法读取");
+      return response.json();
+    });
+    state.edition = brief;
+    state.activeDate = edition.date;
+    render(brief);
+    history.replaceState({}, "", `?date=${encodeURIComponent(edition.date)}`);
+    $("#archiveDialog").close();
+    if (scroll) window.scrollTo({ top: 0, behavior: "smooth" });
+  } finally {
+    $("#loading").classList.add("hidden");
+    $("#top").setAttribute("aria-busy", "false");
+  }
+}
+
+function render(brief) {
+  document.title = `${brief.date} 民生日报`;
+  $("#navDate").textContent = brief.date;
+  $("#editionDate").textContent = cnDate(brief.date);
+  $("#weekday").textContent = brief.weekday;
+  $("#lunarDate").textContent = brief.lunarDate;
+
+  const storyById = new Map();
+  for (const [category, config] of Object.entries(categoryConfig)) {
+    const stories = brief.sections[category];
+    stories.forEach((story) => storyById.set(story.id, { ...story, category }));
+    renderStories($("#" + config.target), stories);
+  }
+
+  const topList = $("#topStories");
+  topList.replaceChildren(...brief.topStoryIds.map((id, index) => {
+    const story = storyById.get(id);
+    const item = document.createElement("li");
+    item.style.setProperty("--story-color", categoryConfig[story.category].color);
+    const number = document.createElement("span");
+    number.textContent = index + 1;
+    const link = document.createElement("a");
+    link.href = story.url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = story.title;
+    item.append(number, link);
+    return item;
+  }));
+
+  const metrics = brief.metrics.map((metric) => {
+    const item = document.createElement("div");
+    item.className = "metric";
+    const icon = document.createElement("div");
+    icon.className = "metric-icon";
+    icon.textContent = metric.icon;
+    const body = document.createElement("div");
+    body.append(textNode("div", "metric-name", metric.name), textNode("div", "metric-value", metric.value), textNode("div", "metric-note", metric.note));
+    item.append(icon, body);
+    return item;
+  });
+  $("#metrics").replaceChildren(...metrics);
+  $("#metricsCutoff").textContent = `数据截至：${brief.metricsCutoff} · ${brief.metricSources.join("、")}`;
+  $("#observation").textContent = brief.observation;
+  $("#sourceLine").textContent = `数据来源：${brief.sources.join("、")}。全部标题均保留可点击原始链接。`;
+  $("#cutoffLine").textContent = `检索截止：${brief.cutoff}`;
+  $("#productionTime").textContent = `制作时间：${brief.productionTime}`;
+  updateArchiveActiveState();
+}
+
+function renderStories(container, stories) {
+  container.replaceChildren(...stories.map((story, index) => {
+    const article = document.createElement("article");
+    article.className = "story";
+    const heading = document.createElement("div");
+    heading.className = "story-title";
+    const number = textNode("span", "story-number", String(index + 1).padStart(2, "0"));
+    const h3 = document.createElement("h3");
+    const link = document.createElement("a");
+    link.href = story.url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = story.title;
+    h3.append(link);
+    heading.append(number, h3);
+    const summary = textNode("p", "story-summary", story.summary);
+    const meta = document.createElement("div");
+    meta.className = "story-meta";
+    const source = document.createElement("a");
+    source.href = story.url;
+    source.target = "_blank";
+    source.rel = "noopener noreferrer";
+    source.textContent = story.source;
+    meta.append(source, document.createTextNode(story.publishedAt));
+    article.append(heading, summary, meta);
+    return article;
+  }));
+}
+
+function textNode(tag, className, value) {
+  const node = document.createElement(tag);
+  node.className = className;
+  node.textContent = value;
+  return node;
+}
+
+function buildArchive(editions) {
+  const list = $("#archiveList");
+  list.replaceChildren(...editions.map((edition) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "archive-item";
+    button.dataset.date = edition.date;
+    const time = document.createElement("time");
+    time.textContent = edition.date;
+    const title = document.createElement("b");
+    title.textContent = edition.headline || edition.title;
+    const arrow = document.createElement("span");
+    arrow.textContent = "→";
+    button.append(time, title, arrow);
+    return button;
+  }));
+  const dates = editions.map((edition) => edition.date).sort();
+  $("#archiveDate").min = dates[0];
+  $("#archiveDate").max = dates[dates.length - 1];
+}
+
+function updateArchiveActiveState() {
+  $("#archiveDate").value = state.activeDate;
+  document.querySelectorAll(".archive-item").forEach((item) => item.classList.toggle("active", item.dataset.date === state.activeDate));
+}
+
+function selectDate(date) {
+  const edition = publishedEditions().find((item) => item.date === date);
+  if (!edition) {
+    $("#archiveDate").value = state.activeDate;
+    return showToast("该日期没有已发布的日报");
+  }
+  if (edition.date === state.activeDate) return $("#archiveDialog").close();
+  loadEdition(edition).catch((error) => showToast(error.message));
+}
+
+$("#archiveTrigger").addEventListener("click", () => $("#archiveDialog").showModal());
+$("#closeArchive").addEventListener("click", () => $("#archiveDialog").close());
+$("#archiveDialog").addEventListener("click", (event) => { if (event.target === $("#archiveDialog")) $("#archiveDialog").close(); });
+$("#archiveList").addEventListener("click", (event) => { const button = event.target.closest(".archive-item"); if (button) selectDate(button.dataset.date); });
+$("#archiveDate").addEventListener("change", (event) => selectDate(event.target.value));
+
+function scheduleRefresh() {
+  const now = new Date(new Date().toLocaleString("en-US", { timeZone: "Asia/Shanghai" }));
+  const target = new Date(now);
+  target.setHours(11, 0, 5, 0);
+  if (now >= target) target.setDate(target.getDate() + 1);
+  setTimeout(() => location.reload(), Math.min(target - now, 2147483647));
+}
+
+let toastTimer;
+function showToast(message, duration = 3000) {
+  clearTimeout(toastTimer);
+  $("#toast").textContent = message;
+  $("#toast").classList.add("show");
+  toastTimer = setTimeout(() => $("#toast").classList.remove("show"), duration);
+}
+
+init();

@@ -22,8 +22,10 @@ const manifest = JSON.parse(await readFile(indexPath,"utf8"));
 manifest.editions = manifest.editions.filter(x => x.date !== date);
 manifest.editions.push({
   date,
+  issue: brief.issue,
   publishAt: `${date}T11:00:00+08:00`,
   title: "游戏与 Minecraft 每日简报",
+  headline: brief.features?.[0]?.title || "今日游戏与方块世界",
   file: `data/${date}.json`
 });
 manifest.editions.sort((a,b) => b.date.localeCompare(a.date));
