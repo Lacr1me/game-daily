@@ -64,6 +64,10 @@ const mobileCss = await readFile(path.join(root, "minsheng", "mobile-fix.css"), 
 assert(/position:\s*static/.test(mobileCss), "移动端栏目标题必须参与正常文档流，避免覆盖首条新闻");
 
 const gameHtml = await readFile(path.join(root, "game", "index.html"), "utf8");
+const portalHtml = await readFile(path.join(root, "index.html"), "utf8");
+assert(!portalHtml.includes('class="promise"'), "首页不得显示仅概括民生日报的底部统计说明区");
+assert(gameHtml.includes('<a href="./">首页</a>') && civicHtml.includes('<a href="../">首页</a>'), "双频道导航入口必须统一命名为首页");
+assert(!gameHtml.includes("双频道首页") && !civicHtml.includes("双频道首页"), "频道导航不得继续显示双频道首页旧名称");
 for (const sharedHeaderClass of ["site-bar", "mini-brand", "archive-trigger"]) {
   assert(civicHtml.includes(`class="${sharedHeaderClass}`) && gameHtml.includes(`class="${sharedHeaderClass}`), `双频道页头必须共用 ${sharedHeaderClass} 结构`);
 }
