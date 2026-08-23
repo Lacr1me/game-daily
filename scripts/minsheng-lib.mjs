@@ -45,12 +45,20 @@ export function validateMinsheng(brief, { expectedDate } = {}) {
   for (const field of ["cutoff", "productionTime", "metricsCutoff"]) {
     if (brief[field] && !/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}（北京时间）$/.test(brief[field])) errors.push(`${field} 必须为 YYYY-MM-DD HH:mm（北京时间）`);
   }
+  for (const field of ["cutoff", "productionTime"]) {
+    if (brief[field] && brief.date && !brief[field].startsWith(brief.date)) errors.push(`${field} 必须对应日报日期 ${brief.date}`);
+  }
+  const editionDate = parseDate(brief.date);
+  const metricsDate = parseDate((brief.metricsCutoff || "").slice(0, 10));
+  if (editionDate && metricsDate) {
+    const metricsAge = Math.floor((editionDate - metricsDate) / 86400000);
+    if (metricsAge < 0 || metricsAge > 7) errors.push("metricsCutoff 必须是日报日期当天或此前7天内的最近有效行情日");
+  }
   const observationLength = [...(brief.observation || "")].length;
   if (observationLength < 120 || observationLength > 220) errors.push(`今日观察必须为120—220字，当前${observationLength}字`);
 
   const ids = new Set();
   const titles = new Set();
-  const editionDate = parseDate(brief.date);
   for (const [category, expectedCount] of Object.entries(CATEGORY_COUNTS)) {
     const stories = brief.sections?.[category];
     if (!Array.isArray(stories) || stories.length !== expectedCount) {

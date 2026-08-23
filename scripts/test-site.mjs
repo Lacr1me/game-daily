@@ -1,5 +1,6 @@
 import { access, readFile } from "node:fs/promises";
 import path from "node:path";
+import { assertGameArchiveConsistency, assertManifestEdition, assertMinshengArchiveConsistency } from "./archive-consistency.mjs";
 import { assertPublishTime as assertGamePublishTime, beijingDate, validateGame } from "./game-lib.mjs";
 import { httpFallbackBase, tlsCertificateCode } from "./health-lib.mjs";
 import { assertPublishTime as assertMinshengPublishTime, validateMinsheng } from "./minsheng-lib.mjs";
@@ -37,14 +38,10 @@ const civicBriefs = [];
 for (const edition of civicManifest.editions) {
   const brief = await readJson(edition.file);
   validateMinsheng(brief, { expectedDate: edition.date });
+  assertManifestEdition(edition, brief, "民生日报");
   civicBriefs.push(brief);
 }
-for (let index = 1; index < civicBriefs.length; index += 1) {
-  const newer = civicBriefs[index - 1];
-  const older = civicBriefs[index];
-  const overlap = titleOverlap(newer, older);
-  assert(overlap < 0.9, `${newer.date} 与 ${older.date} 民生日报标题重合率 ${(overlap * 100).toFixed(1)}%，疑似复制补档`);
-}
+for (const brief of civicBriefs) assertMinshengArchiveConsistency(brief, civicBriefs);
 
 const latestGame = gameManifest.editions[0];
 const game = await readJson(latestGame.file);
@@ -55,16 +52,17 @@ const gameBriefs = [];
 for (const edition of gameManifest.editions) {
   const brief = await readJson(edition.file);
   validateGame(brief, { expectedDate: edition.date });
+  assertManifestEdition(edition, brief, "游戏日报");
   gameBriefs.push(brief);
 }
-for (let index = 1; index < gameBriefs.length; index += 1) {
-  const newer = gameBriefs[index - 1];
-  const older = gameBriefs[index];
-  for (const section of ["features", "news", "packs", "mods", "deals", "trends"]) {
-    const overlap = gameSectionOverlap(newer[section], older[section]);
-    assert(overlap < 0.9, `${newer.date} 与 ${older.date} 游戏日报 ${section} 重合率 ${(overlap * 100).toFixed(1)}%，疑似复制补档`);
-  }
-}
+for (const brief of gameBriefs) assertGameArchiveConsistency(brief, gameBriefs);
+
+const copiedGame = structuredClone(game);
+copiedGame.date = "2026-08-24";
+assertThrows(() => assertGameArchiveConsistency(copiedGame, gameBriefs), "复制上一期的游戏日报必须被拒绝");
+const copiedCivic = structuredClone(civic);
+copiedCivic.date = "2026-08-24";
+assertThrows(() => assertMinshengArchiveConsistency(copiedCivic, civicBriefs), "复制上一期的民生日报必须被拒绝");
 
 assertThrows(() => assertGamePublishTime("2026-08-24", new Date("2026-08-24T10:59:59+08:00")), "游戏日报必须拒绝11:00前发布");
 assertThrows(() => assertMinshengPublishTime("2026-08-24", new Date("2026-08-24T10:59:59+08:00")), "民生日报必须拒绝11:00前发布");
@@ -85,6 +83,8 @@ for (const mutate of [
   (brief) => { brief.features[0].url = "http://example.com/story"; },
   (brief) => { brief.deals[0].image = "../secret.png"; },
   (brief) => { brief.news[0].date = "2025-01-01"; },
+  (brief) => { brief.news[0].date = "2026-08-21"; },
+  (brief) => { brief.cutoff = "2026-08-22 10:50（北京时间）"; },
   (brief) => { brief.news[0].summary = '<img src=x onerror="alert(1)">'; }
 ]) {
   const invalid = structuredClone(game);
@@ -150,14 +150,3 @@ function assertThrows(callback, message) {
   assert(rejected, message);
 }
 function isSorted(editions) { return editions.every((edition, index) => index === 0 || editions[index - 1].date >= edition.date); }
-function titleOverlap(left, right) {
-  const leftTitles = new Set(Object.values(left.sections).flat().map((story) => story.title.trim()));
-  const rightTitles = Object.values(right.sections).flat().map((story) => story.title.trim());
-  return rightTitles.filter((title) => leftTitles.has(title)).length / rightTitles.length;
-}
-function gameSectionOverlap(left, right) {
-  const identity = (item) => typeof item === "string" ? item.trim() : String(item.title || item.name || "").trim();
-  const leftItems = new Set(left.map(identity));
-  const rightItems = right.map(identity);
-  return rightItems.filter((item) => leftItems.has(item)).length / rightItems.length;
-}

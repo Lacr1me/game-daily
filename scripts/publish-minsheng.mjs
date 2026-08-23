@@ -1,5 +1,6 @@
 import { access, mkdir, readFile, rename, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { assertMinshengPublishCandidate } from "./archive-consistency.mjs";
 import { assertPublishTime, beijingDate, safePendingPath, validateMinsheng } from "./minsheng-lib.mjs";
 
 const root = process.cwd();
@@ -13,10 +14,12 @@ const brief = JSON.parse(await readFile(pending, "utf8"));
 validateMinsheng(brief, { expectedDate: date });
 assertPublishTime(date);
 await mkdir(dataDir, { recursive: true });
-await rename(pending, target);
 
 const indexPath = path.join(dataDir, "index.json");
 const manifest = JSON.parse(await readFile(indexPath, "utf8"));
+const priorBriefs = await Promise.all(manifest.editions.map((edition) => readJson(path.join(root, edition.file))));
+assertMinshengPublishCandidate(brief, manifest, priorBriefs);
+await rename(pending, target);
 const firstStoryId = brief.topStoryIds[0];
 const headline = Object.values(brief.sections).flat().find((story) => story.id === firstStoryId)?.title || "每日35条精选新闻";
 manifest.editions = manifest.editions.filter((edition) => edition.date !== date);
@@ -31,3 +34,5 @@ manifest.editions.push({
 manifest.editions.sort((a, b) => b.date.localeCompare(a.date));
 await writeFile(indexPath, `${JSON.stringify(manifest, null, 2)}\n`, "utf8");
 console.log(`已发布 ${date} 民生日报。`);
+
+async function readJson(file) { return JSON.parse(await readFile(file, "utf8")); }

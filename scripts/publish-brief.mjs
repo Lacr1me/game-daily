@@ -1,5 +1,6 @@
 import { access, readFile, rename, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { assertGamePublishCandidate } from "./archive-consistency.mjs";
 import { assertPublishTime, beijingDate, safePendingPath, validateGame } from "./game-lib.mjs";
 
 const date = beijingDate();
@@ -11,10 +12,12 @@ await access(pending).catch(() => { throw new Error(`${date} 草稿不存在，�
 const brief = JSON.parse(await readFile(pending,"utf8"));
 validateGame(brief, { expectedDate: date });
 assertPublishTime(date);
-await rename(pending,target);
 
 const indexPath = path.join(root,"data","index.json");
 const manifest = JSON.parse(await readFile(indexPath,"utf8"));
+const priorBriefs = await Promise.all(manifest.editions.map((edition) => readJson(path.join(root, edition.file))));
+assertGamePublishCandidate(brief, manifest, priorBriefs);
+await rename(pending,target);
 manifest.editions = manifest.editions.filter(x => x.date !== date);
 manifest.editions.push({
   date,
@@ -36,3 +39,5 @@ await writeFile(
   "utf8"
 );
 console.log(`已发布 ${date} 日报。`);
+
+async function readJson(file) { return JSON.parse(await readFile(file, "utf8")); }

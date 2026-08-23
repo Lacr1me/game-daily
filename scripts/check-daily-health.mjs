@@ -1,5 +1,6 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
+import { assertGameArchiveConsistency, assertManifestEdition, assertMinshengArchiveConsistency } from "./archive-consistency.mjs";
 import { beijingDate, validateGame } from "./game-lib.mjs";
 import { httpFallbackBase, tlsCertificateCode } from "./health-lib.mjs";
 import { validateMinsheng } from "./minsheng-lib.mjs";
@@ -11,11 +12,11 @@ const date = dateArg?.slice("--date=".length) || beijingDate();
 const liveBase = liveArg?.slice("--live=".length).replace(/\/$/, "");
 const result = { date, checkedAt: new Date().toISOString(), local: {}, live: {}, warnings: [] };
 
-await inspectLocal("game", "data/index.json", validateGame);
-await inspectLocal("minsheng", "data/minsheng/index.json", validateMinsheng);
+await inspectLocal("game", "游戏日报", "data/index.json", validateGame, assertGameArchiveConsistency);
+await inspectLocal("minsheng", "民生日报", "data/minsheng/index.json", validateMinsheng, assertMinshengArchiveConsistency);
 if (liveBase) {
-  await inspectLive("game", "data/index.json", validateGame);
-  await inspectLive("minsheng", "data/minsheng/index.json", validateMinsheng);
+  await inspectLive("game", "游戏日报", "data/index.json", validateGame, assertGameArchiveConsistency);
+  await inspectLive("minsheng", "民生日报", "data/minsheng/index.json", validateMinsheng, assertMinshengArchiveConsistency);
 }
 
 const groups = liveBase ? [result.local, result.live] : [result.local];
@@ -24,7 +25,7 @@ result.degraded = result.warnings.length > 0;
 console.log(JSON.stringify(result, null, 2));
 if (!result.healthy) process.exitCode = 1;
 
-async function inspectLocal(channel, manifestFile, validate) {
+async function inspectLocal(channel, channelLabel, manifestFile, validate, assertDistinct) {
   try {
     const manifest = await readJson(path.join(root, manifestFile));
     const edition = manifest.editions.find((item) => item.date === date);
@@ -32,15 +33,21 @@ async function inspectLocal(channel, manifestFile, validate) {
     if (edition.publishAt !== `${date}T11:00:00+08:00`) throw new Error("发布时间不是北京时间11:00");
     const brief = await readJson(path.join(root, edition.file));
     validate(brief, { expectedDate: date });
+    assertManifestEdition(edition, brief, channelLabel);
+    const priorBriefs = await Promise.all(manifest.editions
+      .filter((item) => item.date < date)
+      .slice(0, 7)
+      .map((item) => readJson(path.join(root, item.file))));
+    assertDistinct(brief, priorBriefs);
     result.local[channel] = { valid: true, file: edition.file };
   } catch (error) {
     result.local[channel] = { valid: false, reason: error.message };
   }
 }
 
-async function inspectLive(channel, manifestFile, validate) {
+async function inspectLive(channel, channelLabel, manifestFile, validate, assertDistinct) {
   try {
-    result.live[channel] = await inspectLiveAt(liveBase, manifestFile, validate);
+    result.live[channel] = await inspectLiveAt(liveBase, channelLabel, manifestFile, validate, assertDistinct);
   } catch (error) {
     const certificateCode = tlsCertificateCode(error);
     const fallbackBase = certificateCode && httpFallbackBase(liveBase);
@@ -49,7 +56,7 @@ async function inspectLive(channel, manifestFile, validate) {
       return;
     }
     try {
-      const fallback = await inspectLiveAt(fallbackBase, manifestFile, validate);
+      const fallback = await inspectLiveAt(fallbackBase, channelLabel, manifestFile, validate, assertDistinct);
       const warning = `HTTPS 证书异常（${certificateCode}），已通过 HTTP 只读复核内容；不得据此重做日报或重触发部署`;
       result.live[channel] = { ...fallback, transport: "http-fallback", warning };
       if (!result.warnings.includes(warning)) result.warnings.push(warning);
@@ -62,7 +69,7 @@ async function inspectLive(channel, manifestFile, validate) {
   }
 }
 
-async function inspectLiveAt(base, manifestFile, validate) {
+async function inspectLiveAt(base, channelLabel, manifestFile, validate, assertDistinct) {
   const stamp = encodeURIComponent(result.checkedAt);
   const manifest = await fetchJson(`${base}/${manifestFile}?health=${stamp}`);
   const edition = manifest.editions.find((item) => item.date === date);
@@ -70,6 +77,12 @@ async function inspectLiveAt(base, manifestFile, validate) {
   if (edition.publishAt !== `${date}T11:00:00+08:00`) throw new Error("线上发布时间不是北京时间11:00");
   const brief = await fetchJson(`${base}/${edition.file}?health=${stamp}`);
   validate(brief, { expectedDate: date });
+  assertManifestEdition(edition, brief, channelLabel);
+  const priorBriefs = await Promise.all(manifest.editions
+    .filter((item) => item.date < date)
+    .slice(0, 7)
+    .map((item) => fetchJson(`${base}/${item.file}?health=${stamp}`)));
+  assertDistinct(brief, priorBriefs);
   return { valid: true, file: edition.file, transport: new URL(base).protocol.slice(0, -1) };
 }
 

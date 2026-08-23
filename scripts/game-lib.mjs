@@ -39,6 +39,15 @@ export function validateGame(brief, { expectedDate } = {}) {
   if (!isDate(brief.date)) errors.push("date 必须为有效的 YYYY-MM-DD");
   if (!Number.isInteger(brief.issue) || brief.issue < 1) errors.push("issue 必须为正整数");
   for (const field of ["cutoff", "dataWindow"]) requireText(brief, field, "日报", errors);
+  if (isDate(brief.date)) {
+    if (!String(brief.cutoff || "").startsWith(brief.date)) errors.push(`cutoff 必须对应日报日期 ${brief.date}`);
+    const previousDate = new Date(`${brief.date}T00:00:00Z`);
+    previousDate.setUTCDate(previousDate.getUTCDate() - 1);
+    const previousIso = previousDate.toISOString().slice(0, 10);
+    if (!String(brief.dataWindow || "").includes(previousIso) || !String(brief.dataWindow || "").includes(brief.date)) {
+      errors.push(`dataWindow 必须覆盖 ${previousIso} 至 ${brief.date}`);
+    }
+  }
   if (!Array.isArray(brief.sources) || brief.sources.length < 3) errors.push("sources 至少需要3项");
   else validateUniqueTextList(brief.sources, "sources", errors);
 
@@ -69,7 +78,7 @@ export function validateGame(brief, { expectedDate } = {}) {
   }
 
   for (const section of ["features", "news"]) {
-    (brief[section] || []).forEach((item, index) => validateDatedItem(item, brief.date, 7, `${section} 第${index + 1}条`, errors));
+    (brief[section] || []).forEach((item, index) => validateDatedItem(item, brief.date, 1, `${section} 第${index + 1}条`, errors));
   }
   (brief.mods || []).forEach((item, index) => validateDatedItem(item, brief.date, 30, `mods 第${index + 1}条`, errors));
   (brief.packs || []).forEach((item, index) => {
