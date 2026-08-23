@@ -24,6 +24,9 @@ assert(new Date(publishAt).getTime() <= new Date("2026-08-23T11:00:00+08:00").ge
 const civicHtml = await readFile(path.join(root, "minsheng", "index.html"), "utf8");
 assert(!/天气|weather/i.test(civicHtml), "民生日报页面不得包含天气区域");
 for (const id of ["domesticStories", "internationalStories", "techStories", "aiStories", "archiveDate"]) assert(civicHtml.includes(`id="${id}"`), `页面缺少 ${id}`);
+assert(civicHtml.includes('href="mobile-fix.css"'), "民生日报必须加载移动端布局修复样式");
+const mobileCss = await readFile(path.join(root, "minsheng", "mobile-fix.css"), "utf8");
+assert(/position:\s*static/.test(mobileCss), "移动端栏目标题必须参与正常文档流，避免覆盖首条新闻");
 
 const invalid = structuredClone(civic);
 invalid.metrics = invalid.metrics.filter((metric) => metric.kind !== "gold");
