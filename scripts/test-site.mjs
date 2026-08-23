@@ -63,6 +63,13 @@ assert(civicHtml.includes('href="mobile-fix.css"'), "民生日报必须加载移
 const mobileCss = await readFile(path.join(root, "minsheng", "mobile-fix.css"), "utf8");
 assert(/position:\s*static/.test(mobileCss), "移动端栏目标题必须参与正常文档流，避免覆盖首条新闻");
 
+const gameHtml = await readFile(path.join(root, "game", "index.html"), "utf8");
+for (const sharedHeaderClass of ["site-bar", "mini-brand", "archive-trigger"]) {
+  assert(civicHtml.includes(`class="${sharedHeaderClass}`) && gameHtml.includes(`class="${sharedHeaderClass}`), `双频道页头必须共用 ${sharedHeaderClass} 结构`);
+}
+assert(gameHtml.includes('<a class="active" href="game/">游戏日报</a>'), "游戏日报页头必须标记游戏频道为当前频道");
+assert(gameHtml.includes('id="navDate"'), "游戏日报统一页头必须显示当前期次日期");
+
 const gameApp = await readFile(path.join(root, "app.js"), "utf8");
 assert(!/\.innerHTML\s*=/.test(gameApp), "游戏页面不得使用 innerHTML 拼接日报数据");
 assert(gameApp.includes("textContent") && gameApp.includes("replaceChildren"), "游戏页面必须使用安全 DOM API 渲染");

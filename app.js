@@ -54,6 +54,7 @@ async function loadBrief(edition) {
 function render(brief) {
   document.title = `${brief.date} 游戏方块日报`;
   $("#editionLabel").textContent = `今日刊 · ${brief.date} · 11:00 发布`;
+  $("#navDate").textContent = brief.date;
   $("#dateLabel").textContent = cnDate(brief.date);
   $("#coverDate").textContent = brief.date.replaceAll("-", ".");
   $("#coverIssue").textContent = `NO. ${String(brief.issue || 1).padStart(3, "0")}`;

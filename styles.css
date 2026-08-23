@@ -16,3 +16,20 @@
 .feature-card:focus-visible,.news-row:focus-visible,.pack-row:focus-visible,.mod-row:focus-visible,.deal-row:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
 .pack-row{grid-template-columns:34px 84px 1fr 48px}.pack-row>img{width:84px;height:54px;object-fit:cover;border-radius:4px;border:1px solid #cad7cd}.pack-row:hover>img{filter:saturate(1.12)}
 @media(max-width:600px){.pack-row{grid-template-columns:30px 70px 1fr 38px;gap:8px}.pack-row>img{width:70px;height:48px}.pack-row p{display:none}}
+
+/* Shared daily-brief channel header */
+.site-bar{position:sticky;top:0;z-index:30;height:72px;padding:0 max(24px,calc((100vw - 1640px)/2));display:flex;align-items:center;gap:28px;background:#fffefdf2;border-bottom:1px solid #d9dce3;backdrop-filter:blur(14px)}
+.mini-brand{display:flex;align-items:center;gap:9px;color:var(--ink);text-decoration:none}
+.mini-brand span{display:grid;place-items:center;width:34px;height:34px;background:#d71920;color:#fff;font:800 20px "SimSun",serif}
+.mini-brand b{font:800 18px "SimSun",serif;white-space:nowrap}
+.site-bar nav{display:flex;align-items:center;gap:22px;margin-left:18px}
+.site-bar nav a{display:block;padding:25px 0;color:#686868;text-decoration:none;font-size:13px;font-weight:700}
+.site-bar nav a:hover,.site-bar nav a.active{color:#d71920}
+.site-bar nav a.active{box-shadow:inset 0 -3px #d71920}
+.archive-trigger{margin-left:auto;border:0;background:transparent;display:flex;align-items:center;gap:10px;color:var(--ink);text-align:left;cursor:pointer}
+.archive-trigger>span:first-child{display:grid;place-items:center;width:36px;height:36px;border:1px solid #d9dce3;color:#d71920}
+.archive-trigger>span:nth-child(2){display:block}
+.archive-trigger small{display:block;color:#686868;font-size:9px}
+.archive-trigger b{font-size:13px}
+.archive-trigger i{font-style:normal;color:#686868}
+@media(max-width:720px){.site-bar{height:62px;padding:0 14px;gap:14px}.mini-brand b{display:none}.site-bar nav{margin:0;gap:14px}.site-bar nav a{display:block;padding:21px 0;font-size:11px}.site-bar nav a:first-child{display:none}.archive-trigger>span:first-child,.archive-trigger i{display:none}.archive-trigger b{font-size:11px}}

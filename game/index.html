@@ -12,9 +12,10 @@
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
-  <header class="site-header">
-    <a class="brand" href="game/#top" aria-label="游戏方块日报首页"><span class="brand-mark"><i></i><i></i><i></i><i></i></span><span><b>游戏方块</b><small>DAILY PLAY / 每日简报</small></span></a>
-    <nav aria-label="主要导航"><a href="./">双频道首页</a><a href="minsheng/">民生日报</a><a href="game/#headlines">今日头条</a><button class="archive-button" id="archiveButton" type="button">往期日报 <span>⌄</span></button></nav>
+  <header class="site-bar">
+    <a class="mini-brand" href="./"><span>报</span><b>每日简报</b></a>
+    <nav aria-label="频道导航"><a href="./">双频道首页</a><a href="minsheng/">民生日报</a><a class="active" href="game/">游戏日报</a></nav>
+    <button class="archive-trigger" id="archiveButton" type="button"><span aria-hidden="true">▦</span><span><small>正在阅读</small><b id="navDate">加载中</b></span><i>⌄</i></button>
   </header>
 
   <main id="top">
