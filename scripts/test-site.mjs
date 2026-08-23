@@ -73,7 +73,7 @@ assert(!/天气|weather/i.test(civicHtml), "民生日报页面不得包含天气
 for (const id of ["domesticStories", "internationalStories", "techStories", "aiStories", "archiveDate"]) {
   assert(civicHtml.includes(`id="${id}"`), `页面缺少 ${id}`);
 }
-assert(civicHtml.includes('href="mobile-fix.css"'), "民生日报必须加载移动端布局修复样式");
+assert(civicHtml.includes('href="mobile-fix.css'), "民生日报必须加载移动端布局修复样式");
 const mobileCss = await readFile(path.join(root, "minsheng", "mobile-fix.css"), "utf8");
 assert(/position:\s*static/.test(mobileCss), "移动端栏目标题必须参与正常文档流，避免覆盖首条新闻");
 
@@ -94,11 +94,20 @@ assert(gameHtml.includes("brand-assets/springhues-logo.png") && civicHtml.includ
 await access(path.join(root, "brand-assets", "springhues-logo.png"));
 
 const gameApp = await readFile(path.join(root, "app.js"), "utf8");
+const civicApp = await readFile(path.join(root, "minsheng", "app.js"), "utf8");
 assert(gameApp.includes("历史补档"), "游戏日报必须诚实标记后补的历史期次");
 assert(!/\.innerHTML\s*=/.test(gameApp), "游戏页面不得使用 innerHTML 拼接日报数据");
 assert(gameApp.includes("textContent") && gameApp.includes("replaceChildren"), "游戏页面必须使用安全 DOM API 渲染");
 assert(gameApp.includes('parsed.protocol !== "https:"'), "游戏页面必须限制外链为 HTTPS");
 assert(gameApp.includes("safeImage(item.image, item.name)"), "Minecraft 整合包必须渲染经过安全路径校验的封面");
+for (const [name, app] of [["游戏", gameApp], ["民生", civicApp]]) {
+  assert(app.includes('element("a", "archive-item")') || app.includes('document.createElement("a")'), `${name}归档必须使用可直接访问的日期链接`);
+  assert(app.includes('url.searchParams.set("date", date)'), `${name}归档链接必须携带所选日期`);
+  assert(app.includes('dataUrl.searchParams.set("edition", edition.date)'), `${name}日报数据请求必须按期次刷新缓存`);
+  assert(app.includes('date !== edition.date'), `${name}日报必须拒绝正文日期与索引不匹配`);
+}
+assert(gameHtml.includes("app.js?v=20260824-archive-fix"), "游戏日报脚本必须使用归档修复缓存版本");
+assert(civicHtml.includes("app.js?v=20260824-archive-fix"), "民生日报脚本必须使用归档修复缓存版本");
 
 for (const file of ["index.html", "game/index.html", "minsheng/index.html", "portal.js", "minsheng/app.js", "scripts/game-lib.mjs"]) {
   await access(path.join(root, file));

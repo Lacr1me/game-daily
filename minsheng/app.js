@@ -17,7 +17,7 @@ const cnDate = (iso) => {
 
 async function init() {
   try {
-    state.manifest = await fetch("../data/minsheng/index.json", { cache: "no-store" }).then((response) => {
+    state.manifest = await fetch("../data/minsheng/index.json?source=archive", { cache: "no-store" }).then((response) => {
       if (!response.ok) throw new Error("无法读取民生日报归档");
       return response.json();
     });
@@ -38,10 +38,13 @@ async function init() {
 async function loadEdition(edition, scroll = true) {
   $("#loading").classList.remove("hidden");
   try {
-    const brief = await fetch(`../${edition.file}`, { cache: "no-store" }).then((response) => {
+    const dataUrl = new URL(`../${edition.file}`, location.href);
+    dataUrl.searchParams.set("edition", edition.date);
+    const brief = await fetch(dataUrl, { cache: "no-store" }).then((response) => {
       if (!response.ok) throw new Error("这期日报暂时无法读取");
       return response.json();
     });
+    if (brief.date !== edition.date) throw new Error("日报日期与归档索引不一致");
     state.edition = brief;
     state.activeDate = edition.date;
     render(brief);
@@ -143,18 +146,18 @@ function textNode(tag, className, value) {
 function buildArchive(editions) {
   const list = $("#archiveList");
   list.replaceChildren(...editions.map((edition) => {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "archive-item";
-    button.dataset.date = edition.date;
+    const link = document.createElement("a");
+    link.className = "archive-item";
+    link.href = editionUrl(edition.date);
+    link.dataset.date = edition.date;
     const time = document.createElement("time");
     time.textContent = edition.date;
     const title = document.createElement("b");
     title.textContent = edition.headline || edition.title;
     const arrow = document.createElement("span");
     arrow.textContent = "→";
-    button.append(time, title, arrow);
-    return button;
+    link.append(time, title, arrow);
+    return link;
   }));
   const dates = editions.map((edition) => edition.date).sort();
   $("#archiveDate").min = dates[0];
@@ -163,24 +166,35 @@ function buildArchive(editions) {
 
 function updateArchiveActiveState() {
   $("#archiveDate").value = state.activeDate;
-  document.querySelectorAll(".archive-item").forEach((item) => item.classList.toggle("active", item.dataset.date === state.activeDate));
+  document.querySelectorAll(".archive-item").forEach((item) => {
+    const active = item.dataset.date === state.activeDate;
+    item.classList.toggle("active", active);
+    if (active) item.setAttribute("aria-current", "page");
+    else item.removeAttribute("aria-current");
+  });
 }
 
-function selectDate(date) {
+function editionUrl(date) {
+  const url = new URL(location.href);
+  url.searchParams.set("date", date);
+  url.hash = "";
+  return url.href;
+}
+
+function navigateToDate(date) {
   const edition = publishedEditions().find((item) => item.date === date);
   if (!edition) {
     $("#archiveDate").value = state.activeDate;
     return showToast("该日期没有已发布的日报");
   }
   if (edition.date === state.activeDate) return $("#archiveDialog").close();
-  loadEdition(edition).catch((error) => showToast(error.message));
+  location.assign(editionUrl(edition.date));
 }
 
 $("#archiveTrigger").addEventListener("click", () => $("#archiveDialog").showModal());
 $("#closeArchive").addEventListener("click", () => $("#archiveDialog").close());
 $("#archiveDialog").addEventListener("click", (event) => { if (event.target === $("#archiveDialog")) $("#archiveDialog").close(); });
-$("#archiveList").addEventListener("click", (event) => { const button = event.target.closest(".archive-item"); if (button) selectDate(button.dataset.date); });
-$("#archiveDate").addEventListener("change", (event) => selectDate(event.target.value));
+$("#archiveDate").addEventListener("change", (event) => navigateToDate(event.target.value));
 
 function scheduleRefresh() {
   const now = new Date(new Date().toLocaleString("en-US", { timeZone: "Asia/Shanghai" }));

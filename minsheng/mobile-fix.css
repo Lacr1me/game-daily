@@ -1,4 +1,9 @@
 /* Android browsers can misplace sticky children inside overflow-hidden cards. */
+.archive-item {
+  color: inherit;
+  text-decoration: none;
+}
+
 @media (max-width: 720px) {
   .news-column > header,
   .metrics-card > header {

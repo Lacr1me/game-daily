@@ -9,10 +9,15 @@ const cnDate = (iso) => {
 async function init() {
   try {
     const embedded = globalThis.__GAME_BRIEF_ARCHIVE__;
-    state.manifest = embedded?.manifest || await fetch("data/index.json", { cache: "no-store" }).then((response) => {
-      if (!response.ok) throw new Error("无法读取归档索引");
-      return response.json();
-    });
+    try {
+      state.manifest = await fetch("data/index.json?source=archive", { cache: "no-store" }).then((response) => {
+        if (!response.ok) throw new Error("无法读取归档索引");
+        return response.json();
+      });
+    } catch (error) {
+      if (!embedded?.manifest) throw error;
+      state.manifest = embedded.manifest;
+    }
     buildArchive();
     const requested = new URLSearchParams(location.search).get("date");
     const available = getPublishedEditions();
@@ -37,16 +42,26 @@ function getPublishedEditions() {
 }
 
 async function loadBrief(edition) {
-  const data = globalThis.__GAME_BRIEF_ARCHIVE__?.briefs?.[edition.date] || await fetch(edition.file, { cache: "no-store" }).then((response) => {
-    if (!response.ok) throw new Error("这期日报暂时无法读取");
-    return response.json();
-  });
+  let data;
+  try {
+    const dataUrl = new URL(edition.file, document.baseURI);
+    dataUrl.searchParams.set("edition", edition.date);
+    data = await fetch(dataUrl, { cache: "no-store" }).then((response) => {
+      if (!response.ok) throw new Error("这期日报暂时无法读取");
+      return response.json();
+    });
+  } catch (error) {
+    data = globalThis.__GAME_BRIEF_ARCHIVE__?.briefs?.[edition.date];
+    if (!data) throw error;
+  }
+  if (data.date !== edition.date) throw new Error("日报日期与归档索引不一致");
   state.brief = data;
   state.activeDate = edition.date;
   render(data);
   const url = new URL(location.href);
   url.searchParams.set("date", edition.date);
   history.replaceState({}, "", url);
+  updateArchiveActiveState();
   $("#archiveDialog").close();
   scrollTo({ top: 0, behavior: "smooth" });
 }
@@ -135,17 +150,27 @@ function buildArchive() {
   const list = $("#archiveList");
   const editions = getPublishedEditions();
   list.replaceChildren(...editions.map((edition) => {
-    const button = element("button", "archive-item");
-    button.type = "button";
-    button.dataset.date = edition.date;
-    button.append(element("time", "", edition.date), element("b", "", edition.title), element("span", "", "→"));
-    return button;
+    const link = element("a", "archive-item");
+    link.href = editionUrl(edition.date);
+    link.dataset.date = edition.date;
+    link.append(element("time", "", edition.date), element("b", "", edition.title), element("span", "", "→"));
+    return link;
   }));
-  list.addEventListener("click", async (event) => {
-    const button = event.target.closest(".archive-item");
-    if (!button || button.dataset.date === state.activeDate) return $("#archiveDialog").close();
-    const edition = editions.find((item) => item.date === button.dataset.date);
-    if (edition) await loadBrief(edition);
+}
+
+function editionUrl(date) {
+  const url = new URL(location.href);
+  url.searchParams.set("date", date);
+  url.hash = "";
+  return url.href;
+}
+
+function updateArchiveActiveState() {
+  document.querySelectorAll(".archive-item").forEach((item) => {
+    const active = item.dataset.date === state.activeDate;
+    item.classList.toggle("active", active);
+    if (active) item.setAttribute("aria-current", "page");
+    else item.removeAttribute("aria-current");
   });
 }
 
