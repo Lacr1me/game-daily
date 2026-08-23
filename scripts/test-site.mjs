@@ -1,6 +1,7 @@
 import { access, readFile } from "node:fs/promises";
 import path from "node:path";
 import { assertPublishTime as assertGamePublishTime, beijingDate, validateGame } from "./game-lib.mjs";
+import { httpFallbackBase, tlsCertificateCode } from "./health-lib.mjs";
 import { assertPublishTime as assertMinshengPublishTime, validateMinsheng } from "./minsheng-lib.mjs";
 
 const root = process.cwd();
@@ -36,6 +37,14 @@ assertThrows(() => assertGamePublishTime("2026-08-24", new Date("2026-08-24T10:5
 assertThrows(() => assertMinshengPublishTime("2026-08-24", new Date("2026-08-24T10:59:59+08:00")), "民生日报必须拒绝11:00前发布");
 assertGamePublishTime("2026-08-24", new Date("2026-08-24T11:00:00+08:00"));
 assertMinshengPublishTime("2026-08-24", new Date("2026-08-24T11:00:00+08:00"));
+
+const certificateError = Object.assign(new Error("fetch failed"), {
+  cause: Object.assign(new Error("hostname mismatch"), { code: "ERR_TLS_CERT_ALTNAME_INVALID" })
+});
+assert(tlsCertificateCode(certificateError) === "ERR_TLS_CERT_ALTNAME_INVALID", "健康检查必须识别嵌套的 HTTPS 证书错误");
+assert(tlsCertificateCode(Object.assign(new Error("fetch failed"), { cause: { code: "ECONNREFUSED" } })) === null, "普通网络故障不得伪装成证书错误");
+assert(httpFallbackBase("https://springhues.com/") === "http://springhues.com", "证书错误时只能降级到同一域名的 HTTP 地址");
+assert(httpFallbackBase("http://springhues.com") === null, "HTTP 地址不得重复降级");
 
 for (const mutate of [
   (brief) => brief.mods.pop(),
