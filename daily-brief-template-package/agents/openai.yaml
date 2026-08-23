@@ -1,0 +1,7 @@
+interface:
+  display_name: "每日民生日报 Daily Brief"
+  short_description: "生成权威、实时、高清的35条中文民生日报"
+  icon_large: "./assets/preview.png"
+  default_prompt: "使用 $artifact-template-daily-brief 生成今天的民生日报，按北京时间检索并核验全部最新新闻与数据。"
+policy:
+  allow_implicit_invocation: true

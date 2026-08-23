@@ -70,9 +70,8 @@ for (const sharedHeaderClass of ["site-bar", "mini-brand", "archive-trigger"]) {
 assert(gameHtml.includes('<a class="active" href="game/">游戏日报</a>'), "游戏日报页头必须标记游戏频道为当前频道");
 assert(gameHtml.includes('id="navDate"'), "游戏日报统一页头必须显示当前期次日期");
 assert(!gameHtml.includes(">报</span>") && !civicHtml.includes(">报</span>"), "双频道页头不得继续显示旧的报字标识");
-assert(gameHtml.includes("brand-assets/springhues-mark.png") && civicHtml.includes("../brand-assets/springhues-mark.png"), "双频道页头必须使用 Springhues 个人 Logo 标志");
+assert(gameHtml.includes("brand-assets/springhues-logo.png") && civicHtml.includes("../brand-assets/springhues-logo.png"), "双频道页头必须使用唯一的 Springhues 正式 Logo");
 await access(path.join(root, "brand-assets", "springhues-logo.png"));
-await access(path.join(root, "brand-assets", "springhues-mark.png"));
 
 const gameApp = await readFile(path.join(root, "app.js"), "utf8");
 assert(!/\.innerHTML\s*=/.test(gameApp), "游戏页面不得使用 innerHTML 拼接日报数据");
