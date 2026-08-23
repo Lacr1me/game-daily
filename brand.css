@@ -1,18 +1,16 @@
 .mini-brand .brand-logo {
   display: block;
-  overflow: hidden;
   width: 34px;
   height: 34px;
-  background: #f8f5f1;
-  border: 1px solid #e3dfda;
-  border-radius: 3px;
+  background: transparent;
+  border: 0;
 }
 
 .brand-logo img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .portal-brand .brand-logo {
