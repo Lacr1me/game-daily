@@ -33,6 +33,19 @@ validateMinsheng(civic, { expectedDate: latestCivic.date });
 assert(Object.values(civic.sections).flat().length === 35, "最新民生日报必须包含35条新闻");
 assert(civic.topStoryIds.length === 3, "最新民生日报必须包含3条正文引用式头条");
 
+const civicBriefs = [];
+for (const edition of civicManifest.editions) {
+  const brief = await readJson(edition.file);
+  validateMinsheng(brief, { expectedDate: edition.date });
+  civicBriefs.push(brief);
+}
+for (let index = 1; index < civicBriefs.length; index += 1) {
+  const newer = civicBriefs[index - 1];
+  const older = civicBriefs[index];
+  const overlap = titleOverlap(newer, older);
+  assert(overlap < 0.9, `${newer.date} 与 ${older.date} 民生日报标题重合率 ${(overlap * 100).toFixed(1)}%，疑似复制补档`);
+}
+
 const latestGame = gameManifest.editions[0];
 const game = await readJson(latestGame.file);
 validateGame(game, { expectedDate: latestGame.date });
@@ -122,3 +135,8 @@ function assertThrows(callback, message) {
   assert(rejected, message);
 }
 function isSorted(editions) { return editions.every((edition, index) => index === 0 || editions[index - 1].date >= edition.date); }
+function titleOverlap(left, right) {
+  const leftTitles = new Set(Object.values(left.sections).flat().map((story) => story.title.trim()));
+  const rightTitles = Object.values(right.sections).flat().map((story) => story.title.trim());
+  return rightTitles.filter((title) => leftTitles.has(title)).length / rightTitles.length;
+}

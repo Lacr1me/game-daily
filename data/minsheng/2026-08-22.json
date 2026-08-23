@@ -10,80 +10,80 @@
     "domestic": [
       {
         "id": "domestic-01",
-        "title": "北京公布2026年度社保缴费基数上下限",
-        "summary": "北京市明确2026年度社会保险缴费基数下限为7270元、上限为36348元，部分已按旧标准缴费人员需按规定补缴差额。",
-        "source": "北京市人社局",
-        "publishedAt": "2026-08-21",
-        "url": "https://rsj.beijing.gov.cn/xxgk/2024zcjd/202608/t20260821_4831476.html"
+        "title": "广西南宁贵港全面转入台风灾后重建",
+        "summary": "南宁、贵港通报台风美莎克灾情并全面转入恢复重建，重点推进受灾住房修缮、基础设施恢复、复工复产和就业帮扶。",
+        "source": "新华网",
+        "publishedAt": "2026-08-21 12:18",
+        "url": "https://www.gx.news.cn/20260821/fc3c50248d9f4b79990e71b949203105/c.html"
       },
       {
         "id": "domestic-02",
-        "title": "国家部署新一代通信网与空气质量改善",
-        "summary": "国务院常务会议要求统筹推进基础、空间、国际和融合网络建设，同时持续打好蓝天保卫战并提升电力安全应急能力。",
+        "title": "内蒙古推进普惠养老与养老服务数字化",
+        "summary": "内蒙古提出构建居家、社区、机构协调的养老服务体系，以数字化打通资源壁垒，同时守牢养老机构消防、食品和运行安全底线。",
+        "source": "内蒙古日报／新华网",
+        "publishedAt": "2026-08-21 09:31",
+        "url": "https://nmg.news.cn/20260821/348774f611b641e393f5c444de158738/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "水利部门以数字孪生提升洪水预报调度能力",
+        "summary": "水利部门在防汛中加强雨水情监测预报和数字孪生应用，通过水库联合调度、预警信息发布与人员转移降低洪灾风险。",
+        "source": "新华社",
+        "publishedAt": "2026-08-21 10:12",
+        "url": "https://www2.xinhuanet.com/government/20260821/caf7bee0ff2d482781b4c0079c1537fc/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "新疆延续失业保险稳岗扩岗支持政策",
+        "summary": "新疆延续实施失业保险支持企业稳岗扩岗政策，通过稳岗返还、技能提升等措施减轻用工压力，稳定就业岗位和劳动关系。",
+        "source": "新华网新疆频道",
+        "publishedAt": "2026-08-20 17:41",
+        "url": "https://www.xj.news.cn/news/ms.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "未来五年将全面建成多层次医疗保障体系",
+        "summary": "全民医疗保障十五五规划提出完善基本医保、医疗救助和商业保险衔接，推动基层服务下沉、异地结算和基金智能监管。",
+        "source": "人民日报",
+        "publishedAt": "2026-08-20 09:25",
+        "url": "https://sh.people.com.cn/BIG5/n2/2026/0820/c134768-41672760.html"
+      },
+      {
+        "id": "domestic-06",
+        "title": "江苏多措并举保障迎峰度夏能源供应",
+        "summary": "江苏加强电力供需监测、设备巡检和应急值守，保障高温期间居民与重点行业用能，并同步落实户外劳动者防暑降温措施。",
+        "source": "新华网江苏频道",
+        "publishedAt": "2026-08-22",
+        "url": "https://js.news.cn/20260822/b302567e706d4e3abd14389e11a8732f/c.html"
+      },
+      {
+        "id": "domestic-07",
+        "title": "多地完善高温天气劳动者权益保障",
+        "summary": "有关部门和工会组织加强高温津贴、防暑物资、作业时间调整与劳动保护检查，督促用人单位落实户外劳动者健康保障责任。",
+        "source": "人民日报",
+        "publishedAt": "2026-08-18",
+        "url": "https://sh.people.com.cn/BIG5/n2/2026/0818/c134768-41670665.html"
+      },
+      {
+        "id": "domestic-08",
+        "title": "前七个月消费市场保持稳定增长",
+        "summary": "统计数据表明前七个月消费市场延续恢复态势，服务消费和新型消费活力增强，各地促消费政策继续推动需求释放。",
+        "source": "人民日报",
+        "publishedAt": "2026-08-17",
+        "url": "https://finance.people.com.cn/n1/2026/0817/c1004-40781143.html"
+      },
+      {
+        "id": "domestic-09",
+        "title": "国家部署新一代通信网络与清欠工作",
+        "summary": "国务院常务会议部署统筹基础、空间、国际和融合网络建设，并要求健全拖欠企业账款清偿机制、提升电力安全应急能力。",
         "source": "中国政府网／新华社",
         "publishedAt": "2026-08-21 19:39",
         "url": "https://big5.www.gov.cn/gate/big5/www.gov.cn/yaowen/liebiao/202608/content_7078803.htm"
       },
       {
-        "id": "domestic-03",
-        "title": "国家防总对华南启动防汛防台风四级响应",
-        "summary": "国家防总办公室、应急管理部针对海南、广西、广东启动四级应急响应，要求落实人员转移和重点区域风险防范。",
-        "source": "应急管理部",
-        "publishedAt": "2026-08-21 21:11",
-        "url": "https://www.mem.gov.cn/xw/yjglbgzdt/index.shtml"
-      },
-      {
-        "id": "domestic-04",
-        "title": "上海部署就业帮扶与民生实事",
-        "summary": "上海市政府常务会议提出推进民心工程和民生实事，强化重点群体就业帮扶，提升教育、住房和社会保障服务水平。",
-        "source": "上海市政府",
-        "publishedAt": "2026-08-21",
-        "url": "https://www.shanghai.gov.cn/nw4411/20260821/97a6c87e5f364999b2dca7da1d794a0c.html"
-      },
-      {
-        "id": "domestic-05",
-        "title": "住房公积金管理条例完成修改",
-        "summary": "国务院修改住房公积金管理条例，新规将于9月20日起施行，政策解读强调普惠扩围和全链条赋能住房消费。",
-        "source": "中国政府网",
-        "publishedAt": "2026-08-18",
-        "url": "https://sousuo.www.gov.cn/zcwjk/policyDocumentLibrary?key=&t=zhengcelibrary"
-      },
-      {
-        "id": "domestic-06",
-        "title": "特殊教育“十五五”行动计划获批",
-        "summary": "国务院批复特殊教育发展提升“十五五”行动计划，要求教育、发展改革、民政、财政、人社、卫健等部门协同实施。",
-        "source": "中国政府网",
-        "publishedAt": "2026-08-17",
-        "url": "https://sousuo.www.gov.cn/zcwjk/policyDocumentLibrary?key=&t=zhengcelibrary"
-      },
-      {
-        "id": "domestic-07",
-        "title": "全民医疗保障“十五五”规划印发",
-        "summary": "国家医保局印发全民医疗保障“十五五”规划，部署完善多层次保障、支付方式改革、基金监管和便民服务。",
-        "source": "国家医保局／中国政府网",
-        "publishedAt": "2026-08-19",
-        "url": "https://sousuo.www.gov.cn/zcwjk/policyDocumentLibrary?key=&t=zhengcelibrary"
-      },
-      {
-        "id": "domestic-08",
-        "title": "三部门优化社区岗位吸纳高校毕业生",
-        "summary": "人社部等部门发文优化城乡社区岗位吸纳高校毕业生工作，推动基层岗位开发、就业服务与人才成长衔接。",
-        "source": "人社部／中国政府网",
-        "publishedAt": "2026-08-18",
-        "url": "https://sousuo.www.gov.cn/zcwjk/policyDocumentLibrary?key=&t=zhengcelibrary"
-      },
-      {
-        "id": "domestic-09",
-        "title": "九部门发文激发县域消费活力",
-        "summary": "商务部等九部门提出完善县域商业设施、丰富优质商品和服务供给，进一步激发下沉市场与县域消费潜力。",
-        "source": "商务部／中国政府网",
-        "publishedAt": "2026-08-18",
-        "url": "https://sousuo.www.gov.cn/zcwjk/policyDocumentLibrary?key=&t=zhengcelibrary"
-      },
-      {
         "id": "domestic-10",
         "title": "2026世界机器人大会在北京开幕",
-        "summary": "2026世界机器人大会8月19日在北京开幕，集中展示国内外机器人整机创新产品和产业链成果，推动技术攻关与场景应用。",
+        "summary": "大会集中展示国内外机器人整机、关键零部件和产业链创新成果，围绕技术攻关、标准建设及典型场景应用开展交流合作。",
         "source": "工业和信息化部",
         "publishedAt": "2026-08-19",
         "url": "https://www.miit.gov.cn/xwfb/bldhd/art/2026/art_18a2e30182d44a4ea7c2c1295704dfee.html"
@@ -92,214 +92,214 @@
     "international": [
       {
         "id": "international-01",
-        "title": "刚果（金）将获7万剂埃博拉疫苗",
-        "summary": "联合国称刚果（金）将接收7万剂Ervebo疫苗，重点保护一线人员，应对仍在扩散的埃博拉疫情。",
-        "source": "联合国新闻",
+        "title": "俄军大规模空袭基辅造成至少14人死亡",
+        "summary": "乌克兰官员称俄罗斯夜间使用导弹和无人机对基辅及周边地区发动大规模空袭，造成至少14人死亡并引发多处损毁。",
+        "source": "美联社",
         "publishedAt": "2026-08-20",
-        "url": "https://www.un.org/en/"
+        "url": "https://www.yahoo.com/news/videos/ap-top-stories-august-20-115130966.html"
       },
       {
         "id": "international-02",
-        "title": "联合国调查警告南苏丹暴行风险上升",
-        "summary": "联合国支持的调查机制警告，南苏丹在选举临近之际若不能遏制重新升级的战事，人道危机可能进一步恶化。",
-        "source": "联合国新闻",
+        "title": "美加接近达成协议以避免50%关税",
+        "summary": "美国和加拿大谈判代表接近敲定新的贸易安排，以避免美国对加拿大商品实施威胁中的50%关税，双方仍在处理关键分歧。",
+        "source": "美联社",
         "publishedAt": "2026-08-20",
-        "url": "https://www.un.org/ruleoflaw/from-the-field/"
+        "url": "https://www.yahoo.com/news/videos/ap-top-stories-august-20-115130966.html"
       },
       {
         "id": "international-03",
-        "title": "苏丹战事与洪灾造成20万人新增流离失所",
-        "summary": "联合国称自2025年末以来，苏丹加剧的战斗已造成至少20万人新增流离失所，季节性洪灾进一步放大需求。",
-        "source": "联合国新闻",
-        "publishedAt": "2026-08-19",
-        "url": "https://www.un.org/ruleoflaw/from-the-field/"
+        "title": "宾州小型飞机与警用直升机相撞",
+        "summary": "美国宾夕法尼亚州发生小型飞机与警用直升机空中相撞事故，应急部门展开现场救援和事故调查，航空安全再受关注。",
+        "source": "美联社",
+        "publishedAt": "2026-08-20",
+        "url": "https://www.yahoo.com/news/videos/ap-top-stories-august-20-115130966.html"
       },
       {
         "id": "international-04",
-        "title": "无人机正在重塑战场并威胁援助人员",
-        "summary": "联合国警告武装无人机改变冲突形态，人道团队越来越频繁地处于打击风险之中，援助行动安全承压。",
-        "source": "联合国新闻",
-        "publishedAt": "2026-08-19",
-        "url": "https://www.un.org/en/"
+        "title": "前Meta工程师就未成年人产品设计作证",
+        "summary": "一名前Meta工程师作证称，公司对13岁以下儿童使用Instagram的问题采取放任做法，平台的未成年人保护设计受到审视。",
+        "source": "美联社",
+        "publishedAt": "2026-08-20",
+        "url": "https://www.yahoo.com/news/videos/ap-top-stories-august-20-115130966.html"
       },
       {
         "id": "international-05",
-        "title": "利比亚政治僵局与无人机袭击受关注",
-        "summary": "联合国安理会审议利比亚局势，选举进程受阻之际，冲突与无人机袭击还导致一座重要炼油设施起火。",
-        "source": "联合国新闻",
-        "publishedAt": "2026-08-18",
-        "url": "https://www.un.org/ruleoflaw/from-the-field/"
+        "title": "伊朗驳斥美国经济施压并呼吁恢复谈判",
+        "summary": "伊朗外长反驳美国扩大经济孤立的威胁，并称有关措施危及全球经济；巴基斯坦继续同各方接触以推动局势降温。",
+        "source": "美联社",
+        "publishedAt": "2026-08-20 18:15",
+        "url": "https://apnews.com/article/bbc5df71e56f000515edef0817468c9d"
       },
       {
         "id": "international-06",
-        "title": "加沙仅约3%耕地仍可用于种植",
-        "summary": "联合国指出持续敌对行动使加沙农民更难获得安全耕地，目前仅约3%的耕地可用于种植，粮食生产能力严重受限。",
-        "source": "联合国新闻",
-        "publishedAt": "2026-08-18",
-        "url": "https://www.un.org/ruleoflaw/from-the-field/"
+        "title": "约旦河西岸冲突中巴勒斯坦少年死亡",
+        "summary": "约旦河西岸定居者与巴勒斯坦人发生冲突，一名少年死亡；以色列人权组织同时警告定居者暴力正由乡村扩展至城市。",
+        "source": "美联社",
+        "publishedAt": "2026-08-21 22:41",
+        "url": "https://apnews.com/article/129bdcff86f21b8a493ac817472af5c6"
       },
       {
         "id": "international-07",
-        "title": "联合国扩大哥伦比亚地震人道援助",
-        "summary": "哥伦比亚西部发生7.4级地震后，联合国正扩大在当地的人道援助，并与国家机构协调评估持续增长的需求。",
-        "source": "联合国新闻",
-        "publishedAt": "2026-08-18",
-        "url": "https://www.un.org/en/"
+        "title": "联合国称加沙平民持续承受致命袭击",
+        "summary": "联合国人权机构记录加沙多起针对人口密集区域和警务设施的袭击，重申平民与民用设施必须获得国际人道法保护。",
+        "source": "联合国人权事务高级专员办事处",
+        "publishedAt": "2026-08-21",
+        "url": "https://www.un.org/unispal/document/gaza-civilians-continue-to-pay-the-price-as-deadly-attacks-persist-en-ar/"
       },
       {
         "id": "international-08",
-        "title": "联合国关注赞比亚选后反对派遭拘押",
-        "summary": "赞比亚总统赢得连任后，联合国人权部门对反对派人员遭逮捕和拘押表达关切，呼吁保障基本权利。",
-        "source": "联合国新闻",
-        "publishedAt": "2026-08-19",
-        "url": "https://www.un.org/ruleoflaw/from-the-field/"
+        "title": "刚果（金）发动摩托车骑手参与埃博拉防控",
+        "summary": "世界卫生组织在刚果（金）扩大社区动员，培训摩托车骑手识别并安全转运疑似病例，以改善偏远地区发现和救治效率。",
+        "source": "联合国新闻／世界卫生组织",
+        "publishedAt": "2026-08-18",
+        "url": "https://www.un.org/en/tags/newsunorg"
       },
       {
         "id": "international-09",
-        "title": "国际刑事法院谴责美国新一轮制裁",
-        "summary": "国际刑事法院回应美国针对其院长和高级检察官的新制裁，称此举冲击法院独立性与国际司法秩序。",
-        "source": "联合国新闻／国际刑事法院",
-        "publishedAt": "2026-08-19",
-        "url": "https://www.un.org/ruleoflaw/from-the-field/"
+        "title": "联合国援助抵达约旦河西岸受困家庭",
+        "summary": "联合国团队向约旦河西岸库斯拉村受困家庭送达饮水、食品、药品和卫生用品，并要求保障人道人员和基本服务通行。",
+        "source": "联合国驻巴勒斯坦机构",
+        "publishedAt": "2026-08-18",
+        "url": "https://palestine.un.org/en/321143-aid-reaches-trapped-palestinian-families-northern-west-bank"
       },
       {
         "id": "international-10",
-        "title": "联合国对约旦河西岸新建定居点警示",
-        "summary": "联合国就被占领约旦河西岸出现新的非法定居点发出警报，并谴责针对巴勒斯坦人的攻击与煽动行为。",
+        "title": "联合国警告也门冲突平民伤亡上升",
+        "summary": "联合国人权负责人警告也门冲突正造成更多平民死伤，并呼吁各方保持克制、遵守国际法，防止地区紧张继续外溢。",
         "source": "联合国新闻",
-        "publishedAt": "2026-08-19",
-        "url": "https://www.un.org/ruleoflaw/from-the-field/"
+        "publishedAt": "2026-08-17",
+        "url": "https://www.un.org/en/tags/newsunorg"
       }
     ],
     "tech": [
       {
         "id": "tech-01",
-        "title": "发现大脑全新神经调控环路",
-        "summary": "中科院团队发现伏隔核D1、D2神经元可双向调控杏仁核乙酰胆碱释放，为理解显著性加工异常提供潜在靶点。",
+        "title": "暗腔真空涨落实现超导增强",
+        "summary": "中国科大团队首次利用暗腔调控真空涨落，使超导临界温度最高提升5.4%，为光与量子材料相互作用研究提供新路径。",
         "source": "中国科学院",
-        "publishedAt": "2026-08-20",
-        "url": "https://www.cas.cn/syky/202608/t20260820_5118673.shtml"
+        "publishedAt": "2026-08-21",
+        "url": "https://www.cas.cn/syky/202608/t20260821_5118765.shtml"
       },
       {
         "id": "tech-02",
-        "title": "揭示我国森林碳汇形成机制",
-        "summary": "科研人员系统分析过去30余年我国森林碳汇变化，进一步阐明气候、植被恢复与生态工程对碳汇形成的共同作用。",
+        "title": "热带暖池增暖减缓南极冰盖质量损失",
+        "summary": "科研团队揭示热带暖池多年尺度增暖可通过大气环流影响南极降雪，进而阶段性减缓冰盖质量损失并改变海平面贡献。",
         "source": "中国科学院",
-        "publishedAt": "2026-08-18",
-        "url": "https://www.cas.cn/syky/202608/t20260818_5118526.shtml"
+        "publishedAt": "2026-08-20",
+        "url": "https://www.cas.cn/syky/202608/t20260820_5118741.shtml"
       },
       {
         "id": "tech-03",
-        "title": "TOPCon太阳能电池金属化研究获进展",
-        "summary": "研究团队围绕TOPCon电池高效金属化开展材料与工艺优化，为降低银耗、提升效率和推动光伏规模化制造提供新思路。",
+        "title": "高熵反式钙钛矿电极研究获进展",
+        "summary": "科研人员通过高熵设计优化反式钙钛矿电极界面稳定性和电荷输运，为兼顾高效率与长期运行可靠性的器件提供新方案。",
         "source": "中国科学院",
-        "publishedAt": "2026-08-18",
-        "url": "https://www.cas.cn/syky/202608/t20260818_5118523.shtml"
+        "publishedAt": "2026-08-20",
+        "url": "https://www.cas.cn/syky/202608/t20260820_5118744.shtml"
       },
       {
         "id": "tech-04",
-        "title": "揭示棕榈酸加剧肥胖炎症新机制",
-        "summary": "研究发现棕榈酸可破坏内脏脂肪免疫稳态并加剧肥胖相关炎症，为代谢疾病机制研究与干预提供新线索。",
+        "title": "分子筛微孔道调控荧光大分子机制获揭示",
+        "summary": "研究解析分子筛微孔道对荧光大分子构象与发光行为的限域作用，为稳定发光材料、传感及主客体化学设计提供依据。",
         "source": "中国科学院",
-        "publishedAt": "2026-08-19",
-        "url": "https://www.cas.cn/syky/202608/t20260819_5118566.shtml"
+        "publishedAt": "2026-08-18",
+        "url": "https://www.cas.cn/syky/202608/t20260818_5118522.shtml"
       },
       {
         "id": "tech-05",
-        "title": "高效一价离子分离研究获进展",
-        "summary": "科研人员在高效一价离子选择性分离方面取得进展，有望服务盐湖资源利用、水处理及相关分离过程的能效提升。",
+        "title": "三阴性乳腺癌联合治疗研究获进展",
+        "summary": "科研人员围绕三阴性乳腺癌的治疗耐受与免疫微环境提出联合干预策略，为提升治疗响应和改善预后提供新的实验依据。",
         "source": "中国科学院",
-        "publishedAt": "2026-08-18",
-        "url": "https://www.cas.cn/syky/202608/t20260818_5118525.shtml"
+        "publishedAt": "2026-08-19",
+        "url": "https://www.cas.cn/syky/202608/t20260819_5118620.shtml"
       },
       {
         "id": "tech-06",
-        "title": "科学家将量子存储器纠缠距离提升至420公里",
-        "summary": "中国科研团队把量子存储器之间的纠缠距离提升至420公里，为远距离量子网络和量子中继技术研究推进关键一步。",
+        "title": "低贵金属串联氢氧化催化剂完成开发",
+        "summary": "科研团队开发低贵金属串联氢氧化反应催化剂，通过协同活性位点提升反应效率和稳定性，为降低相关电催化成本提供思路。",
         "source": "中国科学院",
-        "publishedAt": "2026-08-18",
-        "url": "https://www.cas.cn/syky/index_1.shtml"
+        "publishedAt": "2026-08-17",
+        "url": "https://www.cas.cn/syky/202608/t20260817_5118441.shtml"
       },
       {
         "id": "tech-07",
-        "title": "极端条件下电池材料失效机制获揭示",
-        "summary": "科研人员解析电池材料在极端条件下的失效过程，为提升储能器件安全性、寿命和极端环境适应能力提供依据。",
+        "title": "C-H金属化及不对称偶联反应获突破",
+        "summary": "研究团队在碳氢键金属化与不对称偶联反应方面取得进展，为高选择性构建手性分子及药物中间体提供新的催化工具。",
         "source": "中国科学院",
         "publishedAt": "2026-08-18",
-        "url": "https://www.cas.cn/syky/index_1.shtml"
+        "url": "https://www.cas.cn/syky/202608/t20260818_5118512.shtml"
       },
       {
         "id": "tech-08",
-        "title": "轻量化AI赋能术中影像引导",
-        "summary": "研究团队实现轻量化人工智能用于术中影像引导，旨在减少计算负担并提升临床场景中的实时辅助能力。",
+        "title": "绿色撒哈拉向荒漠转变机制获重建",
+        "summary": "科研人员结合气候记录与人类活动证据，重建绿色撒哈拉向荒漠演化过程，阐明环境变化如何重塑非洲人口迁徙与聚居。",
         "source": "中国科学院",
-        "publishedAt": "2026-08-18",
-        "url": "https://www.cas.cn/syky/index_1.shtml"
+        "publishedAt": "2026-08-19",
+        "url": "https://www.cas.cn/syky/202608/t20260819_5118627.shtml"
       },
       {
         "id": "tech-09",
-        "title": "观测到核子内部奇特结构",
-        "summary": "科学家通过实验观测到核子内部新的奇特结构，为理解强相互作用和核子内部夸克、胶子动力学提供新证据。",
+        "title": "西伯利亚冻土甲烷排放增长机制获揭示",
+        "summary": "科研团队完整解析西伯利亚冻土甲烷排放增长的演变机制，量化气候变暖与水文变化影响，为高纬度碳循环预测提供支撑。",
         "source": "中国科学院",
-        "publishedAt": "2026-08-17",
-        "url": "https://www.cas.cn/syky/202608/t20260817_5118472.shtml"
+        "publishedAt": "2026-08-19",
+        "url": "https://www.cas.cn/syky/202608/t20260819_5118634.shtml"
       },
       {
         "id": "tech-10",
-        "title": "植物RNA编辑因子演化规律获揭示",
-        "summary": "研究团队揭示植物RNA编辑因子的演化规律，增进对植物细胞器基因表达调控及适应性演化的认识。",
+        "title": "DNA损伤修复调控放疗敏感性机制获进展",
+        "summary": "研究人员发现DNA损伤修复通路影响肿瘤细胞放疗敏感性的关键机制，为患者分层和联合放疗方案设计提供潜在靶点。",
         "source": "中国科学院",
-        "publishedAt": "2026-08-17",
-        "url": "https://www.cas.cn/syky/index_1.shtml"
+        "publishedAt": "2026-08-18",
+        "url": "https://www.cas.cn/syky/202608/t20260818_5118509.shtml"
       }
     ],
     "ai": [
       {
         "id": "ai-01",
-        "title": "OpenAI成立“AI Futures”研究平台",
-        "summary": "OpenAI战略未来团队推出AI Futures，聚焦变革性AI时代个人权利、社会制度与权力制衡等长期治理议题。",
-        "source": "OpenAI",
-        "publishedAt": "2026-08-20",
-        "url": "https://openai.com/index/introducing-ai-futures/"
+        "title": "DeepMind回顾十五年游戏AI研究并拓展合作",
+        "summary": "Google DeepMind总结从Atari到EVE Online的游戏人工智能研究路径，并与游戏开发者合作探索可控代理和新型玩法原型。",
+        "source": "Google DeepMind",
+        "publishedAt": "2026-08-21",
+        "url": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/"
       },
       {
         "id": "ai-02",
-        "title": "前沿模型将继续提供零数据保留选项",
-        "summary": "OpenAI预览Private Safety Processing，使符合条件的API客户可在零数据保留前提下识别跨交互风险模式。",
+        "title": "OpenAI资助14个智能时代政策研究项目",
+        "summary": "OpenAI公布新一轮政策研究支持计划，向14个独立项目提供资助，探索人工智能时代的经济机会、公共治理与社会适应路径。",
         "source": "OpenAI",
-        "publishedAt": "2026-08-19",
-        "url": "https://openai.com/index/offering-zero-data-retention-for-frontier-models/"
+        "publishedAt": "2026-08-17",
+        "url": "https://openai.com/index/new-policy-ideas-for-the-intelligence-age/"
       },
       {
         "id": "ai-03",
-        "title": "ChatGPT广告扩展至欧洲31个市场",
-        "summary": "OpenAI宣布ChatGPT广告将进入31个欧洲市场，仅面向Free与Go用户展示，付费订阅继续保持无广告。",
+        "title": "OpenAI提出加强国家安全领域民主监督",
+        "summary": "OpenAI就人工智能参与国家安全应用提出治理建议，强调透明程序、责任边界和民主机构监督，以降低高风险部署带来的权力失衡。",
         "source": "OpenAI",
         "publishedAt": "2026-08-18",
-        "url": "https://openai.com/index/chatgpt-ads-expands-across-europe/"
+        "url": "https://openai.com/index/strengthening-democratic-oversight-in-national-security/"
       },
       {
         "id": "ai-04",
-        "title": "OpenAI加强高危网络能力模型防护",
-        "summary": "OpenAI称即将推出的Astra模型可能触及关键网络安全能力阈值，将强化研究环境、思维链监控与对齐保障。",
+        "title": "OpenAI发布防御者窗口网络安全框架",
+        "summary": "OpenAI提出防御者窗口框架，用于评估模型能力对攻击者与防守者的相对影响，并据此设计网络安全测试、访问与缓解措施。",
         "source": "OpenAI",
-        "publishedAt": "2026-08-18",
-        "url": "https://openai.com/index/pacing-model-development-cyber-capabilities/"
+        "publishedAt": "2026-08-17",
+        "url": "https://openai.com/index/the-defenders-window/"
       },
       {
         "id": "ai-05",
-        "title": "ChatGPT for Teens正式推出",
-        "summary": "OpenAI推出面向青少年的ChatGPT版本，强调学习场景和保护机制，围绕年龄适配体验与家长支持增强安全设计。",
+        "title": "OpenAI说明高危网络能力模型发布节奏",
+        "summary": "OpenAI说明前沿模型在网络安全能力接近高风险阈值时的研发与发布原则，将结合分级评估、监控和访问控制推进部署。",
         "source": "OpenAI",
         "publishedAt": "2026-08-18",
-        "url": "https://openai.com/index/chatgpt-for-teens/"
+        "url": "https://openai.com/index/pacing-model-development-cyber-capabilities/"
       }
     ]
   },
   "topStoryIds": [
     "domestic-01",
     "international-01",
-    "tech-06"
+    "tech-01"
   ],
   "metrics": [
     {
@@ -374,15 +374,17 @@
     "新华财经",
     "公开国际油价数据"
   ],
-  "observation": "8月22日的民生主线呈现“制度扩围、安全托底、科技提效”三重特征。社保缴费、住房公积金、医保、特殊教育及高校毕业生社区就业等政策，继续向居民切身利益和公共服务可及性延伸；防汛防台风响应强化重点区域风险防范。国际层面，疫情、地震、冲突与流离失所交织，人道资源持续承压。科技栏目从量子网络、脑科学、森林碳汇延伸至AI隐私和网络能力治理，创新速度与安全边界同步成为公共议题。",
+  "observation": "8月22日的民生主线集中在灾后恢复、公共服务与安全韧性。广西推进住房和基础设施重建，水利部门以数字孪生强化洪水预报，养老、医保、稳岗和高温劳动保护继续向基层延伸。国际层面，基辅空袭、加沙平民伤亡和也门冲突凸显人道压力，美加贸易谈判与伊朗经济局势又牵动跨境市场。科技栏目从超导、钙钛矿和肿瘤治疗延伸至AI治理，创新能力与风险控制需要同步推进。",
   "sources": [
     "中国政府网",
-    "应急管理部",
-    "北京市人社局",
-    "上海市政府",
+    "新华社",
+    "人民日报",
+    "内蒙古日报",
     "联合国",
+    "美联社",
     "中国科学院",
     "OpenAI",
+    "Google DeepMind",
     "工业和信息化部",
     "上海黄金交易所",
     "中国外汇交易中心",
