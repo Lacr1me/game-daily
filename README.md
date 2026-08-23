@@ -27,17 +27,24 @@ node scripts/validate-minsheng.mjs data/minsheng/2026-08-23.json
 
 ## 每日自动更新
 
-`.github/workflows/daily-brief.yml` 在北京时间 10:50 启动：
+日报由绑定到本地“日报设计”项目的 Codex 定时任务执行，不再通过仓库脚本调用 OpenAI API，也不需要 `OPENAI_API_KEY`：
 
-1. 民生日报优先、两个频道顺序调用 OpenAI Responses API，通过 Web Search 检索并生成严格结构化草稿；仅在短暂限流时冷却并自动重试一次，避免同时耗尽 TPM 配额。
+1. 每天北京时间 10:50，Codex 使用自身可用的检索能力制作民生日报和游戏日报。
 2. 两个频道独立校验；一个频道失败不会阻塞另一个频道。
-3. 成功草稿保存在未公开、被 Git 忽略的 `data/.pending/`。
-4. 工作流等待至北京时间 11:00，再发布成功频道并一次性提交数据。
-5. `main` 分支更新触发 GitHub Pages 构建。
+3. 通过校验的草稿先保存在未公开、被 Git 忽略的 `data/.pending/`。
+4. 北京时间 11:00 后发布成功频道，更新归档索引并提交到 `main`。
+5. `main` 分支更新后，`.github/workflows/pages.yml` 只负责构建和部署 GitHub Pages。
 
-需要在仓库 **Settings → Secrets and variables → Actions** 添加 `OPENAI_API_KEY`。未配置密钥或当天生成失败时，网站继续展示最近一期有效内容，不发布空日报。
+仓库中不包含自动模型生成调用。若定时任务未运行或当天生成失败，网站继续展示最近一期有效内容，不发布空日报。计划时间是目标时间，实际完成时间可能受本地执行环境、检索和部署耗时影响。
 
-GitHub Actions 的计划任务可能排队，因此 11:00 是目标发布时间而非秒级保证。
+需要人工发布已经准备好的草稿时，可在北京时间 11:00 后运行：
+
+```powershell
+node scripts/publish-minsheng.mjs
+node scripts/publish-brief.mjs
+node scripts/build-embedded.mjs
+node scripts/test-site.mjs
+```
 
 ## 民生日报数据约定
 
