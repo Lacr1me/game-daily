@@ -48,10 +48,15 @@ jobs:
             attempt=1
             while [ "$attempt" -le 2 ]; do
               echo "Generating $label (attempt $attempt/2)..."
-              if node "$script"; then return 0; fi
-              if [ "$attempt" -lt 2 ]; then
-                echo "$label generation failed; cooling down for 90 seconds before retry."
+              log_file="$RUNNER_TEMP/$label-generation.log"
+              node "$script" 2>&1 | tee "$log_file"
+              status=${PIPESTATUS[0]}
+              if [ "$status" -eq 0 ]; then return 0; fi
+              if [ "$attempt" -lt 2 ] && grep -Eq 'Please try again in [0-9.]+s' "$log_file"; then
+                echo "$label hit a short rate limit; cooling down for 90 seconds before retry."
                 sleep 90
+              else
+                return "$status"
               fi
               attempt=$((attempt + 1))
             done
