@@ -29,7 +29,7 @@ node scripts/validate-minsheng.mjs data/minsheng/2026-08-23.json
 
 `.github/workflows/daily-brief.yml` 在北京时间 10:50 启动：
 
-1. 游戏日报和民生日报并行调用 OpenAI Responses API，通过 Web Search 检索并生成严格结构化草稿。
+1. 民生日报优先、两个频道顺序调用 OpenAI Responses API，通过 Web Search 检索并生成严格结构化草稿；失败会在冷却后自动重试一次，避免同时耗尽 TPM 配额。
 2. 两个频道独立校验；一个频道失败不会阻塞另一个频道。
 3. 成功草稿保存在未公开、被 Git 忽略的 `data/.pending/`。
 4. 工作流等待至北京时间 11:00，再发布成功频道并一次性提交数据。

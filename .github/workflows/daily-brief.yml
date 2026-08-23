@@ -42,20 +42,36 @@ jobs:
         shell: bash
         run: |
           set +e
-          node scripts/generate-brief.mjs > game-generation.log 2>&1 &
-          game_pid=$!
-          node scripts/generate-minsheng.mjs > civic-generation.log 2>&1 &
-          civic_pid=$!
+          run_with_retry() {
+            script="$1"
+            label="$2"
+            attempt=1
+            while [ "$attempt" -le 2 ]; do
+              echo "Generating $label (attempt $attempt/2)..."
+              if node "$script"; then return 0; fi
+              if [ "$attempt" -lt 2 ]; then
+                echo "$label generation failed; cooling down for 90 seconds before retry."
+                sleep 90
+              fi
+              attempt=$((attempt + 1))
+            done
+            return 1
+          }
 
-          wait "$game_pid"
-          game_status=$?
-          wait "$civic_pid"
-          civic_status=$?
+          # 民生日报优先，避免两个长请求同时耗尽项目 TPM 配额。
+          if run_with_retry scripts/generate-minsheng.mjs civic; then
+            echo "civic=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "civic=false" >> "$GITHUB_OUTPUT"
+          fi
 
-          cat game-generation.log
-          cat civic-generation.log
-          if [ "$game_status" -eq 0 ]; then echo "game=true" >> "$GITHUB_OUTPUT"; else echo "game=false" >> "$GITHUB_OUTPUT"; fi
-          if [ "$civic_status" -eq 0 ]; then echo "civic=true" >> "$GITHUB_OUTPUT"; else echo "civic=false" >> "$GITHUB_OUTPUT"; fi
+          echo "Cooling down for 75 seconds before the game channel."
+          sleep 75
+          if run_with_retry scripts/generate-brief.mjs game; then
+            echo "game=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "game=false" >> "$GITHUB_OUTPUT"
+          fi
           exit 0
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
