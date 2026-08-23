@@ -100,7 +100,7 @@ function packRow(item, index) {
   copy.append(heading, element("p", "", item.summary), element("small", "", `${item.category} · ${item.source}`));
   const heat = element("span", "heat", String(item.heat));
   heat.append(element("small", "", "HEAT"));
-  link.append(element("span", "pack-rank", pad(index + 1)), copy, heat);
+  link.append(element("span", "pack-rank", pad(index + 1)), safeImage(item.image, item.name), copy, heat);
   return link;
 }
 

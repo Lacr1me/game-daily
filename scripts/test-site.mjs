@@ -83,6 +83,7 @@ const gameApp = await readFile(path.join(root, "app.js"), "utf8");
 assert(!/\.innerHTML\s*=/.test(gameApp), "游戏页面不得使用 innerHTML 拼接日报数据");
 assert(gameApp.includes("textContent") && gameApp.includes("replaceChildren"), "游戏页面必须使用安全 DOM API 渲染");
 assert(gameApp.includes('parsed.protocol !== "https:"'), "游戏页面必须限制外链为 HTTPS");
+assert(gameApp.includes("safeImage(item.image, item.name)"), "Minecraft 整合包必须渲染经过安全路径校验的封面");
 
 for (const file of ["index.html", "game/index.html", "minsheng/index.html", "portal.js", "minsheng/app.js", "scripts/game-lib.mjs"]) {
   await access(path.join(root, file));

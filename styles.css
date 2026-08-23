@@ -14,7 +14,7 @@
 .news-row:hover .inline-link,.pack-row:hover .inline-link,.mod-row:hover .inline-link,.deal-row:hover .inline-link{transform:translate(2px,-2px)}
 .out-link{float:right;width:27px;height:27px;display:grid;place-items:center;border:1px solid #ffffff99;border-radius:50%;font-size:13px}
 .feature-card:focus-visible,.news-row:focus-visible,.pack-row:focus-visible,.mod-row:focus-visible,.deal-row:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
-.pack-row{grid-template-columns:34px 84px 1fr 48px}.pack-row>img{width:84px;height:54px;object-fit:cover;border-radius:4px;border:1px solid #cad7cd}.pack-row:hover>img{filter:saturate(1.12)}
+.news-column,.minecraft-column{min-width:0}.pack-row{grid-template-columns:34px 84px minmax(0,1fr) 48px;min-height:100px}.pack-row>div{min-width:0}.pack-row>img{width:84px;height:54px;object-fit:cover;border-radius:4px;border:1px solid #cad7cd}.pack-row:hover>img{filter:saturate(1.12)}
 @media(max-width:600px){.pack-row{grid-template-columns:30px 70px 1fr 38px;gap:8px}.pack-row>img{width:70px;height:48px}.pack-row p{display:none}}
 
 /* Game hero branding */
