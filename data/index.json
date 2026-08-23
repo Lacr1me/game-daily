@@ -1,0 +1,13 @@
+{
+  "timezone": "Asia/Shanghai",
+  "generateAt": "10:50",
+  "publishAt": "11:00",
+  "editions": [
+    {
+      "date": "2026-08-23",
+      "publishAt": "2026-08-23T11:00:00+08:00",
+      "title": "游戏与 Minecraft 每日简报",
+      "file": "data/2026-08-23.json"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+name: Generate and publish daily brief
+
+on:
+  schedule:
+    # GitHub Actions 使用 UTC；北京时间 10:50。
+    - cron: "50 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-brief
+  cancel-in-progress: false
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Check OpenAI API key
+        id: api-key
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          if [ -n "$OPENAI_API_KEY" ]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+            echo "OpenAI API key is configured."
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "OPENAI_API_KEY is not configured; skipping today's generation."
+          fi
+
+      - name: Generate verified draft at 10:50
+        if: steps.api-key.outputs.available == 'true'
+        run: node scripts/generate-brief.mjs
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: gpt-5.4-mini
+
+      - name: Wait until 11:00 Beijing time
+        if: steps.api-key.outputs.available == 'true'
+        run: |
+          now=$(TZ=Asia/Shanghai date +%s)
+          target=$(TZ=Asia/Shanghai date -d "$(TZ=Asia/Shanghai date +%F) 11:00:00" +%s)
+          if [ "$now" -lt "$target" ]; then
+            sleep "$((target - now))"
+          fi
+
+      - name: Publish today's edition
+        if: steps.api-key.outputs.available == 'true'
+        run: node scripts/publish-brief.mjs
+
+      - name: Commit published edition
+        if: steps.api-key.outputs.available == 'true'
+        run: |
+          git config user.name "daily-brief-bot"
+          git config user.email "daily-brief-bot@users.noreply.github.com"
+          git add data
+          git commit -m "content: publish daily brief" || exit 0
+          git push origin main

@@ -1,0 +1,11 @@
+# Local previews and generated artifacts
+artifacts/
+dist/
+.tools/
+data/.pending/
+*.url
+
+# Retained source exports are not part of the public website
+*-游戏简报-工作版.html
+????-??-??-游戏简报.html
+????-??-??-游戏简报.png
