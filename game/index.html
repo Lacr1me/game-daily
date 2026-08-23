@@ -9,11 +9,12 @@
   <title>游戏方块日报</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23ee3b2e' d='M3 3h12v12H3z'/%3E%3Cpath fill='%23247548' d='M17 3h12v12H17z'/%3E%3Cpath fill='%23286596' d='M3 17h12v12H3z'/%3E%3Cpath fill='%23f0d457' d='M17 17h12v12H17z'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="brand.css">
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
   <header class="site-bar">
-    <a class="mini-brand" href="./"><span>报</span><b>每日简报</b></a>
+    <a class="mini-brand" href="./" aria-label="Springhues 每日简报"><span class="brand-logo" aria-hidden="true"><img src="brand-assets/springhues-logo.png" alt=""></span><b>每日简报</b></a>
     <nav aria-label="频道导航"><a href="./">双频道首页</a><a href="minsheng/">民生日报</a><a class="active" href="game/">游戏日报</a></nav>
     <button class="archive-trigger" id="archiveButton" type="button"><span aria-hidden="true">▦</span><span><small>正在阅读</small><b id="navDate">加载中</b></span><i>⌄</i></button>
   </header>
