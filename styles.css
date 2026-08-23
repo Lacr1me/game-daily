@@ -40,3 +40,98 @@
 .archive-trigger b{font-size:13px}
 .archive-trigger i{font-style:normal;color:#686868}
 @media(max-width:720px){.site-bar{height:62px;padding:0 14px;gap:14px}.mini-brand b{display:none}.site-bar nav{margin:0;gap:14px}.site-bar nav a{display:block;padding:21px 0;font-size:11px}.site-bar nav a:first-child{display:none}.archive-trigger>span:first-child,.archive-trigger i{display:none}.archive-trigger b{font-size:11px}}
+
+/* Large desktop layout: use 4K screens without scaling the rendered page. */
+@media(min-width:1800px){
+  .shell{width:min(1640px,calc(100% - 96px))}
+
+  .site-bar{height:84px;gap:36px}
+  .mini-brand{gap:12px}
+  .mini-brand span{width:44px;height:44px}
+  .mini-brand b{font-size:22px}
+  .site-bar nav{gap:30px;margin-left:24px}
+  .site-bar nav a{padding:30px 0;font-size:15px}
+  .archive-trigger{gap:13px}
+  .archive-trigger>span:first-child{width:44px;height:44px;font-size:18px}
+  .archive-trigger small{font-size:11px}
+  .archive-trigger b{font-size:16px}
+
+  .hero{min-height:700px;grid-template-columns:1.08fr .92fr;padding-block:88px 96px}
+  .hero-copy{max-width:900px}
+  .eyebrow{gap:12px;margin-bottom:30px;font-size:14px}
+  .live-dot{width:10px;height:10px;box-shadow:0 0 0 7px #ee3b2e19}
+  .hero h1{font-size:92px}
+  .hero h1 em{font-size:72px}
+  .hero-copy>p{max-width:780px;margin:38px 0 42px;font-size:21px;line-height:1.85}
+  .hero-actions{gap:18px}
+  .primary-button{gap:36px;padding:20px 29px;font-size:17px}
+  .primary-button span{font-size:22px}
+  .date-trigger{gap:15px;padding:14px 20px}
+  .date-trigger small{font-size:11px}
+  .date-trigger b{font-size:15px}
+  .calendar-icon{font-size:27px}
+  .hero-logo-stage{width:min(540px,34vw)}
+
+  .content{padding-top:118px}
+  .section-heading{padding-bottom:25px;margin-bottom:35px}
+  .section-heading>div{padding-left:94px}
+  .section-no{top:5px;width:67px;height:67px;font-size:21px}
+  .section-heading p{margin-bottom:7px;font-size:12px}
+  .section-heading h2{font-size:43px}
+  .section-intro{font-size:15px!important}
+  .feature-grid{gap:28px}
+  .feature-card{min-height:480px}
+  .feature-content{left:34px;right:34px;bottom:32px}
+  .tag{padding:8px 12px;font-size:12px}
+  .feature-content h3{margin:16px 0 10px;font-size:31px}
+  .feature-content p{font-size:15px}
+  .feature-meta{margin-top:18px!important;font-size:12px!important}
+  .out-link{width:34px;height:34px;font-size:16px}
+
+  .split-section{grid-template-columns:1.1fr .9fr;gap:52px}
+  .compact-heading{padding-bottom:19px;margin-bottom:4px}
+  .compact-heading span{font-size:24px}
+  .compact-heading b{width:47px;height:39px;margin-right:13px;font-size:16px}
+  .compact-heading small{font-size:11px}
+  .news-row{grid-template-columns:34px 148px minmax(0,1fr);gap:18px;min-height:124px;padding:18px 0}
+  .rank{padding-top:4px;font-size:13px}
+  .news-row img{width:148px;height:92px}
+  .news-row h3,.pack-row h3{margin-bottom:6px;font-size:17px}
+  .news-row p,.pack-row p{font-size:12.5px}
+  .news-row small,.pack-row small{margin-top:7px;font-size:10px}
+  .inline-link{margin-left:8px;font-size:12px}
+  .pack-row{grid-template-columns:48px 108px minmax(0,1fr) 60px;gap:14px;min-height:124px;padding:18px 0}
+  .pack-rank{width:43px;height:43px;font-size:13px}
+  .pack-row>img{width:108px;height:70px}
+  .heat{font-size:18px}
+  .heat small{font-size:8px}
+  .method-note{margin-top:20px;font-size:11px}
+
+  .utility-grid{gap:28px}
+  .panel{padding:30px}
+  .mod-row{grid-template-columns:1.1fr 1.6fr .7fr;gap:20px;padding:20px 0;font-size:13px}
+  .mod-row b{font-size:16px}
+  .mod-row p{margin-top:5px}
+  .mod-meta{font-size:11px}
+  .deal-row{grid-template-columns:126px 1fr 90px;gap:18px;padding:17px 0}
+  .deal-row img{width:126px;height:62px}
+  .deal-row h3{margin-bottom:6px;font-size:15px}
+  .deal-row p{font-size:11px}
+  .deal-price b{font-size:18px}
+  .deal-price small{font-size:10px}
+
+  .notes-section{grid-template-columns:1fr 1.15fr .85fr;gap:40px;padding-bottom:125px}
+  .notes-section>div:first-child{padding-left:94px}
+  .mini-label{font-size:13px}
+  .notes-section h2{font-size:35px}
+  .notes-section li{padding:18px 0 18px 50px;font-size:15px}
+  .notes-section li::before{font-size:12px}
+  .source-card{padding:28px;box-shadow:8px 8px 0 var(--ink)}
+  .source-card span{font-size:12px}
+  .source-card b{font-size:13px}
+  .source-card p{font-size:12px}
+
+  footer{padding:48px 0}
+  .footer-inner{gap:52px}
+  .footer-inner>p{font-size:12px}
+}
