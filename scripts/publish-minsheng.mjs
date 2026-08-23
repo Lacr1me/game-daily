@@ -1,6 +1,6 @@
 import { access, mkdir, readFile, rename, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { beijingDate, safePendingPath, validateMinsheng } from "./minsheng-lib.mjs";
+import { assertPublishTime, beijingDate, safePendingPath, validateMinsheng } from "./minsheng-lib.mjs";
 
 const root = process.cwd();
 const date = beijingDate();
@@ -11,6 +11,7 @@ if (path.dirname(target) !== dataDir) throw new Error("拒绝发布到非预期�
 await access(pending).catch(() => { throw new Error(`${date} 民生日报草稿不存在，拒绝发布`); });
 const brief = JSON.parse(await readFile(pending, "utf8"));
 validateMinsheng(brief, { expectedDate: date });
+assertPublishTime(date);
 await mkdir(dataDir, { recursive: true });
 await rename(pending, target);
 

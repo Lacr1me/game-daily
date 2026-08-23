@@ -25,15 +25,23 @@ node scripts/serve.mjs
 node scripts/validate-minsheng.mjs data/minsheng/2026-08-23.json
 ```
 
+单独校验游戏日报或检查当天本地与线上发布健康状态：
+
+```powershell
+node scripts/validate-game.mjs data/2026-08-23.json
+node scripts/check-daily-health.mjs --live=https://lacr1me.github.io/game-daily
+```
+
 ## 每日自动更新
 
 日报由绑定到本地“日报设计”项目的 Codex 定时任务执行，不再通过仓库脚本调用 OpenAI API，也不需要 `OPENAI_API_KEY`：
 
-1. 每天北京时间 10:50，Codex 使用自身可用的检索能力制作民生日报和游戏日报。
-2. 两个频道独立校验；一个频道失败不会阻塞另一个频道。
+1. 每天北京时间 10:30，Codex 使用自身可用的检索能力制作民生日报和游戏日报，目标在 10:50 前完成草稿。
+2. 10:50—11:00 只进行发布前校验和必要修正；两个频道独立校验，一个频道失败不会阻塞另一个频道。
 3. 通过校验的草稿先保存在未公开、被 Git 忽略的 `data/.pending/`。
 4. 北京时间 11:00 后发布成功频道，更新归档索引并提交到 `main`。
-5. `main` 分支更新后，`.github/workflows/pages.yml` 只负责构建和部署 GitHub Pages。
+5. `main` 分支更新后，`.github/workflows/pages.yml` 强制重建嵌入数据、运行完整测试并构建；任何失败都会阻止部署。
+6. 11:10 独立健康检查只补救失败频道或失败部署；再次失败则保留上一期并通知人工处理。
 
 仓库中不包含自动模型生成调用。若定时任务未运行或当天生成失败，网站继续展示最近一期有效内容，不发布空日报。计划时间是目标时间，实际完成时间可能受本地执行环境、检索和部署耗时影响。
 

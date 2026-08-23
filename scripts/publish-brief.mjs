@@ -1,20 +1,16 @@
 import { access, readFile, rename, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { assertPublishTime, beijingDate, safePendingPath, validateGame } from "./game-lib.mjs";
 
-const parts = new Intl.DateTimeFormat("en-CA", {
-  timeZone: "Asia/Shanghai", year: "numeric", month: "2-digit", day: "2-digit"
-}).formatToParts(new Date());
-const value = Object.fromEntries(parts.map(x => [x.type, x.value]));
-const date = `${value.year}-${value.month}-${value.day}`;
+const date = beijingDate();
 const root = process.cwd();
-const pending = path.join(root,"data",".pending",`${date}.json`);
+const { pending } = safePendingPath(root, date);
 const target = path.join(root,"data",`${date}.json`);
 
 await access(pending).catch(() => { throw new Error(`${date} 草稿不存在，拒绝发布空日报`); });
 const brief = JSON.parse(await readFile(pending,"utf8"));
-for (const [key,count] of [["news",10],["packs",10],["mods",6],["deals",4]]) {
-  if (brief[key]?.length !== count) throw new Error(`${key} 数量不合规，拒绝发布`);
-}
+validateGame(brief, { expectedDate: date });
+assertPublishTime(date);
 await rename(pending,target);
 
 const indexPath = path.join(root,"data","index.json");

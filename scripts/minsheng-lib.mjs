@@ -11,6 +11,13 @@ export function beijingDate(now = new Date()) {
   return `${values.year}-${values.month}-${values.day}`;
 }
 
+export function assertPublishTime(date, now = new Date()) {
+  const publishAt = new Date(`${date}T11:00:00+08:00`).getTime();
+  if (!Number.isFinite(publishAt) || now.getTime() < publishAt) {
+    throw new Error(`${date} 民生日报不得在北京时间 11:00 前发布`);
+  }
+}
+
 export function normalizeMinsheng(brief) {
   for (const [category, count] of Object.entries(CATEGORY_COUNTS)) {
     if (!Array.isArray(brief.sections?.[category])) continue;

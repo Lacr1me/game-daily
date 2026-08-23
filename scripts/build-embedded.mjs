@@ -1,11 +1,14 @@
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { validateGame } from "./game-lib.mjs";
 
 const root = process.cwd();
 const manifest = JSON.parse(await readFile(path.join(root,"data","index.json"),"utf8"));
 const briefs = {};
 for (const edition of manifest.editions) {
-  briefs[edition.date] = JSON.parse(await readFile(path.join(root,edition.file),"utf8"));
+  const brief = JSON.parse(await readFile(path.join(root,edition.file),"utf8"));
+  validateGame(brief, { expectedDate: edition.date });
+  briefs[edition.date] = brief;
 }
 await writeFile(
   path.join(root,"data","embedded.js"),

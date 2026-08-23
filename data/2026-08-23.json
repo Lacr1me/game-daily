@@ -3,7 +3,7 @@
   "issue": 1,
   "cutoff": "2026-08-23 12:20（北京时间）",
   "dataWindow": "2026-08-22 00:00 — 2026-08-23 12:20",
-  "sources": ["游民星空", "MC百科", "MineBBS", "哔哩哔哩", "什么值得买"],
+  "sources": ["游民星空", "MC百科", "MineBBS", "哔哩哔哩", "什么值得买", "Steam"],
   "features": [
     {"title":"《诡秘之主》开服首小时在线超 70 万","summary":"官方披露开服首小时新增玩家突破 100 万，同时在线人数超过 70 万；相关数据刷新快手游戏历史表现。","source":"游民星空／游戏官方","date":"2026-08-22","image":"game-brief-assets/feature-game.jpg","url":"https://www.gamersky.com/news/202608/2194300.shtml"},
     {"title":"《勇者之章 III》领跑今日整合包热度观察","summary":"MC百科页面昨日指数 5508，为本期样本中最高；高难战斗、多路线职业构筑与 Boss 挑战持续吸引攻略与讨论。","source":"MC百科／哔哩哔哩","date":"2026-08-23","image":"game-brief-assets/feature-mc.jpg","url":"https://www.mcmod.cn/modpack/1054.html"}
@@ -33,16 +33,23 @@
     {"name":"织彩钓月｜Aruori","summary":"农业、建筑与多人长期发展向的轻量内容体系。","category":"休闲／发展","heat":72,"source":"MC百科·B站","image":"game-brief-assets/pack-10.jpg","url":"https://www.mcmod.cn/modpack/626.html"}
   ],
   "mods": [
-    {"name":"中式甲兵 v1.1.6","summary":"加入多套中式盔甲与戈、偃月刀、方天画戟；本次修复甲兵锻造台无法合成的严重问题。","version":"1.20.1","loader":"Forge","date":"2026-08-22","source":"MineBBS","url":"https://www.minebbs.com/resources/forge-chinese-weapons.17475/"}
+    {"name":"中式甲兵 v1.1.6","summary":"加入多套中式盔甲与戈、偃月刀、方天画戟；本次修复甲兵锻造台无法合成的严重问题。","version":"1.20.1","loader":"Forge","date":"2026-08-22","source":"MineBBS","url":"https://www.minebbs.com/resources/forge-chinese-weapons.17475/"},
+    {"name":"Verity JE-CN 6.0.0 beta4","summary":"强化中文体验、动画、物品管理与运行性能，并针对原版模组体验进行合理性调整。","version":"1.20.1","loader":"Forge","date":"2026-08-22","source":"MineBBS","url":"https://www.minebbs.com/forums/jemods/"},
+    {"name":"Sparkle's Morpher 1.2.0","summary":"支持加载自定义玩家模型、动画和音效，并提供 Fabric 与 NeoForge 多版本构建。","version":"26.x／1.21","loader":"Fabric／NeoForge","date":"2026-08-18","source":"MineBBS","url":"https://www.minebbs.com/resources/sparkle-s-morpher.17739/"},
+    {"name":"自动消息 1.0","summary":"通过中文图形界面定时发送聊天消息或服务器命令，并在离开世界后自动停止。","version":"1.21.8","loader":"Fabric","date":"2026-08-17","source":"MineBBS","url":"https://www.minebbs.com/tags/mod/"},
+    {"name":"连接纹理 CTM 1.2.1","summary":"允许资源包添加连接纹理与高光渲染特性，为 Quilt 1.21 客户端扩展纹理表现。","version":"1.21","loader":"Quilt","date":"2026-08-12","source":"MineBBS","url":"https://www.minebbs.com/resources/categories/62/"},
+    {"name":"Carp 生电 2.10.2","summary":"集成精简寻路、搭路、移动、渲染与自动化功能，并覆盖多个 1.21 与 26.x 构建。","version":"26.2／1.21.8／1.21.11","loader":"Fabric","date":"2026-07-31","source":"MineBBS","url":"https://www.minebbs.com/resources/carp.17539/"}
   ],
   "deals": [
     {"name":"僵尸部队 4","discount":"-95%","original":"¥168","price":"¥8.4","label":"新史低","ends":"截至 08-25","image":"game-brief-assets/steam-01.jpg","url":"https://store.steampowered.com/app/694280/Zombie_Army_4_Dead_War/?l=schinese"},
-    {"name":"天国：拯救 2","discount":"-60%","original":"¥228","price":"¥91.2","label":"史低价","ends":"截至 08-25","image":"game-brief-assets/steam-02.jpg","url":"https://store.steampowered.com/app/1771300/Kingdom_Come_Deliverance_II/?l=schinese"}
+    {"name":"天国：拯救 2","discount":"-60%","original":"¥228","price":"¥91.2","label":"史低价","ends":"截至 08-25","image":"game-brief-assets/steam-02.jpg","url":"https://store.steampowered.com/app/1771300/Kingdom_Come_Deliverance_II/?l=schinese"},
+    {"name":"全面战争：战锤 3","discount":"-85%","original":"¥298","price":"¥44.7","label":"史低价","ends":"截至 08-28","image":"game-brief-assets/steam-03.jpg","url":"https://store.steampowered.com/app/1142710/TOTAL_WAR_WARHAMMER_III/?l=schinese"},
+    {"name":"使命召唤：现代战争 III","discount":"-75%","original":"¥298","price":"¥74","label":"新史低","ends":"截至 08-25","image":"game-brief-assets/steam-04.jpg","url":"https://store.steampowered.com/app/2519060/Call_of_Duty_Modern_Warfare_III/?l=schinese"}
   ],
   "trends": [
     "国产游戏：新游运营数据、科隆展开幕夜预热与独立新作 Demo 成为焦点。",
     "Minecraft 整合包：硬核冒险、养老美食与器官改造三类玩法同时维持高讨论度。",
-    "Mod 更新：符合时间窗且版本、加载器均可核验的项目仅 1 个。",
+    "Mod 更新：近 7 天合格项目不足 6 个，按规则使用 2 个近 30 天内的回退项。",
     "Steam 优惠：史低标签需核验历史价格，购买前仍应以国区实时页面为准。"
   ]
 }
