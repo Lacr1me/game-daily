@@ -56,8 +56,6 @@ function render(brief) {
   $("#editionLabel").textContent = `今日刊 · ${brief.date} · 11:00 发布`;
   $("#navDate").textContent = brief.date;
   $("#dateLabel").textContent = cnDate(brief.date);
-  $("#coverDate").textContent = brief.date.replaceAll("-", ".");
-  $("#coverIssue").textContent = `NO. ${String(brief.issue || 1).padStart(3, "0")}`;
 
   $("#features").replaceChildren(...brief.features.map((item, index) => featureCard(item, index)));
   $("#newsList").replaceChildren(...brief.news.map((item, index) => newsRow(item, index)));

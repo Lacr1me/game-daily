@@ -69,6 +69,8 @@ for (const sharedHeaderClass of ["site-bar", "mini-brand", "archive-trigger"]) {
 }
 assert(gameHtml.includes('<a class="active" href="game/">游戏日报</a>'), "游戏日报页头必须标记游戏频道为当前频道");
 assert(gameHtml.includes('id="navDate"'), "游戏日报统一页头必须显示当前期次日期");
+assert(gameHtml.includes('class="hero-logo-stage"') && gameHtml.includes('src="brand-assets/springhues-logo.png"'), "游戏日报首屏必须展示 Springhues Logo");
+assert(!gameHtml.includes('class="ticker"'), "游戏日报不得保留黑色滚动栏目条");
 assert(!gameHtml.includes(">报</span>") && !civicHtml.includes(">报</span>"), "双频道页头不得继续显示旧的报字标识");
 assert(gameHtml.includes("brand-assets/springhues-logo.png") && civicHtml.includes("../brand-assets/springhues-logo.png"), "双频道页头必须使用唯一的 Springhues 正式 Logo");
 await access(path.join(root, "brand-assets", "springhues-logo.png"));
