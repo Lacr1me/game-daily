@@ -157,9 +157,14 @@ function buildArchive() {
     const link = element("a", "archive-item");
     link.href = editionUrl(edition.date);
     link.dataset.date = edition.date;
-    link.append(element("time", "", edition.date), element("b", "", edition.title), element("span", "", "→"));
+    link.append(element("time", "", edition.date), element("b", "", edition.headline || edition.title), element("span", "", "→"));
     return link;
   }));
+  const dates = editions.map((edition) => edition.date).sort();
+  if (dates.length) {
+    $("#archiveDate").min = dates[0];
+    $("#archiveDate").max = dates[dates.length - 1];
+  }
 }
 
 function editionUrl(date) {
@@ -170,12 +175,23 @@ function editionUrl(date) {
 }
 
 function updateArchiveActiveState() {
+  $("#archiveDate").value = state.activeDate || "";
   document.querySelectorAll(".archive-item").forEach((item) => {
     const active = item.dataset.date === state.activeDate;
     item.classList.toggle("active", active);
     if (active) item.setAttribute("aria-current", "page");
     else item.removeAttribute("aria-current");
   });
+}
+
+function navigateToDate(date) {
+  const edition = getPublishedEditions().find((item) => item.date === date);
+  if (!edition) {
+    $("#archiveDate").value = state.activeDate || "";
+    return showToast("该日期没有已发布的游戏日报");
+  }
+  if (edition.date === state.activeDate) return $("#archiveDialog").close();
+  location.assign(editionUrl(edition.date));
 }
 
 function element(tag, className = "", text = "") {
@@ -219,6 +235,7 @@ $("#archiveButton").addEventListener("click", openArchive);
 $("#dateTrigger").addEventListener("click", openArchive);
 $("#closeArchive").addEventListener("click", () => $("#archiveDialog").close());
 $("#archiveDialog").addEventListener("click", (event) => { if (event.target === $("#archiveDialog")) $("#archiveDialog").close(); });
+$("#archiveDate").addEventListener("change", (event) => navigateToDate(event.target.value));
 
 function scheduleEditionRefresh() {
   const now = nowInShanghai();

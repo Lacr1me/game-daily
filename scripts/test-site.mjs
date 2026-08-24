@@ -122,6 +122,7 @@ for (const sharedHeaderClass of ["site-bar", "mini-brand", "archive-trigger"]) {
 }
 assert(gameHtml.includes('<a class="active" href="game/">游戏日报</a>'), "游戏日报页头必须标记游戏频道为当前频道");
 assert(gameHtml.includes('id="navDate"'), "游戏日报统一页头必须显示当前期次日期");
+assert(gameHtml.includes('id="archiveDate"') && gameHtml.includes("按日期选择"), "游戏日报归档弹窗必须提供日期选择器");
 assert(gameHtml.includes('id="downloadPng"') && gameHtml.includes("下载当天 PNG 原图"), "游戏日报底部必须提供 PNG 原图下载按钮");
 assert(gameHtml.includes('class="hero-logo-stage"') && gameHtml.includes('src="brand-assets/springhues-logo.png"'), "游戏日报首屏必须展示 Springhues Logo");
 assert(!gameHtml.includes('class="ticker"'), "游戏日报不得保留黑色滚动栏目条");
@@ -144,8 +145,11 @@ for (const [name, app] of [["游戏", gameApp], ["民生", civicApp]]) {
   assert(app.includes("downloadPng.download"), `${name}日报必须按所选期次设置 PNG 下载文件名`);
 }
 assert(gameApp.includes("downloads/game/${encodeURIComponent(brief.date)}.png"), "游戏日报下载按钮必须跟随所选归档日期");
+assert(gameApp.includes("edition.headline || edition.title"), "游戏日报归档列表必须显示每期具体头条");
+assert(gameApp.includes('$("#archiveDate").min') && gameApp.includes('$("#archiveDate").max'), "游戏日报日期选择器必须限制在公开归档范围");
+assert(gameApp.includes('addEventListener("change", (event) => navigateToDate(event.target.value))'), "游戏日报日期选择器必须支持按日期跳转");
 assert(civicApp.includes("downloads/minsheng/${encodeURIComponent(brief.date)}.png"), "民生日报下载按钮必须跟随所选归档日期");
-assert(gameHtml.includes("app.js?v=20260824-download-png"), "游戏日报脚本必须使用 PNG 下载缓存版本");
+assert(gameHtml.includes("app.js?v=20260824-archive-date-picker"), "游戏日报脚本必须使用日期选择器缓存版本");
 assert(civicHtml.includes("app.js?v=20260824-download-png"), "民生日报脚本必须使用 PNG 下载缓存版本");
 
 for (const file of ["index.html", "game/index.html", "minsheng/index.html", "portal.js", "minsheng/app.js", "scripts/game-lib.mjs"]) {
