@@ -115,6 +115,13 @@ assert(/position:\s*static/.test(mobileCss), "移动端栏目标题必须参与�
 const gameHtml = await readFile(path.join(root, "game", "index.html"), "utf8");
 const portalHtml = await readFile(path.join(root, "index.html"), "utf8");
 assert(!portalHtml.includes('class="promise"'), "首页不得显示仅概括民生日报的底部统计说明区");
+assert(!portalHtml.includes('class="channel-number"'), "首页频道卡不得显示 01 / 02 编号");
+assert(portalHtml.includes('<h2 class="channel-mark civic-mark">民生日报</h2>'), "民生日报名称必须位于红色标识内");
+assert(portalHtml.includes('<h2 class="channel-mark game-mark">游戏日报</h2>'), "游戏日报名称必须位于蓝色标识内");
+assert(!portalHtml.includes('<span class="game-mark"><i>'), "游戏频道不得恢复四色方格旧标识");
+const portalCss = await readFile(path.join(root, "portal.css"), "utf8");
+assert(portalCss.includes(".channel-card.game{--accent:var(--blue)}"), "游戏频道卡必须统一使用蓝色强调色");
+assert(!portalCss.includes("--green:"), "首页模板不得保留游戏频道绿色主题变量");
 assert(gameHtml.includes('<a href="./">首页</a>') && civicHtml.includes('<a href="../">首页</a>'), "双频道导航入口必须统一命名为首页");
 assert(!gameHtml.includes("双频道首页") && !civicHtml.includes("双频道首页"), "频道导航不得继续显示双频道首页旧名称");
 for (const sharedHeaderClass of ["site-bar", "mini-brand", "archive-trigger"]) {
