@@ -5,9 +5,10 @@ export const GAME_SECTION_COUNTS = {
   news: 10,
   packs: 10,
   mods: 6,
-  deals: 4,
   trends: 4
 };
+
+export const GAME_DEAL_LIMITS = { legacyMin: 4, publishMin: 6, max: 24 };
 
 const TEXT_FIELDS = {
   features: ["title", "summary", "source", "date", "image", "url"],
@@ -55,6 +56,9 @@ export function validateGame(brief, { expectedDate } = {}) {
     if (!Array.isArray(brief[section]) || brief[section].length !== count) {
       errors.push(`${section} 必须为 ${count} 条`);
     }
+  }
+  if (!Array.isArray(brief.deals) || brief.deals.length < GAME_DEAL_LIMITS.legacyMin || brief.deals.length > GAME_DEAL_LIMITS.max) {
+    errors.push(`deals 必须为 ${GAME_DEAL_LIMITS.legacyMin}—${GAME_DEAL_LIMITS.max} 条`);
   }
 
   for (const section of ["features", "news", "packs", "mods", "deals"]) {

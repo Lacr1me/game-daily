@@ -165,3 +165,26 @@
   .game-main-section .pack-row{grid-template-columns:32px 70px minmax(0,1fr) 38px}
   .game-main-section .rank,.game-main-section .pack-rank{width:30px;height:30px}
 }
+
+/* Steam deals: the website scrolls through the full verified pool; PNG capture shows six rows. */
+.deal-panel{display:flex;min-height:0;flex-direction:column}
+.deal-summary{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:35px;color:var(--muted);font:600 9px "Roboto Mono",monospace;letter-spacing:.04em}
+.deal-scroll-hint{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;color:var(--navy)}
+.deal-scroll-hint i{font-style:normal;font-size:13px}
+.deal-list-shell{position:relative;min-height:0;max-height:420px}
+.deal-list{height:100%;min-height:0;overflow-x:hidden;overflow-y:auto;padding-right:18px;overscroll-behavior:contain;scrollbar-width:none}
+.deal-list:focus-visible{outline:2px solid var(--navy);outline-offset:4px}
+.deal-list::-webkit-scrollbar{display:none}
+.deal-scrollbar{position:absolute;top:10px;right:1px;bottom:10px;width:7px;border-radius:99px;background:#e7e5df;pointer-events:none}.deal-scrollbar i{display:block;width:100%;min-height:42px;border-radius:99px;background:var(--navy);transform:translateY(0)}
+.deal-row{min-height:70px;padding:10px 8px 10px 0}
+.deal-row>div:nth-child(2){min-width:0}
+.deal-row h3{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.deal-meta{display:flex;align-items:center;gap:6px;white-space:nowrap}
+.deal-status{display:inline-flex;align-items:center;min-height:20px;padding:1px 7px;border:1px solid #43835e;border-radius:4px;color:var(--green);font-weight:700}
+.deal-status.low{border-color:var(--navy);color:var(--navy)}
+.deal-separator{color:#999}
+.deal-price{padding-right:8px}
+.png-capture .deal-list{overflow:hidden}.png-capture .deal-scrollbar{display:none}.png-capture .deal-row:nth-child(n+7){display:none}
+@media(min-width:901px){.deal-panel{height:0;min-height:100%}.deal-list-shell{flex:1;max-height:none}}
+@media(min-width:1800px){.deal-summary{min-height:43px;font-size:11px}.deal-row{min-height:86px;padding:11px 10px 11px 0}.deal-status{min-height:23px;padding-inline:8px}.deal-price{padding-right:10px}}
+@media(max-width:600px){.deal-summary{font-size:8px}.deal-scroll-hint{gap:4px}.deal-list-shell{height:410px}.deal-row{grid-template-columns:88px minmax(0,1fr) 70px;gap:10px}.deal-row img{width:88px;height:44px}.deal-meta{gap:4px}.deal-status{padding-inline:5px}.deal-ends{display:none}}

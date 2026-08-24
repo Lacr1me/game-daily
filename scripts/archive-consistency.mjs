@@ -3,7 +3,7 @@ export const GAME_DUPLICATE_LIMITS = {
   news: 2,
   packs: 5,
   mods: 4,
-  deals: 2,
+  deals: 16,
   trends: 1
 };
 
@@ -36,6 +36,9 @@ export function assertGamePublishCandidate(candidate, manifest, priorBriefs) {
   const previousDate = previousIsoDate(candidate.date);
   if (!candidate.dataWindow.includes(candidate.date) || !candidate.dataWindow.includes(previousDate)) {
     throw new Error(`游戏日报 dataWindow 必须同时包含 ${previousDate} 和 ${candidate.date}`);
+  }
+  if (!Array.isArray(candidate.deals) || candidate.deals.length < 6 || candidate.deals.length > 24) {
+    throw new Error("新发布游戏日报的 Steam 优惠必须为 6—24 款");
   }
   for (const item of [...candidate.features, ...candidate.news, ...candidate.packs, ...candidate.deals]) {
     const basename = String(item.image || "").split("/").pop();

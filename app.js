@@ -81,6 +81,10 @@ function render(brief) {
   $("#packList").replaceChildren(...brief.packs.map((item, index) => packRow(item, index)));
   $("#modsList").replaceChildren(...brief.mods.map(modRow));
   $("#dealList").replaceChildren(...brief.deals.map(dealRow));
+  const lowCount = brief.deals.filter((deal) => deal.label.includes("史低")).length;
+  $("#dealSummary").textContent = `${brief.deals.length} 款热门促销 · 含 ${lowCount} 款史低`;
+  $("#dealList").scrollTop = 0;
+  requestAnimationFrame(updateDealScrollbar);
   $("#trendList").replaceChildren(...brief.trends.map((trend) => element("li", "", trend)));
   $("#dataWindow").textContent = brief.dataWindow;
   $("#sourceSummary").textContent = `主要来源：${brief.sources.join("、")}。检索截止 ${brief.cutoff}。`;
@@ -138,7 +142,15 @@ function dealRow(item) {
   const copy = element("div");
   const heading = element("h3", "", item.name);
   heading.append(element("span", "inline-link", "↗"));
-  copy.append(heading, element("p", "", `${item.discount} · ${item.label} · ${item.ends}`));
+  const meta = element("p", "deal-meta");
+  meta.append(
+    element("span", "deal-discount", item.discount),
+    element("span", "deal-separator", "·"),
+    element("span", `deal-status${item.label.includes("史低") ? " low" : ""}`, item.label),
+    element("span", "deal-separator", "·"),
+    element("span", "deal-ends", item.ends)
+  );
+  copy.append(heading, meta);
   const price = element("div", "deal-price");
   price.append(element("b", "", item.price));
   const original = element("small");
@@ -229,11 +241,28 @@ function safeImage(src, alt) {
   return image;
 }
 
+function updateDealScrollbar() {
+  const list = $("#dealList");
+  const track = $("#dealScrollbar");
+  const thumb = $("#dealScrollThumb");
+  const scrollable = list.scrollHeight > list.clientHeight + 1;
+  track.hidden = !scrollable;
+  if (!scrollable) return;
+  const trackHeight = track.clientHeight;
+  const thumbHeight = Math.max(42, Math.round(trackHeight * list.clientHeight / list.scrollHeight));
+  const maxTop = Math.max(0, trackHeight - thumbHeight);
+  const top = list.scrollHeight === list.clientHeight ? 0 : Math.round(maxTop * list.scrollTop / (list.scrollHeight - list.clientHeight));
+  thumb.style.height = `${thumbHeight}px`;
+  thumb.style.transform = `translateY(${top}px)`;
+}
+
 function openArchive() { $("#archiveDialog").showModal(); }
 $("#archiveButton").addEventListener("click", openArchive);
 $("#closeArchive").addEventListener("click", () => $("#archiveDialog").close());
 $("#archiveDialog").addEventListener("click", (event) => { if (event.target === $("#archiveDialog")) $("#archiveDialog").close(); });
 $("#archiveDate").addEventListener("change", (event) => navigateToDate(event.target.value));
+$("#dealList").addEventListener("scroll", updateDealScrollbar, { passive: true });
+addEventListener("resize", updateDealScrollbar, { passive: true });
 
 function scheduleEditionRefresh() {
   const now = nowInShanghai();
