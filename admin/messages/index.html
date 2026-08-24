@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="../../">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="referrer" content="same-origin">
+  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://etkjbxfdwmhqmuyzpttq.supabase.co; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="theme-color" content="#f5f1e8">
+  <title>留言管理 · 每日简报</title>
+  <link rel="icon" type="image/png" href="brand-assets/springhues-logo.png">
+  <link rel="stylesheet" href="portal.css?v=20260825-admin-v1">
+  <link rel="stylesheet" href="brand.css">
+  <link rel="stylesheet" href="admin/messages/admin.css?v=20260825-admin-v1">
+</head>
+<body>
+  <div class="paper-grain" aria-hidden="true"></div>
+  <header class="portal-header shell">
+    <a class="portal-brand" href="./" aria-label="每日简报首页">
+      <span class="brand-logo" aria-hidden="true"><img src="brand-assets/springhues-logo.png" alt=""></span>
+      <span><b>每日简报</b><small>MESSAGE ADMIN</small></span>
+    </a>
+    <p class="admin-private-label">仅限管理员</p>
+  </header>
+
+  <main class="admin-main shell">
+    <section class="admin-login" id="loginPanel" aria-labelledby="loginTitle">
+      <p class="form-eyebrow">PRIVATE CONSOLE</p>
+      <h1 id="loginTitle">留言管理</h1>
+      <p>使用已授权的 Supabase 管理员账号登录。</p>
+      <form id="loginForm" class="login-form" novalidate>
+        <label>邮箱<input name="email" type="email" autocomplete="username" required></label>
+        <label>密码<input name="password" type="password" autocomplete="current-password" required></label>
+        <button type="submit">登录后台 <span aria-hidden="true">→</span></button>
+        <p class="admin-status" id="loginStatus" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="admin-dashboard" id="dashboard" aria-labelledby="dashboardTitle" hidden>
+      <div class="dashboard-heading">
+        <div><p class="form-eyebrow">MODERATION QUEUE</p><h1 id="dashboardTitle">审核与回复</h1></div>
+        <div class="session-actions"><span id="sessionEmail"></span><button id="logoutButton" type="button">退出登录</button></div>
+      </div>
+      <div class="filter-bar" id="filterBar" role="group" aria-label="按审核状态筛选">
+        <button class="active" type="button" data-status="pending">待审核</button>
+        <button type="button" data-status="approved">已批准</button>
+        <button type="button" data-status="rejected">已拒绝</button>
+        <button type="button" data-status="all">全部</button>
+      </div>
+      <p class="admin-status queue-status" id="queueStatus" role="status" aria-live="polite">正在读取审核队列…</p>
+      <div class="admin-message-list" id="adminMessageList"></div>
+      <button class="admin-load-more" id="adminLoadMore" type="button" hidden>加载更多</button>
+    </section>
+  </main>
+
+  <script type="module" src="admin/messages/app.js?v=20260825-admin-v1"></script>
+</body>
+</html>

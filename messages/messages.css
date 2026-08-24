@@ -54,7 +54,12 @@
 .message-item header { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
 .message-item h3 { margin: 0; font: 800 19px "SimSun", "Songti SC", serif; overflow-wrap: anywhere; }
 .message-item time { flex: 0 0 auto; color: var(--muted); font: 11px Consolas, monospace; }
-.message-item p { margin: 18px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 14px; line-height: 1.85; }
+.message-item > .message-content { margin: 18px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 14px; line-height: 1.85; }
+.owner-reply { margin-top: 22px; padding: 18px 20px; border-left: 4px solid var(--red); background: #b51f2409; }
+.owner-reply header { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+.owner-reply strong { color: var(--red); font-size: 12px; letter-spacing: .08em; }
+.owner-reply time { color: var(--muted); font: 10px Consolas, monospace; }
+.owner-reply p { margin: 12px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 13px; line-height: 1.8; }
 .load-more { display: block; margin: 28px auto 0; background: var(--ink); }
 .load-more[hidden] { display: none; }
 

@@ -10,10 +10,11 @@ if (path.dirname(output) !== root || path.basename(output) !== "dist") {
 await rm(output, { recursive: true, force: true });
 await mkdir(output, { recursive: true });
 
-for (const file of ["index.html", "portal.css", "portal.js", "portal-messages.js", "message-config.js", "message-client.js", "styles.css", "brand.css", "app.js"]) {
+for (const file of ["index.html", "portal.css", "portal.js", "message-config.js", "message-client.js", "styles.css", "brand.css", "app.js"]) {
   await cp(path.join(root, file), path.join(output, file));
 }
 await cp(path.join(root, "messages"), path.join(output, "messages"), { recursive: true });
+await cp(path.join(root, "admin"), path.join(output, "admin"), { recursive: true });
 await cp(path.join(root, "privacy"), path.join(output, "privacy"), { recursive: true });
 await cp(path.join(root, "game"), path.join(output, "game"), { recursive: true });
 await cp(path.join(root, "minsheng"), path.join(output, "minsheng"), { recursive: true });

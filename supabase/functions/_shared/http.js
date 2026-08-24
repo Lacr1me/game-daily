@@ -17,11 +17,25 @@ export function allowedOrigin(request) {
 export function corsHeaders(origin) {
   return {
     "Access-Control-Allow-Origin": origin,
-    "Access-Control-Allow-Headers": "content-type, x-client-info",
-    "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+    "Access-Control-Allow-Headers": "authorization, apikey, content-type, x-client-info",
+    "Access-Control-Allow-Methods": "GET, POST, PATCH, OPTIONS",
     "Access-Control-Max-Age": "86400",
     "Vary": "Origin"
   };
+}
+
+export async function authenticatedUser(request) {
+  const authorization = request.headers.get("authorization") || "";
+  if (!/^Bearer\s+\S+$/u.test(authorization)) return { ok: false, status: 401, user: null };
+  const response = await fetch(`${readEnv("SUPABASE_URL")}/auth/v1/user`, {
+    headers: {
+      apikey: readEnv("SUPABASE_SERVICE_ROLE_KEY"),
+      Authorization: authorization
+    }
+  });
+  if (!response.ok) return { ok: false, status: 401, user: null };
+  const user = await response.json();
+  return user?.id ? { ok: true, status: 200, user } : { ok: false, status: 401, user: null };
 }
 
 export function jsonResponse(status, body, origin, extraHeaders = {}) {
