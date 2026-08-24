@@ -49,8 +49,11 @@ Deno.serve(async (request) => {
     id: item.id,
     nickname: item.nickname,
     content: item.content,
-    approvedAt: item.approved_at
+    approvedAt: item.approved_at,
+    reply: item.owner_reply && item.owner_replied_at
+      ? { content: item.owner_reply, repliedAt: item.owner_replied_at }
+      : null
   }));
   const nextCursor = hasMore && rows.length ? encodeCursor(rows.at(-1)) : null;
-  return jsonResponse(200, { items, nextCursor }, origin, { "Cache-Control": "public, max-age=30" });
+  return jsonResponse(200, { items, nextCursor }, origin);
 });

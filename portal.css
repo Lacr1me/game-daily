@@ -142,45 +142,28 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 .update-chip span { color: var(--ink); font: 700 15px Consolas, monospace; }
 .update-chip i { width: 32px; height: 1px; background: var(--line); }
-.quick-message-form { max-width: 620px; margin-top: 45px; }
+.quick-message-cta { max-width: 620px; margin-top: 45px; }
 .form-eyebrow {
   margin: 0 0 8px;
   color: var(--red);
   font: 700 11px Arial, sans-serif;
   letter-spacing: .16em;
 }
-.quick-message-form h2 { margin: 0 0 16px; font: 700 25px "SimSun", "Songti SC", serif; }
-.quick-message-fields {
-  display: grid;
-  grid-template-columns: 116px minmax(150px, 1fr) auto;
-  gap: 10px;
-}
-.quick-message-fields label { min-width: 0; }
-.quick-message-fields input {
-  width: 100%;
-  height: 46px;
-  padding: 0 14px;
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  outline: 0;
-  background: #fffdf899;
-  color: var(--ink);
-}
-.quick-message-fields input:focus { border-color: var(--red); box-shadow: 0 0 0 3px #b51f2410; }
-.quick-message-fields input::placeholder { color: #9a958c; }
-.quick-message-fields button {
-  height: 46px;
+.quick-message-cta h2 { margin: 0 0 16px; font: 700 25px "SimSun", "Songti SC", serif; }
+.quick-message-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 46px;
   padding: 0 18px;
-  border: 0;
   border-radius: 4px;
   background: var(--red);
   color: #fff;
-  cursor: pointer;
   font-size: 13px;
   font-weight: 800;
+  text-decoration: none;
 }
-.quick-message-fields button span { margin-left: 8px; }
-.quick-message-fields button:disabled { cursor: not-allowed; opacity: .55; }
+.quick-message-link span { margin-left: 12px; transition: transform .2s; }
+.quick-message-link:hover span { transform: translateX(3px); }
 .honeypot { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; overflow: hidden !important; }
 .turnstile-slot { width: 1px; height: 1px; overflow: hidden; }
 .form-status { min-height: 18px; margin: 9px 0 0; color: var(--muted); font-size: 12px; }
@@ -254,7 +237,7 @@ footer span { color: var(--ink); font: 700 16px "SimSun", serif; }
   .hero { display: block; padding: 55px 0 42px; }
   .eyebrow { margin-bottom: 25px; }
   .hero h1 { font-size: 52px; }
-  .quick-message-form { margin-top: 38px; }
+  .quick-message-cta { margin-top: 38px; }
   .hero-secondary { margin-top: 54px; }
   .hero-personal-logo { width: 136px; height: 136px; margin: -18px auto 10px; }
   .hero-copy { max-width: 520px; }
@@ -268,8 +251,6 @@ footer span { color: var(--ink); font: 700 16px "SimSun", serif; }
 
 @media (max-width: 560px) {
   .portal-brand b { font-size: 21px; }
-  .quick-message-fields { grid-template-columns: 1fr; }
-  .quick-message-fields button { width: 100%; }
   .update-chip { flex-wrap: wrap; gap: 7px; }
   .update-chip i { width: 18px; }
 }

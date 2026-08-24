@@ -41,7 +41,18 @@ supabase functions deploy list-messages
 ```
 
 4. 在 `message-config.js` 只填写可公开的函数地址 `https://<project-ref>.supabase.co/functions/v1` 和 Turnstile site key。不得把 `SUPABASE_SERVICE_ROLE_KEY`、Turnstile secret 或限流 secret 写入前端或 Git。
-5. 留言提交后默认是 `pending`。在 Supabase Table Editor 的 `messages` 表中把 `status` 改为 `approved` 或 `rejected`；数据库触发器会自动设置或清除 `approved_at`，公开页面只读取 `approved`。
+5. 留言提交后默认是 `pending`。完成下方后台配置后，在 `/admin/messages/` 批准或拒绝留言；数据库触发器会自动设置或清除 `approved_at`，公开页面只读取 `approved`。Supabase Table Editor 仅作为故障排查备用入口。
+
+### 留言审核后台
+
+自建后台地址为 `https://springhues.com/admin/messages/`，页面不提供公开入口，并使用 Supabase Auth 邮箱密码账号登录。部署前需要：
+
+1. 在 Supabase Auth 中关闭公开注册，并由 Dashboard 手动创建、确认唯一管理员账号。
+2. 在 `message-config.js` 的 `supabasePublishableKey` 中填写项目 publishable key；该 key 可公开，但不得填写 secret 或 service-role key。
+3. 把管理员用户 UUID 写入临时 `supabase/.env` 的 `MESSAGE_ADMIN_USER_IDS`，多个 UUID 用逗号分隔，然后重新部署 secrets。
+4. 应用 `202608250001_add_message_replies.sql`，部署 `manage-messages`、`list-messages` 两个函数。
+
+后台支持待审核、已批准、已拒绝和全部筛选，可独立改变审核状态，并为每条留言保存一条最多 500 字的“Springhues 回复”。未批准留言及其回复均不会公开；已打开的留言页每 30 秒同步一次公开状态。
 
 留言功能的独立回归测试：
 

@@ -1,4 +1,4 @@
-export const MESSAGE_LIMITS = Object.freeze({ nickname: 20, content: 300 });
+export const MESSAGE_LIMITS = Object.freeze({ nickname: 20, content: 300, reply: 500 });
 
 export function codePointLength(value) { return Array.from(value).length; }
 export function normalizeNickname(value) { return String(value ?? "").normalize("NFKC").trim().replace(/\s+/gu, " "); }
@@ -53,7 +53,7 @@ export class MessageApi {
     const url = new URL(this.endpoint("list-messages"));
     url.searchParams.set("limit", String(Math.min(Math.max(limit, 1), 50)));
     if (cursor) url.searchParams.set("cursor", cursor);
-    const response = await this.fetch(url, { headers: { Accept: "application/json" } });
+    const response = await this.fetch(url, { cache: "no-store", headers: { Accept: "application/json" } });
     const result = await parseResponse(response);
     if (!Array.isArray(result.items)) throw new MessageApiError("INVALID_RESPONSE", "留言服务返回了无效数据。", 502);
     return result;

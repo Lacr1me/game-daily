@@ -1,4 +1,4 @@
-export const MESSAGE_LIMITS = Object.freeze({ nickname: 20, content: 300 });
+export const MESSAGE_LIMITS = Object.freeze({ nickname: 20, content: 300, reply: 500 });
 
 export function codePointLength(value) {
   return Array.from(value).length;
@@ -27,4 +27,15 @@ export function validateMessageInput(input) {
     return { ok: false, code: "INVALID_CONTENT", message: "留言包含不支持的字符。" };
   }
   return { ok: true, nickname, content };
+}
+
+export function validateReplyInput(value) {
+  if (value === null || value === undefined || String(value).trim() === "") {
+    return { ok: true, reply: null };
+  }
+  const reply = normalizeContent(value);
+  if (codePointLength(reply) < 1 || codePointLength(reply) > MESSAGE_LIMITS.reply || /[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/u.test(reply)) {
+    return { ok: false, code: "INVALID_OWNER_REPLY", message: "回复需为 1—500 个字符，且不能包含控制字符。" };
+  }
+  return { ok: true, reply };
 }

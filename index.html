@@ -7,7 +7,7 @@
   <meta name="description" content="每天北京时间 11:00 更新的民生日报与游戏方块日报。">
   <title>每日简报 · 首页</title>
   <link rel="icon" type="image/png" href="brand-assets/springhues-logo.png">
-  <link rel="stylesheet" href="portal.css?v=20260824-game-cobalt">
+  <link rel="stylesheet" href="portal.css?v=20260825-message-cta">
   <link rel="stylesheet" href="brand.css">
 </head>
 <body>
@@ -18,7 +18,6 @@
       <span><b>每日简报</b><small>DAILY BRIEFING · 11:00</small></span>
     </a>
     <div class="header-actions">
-      <a class="message-nav" href="messages/">留言</a>
       <p class="header-update"><span class="live-dot"></span>北京时间每日更新</p>
     </div>
   </header>
@@ -28,18 +27,11 @@
       <p class="eyebrow">ONE PLACE · TWO PERSPECTIVES</p>
       <div class="hero-primary">
         <h1>简单人生</h1>
-        <form class="quick-message-form" data-message-form novalidate>
+        <div class="quick-message-cta">
           <p class="form-eyebrow">MESSAGE BOARD</p>
           <h2>留下一句话</h2>
-          <div class="quick-message-fields">
-            <label><span class="sr-only">昵称</span><input name="nickname" type="text" maxlength="20" autocomplete="nickname" placeholder="你的昵称" required></label>
-            <label><span class="sr-only">留言内容</span><input name="content" type="text" maxlength="300" autocomplete="off" placeholder="写下你的想法…" required></label>
-            <button type="submit">提交留言 <span aria-hidden="true">→</span></button>
-          </div>
-          <label class="honeypot" aria-hidden="true">网站<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
-          <div class="turnstile-slot" data-turnstile aria-hidden="true"></div>
-          <p class="form-status" data-message-status role="status" aria-live="polite"></p>
-        </form>
+          <a class="quick-message-link" href="messages/">提交留言 <span aria-hidden="true">→</span></a>
+        </div>
       </div>
       <div class="hero-secondary">
         <div class="hero-personal-logo"><img src="brand-assets/springhues-logo.png" alt="Springhues"></div>
@@ -79,6 +71,5 @@
   <footer class="shell"><span>每日简报</span><p><a class="footer-link" href="privacy/">隐私说明</a> · Asia/Shanghai · 静态归档 · GitHub Pages</p></footer>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script defer src="portal.js?v=20260824-messages-v1"></script>
-  <script type="module" src="portal-messages.js?v=20260824-messages-v1"></script>
 </body>
 </html>
