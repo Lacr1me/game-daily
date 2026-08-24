@@ -145,3 +145,23 @@
 .archive-dialog{width:min(700px,calc(100% - 32px));background:#fff}.dialog-head{align-items:center;padding:34px 36px 28px}.dialog-head h2{font-family:"SimSun","Songti SC",serif;font-size:29px}.date-input-label{display:block;margin:26px 36px 8px;color:var(--muted);font-size:12px;font-weight:700}.archive-dialog input{width:calc(100% - 72px);margin:0 36px 20px;padding:15px 18px;border:1px solid var(--line);background:#fff;color:var(--ink);font:700 15px "Roboto Mono",monospace}.archive-list{max-height:360px;overflow:auto;padding:0 22px 28px}.archive-item{grid-template-columns:128px minmax(0,1fr) 24px;gap:14px;padding:20px 14px}.archive-item time{color:var(--red);font-size:12px}.archive-item b{overflow:hidden;font-size:15px;text-overflow:ellipsis;white-space:nowrap}.archive-item.active{background:#fff3f2}.archive-item:hover{background:#fff8f7}.archive-item:hover b{color:var(--red)}
 
 @media(max-width:600px){.dialog-head{padding:26px 22px 20px}.dialog-head h2{font-size:24px}.date-input-label{margin:20px 22px 7px}.archive-dialog input{width:calc(100% - 44px);margin:0 22px 16px}.archive-list{padding:0 12px 20px}.archive-item{grid-template-columns:96px minmax(0,1fr) 20px;gap:10px;padding:17px 10px}.archive-item time{font-size:10px}.archive-item b{font-size:13px}}
+
+/* Approved game-page layout: compact platform links and numbered content rows. */
+.game-main-section{padding-top:38px}
+.game-main-section .news-row{grid-template-columns:38px 148px minmax(0,1fr)}
+.game-main-section .rank{align-self:center;display:grid;place-items:center;width:32px;height:32px;padding:0;border-radius:4px;background:var(--red);color:#fff;font:800 11px "Roboto Mono",monospace}
+.game-main-section .pack-row{grid-template-columns:42px 108px minmax(0,1fr) 60px}
+.game-main-section .pack-rank{width:32px;height:32px;border-color:var(--green);border-radius:4px;background:var(--green);color:#fff;font-size:11px}
+.hero-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;width:min(580px,100%)}
+.platform-link{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px;min-width:0;padding:9px 11px;border:1px solid var(--ink);border-radius:4px;background:#fff;color:var(--ink);text-decoration:none;transition:transform .18s ease,box-shadow .18s ease}
+.platform-link b{min-width:0;overflow:hidden;font-size:12px;text-overflow:ellipsis;white-space:nowrap}
+.platform-link span{font-size:15px}
+.platform-link:hover{transform:translateY(-2px);box-shadow:0 8px 20px #1112}
+.platform-link:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+
+@media(max-width:600px){
+  .hero-actions{grid-template-columns:repeat(2,minmax(0,1fr));width:100%}
+  .game-main-section .news-row{grid-template-columns:32px 88px minmax(0,1fr)}
+  .game-main-section .pack-row{grid-template-columns:32px 70px minmax(0,1fr) 38px}
+  .game-main-section .rank,.game-main-section .pack-rank{width:30px;height:30px}
+}

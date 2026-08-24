@@ -126,6 +126,15 @@ assert(gameHtml.includes('id="archiveDate"') && gameHtml.includes("按日期选�
 assert(gameHtml.includes('id="downloadPng"') && gameHtml.includes("下载当天 PNG 原图"), "游戏日报底部必须提供 PNG 原图下载按钮");
 assert(gameHtml.includes('class="hero-logo-stage"') && gameHtml.includes('src="brand-assets/springhues-logo.png"'), "游戏日报首屏必须展示 Springhues Logo");
 assert(!gameHtml.includes('class="ticker"'), "游戏日报不得保留黑色滚动栏目条");
+assert(!gameHtml.includes('id="headlines"'), "游戏日报不得恢复今日头条板块");
+const platformOrder = ["store.steampowered.com", "store.epicgames.com", "www.mcmod.cn", "www.minebbs.com"];
+let previousPlatformIndex = -1;
+for (const platform of platformOrder) {
+  const platformIndex = gameHtml.indexOf(platform);
+  assert(platformIndex > previousPlatformIndex, `游戏平台快捷入口缺失或顺序错误：${platform}`);
+  previousPlatformIndex = platformIndex;
+}
+assert(gameHtml.includes("<b>01</b> 中国玩家关注") && gameHtml.includes("<b>02</b> Minecraft 热门整合包"), "游戏日报正文板块必须从 01 开始编号");
 assert(!gameHtml.includes(">报</span>") && !civicHtml.includes(">报</span>"), "双频道页头不得继续显示旧的报字标识");
 assert(gameHtml.includes("brand-assets/springhues-logo.png") && civicHtml.includes("../brand-assets/springhues-logo.png"), "双频道页头必须使用唯一的 Springhues 正式 Logo");
 await access(path.join(root, "brand-assets", "springhues-logo.png"));
@@ -149,7 +158,7 @@ assert(gameApp.includes("edition.headline || edition.title"), "游戏日报归�
 assert(gameApp.includes('$("#archiveDate").min') && gameApp.includes('$("#archiveDate").max'), "游戏日报日期选择器必须限制在公开归档范围");
 assert(gameApp.includes('addEventListener("change", (event) => navigateToDate(event.target.value))'), "游戏日报日期选择器必须支持按日期跳转");
 assert(civicApp.includes("downloads/minsheng/${encodeURIComponent(brief.date)}.png"), "民生日报下载按钮必须跟随所选归档日期");
-assert(gameHtml.includes("app.js?v=20260824-archive-date-picker"), "游戏日报脚本必须使用日期选择器缓存版本");
+assert(gameHtml.includes("app.js?v=20260824-platform-links"), "游戏日报脚本必须使用快捷入口布局缓存版本");
 assert(civicHtml.includes("app.js?v=20260824-download-png"), "民生日报脚本必须使用 PNG 下载缓存版本");
 
 for (const file of ["index.html", "game/index.html", "minsheng/index.html", "portal.js", "minsheng/app.js", "scripts/game-lib.mjs"]) {

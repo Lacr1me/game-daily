@@ -76,8 +76,6 @@ function render(brief) {
     ? `历史补档 · ${brief.date}`
     : `今日刊 · ${brief.date} · 11:00 发布`;
   $("#navDate").textContent = brief.date;
-  $("#dateLabel").textContent = cnDate(brief.date);
-
   $("#features").replaceChildren(...brief.features.map((item, index) => featureCard(item, index)));
   $("#newsList").replaceChildren(...brief.news.map((item, index) => newsRow(item, index)));
   $("#packList").replaceChildren(...brief.packs.map((item, index) => packRow(item, index)));
@@ -220,7 +218,8 @@ function externalLink(url, label, className) {
 function safeImage(src, alt) {
   const image = element("img");
   image.alt = alt;
-  image.loading = "lazy";
+  image.loading = "eager";
+  image.decoding = "sync";
   if (/^game-brief-assets\/[A-Za-z0-9][A-Za-z0-9._-]*$/.test(src || "")) image.src = src;
   else image.hidden = true;
   image.addEventListener("error", () => {
@@ -232,7 +231,6 @@ function safeImage(src, alt) {
 
 function openArchive() { $("#archiveDialog").showModal(); }
 $("#archiveButton").addEventListener("click", openArchive);
-$("#dateTrigger").addEventListener("click", openArchive);
 $("#closeArchive").addEventListener("click", () => $("#archiveDialog").close());
 $("#archiveDialog").addEventListener("click", (event) => { if (event.target === $("#archiveDialog")) $("#archiveDialog").close(); });
 $("#archiveDate").addEventListener("change", (event) => navigateToDate(event.target.value));
