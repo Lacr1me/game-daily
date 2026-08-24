@@ -188,3 +188,27 @@
 @media(min-width:901px){.deal-panel{height:0;min-height:100%}.deal-list-shell{flex:1;max-height:none}}
 @media(min-width:1800px){.deal-summary{min-height:43px;font-size:11px}.deal-row{min-height:86px;padding:11px 10px 11px 0}.deal-status{min-height:23px;padding-inline:8px}.deal-price{padding-right:10px}}
 @media(max-width:600px){.deal-summary{font-size:8px}.deal-scroll-hint{gap:4px}.deal-list-shell{height:410px}.deal-row{grid-template-columns:88px minmax(0,1fr) 70px;gap:10px}.deal-row img{width:88px;height:44px}.deal-meta{gap:4px}.deal-status{padding-inline:5px}.deal-ends{display:none}}
+
+/* Keep the two lead columns equal and share every row track so 01–10 align exactly. */
+@media(min-width:901px){
+  .game-main-section.split-section{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .game-main-section>.news-column,
+  .game-main-section>.minecraft-column,
+  .game-main-section .news-list,
+  .game-main-section .pack-list{display:contents}
+  .game-main-section .news-column>.compact-heading{grid-column:1;grid-row:1}
+  .game-main-section .minecraft-column>.compact-heading{grid-column:2;grid-row:1}
+  .game-main-section .news-row{grid-column:1}
+  .game-main-section .pack-row{grid-column:2}
+  .game-main-section .news-row:nth-child(1),.game-main-section .pack-row:nth-child(1){grid-row:2}
+  .game-main-section .news-row:nth-child(2),.game-main-section .pack-row:nth-child(2){grid-row:3}
+  .game-main-section .news-row:nth-child(3),.game-main-section .pack-row:nth-child(3){grid-row:4}
+  .game-main-section .news-row:nth-child(4),.game-main-section .pack-row:nth-child(4){grid-row:5}
+  .game-main-section .news-row:nth-child(5),.game-main-section .pack-row:nth-child(5){grid-row:6}
+  .game-main-section .news-row:nth-child(6),.game-main-section .pack-row:nth-child(6){grid-row:7}
+  .game-main-section .news-row:nth-child(7),.game-main-section .pack-row:nth-child(7){grid-row:8}
+  .game-main-section .news-row:nth-child(8),.game-main-section .pack-row:nth-child(8){grid-row:9}
+  .game-main-section .news-row:nth-child(9),.game-main-section .pack-row:nth-child(9){grid-row:10}
+  .game-main-section .news-row:nth-child(10),.game-main-section .pack-row:nth-child(10){grid-row:11}
+  .game-main-section .method-note{grid-column:2;grid-row:12}
+}
