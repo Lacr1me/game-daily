@@ -40,6 +40,7 @@ const portalHtml = await read("index.html");
 const messagesHtml = await read("messages/index.html");
 const messagesApp = await read("messages/app.js");
 const config = await read("message-config.js");
+const privacyHtml = await read("privacy/index.html");
 const migration = await read("supabase/migrations/202608240001_create_messages.sql");
 const submitFunction = await read("supabase/functions/submit-message/index.ts");
 const listFunction = await read("supabase/functions/list-messages/index.ts");
@@ -50,6 +51,8 @@ assert(messagesHtml.includes('id="messageList"') && messagesHtml.includes("data-
 assert(!/\.innerHTML\s*=/.test(messagesApp), "留言列表不得使用 innerHTML 渲染用户内容");
 assert(messagesApp.includes("textContent = item.nickname") && messagesApp.includes("textContent = item.content"), "用户内容必须通过 textContent 渲染");
 assert(!/SERVICE_ROLE|SECRET_KEY|RATE_LIMIT_SECRET/u.test(config), "公开配置不得包含服务端秘密字段");
+assert(config.includes("etkjbxfdwmhqmuyzpttq.supabase.co/functions/v1") && config.includes("0x4AAAAAAEaAYxUF2T8CqG3K"), "公开配置必须指向已创建的 Supabase 与 Turnstile 站点");
+assert(privacyHtml.includes("Turnstile Privacy Addendum") && privacyHtml.includes("来源哈希"), "Invisible Turnstile 必须配套公开隐私说明");
 assert(migration.includes("enable row level security") && migration.includes("revoke all on table public.messages from anon, authenticated"), "留言表必须默认拒绝匿名直连");
 assert(migration.includes("MESSAGE_RATE_LIMITED") && migration.includes("status = 'approved'"), "数据库必须执行限流并仅查询已批准留言");
 assert(submitFunction.includes("siteverify") && submitFunction.includes("hmacSha256") && submitFunction.includes("TURNSTILE_ALLOWED_HOSTNAMES"), "提交函数必须验证 Turnstile、来源主机和哈希限流键");

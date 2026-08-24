@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <base href="../">
+  <meta name="description" content="每日简报留言功能的隐私说明。">
+  <title>隐私说明 · 每日简报</title>
+  <link rel="icon" type="image/png" href="brand-assets/springhues-logo.png">
+  <link rel="stylesheet" href="portal.css?v=20260824-game-cobalt">
+  <link rel="stylesheet" href="brand.css">
+  <link rel="stylesheet" href="privacy/privacy.css?v=20260824-privacy-v1">
+</head>
+<body>
+  <div class="paper-grain" aria-hidden="true"></div>
+  <header class="portal-header shell">
+    <a class="portal-brand" href="./" aria-label="每日简报首页">
+      <span class="brand-logo" aria-hidden="true"><img src="brand-assets/springhues-logo.png" alt=""></span>
+      <span><b>每日简报</b><small>DAILY BRIEFING · 11:00</small></span>
+    </a>
+    <div class="header-actions">
+      <a class="message-nav" href="messages/">留言</a>
+      <p class="header-update"><span></span>隐私说明</p>
+    </div>
+  </header>
+
+  <main class="privacy-main shell">
+    <p class="eyebrow">PRIVACY NOTICE</p>
+    <h1>隐私说明</h1>
+    <p class="privacy-lead">本说明适用于每日简报的留言提交、审核和公开展示功能。最后更新：2026 年 8 月 24 日。</p>
+
+    <section>
+      <h2>我们处理哪些信息</h2>
+      <p>提交留言时，我们处理你填写的昵称与留言正文，并保存提交时间、审核状态及批准时间。昵称会保存在你的浏览器本地，方便下次填写。</p>
+      <p>为了限制滥用，服务端会把请求来源地址转换为带秘密盐值的不可逆来源哈希；留言数据库不保存原始 IP 地址。</p>
+    </section>
+
+    <section>
+      <h2>信息如何使用</h2>
+      <p>新留言首先进入待审核队列。只有被批准的昵称、正文和批准时间会在公开留言页展示；被拒绝或仍待审核的内容不会公开。</p>
+    </section>
+
+    <section>
+      <h2>Cloudflare Turnstile</h2>
+      <p>留言表单使用 Cloudflare Turnstile 区分正常访客与自动化程序。Turnstile 会处理提供安全验证所必需的技术信号，但不会读取留言表单内容。有关 Cloudflare 如何处理相关数据，请参阅其 <a href="https://www.cloudflare.com/turnstile-privacy-policy/" rel="external noopener">Turnstile Privacy Addendum</a> 和 <a href="https://www.cloudflare.com/policies/privacy/" rel="external noopener">Privacy Policy</a>。</p>
+    </section>
+
+    <section>
+      <h2>服务提供方</h2>
+      <p>网站由 GitHub Pages 托管，留言数据与审核函数由 Supabase 托管，人机验证由 Cloudflare 提供。这些服务可能按照各自的隐私政策处理必要的技术信息。</p>
+    </section>
+
+    <a class="privacy-return" href="messages/">返回留言页 <span aria-hidden="true">→</span></a>
+  </main>
+
+  <footer class="shell"><span>每日简报</span><p><a class="footer-link" href="./">返回首页</a> · Asia/Shanghai</p></footer>
+</body>
+</html>

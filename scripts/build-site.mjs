@@ -14,6 +14,7 @@ for (const file of ["index.html", "portal.css", "portal.js", "portal-messages.js
   await cp(path.join(root, file), path.join(output, file));
 }
 await cp(path.join(root, "messages"), path.join(output, "messages"), { recursive: true });
+await cp(path.join(root, "privacy"), path.join(output, "privacy"), { recursive: true });
 await cp(path.join(root, "game"), path.join(output, "game"), { recursive: true });
 await cp(path.join(root, "minsheng"), path.join(output, "minsheng"), { recursive: true });
 await cp(path.join(root, "game-brief-assets"), path.join(output, "game-brief-assets"), { recursive: true });

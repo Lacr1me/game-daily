@@ -6,6 +6,7 @@ data/.pending/
 supabase/.temp/
 supabase/.env
 supabase/.env.local
+supabase/.cli.env
 *.url
 
 # Retained source exports are not part of the public website

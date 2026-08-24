@@ -1,6 +1,6 @@
 export const MESSAGE_CONFIG = Object.freeze({
-  apiBaseUrl: "",
-  turnstileSiteKey: ""
+  apiBaseUrl: "https://etkjbxfdwmhqmuyzpttq.supabase.co/functions/v1",
+  turnstileSiteKey: "0x4AAAAAAEaAYxUF2T8CqG3K"
 });
 
 export function messageServiceConfigured(config = MESSAGE_CONFIG) {

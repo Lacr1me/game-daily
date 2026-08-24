@@ -20,6 +20,8 @@ body {
 }
 button, input, textarea { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
+.footer-link { color: inherit; text-underline-offset: 3px; }
+.footer-link:hover { color: var(--ink); }
 .paper-grain {
   position: fixed;
   inset: 0;
