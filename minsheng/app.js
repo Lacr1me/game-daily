@@ -1,4 +1,5 @@
 const state = { manifest: null, edition: null, activeDate: null };
+const externalSourceMarker = "（来自于外网）";
 const categoryConfig = {
   domestic: { target: "domesticStories", color: "#d71920" },
   international: { target: "internationalStories", color: "#6a19d8" },
@@ -98,14 +99,21 @@ function render(brief) {
     icon.className = "metric-icon";
     icon.textContent = metric.icon;
     const body = document.createElement("div");
-    body.append(textNode("div", "metric-name", metric.name), textNode("div", "metric-value", metric.value), textNode("div", "metric-note", metric.note));
+    const metricNote = metric.source
+      ? `${metric.note}；${formatSource(metric.source, metric.sourceOrigin)}`
+      : metric.note;
+    body.append(textNode("div", "metric-name", metric.name), textNode("div", "metric-value", metric.value), textNode("div", "metric-note", metricNote));
     item.append(icon, body);
     return item;
   });
   $("#metrics").replaceChildren(...metrics);
-  $("#metricsCutoff").textContent = `数据截至：${brief.metricsCutoff} · ${brief.metricSources.join("、")}`;
+  const metricSourceOrigins = sourceOriginMap(brief.metrics);
+  const storySourceOrigins = sourceOriginMap(Object.values(brief.sections).flat());
+  const metricSources = brief.metricSources.map((source) => formatSource(source, metricSourceOrigins.get(source)));
+  const storySources = brief.sources.map((source) => formatSource(source, storySourceOrigins.get(source)));
+  $("#metricsCutoff").textContent = `数据截至：${brief.metricsCutoff} · ${metricSources.join("、")}`;
   $("#observation").textContent = brief.observation;
-  $("#sourceLine").textContent = `数据来源：${brief.sources.join("、")}。全部标题均保留可点击原始链接。`;
+  $("#sourceLine").textContent = `数据来源：${storySources.join("、")}。全部标题均保留可点击原始链接。`;
   $("#cutoffLine").textContent = `检索截止：${brief.cutoff}`;
   $("#productionTime").textContent = `制作时间：${brief.productionTime}`;
   updateArchiveActiveState();
@@ -133,11 +141,26 @@ function renderStories(container, stories) {
     source.href = story.url;
     source.target = "_blank";
     source.rel = "noopener noreferrer";
-    source.textContent = story.source;
+    source.textContent = formatSource(story.source, story.sourceOrigin);
     meta.append(source, document.createTextNode(story.publishedAt));
     article.append(heading, summary, meta);
     return article;
   }));
+}
+
+function formatSource(source, sourceOrigin) {
+  const value = String(source || "").replace(new RegExp(`${externalSourceMarker}$`), "").trim();
+  return sourceOrigin === "external" ? `${value}${externalSourceMarker}` : value;
+}
+
+function sourceOriginMap(items) {
+  const origins = new Map();
+  for (const item of items) {
+    if (!item?.source) continue;
+    const current = origins.get(item.source);
+    origins.set(item.source, current === "external" || item.sourceOrigin === "external" ? "external" : item.sourceOrigin);
+  }
+  return origins;
 }
 
 function textNode(tag, className, value) {

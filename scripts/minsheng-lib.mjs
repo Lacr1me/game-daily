@@ -2,6 +2,23 @@ import path from "node:path";
 
 export const CATEGORY_COUNTS = { domestic: 10, international: 10, tech: 10, ai: 5 };
 export const REQUIRED_METRIC_KINDS = ["gold", "domestic_oil", "international_oil", "usd_cny", "eur_cny", "jpy_cny"];
+export const SOURCE_POLICY_VERSION = 2;
+export const SOURCE_POLICY_EFFECTIVE_DATE = "2026-08-25";
+export const EXTERNAL_SOURCE_MARKER = "（来自于外网）";
+
+const CHINA_NEWS_DOMAINS = [
+  "news.cn", "xinhuanet.com", "people.com.cn", "cctv.com", "cctv.cn",
+  "chinanews.com.cn", "cnr.cn", "gmw.cn", "ce.cn", "china.com.cn",
+  "chinadaily.com.cn", "cri.cn", "youth.cn", "stdaily.com", "sciencenet.cn"
+];
+const CHINA_DATA_DOMAINS = [
+  ...CHINA_NEWS_DOMAINS,
+  "sge.com.cn", "ndrc.gov.cn", "chinamoney.com.cn", "pbc.gov.cn", "safe.gov.cn",
+  "sse.com.cn", "szse.cn", "ine.cn", "shfe.com.cn", "csindex.com.cn",
+  "cnfin.com", "cs.com.cn", "cnstock.com", "stcn.com", "yicai.com"
+];
+const GENERAL_NEWS_AUDIT_SOURCES = ["新华网", "人民网", "央视网", "中国新闻网", "央广网", "光明网", "中国经济网"];
+const TECHNOLOGY_NEWS_AUDIT_SOURCES = ["中国科技网", "新华网科技", "人民网科技", "央视网科技", "中国新闻网科技"];
 
 export function beijingDate(now = new Date()) {
   const parts = new Intl.DateTimeFormat("en-CA", {
@@ -39,6 +56,10 @@ export function validateMinsheng(brief, { expectedDate } = {}) {
   if (expectedDate && brief.date !== expectedDate) errors.push(`日期必须为 ${expectedDate}`);
   if (!/^\d{4}-\d{2}-\d{2}$/.test(brief.date || "")) errors.push("date 必须为 YYYY-MM-DD");
   if (!Number.isInteger(brief.issue) || brief.issue < 1) errors.push("issue 必须为正整数");
+  const sourcePolicyRequired = /^\d{4}-\d{2}-\d{2}$/.test(brief.date || "") && brief.date >= SOURCE_POLICY_EFFECTIVE_DATE;
+  const sourcePolicyV2 = brief.sourcePolicyVersion === SOURCE_POLICY_VERSION;
+  if (sourcePolicyRequired && !sourcePolicyV2) errors.push(`从 ${SOURCE_POLICY_EFFECTIVE_DATE} 起 sourcePolicyVersion 必须为 ${SOURCE_POLICY_VERSION}`);
+  if (brief.sourcePolicyVersion !== undefined && !sourcePolicyV2) errors.push(`不支持的 sourcePolicyVersion：${brief.sourcePolicyVersion}`);
   for (const field of ["weekday", "lunarDate", "cutoff", "productionTime", "metricsCutoff", "observation"]) {
     if (!brief[field] || typeof brief[field] !== "string") errors.push(`${field} 不能为空`);
   }
@@ -77,6 +98,7 @@ export function validateMinsheng(brief, { expectedDate } = {}) {
       if (summaryLength < 40 || summaryLength > 90) errors.push(`${prefix} 摘要必须为40—90字，当前${summaryLength}字`);
       if (!story.source?.trim()) errors.push(`${prefix} 缺少来源`);
       if (!/^https:\/\//.test(story.url || "")) errors.push(`${prefix} 必须使用 HTTPS 原文链接`);
+      if (sourcePolicyV2) validateStorySource(story, category, prefix, errors);
       if (!/^\d{4}-\d{2}-\d{2}( \d{2}:\d{2})?$/.test(story.publishedAt || "")) errors.push(`${prefix} 发布时间格式无效`);
       const publishedDate = parseDate((story.publishedAt || "").slice(0, 10));
       if (!publishedDate) errors.push(`${prefix} 发布时间无效`);
@@ -98,6 +120,7 @@ export function validateMinsheng(brief, { expectedDate } = {}) {
   REQUIRED_METRIC_KINDS.forEach((kind) => { if (!metricKinds.has(kind)) errors.push(`缺少数据指标：${kind}`); });
   (brief.metrics || []).forEach((metric, index) => {
     for (const field of ["kind", "icon", "name", "value", "note"]) if (!metric[field]?.trim()) errors.push(`第${index + 1}个指标缺少 ${field}`);
+    if (sourcePolicyV2) validateMetricSource(metric, index, errors);
     if (!/(\d{4}-\d{2}-\d{2}|\d{1,2}月\d{1,2}日)/.test(metric.note || "")) errors.push(`第${index + 1}个指标必须标注数据日期`);
     if (metric.kind === "gold" && !/元\/克/.test(metric.value || "")) errors.push("国内金价必须标注元/克");
     if (metric.kind === "domestic_oil" && !/元\/升/.test(metric.value || "")) errors.push("中国油价必须标注元/升");
@@ -106,8 +129,49 @@ export function validateMinsheng(brief, { expectedDate } = {}) {
   });
   if (!Array.isArray(brief.sources) || brief.sources.length < 3) errors.push("sources 至少需要3项");
   if (!Array.isArray(brief.metricSources) || brief.metricSources.length < 2) errors.push("metricSources 至少需要2项");
+  if (sourcePolicyV2) {
+    validateSourceSummary(brief.sources, "sources", errors);
+    validateSourceSummary(brief.metricSources, "metricSources", errors);
+    const metricSourceSet = new Set(brief.metricSources || []);
+    for (const metric of brief.metrics || []) {
+      if (metric.source?.trim() && !metricSourceSet.has(metric.source.trim())) {
+        errors.push(`metricSources 缺少指标来源：${metric.source.trim()}`);
+      }
+    }
+  }
   if (errors.length) throw new Error(`民生日报校验失败：\n- ${errors.join("\n- ")}`);
   return brief;
+}
+
+export function validateMinshengSourceAudit(brief, audit) {
+  if (brief.sourcePolicyVersion !== SOURCE_POLICY_VERSION) return audit;
+  const errors = [];
+  if (!audit || typeof audit !== "object") throw new Error("来源审计必须是对象");
+  if (audit.date !== brief.date) errors.push(`来源审计日期必须为 ${brief.date}`);
+  if (audit.sourcePolicyVersion !== SOURCE_POLICY_VERSION) errors.push(`来源审计 sourcePolicyVersion 必须为 ${SOURCE_POLICY_VERSION}`);
+  for (const [category, target] of Object.entries(CATEGORY_COUNTS)) {
+    const stories = brief.sections?.[category] || [];
+    const actualChina = stories.filter((story) => story.sourceOrigin === "china").length;
+    const actualExternal = stories.filter((story) => story.sourceOrigin === "external").length;
+    const requiredSources = category === "tech" || category === "ai"
+      ? TECHNOLOGY_NEWS_AUDIT_SOURCES
+      : [...GENERAL_NEWS_AUDIT_SOURCES, ...(category === "domestic" && actualExternal > 0 ? ["省级党媒／政府新闻发布平台"] : [])];
+    validateAuditEntry(audit.categories?.[category], category, target, actualChina, actualExternal, requiredSources, errors);
+  }
+  const metrics = brief.metrics || [];
+  const metricChina = metrics.filter((metric) => metric.sourceOrigin === "china").length;
+  const metricExternal = metrics.filter((metric) => metric.sourceOrigin === "external").length;
+  validateAuditEntry(
+    audit.metrics,
+    "metrics",
+    metrics.length,
+    metricChina,
+    metricExternal,
+    ["国内官方机构或交易所", "国内权威财经媒体"],
+    errors
+  );
+  if (errors.length) throw new Error(`民生日报来源审计失败：\n- ${errors.join("\n- ")}`);
+  return audit;
 }
 
 export function safePendingPath(root, date) {
@@ -121,4 +185,103 @@ function parseDate(value) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(value || "")) return null;
   const date = new Date(`${value}T00:00:00+08:00`);
   return Number.isNaN(date.getTime()) ? null : date;
+}
+
+function validateStorySource(story, category, prefix, errors) {
+  validateSourceOrigin(story, prefix, errors);
+  if (story.source?.includes(EXTERNAL_SOURCE_MARKER)) errors.push(`${prefix} source 不得手写外网标记，由页面统一生成`);
+  const hostname = httpsHostname(story.url);
+  if (!hostname) return;
+  const domesticGovernmentSource = category === "domestic" && isGovernmentDomain(hostname);
+  const domesticMediaSource = matchesDomain(hostname, CHINA_NEWS_DOMAINS);
+  const isChinaSource = domesticGovernmentSource || domesticMediaSource;
+  if (story.sourceOrigin === "china" && !isChinaSource) {
+    errors.push(`${prefix} 标记为国内来源，但主链接不是已批准的国内权威媒体或政府新闻页：${hostname}`);
+  }
+  if (story.sourceOrigin === "external" && isChinaSource) {
+    errors.push(`${prefix} 的主链接属于国内权威来源，不应标记为外网：${hostname}`);
+  }
+}
+
+function validateMetricSource(metric, index, errors) {
+  const label = `第${index + 1}个指标`;
+  for (const field of ["source", "sourceUrl"]) {
+    if (!metric[field]?.trim()) errors.push(`${label}缺少 ${field}`);
+  }
+  validateSourceOrigin(metric, label, errors);
+  if (metric.source?.includes(EXTERNAL_SOURCE_MARKER)) errors.push(`${label} source 不得手写外网标记，由页面统一生成`);
+  if (metric.source && metric.note?.includes(metric.source)) errors.push(`${label} note 不得重复来源名称，来源由页面统一追加`);
+  const hostname = httpsHostname(metric.sourceUrl);
+  if (!hostname) {
+    if (metric.sourceUrl) errors.push(`${label} sourceUrl 必须使用有效的 HTTPS 链接`);
+    return;
+  }
+  const isChinaSource = matchesDomain(hostname, CHINA_DATA_DOMAINS) || isGovernmentDomain(hostname);
+  if (metric.sourceOrigin === "china" && !isChinaSource) {
+    errors.push(`${label}标记为国内数据来源，但链接不在国内官方或权威财经来源范围：${hostname}`);
+  }
+  if (metric.sourceOrigin === "external" && isChinaSource) {
+    errors.push(`${label}链接属于国内数据来源，不应标记为外网：${hostname}`);
+  }
+}
+
+function validateSourceOrigin(item, label, errors) {
+  if (!["china", "external"].includes(item.sourceOrigin)) errors.push(`${label} sourceOrigin 必须为 china 或 external`);
+}
+
+function validateSourceSummary(values, label, errors) {
+  if (!Array.isArray(values)) return;
+  const normalized = values.map((value) => typeof value === "string" ? value.trim() : "");
+  if (normalized.some((value) => !value)) errors.push(`${label} 必须全部为非空字符串`);
+  if (normalized.some((value) => value.includes(EXTERNAL_SOURCE_MARKER))) errors.push(`${label} 不得手写外网标记，由页面统一生成`);
+  if (new Set(normalized).size !== normalized.length) errors.push(`${label} 不得包含重复来源`);
+}
+
+function httpsHostname(value) {
+  try {
+    const url = new URL(value);
+    return url.protocol === "https:" ? url.hostname.toLowerCase().replace(/\.$/, "") : "";
+  } catch {
+    return "";
+  }
+}
+
+function isGovernmentDomain(hostname) {
+  return hostname === "gov.cn" || hostname.endsWith(".gov.cn");
+}
+
+function matchesDomain(hostname, domains) {
+  return domains.some((domain) => hostname === domain || hostname.endsWith(`.${domain}`));
+}
+
+function validateAuditEntry(entry, label, target, actualChina, actualExternal, requiredSources, errors) {
+  if (!entry || typeof entry !== "object") {
+    errors.push(`来源审计缺少 ${label}`);
+    return;
+  }
+  const attempted = Array.isArray(entry.attemptedChinaSources)
+    ? entry.attemptedChinaSources.filter((value) => typeof value === "string" && value.trim()).map((value) => value.trim())
+    : [];
+  for (const source of requiredSources) {
+    if (!attempted.includes(source)) errors.push(`${label} 未记录尝试国内来源：${source}`);
+  }
+  for (const field of ["usableChinaCandidates", "rejectedChinaCandidates", "finalChinaCount", "finalExternalCount"]) {
+    if (!Number.isInteger(entry[field]) || entry[field] < 0) errors.push(`${label} ${field} 必须为非负整数`);
+  }
+  if (entry.finalChinaCount !== actualChina) errors.push(`${label} finalChinaCount 应为 ${actualChina}`);
+  if (entry.finalExternalCount !== actualExternal) errors.push(`${label} finalExternalCount 应为 ${actualExternal}`);
+  if (actualChina + actualExternal !== target) errors.push(`${label} 最终来源数量必须为 ${target}`);
+  if (Number.isInteger(entry.usableChinaCandidates) && entry.usableChinaCandidates < actualChina) {
+    errors.push(`${label} 可用国内候选数不能少于最终采用数 ${actualChina}`);
+  }
+  if (actualExternal > 0 && entry.usableChinaCandidates !== actualChina) {
+    errors.push(`${label} 尚有未采用的国内可用候选，不得使用外网补足`);
+  }
+  const reasons = Array.isArray(entry.rejectionReasons)
+    ? entry.rejectionReasons.filter((value) => typeof value === "string" && value.trim())
+    : [];
+  if (entry.rejectedChinaCandidates > 0 && !reasons.length) errors.push(`${label} 有被淘汰的国内候选时必须记录原因`);
+  if (actualExternal > 0 && !(typeof entry.shortageReason === "string" && entry.shortageReason.trim())) {
+    errors.push(`${label} 使用外网补足时必须记录 shortageReason`);
+  }
 }

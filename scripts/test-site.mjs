@@ -3,7 +3,7 @@ import path from "node:path";
 import { assertGameArchiveConsistency, assertManifestEdition, assertMinshengArchiveConsistency } from "./archive-consistency.mjs";
 import { assertPublishTime as assertGamePublishTime, beijingDate, validateGame } from "./game-lib.mjs";
 import { httpFallbackBase, tlsCertificateCode } from "./health-lib.mjs";
-import { assertPublishTime as assertMinshengPublishTime, validateMinsheng } from "./minsheng-lib.mjs";
+import { SOURCE_POLICY_VERSION, assertPublishTime as assertMinshengPublishTime, validateMinsheng, validateMinshengSourceAudit } from "./minsheng-lib.mjs";
 
 const root = process.cwd();
 const civicManifest = await readJson("data/minsheng/index.json");
@@ -102,6 +102,60 @@ const invalidCivic = structuredClone(civic);
 invalidCivic.metrics = invalidCivic.metrics.filter((metric) => metric.kind !== "gold");
 assertThrows(() => validateMinsheng(invalidCivic), "缺少必需指标的民生日报必须被拒绝");
 
+const sourcePolicyBrief = makeSourcePolicyBrief(civic);
+validateMinsheng(sourcePolicyBrief, { expectedDate: "2026-08-25" });
+validateMinshengSourceAudit(sourcePolicyBrief, makeSourceAudit(sourcePolicyBrief));
+
+const missingSourcePolicy = structuredClone(sourcePolicyBrief);
+delete missingSourcePolicy.sourcePolicyVersion;
+assertThrows(() => validateMinsheng(missingSourcePolicy), "2026-08-25起必须使用来源策略v2");
+
+const missingSourceOrigin = structuredClone(sourcePolicyBrief);
+delete missingSourceOrigin.sections.ai[0].sourceOrigin;
+assertThrows(() => validateMinsheng(missingSourceOrigin), "来源策略v2必须拒绝缺少来源归属的新闻");
+
+const companyDisguisedAsChinaMedia = structuredClone(sourcePolicyBrief);
+companyDisguisedAsChinaMedia.sections.ai[0].source = "OpenAI";
+companyDisguisedAsChinaMedia.sections.ai[0].url = "https://openai.com/news/example";
+assertThrows(() => validateMinsheng(companyDisguisedAsChinaMedia), "AI公司官网不得伪装成国内权威媒体");
+
+const externalStory = structuredClone(sourcePolicyBrief);
+externalStory.sections.ai[0].source = "OpenAI";
+externalStory.sections.ai[0].sourceOrigin = "external";
+externalStory.sections.ai[0].url = "https://openai.com/news/example";
+externalStory.sources.push("OpenAI");
+validateMinsheng(externalStory);
+const externalStoryAudit = makeSourceAudit(externalStory);
+validateMinshengSourceAudit(externalStory, externalStoryAudit);
+
+const externalOveruseAudit = structuredClone(externalStoryAudit);
+externalOveruseAudit.categories.ai.usableChinaCandidates += 1;
+assertThrows(() => validateMinshengSourceAudit(externalStory, externalOveruseAudit), "仍有国内候选时不得超额使用外网来源");
+
+const incompleteAttemptAudit = structuredClone(externalStoryAudit);
+incompleteAttemptAudit.categories.ai.attemptedChinaSources = incompleteAttemptAudit.categories.ai.attemptedChinaSources.filter((source) => source !== "中国科技网");
+assertThrows(() => validateMinshengSourceAudit(externalStory, incompleteAttemptAudit), "外网补足前必须记录完整的国内来源尝试");
+
+const domesticStoryMarkedExternal = structuredClone(sourcePolicyBrief);
+domesticStoryMarkedExternal.sections.international[0].sourceOrigin = "external";
+assertThrows(() => validateMinsheng(domesticStoryMarkedExternal), "国内权威媒体主链接不得标记为外网");
+
+const manuallyMarkedStory = structuredClone(externalStory);
+manuallyMarkedStory.sections.ai[0].source = "OpenAI（来自于外网）";
+assertThrows(() => validateMinsheng(manuallyMarkedStory), "外网标记必须由页面生成，不能手写到来源字段");
+
+const externalMetric = structuredClone(sourcePolicyBrief);
+externalMetric.metrics[2].source = "ICE";
+externalMetric.metrics[2].sourceUrl = "https://www.ice.com/products/219/Brent-Crude-Futures";
+externalMetric.metrics[2].sourceOrigin = "external";
+externalMetric.metricSources = [...new Set(externalMetric.metrics.map((metric) => metric.source))];
+validateMinsheng(externalMetric);
+validateMinshengSourceAudit(externalMetric, makeSourceAudit(externalMetric));
+
+const incompleteExternalMetric = structuredClone(externalMetric);
+delete incompleteExternalMetric.metrics[2].sourceOrigin;
+assertThrows(() => validateMinsheng(incompleteExternalMetric), "外网数据必须声明来源归属");
+
 const civicHtml = await readFile(path.join(root, "minsheng", "index.html"), "utf8");
 assert(!/天气|weather/i.test(civicHtml), "民生日报页面不得包含天气区域");
 for (const id of ["domesticStories", "internationalStories", "techStories", "aiStories", "archiveDate"]) {
@@ -166,8 +220,9 @@ assert(gameApp.includes("edition.headline || edition.title"), "游戏日报归�
 assert(gameApp.includes('$("#archiveDate").min') && gameApp.includes('$("#archiveDate").max'), "游戏日报日期选择器必须限制在公开归档范围");
 assert(gameApp.includes('addEventListener("change", (event) => navigateToDate(event.target.value))'), "游戏日报日期选择器必须支持按日期跳转");
 assert(civicApp.includes("downloads/minsheng/${encodeURIComponent(brief.date)}.png"), "民生日报下载按钮必须跟随所选归档日期");
+assert(civicApp.includes("（来自于外网）") && civicApp.includes("formatSource"), "民生日报必须统一渲染外网来源标记");
 assert(gameHtml.includes("app.js?v=20260824-steam-scroll"), "游戏日报脚本必须使用 Steam 滚动布局缓存版本");
-assert(civicHtml.includes("app.js?v=20260824-download-png"), "民生日报脚本必须使用 PNG 下载缓存版本");
+assert(civicHtml.includes("app.js?v=20260824-source-policy-v2"), "民生日报脚本必须使用来源策略v2缓存版本");
 const gameCss = await readFile(path.join(root, "styles.css"), "utf8");
 assert(gameCss.includes(".deal-list") && gameCss.includes("overflow-y:auto"), "Steam 优惠必须在固定板块内纵向滚动");
 assert(gameCss.includes(".png-capture .deal-row:nth-child(n+7)"), "PNG 截图必须只展示前 6 款 Steam 优惠");
@@ -189,6 +244,69 @@ function nextIsoDate(value) {
   const date = new Date(`${value}T00:00:00Z`);
   date.setUTCDate(date.getUTCDate() + 1);
   return date.toISOString().slice(0, 10);
+}
+function makeSourcePolicyBrief(brief) {
+  const candidate = structuredClone(brief);
+  candidate.date = "2026-08-25";
+  candidate.sourcePolicyVersion = SOURCE_POLICY_VERSION;
+  candidate.cutoff = "2026-08-25 10:45（北京时间）";
+  candidate.productionTime = "2026-08-25 10:50（北京时间）";
+  candidate.metricsCutoff = "2026-08-25 10:40（北京时间）";
+  for (const [category, stories] of Object.entries(candidate.sections)) {
+    stories.forEach((story, index) => {
+      story.source = index % 3 === 0 ? "新华社" : index % 3 === 1 ? "科技日报" : "央视新闻";
+      story.sourceOrigin = "china";
+      story.url = `https://www.news.cn/${category}/source-policy-${index + 1}.html`;
+      story.publishedAt = "2026-08-24 09:00";
+    });
+  }
+  candidate.sources = ["新华社", "科技日报", "央视新闻"];
+  const metricSources = {
+    gold: ["上海黄金交易所", "https://www.sge.com.cn/"],
+    domestic_oil: ["国家发展改革委", "https://www.ndrc.gov.cn/"],
+    international_oil: ["第一财经", "https://www.yicai.com/"],
+    international_oil_wti: ["第一财经", "https://www.yicai.com/"],
+    usd_cny: ["中国外汇交易中心", "https://www.chinamoney.com.cn/chinese/bkccpr/"],
+    eur_cny: ["中国外汇交易中心", "https://www.chinamoney.com.cn/chinese/bkccpr/"],
+    jpy_cny: ["中国外汇交易中心", "https://www.chinamoney.com.cn/chinese/bkccpr/"]
+  };
+  for (const metric of candidate.metrics) {
+    const [source, sourceUrl] = metricSources[metric.kind];
+    metric.note = "8月25日最近有效数据";
+    metric.source = source;
+    metric.sourceUrl = sourceUrl;
+    metric.sourceOrigin = "china";
+  }
+  candidate.metricSources = [...new Set(candidate.metrics.map((metric) => metric.source))];
+  return candidate;
+}
+function makeSourceAudit(brief) {
+  const generalSources = ["新华网", "人民网", "央视网", "中国新闻网", "央广网", "光明网", "中国经济网"];
+  const technologySources = ["中国科技网", "新华网科技", "人民网科技", "央视网科技", "中国新闻网科技"];
+  const entry = (items, attemptedChinaSources) => {
+    const finalChinaCount = items.filter((item) => item.sourceOrigin === "china").length;
+    const finalExternalCount = items.filter((item) => item.sourceOrigin === "external").length;
+    return {
+      attemptedChinaSources,
+      usableChinaCandidates: finalChinaCount,
+      rejectedChinaCandidates: finalExternalCount ? 1 : 0,
+      rejectionReasons: finalExternalCount ? ["候选超出时效或与既有新闻重复"] : [],
+      shortageReason: finalExternalCount ? "已穷尽国内来源，符合时效和去重要求的候选不足" : "",
+      finalChinaCount,
+      finalExternalCount
+    };
+  };
+  return {
+    date: brief.date,
+    sourcePolicyVersion: SOURCE_POLICY_VERSION,
+    categories: {
+      domestic: entry(brief.sections.domestic, generalSources),
+      international: entry(brief.sections.international, generalSources),
+      tech: entry(brief.sections.tech, technologySources),
+      ai: entry(brief.sections.ai, technologySources)
+    },
+    metrics: entry(brief.metrics, ["国内官方机构或交易所", "国内权威财经媒体"])
+  };
 }
 function assertThrows(callback, message) {
   let rejected = false;

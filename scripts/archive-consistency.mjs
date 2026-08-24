@@ -1,3 +1,5 @@
+import { SOURCE_POLICY_VERSION } from "./minsheng-lib.mjs";
+
 export const GAME_DUPLICATE_LIMITS = {
   features: 0,
   news: 2,
@@ -51,6 +53,9 @@ export function assertGamePublishCandidate(candidate, manifest, priorBriefs) {
 
 export function assertMinshengPublishCandidate(candidate, manifest, priorBriefs) {
   assertNextEdition(candidate, manifest, "民生日报");
+  if (candidate.sourcePolicyVersion !== SOURCE_POLICY_VERSION) {
+    throw new Error(`新发布民生日报 sourcePolicyVersion 必须为 ${SOURCE_POLICY_VERSION}`);
+  }
   for (const [field, value] of [["cutoff", candidate.cutoff], ["productionTime", candidate.productionTime]]) {
     assertFieldDate(value, candidate.date, `民生日报 ${field}`);
   }

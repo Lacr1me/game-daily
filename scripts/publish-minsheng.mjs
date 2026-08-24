@@ -1,7 +1,7 @@
 import { access, mkdir, readFile, rename, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { assertMinshengPublishCandidate } from "./archive-consistency.mjs";
-import { assertPublishTime, beijingDate, safePendingPath, validateMinsheng } from "./minsheng-lib.mjs";
+import { assertPublishTime, beijingDate, safePendingPath, validateMinsheng, validateMinshengSourceAudit } from "./minsheng-lib.mjs";
 
 const root = process.cwd();
 const date = beijingDate();
@@ -12,6 +12,13 @@ if (path.dirname(target) !== dataDir) throw new Error("拒绝发布到非预期�
 await access(pending).catch(() => { throw new Error(`${date} 民生日报草稿不存在，拒绝发布`); });
 const brief = JSON.parse(await readFile(pending, "utf8"));
 validateMinsheng(brief, { expectedDate: date });
+const auditDir = path.resolve(root, "artifacts", "operations");
+const auditPath = path.resolve(auditDir, `${date}-source-audit.json`);
+if (path.dirname(auditPath) !== auditDir) throw new Error("拒绝使用非预期来源审计路径");
+const sourceAudit = JSON.parse(await readFile(auditPath, "utf8").catch(() => {
+  throw new Error(`${date} 民生日报缺少来源审计，拒绝发布`);
+}));
+validateMinshengSourceAudit(brief, sourceAudit);
 assertPublishTime(date);
 await mkdir(dataDir, { recursive: true });
 

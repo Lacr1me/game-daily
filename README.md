@@ -100,4 +100,6 @@ node scripts/test-site.mjs
 - 国内金价、中国油价、国际油价和人民币兑美元／欧元／日元等数据
 - 今日观察、来源、检索截止和制作时间
 
+自 2026-08-25 起，新期次使用 `sourcePolicyVersion: 2`：每条新闻包含 `sourceOrigin`，每项数据包含 `source`、`sourceUrl` 和 `sourceOrigin`。四个新闻栏目分别优先由国内权威新闻媒体填满，国内来源不足时才用外网补足；网页会根据 `sourceOrigin` 自动在外网新闻和数据来源后显示“（来自于外网）”。新期次还必须提供 `artifacts/operations/YYYY-MM-DD-source-audit.json`，发布脚本会核对各栏国内来源尝试、可用候选数、缺口原因和最终国内／外网数量。旧期次继续按原结构兼容，不回写历史 JSON 或 PNG。
+
 网页不请求定位或天气服务，也不显示天气区域。
