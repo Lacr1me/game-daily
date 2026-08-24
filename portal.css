@@ -3,7 +3,9 @@
   --ink: #151412;
   --muted: #6f6b63;
   --red: #b51f24;
-  --blue: #1f5ea8;
+  --blue: #174a7e;
+  --blue-deep: #10375f;
+  --blue-highlight: #2a6fa8;
   --line: #d8d0c2;
   --white: #fffdf8;
 }
@@ -213,7 +215,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
   white-space: nowrap;
 }
 .civic-mark { background: var(--red); }
-.game-mark { background: var(--blue); }
+.game-mark { background: linear-gradient(112deg, var(--blue-deep), var(--blue) 56%, var(--blue-highlight)); }
+.channel-card.game::before { background: linear-gradient(90deg, var(--blue-deep), var(--blue-highlight)); }
+.channel-card.game .enter-link { background: linear-gradient(112deg, var(--blue-deep), var(--blue) 58%, var(--blue-highlight)); }
 .channel-description { min-height: 58px; margin: 0; color: var(--muted); font-size: 15px; line-height: 1.8; }
 .latest { margin: 28px 0 34px; padding: 25px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .latest time { color: var(--accent); font: 700 13px Consolas, monospace; }
