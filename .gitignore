@@ -3,6 +3,9 @@ artifacts/
 dist/
 .tools/
 data/.pending/
+supabase/.temp/
+supabase/.env
+supabase/.env.local
 *.url
 
 # Retained source exports are not part of the public website

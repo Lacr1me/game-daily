@@ -1,0 +1,7 @@
+project_id = "springhues-messages"
+
+[functions.submit-message]
+verify_jwt = false
+
+[functions.list-messages]
+verify_jwt = false

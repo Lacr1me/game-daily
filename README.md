@@ -19,6 +19,38 @@ node scripts/serve.mjs
 
 然后访问 `http://localhost:4173`。构建产物位于 `dist/`，只包含公开网页和已发布数据，不包含 `data/.pending/` 草稿。
 
+## 留言系统配置
+
+首页快捷留言与 `/messages/` 留言簿使用 Supabase Postgres、两个 Edge Function 和 Cloudflare Turnstile。仓库默认将 `message-config.js` 留空，因此未配置服务时表单会安全禁用，不会把留言写到未知地址。
+
+1. 新建 Supabase 项目和 Cloudflare Turnstile Invisible Widget，把 `springhues.com` 与 `localhost` 加入允许主机。
+2. 安装并登录 Supabase CLI，然后关联项目并应用迁移：
+
+```powershell
+supabase login
+supabase link --project-ref <project-ref>
+supabase db push
+```
+
+3. 从 `supabase/.env.example` 创建未跟踪的 `supabase/.env`，填写 Turnstile secret、至少 32 字节的随机 `RATE_LIMIT_SECRET`、允许来源和主机；部署 secret 与函数：
+
+```powershell
+supabase secrets set --env-file supabase/.env
+supabase functions deploy submit-message
+supabase functions deploy list-messages
+```
+
+4. 在 `message-config.js` 只填写可公开的函数地址 `https://<project-ref>.supabase.co/functions/v1` 和 Turnstile site key。不得把 `SUPABASE_SERVICE_ROLE_KEY`、Turnstile secret 或限流 secret 写入前端或 Git。
+5. 留言提交后默认是 `pending`。在 Supabase Table Editor 的 `messages` 表中把 `status` 改为 `approved` 或 `rejected`；数据库触发器会自动设置或清除 `approved_at`，公开页面只读取 `approved`。
+
+留言功能的独立回归测试：
+
+```powershell
+node scripts/test-messages.mjs
+```
+
+正式开放前必须确保自定义域名 HTTPS 证书有效并强制 HTTPS。
+
 单独校验民生日报：
 
 ```powershell

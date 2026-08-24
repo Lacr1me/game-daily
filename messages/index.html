@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="../">
+  <meta name="theme-color" content="#f5f1e8">
+  <meta name="description" content="Springhues 每日简报留言簿。">
+  <title>留言簿 · 每日简报</title>
+  <link rel="icon" type="image/png" href="brand-assets/springhues-logo.png">
+  <link rel="stylesheet" href="portal.css?v=20260824-messages-v1">
+  <link rel="stylesheet" href="brand.css">
+  <link rel="stylesheet" href="messages/messages.css?v=20260824-messages-v1">
+</head>
+<body>
+  <div class="paper-grain" aria-hidden="true"></div>
+  <header class="portal-header shell">
+    <a class="portal-brand" href="./" aria-label="每日简报首页">
+      <span class="brand-logo" aria-hidden="true"><img src="brand-assets/springhues-logo.png" alt=""></span>
+      <span><b>每日简报</b><small>DAILY BRIEFING · 11:00</small></span>
+    </a>
+    <div class="header-actions">
+      <a class="message-nav active" href="messages/" aria-current="page">留言</a>
+      <p class="header-update"><span class="live-dot"></span><time id="beijingDate">北京时间</time></p>
+    </div>
+  </header>
+
+  <main class="messages-main shell">
+    <section class="messages-intro">
+      <p class="eyebrow">SPRINGHUES · MESSAGE BOARD</p>
+      <h1>留言簿</h1>
+      <p>写下你想说的话。所有留言都会先经过人工审核，批准后才会公开显示。</p>
+    </section>
+
+    <section class="message-compose" aria-labelledby="composeTitle">
+      <div class="compose-copy">
+        <p class="form-eyebrow">LEAVE A NOTE</p>
+        <h2 id="composeTitle">留下一句话</h2>
+        <p>昵称与正文均会公开；请勿填写电话号码、邮箱等私人信息。</p>
+      </div>
+      <form class="message-form" data-message-form novalidate>
+        <label>昵称 <span>1—20 字</span><input name="nickname" type="text" maxlength="20" autocomplete="nickname" required></label>
+        <label>留言 <span data-message-counter>0/300</span><textarea name="content" maxlength="300" rows="5" required></textarea></label>
+        <label class="honeypot" aria-hidden="true">网站<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+        <div class="turnstile-slot" data-turnstile aria-hidden="true"></div>
+        <div class="form-submit-row">
+          <p class="form-status" data-message-status role="status" aria-live="polite"></p>
+          <button type="submit">提交留言 <span aria-hidden="true">→</span></button>
+        </div>
+      </form>
+    </section>
+
+    <section class="message-feed" aria-labelledby="feedTitle">
+      <div class="feed-heading">
+        <div><p class="form-eyebrow">APPROVED MESSAGES</p><h2 id="feedTitle">已公开留言</h2></div>
+        <p>仅展示审核通过的内容</p>
+      </div>
+      <p class="feed-state" id="messageState" role="status" aria-live="polite">正在读取留言…</p>
+      <div class="message-list" id="messageList"></div>
+      <button class="load-more" id="loadMore" type="button" hidden>加载更多</button>
+    </section>
+  </main>
+
+  <footer class="shell"><span>每日简报</span><p>Asia/Shanghai · 公开留言均经过审核</p></footer>
+  <script type="module" src="messages/app.js?v=20260824-messages-v1"></script>
+</body>
+</html>

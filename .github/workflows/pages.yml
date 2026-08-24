@@ -28,7 +28,9 @@ jobs:
       - name: Rebuild embedded archive
         run: node scripts/build-embedded.mjs
       - name: Run full site tests
-        run: node scripts/test-site.mjs
+        run: |
+          node scripts/test-site.mjs
+          node scripts/test-messages.mjs
       - name: Build static site
         run: node scripts/build-site.mjs
       - name: Verify deployment artifact
