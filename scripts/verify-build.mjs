@@ -24,6 +24,9 @@ for (const edition of gameManifest.editions) {
   gameBriefs.push(brief);
 }
 for (const brief of gameBriefs) assertGameArchiveConsistency(brief, gameBriefs);
+for (const edition of gameManifest.editions) {
+  await assertPng(path.join(output, "downloads", "game", `${edition.date}.png`), `游戏日报 ${edition.date}`);
+}
 
 const civicBriefs = [];
 for (const edition of civicManifest.editions) {
@@ -33,6 +36,15 @@ for (const edition of civicManifest.editions) {
   civicBriefs.push(brief);
 }
 for (const brief of civicBriefs) assertMinshengArchiveConsistency(brief, civicBriefs);
+for (const edition of civicManifest.editions) {
+  await assertPng(path.join(output, "downloads", "minsheng", `${edition.date}.png`), `民生日报 ${edition.date}`);
+}
 console.log("构建产物验证通过：公开文件完整，草稿已排除，双频道归档数据有效。");
 
 async function readJson(file) { return JSON.parse(await readFile(file, "utf8")); }
+async function assertPng(file, label) {
+  const buffer = await readFile(file);
+  if (buffer.length <= 24) throw new Error(`${label} PNG 文件不能为空`);
+  if (!buffer.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]))) throw new Error(`${label} 必须是有效 PNG`);
+  if (buffer.readUInt32BE(16) !== 3840) throw new Error(`${label} PNG 宽度必须为 3840px`);
+}

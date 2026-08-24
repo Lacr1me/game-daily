@@ -18,6 +18,7 @@ await cp(path.join(root, "minsheng"), path.join(output, "minsheng"), { recursive
 await cp(path.join(root, "game-brief-assets"), path.join(output, "game-brief-assets"), { recursive: true });
 await cp(path.join(root, "brand-assets"), path.join(output, "brand-assets"), { recursive: true });
 await cp(path.join(root, "data"), path.join(output, "data"), { recursive: true });
+await cp(path.join(root, "downloads"), path.join(output, "downloads"), { recursive: true });
 await rm(path.join(output, "data", ".pending"), { recursive: true, force: true });
 await writeFile(path.join(output, ".nojekyll"), "", "utf8");
 console.log(`Built static site at ${output}`);

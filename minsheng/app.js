@@ -58,6 +58,10 @@ async function loadEdition(edition, scroll = true) {
 }
 
 function render(brief) {
+  const downloadPng = $("#downloadPng");
+  downloadPng.href = `../downloads/minsheng/${encodeURIComponent(brief.date)}.png`;
+  downloadPng.download = `${brief.date}-民生日报.png`;
+
   document.title = `${brief.date} 民生日报`;
   $("#navDate").textContent = brief.date;
   $("#editionDate").textContent = cnDate(brief.date);

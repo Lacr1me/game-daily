@@ -4,6 +4,50 @@
   text-decoration: none;
 }
 
+.download-section {
+  display: flex;
+  justify-content: center;
+  margin: 28px 0 0;
+}
+
+.download-button {
+  align-items: center;
+  background: var(--red, #c91d27);
+  border: 2px solid var(--red, #c91d27);
+  color: #fff;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 3px;
+  justify-content: center;
+  min-width: min(460px, 100%);
+  padding: 16px 28px 14px;
+  text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.download-button span {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.download-button small {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  opacity: 0.78;
+}
+
+.download-button:hover {
+  background: transparent;
+  color: var(--red, #c91d27);
+  transform: translateY(-2px);
+}
+
+.download-button:focus-visible {
+  outline: 3px solid #111;
+  outline-offset: 4px;
+}
+
 @media (max-width: 720px) {
   .news-column > header,
   .metrics-card > header {

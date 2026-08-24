@@ -67,6 +67,10 @@ async function loadBrief(edition) {
 }
 
 function render(brief) {
+  const downloadPng = $("#downloadPng");
+  downloadPng.href = `downloads/game/${encodeURIComponent(brief.date)}.png`;
+  downloadPng.download = `${brief.date}-游戏简报.png`;
+
   document.title = `${brief.date} 游戏方块日报`;
   $("#editionLabel").textContent = brief.backfilledAt
     ? `历史补档 · ${brief.date}`

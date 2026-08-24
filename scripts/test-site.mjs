@@ -42,6 +42,9 @@ for (const edition of civicManifest.editions) {
   civicBriefs.push(brief);
 }
 for (const brief of civicBriefs) assertMinshengArchiveConsistency(brief, civicBriefs);
+for (const edition of civicManifest.editions) {
+  await assertPng(path.join(root, "downloads", "minsheng", `${edition.date}.png`), `民生日报 ${edition.date}`);
+}
 
 const latestGame = gameManifest.editions[0];
 const game = await readJson(latestGame.file);
@@ -56,6 +59,9 @@ for (const edition of gameManifest.editions) {
   gameBriefs.push(brief);
 }
 for (const brief of gameBriefs) assertGameArchiveConsistency(brief, gameBriefs);
+for (const edition of gameManifest.editions) {
+  await assertPng(path.join(root, "downloads", "game", `${edition.date}.png`), `游戏日报 ${edition.date}`);
+}
 
 const copiedGame = structuredClone(game);
 copiedGame.date = nextIsoDate(game.date);
@@ -102,6 +108,7 @@ for (const id of ["domesticStories", "internationalStories", "techStories", "aiS
   assert(civicHtml.includes(`id="${id}"`), `页面缺少 ${id}`);
 }
 assert(civicHtml.includes('href="mobile-fix.css'), "民生日报必须加载移动端布局修复样式");
+assert(civicHtml.includes('id="downloadPng"') && civicHtml.includes("下载当天 PNG 原图"), "民生日报底部必须提供 PNG 原图下载按钮");
 const mobileCss = await readFile(path.join(root, "minsheng", "mobile-fix.css"), "utf8");
 assert(/position:\s*static/.test(mobileCss), "移动端栏目标题必须参与正常文档流，避免覆盖首条新闻");
 
@@ -115,6 +122,7 @@ for (const sharedHeaderClass of ["site-bar", "mini-brand", "archive-trigger"]) {
 }
 assert(gameHtml.includes('<a class="active" href="game/">游戏日报</a>'), "游戏日报页头必须标记游戏频道为当前频道");
 assert(gameHtml.includes('id="navDate"'), "游戏日报统一页头必须显示当前期次日期");
+assert(gameHtml.includes('id="downloadPng"') && gameHtml.includes("下载当天 PNG 原图"), "游戏日报底部必须提供 PNG 原图下载按钮");
 assert(gameHtml.includes('class="hero-logo-stage"') && gameHtml.includes('src="brand-assets/springhues-logo.png"'), "游戏日报首屏必须展示 Springhues Logo");
 assert(!gameHtml.includes('class="ticker"'), "游戏日报不得保留黑色滚动栏目条");
 assert(!gameHtml.includes(">报</span>") && !civicHtml.includes(">报</span>"), "双频道页头不得继续显示旧的报字标识");
@@ -133,9 +141,12 @@ for (const [name, app] of [["游戏", gameApp], ["民生", civicApp]]) {
   assert(app.includes('url.searchParams.set("date", date)'), `${name}归档链接必须携带所选日期`);
   assert(app.includes('dataUrl.searchParams.set("edition", edition.date)'), `${name}日报数据请求必须按期次刷新缓存`);
   assert(app.includes('date !== edition.date'), `${name}日报必须拒绝正文日期与索引不匹配`);
+  assert(app.includes("downloadPng.download"), `${name}日报必须按所选期次设置 PNG 下载文件名`);
 }
-assert(gameHtml.includes("app.js?v=20260824-archive-fix"), "游戏日报脚本必须使用归档修复缓存版本");
-assert(civicHtml.includes("app.js?v=20260824-archive-fix"), "民生日报脚本必须使用归档修复缓存版本");
+assert(gameApp.includes("downloads/game/${encodeURIComponent(brief.date)}.png"), "游戏日报下载按钮必须跟随所选归档日期");
+assert(civicApp.includes("downloads/minsheng/${encodeURIComponent(brief.date)}.png"), "民生日报下载按钮必须跟随所选归档日期");
+assert(gameHtml.includes("app.js?v=20260824-download-png"), "游戏日报脚本必须使用 PNG 下载缓存版本");
+assert(civicHtml.includes("app.js?v=20260824-download-png"), "民生日报脚本必须使用 PNG 下载缓存版本");
 
 for (const file of ["index.html", "game/index.html", "minsheng/index.html", "portal.js", "minsheng/app.js", "scripts/game-lib.mjs"]) {
   await access(path.join(root, file));
@@ -143,6 +154,12 @@ for (const file of ["index.html", "game/index.html", "minsheng/index.html", "por
 console.log(`站点测试通过：动态校验 ${latestCivic.date} 民生日报与 ${latestGame.date} 游戏日报，发布时间、完整结构和安全渲染均有效。`);
 
 async function readJson(file) { return JSON.parse(await readFile(path.join(root, file), "utf8")); }
+async function assertPng(file, label) {
+  const buffer = await readFile(file);
+  assert(buffer.length > 24, `${label} PNG 文件不能为空`);
+  assert(buffer.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10])), `${label} 必须是有效 PNG`);
+  assert(buffer.readUInt32BE(16) === 3840, `${label} PNG 宽度必须为 3840px`);
+}
 function assert(condition, message) { if (!condition) throw new Error(message); }
 function nextIsoDate(value) {
   const date = new Date(`${value}T00:00:00Z`);
