@@ -4,6 +4,14 @@
   "publishAt": "11:00",
   "editions": [
     {
+      "date": "2026-08-24",
+      "issue": 3,
+      "publishAt": "2026-08-24T11:00:00+08:00",
+      "title": "民生日报 · 每日35条精选新闻",
+      "headline": "广西防汛救灾工作组赴重点地区指导",
+      "file": "data/minsheng/2026-08-24.json"
+    },
+    {
       "date": "2026-08-23",
       "issue": 2,
       "publishAt": "2026-08-23T11:00:00+08:00",

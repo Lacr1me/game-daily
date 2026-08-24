@@ -58,10 +58,10 @@ for (const edition of gameManifest.editions) {
 for (const brief of gameBriefs) assertGameArchiveConsistency(brief, gameBriefs);
 
 const copiedGame = structuredClone(game);
-copiedGame.date = "2026-08-24";
+copiedGame.date = nextIsoDate(game.date);
 assertThrows(() => assertGameArchiveConsistency(copiedGame, gameBriefs), "复制上一期的游戏日报必须被拒绝");
 const copiedCivic = structuredClone(civic);
-copiedCivic.date = "2026-08-24";
+copiedCivic.date = nextIsoDate(civic.date);
 assertThrows(() => assertMinshengArchiveConsistency(copiedCivic, civicBriefs), "复制上一期的民生日报必须被拒绝");
 
 assertThrows(() => assertGamePublishTime("2026-08-24", new Date("2026-08-24T10:59:59+08:00")), "游戏日报必须拒绝11:00前发布");
@@ -144,6 +144,11 @@ console.log(`站点测试通过：动态校验 ${latestCivic.date} 民生日报�
 
 async function readJson(file) { return JSON.parse(await readFile(path.join(root, file), "utf8")); }
 function assert(condition, message) { if (!condition) throw new Error(message); }
+function nextIsoDate(value) {
+  const date = new Date(`${value}T00:00:00Z`);
+  date.setUTCDate(date.getUTCDate() + 1);
+  return date.toISOString().slice(0, 10);
+}
 function assertThrows(callback, message) {
   let rejected = false;
   try { callback(); } catch { rejected = true; }
