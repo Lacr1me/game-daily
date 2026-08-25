@@ -258,16 +258,21 @@ function createLogCard(item) {
   badge.className = `log-status-badge ${item.status}`;
   badge.textContent = logStatusLabel(item.status);
   identity.append(title, time);
-  header.append(identity, badge);
+  header.append(identity);
+  if (item.kind === "maintenance") header.append(badge);
 
   const summary = document.createElement("p");
   summary.className = "admin-log-summary";
   summary.textContent = item.summary;
 
-  const source = document.createElement("p");
-  source.className = "admin-log-source";
-  source.textContent = `来源：${sourceLabel(item.source)}`;
-  article.append(header, summary, source);
+  article.append(header, summary);
+
+  if (item.kind === "maintenance") {
+    const source = document.createElement("p");
+    source.className = "admin-log-source";
+    source.textContent = `来源：${sourceLabel(item.source)}`;
+    article.append(source);
+  }
 
   if (item.kind === "maintenance" && item.metadata && Object.keys(item.metadata).length) {
     const details = document.createElement("details");

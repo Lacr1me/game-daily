@@ -32,7 +32,8 @@ assert(!JSON.stringify(metadata).includes("must-not-survive"));
 
 const sections = parseDatedMarkdown("# 日志\n## 2026-08-25｜更新\n- 第一项\n## 当前状态\n- 不得并入\n");
 assert.equal(sections.length, 1);
-assert.equal(sections[0].summary, "第一项");
+assert.equal(sections[0].title, "2026-08-25｜更新");
+assert.equal(sections[0].summary, "• 第一项");
 
 const importFixture = await mkdtemp(path.join(os.tmpdir(), "springhues-admin-log-test-"));
 try {
@@ -52,8 +53,8 @@ try {
   ].join("\n"), "utf8");
   const imported = await collectImportedWebsiteChanges(importFixture);
   assert.equal(imported.length, 3);
-  assert(imported.every((item) => item.kind === "website_change" && item.sourceKey.startsWith("import:website_change:")));
-  assert(imported.find((item) => item.metadata.date === "2026-08-25").summary.includes("民生日报界面"));
+  assert(imported.every((item) => item.kind === "website_change" && item.sourceKey === `website_change:${item.metadata.date}`));
+  assert(imported.find((item) => item.metadata.date === "2026-08-25").summary.includes("旧摘要"));
   assert(!imported.some((item) => item.summary.includes("不得导入")));
 } finally {
   await rm(importFixture, { recursive: true, force: true });
@@ -108,9 +109,12 @@ try {
 const gitItem = await collectGitWebsiteChange(root, "HEAD");
 assert.equal(gitItem.kind, "website_change");
 assert.equal(gitItem.status, "success");
-assert.match(gitItem.sourceKey, /^git:[0-9a-f]{40}:website_change$/u);
+assert.equal(gitItem.sourceKey, `website_change:${gitItem.metadata.date}`);
+assert.match(gitItem.title, /^\d{4}-\d{2}-\d{2}｜/u);
+assert(gitItem.summary.startsWith("• "));
 
 const migration = await read("supabase/migrations/202608250002_create_admin_logs.sql");
+const dailyMigration = await read("supabase/migrations/202608250003_consolidate_daily_website_logs.sql");
 const edgeFunction = await read("supabase/functions/manage-admin-logs/index.ts");
 const supabaseConfig = await read("supabase/config.toml");
 const adminHtml = await read("admin/messages/index.html");
@@ -122,9 +126,12 @@ assert(migration.includes("create table public.admin_logs") && migration.include
 assert(migration.includes("revoke all on table public.admin_logs from public, anon, authenticated"));
 assert(migration.includes("unique check") && migration.includes("on conflict (source_key) do update"));
 assert(migration.includes("grant execute on function public.list_admin_logs_internal") && migration.includes("grant execute on function public.upsert_admin_logs_internal"));
+assert(dailyMigration.includes("admin_logs_website_change_beijing_day_unique"));
+assert(dailyMigration.includes("position > 1") && dailyMigration.includes("website_change:"));
 assert(edgeFunction.includes("MESSAGE_ADMIN_USER_IDS") && edgeFunction.includes("ADMIN_LOG_SYNC_SECRET"));
 assert(edgeFunction.includes('request.method === "GET"') && edgeFunction.includes('request.method === "POST"'));
 assert(edgeFunction.includes("INVALID_SYNC_SECRET") && edgeFunction.includes("upsert_admin_logs_internal"));
+assert(edgeFunction.includes('sourceKey !== `website_change:${beijingDate(occurredAt)}`'));
 assert(!/sourceKey:\s*item\.source_key/u.test(edgeFunction), "读取接口不得返回内部 source_key");
 assert(supabaseConfig.includes("[functions.manage-admin-logs]") && supabaseConfig.includes("verify_jwt = false"));
 
@@ -132,6 +139,7 @@ assert(adminHtml.includes('role="tablist"') && adminHtml.includes('id="websiteCh
 assert(adminHtml.includes('id="messagesTab" class="active"') && adminHtml.includes('aria-selected="true"'));
 assert(adminApp.includes('activateTab("messages"') && adminApp.includes("!logStates[name].loaded"));
 assert(adminApp.includes("createLogCard") && adminApp.includes("content.textContent = JSON.stringify"));
+assert(adminApp.includes('if (item.kind === "maintenance") header.append(badge)'));
 assert(!/\.innerHTML\s*=/u.test(adminApp), "管理员日志必须使用纯文本 DOM 渲染");
 assert(adminClient.includes("export class AdminLogsApi") && adminClient.includes("/manage-admin-logs"));
 assert(!/新增日志|编辑日志|删除日志/u.test(adminHtml), "日志面板不得提供写操作");

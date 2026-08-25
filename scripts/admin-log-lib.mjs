@@ -74,25 +74,54 @@ export function normalizeLogItem(item) {
 
 export async function collectGitWebsiteChange(root, revision = "HEAD") {
   const format = "%H%x00%cI%x00%s%x00%b";
-  const [{ stdout: details }, { stdout: changed }] = await Promise.all([
-    execFileAsync("git", ["show", "-s", `--format=${format}`, revision], { cwd: root, encoding: "utf8" }),
-    execFileAsync("git", ["diff-tree", "--no-commit-id", "--name-only", "-r", revision], { cwd: root, encoding: "utf8" })
+  const { stdout: details } = await execFileAsync("git", ["show", "-s", `--format=${format}`, revision], { cwd: root, encoding: "utf8" });
+  const [commit, occurredAt] = details.trimEnd().split("\0");
+  const date = beijingDate(occurredAt);
+  const [{ stdout: changed }, history] = await Promise.all([
+    execFileAsync("git", ["diff-tree", "--no-commit-id", "--name-only", "-r", revision], { cwd: root, encoding: "utf8" }),
+    readWebsiteHistory(root)
   ]);
-  const [commit, occurredAt, subject, body = ""] = details.trimEnd().split("\0");
   const files = changed.split(/\r?\n/u).map((item) => item.trim()).filter(Boolean);
   const areas = classifyAreas(files);
-  const bodySummary = body.split(/\r?\n/u).map((line) => line.trim()).filter(Boolean).join(" ");
-  const summary = bodySummary || (areas.length ? `涉及：${areas.join("、")}。` : "网站部署内容更新。");
+  const section = history.find((item) => item.date === date);
+  const latestSummary = describeWebsiteAreas(areas);
+  const summaryParts = section?.summary ? [section.summary] : [];
+  if (latestSummary && !summaryParts.some((item) => item.includes(latestSummary))) {
+    summaryParts.push(`• 最新同步：${latestSummary}`);
+  }
+  const summary = summaryParts.join("\n") || "• 网站部署内容已更新。";
   return normalizeLogItem({
     kind: "website_change",
     occurredAt,
-    title: subject,
+    title: section?.title || `${date}｜网站修改`,
     summary,
     status: "success",
     source: "github_pages",
-    sourceKey: `git:${commit}:website_change`,
-    metadata: { commit: commit.slice(0, 12), areas }
+    sourceKey: `website_change:${date}`,
+    metadata: { date, commit: commit.slice(0, 12), areas }
   });
+}
+
+async function readWebsiteHistory(root) {
+  try {
+    return parseDatedMarkdown(await readFile(path.join(root, "docs", "website-change-history.md"), "utf8"));
+  } catch (error) {
+    if (error.code === "ENOENT") return [];
+    throw error;
+  }
+}
+
+function describeWebsiteAreas(areas) {
+  const descriptions = {
+    "管理员与留言": "完善管理员后台与留言功能",
+    "民生日报": "更新民生日报",
+    "游戏日报": "更新游戏日报",
+    "网站首页与品牌": "优化网站首页与品牌内容",
+    "发布与维护流程": "优化发布与维护流程",
+    "日报数据与下载": "更新日报数据与下载内容",
+    "项目文档": "补充项目文档"
+  };
+  return areas.map((area) => descriptions[area]).filter(Boolean).join("；");
 }
 
 function classifyAreas(files) {
@@ -111,8 +140,8 @@ function classifyAreas(files) {
 
 export async function collectImportedWebsiteChanges(root) {
   const candidates = [
-    path.join(root, "docs", "website-change-history.md"),
-    path.join(root, "docs", "2026-08-25-website-change-log.md")
+    path.join(root, "docs", "2026-08-25-website-change-log.md"),
+    path.join(root, "docs", "website-change-history.md")
   ];
   const byDate = new Map();
   for (const file of candidates) {
@@ -135,7 +164,7 @@ export async function collectImportedWebsiteChanges(root) {
     summary: section.summary,
     status: "success",
     source: "initial_import",
-    sourceKey: `import:website_change:${section.date}`,
+    sourceKey: `website_change:${section.date}`,
     metadata: { date: section.date }
   }));
 }
@@ -148,7 +177,7 @@ export function parseDatedMarkdown(markdown) {
     const heading = line.match(/^##\s+(\d{4}-\d{2}-\d{2})(?:｜(.*))?\s*$/u);
     if (heading) {
       if (current) sections.push(finalizeSection(current));
-      current = { date: heading[1], title: heading[2]?.trim() || `${heading[1]} 网站修改`, bullets: [] };
+      current = { date: heading[1], title: heading[2]?.trim() || "网站修改", bullets: [] };
     } else if (/^##\s+/u.test(line)) {
       if (current) sections.push(finalizeSection(current));
       current = null;
@@ -166,11 +195,19 @@ function parseDailyMarkdown(markdown, date) {
     else if (/^##\s+/u.test(line)) include = false;
     else if (include && /^\s*-\s+/u.test(line)) bullets.push(line.replace(/^\s*-\s+/u, "").replace(/\*\*/gu, "").trim());
   }
-  return bullets.length ? [{ date, title: `${date} 网站修改`, summary: bullets.join("；") }] : [];
+  return bullets.length ? [{
+    date,
+    title: `${date}｜网站修改`,
+    summary: bullets.map((item) => `• ${item}`).join("\n")
+  }] : [];
 }
 
 function finalizeSection(section) {
-  return { date: section.date, title: section.title, summary: section.bullets.join("；") };
+  return {
+    date: section.date,
+    title: `${section.date}｜${section.title}`,
+    summary: section.bullets.map((item) => `• ${item}`).join("\n")
+  };
 }
 
 export async function collectMaintenanceLogs(root, { date = "" } = {}) {

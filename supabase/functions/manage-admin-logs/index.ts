@@ -122,6 +122,8 @@ function validateItems(body) {
     if (!LOG_KINDS.has(item.kind) || !LOG_STATUSES.has(item.status)) throw new Error("INVALID_ITEM");
     if (!Number.isFinite(Date.parse(occurredAt))) throw new Error("INVALID_ITEM");
     if (!metadata || typeof metadata !== "object" || Array.isArray(metadata)) throw new Error("INVALID_ITEM");
+    const sourceKey = cleanString(item.sourceKey, 300);
+    if (item.kind === "website_change" && sourceKey !== `website_change:${beijingDate(occurredAt)}`) throw new Error("INVALID_ITEM");
     return {
       kind: item.kind,
       occurred_at: new Date(occurredAt).toISOString(),
@@ -129,10 +131,21 @@ function validateItems(body) {
       summary: cleanString(item.summary, 2000),
       status: item.status,
       source: cleanString(item.source, 80),
-      source_key: cleanString(item.sourceKey, 300),
+      source_key: sourceKey,
       metadata
     };
   });
+}
+
+function beijingDate(value) {
+  const parts = new Intl.DateTimeFormat("en", {
+    timeZone: "Asia/Shanghai",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).formatToParts(new Date(value));
+  const values = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+  return `${values.year}-${values.month}-${values.day}`;
 }
 
 function cleanString(value, maximum) {

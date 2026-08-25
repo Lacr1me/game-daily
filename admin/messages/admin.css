@@ -16,7 +16,7 @@
 .dashboard-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; padding-bottom: 28px; border-bottom: 1px solid var(--line); }
 .session-actions { display: flex; align-items: center; gap: 16px; color: var(--muted); font-size: 12px; }
 .session-actions button { padding: 9px 13px; border: 1px solid var(--line); background: transparent; color: var(--ink); cursor: pointer; }
-.admin-tabs { display: flex; gap: 8px; margin-top: 28px; overflow-x: auto; border-bottom: 1px solid var(--line); scrollbar-width: thin; }
+.admin-tabs { display: flex; gap: 8px; margin-top: 28px; border-bottom: 1px solid var(--line); }
 .admin-tabs button { flex: 0 0 auto; margin-bottom: -1px; padding: 14px 18px; border: 1px solid transparent; border-bottom-color: var(--line); background: transparent; color: var(--muted); cursor: pointer; font-weight: 800; }
 .admin-tabs button.active { border-color: var(--line); border-bottom-color: var(--paper); color: var(--red); }
 .admin-tabs button:focus-visible { outline: 2px solid var(--red); outline-offset: -3px; }
@@ -74,7 +74,8 @@
   .session-actions { width: 100%; justify-content: space-between; }
   .panel-heading { align-items: flex-start; flex-direction: column; gap: 10px; }
   .panel-heading > p { text-align: left; }
-  .admin-tabs { width: 100%; }
+  .admin-tabs { width: 100%; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; }
+  .admin-tabs::-webkit-scrollbar { display: none; }
   .admin-log-card { padding: 21px; }
   .admin-log-card header { flex-direction: column; }
   .admin-message-card { padding: 22px; }
