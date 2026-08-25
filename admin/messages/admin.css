@@ -28,9 +28,16 @@
 .filter-bar button { flex: 0 0 auto; padding: 10px 17px; border: 1px solid var(--line); border-radius: 99px; background: transparent; color: var(--muted); cursor: pointer; font-weight: 700; }
 .filter-bar button.active { border-color: var(--red); background: var(--red); color: #fff; }
 .queue-status { margin: 18px 0; }
+.log-date-nav { display: flex; align-items: center; gap: 8px; margin: 0 0 18px; padding: 12px; border: 1px solid var(--line); background: #fffdf87a; }
+.log-date-nav > button, .log-date-buttons button { min-height: 36px; padding: 0 12px; border: 1px solid var(--line); background: transparent; color: var(--muted); cursor: pointer; font-size: 12px; font-weight: 800; white-space: nowrap; }
+.log-date-nav > button:disabled { cursor: default; opacity: .35; }
+.log-date-buttons { display: flex; flex: 1 1 auto; flex-wrap: wrap; justify-content: center; gap: 6px; min-width: 0; }
+.log-date-buttons button.active { border-color: var(--red); background: var(--red); color: #fff; }
+.log-date-nav button:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
 .admin-message-list { display: grid; gap: 18px; }
 .admin-log-list { display: grid; gap: 14px; }
 .admin-log-card { padding: 24px 26px; border: 1px solid var(--line); background: #fffdf8cc; }
+.admin-log-card:focus { outline: 2px solid var(--red); outline-offset: 3px; }
 .admin-log-card header { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
 .admin-log-card h3 { margin: 0; font: 800 21px/1.4 "SimSun", "Songti SC", serif; overflow-wrap: anywhere; }
 .admin-log-card time { display: block; margin-top: 6px; color: var(--muted); font: 11px Consolas, monospace; }
@@ -40,6 +47,8 @@
 .log-status-badge.warning { background: #8b69141a; color: #80600d; }
 .log-status-badge.failure { background: #b51f2415; color: var(--red); }
 .admin-log-summary { margin: 20px 0 14px; padding-top: 17px; border-top: 1px solid var(--line); white-space: pre-wrap; overflow-wrap: anywhere; font-size: 14px; line-height: 1.8; }
+.admin-log-items { display: grid; gap: 7px; margin: 20px 0 0; padding: 17px 0 0 18px; border-top: 1px solid var(--line); font-size: 14px; line-height: 1.8; }
+.admin-log-items li { padding-left: 2px; overflow-wrap: anywhere; }
 .admin-log-source { margin: 0; color: var(--muted); font-size: 11px; }
 .admin-log-card details { margin-top: 16px; border-top: 1px dashed var(--line); }
 .admin-log-card details summary { padding-top: 14px; color: var(--ink); cursor: pointer; font-size: 12px; font-weight: 800; }
@@ -74,8 +83,12 @@
   .session-actions { width: 100%; justify-content: space-between; }
   .panel-heading { align-items: flex-start; flex-direction: column; gap: 10px; }
   .panel-heading > p { text-align: left; }
-  .admin-tabs { width: 100%; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; }
-  .admin-tabs::-webkit-scrollbar { display: none; }
+  .admin-tabs { width: 100%; flex-wrap: wrap; }
+  .admin-tabs button { flex: 1 1 auto; }
+  .log-date-nav { align-items: stretch; flex-wrap: wrap; }
+  .log-date-buttons { order: 2; flex-basis: 100%; justify-content: flex-start; }
+  .log-date-nav > button { flex: 1 1 0; }
+  .log-date-buttons button { flex: 1 1 calc(33.333% - 6px); }
   .admin-log-card { padding: 21px; }
   .admin-log-card header { flex-direction: column; }
   .admin-message-card { padding: 22px; }

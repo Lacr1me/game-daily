@@ -11,6 +11,50 @@ const METADATA_KEYS = new Set([
   "issue", "issues", "reasonCode", "reasonCodes", "warnings", "transport", "runKind",
   "runs", "id", "kind", "files", "directories", "width", "count", "commit", "areas"
 ]);
+const WEBSITE_AREAS = [
+  {
+    name: "管理员与留言",
+    title: "管理员",
+    description: "完善管理员后台、留言审核与权限相关功能。",
+    pattern: /^(?:admin\/messages\/|messages\/|message-|portal-messages\.js$|supabase\/)/u
+  },
+  {
+    name: "网站首页与品牌",
+    title: "首页品牌",
+    description: "优化网站首页、频道入口与品牌内容。",
+    pattern: /^(?:index\.html$|portal(?:\.|\/)|brand-assets\/|brand\.css$)/u
+  },
+  {
+    name: "民生日报",
+    title: "民生日报",
+    description: "更新民生日报页面、内容与下载产物。",
+    pattern: /^(?:minsheng\/|data\/minsheng\/|downloads\/minsheng\/)/u
+  },
+  {
+    name: "游戏日报",
+    title: "游戏日报",
+    description: "更新游戏日报页面、内容与下载产物。",
+    pattern: /^(?:game\/|game-brief-assets\/|data\/\d{4}-\d{2}-\d{2}\.json$|downloads\/game\/|app\.js$|styles\.css$)/u
+  },
+  {
+    name: "日报数据与下载",
+    title: "数据下载",
+    description: "更新日报数据、归档索引与下载内容。",
+    pattern: /^(?:data\/|downloads\/)/u
+  },
+  {
+    name: "发布与维护流程",
+    title: "发布流程",
+    description: "优化网站发布、自动化与维护流程。",
+    pattern: /^(?:scripts\/|\.github\/|config\/|README\.md$)/u
+  },
+  {
+    name: "项目文档",
+    title: "项目文档",
+    description: "更新网站修改记录与项目文档。",
+    pattern: /^docs\//u
+  }
+];
 
 export function sanitizeText(value, maximum = 2000) {
   let text = String(value ?? "")
@@ -73,69 +117,70 @@ export function normalizeLogItem(item) {
 }
 
 export async function collectGitWebsiteChange(root, revision = "HEAD") {
-  const format = "%H%x00%cI%x00%s%x00%b";
-  const { stdout: details } = await execFileAsync("git", ["show", "-s", `--format=${format}`, revision], { cwd: root, encoding: "utf8" });
-  const [commit, occurredAt] = details.trimEnd().split("\0");
-  const date = beijingDate(occurredAt);
-  const [{ stdout: changed }, history] = await Promise.all([
-    execFileAsync("git", ["diff-tree", "--no-commit-id", "--name-only", "-r", revision], { cwd: root, encoding: "utf8" }),
-    readWebsiteHistory(root)
-  ]);
-  const files = changed.split(/\r?\n/u).map((item) => item.trim()).filter(Boolean);
-  const areas = classifyAreas(files);
-  const section = history.find((item) => item.date === date);
-  const latestSummary = describeWebsiteAreas(areas);
-  const summaryParts = section?.summary ? [section.summary] : [];
-  if (latestSummary && !summaryParts.some((item) => item.includes(latestSummary))) {
-    summaryParts.push(`• 最新同步：${latestSummary}`);
-  }
-  const summary = summaryParts.join("\n") || "• 网站部署内容已更新。";
-  return normalizeLogItem({
-    kind: "website_change",
-    occurredAt,
-    title: section?.title || `${date}｜网站修改`,
-    summary,
-    status: "success",
-    source: "github_pages",
-    sourceKey: `website_change:${date}`,
-    metadata: { date, commit: commit.slice(0, 12), areas }
+  const { stdout } = await execFileAsync("git", ["show", "-s", "--format=%cI", revision], { cwd: root, encoding: "utf8" });
+  return collectDailyWebsiteChange(root, {
+    date: beijingDate(stdout.trim()),
+    revision,
+    source: "github_pages"
   });
 }
 
-async function readWebsiteHistory(root) {
-  try {
-    return parseDatedMarkdown(await readFile(path.join(root, "docs", "website-change-history.md"), "utf8"));
-  } catch (error) {
-    if (error.code === "ENOENT") return [];
-    throw error;
+export async function collectDailyWebsiteChange(root, {
+  date = beijingDate(new Date()),
+  revision = "HEAD",
+  source = "nightly_summary"
+} = {}) {
+  if (!/^\d{4}-\d{2}-\d{2}$/u.test(date) || Number.isNaN(Date.parse(`${date}T00:00:00+08:00`))) {
+    throw new Error(`日志日期无效：${date}`);
   }
-}
-
-function describeWebsiteAreas(areas) {
-  const descriptions = {
-    "管理员与留言": "完善管理员后台与留言功能",
-    "民生日报": "更新民生日报",
-    "游戏日报": "更新游戏日报",
-    "网站首页与品牌": "优化网站首页与品牌内容",
-    "发布与维护流程": "优化发布与维护流程",
-    "日报数据与下载": "更新日报数据与下载内容",
-    "项目文档": "补充项目文档"
-  };
-  return areas.map((area) => descriptions[area]).filter(Boolean).join("；");
+  const range = [
+    revision,
+    `--since=${date}T00:00:00+08:00`,
+    `--until=${date}T23:59:59+08:00`
+  ];
+  const [{ stdout: commitOutput }, { stdout: fileOutput }] = await Promise.all([
+    execFileAsync("git", ["log", ...range, "--format=%H%x00%cI"], { cwd: root, encoding: "utf8" }),
+    execFileAsync("git", ["log", ...range, "--name-only", "--pretty=format:"], { cwd: root, encoding: "utf8" })
+  ]);
+  const commits = commitOutput.split(/\r?\n/u).map((line) => {
+    const [commit, occurredAt] = line.split("\0");
+    return commit && occurredAt ? { commit, occurredAt } : null;
+  }).filter(Boolean);
+  const files = [...new Set(fileOutput.split(/\r?\n/u).map((item) => item.trim()).filter(Boolean))];
+  const areas = classifyAreas(files);
+  const latest = commits[0] || null;
+  const occurredAt = latest?.occurredAt || `${date}T23:50:00+08:00`;
+  const hasChanges = commits.length > 0;
+  return normalizeLogItem({
+    kind: "website_change",
+    occurredAt,
+    title: hasChanges ? websiteLogTitle(date, areas) : `${date}｜网站日志`,
+    summary: hasChanges
+      ? (areas.length ? areas.map((area) => `• ${area.description}`).join("\n") : "• 网站代码或配置已更新。")
+      : "• 当天无修改",
+    status: hasChanges ? "success" : "info",
+    source,
+    sourceKey: `website_change:${date}`,
+    metadata: {
+      date,
+      count: commits.length,
+      commit: latest?.commit?.slice(0, 12) || "",
+      areas: areas.map((area) => area.name)
+    }
+  });
 }
 
 function classifyAreas(files) {
-  const areas = new Set();
-  for (const file of files) {
-    if (/^admin\/messages\//u.test(file) || /^supabase\//u.test(file)) areas.add("管理员与留言");
-    else if (/^minsheng\//u.test(file)) areas.add("民生日报");
-    else if (/^game\//u.test(file)) areas.add("游戏日报");
-    else if (/^(index\.html|portal\.|brand-assets\/)/u.test(file)) areas.add("网站首页与品牌");
-    else if (/^(scripts|\.github)\//u.test(file)) areas.add("发布与维护流程");
-    else if (/^(data|downloads)\//u.test(file)) areas.add("日报数据与下载");
-    else if (/^docs\//u.test(file)) areas.add("项目文档");
-  }
-  return [...areas];
+  return WEBSITE_AREAS.filter((area) => files.some((file) => area.pattern.test(file)));
+}
+
+function websiteLogTitle(date, areas) {
+  if (!areas.length) return `${date}｜网站更新`;
+  const titles = areas.slice(0, 3).map((area) => area.title);
+  const subject = titles.length === 1
+    ? titles[0]
+    : `${titles.slice(0, -1).join("、")}与${titles.at(-1)}`;
+  return `${date}｜${subject}${areas.length > 3 ? "等" : ""}更新`;
 }
 
 export async function collectImportedWebsiteChanges(root) {

@@ -12,6 +12,12 @@ const filterBar = document.querySelector("#filterBar");
 const queueStatus = document.querySelector("#queueStatus");
 const list = document.querySelector("#adminMessageList");
 const loadMore = document.querySelector("#adminLoadMore");
+const websiteDateNav = document.querySelector("#websiteDateNav");
+const websiteDateLatest = document.querySelector("#websiteDateLatest");
+const websiteDateNewer = document.querySelector("#websiteDateNewer");
+const websiteDateOlder = document.querySelector("#websiteDateOlder");
+const websiteDateButtons = document.querySelector("#websiteDateButtons");
+const WEBSITE_LOG_PAGE_SIZE = 7;
 
 const configured = adminServiceConfigured();
 const auth = configured ? new AdminAuth(MESSAGE_CONFIG) : null;
@@ -20,10 +26,13 @@ const logsApi = configured ? new AdminLogsApi(MESSAGE_CONFIG, auth) : null;
 let activeStatus = "pending";
 let nextCursor = null;
 let loading = false;
+let messagesLoaded = false;
 const logStates = {
-  website: createLogState("website_change", "#websiteChangesPanel", "#websiteChangesStatus", "#websiteChangesList", "#websiteChangesLoadMore"),
+  website: createLogState("website_change", "#websiteChangesPanel", "#websiteChangesStatus", "#websiteChangesList"),
   maintenance: createLogState("maintenance", "#maintenancePanel", "#maintenanceStatus", "#maintenanceList", "#maintenanceLoadMore")
 };
+logStates.website.pages = [];
+logStates.website.pageIndex = -1;
 
 if (!configured) {
   loginForm.querySelector("button").disabled = true;
@@ -84,13 +93,21 @@ filterBar.addEventListener("click", (event) => {
 });
 
 loadMore.addEventListener("click", () => loadMessages());
+websiteDateLatest.addEventListener("click", () => {
+  if (logStates.website.pages.length) showWebsitePage(0);
+  else loadWebsitePage({ reset: true });
+});
+websiteDateNewer.addEventListener("click", () => {
+  if (logStates.website.pageIndex > 0) showWebsitePage(logStates.website.pageIndex - 1);
+});
+websiteDateOlder.addEventListener("click", () => loadOlderWebsitePage());
 
 async function openDashboard(session) {
   loginPanel.hidden = true;
   dashboard.hidden = false;
   sessionEmail.textContent = session.user.email || "管理员";
-  activateTab("messages", { load: false });
-  await loadMessages({ reset: true });
+  activateTab("website", { load: false });
+  await loadWebsitePage({ reset: true });
 }
 
 function showLogin(message = "") {
@@ -98,6 +115,7 @@ function showLogin(message = "") {
   loginPanel.hidden = false;
   list.replaceChildren();
   nextCursor = null;
+  messagesLoaded = false;
   for (const state of Object.values(logStates)) resetLogState(state);
   setStatus(loginStatus, message, message ? "success" : "");
 }
@@ -111,7 +129,10 @@ function activateTab(name, { load = true } = {}) {
     button.tabIndex = selected ? 0 : -1;
     document.querySelector(`#${button.getAttribute("aria-controls")}`).hidden = !selected;
   });
-  if (load && name !== "messages" && !logStates[name].loaded) loadLogs(logStates[name], { reset: true });
+  if (!load) return;
+  if (name === "messages" && !messagesLoaded) loadMessages({ reset: true });
+  else if (name === "website" && !logStates.website.loaded) loadWebsitePage({ reset: true });
+  else if (name === "maintenance" && !logStates.maintenance.loaded) loadLogs(logStates.maintenance, { reset: true });
 }
 
 async function loadMessages({ reset = false } = {}) {
@@ -127,6 +148,7 @@ async function loadMessages({ reset = false } = {}) {
     const result = await api.list({ status: activeStatus, cursor: nextCursor, limit: 20 });
     result.items.forEach((item) => list.append(createMessageCard(item)));
     nextCursor = result.nextCursor;
+    messagesLoaded = true;
     loadMore.hidden = !nextCursor;
     setStatus(queueStatus, list.children.length ? `共显示 ${list.children.length} 条留言` : "当前筛选下没有留言。", "success");
   } catch (error) {
@@ -196,12 +218,12 @@ function createLogState(kind, panelSelector, statusSelector, listSelector, loadM
     panel: document.querySelector(panelSelector),
     status: document.querySelector(statusSelector),
     list: document.querySelector(listSelector),
-    loadMore: document.querySelector(loadMoreSelector),
+    loadMore: loadMoreSelector ? document.querySelector(loadMoreSelector) : null,
     cursor: null,
     loading: false,
     loaded: false
   };
-  state.loadMore.addEventListener("click", () => loadLogs(state));
+  state.loadMore?.addEventListener("click", () => loadLogs(state));
   return state;
 }
 
@@ -210,7 +232,13 @@ function resetLogState(state) {
   state.cursor = null;
   state.loading = false;
   state.loaded = false;
-  state.loadMore.hidden = true;
+  if (state.loadMore) state.loadMore.hidden = true;
+  if (state.kind === "website_change") {
+    state.pages = [];
+    state.pageIndex = -1;
+    websiteDateButtons.replaceChildren();
+    websiteDateNav.hidden = true;
+  }
   setStatus(state.status, "", "");
 }
 
@@ -243,9 +271,106 @@ async function loadLogs(state, { reset = false } = {}) {
   }
 }
 
+async function loadWebsitePage({ reset = false, cursor = "" } = {}) {
+  const state = logStates.website;
+  if (state.loading) return;
+  state.loading = true;
+  setWebsiteNavigationBusy(true);
+  if (reset) {
+    state.list.replaceChildren();
+    state.pages = [];
+    state.pageIndex = -1;
+  }
+  setStatus(state.status, "正在读取日志…", "loading");
+  try {
+    const result = await logsApi.list({ kind: state.kind, cursor, limit: WEBSITE_LOG_PAGE_SIZE });
+    const page = { items: result.items, cursor, nextCursor: result.nextCursor };
+    if (reset) state.pages = [page];
+    else state.pages.push(page);
+    state.pageIndex = state.pages.length - 1;
+    state.loaded = true;
+    renderWebsitePage(page);
+  } catch (error) {
+    handleAdminError(error, state.status);
+    if (!(error instanceof AdminRequestError && error.status === 401)) websiteDateNav.hidden = false;
+  } finally {
+    state.loading = false;
+    setWebsiteNavigationBusy(false);
+  }
+}
+
+function loadOlderWebsitePage() {
+  const state = logStates.website;
+  if (state.loading || state.pageIndex < 0) return;
+  if (state.pageIndex < state.pages.length - 1) return showWebsitePage(state.pageIndex + 1);
+  const cursor = state.pages[state.pageIndex]?.nextCursor;
+  if (cursor) loadWebsitePage({ cursor });
+}
+
+function showWebsitePage(index) {
+  const state = logStates.website;
+  if (!state.pages[index]) return;
+  state.pageIndex = index;
+  renderWebsitePage(state.pages[index]);
+}
+
+function renderWebsitePage(page) {
+  const state = logStates.website;
+  state.list.replaceChildren();
+  websiteDateButtons.replaceChildren();
+  page.items.forEach((item, index) => {
+    const date = beijingDateKey(item.occurredAt);
+    state.list.append(createLogCard(item));
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = formatNavigationDate(date);
+    button.dataset.date = date;
+    button.setAttribute("aria-current", index === 0 ? "date" : "false");
+    button.classList.toggle("active", index === 0);
+    button.addEventListener("click", () => focusWebsiteLog(date, button));
+    websiteDateButtons.append(button);
+  });
+  websiteDateNav.hidden = page.items.length === 0;
+  websiteDateNewer.disabled = state.pageIndex === 0;
+  websiteDateLatest.disabled = state.pageIndex === 0;
+  websiteDateOlder.disabled = !page.nextCursor && state.pageIndex === state.pages.length - 1;
+  setStatus(
+    state.status,
+    page.items.length ? `第 ${state.pageIndex + 1} 批，共显示 ${page.items.length} 天日志` : "目前没有日志。",
+    "success"
+  );
+}
+
+function focusWebsiteLog(date, selectedButton) {
+  websiteDateButtons.querySelectorAll("button").forEach((button) => {
+    const selected = button === selectedButton;
+    button.classList.toggle("active", selected);
+    button.setAttribute("aria-current", selected ? "date" : "false");
+  });
+  const card = [...logStates.website.list.children].find((item) => item.dataset.logDate === date);
+  if (!card) return;
+  card.scrollIntoView({ behavior: "smooth", block: "start" });
+  card.focus({ preventScroll: true });
+}
+
+function setWebsiteNavigationBusy(busy) {
+  websiteDateNav.querySelectorAll("button").forEach((button) => { button.disabled = busy || button.disabled; });
+  if (!busy && logStates.website.pages.length) {
+    const page = logStates.website.pages[logStates.website.pageIndex];
+    websiteDateNewer.disabled = logStates.website.pageIndex === 0;
+    websiteDateLatest.disabled = logStates.website.pageIndex === 0;
+    websiteDateOlder.disabled = !page?.nextCursor && logStates.website.pageIndex === logStates.website.pages.length - 1;
+    websiteDateButtons.querySelectorAll("button").forEach((button) => { button.disabled = false; });
+  } else if (!busy) {
+    websiteDateLatest.disabled = false;
+  }
+}
+
 function createLogCard(item) {
   const article = document.createElement("article");
   article.className = "admin-log-card";
+  article.tabIndex = -1;
+  if (item.kind === "website_change") article.dataset.logDate = beijingDateKey(item.occurredAt);
 
   const header = document.createElement("header");
   const identity = document.createElement("div");
@@ -261,9 +386,9 @@ function createLogCard(item) {
   header.append(identity);
   if (item.kind === "maintenance") header.append(badge);
 
-  const summary = document.createElement("p");
-  summary.className = "admin-log-summary";
-  summary.textContent = item.summary;
+  const summary = item.kind === "website_change" ? createLogItemList(item.summary) : document.createElement("p");
+  summary.className = item.kind === "website_change" ? "admin-log-items" : "admin-log-summary";
+  if (item.kind !== "website_change") summary.textContent = item.summary;
 
   article.append(header, summary);
 
@@ -284,6 +409,19 @@ function createLogCard(item) {
     article.append(details);
   }
   return article;
+}
+
+function createLogItemList(value) {
+  const list = document.createElement("ul");
+  const items = String(value || "").split(/\r?\n/u)
+    .map((line) => line.replace(/^\s*[•*-]\s*/u, "").trim())
+    .filter(Boolean);
+  (items.length ? items : ["当天无修改"]).forEach((text) => {
+    const item = document.createElement("li");
+    item.textContent = text;
+    list.append(item);
+  });
+  return list;
 }
 
 function actionButton(label, variant, action, disabled = false) {
@@ -346,6 +484,7 @@ function logStatusLabel(status) {
 function sourceLabel(source) {
   return {
     github_pages: "网站部署",
+    nightly_summary: "夜间定稿",
     initial_import: "历史导入",
     health_check: "健康检查",
     daily_publish: "日报发布",
@@ -362,4 +501,17 @@ function formatBeijingTime(value) {
     timeZone: "Asia/Shanghai", year: "numeric", month: "long", day: "numeric",
     hour: "2-digit", minute: "2-digit", hour12: false
   }).format(new Date(value));
+}
+
+function beijingDateKey(value) {
+  const parts = new Intl.DateTimeFormat("en", {
+    timeZone: "Asia/Shanghai", year: "numeric", month: "2-digit", day: "2-digit"
+  }).formatToParts(new Date(value));
+  const values = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+  return `${values.year}-${values.month}-${values.day}`;
+}
+
+function formatNavigationDate(date) {
+  const [, month, day] = date.split("-");
+  return `${Number(month)}月${Number(day)}日`;
 }

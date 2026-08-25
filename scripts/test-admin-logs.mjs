@@ -1,8 +1,11 @@
 import assert from "node:assert/strict";
+import { execFile } from "node:child_process";
 import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
+import { promisify } from "node:util";
 import {
+  collectDailyWebsiteChange,
   collectGitWebsiteChange,
   collectImportedWebsiteChanges,
   collectMaintenanceLogs,
@@ -13,6 +16,7 @@ import {
 } from "./admin-log-lib.mjs";
 
 const root = process.cwd();
+const execFileAsync = promisify(execFile);
 
 const sanitized = sanitizeText("C:\\Users\\Admin\\secret.txt token=abc admin@example.com 192.168.1.9 Bearer xyz");
 assert(!sanitized.includes("Users\\Admin"));
@@ -113,6 +117,36 @@ assert.equal(gitItem.sourceKey, `website_change:${gitItem.metadata.date}`);
 assert.match(gitItem.title, /^\d{4}-\d{2}-\d{2}｜/u);
 assert(gitItem.summary.startsWith("• "));
 
+const gitFixture = await mkdtemp(path.join(os.tmpdir(), "springhues-daily-git-test-"));
+try {
+  await git(["init", "--initial-branch=main"]);
+  await git(["config", "user.name", "Springhues Test"]);
+  await git(["config", "user.email", "test@example.invalid"]);
+  await mkdir(path.join(gitFixture, "admin", "messages"), { recursive: true });
+  await writeFile(path.join(gitFixture, "admin", "messages", "first.js"), "export const first = true;\n", "utf8");
+  await git(["add", "."]);
+  await gitCommit("before Beijing midnight", "2026-08-25T15:59:00Z");
+  await mkdir(path.join(gitFixture, "minsheng"), { recursive: true });
+  await writeFile(path.join(gitFixture, "minsheng", "second.js"), "export const second = true;\n", "utf8");
+  await git(["add", "."]);
+  await gitCommit("after Beijing midnight", "2026-08-25T16:01:00Z");
+
+  const august25 = await collectDailyWebsiteChange(gitFixture, { date: "2026-08-25" });
+  assert.equal(august25.metadata.count, 1);
+  assert.deepEqual(august25.metadata.areas, ["管理员与留言"]);
+  assert(august25.summary.includes("管理员后台"));
+  const august26 = await collectDailyWebsiteChange(gitFixture, { date: "2026-08-26" });
+  assert.equal(august26.metadata.count, 1);
+  assert.deepEqual(august26.metadata.areas, ["民生日报"]);
+  const noChanges = await collectDailyWebsiteChange(gitFixture, { date: "2026-08-24" });
+  assert.equal(noChanges.status, "info");
+  assert.equal(noChanges.title, "2026-08-24｜网站日志");
+  assert.equal(noChanges.summary, "• 当天无修改");
+  assert.equal(noChanges.sourceKey, "website_change:2026-08-24");
+} finally {
+  await rm(gitFixture, { recursive: true, force: true });
+}
+
 const migration = await read("supabase/migrations/202608250002_create_admin_logs.sql");
 const dailyMigration = await read("supabase/migrations/202608250003_consolidate_daily_website_logs.sql");
 const edgeFunction = await read("supabase/functions/manage-admin-logs/index.ts");
@@ -121,6 +155,8 @@ const adminHtml = await read("admin/messages/index.html");
 const adminApp = await read("admin/messages/app.js");
 const adminClient = await read("admin/messages/client.js");
 const workflow = await read(".github/workflows/pages.yml");
+const nightlyWorkflow = await read(".github/workflows/admin-log-nightly.yml");
+const syncScript = await read("scripts/sync-admin-logs.mjs");
 
 assert(migration.includes("create table public.admin_logs") && migration.includes("enable row level security"));
 assert(migration.includes("revoke all on table public.admin_logs from public, anon, authenticated"));
@@ -136,17 +172,38 @@ assert(!/sourceKey:\s*item\.source_key/u.test(edgeFunction), "读取接口不得
 assert(supabaseConfig.includes("[functions.manage-admin-logs]") && supabaseConfig.includes("verify_jwt = false"));
 
 assert(adminHtml.includes('role="tablist"') && adminHtml.includes('id="websiteChangesPanel"') && adminHtml.includes('id="maintenancePanel"'));
-assert(adminHtml.includes('id="messagesTab" class="active"') && adminHtml.includes('aria-selected="true"'));
-assert(adminApp.includes('activateTab("messages"') && adminApp.includes("!logStates[name].loaded"));
+assert(adminHtml.includes('id="websiteChangesTab" class="active"') && adminHtml.includes('data-tab="website">日志</button>'));
+assert(adminHtml.includes('data-tab="maintenance">运维</button>') && adminHtml.includes('id="messagesPanel" role="tabpanel" aria-labelledby="messagesTab" hidden'));
+assert(adminHtml.includes('id="websiteDateNav"') && adminHtml.includes('id="websiteDateOlder"'));
+assert(!adminHtml.includes('id="websiteChangesLoadMore"'), "日志面板不得保留加载更多按钮");
+assert(adminApp.includes('activateTab("website"') && adminApp.includes("!messagesLoaded"));
 assert(adminApp.includes("createLogCard") && adminApp.includes("content.textContent = JSON.stringify"));
 assert(adminApp.includes('if (item.kind === "maintenance") header.append(badge)'));
+assert(adminApp.includes('document.createElement("ul")') && adminApp.includes('document.createElement("li")'));
+assert(adminApp.includes("WEBSITE_LOG_PAGE_SIZE = 7") && adminApp.includes("showWebsitePage"));
 assert(!/\.innerHTML\s*=/u.test(adminApp), "管理员日志必须使用纯文本 DOM 渲染");
 assert(adminClient.includes("export class AdminLogsApi") && adminClient.includes("/manage-admin-logs"));
 assert(!/新增日志|编辑日志|删除日志/u.test(adminHtml), "日志面板不得提供写操作");
 
 assert(workflow.indexOf("uses: actions/deploy-pages@v4") < workflow.indexOf("Sync deployed website change log"));
 assert(workflow.includes("continue-on-error: true") && workflow.includes("secrets.ADMIN_LOG_SYNC_SECRET"));
+assert(workflow.includes("fetch-depth: 0"), "部署同步必须读取完整 Git 历史");
+assert(nightlyWorkflow.includes('cron: "50 15 * * *"'));
+assert(nightlyWorkflow.includes("workflow_dispatch:") && nightlyWorkflow.includes("required: true"));
+assert(nightlyWorkflow.includes("date -u +%F") && nightlyWorkflow.includes("--daily-summary"));
+assert(nightlyWorkflow.includes("secrets.ADMIN_LOG_SYNC_SECRET") && !nightlyWorkflow.includes("SUPABASE_SERVICE_ROLE_KEY"));
+assert(syncScript.includes('args["daily-summary"]') && syncScript.includes("collectDailyWebsiteChange"));
 
 console.log("管理员日志测试通过：私有存储、鉴权接口、幂等同步、敏感字段清理、按需标签页和自动化挂接均有效。");
 
 async function read(file) { return readFile(path.join(root, file), "utf8"); }
+
+async function git(args, options = {}) {
+  return execFileAsync("git", args, { cwd: gitFixture, encoding: "utf8", ...options });
+}
+
+async function gitCommit(message, date) {
+  return git(["commit", "-m", message], {
+    env: { ...process.env, GIT_AUTHOR_DATE: date, GIT_COMMITTER_DATE: date }
+  });
+}

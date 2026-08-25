@@ -15,7 +15,7 @@
   <link rel="icon" type="image/png" href="brand-assets/springhues-logo.png">
   <link rel="stylesheet" href="portal.css?v=20260825-admin-v1">
   <link rel="stylesheet" href="brand.css">
-  <link rel="stylesheet" href="admin/messages/admin.css?v=20260825-admin-v2">
+  <link rel="stylesheet" href="admin/messages/admin.css?v=20260825-admin-v3">
 </head>
 <body>
   <div class="paper-grain" aria-hidden="true"></div>
@@ -47,26 +47,31 @@
       </div>
 
       <div class="admin-tabs" id="adminTabs" role="tablist" aria-label="管理员功能">
-        <button id="websiteChangesTab" type="button" role="tab" aria-selected="false" aria-controls="websiteChangesPanel" tabindex="-1" data-tab="website">网站修改</button>
-        <button id="maintenanceTab" type="button" role="tab" aria-selected="false" aria-controls="maintenancePanel" tabindex="-1" data-tab="maintenance">维护日志</button>
-        <button id="messagesTab" class="active" type="button" role="tab" aria-selected="true" aria-controls="messagesPanel" data-tab="messages">留言审核与回复</button>
+        <button id="websiteChangesTab" class="active" type="button" role="tab" aria-selected="true" aria-controls="websiteChangesPanel" data-tab="website">日志</button>
+        <button id="maintenanceTab" type="button" role="tab" aria-selected="false" aria-controls="maintenancePanel" tabindex="-1" data-tab="maintenance">运维</button>
+        <button id="messagesTab" type="button" role="tab" aria-selected="false" aria-controls="messagesPanel" tabindex="-1" data-tab="messages">留言审核与回复</button>
       </div>
 
-      <section class="admin-tab-panel" id="websiteChangesPanel" role="tabpanel" aria-labelledby="websiteChangesTab" hidden>
-        <div class="panel-heading"><div><p class="form-eyebrow">CHANGE HISTORY</p><h2>网站修改</h2></div><p>自动同步正式部署记录，仅供管理员查看。</p></div>
+      <section class="admin-tab-panel" id="websiteChangesPanel" role="tabpanel" aria-labelledby="websiteChangesTab">
+        <div class="panel-heading"><div><p class="form-eyebrow">CHANGE LOG</p><h2>日志</h2></div><p>自动汇总每日网站修改，仅供管理员查看。</p></div>
         <p class="admin-status queue-status" id="websiteChangesStatus" role="status" aria-live="polite"></p>
+        <nav class="log-date-nav" id="websiteDateNav" aria-label="按日期浏览日志" hidden>
+          <button id="websiteDateLatest" type="button">最新</button>
+          <button id="websiteDateNewer" type="button" disabled>较新</button>
+          <div class="log-date-buttons" id="websiteDateButtons"></div>
+          <button id="websiteDateOlder" type="button">更早</button>
+        </nav>
         <div class="admin-log-list" id="websiteChangesList"></div>
-        <button class="admin-load-more" id="websiteChangesLoadMore" type="button" hidden>加载更多</button>
       </section>
 
       <section class="admin-tab-panel" id="maintenancePanel" role="tabpanel" aria-labelledby="maintenanceTab" hidden>
-        <div class="panel-heading"><div><p class="form-eyebrow">OPERATIONS</p><h2>维护日志</h2></div><p>发布、健康检查、补跑、修正和本地产物维护记录。</p></div>
+        <div class="panel-heading"><div><p class="form-eyebrow">OPERATIONS</p><h2>运维</h2></div><p>发布、健康检查、补跑、修正和本地产物维护记录。</p></div>
         <p class="admin-status queue-status" id="maintenanceStatus" role="status" aria-live="polite"></p>
         <div class="admin-log-list" id="maintenanceList"></div>
         <button class="admin-load-more" id="maintenanceLoadMore" type="button" hidden>加载更多</button>
       </section>
 
-      <section class="admin-tab-panel" id="messagesPanel" role="tabpanel" aria-labelledby="messagesTab">
+      <section class="admin-tab-panel" id="messagesPanel" role="tabpanel" aria-labelledby="messagesTab" hidden>
         <div class="panel-heading"><div><p class="form-eyebrow">MODERATION QUEUE</p><h2>留言审核与回复</h2></div><p>保持原有审核、批准、拒绝与回复流程。</p></div>
         <div class="filter-bar" id="filterBar" role="group" aria-label="按审核状态筛选">
           <button class="active" type="button" data-status="pending">待审核</button>
@@ -81,6 +86,6 @@
     </section>
   </main>
 
-  <script type="module" src="admin/messages/app.js?v=20260825-admin-v2"></script>
+  <script type="module" src="admin/messages/app.js?v=20260825-admin-v3"></script>
 </body>
 </html>

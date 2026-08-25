@@ -1,6 +1,7 @@
 import process from "node:process";
 import { MESSAGE_CONFIG } from "../message-config.js";
 import {
+  collectDailyWebsiteChange,
   collectGitWebsiteChange,
   collectImportedWebsiteChanges,
   collectMaintenanceLogs,
@@ -23,7 +24,15 @@ if (args["record-cleanup"]) {
 const items = [];
 if (kind === "all" || kind === "website_change") {
   if (args["initial-import"]) items.push(...await collectImportedWebsiteChanges(root));
-  if (!args["initial-import"] || args.commit) items.push(await collectGitWebsiteChange(root, args.commit || "HEAD"));
+  if (args["daily-summary"]) {
+    items.push(await collectDailyWebsiteChange(root, {
+      date: args.date || undefined,
+      revision: args.commit || "HEAD",
+      source: "nightly_summary"
+    }));
+  } else if (!args["initial-import"] || args.commit) {
+    items.push(await collectGitWebsiteChange(root, args.commit || "HEAD"));
+  }
 }
 if (kind === "all" || kind === "maintenance") items.push(...await collectMaintenanceLogs(root, { date: args.date || "" }));
 

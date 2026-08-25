@@ -1,0 +1,51 @@
+name: Finalize Daily Admin Log
+
+on:
+  schedule:
+    - cron: "50 15 * * *"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: Beijing date to summarize (YYYY-MM-DD)
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: admin-log-nightly
+  cancel-in-progress: false
+
+jobs:
+  summarize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Test admin log generator
+        run: node scripts/test-admin-logs.mjs
+      - name: Select target Beijing date
+        id: target
+        shell: bash
+        env:
+          MANUAL_DATE: ${{ inputs.date }}
+        run: |
+          if [[ "${GITHUB_EVENT_NAME}" == "schedule" ]]; then
+            target_date="$(date -u +%F)"
+          else
+            target_date="${MANUAL_DATE}"
+          fi
+          if [[ ! "${target_date}" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+            echo "Invalid target date: ${target_date}" >&2
+            exit 1
+          fi
+          echo "date=${target_date}" >> "${GITHUB_OUTPUT}"
+      - name: Upload finalized daily log
+        env:
+          ADMIN_LOG_SYNC_SECRET: ${{ secrets.ADMIN_LOG_SYNC_SECRET }}
+        run: node scripts/sync-admin-logs.mjs --kind=website_change --daily-summary --date=${{ steps.target.outputs.date }} --push
