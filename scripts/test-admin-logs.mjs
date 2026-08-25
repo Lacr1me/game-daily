@@ -79,10 +79,31 @@ const cleanup = operationToLog("2026-08-25-local-cleanup.json", {
 assert.equal(cleanup.source, "local_cleanup");
 assert.equal(cleanup.summary, "已归档 2 个目录、18 个文件。");
 
-const maintenance = await collectMaintenanceLogs(root, { date: "2026-08-25" });
-assert(maintenance.some((item) => item.source === "health_check"));
-assert(maintenance.some((item) => item.source === "data_correction"));
-assert(maintenance.every((item) => !JSON.stringify(item.metadata).includes(`${root}\\`)));
+const maintenanceFixture = await mkdtemp(path.join(os.tmpdir(), "springhues-maintenance-log-test-"));
+try {
+  const operationsDirectory = path.join(maintenanceFixture, "artifacts", "operations");
+  await mkdir(operationsDirectory, { recursive: true });
+  await writeFile(path.join(operationsDirectory, "2026-08-25-health.json"), JSON.stringify({
+    date: "2026-08-25",
+    checkedAt: "2026-08-25T03:30:00Z",
+    healthy: true,
+    channels: { game: { valid: true }, minsheng: { valid: true } },
+    localPath: `${root}\\private`
+  }), "utf8");
+  await writeFile(path.join(operationsDirectory, "2026-08-25-run-state.json"), JSON.stringify({
+    date: "2026-08-25",
+    finishedAt: "2026-08-25T03:35:00Z",
+    stage: "published",
+    channels: { game: { published: true }, minsheng: { published: true } },
+    runs: [{ kind: "correction" }]
+  }), "utf8");
+  const maintenance = await collectMaintenanceLogs(maintenanceFixture, { date: "2026-08-25" });
+  assert(maintenance.some((item) => item.source === "health_check"));
+  assert(maintenance.some((item) => item.source === "data_correction"));
+  assert(maintenance.every((item) => !JSON.stringify(item.metadata).includes(`${root}\\`)));
+} finally {
+  await rm(maintenanceFixture, { recursive: true, force: true });
+}
 
 const gitItem = await collectGitWebsiteChange(root, "HEAD");
 assert.equal(gitItem.kind, "website_change");
