@@ -11,11 +11,11 @@
   <meta http-equiv="Expires" content="0">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://etkjbxfdwmhqmuyzpttq.supabase.co; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
   <meta name="theme-color" content="#f5f1e8">
-  <title>留言管理 · 每日简报</title>
+  <title>网站管理 · 每日简报</title>
   <link rel="icon" type="image/png" href="brand-assets/springhues-logo.png">
   <link rel="stylesheet" href="portal.css?v=20260825-admin-v1">
   <link rel="stylesheet" href="brand.css">
-  <link rel="stylesheet" href="admin/messages/admin.css?v=20260825-admin-v1">
+  <link rel="stylesheet" href="admin/messages/admin.css?v=20260825-admin-v2">
 </head>
 <body>
   <div class="paper-grain" aria-hidden="true"></div>
@@ -30,7 +30,7 @@
   <main class="admin-main shell">
     <section class="admin-login" id="loginPanel" aria-labelledby="loginTitle">
       <p class="form-eyebrow">PRIVATE CONSOLE</p>
-      <h1 id="loginTitle">留言管理</h1>
+      <h1 id="loginTitle">网站管理</h1>
       <p>使用已授权的 Supabase 管理员账号登录。</p>
       <form id="loginForm" class="login-form" novalidate>
         <label>邮箱<input name="email" type="email" autocomplete="username" required></label>
@@ -42,21 +42,45 @@
 
     <section class="admin-dashboard" id="dashboard" aria-labelledby="dashboardTitle" hidden>
       <div class="dashboard-heading">
-        <div><p class="form-eyebrow">MODERATION QUEUE</p><h1 id="dashboardTitle">审核与回复</h1></div>
+        <div><p class="form-eyebrow">PRIVATE CONSOLE</p><h1 id="dashboardTitle">网站管理</h1></div>
         <div class="session-actions"><span id="sessionEmail"></span><button id="logoutButton" type="button">退出登录</button></div>
       </div>
-      <div class="filter-bar" id="filterBar" role="group" aria-label="按审核状态筛选">
-        <button class="active" type="button" data-status="pending">待审核</button>
-        <button type="button" data-status="approved">已批准</button>
-        <button type="button" data-status="rejected">已拒绝</button>
-        <button type="button" data-status="all">全部</button>
+
+      <div class="admin-tabs" id="adminTabs" role="tablist" aria-label="管理员功能">
+        <button id="websiteChangesTab" type="button" role="tab" aria-selected="false" aria-controls="websiteChangesPanel" tabindex="-1" data-tab="website">网站修改</button>
+        <button id="maintenanceTab" type="button" role="tab" aria-selected="false" aria-controls="maintenancePanel" tabindex="-1" data-tab="maintenance">维护日志</button>
+        <button id="messagesTab" class="active" type="button" role="tab" aria-selected="true" aria-controls="messagesPanel" data-tab="messages">留言审核与回复</button>
       </div>
-      <p class="admin-status queue-status" id="queueStatus" role="status" aria-live="polite">正在读取审核队列…</p>
-      <div class="admin-message-list" id="adminMessageList"></div>
-      <button class="admin-load-more" id="adminLoadMore" type="button" hidden>加载更多</button>
+
+      <section class="admin-tab-panel" id="websiteChangesPanel" role="tabpanel" aria-labelledby="websiteChangesTab" hidden>
+        <div class="panel-heading"><div><p class="form-eyebrow">CHANGE HISTORY</p><h2>网站修改</h2></div><p>自动同步正式部署记录，仅供管理员查看。</p></div>
+        <p class="admin-status queue-status" id="websiteChangesStatus" role="status" aria-live="polite"></p>
+        <div class="admin-log-list" id="websiteChangesList"></div>
+        <button class="admin-load-more" id="websiteChangesLoadMore" type="button" hidden>加载更多</button>
+      </section>
+
+      <section class="admin-tab-panel" id="maintenancePanel" role="tabpanel" aria-labelledby="maintenanceTab" hidden>
+        <div class="panel-heading"><div><p class="form-eyebrow">OPERATIONS</p><h2>维护日志</h2></div><p>发布、健康检查、补跑、修正和本地产物维护记录。</p></div>
+        <p class="admin-status queue-status" id="maintenanceStatus" role="status" aria-live="polite"></p>
+        <div class="admin-log-list" id="maintenanceList"></div>
+        <button class="admin-load-more" id="maintenanceLoadMore" type="button" hidden>加载更多</button>
+      </section>
+
+      <section class="admin-tab-panel" id="messagesPanel" role="tabpanel" aria-labelledby="messagesTab">
+        <div class="panel-heading"><div><p class="form-eyebrow">MODERATION QUEUE</p><h2>留言审核与回复</h2></div><p>保持原有审核、批准、拒绝与回复流程。</p></div>
+        <div class="filter-bar" id="filterBar" role="group" aria-label="按审核状态筛选">
+          <button class="active" type="button" data-status="pending">待审核</button>
+          <button type="button" data-status="approved">已批准</button>
+          <button type="button" data-status="rejected">已拒绝</button>
+          <button type="button" data-status="all">全部</button>
+        </div>
+        <p class="admin-status queue-status" id="queueStatus" role="status" aria-live="polite">正在读取审核队列…</p>
+        <div class="admin-message-list" id="adminMessageList"></div>
+        <button class="admin-load-more" id="adminLoadMore" type="button" hidden>加载更多</button>
+      </section>
     </section>
   </main>
 
-  <script type="module" src="admin/messages/app.js?v=20260825-admin-v1"></script>
+  <script type="module" src="admin/messages/app.js?v=20260825-admin-v2"></script>
 </body>
 </html>

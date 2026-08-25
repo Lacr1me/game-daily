@@ -127,6 +127,21 @@ export class AdminMessagesApi {
   }
 }
 
+export class AdminLogsApi {
+  constructor(config, auth) {
+    this.endpoint = `${config.apiBaseUrl}/manage-admin-logs`;
+    this.auth = auth;
+  }
+
+  async list({ kind, cursor = "", limit = 20 } = {}) {
+    const url = new URL(this.endpoint);
+    url.searchParams.set("kind", kind);
+    url.searchParams.set("limit", String(Math.min(Math.max(limit, 1), 50)));
+    if (cursor) url.searchParams.set("cursor", cursor);
+    return parseResponse(await this.auth.authorizedFetch(url, { cache: "no-store" }));
+  }
+}
+
 async function parseResponse(response) {
   const data = await response.json().catch(() => null);
   if (!response.ok) {

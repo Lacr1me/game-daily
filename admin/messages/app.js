@@ -1,5 +1,5 @@
 import { adminServiceConfigured, MESSAGE_CONFIG } from "../../message-config.js";
-import { AdminAuth, AdminMessagesApi, AdminRequestError } from "./client.js";
+import { AdminAuth, AdminLogsApi, AdminMessagesApi, AdminRequestError } from "./client.js";
 
 const loginPanel = document.querySelector("#loginPanel");
 const loginForm = document.querySelector("#loginForm");
@@ -7,6 +7,7 @@ const loginStatus = document.querySelector("#loginStatus");
 const dashboard = document.querySelector("#dashboard");
 const sessionEmail = document.querySelector("#sessionEmail");
 const logoutButton = document.querySelector("#logoutButton");
+const adminTabs = document.querySelector("#adminTabs");
 const filterBar = document.querySelector("#filterBar");
 const queueStatus = document.querySelector("#queueStatus");
 const list = document.querySelector("#adminMessageList");
@@ -15,9 +16,14 @@ const loadMore = document.querySelector("#adminLoadMore");
 const configured = adminServiceConfigured();
 const auth = configured ? new AdminAuth(MESSAGE_CONFIG) : null;
 const api = configured ? new AdminMessagesApi(MESSAGE_CONFIG, auth) : null;
+const logsApi = configured ? new AdminLogsApi(MESSAGE_CONFIG, auth) : null;
 let activeStatus = "pending";
 let nextCursor = null;
 let loading = false;
+const logStates = {
+  website: createLogState("website_change", "#websiteChangesPanel", "#websiteChangesStatus", "#websiteChangesList", "#websiteChangesLoadMore"),
+  maintenance: createLogState("maintenance", "#maintenancePanel", "#maintenanceStatus", "#maintenanceList", "#maintenanceLoadMore")
+};
 
 if (!configured) {
   loginForm.querySelector("button").disabled = true;
@@ -51,6 +57,24 @@ logoutButton.addEventListener("click", async () => {
   logoutButton.disabled = false;
 });
 
+adminTabs.addEventListener("click", (event) => {
+  const button = event.target.closest("button[data-tab]");
+  if (button) activateTab(button.dataset.tab);
+});
+
+adminTabs.addEventListener("keydown", (event) => {
+  if (!new Set(["ArrowLeft", "ArrowRight", "Home", "End"]).has(event.key)) return;
+  const tabs = [...adminTabs.querySelectorAll('[role="tab"]')];
+  const current = tabs.indexOf(document.activeElement);
+  let next = current;
+  if (event.key === "Home") next = 0;
+  else if (event.key === "End") next = tabs.length - 1;
+  else next = (current + (event.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length;
+  event.preventDefault();
+  tabs[next].focus();
+  activateTab(tabs[next].dataset.tab);
+});
+
 filterBar.addEventListener("click", (event) => {
   const button = event.target.closest("button[data-status]");
   if (!button || button.dataset.status === activeStatus || loading) return;
@@ -65,6 +89,7 @@ async function openDashboard(session) {
   loginPanel.hidden = true;
   dashboard.hidden = false;
   sessionEmail.textContent = session.user.email || "管理员";
+  activateTab("messages", { load: false });
   await loadMessages({ reset: true });
 }
 
@@ -73,7 +98,20 @@ function showLogin(message = "") {
   loginPanel.hidden = false;
   list.replaceChildren();
   nextCursor = null;
+  for (const state of Object.values(logStates)) resetLogState(state);
   setStatus(loginStatus, message, message ? "success" : "");
+}
+
+function activateTab(name, { load = true } = {}) {
+  if (!new Set(["website", "maintenance", "messages"]).has(name)) return;
+  adminTabs.querySelectorAll("button[data-tab]").forEach((button) => {
+    const selected = button.dataset.tab === name;
+    button.classList.toggle("active", selected);
+    button.setAttribute("aria-selected", String(selected));
+    button.tabIndex = selected ? 0 : -1;
+    document.querySelector(`#${button.getAttribute("aria-controls")}`).hidden = !selected;
+  });
+  if (load && name !== "messages" && !logStates[name].loaded) loadLogs(logStates[name], { reset: true });
 }
 
 async function loadMessages({ reset = false } = {}) {
@@ -152,6 +190,97 @@ function createMessageCard(item) {
   return article;
 }
 
+function createLogState(kind, panelSelector, statusSelector, listSelector, loadMoreSelector) {
+  const state = {
+    kind,
+    panel: document.querySelector(panelSelector),
+    status: document.querySelector(statusSelector),
+    list: document.querySelector(listSelector),
+    loadMore: document.querySelector(loadMoreSelector),
+    cursor: null,
+    loading: false,
+    loaded: false
+  };
+  state.loadMore.addEventListener("click", () => loadLogs(state));
+  return state;
+}
+
+function resetLogState(state) {
+  state.list.replaceChildren();
+  state.cursor = null;
+  state.loading = false;
+  state.loaded = false;
+  state.loadMore.hidden = true;
+  setStatus(state.status, "", "");
+}
+
+async function loadLogs(state, { reset = false } = {}) {
+  if (state.loading) return;
+  state.loading = true;
+  state.loadMore.disabled = true;
+  if (reset) {
+    state.list.replaceChildren();
+    state.cursor = null;
+  }
+  setStatus(state.status, reset ? "正在读取日志…" : "正在读取更多日志…", "loading");
+  try {
+    const result = await logsApi.list({ kind: state.kind, cursor: state.cursor, limit: 20 });
+    result.items.forEach((item) => state.list.append(createLogCard(item)));
+    state.cursor = result.nextCursor;
+    state.loaded = true;
+    state.loadMore.textContent = "加载更多";
+    state.loadMore.hidden = !state.cursor;
+    setStatus(state.status, state.list.children.length ? `共显示 ${state.list.children.length} 条日志` : "目前没有日志。", "success");
+  } catch (error) {
+    handleAdminError(error, state.status);
+    if (!(error instanceof AdminRequestError && error.status === 401)) {
+      state.loadMore.textContent = "重试";
+      state.loadMore.hidden = false;
+    }
+  } finally {
+    state.loading = false;
+    state.loadMore.disabled = false;
+  }
+}
+
+function createLogCard(item) {
+  const article = document.createElement("article");
+  article.className = "admin-log-card";
+
+  const header = document.createElement("header");
+  const identity = document.createElement("div");
+  const title = document.createElement("h3");
+  const time = document.createElement("time");
+  const badge = document.createElement("span");
+  title.textContent = item.title;
+  time.dateTime = item.occurredAt;
+  time.textContent = formatBeijingTime(item.occurredAt);
+  badge.className = `log-status-badge ${item.status}`;
+  badge.textContent = logStatusLabel(item.status);
+  identity.append(title, time);
+  header.append(identity, badge);
+
+  const summary = document.createElement("p");
+  summary.className = "admin-log-summary";
+  summary.textContent = item.summary;
+
+  const source = document.createElement("p");
+  source.className = "admin-log-source";
+  source.textContent = `来源：${sourceLabel(item.source)}`;
+  article.append(header, summary, source);
+
+  if (item.kind === "maintenance" && item.metadata && Object.keys(item.metadata).length) {
+    const details = document.createElement("details");
+    const detailsTitle = document.createElement("summary");
+    const content = document.createElement("pre");
+    detailsTitle.textContent = "查看安全详情";
+    content.textContent = JSON.stringify(item.metadata, null, 2);
+    details.append(detailsTitle, content);
+    article.append(details);
+  }
+  return article;
+}
+
 function actionButton(label, variant, action, disabled = false) {
   const button = document.createElement("button");
   button.type = "button";
@@ -203,6 +332,24 @@ function setStatus(element, message, state) {
 
 function statusLabel(status) {
   return { pending: "待审核", approved: "已批准", rejected: "已拒绝" }[status] || status;
+}
+
+function logStatusLabel(status) {
+  return { info: "记录", success: "成功", warning: "警告", failure: "失败" }[status] || status;
+}
+
+function sourceLabel(source) {
+  return {
+    github_pages: "网站部署",
+    initial_import: "历史导入",
+    health_check: "健康检查",
+    daily_publish: "日报发布",
+    publish_readiness: "发布准备",
+    rerun: "失败补跑",
+    data_correction: "数据修正",
+    local_cleanup: "本地产物维护",
+    daily_operations: "日报维护"
+  }[source] || source;
 }
 
 function formatBeijingTime(value) {

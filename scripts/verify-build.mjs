@@ -48,6 +48,7 @@ const privacyHtml = await readFile(path.join(output, "privacy", "index.html"), "
 if (!portalHtml.includes('class="quick-message-link"') || portalHtml.includes("data-message-form")) throw new Error("首页必须只保留左对齐留言入口，不得包含快捷留言表单");
 if (!messageHtml.includes('id="messageList"') || !messageHtml.includes("data-message-form")) throw new Error("构建产物缺少完整留言页");
 if (!adminHtml.includes('name="robots" content="noindex,nofollow,noarchive"') || !adminHtml.includes('http-equiv="Cache-Control" content="no-store') || !adminHtml.includes('id="loginForm"')) throw new Error("构建产物缺少受保护且禁缓存的留言后台登录页");
+if (!adminHtml.includes('role="tablist"') || !adminHtml.includes('id="websiteChangesPanel"') || !adminHtml.includes('id="maintenancePanel"') || !adminHtml.includes('id="messagesTab" class="active"')) throw new Error("构建产物缺少默认留言审核的管理员三标签页");
 if (!gameHtml.includes('class="header-message-link" href="messages/"') || !minshengHtml.includes('class="header-message-link" href="../messages/"')) throw new Error("两个日报页头必须包含频道色留言按钮");
 if (!privacyHtml.includes("Turnstile Privacy Addendum") || !privacyHtml.includes("来源哈希")) throw new Error("构建产物缺少留言隐私说明");
 console.log("构建产物验证通过：公开文件完整，草稿已排除，双频道入口、留言回复与管理后台有效。");

@@ -16,11 +16,34 @@
 .dashboard-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; padding-bottom: 28px; border-bottom: 1px solid var(--line); }
 .session-actions { display: flex; align-items: center; gap: 16px; color: var(--muted); font-size: 12px; }
 .session-actions button { padding: 9px 13px; border: 1px solid var(--line); background: transparent; color: var(--ink); cursor: pointer; }
+.admin-tabs { display: flex; gap: 8px; margin-top: 28px; overflow-x: auto; border-bottom: 1px solid var(--line); scrollbar-width: thin; }
+.admin-tabs button { flex: 0 0 auto; margin-bottom: -1px; padding: 14px 18px; border: 1px solid transparent; border-bottom-color: var(--line); background: transparent; color: var(--muted); cursor: pointer; font-weight: 800; }
+.admin-tabs button.active { border-color: var(--line); border-bottom-color: var(--paper); color: var(--red); }
+.admin-tabs button:focus-visible { outline: 2px solid var(--red); outline-offset: -3px; }
+.admin-tab-panel { padding-top: 30px; }
+.panel-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 28px; margin-bottom: 22px; }
+.panel-heading h2 { margin: 0; font: 800 clamp(28px, 4vw, 42px)/1.15 "SimSun", "Songti SC", serif; }
+.panel-heading > p { max-width: 520px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; text-align: right; }
 .filter-bar { display: flex; gap: 10px; margin: 28px 0 18px; overflow-x: auto; }
 .filter-bar button { flex: 0 0 auto; padding: 10px 17px; border: 1px solid var(--line); border-radius: 99px; background: transparent; color: var(--muted); cursor: pointer; font-weight: 700; }
 .filter-bar button.active { border-color: var(--red); background: var(--red); color: #fff; }
 .queue-status { margin: 18px 0; }
 .admin-message-list { display: grid; gap: 18px; }
+.admin-log-list { display: grid; gap: 14px; }
+.admin-log-card { padding: 24px 26px; border: 1px solid var(--line); background: #fffdf8cc; }
+.admin-log-card header { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
+.admin-log-card h3 { margin: 0; font: 800 21px/1.4 "SimSun", "Songti SC", serif; overflow-wrap: anywhere; }
+.admin-log-card time { display: block; margin-top: 6px; color: var(--muted); font: 11px Consolas, monospace; }
+.log-status-badge { flex: 0 0 auto; padding: 6px 10px; border-radius: 99px; font-size: 11px; font-weight: 800; }
+.log-status-badge.info { background: #395a7a18; color: #395a7a; }
+.log-status-badge.success { background: #21734d1a; color: #21734d; }
+.log-status-badge.warning { background: #8b69141a; color: #80600d; }
+.log-status-badge.failure { background: #b51f2415; color: var(--red); }
+.admin-log-summary { margin: 20px 0 14px; padding-top: 17px; border-top: 1px solid var(--line); white-space: pre-wrap; overflow-wrap: anywhere; font-size: 14px; line-height: 1.8; }
+.admin-log-source { margin: 0; color: var(--muted); font-size: 11px; }
+.admin-log-card details { margin-top: 16px; border-top: 1px dashed var(--line); }
+.admin-log-card details summary { padding-top: 14px; color: var(--ink); cursor: pointer; font-size: 12px; font-weight: 800; }
+.admin-log-card pre { max-height: 320px; margin: 14px 0 0; padding: 14px; overflow: auto; background: #24242408; color: var(--muted); white-space: pre-wrap; overflow-wrap: anywhere; font: 11px/1.7 Consolas, monospace; }
 .admin-message-card { padding: 28px; border: 1px solid var(--line); background: #fffdf8cc; }
 .admin-message-card[aria-busy="true"] { opacity: .72; }
 .admin-message-card header { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
@@ -49,6 +72,11 @@
   .admin-login { padding: 28px 22px; }
   .dashboard-heading { align-items: flex-start; flex-direction: column; }
   .session-actions { width: 100%; justify-content: space-between; }
+  .panel-heading { align-items: flex-start; flex-direction: column; gap: 10px; }
+  .panel-heading > p { text-align: left; }
+  .admin-tabs { width: 100%; }
+  .admin-log-card { padding: 21px; }
+  .admin-log-card header { flex-direction: column; }
   .admin-message-card { padding: 22px; }
   .admin-message-card header { flex-direction: column; }
   .admin-card-actions button { flex: 1 1 calc(50% - 9px); }

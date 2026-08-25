@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { MESSAGE_LIMITS as browserLimits, MessageApi, MessageApiError, normalizeContent, normalizeNickname, validateMessage } from "../message-client.js";
-import { AdminAuth, AdminMessagesApi } from "../admin/messages/client.js";
+import { AdminAuth, AdminLogsApi, AdminMessagesApi } from "../admin/messages/client.js";
 import { MESSAGE_LIMITS as serverLimits, validateMessageInput, validateReplyInput } from "../supabase/functions/_shared/validation.js";
 
 const root = process.cwd();
@@ -76,6 +76,11 @@ assert.equal(adminUpdated.item.reply.content, "站方回复");
 const patchCall = adminCalls.find((call) => call.options.method === "PATCH");
 assert.equal(patchCall.options.headers["Content-Type"], "application/json");
 assert(patchCall.options.headers.Authorization.startsWith("Bearer "));
+const logsApi = new AdminLogsApi(adminConfig, adminAuth);
+await logsApi.list({ kind: "maintenance", cursor: "log-cursor", limit: 20 });
+const logCall = adminCalls.find((call) => call.url.includes("manage-admin-logs"));
+assert(logCall.url.includes("kind=maintenance") && logCall.url.includes("cursor=log-cursor"));
+assert.equal(logCall.options.cache, "no-store");
 
 const portalHtml = await read("index.html");
 const messageHtml = await read("messages/index.html");

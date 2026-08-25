@@ -32,6 +32,7 @@ jobs:
           node scripts/test-daily-operations.mjs
           node scripts/test-site.mjs
           node scripts/test-messages.mjs
+          node scripts/test-admin-logs.mjs
       - name: Build static site
         run: node scripts/build-site.mjs
       - name: Verify deployment artifact
@@ -43,3 +44,8 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Sync deployed website change log
+        continue-on-error: true
+        env:
+          ADMIN_LOG_SYNC_SECRET: ${{ secrets.ADMIN_LOG_SYNC_SECRET }}
+        run: node scripts/sync-admin-logs.mjs --kind=website_change --commit=${GITHUB_SHA} --push
