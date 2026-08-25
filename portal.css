@@ -142,7 +142,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 .update-chip span { color: var(--ink); font: 700 15px Consolas, monospace; }
 .update-chip i { width: 32px; height: 1px; background: var(--line); }
-.quick-message-cta { max-width: 620px; margin-top: 45px; }
+.quick-message-cta { max-width: 620px; margin-top: 45px; margin-left: 7px; }
 .form-eyebrow {
   margin: 0 0 8px;
   color: var(--red);
@@ -237,7 +237,7 @@ footer span { color: var(--ink); font: 700 16px "SimSun", serif; }
   .hero { display: block; padding: 55px 0 42px; }
   .eyebrow { margin-bottom: 25px; }
   .hero h1 { font-size: 52px; }
-  .quick-message-cta { margin-top: 38px; }
+  .quick-message-cta { margin-top: 38px; margin-left: 5px; }
   .hero-secondary { margin-top: 54px; }
   .hero-personal-logo { width: 136px; height: 136px; margin: -18px auto 10px; }
   .hero-copy { max-width: 520px; }
