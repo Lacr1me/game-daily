@@ -9,7 +9,6 @@ export const GAME_DUPLICATE_LIMITS = {
   news: 2,
   packs: 5,
   mods: 4,
-  deals: 16,
   trends: 1
 };
 
@@ -43,8 +42,8 @@ export function assertGamePublishCandidate(candidate, manifest, priorBriefs) {
   if (!candidate.dataWindow.includes(candidate.date) || !candidate.dataWindow.includes(previousDate)) {
     throw new Error(`游戏日报 dataWindow 必须同时包含 ${previousDate} 和 ${candidate.date}`);
   }
-  if (!Array.isArray(candidate.deals) || candidate.deals.length < GAME_DEAL_LIMITS.min || candidate.deals.length > GAME_DEAL_LIMITS.max) {
-    throw new Error(`新发布游戏日报的 Steam 优惠必须为 ${GAME_DEAL_LIMITS.min}—${GAME_DEAL_LIMITS.max} 款`);
+  if (!Array.isArray(candidate.deals) || candidate.deals.length < GAME_DEAL_LIMITS.min) {
+    throw new Error(`新发布游戏日报的 Steam 优惠至少需要 ${GAME_DEAL_LIMITS.min} 款，且不得截断当天已核验的合格优惠`);
   }
   for (const item of [...candidate.features, ...candidate.news, ...candidate.packs, ...candidate.deals]) {
     const basename = String(item.image || "").split("/").pop();

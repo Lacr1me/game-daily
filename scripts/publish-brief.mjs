@@ -1,7 +1,7 @@
 import { access, readFile, rename, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { assertGamePublishCandidate } from "./archive-consistency.mjs";
-import { assertReadyProof, assertResearchComplete, checkpointRunState } from "./daily-operations.mjs";
+import { assertGameDealCoverage, assertReadyProof, assertResearchComplete, checkpointRunState } from "./daily-operations.mjs";
 import { assertPublishTime, beijingDate, safePendingPath, validateGame } from "./game-lib.mjs";
 
 const date = beijingDate();
@@ -13,6 +13,7 @@ await access(pending).catch(() => { throw new Error(`${date} 草稿不存在，�
 const brief = JSON.parse(await readFile(pending,"utf8"));
 validateGame(brief, { expectedDate: date });
 await assertResearchComplete(root, date, "game");
+await assertGameDealCoverage(root, date, brief);
 await assertReadyProof(root, date, "game");
 assertPublishTime(date);
 

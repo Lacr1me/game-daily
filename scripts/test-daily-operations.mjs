@@ -1,7 +1,7 @@
 import { mkdtemp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
-import { acquireRunLease, appendResearchLedger, assertReadyProof, createReadyProof, initializeRunState, mergeSourceAudits, releaseRunLease, researchCompleteness } from "./daily-operations.mjs";
+import { acquireRunLease, appendResearchLedger, assertGameDealCoverage, assertReadyProof, createReadyProof, initializeRunState, mergeSourceAudits, releaseRunLease, researchCompleteness } from "./daily-operations.mjs";
 import { runDailyHealth } from "./check-daily-health.mjs";
 import { validateGame } from "./game-lib.mjs";
 import { validateMinshengSourceAudit } from "./minsheng-lib.mjs";
@@ -17,6 +17,7 @@ try {
   await testRunLease();
   await testReadyProof();
   await testGameRules();
+  await testSteamAllVerifiedCoverage();
   await testHealthKeepsChecking();
   await testTlsDegradedSuccess();
   console.log("日报运行状态、来源门禁、游戏规则和健康检查测试通过。");
@@ -102,6 +103,7 @@ async function recordRequiredSources(root, date, runId, channel, options = {}) {
       ...pair,
       status: isLast && options.leaveLastStarted ? "started" : unavailable ? "unavailable" : "accepted",
       availableCount: unavailable ? 0 : 1,
+      coverageComplete: channel === "game" && pair.section === "deals" && !unavailable,
       reasons: unavailable ? "首次访问不可用" : ""
     });
   }
@@ -152,7 +154,7 @@ async function testRunLease() {
 
 async function testReadyProof() {
   const root = path.join(tempRoot, "ready");
-  const date = "2026-08-25";
+  const date = "2026-08-24";
   const candidate = path.join(root, "data", ".pending", `${date}.json`);
   const renderDirectory = path.join(root, "artifacts", "operations", `${date}-render`);
   const html = path.join(renderDirectory, `${date}-游戏简报.html`);
@@ -191,9 +193,36 @@ async function testGameRules() {
   const sixDeals = structuredClone(candidate);
   sixDeals.deals = sixDeals.deals.slice(0, 6);
   validateGame(sixDeals);
+  const moreThanTwentyFour = structuredClone(candidate);
+  const extra = structuredClone(moreThanTwentyFour.deals[0]);
+  extra.name = "无上限覆盖测试游戏";
+  extra.url = "https://store.steampowered.com/app/99999999/?l=schinese";
+  extra.image = "game-brief-assets/2026-08-25-steam-extra.jpg";
+  moreThanTwentyFour.deals.push(extra);
+  validateGame(moreThanTwentyFour);
   const staleHeat = structuredClone(candidate);
   staleHeat.packs[0].heatEvidenceAt = "2026-08-23";
   assertThrows(() => validateGame(staleHeat), "整合包必须提供当天或前一天的社区热度证据");
+}
+
+async function testSteamAllVerifiedCoverage() {
+  const root = path.join(tempRoot, "steam-coverage");
+  const date = "2026-08-25";
+  const brief = JSON.parse(await readFile(path.join(projectRoot, "data", `${date}.json`), "utf8"));
+  const appIds = brief.deals.map((deal) => /\/app\/(\d+)/.exec(deal.url)[1]);
+  const lowIds = brief.deals.filter((deal) => deal.label.includes("史低")).map((deal) => /\/app\/(\d+)/.exec(deal.url)[1]);
+  await initializeRunState(root, { date, runId: "0930", kind: "main" });
+  await appendResearchLedger(root, { date, runId: "0930", channel: "game", section: "deals", sourceId: "steam-cn", status: "accepted", availableCount: appIds.length, candidateIds: appIds });
+  await appendResearchLedger(root, { date, runId: "0930", channel: "game", section: "deals", sourceId: "steam-price-history", status: "accepted", availableCount: lowIds.length, candidateIds: lowIds });
+  await assertRejects(() => assertGameDealCoverage(root, date, brief), "没有 coverageComplete 证据时不得把部分优惠当成全量");
+
+  await appendResearchLedger(root, { date, runId: "1030", channel: "game", section: "deals", sourceId: "steam-cn", status: "accepted", availableCount: appIds.length, candidateIds: appIds, coverageComplete: true });
+  await appendResearchLedger(root, { date, runId: "1030", channel: "game", section: "deals", sourceId: "steam-price-history", status: "accepted", availableCount: lowIds.length, candidateIds: lowIds, coverageComplete: true });
+  const coverage = await assertGameDealCoverage(root, date, brief);
+  assert(coverage.selectedCount === appIds.length, "完整账本中的全部合格优惠必须通过");
+
+  await appendResearchLedger(root, { date, runId: "1110", channel: "game", section: "deals", sourceId: "steam-cn", status: "accepted", availableCount: appIds.length + 1, candidateIds: [...appIds, "99999999"], coverageComplete: true });
+  await assertRejects(() => assertGameDealCoverage(root, date, brief), "账本比网页多一项时必须拒绝截断发布");
 }
 
 async function testHealthKeepsChecking() {

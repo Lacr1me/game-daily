@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import { appendFile, mkdir, open, readFile, readdir, unlink, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { beijingDate } from "./game-lib.mjs";
+import { GAME_DEAL_COVERAGE_EFFECTIVE_DATE, beijingDate, steamAppIdFromUrl } from "./game-lib.mjs";
 import { SOURCE_REGISTRY, canonicalSourceId, canonicalSourceLabel, channelSections, requiredSourceIds } from "./source-registry.mjs";
 
 export const LEDGER_STATUSES = new Set(["started", ...SOURCE_REGISTRY.terminalStatuses]);
@@ -86,6 +86,7 @@ export async function createReadyProof(root, options = {}) {
   ]);
   const brief = JSON.parse(candidateBuffer.toString("utf8"));
   if (brief.date !== date) throw new Error(`${channel}候选日期 ${brief.date} 与 ${date} 不一致`);
+  const dealCoverage = channel === "game" ? await assertGameDealCoverage(root, date, brief) : null;
   validatePng3840(renderPngBuffer, "渲染PNG");
   validatePng3840(publicPngBuffer, "公开PNG");
   const renderPngSha256 = sha256(renderPngBuffer);
@@ -105,6 +106,7 @@ export async function createReadyProof(root, options = {}) {
     publicPng: path.relative(root, publicPng).replaceAll("\\", "/"),
     pngSha256: renderPngSha256,
     width: 3840,
+    ...(dealCoverage ? { dealCoverage } : {}),
     verifiedAt: new Date().toISOString()
   };
   await writeJson(paths.readiness, readiness);
@@ -129,6 +131,8 @@ export async function assertReadyProof(root, date, channel) {
   const [candidateBuffer, htmlBuffer, renderPngBuffer, publicPngBuffer] = await Promise.all([
     readFile(files.candidate), readFile(files.html), readFile(files.renderPng), readFile(files.publicPng)
   ]);
+  const brief = JSON.parse(candidateBuffer.toString("utf8"));
+  if (channel === "game") await assertGameDealCoverage(root, date, brief);
   validatePng3840(renderPngBuffer, "渲染PNG");
   validatePng3840(publicPngBuffer, "公开PNG");
   if (sha256(candidateBuffer) !== proof.candidateSha256 || sha256(htmlBuffer) !== proof.htmlSha256) throw new Error(`${channel}候选或HTML在就绪后被修改`);
@@ -211,6 +215,7 @@ export async function appendResearchLedger(root, rawEntry) {
     status: rawEntry.status,
     availableCount: nonNegativeInteger(rawEntry.availableCount),
     rejectedCount: nonNegativeInteger(rawEntry.rejectedCount),
+    coverageComplete: Boolean(rawEntry.coverageComplete),
     reasons: normalizeReasons(rawEntry.reasons),
     candidateIds: normalizeStringList(rawEntry.candidateIds)
   };
@@ -231,6 +236,54 @@ export async function readResearchLedger(root, date) {
   });
 }
 
+export async function assertGameDealCoverage(root, date, brief) {
+  if (date < GAME_DEAL_COVERAGE_EFFECTIVE_DATE) return { mode: "legacy", selectedCount: brief?.deals?.length || 0 };
+  if (!brief || brief.date !== date || !Array.isArray(brief.deals)) throw new Error(`${date} 游戏日报缺少可核验的 Steam 优惠候选`);
+  const selectedIds = new Set();
+  for (const [index, deal] of brief.deals.entries()) {
+    const appId = steamAppIdFromUrl(deal.url);
+    if (!appId) throw new Error(`Steam 优惠第${index + 1}条不是官方 app 商品页：${deal.url || "缺少URL"}`);
+    if (selectedIds.has(appId)) throw new Error(`Steam 优惠重复 appId：${appId}`);
+    selectedIds.add(appId);
+  }
+
+  const ledger = await readResearchLedger(root, date);
+  const entries = ledger.filter((entry) => entry.channel === "game" && entry.section === "deals");
+  const steam = latestTerminalEntry(entries, "steam-cn");
+  if (!steam || steam.status !== "accepted" || steam.coverageComplete !== true) {
+    throw new Error(`${date} Steam国区检索未留下 coverageComplete=true 的完整终态记录，拒绝截断网页优惠`);
+  }
+  const eligibleIds = normalizedSteamCandidateIds(steam.candidateIds);
+  if (eligibleIds.size !== steam.availableCount) {
+    throw new Error(`${date} Steam国区账本 availableCount=${steam.availableCount} 与合格 appId 数量 ${eligibleIds.size} 不一致`);
+  }
+  if (!sameSet(selectedIds, eligibleIds)) {
+    throw new Error(`${date} 网页 Steam 优惠 ${selectedIds.size} 款与账本全部合格优惠 ${eligibleIds.size} 款不一致，禁止只取前若干条`);
+  }
+
+  const lowIds = new Set(brief.deals.filter((deal) => String(deal.label).includes("史低")).map((deal) => steamAppIdFromUrl(deal.url)));
+  const history = latestTerminalEntry(entries, "steam-price-history");
+  if (!history) throw new Error(`${date} 缺少 Steam 价格历史终态记录`);
+  const verifiedLowIds = normalizedSteamCandidateIds(history.candidateIds);
+  if (history.status === "accepted" && verifiedLowIds.size !== history.availableCount) {
+    throw new Error(`${date} Steam价格历史账本 availableCount=${history.availableCount} 与已核验 appId 数量 ${verifiedLowIds.size} 不一致`);
+  }
+  for (const appId of lowIds) {
+    if (!verifiedLowIds.has(appId)) throw new Error(`${date} Steam appId ${appId} 标记为史低但不在价格历史核验清单中`);
+  }
+  if (lowIds.size && (history.status !== "accepted" || history.coverageComplete !== true)) {
+    throw new Error(`${date} 存在史低标签，但价格历史核验未完整结束`);
+  }
+  return {
+    mode: "all-verified",
+    selectedCount: selectedIds.size,
+    rejectedCount: steam.rejectedCount,
+    verifiedLowCount: lowIds.size,
+    steamRunId: steam.runId,
+    historyRunId: history.runId
+  };
+}
+
 export async function researchCompleteness(root, date, channel) {
   const ledger = await readResearchLedger(root, date);
   const sections = {};
@@ -245,6 +298,7 @@ export async function researchCompleteness(root, date, channel) {
       if (!attempts.length) missing.push(sourceId);
       else if (!terminal.length) incomplete.push(sourceId);
       else if (terminal.at(-1).status === "unavailable" && terminal.filter((entry) => entry.status === "unavailable").length < SOURCE_REGISTRY.minimumUnavailableAttempts) incomplete.push(sourceId);
+      else if (date >= GAME_DEAL_COVERAGE_EFFECTIVE_DATE && channel === "game" && section === "deals" && terminal.at(-1).status === "accepted" && terminal.at(-1).coverageComplete !== true) incomplete.push(sourceId);
     }
     const sectionComplete = !missing.length && !incomplete.length;
     sections[section] = {
@@ -396,6 +450,24 @@ function normalizeStringList(value) {
   if (!value) return [];
   const values = Array.isArray(value) ? value : String(value).split("|");
   return [...new Set(values.map((item) => String(item).trim()).filter(Boolean))];
+}
+
+function latestTerminalEntry(entries, sourceId) {
+  return entries.filter((entry) => canonicalSourceId(entry.sourceId || entry.source) === sourceId && SOURCE_REGISTRY.terminalStatuses.includes(entry.status)).at(-1) || null;
+}
+
+function normalizedSteamCandidateIds(values) {
+  const ids = new Set();
+  for (const value of normalizeStringList(values)) {
+    const match = /(?:^|\D)(\d{3,})(?:\D|$)/.exec(value);
+    if (!match) throw new Error(`Steam 检索账本候选ID无效：${value}`);
+    ids.add(match[1]);
+  }
+  return ids;
+}
+
+function sameSet(left, right) {
+  return left.size === right.size && [...left].every((value) => right.has(value));
 }
 
 function isHttps(value) {

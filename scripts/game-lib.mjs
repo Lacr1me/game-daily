@@ -8,8 +8,9 @@ export const GAME_SECTION_COUNTS = {
   trends: 4
 };
 
-export const GAME_DEAL_LIMITS = { legacyMin: 4, min: 6, max: 24 };
+export const GAME_DEAL_LIMITS = { legacyMin: 4, min: 6, staticCaptureCount: 6 };
 export const GAME_DEAL_POLICY_EFFECTIVE_DATE = "2026-08-25";
+export const GAME_DEAL_COVERAGE_EFFECTIVE_DATE = "2026-08-25";
 export const GAME_HEAT_EVIDENCE_EFFECTIVE_DATE = "2026-08-25";
 
 const TEXT_FIELDS = {
@@ -60,8 +61,8 @@ export function validateGame(brief, { expectedDate } = {}) {
     }
   }
   const minimumDeals = brief.date >= GAME_DEAL_POLICY_EFFECTIVE_DATE ? GAME_DEAL_LIMITS.min : GAME_DEAL_LIMITS.legacyMin;
-  if (!Array.isArray(brief.deals) || brief.deals.length < minimumDeals || brief.deals.length > GAME_DEAL_LIMITS.max) {
-    errors.push(`deals 必须为 ${minimumDeals}—${GAME_DEAL_LIMITS.max} 条`);
+  if (!Array.isArray(brief.deals) || brief.deals.length < minimumDeals) {
+    errors.push(`deals 至少需要 ${minimumDeals} 条；网页不得截断已核验的合格优惠`);
   }
 
   for (const section of ["features", "news", "packs", "mods", "deals"]) {
@@ -99,6 +100,12 @@ export function validateGame(brief, { expectedDate } = {}) {
   });
   (brief.deals || []).forEach((item, index) => {
     const label = `deals 第${index + 1}条`;
+    if (brief.date >= GAME_DEAL_POLICY_EFFECTIVE_DATE && !["新史低", "平史低", "今日特惠"].includes(item.label)) {
+      errors.push(`${label} label 只能为“新史低”“平史低”或“今日特惠”`);
+    }
+    if (brief.date >= GAME_DEAL_POLICY_EFFECTIVE_DATE && !steamAppIdFromUrl(item.url)) {
+      errors.push(`${label} 必须链接到 Steam 官方 app 商品页`);
+    }
     if (!/^-\d{1,3}%$/.test(item.discount || "")) errors.push(`${label} discount 格式无效`);
     if (!/^¥\d/.test(item.original || "") || !/^¥\d/.test(item.price || "")) errors.push(`${label} 价格必须以 ¥ 开头`);
     const match = /^(?:截至\s*)?(\d{2})-(\d{2})$/.exec(item.ends || "");
@@ -120,6 +127,16 @@ export function safePendingPath(root, date) {
   const pending = path.resolve(pendingDir, `${date}.json`);
   if (path.dirname(pending) !== pendingDir) throw new Error("拒绝使用非预期草稿路径");
   return { pendingDir, pending };
+}
+
+export function steamAppIdFromUrl(value) {
+  try {
+    const url = new URL(value);
+    if (url.protocol !== "https:" || url.hostname.toLowerCase() !== "store.steampowered.com") return null;
+    return /^\/app\/(\d+)(?:\/|$)/.exec(url.pathname)?.[1] || null;
+  } catch {
+    return null;
+  }
 }
 
 function requireText(item, field, label, errors) {

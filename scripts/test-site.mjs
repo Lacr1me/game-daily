@@ -187,6 +187,7 @@ assert(gameHtml.includes('id="navDate"'), "游戏日报统一页头必须显示�
 assert(gameHtml.includes('id="archiveDate"') && gameHtml.includes("按日期选择"), "游戏日报归档弹窗必须提供日期选择器");
 assert(gameHtml.includes('id="downloadPng"') && gameHtml.includes("下载当天 PNG 原图"), "游戏日报底部必须提供 PNG 原图下载按钮");
 assert(gameHtml.includes('id="dealSummary"') && gameHtml.includes('id="dealList" tabindex="0"') && gameHtml.includes('id="dealScrollThumb"'), "Steam 优惠必须提供数量摘要、可键盘滚动的列表和可见滚动指示器");
+assert(gameHtml.includes("<b>05</b> Steam 今日优惠") && gameHtml.includes('class="section-no dark">06</span>'), "Steam 与趋势板块必须使用当前 05/06 编号");
 assert(gameHtml.includes('class="hero-logo-stage"') && gameHtml.includes('src="brand-assets/springhues-logo.png"'), "游戏日报首屏必须展示 Springhues Logo");
 assert(!gameHtml.includes('class="ticker"'), "游戏日报不得保留黑色滚动栏目条");
 assert(!gameHtml.includes('id="headlines"'), "游戏日报不得恢复今日头条板块");
@@ -222,7 +223,7 @@ assert(gameApp.includes('$("#archiveDate").min') && gameApp.includes('$("#archiv
 assert(gameApp.includes('addEventListener("change", (event) => navigateToDate(event.target.value))'), "游戏日报日期选择器必须支持按日期跳转");
 assert(civicApp.includes("downloads/minsheng/${encodeURIComponent(brief.date)}.png"), "民生日报下载按钮必须跟随所选归档日期");
 assert(civicApp.includes("（来自于外网）") && civicApp.includes("formatSource"), "民生日报必须统一渲染外网来源标记");
-assert(gameHtml.includes("app.js?v=20260824-steam-scroll"), "游戏日报脚本必须使用 Steam 滚动布局缓存版本");
+assert(gameHtml.includes("app.js?v=20260825-steam-all"), "游戏日报脚本必须使用 Steam 全量滚动布局缓存版本");
 assert(civicHtml.includes("app.js?v=20260824-source-policy-v2"), "民生日报脚本必须使用来源策略v2缓存版本");
 const gameCss = await readFile(path.join(root, "styles.css"), "utf8");
 assert(gameCss.includes(".deal-list") && gameCss.includes("overflow-y:auto"), "Steam 优惠必须在固定板块内纵向滚动");

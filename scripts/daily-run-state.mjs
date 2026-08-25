@@ -30,6 +30,7 @@ if (command === "init") {
     status: args.status,
     availableCount: args.available,
     rejectedCount: args.rejected,
+    coverageComplete: args["coverage-complete"] === "true",
     reasons: args.reason,
     candidateIds: args.candidates
   }), null, 2));

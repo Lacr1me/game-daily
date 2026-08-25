@@ -4,13 +4,13 @@
 
 ## 不可变约束
 
-- 时区固定为 `Asia/Shanghai`。制作任务每天 08:30、09:30、10:30 分三次独立接力，发布与补跑任务每天 11:01、11:31 分两次独立执行；`publishAt` 固定为当天 11:00，11:00 前禁止调用发布脚本。
+- 时区固定为 `Asia/Shanghai`。制作任务每天 07:30、08:30、09:30、10:30 分四次独立接力，发布与补跑任务每天 11:01、11:31 分两次独立执行；`publishAt` 固定为当天 11:00，11:00 前禁止调用发布脚本。
 - 每次计划运行是新任务，不读取或延续旧聊天。当天续跑只读取仓库、`data/.pending/` 和 `artifacts/operations/` 中的结构化状态。
 - 禁止 OpenAI Platform API、`OPENAI_API_KEY`、`api.openai.com` 和任何付费模型 API。只使用当前 Codex 任务自带网页检索。
 - 不复制上一期，不复用旧 URL 冒充新内容；保留用户未提交和无关改动。
 - 不得仅因某个站点一次不可用就结束。来源不可用只有在实际重试两次后才是账本终态，其他来源仍须继续。
 - 电脑必须保持开机、网络可用且 ChatGPT/Codex 桌面应用持续运行。计划任务无法弥补关机、休眠或应用退出；恢复后下一次接力运行只从仓库状态续跑。
-- 每次运行只推进到下一个可验证检查点，不在任务中空等下一个钟点。08:30未完成的研究由09:30续接，09:30未完成的由10:30续接；11:01发布失败由11:31按状态精确重试。
+- 每次运行只推进到下一个可验证检查点，不在任务中空等下一个钟点。07:30未完成的Steam发现由08:30续接，08:30未完成的研究由09:30续接，09:30未完成的由10:30续接；11:01发布失败由11:31按状态精确重试。
 
 ## 每次运行的启动步骤
 
@@ -40,6 +40,8 @@
 
 `node scripts/daily-run-state.mjs record --date=YYYY-MM-DD --run-id=HHMM --channel=minsheng --section=domestic --source=新华网 --tier=primary --status=accepted --url=https://... --available=3 --rejected=1 --reason=重复1条 --candidates=id-1|id-2`
 
+Steam 优惠的确定性发现面是 Steam 官方 Specials 默认相关性首个结果页的全部游戏卡片，加上当天国内权威优惠报道或价格历史清单中额外出现且能回到 Steam 官方商品页核验的热门史低；不是 Steam 数千项折扣总目录。终态记录还必须使用 `--coverage-complete=true`。`steam-cn` 的 `--candidates` 写上述并集内全部合格 Steam appId，`--available` 必须与该清单数量一致；候选JSON的优惠必须与清单完全相同，不能只截取前24条或前6条。`steam-price-history` 的候选ID至少覆盖所有标记为新史低/平史低的 appId。网页渲染全部合格项，静态PNG（以及今后若增加的PDF）只显示排序前6项。
+
 允许状态为：
 
 - `started`：已开始但尚未完成，不能通过门禁。
@@ -66,11 +68,11 @@
 
 ## 制作、渲染与发布
 
-- 08:30轮优先完成来源研究与候选池；09:30轮读取账本补缺并尽量生成候选；10:30轮完成剩余候选、统一渲染与冻结预检。各轮均可提前推进，但不得重做已完成阶段。
-- 10:25—10:40：从候选池生成 `data/.pending/minsheng/YYYY-MM-DD.json` 和 `data/.pending/YYYY-MM-DD.json`。民生为 10/10/10/5；游戏为 2 features、10 news、10 packs、6 mods、6—24 deals、4 trends。
+- 07:30轮优先完成Steam热门发现面与优惠图片准备；08:30轮完成其余来源并继续逐项核验；09:30轮读取账本补缺并尽量生成候选；10:30轮先刷新Steam热门清单差异，再完成剩余候选、统一渲染与冻结预检。各轮均可提前推进，但不得重做已完成阶段。
+- 10:25—10:40：从候选池生成 `data/.pending/minsheng/YYYY-MM-DD.json` 和 `data/.pending/YYYY-MM-DD.json`。民生为 10/10/10/5；游戏为 2 features、10 news、10 packs、6 mods、当天全部已核验合格 deals（至少6项、无上限）、4 trends。
 - 新游戏期次每个 pack 必须包含当天或前一天的 `heatEvidenceAt` 和可追溯的 `heatSignals`；整合包自身不要求当天发布。Mod 只有模板允许时可回退30天。
 - 10:40—10:50：分别调用两个技能的统一 `render.mjs`，使用 `--scale 2 --validate true`，HTML与PNG必须来自同一候选JSON。工作版写入 `artifacts/operations/YYYY-MM-DD-render/`，公开PNG与桌面成品按模板路径复制。
-- 10:50后冻结栏目，只修复校验错误。依次执行来源完整性、两个频道校验器、归档一致性、嵌入构建、站点测试、站点构建和构建验证。
+- 10:50后冻结栏目，只修复校验错误。依次执行来源完整性、Steam全量覆盖一致性、两个频道校验器、归档一致性、嵌入构建、站点测试、站点构建和构建验证。Steam 优惠可能连续多日有效，因此不套用新闻栏目的固定URL重复上限；改由当天 `coverageComplete` 账本、实时价格、截止时间和史低证据重新证明。
 - 通过全部预检后，必须为每个频道生成就绪证明。以下参数均使用实际绝对或仓库相对路径：
 
   `node scripts/daily-run-state.mjs mark-ready --date=YYYY-MM-DD --channel=minsheng --candidate=data/.pending/minsheng/YYYY-MM-DD.json --html=artifacts/operations/YYYY-MM-DD-render/YYYY-MM-DD-民生日报.html --png=artifacts/operations/YYYY-MM-DD-render/YYYY-MM-DD-民生日报.png --public-png=downloads/minsheng/YYYY-MM-DD.png`
