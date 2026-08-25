@@ -1,4 +1,4 @@
-import { readFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { assertGameArchiveConsistency, assertManifestEdition, assertMinshengArchiveConsistency } from "./archive-consistency.mjs";
@@ -223,11 +223,18 @@ const isMain = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPat
 if (isMain) {
   const dateArg = process.argv.find((arg) => arg.startsWith("--date="));
   const liveArg = process.argv.find((arg) => arg.startsWith("--live="));
+  const save = process.argv.includes("--save");
+  const date = dateArg?.slice("--date=".length) || beijingDate();
   const result = await runDailyHealth({
     root: process.cwd(),
-    date: dateArg?.slice("--date=".length) || beijingDate(),
+    date,
     liveBase: liveArg?.slice("--live=".length)
   });
+  if (save) {
+    const directory = path.resolve(process.cwd(), "artifacts", "operations");
+    await mkdir(directory, { recursive: true });
+    await writeFile(path.join(directory, `${date}-health.json`), `${JSON.stringify(result, null, 2)}\n`, "utf8");
+  }
   console.log(JSON.stringify(result, null, 2));
   if (!result.healthy) process.exitCode = 1;
 }

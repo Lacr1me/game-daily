@@ -1,7 +1,7 @@
 import { mkdtemp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
-import { appendResearchLedger, initializeRunState, mergeSourceAudits, researchCompleteness } from "./daily-operations.mjs";
+import { acquireRunLease, appendResearchLedger, assertReadyProof, createReadyProof, initializeRunState, mergeSourceAudits, releaseRunLease, researchCompleteness } from "./daily-operations.mjs";
 import { runDailyHealth } from "./check-daily-health.mjs";
 import { validateGame } from "./game-lib.mjs";
 import { validateMinshengSourceAudit } from "./minsheng-lib.mjs";
@@ -14,6 +14,8 @@ try {
   await testSourceAliasesAndAudit();
   await testResumableLedger();
   await testAuditMerge();
+  await testRunLease();
+  await testReadyProof();
   await testGameRules();
   await testHealthKeepsChecking();
   await testTlsDegradedSuccess();
@@ -133,6 +135,43 @@ async function testAuditMerge() {
   assert(merged.categories.domestic.attemptedChinaSources[0] === "新华网", "合并审计必须写标准来源名称");
 }
 
+async function testRunLease() {
+  const root = path.join(tempRoot, "lease");
+  const date = "2026-08-25";
+  const first = await acquireRunLease(root, { date, runId: "0830", ttlSeconds: 300 });
+  assert(first.acquired, "首次运行必须取得租约");
+  const repeated = await acquireRunLease(root, { date, runId: "0830", ttlSeconds: 300 });
+  assert(repeated.acquired && repeated.reused, "同一运行重试必须幂等复用租约");
+  const blocked = await acquireRunLease(root, { date, runId: "0930", ttlSeconds: 300 });
+  assert(!blocked.acquired && blocked.reason === "active-lease", "有效租约必须阻止重叠运行");
+  await assertRejects(() => releaseRunLease(root, { date, runId: "0930" }), "其他运行不得释放有效租约");
+  const released = await releaseRunLease(root, { date, runId: "0830" });
+  assert(released.released, "持有者必须能释放租约");
+  assert((await acquireRunLease(root, { date, runId: "0930", ttlSeconds: 300 })).acquired, "租约释放后后续运行必须可接力");
+}
+
+async function testReadyProof() {
+  const root = path.join(tempRoot, "ready");
+  const date = "2026-08-25";
+  const candidate = path.join(root, "data", ".pending", `${date}.json`);
+  const renderDirectory = path.join(root, "artifacts", "operations", `${date}-render`);
+  const html = path.join(renderDirectory, `${date}-游戏简报.html`);
+  const renderPng = path.join(renderDirectory, `${date}-游戏简报.png`);
+  const publicPng = path.join(root, "downloads", "game", `${date}.png`);
+  await mkdir(path.dirname(candidate), { recursive: true });
+  await mkdir(renderDirectory, { recursive: true });
+  await mkdir(path.dirname(publicPng), { recursive: true });
+  await initializeRunState(root, { date, runId: "1030", kind: "main", gameIssue: 4 });
+  await writeFile(candidate, JSON.stringify({ date, issue: 4 }), "utf8");
+  await writeFile(html, `<a href="downloads/game/${date}.png">${date}</a>`, "utf8");
+  await writeFile(renderPng, fakePng());
+  await writeFile(publicPng, fakePng());
+  await createReadyProof(root, { date, channel: "game", candidate, html, png: renderPng, publicPng });
+  await assertReadyProof(root, date, "game");
+  await writeFile(candidate, JSON.stringify({ date, issue: 5 }), "utf8");
+  await assertRejects(() => assertReadyProof(root, date, "game"), "就绪后修改候选必须阻止发布");
+}
+
 async function testGameRules() {
   const original = JSON.parse(await readFile(path.join(projectRoot, "data", "2026-08-24.json"), "utf8"));
   const candidate = structuredClone(original);
@@ -225,5 +264,11 @@ function assert(condition, message) {
 function assertThrows(callback, message) {
   let threw = false;
   try { callback(); } catch { threw = true; }
+  assert(threw, message);
+}
+
+async function assertRejects(callback, message) {
+  let threw = false;
+  try { await callback(); } catch { threw = true; }
   assert(threw, message);
 }

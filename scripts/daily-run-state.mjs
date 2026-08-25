@@ -1,5 +1,5 @@
 import process from "node:process";
-import { appendResearchLedger, checkpointRunState, initializeRunState, mergeSourceAudits, operationPaths, researchCompleteness } from "./daily-operations.mjs";
+import { acquireRunLease, appendResearchLedger, checkpointRunState, createReadyProof, initializeRunState, mergeSourceAudits, operationPaths, releaseRunLease, researchCompleteness } from "./daily-operations.mjs";
 import { beijingDate } from "./game-lib.mjs";
 
 const root = process.cwd();
@@ -42,6 +42,26 @@ if (command === "init") {
     missingSections: args.missing === undefined ? undefined : args.missing.split(",").filter(Boolean),
     runId: args["run-id"],
     runStatus: args["run-status"]
+  }), null, 2));
+} else if (command === "lease-acquire") {
+  console.log(JSON.stringify(await acquireRunLease(root, {
+    date,
+    runId: args["run-id"],
+    ttlSeconds: numberOrUndefined(args.ttl)
+  }), null, 2));
+} else if (command === "lease-release") {
+  console.log(JSON.stringify(await releaseRunLease(root, {
+    date,
+    runId: args["run-id"]
+  }), null, 2));
+} else if (command === "mark-ready") {
+  console.log(JSON.stringify(await createReadyProof(root, {
+    date,
+    channel: args.channel,
+    candidate: args.candidate,
+    html: args.html,
+    png: args.png,
+    publicPng: args["public-png"]
   }), null, 2));
 } else if (command === "merge-audit") {
   console.log(JSON.stringify(await mergeSourceAudits(root, date), null, 2));

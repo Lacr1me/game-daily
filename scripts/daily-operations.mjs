@@ -1,4 +1,5 @@
-import { appendFile, mkdir, readFile, readdir, writeFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
+import { appendFile, mkdir, open, readFile, readdir, unlink, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { beijingDate } from "./game-lib.mjs";
 import { SOURCE_REGISTRY, canonicalSourceId, canonicalSourceLabel, channelSections, requiredSourceIds } from "./source-registry.mjs";
@@ -12,8 +13,127 @@ export function operationPaths(root, date) {
     directory,
     state: path.join(directory, `${date}-run-state.json`),
     ledger: path.join(directory, `${date}-research-ledger.jsonl`),
-    audit: path.join(directory, `${date}-source-audit.json`)
+    audit: path.join(directory, `${date}-source-audit.json`),
+    lease: path.join(directory, `${date}-run-lease.json`),
+    readiness: path.join(directory, `${date}-readiness.json`)
   };
+}
+
+export async function acquireRunLease(root, options = {}) {
+  const date = options.date || beijingDate();
+  const runId = requiredText(options.runId, "runId");
+  const ttlSeconds = Number(options.ttlSeconds ?? 3300);
+  if (!Number.isInteger(ttlSeconds) || ttlSeconds < 60 || ttlSeconds > 7200) throw new Error("租约时长必须为60—7200秒");
+  const paths = operationPaths(root, date);
+  await mkdir(paths.directory, { recursive: true });
+  const now = Date.now();
+  const lease = {
+    schemaVersion: 1,
+    date,
+    runId,
+    acquiredAt: new Date(now).toISOString(),
+    expiresAt: new Date(now + ttlSeconds * 1000).toISOString()
+  };
+
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    try {
+      const handle = await open(paths.lease, "wx");
+      try { await handle.writeFile(`${JSON.stringify(lease, null, 2)}\n`, "utf8"); }
+      finally { await handle.close(); }
+      return { acquired: true, lease };
+    } catch (error) {
+      if (error.code !== "EEXIST") throw error;
+      const existing = await readLeaseIfExists(paths.lease);
+      if (existing?.runId === runId && Date.parse(existing.expiresAt) > now) {
+        await writeJson(paths.lease, lease);
+        return { acquired: true, reused: true, renewed: true, lease };
+      }
+      if (!existing || Date.parse(existing.expiresAt) <= now) {
+        await unlink(paths.lease).catch((unlinkError) => { if (unlinkError.code !== "ENOENT") throw unlinkError; });
+        continue;
+      }
+      return { acquired: false, reason: "active-lease", lease: existing };
+    }
+  }
+  return { acquired: false, reason: "lease-race" };
+}
+
+export async function releaseRunLease(root, options = {}) {
+  const date = options.date || beijingDate();
+  const runId = requiredText(options.runId, "runId");
+  const paths = operationPaths(root, date);
+  const existing = await readLeaseIfExists(paths.lease);
+  if (!existing) return { released: false, reason: "missing" };
+  if (existing.runId !== runId && Date.parse(existing.expiresAt) > Date.now()) {
+    throw new Error(`运行 ${runId} 不能释放 ${existing.runId} 的有效租约`);
+  }
+  await unlink(paths.lease).catch((error) => { if (error.code !== "ENOENT") throw error; });
+  return { released: true, lease: existing };
+}
+
+export async function createReadyProof(root, options = {}) {
+  const date = options.date || beijingDate();
+  const channel = requiredChannel(options.channel);
+  const paths = operationPaths(root, date);
+  const expected = expectedArtifactPaths(root, date, channel);
+  const candidate = requireExactPath(options.candidate, expected.candidate, "候选JSON");
+  const publicPng = requireExactPath(options.publicPng, expected.publicPng, "公开PNG");
+  const renderDirectory = path.resolve(root, "artifacts", "operations", `${date}-render`);
+  const html = requireInsidePath(options.html, renderDirectory, "渲染HTML");
+  const renderPng = requireInsidePath(options.png, renderDirectory, "渲染PNG");
+  const [candidateBuffer, htmlBuffer, renderPngBuffer, publicPngBuffer] = await Promise.all([
+    readFile(candidate), readFile(html), readFile(renderPng), readFile(publicPng)
+  ]);
+  const brief = JSON.parse(candidateBuffer.toString("utf8"));
+  if (brief.date !== date) throw new Error(`${channel}候选日期 ${brief.date} 与 ${date} 不一致`);
+  validatePng3840(renderPngBuffer, "渲染PNG");
+  validatePng3840(publicPngBuffer, "公开PNG");
+  const renderPngSha256 = sha256(renderPngBuffer);
+  const publicPngSha256 = sha256(publicPngBuffer);
+  if (renderPngSha256 !== publicPngSha256) throw new Error(`${channel}公开PNG与统一渲染PNG不一致`);
+  const htmlText = htmlBuffer.toString("utf8");
+  const expectedHref = channel === "game" ? `downloads/game/${date}.png` : `../downloads/minsheng/${date}.png`;
+  if (!htmlText.includes(date) || !htmlText.includes(expectedHref)) throw new Error(`${channel}渲染HTML的日期或下载链接不一致`);
+  const readiness = await readJsonIfExists(paths.readiness) || { schemaVersion: 1, date, channels: {} };
+  if (readiness.date !== date) throw new Error(`就绪证明日期 ${readiness.date} 与 ${date} 不一致`);
+  readiness.channels[channel] = {
+    candidate: path.relative(root, candidate).replaceAll("\\", "/"),
+    candidateSha256: sha256(candidateBuffer),
+    html: path.relative(root, html).replaceAll("\\", "/"),
+    htmlSha256: sha256(htmlBuffer),
+    renderPng: path.relative(root, renderPng).replaceAll("\\", "/"),
+    publicPng: path.relative(root, publicPng).replaceAll("\\", "/"),
+    pngSha256: renderPngSha256,
+    width: 3840,
+    verifiedAt: new Date().toISOString()
+  };
+  await writeJson(paths.readiness, readiness);
+  await checkpointRunState(root, date, { stage: "ready", channel, status: "ready", published: false, missingSections: [] });
+  return readiness.channels[channel];
+}
+
+export async function assertReadyProof(root, date, channel) {
+  requiredChannel(channel);
+  const paths = operationPaths(root, date);
+  const [state, readiness] = await Promise.all([readJsonIfExists(paths.state), readJsonIfExists(paths.readiness)]);
+  if (state?.channels?.[channel]?.status !== "ready") throw new Error(`${date} ${channel} 尚未标记为ready，拒绝发布`);
+  const proof = readiness?.channels?.[channel];
+  if (!proof) throw new Error(`${date} ${channel} 缺少就绪证明，拒绝发布`);
+  const expected = expectedArtifactPaths(root, date, channel);
+  const files = {
+    candidate: requireExactPath(path.resolve(root, proof.candidate), expected.candidate, "候选JSON"),
+    publicPng: requireExactPath(path.resolve(root, proof.publicPng), expected.publicPng, "公开PNG"),
+    html: requireInsidePath(path.resolve(root, proof.html), path.resolve(root, "artifacts", "operations", `${date}-render`), "渲染HTML"),
+    renderPng: requireInsidePath(path.resolve(root, proof.renderPng), path.resolve(root, "artifacts", "operations", `${date}-render`), "渲染PNG")
+  };
+  const [candidateBuffer, htmlBuffer, renderPngBuffer, publicPngBuffer] = await Promise.all([
+    readFile(files.candidate), readFile(files.html), readFile(files.renderPng), readFile(files.publicPng)
+  ]);
+  validatePng3840(renderPngBuffer, "渲染PNG");
+  validatePng3840(publicPngBuffer, "公开PNG");
+  if (sha256(candidateBuffer) !== proof.candidateSha256 || sha256(htmlBuffer) !== proof.htmlSha256) throw new Error(`${channel}候选或HTML在就绪后被修改`);
+  if (sha256(renderPngBuffer) !== proof.pngSha256 || sha256(publicPngBuffer) !== proof.pngSha256) throw new Error(`${channel}PNG在就绪后被修改`);
+  return proof;
 }
 
 export async function initializeRunState(root, options = {}) {
@@ -202,6 +322,17 @@ async function readJsonIfExists(file) {
   }
 }
 
+async function readLeaseIfExists(file) {
+  try {
+    const text = await readFile(file, "utf8");
+    if (!text.trim()) return null;
+    return JSON.parse(text);
+  } catch (error) {
+    if (error.code === "ENOENT" || error instanceof SyntaxError) return null;
+    throw error;
+  }
+}
+
 async function writeJson(file, value) {
   await writeFile(file, `${JSON.stringify(value, null, 2)}\n`, "utf8");
 }
@@ -213,6 +344,41 @@ function assertDate(value) {
 function requiredText(value, field) {
   if (!String(value || "").trim()) throw new Error(`${field} 不能为空`);
   return String(value).trim();
+}
+
+function requiredChannel(value) {
+  if (!["game", "minsheng"].includes(value)) throw new Error(`未知频道：${value}`);
+  return value;
+}
+
+function expectedArtifactPaths(root, date, channel) {
+  return {
+    candidate: path.resolve(root, "data", ".pending", ...(channel === "minsheng" ? ["minsheng", `${date}.json`] : [`${date}.json`])),
+    publicPng: path.resolve(root, "downloads", channel, `${date}.png`)
+  };
+}
+
+function requireExactPath(value, expected, label) {
+  const resolved = path.resolve(requiredText(value, label));
+  if (resolved !== path.resolve(expected)) throw new Error(`${label}必须为 ${expected}`);
+  return resolved;
+}
+
+function requireInsidePath(value, directory, label) {
+  const resolved = path.resolve(requiredText(value, label));
+  const relative = path.relative(path.resolve(directory), resolved);
+  if (!relative || relative.startsWith("..") || path.isAbsolute(relative)) throw new Error(`${label}必须位于 ${directory} 内`);
+  return resolved;
+}
+
+function sha256(buffer) {
+  return createHash("sha256").update(buffer).digest("hex");
+}
+
+function validatePng3840(buffer, label) {
+  const signature = Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]);
+  if (buffer.length <= 24 || !buffer.subarray(0, 8).equals(signature)) throw new Error(`${label}不是有效PNG`);
+  if (buffer.readUInt32BE(16) !== 3840) throw new Error(`${label}宽度必须为3840px`);
 }
 
 function nonNegativeInteger(value) {
