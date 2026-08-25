@@ -4,13 +4,13 @@
 
 ## 不可变约束
 
-- 时区固定为 `Asia/Shanghai`。制作任务每天 08:30、09:30、10:30 分三次独立接力，发布与补跑任务每天 11:10、11:40 分两次独立执行；`publishAt` 固定为当天 11:00，11:00 前禁止调用发布脚本。
+- 时区固定为 `Asia/Shanghai`。制作任务每天 08:30、09:30、10:30 分三次独立接力，发布与补跑任务每天 11:01、11:31 分两次独立执行；`publishAt` 固定为当天 11:00，11:00 前禁止调用发布脚本。
 - 每次计划运行是新任务，不读取或延续旧聊天。当天续跑只读取仓库、`data/.pending/` 和 `artifacts/operations/` 中的结构化状态。
 - 禁止 OpenAI Platform API、`OPENAI_API_KEY`、`api.openai.com` 和任何付费模型 API。只使用当前 Codex 任务自带网页检索。
 - 不复制上一期，不复用旧 URL 冒充新内容；保留用户未提交和无关改动。
 - 不得仅因某个站点一次不可用就结束。来源不可用只有在实际重试两次后才是账本终态，其他来源仍须继续。
 - 电脑必须保持开机、网络可用且 ChatGPT/Codex 桌面应用持续运行。计划任务无法弥补关机、休眠或应用退出；恢复后下一次接力运行只从仓库状态续跑。
-- 每次运行只推进到下一个可验证检查点，不在任务中空等下一个钟点。08:30未完成的研究由09:30续接，09:30未完成的由10:30续接；11:10发布失败由11:40按状态精确重试。
+- 每次运行只推进到下一个可验证检查点，不在任务中空等下一个钟点。08:30未完成的研究由09:30续接，09:30未完成的由10:30续接；11:01发布失败由11:31按状态精确重试。
 
 ## 每次运行的启动步骤
 
@@ -30,7 +30,7 @@
 
    `node scripts/daily-run-state.mjs init --date=YYYY-MM-DD --run-id=HHMM --kind=main --minsheng-issue=N --game-issue=N`
 
-   11:10与11:40补跑使用 `--kind=recovery`，不得新建另一套当天状态。
+   11:01与11:31补跑使用 `--kind=recovery`，不得新建另一套当天状态。
 
 5. 先运行 `node scripts/daily-run-state.mjs status --date=YYYY-MM-DD`。后续轮次只处理 `missing`、`incomplete`、未就绪或未发布的频道和栏目；已就绪/已发布频道禁止重做。
 
@@ -53,8 +53,8 @@
 民生每次运行写独立审计快照：
 
 - `artifacts/operations/YYYY-MM-DD-HHMM-source-audit.json`
-- `artifacts/operations/YYYY-MM-DD-1110-source-audit.json`
-- `artifacts/operations/YYYY-MM-DD-1140-source-audit.json`
+- `artifacts/operations/YYYY-MM-DD-1101-source-audit.json`
+- `artifacts/operations/YYYY-MM-DD-1131-source-audit.json`
 
 然后运行 `node scripts/merge-source-audits.mjs --date=YYYY-MM-DD` 生成发布脚本使用的 `YYYY-MM-DD-source-audit.json`。后一次任务不得直接覆盖前一次快照。
 
@@ -80,15 +80,15 @@
   就绪证明记录候选、HTML和PNG哈希；发布脚本会重新计算并拒绝任何就绪后改动、缺失或非3840px的PNG。
 - 11:00后两个频道独立调用 `publish-minsheng.mjs` 与 `publish-brief.mjs`。成功一个就保留一个，失败频道继续展示上一期。
 - 发布后重建、测试、提交并推送 `main`，等待 Pages，再运行 `node scripts/check-daily-health.mjs --live=https://springhues.com --save`，将完整结果保存为当天 `health.json`。
-- 公开 `downloads/` PNG、站点发布和线上健康是发送成功的硬门禁。桌面历史镜像仍须尝试且不得覆盖旧文件；若仅因无人值守权限导致桌面镜像失败，在操作记录中标记 `DESKTOP_MIRROR_PENDING`，不撤销已验证的网站发布，由11:40再次补拷贝。
+- 公开 `downloads/` PNG、站点发布和线上健康是发送成功的硬门禁。桌面历史镜像仍须尝试且不得覆盖旧文件；若仅因无人值守权限导致桌面镜像失败，在操作记录中标记 `DESKTOP_MIRROR_PENDING`，不撤销已验证的网站发布，由11:31再次补拷贝。
 
-## 11:10与11:40决策顺序
+## 11:01与11:31决策顺序
 
 1. 读取健康检查的 `healthy`、`degraded`、`warnings`、`reasonCodes`、`transport` 和每频道 `content/png/deployment`。
 2. 今日双频道全部健康：只记录结果并补做尚未完成的桌面镜像，不重做内容、不发布、不触发Pages。
 3. 本地正式内容与PNG健康、仅线上部署失败：只处理部署，不重新生成内容。
 4. 正式内容缺失但pending合法：继续渲染、复制PNG、校验和发布。
-5. 账本显示研究未完成：只补 `missingSections`；沿用当天账本，不覆盖此前审计快照。11:40只处理11:10留下的明确失败项。
+5. 账本显示研究未完成：只补 `missingSections`；沿用当天账本，不覆盖此前审计快照。11:31只处理11:01留下的明确失败项。
 6. TLS证书异常且同域HTTP只读复核完整：视为 `healthy=true, degraded=true`，只报告TLS待修复。
 7. 只有来源完整性门禁通过后仍缺素材、频道内容无效、PNG无效、归档门禁失败或Pages明确失败，才按失败处理并通知人工。
 
@@ -104,4 +104,4 @@
 4. 两个当天PNG实际请求成功、`Content-Type=image/png`、非空且宽度3840px。
 5. `check-daily-health` 为 `healthy=true`；只允许规则定义的TLS证书问题表现为 `degraded=true`。
 
-任何一项未满足都保留上一期有效内容，并在11:40精确重试；11:40后仍失败才通知人工，不得伪造成功。
+任何一项未满足都保留上一期有效内容，并在11:31精确重试；11:31后仍失败才通知人工，不得伪造成功。
