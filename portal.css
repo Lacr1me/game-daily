@@ -96,53 +96,58 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hero {
   padding: 72px 0 65px;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 430px);
-  column-gap: 70px;
-  align-items: end;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: auto auto auto;
+  column-gap: 24px;
+  align-items: start;
 }
 .eyebrow {
-  grid-column: 1 / -1;
+  grid-column: 1;
+  grid-row: 1;
   margin: 0 0 28px;
   color: var(--red);
   font: 700 12px Arial, sans-serif;
   letter-spacing: .18em;
 }
-.hero-primary { min-width: 0; }
+.hero-primary,
+.hero-secondary { display: contents; }
 .hero h1 {
+  grid-column: 1;
+  grid-row: 2;
+  align-self: center;
+  min-width: 0;
   margin: 0;
   font: 800 clamp(56px, 6vw, 82px)/1.05 "SimSun", "Songti SC", serif;
   letter-spacing: -.035em;
 }
-.hero-secondary {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 0;
+.hero-personal-logo {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: center;
+  justify-self: center;
+  width: 168px;
+  height: 168px;
+  margin: 0;
 }
-.hero-personal-logo { width: 168px; height: 168px; margin: -28px auto 16px; }
 .hero-personal-logo img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .hero-copy {
-  margin: 0;
+  grid-column: 2;
+  grid-row: 3;
+  align-self: start;
+  justify-self: center;
+  max-width: 100%;
+  margin: 16px 0 0;
   color: var(--muted);
   font-size: 16px;
   line-height: 1.9;
   text-align: center;
 }
-.update-chip {
-  width: 100%;
-  margin-top: 22px;
-  padding-top: 18px;
-  border-top: 1px solid var(--line);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  color: var(--muted);
-  font-size: 13px;
+.quick-message-cta {
+  grid-column: 1;
+  grid-row: 3;
+  max-width: 620px;
+  margin-top: 45px;
 }
-.update-chip span { color: var(--ink); font: 700 15px Consolas, monospace; }
-.update-chip i { width: 32px; height: 1px; background: var(--line); }
-.quick-message-cta { max-width: 620px; margin-top: 45px; margin-left: 7px; }
 .form-eyebrow {
   margin: 0 0 8px;
   color: var(--red);
@@ -237,11 +242,9 @@ footer span { color: var(--ink); font: 700 16px "SimSun", serif; }
   .hero { display: block; padding: 55px 0 42px; }
   .eyebrow { margin-bottom: 25px; }
   .hero h1 { font-size: 52px; }
-  .quick-message-cta { margin-top: 38px; margin-left: 5px; }
-  .hero-secondary { margin-top: 54px; }
-  .hero-personal-logo { width: 136px; height: 136px; margin: -18px auto 10px; }
-  .hero-copy { max-width: 520px; }
-  .update-chip { margin-top: 25px; }
+  .quick-message-cta { margin-top: 38px; }
+  .hero-personal-logo { width: 136px; height: 136px; margin: 54px auto 10px; }
+  .hero-copy { max-width: 520px; margin: 0 auto; }
   .channels { grid-template-columns: 1fr; }
   .channel-card { min-height: 0; padding: 27px; }
   .channel-title { margin: 38px 0 22px; }
@@ -251,8 +254,6 @@ footer span { color: var(--ink); font: 700 16px "SimSun", serif; }
 
 @media (max-width: 560px) {
   .portal-brand b { font-size: 21px; }
-  .update-chip { flex-wrap: wrap; gap: 7px; }
-  .update-chip i { width: 18px; }
 }
 
 @media (max-width: 430px) {

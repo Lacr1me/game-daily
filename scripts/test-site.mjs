@@ -183,6 +183,9 @@ assert(!portalHtml.includes('<span class="game-mark"><i>'), "游戏频道不得�
 const portalCss = await readFile(path.join(root, "portal.css"), "utf8");
 assert(portalCss.includes(".channel-card.game{--accent:var(--blue)}"), "游戏频道卡必须统一使用蓝色强调色");
 assert(!portalCss.includes("--green:"), "首页模板不得保留游戏频道绿色主题变量");
+assert(!portalHtml.includes('class="update-chip"') && !portalCss.includes(".update-chip"), "首页不得保留发布时间轴及其样式");
+assert(portalCss.includes("grid-template-columns: repeat(2, minmax(0, 1fr));") && portalCss.includes("column-gap: 24px;"), "首页首屏双栏必须与日报卡片网格对齐");
+assert(portalCss.includes(".hero-primary,\n.hero-secondary { display: contents; }") && portalCss.includes("grid-row: 2;"), "首页标题与 Logo 必须位于可精确对齐的独立网格行");
 assert(gameHtml.includes('<a href="./">首页</a>') && civicHtml.includes('<a href="../">首页</a>'), "双频道导航入口必须统一命名为首页");
 assert(!gameHtml.includes("双频道首页") && !civicHtml.includes("双频道首页"), "频道导航不得继续显示双频道首页旧名称");
 for (const sharedHeaderClass of ["site-bar", "mini-brand", "archive-trigger"]) {
