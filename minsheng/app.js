@@ -8,6 +8,8 @@ const categoryConfig = {
 };
 
 const $ = (selector) => document.querySelector(selector);
+const desktopColumns = window.matchMedia("(min-width: 1181px)");
+let alignmentFrame;
 const publishedEditions = () => [...state.manifest.editions]
   .filter((edition) => new Date(edition.publishAt).getTime() <= Date.now())
   .sort((a, b) => b.date.localeCompare(a.date));
@@ -117,6 +119,44 @@ function render(brief) {
   $("#cutoffLine").textContent = `检索截止：${brief.cutoff}`;
   $("#productionTime").textContent = `制作时间：${brief.productionTime}`;
   updateArchiveActiveState();
+  scheduleStoryAlignment();
+}
+
+function scheduleStoryAlignment() {
+  cancelAnimationFrame(alignmentFrame);
+  alignmentFrame = requestAnimationFrame(alignStoryRows);
+}
+
+function alignStoryRows() {
+  const lists = ["#domesticStories", "#internationalStories", "#techStories"].map((selector) => $(selector));
+  const rows = lists.map((list) => [...list.children]);
+  const sideColumn = document.querySelector(".aligned-columns .side-column");
+  const newsColumns = [...document.querySelectorAll(".aligned-columns > .news-column")];
+
+  rows.flat().forEach((story) => story.style.removeProperty("height"));
+  sideColumn?.style.removeProperty("height");
+  if (!desktopColumns.matches || rows.some((group) => !group.length) || !sideColumn) return;
+
+  const rowCount = Math.min(...rows.map((group) => group.length));
+  const rowHeights = Array.from({ length: rowCount }, (_, index) =>
+    Math.ceil(Math.max(...rows.map((group) => group[index].getBoundingClientRect().height)))
+  );
+  applyRowHeights(rows, rowHeights);
+
+  let newsHeight = Math.ceil(Math.max(...newsColumns.map((column) => column.getBoundingClientRect().height)));
+  const sideNaturalHeight = Math.ceil(sideColumn.getBoundingClientRect().height);
+  if (sideNaturalHeight > newsHeight) {
+    const extraPerRow = Math.ceil((sideNaturalHeight - newsHeight) / rowCount);
+    applyRowHeights(rows, rowHeights.map((height) => height + extraPerRow));
+    newsHeight = Math.ceil(Math.max(...newsColumns.map((column) => column.getBoundingClientRect().height)));
+  }
+  sideColumn.style.height = `${newsHeight}px`;
+}
+
+function applyRowHeights(rows, heights) {
+  heights.forEach((height, index) => rows.forEach((group) => {
+    group[index].style.height = `${height}px`;
+  }));
 }
 
 function renderStories(container, stories) {
@@ -222,6 +262,8 @@ $("#archiveTrigger").addEventListener("click", () => $("#archiveDialog").showMod
 $("#closeArchive").addEventListener("click", () => $("#archiveDialog").close());
 $("#archiveDialog").addEventListener("click", (event) => { if (event.target === $("#archiveDialog")) $("#archiveDialog").close(); });
 $("#archiveDate").addEventListener("change", (event) => navigateToDate(event.target.value));
+window.addEventListener("resize", scheduleStoryAlignment);
+document.fonts?.ready.then(scheduleStoryAlignment);
 
 function scheduleRefresh() {
   const now = new Date(new Date().toLocaleString("en-US", { timeZone: "Asia/Shanghai" }));

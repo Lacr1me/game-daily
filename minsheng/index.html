@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../brand.css?v=20260824-download-png">
   <link rel="stylesheet" href="mobile-fix.css?v=20260824-download-png">
   <link rel="stylesheet" href="message-link.css?v=20260825-message-link">
+  <link rel="stylesheet" href="aligned-layout.css?v=20260825-aligned-layout">
 </head>
 <body>
   <header class="site-bar">
@@ -22,12 +23,12 @@
 
   <main class="newspaper" id="top" aria-busy="true">
     <section class="masthead">
-      <div class="title-block"><p>DAILY PUBLIC BRIEF</p><h1>民生日报</h1><div><i></i><span>每日35条精选新闻</span></div></div>
-      <div class="date-block"><span class="calendar" aria-hidden="true">日</span><div><time id="editionDate">—</time><b id="weekday">—</b><p id="lunarDate">—</p></div></div>
+      <div class="title-block"><p>DAILY PUBLIC BRIEF</p><h1>民生日报</h1><div><i></i><span>简简单单，读懂世界</span></div></div>
+      <div class="date-block"><span class="calendar" aria-hidden="true"><img src="../brand-assets/springhues-logo.png" alt=""></span><div><time id="editionDate">—</time><b id="weekday">—</b><p id="lunarDate">—</p></div></div>
       <div class="top-stories"><p class="section-kicker">TODAY'S TOP 3</p><h2>今日3件大事</h2><ol id="topStories"></ol></div>
     </section>
 
-    <section class="columns" aria-label="日报正文">
+    <section class="columns aligned-columns" aria-label="日报正文">
       <article class="news-column domestic"><header><span>01</span><div><small>CHINA & PUBLIC LIFE</small><h2>中国时政与民生</h2></div><b>10</b></header><div class="story-list" id="domesticStories"></div></article>
       <article class="news-column international"><header><span>02</span><div><small>GLOBAL AFFAIRS</small><h2>全球国际</h2></div><b>10</b></header><div class="story-list" id="internationalStories"></div></article>
       <article class="news-column tech"><header><span>03</span><div><small>SCIENCE & INNOVATION</small><h2>中国科技</h2></div><b>10</b></header><div class="story-list" id="techStories"></div></article>
@@ -49,6 +50,6 @@
   </dialog>
   <div class="loading" id="loading"><span></span><p>正在读取今日简报</p></div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script defer src="app.js?v=20260824-source-policy-v2"></script>
+  <script defer src="app.js?v=20260825-source-policy-v2-aligned-layout"></script>
 </body>
 </html>

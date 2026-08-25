@@ -163,9 +163,15 @@ for (const id of ["domesticStories", "internationalStories", "techStories", "aiS
   assert(civicHtml.includes(`id="${id}"`), `页面缺少 ${id}`);
 }
 assert(civicHtml.includes('href="mobile-fix.css'), "民生日报必须加载移动端布局修复样式");
+assert(civicHtml.includes('href="aligned-layout.css') && civicHtml.includes("简简单单，读懂世界"), "民生日报必须加载正式对齐样式与新版副标语");
+assert(civicHtml.includes('<span class="calendar" aria-hidden="true"><img src="../brand-assets/springhues-logo.png"'), "民生日报日期区必须使用个人 Logo");
 assert(civicHtml.includes('id="downloadPng"') && civicHtml.includes("下载当天 PNG 原图"), "民生日报底部必须提供 PNG 原图下载按钮");
 const mobileCss = await readFile(path.join(root, "minsheng", "mobile-fix.css"), "utf8");
 assert(/position:\s*static/.test(mobileCss), "移动端栏目标题必须参与正常文档流，避免覆盖首条新闻");
+const alignedCss = await readFile(path.join(root, "minsheng", "aligned-layout.css"), "utf8");
+assert(alignedCss.includes("--panel-border: #242424") && alignedCss.includes("@media (max-width: 1180px)"), "民生日报对齐样式必须包含黑色边框与响应式回退");
+const alignedCivicApp = await readFile(path.join(root, "minsheng", "app.js"), "utf8");
+assert(alignedCivicApp.includes("function alignStoryRows()") && alignedCivicApp.includes("scheduleStoryAlignment();"), "民生日报必须在渲染后动态同步新闻行高");
 
 const gameHtml = await readFile(path.join(root, "game", "index.html"), "utf8");
 const portalHtml = await readFile(path.join(root, "index.html"), "utf8");
@@ -224,7 +230,7 @@ assert(gameApp.includes('addEventListener("change", (event) => navigateToDate(ev
 assert(civicApp.includes("downloads/minsheng/${encodeURIComponent(brief.date)}.png"), "民生日报下载按钮必须跟随所选归档日期");
 assert(civicApp.includes("（来自于外网）") && civicApp.includes("formatSource"), "民生日报必须统一渲染外网来源标记");
 assert(gameHtml.includes("app.js?v=20260825-steam-25"), "游戏日报脚本必须使用当天25款Steam优惠修正缓存版本");
-assert(civicHtml.includes("app.js?v=20260824-source-policy-v2"), "民生日报脚本必须使用来源策略v2缓存版本");
+assert(civicHtml.includes("app.js?v=20260825-source-policy-v2-aligned-layout"), "民生日报脚本必须使用来源策略v2与对齐布局缓存版本");
 const gameCss = await readFile(path.join(root, "styles.css"), "utf8");
 assert(gameCss.includes(".deal-list") && gameCss.includes("overflow-y:auto"), "Steam 优惠必须在固定板块内纵向滚动");
 assert(gameCss.includes(".png-capture .deal-row:nth-child(n+7)"), "PNG 截图必须只展示前 6 款 Steam 优惠");
