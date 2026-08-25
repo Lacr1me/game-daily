@@ -223,7 +223,7 @@ assert(gameApp.includes('$("#archiveDate").min') && gameApp.includes('$("#archiv
 assert(gameApp.includes('addEventListener("change", (event) => navigateToDate(event.target.value))'), "游戏日报日期选择器必须支持按日期跳转");
 assert(civicApp.includes("downloads/minsheng/${encodeURIComponent(brief.date)}.png"), "民生日报下载按钮必须跟随所选归档日期");
 assert(civicApp.includes("（来自于外网）") && civicApp.includes("formatSource"), "民生日报必须统一渲染外网来源标记");
-assert(gameHtml.includes("app.js?v=20260825-steam-all"), "游戏日报脚本必须使用 Steam 全量滚动布局缓存版本");
+assert(gameHtml.includes("app.js?v=20260825-steam-25"), "游戏日报脚本必须使用当天25款Steam优惠修正缓存版本");
 assert(civicHtml.includes("app.js?v=20260824-source-policy-v2"), "民生日报脚本必须使用来源策略v2缓存版本");
 const gameCss = await readFile(path.join(root, "styles.css"), "utf8");
 assert(gameCss.includes(".deal-list") && gameCss.includes("overflow-y:auto"), "Steam 优惠必须在固定板块内纵向滚动");

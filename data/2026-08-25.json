@@ -1,9 +1,15 @@
 {
   "date": "2026-08-25",
   "issue": 4,
-  "cutoff": "2026-08-25 16:30（北京时间）",
-  "dataWindow": "2026-08-24 00:00 — 2026-08-25 16:30",
-  "sources": ["游民星空", "MC百科", "MineBBS", "Steam国区", "SteamDB"],
+  "cutoff": "2026-08-25 18:05（北京时间）",
+  "dataWindow": "2026-08-24 00:00 — 2026-08-25 18:05",
+  "sources": [
+    "游民星空",
+    "MC百科",
+    "MineBBS",
+    "Steam国区",
+    "SteamDB"
+  ],
   "features": [
     {
       "title": "《红色沙漠》入围科隆展两项大奖",
@@ -274,14 +280,14 @@
   ],
   "deals": [
     {
-      "name": "全面战争：战锤 3",
-      "discount": "-85%",
-      "original": "¥298",
-      "price": "¥44.7",
-      "label": "平史低",
-      "ends": "截至 08-27",
+      "name": "渔力全开",
+      "discount": "-38%",
+      "original": "¥33",
+      "price": "¥20.46",
+      "label": "今日特惠",
+      "ends": "截至 08-28",
       "image": "game-brief-assets/2026-08-25-steam-01.jpg",
-      "url": "https://store.steampowered.com/app/1142710/?l=schinese"
+      "url": "https://store.steampowered.com/app/4001890/?cc=cn&l=schinese"
     },
     {
       "name": "黑神话：悟空",
@@ -291,17 +297,87 @@
       "label": "新史低",
       "ends": "截至 08-26",
       "image": "game-brief-assets/2026-08-25-steam-02.jpg",
-      "url": "https://store.steampowered.com/app/2358720/?l=schinese"
+      "url": "https://store.steampowered.com/app/2358720/?cc=cn&l=schinese"
     },
     {
-      "name": "潜水员戴夫",
+      "name": "Grand Theft Auto V 增强版",
+      "discount": "-56%",
+      "original": "¥224",
+      "price": "¥98.56",
+      "label": "今日特惠",
+      "ends": "截至 09-08",
+      "image": "game-brief-assets/2026-08-25-steam-03.jpg",
+      "url": "https://store.steampowered.com/app/3240220/?cc=cn&l=schinese"
+    },
+    {
+      "name": "《使命召唤®：现代战争® III 2023》",
+      "discount": "-75%",
+      "original": "¥298",
+      "price": "¥74.5",
+      "label": "今日特惠",
+      "ends": "截至 08-26",
+      "image": "game-brief-assets/2026-08-25-steam-04.jpg",
+      "url": "https://store.steampowered.com/app/3595270/?cc=cn&l=schinese"
+    },
+    {
+      "name": "方舟: 生存飞升",
+      "discount": "-75%",
+      "original": "¥248",
+      "price": "¥62",
+      "label": "今日特惠",
+      "ends": "截至 09-08",
+      "image": "game-brief-assets/2026-08-25-steam-05.jpg",
+      "url": "https://store.steampowered.com/app/2399830/?cc=cn&l=schinese"
+    },
+    {
+      "name": "红色沙漠",
+      "discount": "-20%",
+      "original": "¥268",
+      "price": "¥214.4",
+      "label": "今日特惠",
+      "ends": "截至 09-09",
+      "image": "game-brief-assets/2026-08-25-steam-06.jpg",
+      "url": "https://store.steampowered.com/app/3321460/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Euro Truck Simulator 2",
+      "discount": "-75%",
+      "original": "¥88",
+      "price": "¥22",
+      "label": "今日特惠",
+      "ends": "截至 08-26",
+      "image": "game-brief-assets/2026-08-25-steam-07.jpg",
+      "url": "https://store.steampowered.com/app/227300/?cc=cn&l=schinese"
+    },
+    {
+      "name": "全面战争：战锤3",
+      "discount": "-85%",
+      "original": "¥298",
+      "price": "¥44.7",
+      "label": "平史低",
+      "ends": "截至 08-28",
+      "image": "game-brief-assets/2026-08-25-steam-08.jpg",
+      "url": "https://store.steampowered.com/app/1142710/?cc=cn&l=schinese"
+    },
+    {
+      "name": "潜水员戴夫 DAVE THE DIVER",
       "discount": "-50%",
       "original": "¥80",
       "price": "¥40",
       "label": "今日特惠",
-      "ends": "截至 08-30",
-      "image": "game-brief-assets/2026-08-25-steam-03.jpg",
-      "url": "https://store.steampowered.com/app/1868140/?l=schinese"
+      "ends": "截至 08-31",
+      "image": "game-brief-assets/2026-08-25-steam-09.jpg",
+      "url": "https://store.steampowered.com/app/1868140/?cc=cn&l=schinese"
+    },
+    {
+      "name": "潜行者2：切尔诺贝利之心",
+      "discount": "-30%",
+      "original": "¥268",
+      "price": "¥187.6",
+      "label": "今日特惠",
+      "ends": "截至 09-01",
+      "image": "game-brief-assets/2026-08-25-steam-10.jpg",
+      "url": "https://store.steampowered.com/app/1643320/?cc=cn&l=schinese"
     },
     {
       "name": "咩咩启示录",
@@ -310,8 +386,108 @@
       "price": "¥47.2",
       "label": "今日特惠",
       "ends": "截至 08-26",
-      "image": "game-brief-assets/2026-08-25-steam-04.jpg",
-      "url": "https://store.steampowered.com/app/1313140/?l=schinese"
+      "image": "game-brief-assets/2026-08-25-steam-11.jpg",
+      "url": "https://store.steampowered.com/app/1313140/?cc=cn&l=schinese"
+    },
+    {
+      "name": "生存日志",
+      "discount": "-15%",
+      "original": "¥46",
+      "price": "¥39.1",
+      "label": "今日特惠",
+      "ends": "截至 08-27",
+      "image": "game-brief-assets/2026-08-25-steam-12.jpg",
+      "url": "https://store.steampowered.com/app/4164790/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Microsoft Flight Simulator 2024",
+      "discount": "-30%",
+      "original": "¥348",
+      "price": "¥243.6",
+      "label": "今日特惠",
+      "ends": "截至 09-02",
+      "image": "game-brief-assets/2026-08-25-steam-13.jpg",
+      "url": "https://store.steampowered.com/app/2537590/?cc=cn&l=schinese"
+    },
+    {
+      "name": "ARK: Survival Evolved",
+      "discount": "-34%",
+      "original": "¥58",
+      "price": "¥38.28",
+      "label": "今日特惠",
+      "ends": "截至 09-08",
+      "image": "game-brief-assets/2026-08-25-steam-14.jpg",
+      "url": "https://store.steampowered.com/app/346110/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Cities: Skylines",
+      "discount": "-70%",
+      "original": "¥138",
+      "price": "¥41.4",
+      "label": "今日特惠",
+      "ends": "截至 08-28",
+      "image": "game-brief-assets/2026-08-25-steam-15.jpg",
+      "url": "https://store.steampowered.com/app/255710/?cc=cn&l=schinese"
+    },
+    {
+      "name": "沙金工业 Sandustry",
+      "discount": "-35%",
+      "original": "¥49",
+      "price": "¥31.85",
+      "label": "今日特惠",
+      "ends": "截至 08-28",
+      "image": "game-brief-assets/2026-08-25-steam-16.jpg",
+      "url": "https://store.steampowered.com/app/2764460/?cc=cn&l=schinese"
+    },
+    {
+      "name": "千恋＊万花",
+      "discount": "-48%",
+      "original": "¥88",
+      "price": "¥45.76",
+      "label": "今日特惠",
+      "ends": "截至 09-02",
+      "image": "game-brief-assets/2026-08-25-steam-17.jpg",
+      "url": "https://store.steampowered.com/app/1144400/?cc=cn&l=schinese"
+    },
+    {
+      "name": "No More Room in Hell 2",
+      "discount": "-35%",
+      "original": "¥108",
+      "price": "¥70.2",
+      "label": "今日特惠",
+      "ends": "截至 08-26",
+      "image": "game-brief-assets/2026-08-25-steam-18.jpg",
+      "url": "https://store.steampowered.com/app/292000/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Darkest Dungeon®",
+      "discount": "-85%",
+      "original": "¥88",
+      "price": "¥13.2",
+      "label": "今日特惠",
+      "ends": "截至 09-02",
+      "image": "game-brief-assets/2026-08-25-steam-19.jpg",
+      "url": "https://store.steampowered.com/app/262060/?cc=cn&l=schinese"
+    },
+    {
+      "name": "ARK: Bob's Tall Tales",
+      "discount": "-67%",
+      "original": "¥216",
+      "price": "¥71.28",
+      "label": "今日特惠",
+      "ends": "截至 09-08",
+      "image": "game-brief-assets/2026-08-25-steam-20.jpg",
+      "url": "https://store.steampowered.com/app/2881150/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Servant of the Lake",
+      "discount": "-25%",
+      "original": "¥33",
+      "price": "¥24.75",
+      "label": "今日特惠",
+      "ends": "截至 08-28",
+      "image": "game-brief-assets/2026-08-25-steam-21.jpg",
+      "url": "https://store.steampowered.com/app/3636770/?cc=cn&l=schinese"
     },
     {
       "name": "雨中冒险 2",
@@ -319,25 +495,45 @@
       "original": "¥80",
       "price": "¥26.4",
       "label": "今日特惠",
-      "ends": "截至 09-03",
-      "image": "game-brief-assets/2026-08-25-steam-05.jpg",
-      "url": "https://store.steampowered.com/app/632360/?l=schinese"
+      "ends": "截至 09-04",
+      "image": "game-brief-assets/2026-08-25-steam-22.jpg",
+      "url": "https://store.steampowered.com/app/632360/?cc=cn&l=schinese"
     },
     {
-      "name": "欧洲卡车模拟 2",
-      "discount": "-75%",
-      "original": "¥88",
-      "price": "¥22",
+      "name": "Rise of the Tomb Raider™",
+      "discount": "-85%",
+      "original": "¥147",
+      "price": "¥22.05",
       "label": "今日特惠",
-      "ends": "截至 08-26",
-      "image": "game-brief-assets/2026-08-25-steam-06.jpg",
-      "url": "https://store.steampowered.com/app/227300/?l=schinese"
+      "ends": "截至 09-08",
+      "image": "game-brief-assets/2026-08-25-steam-23.jpg",
+      "url": "https://store.steampowered.com/app/391220/?cc=cn&l=schinese"
+    },
+    {
+      "name": "双点博物馆",
+      "discount": "-33%",
+      "original": "¥158",
+      "price": "¥105.86",
+      "label": "今日特惠",
+      "ends": "截至 08-28",
+      "image": "game-brief-assets/2026-08-25-steam-24.jpg",
+      "url": "https://store.steampowered.com/app/2185060/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Minecraft Dungeons",
+      "discount": "-50%",
+      "original": "¥144",
+      "price": "¥72",
+      "label": "今日特惠",
+      "ends": "截至 09-01",
+      "image": "game-brief-assets/2026-08-25-steam-25.jpg",
+      "url": "https://store.steampowered.com/app/1672970/?cc=cn&l=schinese"
     }
   ],
   "trends": [
     "科隆游戏展开幕前夕，奖项提名、现场试玩和国产作品出海构成今日游戏资讯主线。",
     "平台独占、多平台宣传与经典IP重启同时升温，玩家对发行策略的关注不低于新作内容本身。",
     "Minecraft中文社区今日热度覆盖剧情冒险、空岛科技、田园养老和末日生存等多种方向。",
-    "Steam在售优惠保留6款经国区页面与价格历史核验的持续促销，截止日均未早于8月25日。"
+    "Steam国区特别优惠默认相关性第一页共有25款已逐条核验的热门促销；网页完整展示，静态PNG仅展示前6款。"
   ]
 }
