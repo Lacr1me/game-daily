@@ -136,7 +136,9 @@ async function inspectLiveAt(base, date, checkedAt, config, fetchImpl, transport
 
   const png = await component(async () => {
     const url = `${base}/${config.pngPath(date)}?health=${stamp}`;
-    const response = await fetchOk(url, fetchImpl);
+    // The 3840px game download can be several megabytes. Give the body enough
+    // time to arrive while keeping page/JSON probes on the shorter timeout.
+    const response = await fetchOk(url, fetchImpl, 60000);
     const contentType = response.headers.get("content-type") || "";
     if (!contentType.toLowerCase().startsWith("image/png")) throw codedError("PNG_CONTENT_TYPE_INVALID", `PNG Content-Type 无效：${contentType || "缺失"}`);
     const buffer = Buffer.from(await response.arrayBuffer());
@@ -204,10 +206,10 @@ async function readJson(file) {
   return JSON.parse(await readFile(file, "utf8"));
 }
 
-async function fetchOk(url, fetchImpl) {
+async function fetchOk(url, fetchImpl, timeoutMs = 15000) {
   const response = await fetchImpl(url, {
     headers: { "cache-control": "no-cache" },
-    signal: AbortSignal.timeout(15000)
+    signal: AbortSignal.timeout(timeoutMs)
   });
   if (!response.ok) throw codedError(`HTTP_${response.status}`, `HTTP ${response.status}: ${url}`);
   return response;
