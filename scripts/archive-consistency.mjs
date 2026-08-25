@@ -1,3 +1,7 @@
+import { readFile } from "node:fs/promises";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { GAME_DEAL_LIMITS } from "./game-lib.mjs";
 import { SOURCE_POLICY_VERSION } from "./minsheng-lib.mjs";
 
 export const GAME_DUPLICATE_LIMITS = {
@@ -39,8 +43,8 @@ export function assertGamePublishCandidate(candidate, manifest, priorBriefs) {
   if (!candidate.dataWindow.includes(candidate.date) || !candidate.dataWindow.includes(previousDate)) {
     throw new Error(`游戏日报 dataWindow 必须同时包含 ${previousDate} 和 ${candidate.date}`);
   }
-  if (!Array.isArray(candidate.deals) || candidate.deals.length < 6 || candidate.deals.length > 24) {
-    throw new Error("新发布游戏日报的 Steam 优惠必须为 6—24 款");
+  if (!Array.isArray(candidate.deals) || candidate.deals.length < GAME_DEAL_LIMITS.min || candidate.deals.length > GAME_DEAL_LIMITS.max) {
+    throw new Error(`新发布游戏日报的 Steam 优惠必须为 ${GAME_DEAL_LIMITS.min}—${GAME_DEAL_LIMITS.max} 款`);
   }
   for (const item of [...candidate.features, ...candidate.news, ...candidate.packs, ...candidate.deals]) {
     const basename = String(item.image || "").split("/").pop();
@@ -149,4 +153,21 @@ function parseIsoDate(value) {
   const date = new Date(`${value}T00:00:00Z`);
   if (Number.isNaN(date.getTime())) throw new Error(`无效日期：${value}`);
   return date;
+}
+
+if (path.resolve(process.argv[1] || "") === fileURLToPath(import.meta.url)) {
+  const channel = process.argv[2];
+  const candidateFile = process.argv[3];
+  if (!['game', 'minsheng'].includes(channel) || !candidateFile) {
+    throw new Error('用法：node scripts/archive-consistency.mjs <game|minsheng> <候选JSON路径>');
+  }
+  const manifestFile = channel === 'game' ? 'data/index.json' : 'data/minsheng/index.json';
+  const manifest = JSON.parse(await readFile(path.resolve(manifestFile), 'utf8'));
+  const candidate = JSON.parse(await readFile(path.resolve(candidateFile), 'utf8'));
+  const priorBriefs = await Promise.all(manifest.editions.map(async (edition) => (
+    JSON.parse(await readFile(path.resolve(edition.file), 'utf8'))
+  )));
+  if (channel === 'game') assertGamePublishCandidate(candidate, manifest, priorBriefs);
+  else assertMinshengPublishCandidate(candidate, manifest, priorBriefs);
+  console.log(`归档一致性门禁通过：${channel} ${candidate.date}，已比对最近 ${Math.min(7, priorBriefs.length)} 期。`);
 }

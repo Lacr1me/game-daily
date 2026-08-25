@@ -8,7 +8,9 @@ export const GAME_SECTION_COUNTS = {
   trends: 4
 };
 
-export const GAME_DEAL_LIMITS = { legacyMin: 4, publishMin: 6, max: 24 };
+export const GAME_DEAL_LIMITS = { legacyMin: 4, min: 6, max: 24 };
+export const GAME_DEAL_POLICY_EFFECTIVE_DATE = "2026-08-25";
+export const GAME_HEAT_EVIDENCE_EFFECTIVE_DATE = "2026-08-25";
 
 const TEXT_FIELDS = {
   features: ["title", "summary", "source", "date", "image", "url"],
@@ -57,8 +59,9 @@ export function validateGame(brief, { expectedDate } = {}) {
       errors.push(`${section} 必须为 ${count} 条`);
     }
   }
-  if (!Array.isArray(brief.deals) || brief.deals.length < GAME_DEAL_LIMITS.legacyMin || brief.deals.length > GAME_DEAL_LIMITS.max) {
-    errors.push(`deals 必须为 ${GAME_DEAL_LIMITS.legacyMin}—${GAME_DEAL_LIMITS.max} 条`);
+  const minimumDeals = brief.date >= GAME_DEAL_POLICY_EFFECTIVE_DATE ? GAME_DEAL_LIMITS.min : GAME_DEAL_LIMITS.legacyMin;
+  if (!Array.isArray(brief.deals) || brief.deals.length < minimumDeals || brief.deals.length > GAME_DEAL_LIMITS.max) {
+    errors.push(`deals 必须为 ${minimumDeals}—${GAME_DEAL_LIMITS.max} 条`);
   }
 
   for (const section of ["features", "news", "packs", "mods", "deals"]) {
@@ -87,6 +90,12 @@ export function validateGame(brief, { expectedDate } = {}) {
   (brief.mods || []).forEach((item, index) => validateDatedItem(item, brief.date, 30, `mods 第${index + 1}条`, errors));
   (brief.packs || []).forEach((item, index) => {
     if (!Number.isInteger(item.heat) || item.heat < 0 || item.heat > 100) errors.push(`packs 第${index + 1}条 heat 必须为0—100整数`);
+    if (brief.date >= GAME_HEAT_EVIDENCE_EFFECTIVE_DATE) {
+      requireText(item, "heatEvidenceAt", `packs 第${index + 1}条`, errors);
+      requireText(item, "heatSignals", `packs 第${index + 1}条`, errors);
+      validateDatedItem({ date: item.heatEvidenceAt }, brief.date, 1, `packs 第${index + 1}条热度证据`, errors);
+      if (containsMarkup(item.heatSignals)) errors.push(`packs 第${index + 1}条 heatSignals 不得包含 HTML 标签`);
+    }
   });
   (brief.deals || []).forEach((item, index) => {
     const label = `deals 第${index + 1}条`;

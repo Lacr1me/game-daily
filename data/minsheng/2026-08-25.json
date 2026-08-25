@@ -1,0 +1,411 @@
+{
+  "date": "2026-08-25",
+  "issue": 4,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期二",
+  "lunarDate": "农历丙午年七月十三",
+  "cutoff": "2026-08-25 16:30（北京时间）",
+  "productionTime": "2026-08-25 16:30（北京时间）",
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "反跨境腐败法草案首次提请审议",
+        "summary": "草案共六章四十七条，拟明确反跨境腐败工作的原则、适用范围、政策主张以及相关部门的职责分工与协作机制。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://society.people.com.cn/n1/2026/0825/c1008-40785804.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "医疗保障法草案三审稿强化参保人权益",
+        "summary": "三审稿增加长期护理保险等内容，并进一步完善参保、待遇支付和经办服务相关规则，以加强参保人的制度性权益保障。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://society.people.com.cn/n1/2026/0825/c1008-40785875.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "企业破产法修订草案二审稿完善多项规则",
+        "summary": "修订草案二审稿围绕个人破产、破产保护、重整和跨境破产等制度继续完善规则，回应市场退出和风险处置现实需要。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://society.people.com.cn/n1/2026/0825/c1008-40785885.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "两台风可能登陆 中央气象台升级预警",
+        "summary": "“紫檀”和“沙德尔”预计先后影响我国沿海，中央气象台将台风预警升级为橙色，相关地区加强防风防雨与转移避险。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://society.people.com.cn/n1/2026/0825/c1008-40785884.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "水法修订草案拟加快构建国家水网",
+        "summary": "水法修订草案提出加强水资源统筹调配和国家水网建设，并从节约保护、配置利用与风险防控等方面完善制度安排。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://www.chinanews.com.cn/gn/2026/08-25/10683876.shtml"
+      },
+      {
+        "id": "domestic-06",
+        "title": "水利部针对五省区启动洪水防御应急响应",
+        "summary": "针对持续强降雨与江河洪水风险，水利部面向五省区启动洪水防御四级应急响应，要求强化监测预报和工程调度。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://www.chinanews.com.cn/gn/2026/08-25/10683872.shtml"
+      },
+      {
+        "id": "domestic-07",
+        "title": "新生购票和铁路携带物品指南发布",
+        "summary": "铁路出行提示面向开学季梳理新生优惠票购买、证件核验和行李携带规定，提醒旅客提前确认乘车信息与禁限带物品。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://www.chinanews.com.cn/sh/2026/08-25/10683859.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "title": "我国拟建立自动驾驶汽车道路安全制度",
+        "summary": "道路交通安全相关修法拟纳入自动驾驶汽车管理，围绕道路测试、通行条件、驾驶责任和事故处置建立更清晰的制度框架。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://www.chinanews.com.cn/gn/2026/08-25/10683814.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "title": "二十六款应用及SDK因个人信息问题被通报",
+        "summary": "有关检查发现部分应用和SDK存在违规收集个人信息、超范围索取权限等问题，相关企业被要求限期完成整改。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://www.chinanews.com.cn/cj/2026/08-25/10683816.shtml"
+      },
+      {
+        "id": "domestic-10",
+        "title": "动力舟桥投入广西宁明洪涝灾区救援",
+        "summary": "受台风影响，广西宁明部分地区被洪水围困，被称作“救援航母”的动力舟桥完成铺设并投入人员转移和物资运输。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://pic.people.com.cn/n1/2026/0825/c1016-40785704.html"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "加拿大强硬回应美国关税升级威胁",
+        "summary": "加拿大政界人士表示不会接受不平等双边关系，并讨论经济纾困、出口限制等应对举措，加美贸易摩擦再度升温。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://world.people.com.cn/n1/2026/0825/c1002-40785324.html"
+      },
+      {
+        "id": "international-02",
+        "title": "美国宣布对伊朗实施新一轮经济施压",
+        "summary": "美国财政部门宣布发起针对伊朗的新一轮“经济孤立”措施，伊朗问题的制裁与外交博弈继续影响地区安全预期。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://world.people.com.cn/n1/2026/0825/c1002-40785323.html"
+      },
+      {
+        "id": "international-03",
+        "title": "法国考虑从今秋起实施高中手机禁令",
+        "summary": "法国政府称高中禁用手机措施可能随秋季开学实施，相关立法将围绕校园秩序、学习专注与学生数字使用边界展开。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://world.people.com.cn/n1/2026/0825/c1002-40785661.html"
+      },
+      {
+        "id": "international-04",
+        "title": "欧洲野火与干旱令历史遗留弹药频现",
+        "summary": "高温、野火和水位下降使一战二战时期未爆弹药在欧洲多地显露，消防和排爆人员面临额外安全风险。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://world.people.com.cn/n1/2026/0825/c1002-40785663.html"
+      },
+      {
+        "id": "international-05",
+        "title": "美国是否重建海湾军事基地陷入权衡",
+        "summary": "在地区冲突持续背景下，美国围绕受损海湾基地的重建成本、防御能力与战略信号展开争论，决策仍存不确定性。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://world.people.com.cn/n1/2026/0825/c1002-40785681.html"
+      },
+      {
+        "id": "international-06",
+        "title": "日本市民团体举办日军毒气战史料展",
+        "summary": "横滨市民团体通过史料与证言揭露日军制造并在侵华战争中使用毒气的暴行，展览持续至八月二十八日。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://world.people.com.cn/n1/2026/0825/c1002-40785325.html"
+      },
+      {
+        "id": "international-07",
+        "title": "中国与瑞士完成自贸协定升级谈判",
+        "summary": "双方宣布完成自由贸易协定升级谈判并签署谅解备忘录，后续将推进国内程序与成果落地，深化经贸合作。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://world.people.com.cn/n1/2026/0825/c1002-40785352.html"
+      },
+      {
+        "id": "international-08",
+        "title": "中企承建塞内加尔高速公路提前通车",
+        "summary": "姆布尔至考拉克高速公路项目在塞内加尔提前通车，将改善区域交通连接，并为沿线人员和货物往来提供便利。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://world.people.com.cn/n1/2026/0825/c1002-40785353.html"
+      },
+      {
+        "id": "international-09",
+        "title": "北欧多国重新评估核电建设",
+        "summary": "瑞典等北欧国家讨论新建小型模块化反应堆和扩大核电投资，以应对电力需求、能源安全与减排目标之间的平衡。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://world.people.com.cn/n1/2026/0825/c1002-40785405.html"
+      },
+      {
+        "id": "international-10",
+        "title": "老挝推出多项措施促进经济平稳增长",
+        "summary": "老挝政府在上半年经济增长基础上，继续通过稳定宏观环境、改善营商条件和吸引投资推动实现年度增长目标。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://world.people.com.cn/n1/2026/0825/c1002-40785403.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "长征六号丙遥一火箭一箭七星发射成功",
+        "summary": "火箭从太原卫星发射中心升空，将中科卫星、木铎卫星等七颗卫星送入预定轨道，发射任务取得成功。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://finance.people.com.cn/n1/2026/0825/c1004-40785864.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "可重构光学算术逻辑单元芯片研制成功",
+        "summary": "研究团队研制可重构光学算术逻辑单元芯片，为在统一器件上灵活执行多类计算任务、提升光计算效率提供新方案。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://www.news.cn/tech/20260825/817caf3d63bd4e2088f08581816223aa/c.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "天文学家确认已知最大星系边界",
+        "summary": "观测研究确认一个尺度相当于十七个银河系并排的巨大星系边界，为理解极端星系形成和演化提供新的观测样本。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://www.news.cn/tech/20260825/7c264714fe0d44d29973f4d2910620b5/c.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "国内手机出货量超九成八支持北斗定位",
+        "summary": "上半年国内手机出货量中支持北斗定位的产品占比超过百分之九十八，卫星导航能力进一步融入大众消费终端。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://www.news.cn/tech/20260825/958e80841270489f8ccc8760913ec158/c.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "零碳工厂建设迎来路线图",
+        "summary": "相关建设路线围绕能效提升、清洁能源替代、碳管理与产业协同展开，为制造业零碳转型提供分阶段实施参考。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://www.news.cn/tech/20260825/65268ad1935b40698840b6fbaa6faf53/c.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "中国机器人产业加速拓展规模化应用",
+        "summary": "世界机器人大会集中展示生产、服务和特种场景新产品，国内产业收入与应用深度继续增长，规模化落地提速。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-24",
+        "url": "https://www.news.cn/tech/20260824/1a13ce89e8a24dc0b2cc30b722fb4840/c.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "神舟二十三号乘组在轨将满三个月",
+        "summary": "中国空间站发布乘组在轨工作动态，航天员持续开展科学实验、设备维护与健康保障等任务，驻留进展平稳。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://www.news.cn/tech/20260825/db2b5facd0484c8a81b633c30f84d290/c.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "全球电子通信磁性元件检测规范发布",
+        "summary": "由中国牵头制定的统一技术规范发布，将为电子通信磁性元件的检测方法和结果比对提供一致标准，便利产业协作。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://www.chinanews.com.cn/cj/2026/08-25/10683839.shtml"
+      },
+      {
+        "id": "tech-09",
+        "title": "具身智能主题乐园项目加快落地",
+        "summary": "长隆与智元合作探索具身智能主题乐园，把机器人互动、文旅体验与场景训练结合，推动产品在开放环境中验证。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://www.news.cn/tech/20260825/e7ec7a3fd0e64dab8bb1970eb851e17e/c.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "多类机器人加快进入生产生活场景",
+        "summary": "从制造、仓储到商业服务，多类机器人正在承担重复或高强度任务，产业关注点转向可靠性、成本和持续运行能力。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://www.news.cn/tech/20260825/2923d2da5dd9485f93de8d978a574992/c.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "人工智能解码人类基因关键起始子特征",
+        "summary": "研究人员利用人工智能分析DNA起始子序列特征，为理解基因转录调控规律和识别关键功能片段提供新工具。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://www.news.cn/tech/20260825/ae394483517640f59eb35598547b2bd2/c.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "世界模型落地面临技术与数据双重难题",
+        "summary": "机器人大会讨论世界模型在感知、推理和行动闭环中的应用，数据质量、场景泛化和训练成本仍是产业化关键瓶颈。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://www.news.cn/tech/20260825/b11405bc5fcf4a8592aa83556609be50/c.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "多智能体协作走向真实业务仍有门槛",
+        "summary": "让不同智能体共同完成任务需要解决协议兼容、权限边界、上下文共享和结果校验问题，可靠协作成为落地重点。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-24",
+        "url": "https://www.news.cn/tech/20260824/3c2efe0d138a4339b5566423a5bc384e/c.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "人形机器人障碍赛检验复杂环境能力",
+        "summary": "世界人形机器人运动会设置跨越障碍等赛项，以连续动作完成度检验机器人的感知、控制、平衡和现场适应能力。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://www.news.cn/tech/20260825/29a95bb4558545f6be87e27411102a55/c.html"
+      },
+      {
+        "id": "ai-05",
+        "title": "全球人工智能治理共识加快转向落实",
+        "summary": "国际观察认为，政府间对话和联合国治理机制正逐步形成多边协作框架，发展、安全与普惠仍需同步推进。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25",
+        "url": "https://world.people.com.cn/n1/2026/0825/c1002-40785883.html"
+      }
+    ]
+  },
+  "topStoryIds": ["domestic-04", "international-01", "tech-01"],
+  "metrics": [
+    {
+      "kind": "gold",
+      "icon": "🥇",
+      "name": "国内金价",
+      "value": "Au99.99：1000.00元/克",
+      "note": "2026-08-25延时最新价",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/h5_sjzx/yshq",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "北京油价",
+      "value": "92号7.78元/升；95号8.29元/升",
+      "note": "2026-08-14起最高零售价",
+      "source": "北京市发展和改革委员会",
+      "sourceUrl": "https://fgw.beijing.gov.cn/bmcx/djcx/cxldj/202003/t20200331_1752783.htm",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "布伦特原油",
+      "value": "90.79美元/桶",
+      "note": "2026-08-24 09:05期货盘中价",
+      "source": "第一财经",
+      "sourceUrl": "https://www.yicai.com/news/103330058.html",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "international_oil_wti",
+      "icon": "🛢️",
+      "name": "WTI原油",
+      "value": "85.42美元/桶",
+      "note": "2026-08-24 09:05期货盘中价",
+      "source": "第一财经",
+      "sourceUrl": "https://www.yicai.com/news/103330058.html",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "usd_cny",
+      "icon": "💵",
+      "name": "人民币兑美元",
+      "value": "1美元＝6.7852元人民币",
+      "note": "2026-08-25中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "eur_cny",
+      "icon": "💶",
+      "name": "人民币兑欧元",
+      "value": "1欧元＝7.8791元人民币",
+      "note": "2026-08-25中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "jpy_cny",
+      "icon": "💴",
+      "name": "人民币兑日元",
+      "value": "100日元＝4.2518元人民币",
+      "note": "2026-08-25中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/",
+      "sourceOrigin": "china"
+    }
+  ],
+  "metricsCutoff": "2026-08-25 16:30（北京时间）",
+  "metricSources": ["上海黄金交易所", "北京市发展和改革委员会", "第一财经", "中国外汇交易中心"],
+  "observation": "今天的公共议题集中在制度完善与灾害应对：医保、破产、反跨境腐败和自动驾驶规则同步推进，两场台风及洪水风险则把预警、调度和人员转移置于前线。国际上，关税、制裁与能源安全继续牵动政策选择。科技侧从航天发射、北斗终端到光计算芯片和机器人规模化应用，呈现由单点突破走向场景验证的趋势；人工智能的重点也从模型能力延伸到基因研究、多智能体协作和全球治理。",
+  "sources": ["人民网", "中国新闻网", "新华网" ]
+}

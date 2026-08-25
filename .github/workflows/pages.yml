@@ -29,6 +29,7 @@ jobs:
         run: node scripts/build-embedded.mjs
       - name: Run full site tests
         run: |
+          node scripts/test-daily-operations.mjs
           node scripts/test-site.mjs
           node scripts/test-messages.mjs
       - name: Build static site

@@ -1,4 +1,5 @@
 import path from "node:path";
+import { SOURCE_REGISTRY, canonicalSourceId, requiredSourceIds } from "./source-registry.mjs";
 
 export const CATEGORY_COUNTS = { domestic: 10, international: 10, tech: 10, ai: 5 };
 export const REQUIRED_METRIC_KINDS = ["gold", "domestic_oil", "international_oil", "usd_cny", "eur_cny", "jpy_cny"];
@@ -17,9 +18,6 @@ const CHINA_DATA_DOMAINS = [
   "sse.com.cn", "szse.cn", "ine.cn", "shfe.com.cn", "csindex.com.cn",
   "cnfin.com", "cs.com.cn", "cnstock.com", "stcn.com", "yicai.com"
 ];
-const GENERAL_NEWS_AUDIT_SOURCES = ["新华网", "人民网", "央视网", "中国新闻网", "央广网", "光明网", "中国经济网"];
-const TECHNOLOGY_NEWS_AUDIT_SOURCES = ["中国科技网", "新华网科技", "人民网科技", "央视网科技", "中国新闻网科技"];
-
 export function beijingDate(now = new Date()) {
   const parts = new Intl.DateTimeFormat("en-CA", {
     timeZone: "Asia/Shanghai", year: "numeric", month: "2-digit", day: "2-digit"
@@ -153,9 +151,7 @@ export function validateMinshengSourceAudit(brief, audit) {
     const stories = brief.sections?.[category] || [];
     const actualChina = stories.filter((story) => story.sourceOrigin === "china").length;
     const actualExternal = stories.filter((story) => story.sourceOrigin === "external").length;
-    const requiredSources = category === "tech" || category === "ai"
-      ? TECHNOLOGY_NEWS_AUDIT_SOURCES
-      : [...GENERAL_NEWS_AUDIT_SOURCES, ...(category === "domestic" && actualExternal > 0 ? ["省级党媒／政府新闻发布平台"] : [])];
+    const requiredSources = requiredSourceIds("minsheng", category);
     validateAuditEntry(audit.categories?.[category], category, target, actualChina, actualExternal, requiredSources, errors);
   }
   const metrics = brief.metrics || [];
@@ -167,7 +163,7 @@ export function validateMinshengSourceAudit(brief, audit) {
     metrics.length,
     metricChina,
     metricExternal,
-    ["国内官方机构或交易所", "国内权威财经媒体"],
+    requiredSourceIds("minsheng", "metrics"),
     errors
   );
   if (errors.length) throw new Error(`民生日报来源审计失败：\n- ${errors.join("\n- ")}`);
@@ -262,8 +258,11 @@ function validateAuditEntry(entry, label, target, actualChina, actualExternal, r
   const attempted = Array.isArray(entry.attemptedChinaSources)
     ? entry.attemptedChinaSources.filter((value) => typeof value === "string" && value.trim()).map((value) => value.trim())
     : [];
-  for (const source of requiredSources) {
-    if (!attempted.includes(source)) errors.push(`${label} 未记录尝试国内来源：${source}`);
+  const attemptedIds = new Set(attempted.map(canonicalSourceId).filter(Boolean));
+  const unknownSources = attempted.filter((source) => !canonicalSourceId(source));
+  if (unknownSources.length) errors.push(`${label} 包含来源注册表无法识别的名称：${unknownSources.join("、")}`);
+  for (const sourceId of requiredSources) {
+    if (!attemptedIds.has(sourceId)) errors.push(`${label} 未记录尝试国内来源：${SOURCE_REGISTRY.sources[sourceId].label}`);
   }
   for (const field of ["usableChinaCandidates", "rejectedChinaCandidates", "finalChinaCount", "finalExternalCount"]) {
     if (!Number.isInteger(entry[field]) || entry[field] < 0) errors.push(`${label} ${field} 必须为非负整数`);

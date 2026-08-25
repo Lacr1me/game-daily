@@ -4,6 +4,7 @@ import { assertGameArchiveConsistency, assertManifestEdition, assertMinshengArch
 import { assertPublishTime as assertGamePublishTime, beijingDate, validateGame } from "./game-lib.mjs";
 import { httpFallbackBase, tlsCertificateCode } from "./health-lib.mjs";
 import { SOURCE_POLICY_VERSION, assertPublishTime as assertMinshengPublishTime, validateMinsheng, validateMinshengSourceAudit } from "./minsheng-lib.mjs";
+import { requiredSourceLabels } from "./source-registry.mjs";
 
 const root = process.cwd();
 const civicManifest = await readJson("data/minsheng/index.json");
@@ -11,7 +12,7 @@ const gameManifest = await readJson("data/index.json");
 
 for (const [name, manifest] of [["民生", civicManifest], ["游戏", gameManifest]]) {
   assert(manifest.timezone === "Asia/Shanghai", `${name}频道时区必须为 Asia/Shanghai`);
-  assert(manifest.generateAt === "10:30", `${name}频道必须在 10:30 开始制作`);
+  assert(manifest.generateAt === "09:30", `${name}频道必须在 09:30 开始制作`);
   assert(manifest.publishAt === "11:00", `${name}频道必须在 11:00 发布`);
   assert(Array.isArray(manifest.editions) && manifest.editions.length > 0, `${name}频道必须至少有一期归档`);
   assert(new Set(manifest.editions.map((edition) => edition.date)).size === manifest.editions.length, `${name}归档日期不能重复`);
@@ -281,13 +282,11 @@ function makeSourcePolicyBrief(brief) {
   return candidate;
 }
 function makeSourceAudit(brief) {
-  const generalSources = ["新华网", "人民网", "央视网", "中国新闻网", "央广网", "光明网", "中国经济网"];
-  const technologySources = ["中国科技网", "新华网科技", "人民网科技", "央视网科技", "中国新闻网科技"];
-  const entry = (items, attemptedChinaSources) => {
+  const entry = (items, section) => {
     const finalChinaCount = items.filter((item) => item.sourceOrigin === "china").length;
     const finalExternalCount = items.filter((item) => item.sourceOrigin === "external").length;
     return {
-      attemptedChinaSources,
+      attemptedChinaSources: requiredSourceLabels("minsheng", section),
       usableChinaCandidates: finalChinaCount,
       rejectedChinaCandidates: finalExternalCount ? 1 : 0,
       rejectionReasons: finalExternalCount ? ["候选超出时效或与既有新闻重复"] : [],
@@ -300,12 +299,12 @@ function makeSourceAudit(brief) {
     date: brief.date,
     sourcePolicyVersion: SOURCE_POLICY_VERSION,
     categories: {
-      domestic: entry(brief.sections.domestic, generalSources),
-      international: entry(brief.sections.international, generalSources),
-      tech: entry(brief.sections.tech, technologySources),
-      ai: entry(brief.sections.ai, technologySources)
+      domestic: entry(brief.sections.domestic, "domestic"),
+      international: entry(brief.sections.international, "international"),
+      tech: entry(brief.sections.tech, "tech"),
+      ai: entry(brief.sections.ai, "ai")
     },
-    metrics: entry(brief.metrics, ["国内官方机构或交易所", "国内权威财经媒体"])
+    metrics: entry(brief.metrics, "metrics")
   };
 }
 function assertThrows(callback, message) {
