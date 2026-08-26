@@ -33,6 +33,12 @@ export function requiredSourceLabels(channel, section) {
   return requiredSourceIds(channel, section).map((id) => SOURCE_REGISTRY.sources[id].label);
 }
 
+export function allowedSourceIds(channel, section) {
+  const required = requiredSourceIds(channel, section);
+  const optional = SOURCE_REGISTRY.optionalRequirements?.[channel]?.[section] || [];
+  return [...new Set([...required, ...optional])];
+}
+
 export function channelSections(channel) {
   const sections = SOURCE_REGISTRY.requirements?.[channel];
   if (!sections) throw new Error(`未知日报频道：${channel}`);

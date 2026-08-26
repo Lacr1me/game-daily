@@ -1,0 +1,433 @@
+{
+  "date": "2026-08-26",
+  "issue": 5,
+  "cutoff": "2026-08-26 12:48（北京时间）",
+  "dataWindow": "2026-08-25 00:00 — 2026-08-26 12:48",
+  "sources": ["游民星空", "MC百科", "MineBBS", "Steam国区", "SteamDB"],
+  "features": [
+    {
+      "title": "《怪物猎人：旅人》公开原创古龙光稜龙",
+      "summary": "新公开的原创古龙以光与大地意象构成核心设计，手游项目在科隆展期间继续补充怪物阵容与世界观信息。",
+      "source": "游民星空／官方公开素材",
+      "date": "2026-08-26",
+      "image": "game-brief-assets/2026-08-26-feature-01.jpg",
+      "url": "https://www.gamersky.com/news/202608/2196318.shtml"
+    },
+    {
+      "title": "科隆游戏展集中呈现中国游戏新阵容",
+      "summary": "多家中国工作室在开幕夜展示新作与实机内容，国产单机和跨平台项目的全球曝光度成为当天行业焦点。",
+      "source": "游民星空／科隆游戏展",
+      "date": "2026-08-26",
+      "image": "game-brief-assets/2026-08-26-feature-02.jpg",
+      "url": "https://www.gamersky.com/news/202608/2196239.shtml"
+    }
+  ],
+  "news": [
+    {
+      "title": "《湮灭之潮》新预告引发角色形象讨论",
+      "summary": "科隆展新预告展示不同镜头中的女主形象与战斗画面，玩家围绕建模变化和最终呈现展开讨论。",
+      "source": "游民星空／官方预告",
+      "date": "2026-08-26",
+      "image": "game-brief-assets/2026-08-26-news-01.jpg",
+      "url": "https://www.gamersky.com/news/202608/2196297.shtml"
+    },
+    {
+      "title": "国产《动物朋克》公开全新实机演示",
+      "summary": "官方发布新的玩法片段并向社区致谢，展示动物角色、都市探索和动作战斗等核心内容。",
+      "source": "游民星空／官方公开素材",
+      "date": "2026-08-26",
+      "image": "game-brief-assets/2026-08-26-news-02.jpg",
+      "url": "https://www.gamersky.com/news/202608/2196230.shtml"
+    },
+    {
+      "title": "米哈游新作《源初之结》获同行关注",
+      "summary": "《剑星》制作人金亨泰评价科隆展公开内容超出预期，新作的视觉表现与动作设计迅速吸引行业讨论。",
+      "source": "游民星空／开发者公开信息",
+      "date": "2026-08-26",
+      "image": "game-brief-assets/2026-08-26-news-03.jpg",
+      "url": "https://www.gamersky.com/news/202608/2196277.shtml"
+    },
+    {
+      "title": "新版Switch 2在西班牙突然开售",
+      "summary": "新款主机采用可拆卸电池设计，容量略有调整；零售端在没有提前预告的情况下开始销售。",
+      "source": "游民星空／海外零售信息",
+      "date": "2026-08-26",
+      "image": "game-brief-assets/2026-08-26-news-04.jpg",
+      "url": "https://www.gamersky.com/news/202608/2196244.shtml"
+    },
+    {
+      "title": "国产动作游戏《古神：风里希》亮相科隆",
+      "summary": "新实机展示第三人称动作、巨型兵器和东方神话意象，项目继续完善海外名称与展示信息。",
+      "source": "游民星空／科隆游戏展",
+      "date": "2026-08-26",
+      "image": "game-brief-assets/2026-08-26-news-05.jpg",
+      "url": "https://www.gamersky.com/news/202608/2196225.shtml"
+    },
+    {
+      "title": "《巫师3》旧时曲DLC公布剧情与玩法",
+      "summary": "杰洛特将前往雷天哈普调查黑暗诅咒，新区域、新武器和选择后果构成这次追加内容主线。",
+      "source": "游民星空／CDPR",
+      "date": "2026-08-26",
+      "image": "game-brief-assets/2026-08-26-news-06.jpg",
+      "url": "https://www.gamersky.com/news/202608/2196211.shtml"
+    },
+    {
+      "title": "《剑星》制作人称赞《湮灭之潮》表现",
+      "summary": "金亨泰公开肯定国产动作新作的视觉与演出效果，同行评价进一步推高科隆展预告关注度。",
+      "source": "游民星空／开发者公开信息",
+      "date": "2026-08-26",
+      "image": "game-brief-assets/2026-08-26-news-07.jpg",
+      "url": "https://www.gamersky.com/news/202608/2196229.shtml"
+    },
+    {
+      "title": "《昭和米国物语》公开IGN实机试玩",
+      "summary": "试玩内容呈现复古怪诞的架空世界、多武器切换与愤怒循环战斗，房车营地承担养成和整备功能。",
+      "source": "游民星空／IGN",
+      "date": "2026-08-26",
+      "image": "game-brief-assets/2026-08-26-news-08.jpg",
+      "url": "https://www.gamersky.com/news/202608/2196234.shtml"
+    },
+    {
+      "title": "CDPR确认《巫师4》计划二〇二八年推出",
+      "summary": "发售窗口公布后公司股价出现波动，市场重新评估开发周期、成本投入与系列新作预期。",
+      "source": "游民星空／CDPR",
+      "date": "2026-08-26",
+      "image": "game-brief-assets/2026-08-26-news-09.jpg",
+      "url": "https://www.gamersky.com/news/202608/2196247.shtml"
+    },
+    {
+      "title": "《流放之路2》正式版定档十二月十一日",
+      "summary": "Grinding Gear Games公布一点〇版本上线时间，抢先体验阶段将逐步转入正式发行与长期更新节奏。",
+      "source": "游民星空／Grinding Gear Games",
+      "date": "2026-08-26",
+      "image": "game-brief-assets/2026-08-26-news-10.jpg",
+      "url": "https://www.gamersky.com/news/202608/2196209.shtml"
+    }
+  ],
+  "packs": [
+    {
+      "name": "All the Mods 10",
+      "summary": "面向一二一版本的大型科技魔法水槽包，整合四百余模组并以NeoForge承担持续更新。",
+      "category": "科技／魔法／大型",
+      "heat": 76,
+      "heatEvidenceAt": "2026-08-26",
+      "heatSignals": "MC百科8月26日实时页面显示昨日指数847，高于站内昨日平均指数113.177",
+      "source": "MC百科·昨日指数847",
+      "image": "game-brief-assets/2026-08-26-pack-01.jpg",
+      "url": "https://www.mcmod.cn/modpack/851.html"
+    },
+    {
+      "name": "All the Mods 10: To the Sky",
+      "summary": "把ATM10的科技、魔法与任务体系改造为空岛流程，从单方块起步逐步建立自动化天空帝国。",
+      "category": "空岛／科技／任务",
+      "heat": 64,
+      "heatEvidenceAt": "2026-08-26",
+      "heatSignals": "MC百科8月26日实时页面显示昨日指数356，高于站内昨日平均指数113.177",
+      "source": "MC百科·昨日指数356",
+      "image": "game-brief-assets/2026-08-26-pack-02.jpg",
+      "url": "https://www.mcmod.cn/modpack/1178.html"
+    },
+    {
+      "name": "愚者",
+      "summary": "以伪装、欺诈与变身战斗为核心，包含原创饰品、流派、首领、维度和定制剧情任务。",
+      "category": "冒险／魔法／剧情",
+      "heat": 100,
+      "heatEvidenceAt": "2026-08-26",
+      "heatSignals": "MC百科8月26日实时页面显示昨日指数2354，远高于站内昨日平均指数113.177",
+      "source": "MC百科·昨日指数2354",
+      "image": "game-brief-assets/2026-08-26-pack-03.jpg",
+      "url": "https://www.mcmod.cn/modpack/1096.html"
+    },
+    {
+      "name": "All of Create",
+      "summary": "围绕机械动力及其附属构建科技冒险流程，加入任务书、世界生成改写和两百余模组。",
+      "category": "机械动力／科技／冒险",
+      "heat": 52,
+      "heatEvidenceAt": "2026-08-26",
+      "heatSignals": "MC百科8月26日实时页面显示昨日指数66，并保留近期页面浏览与编辑信号",
+      "source": "MC百科·昨日指数66",
+      "image": "game-brief-assets/2026-08-26-pack-04.jpg",
+      "url": "https://www.mcmod.cn/modpack/705.html"
+    },
+    {
+      "name": "理想国：科克肖特",
+      "summary": "以群峦、机械动力和工业系统构建拟真社会生产循环，强调多人分工与高难度科技爬升。",
+      "category": "拟真／科技／硬核",
+      "heat": 18,
+      "heatEvidenceAt": "2026-08-26",
+      "heatSignals": "MC百科8月26日实时页面显示昨日指数9，页面仍有当日抓取与持续浏览记录",
+      "source": "MC百科·昨日指数9",
+      "image": "game-brief-assets/2026-08-26-pack-05.jpg",
+      "url": "https://www.mcmod.cn/modpack/727.html"
+    },
+    {
+      "name": "Enigmatica 6: Expert",
+      "summary": "用高度联动配方串联科技与魔法进度，配套专家任务线、定制机器和危险首领挑战。",
+      "category": "专家／科技／魔法",
+      "heat": 35,
+      "heatEvidenceAt": "2026-08-26",
+      "heatSignals": "MC百科8月26日实时页面显示昨日指数29，并记录稳定的教程与浏览需求",
+      "source": "MC百科·昨日指数29",
+      "image": "game-brief-assets/2026-08-26-pack-06.jpg",
+      "url": "https://www.mcmod.cn/modpack/399.html"
+    },
+    {
+      "name": "永恒的MC",
+      "summary": "大型水槽包融合冒险、魔法、自动化和殖民地经营，提供七百五十余任务与自定义经济系统。",
+      "category": "冒险／任务／大型",
+      "heat": 50,
+      "heatEvidenceAt": "2026-08-26",
+      "heatSignals": "MC百科8月26日实时页面显示昨日指数63，并保持教程检索与社区浏览信号",
+      "source": "MC百科·昨日指数63",
+      "image": "game-brief-assets/2026-08-26-pack-07.jpg",
+      "url": "https://www.mcmod.cn/modpack/13.html"
+    },
+    {
+      "name": "永恒的MC 2",
+      "summary": "在一二〇一版本扩充魔法、科技、探索与自动化内容，提供近六百模组的水槽式体验。",
+      "category": "科技／魔法／水槽",
+      "heat": 60,
+      "heatEvidenceAt": "2026-08-26",
+      "heatSignals": "MC百科8月26日实时页面显示昨日指数156，高于站内昨日平均指数113.177",
+      "source": "MC百科·昨日指数156",
+      "image": "game-brief-assets/2026-08-26-pack-08.jpg",
+      "url": "https://www.mcmod.cn/modpack/1142.html"
+    },
+    {
+      "name": "机械动力：寂静与繁荣",
+      "summary": "以机械动力流水线为基础，联动热力、通用机械和应用能源，强调深度魔改与自动化产线。",
+      "category": "机械动力／科技／硬核",
+      "heat": 30,
+      "heatEvidenceAt": "2026-08-26",
+      "heatSignals": "MC百科8月26日实时页面显示昨日指数23，页面保留当日访问与内容检索记录",
+      "source": "MC百科·昨日指数23",
+      "image": "game-brief-assets/2026-08-26-pack-09.jpg",
+      "url": "https://www.mcmod.cn/modpack/1014.html"
+    },
+    {
+      "name": "机械动力：创造与超越",
+      "summary": "围绕机械动力与铁砧工艺设计轻量专家流程，以任务引导自动化建造和定制物品生产。",
+      "category": "机械动力／任务／轻量",
+      "heat": 40,
+      "heatEvidenceAt": "2026-08-26",
+      "heatSignals": "MC百科8月26日实时页面显示昨日指数44，并有持续浏览与下载入口访问",
+      "source": "MC百科·昨日指数44",
+      "image": "game-brief-assets/2026-08-26-pack-10.jpg",
+      "url": "https://www.mcmod.cn/modpack/1127.html"
+    }
+  ],
+  "mods": [
+    {
+      "name": "Orglink",
+      "summary": "为服务器提供模组清单分发与客户端自动同步，支持并行下载及清理多余模组。",
+      "version": "26.x／1.16—1.21",
+      "loader": "Forge／Fabric／NeoForge",
+      "date": "2026-08-25",
+      "source": "MineBBS",
+      "url": "https://www.minebbs.com/resources/orglink.18000/"
+    },
+    {
+      "name": "EasyBot LegacyForge",
+      "summary": "将服务器管理与社交平台互通能力移植到旧版Forge环境，面向一一二二服务器使用。",
+      "version": "1.12.2",
+      "loader": "Forge",
+      "date": "2026-08-25",
+      "source": "MineBBS",
+      "url": "https://www.minebbs.com/resources/easybot-legacyforge-easybot-minecraft-forge.17990/"
+    },
+    {
+      "name": "铁魔法：光污染",
+      "summary": "为铁魔法加入五个传奇法术，并实现动态彩色光照及不依赖光影包的光线追踪阴影。",
+      "version": "1.20",
+      "loader": "Forge",
+      "date": "2026-08-25",
+      "source": "MineBBS",
+      "url": "https://www.minebbs.com/resources/iron-s-spells-light-pollution.17987/"
+    },
+    {
+      "name": "ProjectMemo",
+      "summary": "提供生电工程、子任务、材料收集、投影和选址管理，界面风格接近masa工具族。",
+      "version": "1.21.11",
+      "loader": "Fabric",
+      "date": "2026-08-21",
+      "source": "MineBBS",
+      "url": "https://www.minebbs.com/resources/projectmemo-mod.17932/"
+    },
+    {
+      "name": "轻量连锁采集",
+      "summary": "按住潜行键触发原木、作物和矿石连锁采集，产出优先进入背包并保留普通挖掘方式。",
+      "version": "1.20",
+      "loader": "NeoForge",
+      "date": "2026-08-21",
+      "source": "MineBBS",
+      "url": "https://www.minebbs.com/resources/ai.17950/"
+    },
+    {
+      "name": "未知回响",
+      "summary": "围绕多层维度探索、解谜和首领战展开，五种回响能力与六件神器随进度解锁。",
+      "version": "1.21",
+      "loader": "NeoForge",
+      "date": "2026-08-20",
+      "source": "MineBBS",
+      "url": "https://www.minebbs.com/resources/17919/"
+    }
+  ],
+  "deals": [
+    {
+      "name": "潜行者2：切尔诺贝利之心",
+      "discount": "-30%",
+      "original": "¥268",
+      "price": "¥187.60",
+      "label": "今日特惠",
+      "ends": "截至 08-31",
+      "image": "game-brief-assets/2026-08-26-steam-01.jpg",
+      "url": "https://store.steampowered.com/app/1643320/?l=schinese"
+    },
+    {
+      "name": "How to Fish",
+      "discount": "-38%",
+      "original": "¥33",
+      "price": "¥20.46",
+      "label": "新史低",
+      "ends": "截至 08-27",
+      "image": "game-brief-assets/2026-08-26-steam-02.jpg",
+      "url": "https://store.steampowered.com/app/4001890/?l=schinese"
+    },
+    {
+      "name": "Gallipoli",
+      "discount": "-25%",
+      "original": "¥99",
+      "price": "¥74.25",
+      "label": "新史低",
+      "ends": "截至 09-03",
+      "image": "game-brief-assets/2026-08-26-steam-03.jpg",
+      "url": "https://store.steampowered.com/app/3065940/?l=schinese"
+    },
+    {
+      "name": "全面战争：战锤3",
+      "discount": "-85%",
+      "original": "¥298",
+      "price": "¥44.70",
+      "label": "平史低",
+      "ends": "截至 08-27",
+      "image": "game-brief-assets/2026-08-26-steam-04.jpg",
+      "url": "https://store.steampowered.com/app/1142710/?l=schinese"
+    },
+    {
+      "name": "Project P.I.T.T.",
+      "discount": "-15%",
+      "original": "¥36",
+      "price": "¥30.60",
+      "label": "新史低",
+      "ends": "截至 09-02",
+      "image": "game-brief-assets/2026-08-26-steam-05.jpg",
+      "url": "https://store.steampowered.com/app/4026250/?l=schinese"
+    },
+    {
+      "name": "Brigador Killers",
+      "discount": "-10%",
+      "original": "¥85",
+      "price": "¥76.50",
+      "label": "新史低",
+      "ends": "截至 09-03",
+      "image": "game-brief-assets/2026-08-26-steam-06.jpg",
+      "url": "https://store.steampowered.com/app/903930/?l=schinese"
+    },
+    {
+      "name": "Darkest Dungeon",
+      "discount": "-85%",
+      "original": "¥88",
+      "price": "¥13.20",
+      "label": "今日特惠",
+      "ends": "截至 09-01",
+      "image": "game-brief-assets/2026-08-26-steam-07.jpg",
+      "url": "https://store.steampowered.com/app/262060/?l=schinese"
+    },
+    {
+      "name": "TEKKEN 8",
+      "discount": "-40%",
+      "original": "¥168",
+      "price": "¥100.80",
+      "label": "今日特惠",
+      "ends": "截至 08-27",
+      "image": "game-brief-assets/2026-08-26-steam-08.jpg",
+      "url": "https://store.steampowered.com/app/1778820/?l=schinese"
+    },
+    {
+      "name": "KOTAMON",
+      "discount": "-20%",
+      "original": "¥29",
+      "price": "¥23.20",
+      "label": "新史低",
+      "ends": "截至 09-03",
+      "image": "game-brief-assets/2026-08-26-steam-09.jpg",
+      "url": "https://store.steampowered.com/app/4294490/?l=schinese"
+    },
+    {
+      "name": "Risk of Rain 2",
+      "discount": "-67%",
+      "original": "¥80",
+      "price": "¥26.40",
+      "label": "平史低",
+      "ends": "截至 09-03",
+      "image": "game-brief-assets/2026-08-26-steam-10.jpg",
+      "url": "https://store.steampowered.com/app/632360/?l=schinese"
+    },
+    {
+      "name": "Hearth and Hamlet",
+      "discount": "-10%",
+      "original": "¥33",
+      "price": "¥29.70",
+      "label": "新史低",
+      "ends": "截至 08-27",
+      "image": "game-brief-assets/2026-08-26-steam-11.jpg",
+      "url": "https://store.steampowered.com/app/4315040/?l=schinese"
+    },
+    {
+      "name": "Mafia: The Old Country",
+      "discount": "-40%",
+      "original": "¥219",
+      "price": "¥131.40",
+      "label": "平史低",
+      "ends": "截至 08-28",
+      "image": "game-brief-assets/2026-08-26-steam-12.jpg",
+      "url": "https://store.steampowered.com/app/1941540/?l=schinese"
+    },
+    {
+      "name": "Microsoft Flight Simulator 2024",
+      "discount": "-30%",
+      "original": "¥348",
+      "price": "¥243.60",
+      "label": "今日特惠",
+      "ends": "截至 09-01",
+      "image": "game-brief-assets/2026-08-26-steam-13.jpg",
+      "url": "https://store.steampowered.com/app/2537590/?l=schinese"
+    },
+    {
+      "name": "Minecraft Dungeons",
+      "discount": "-50%",
+      "original": "¥144",
+      "price": "¥72",
+      "label": "今日特惠",
+      "ends": "截至 08-31",
+      "image": "game-brief-assets/2026-08-26-steam-14.jpg",
+      "url": "https://store.steampowered.com/app/1672970/?l=schinese"
+    },
+    {
+      "name": "Yet Another Zombie Survivors",
+      "discount": "-35%",
+      "original": "¥58",
+      "price": "¥37.70",
+      "label": "今日特惠",
+      "ends": "截至 09-03",
+      "image": "game-brief-assets/2026-08-26-steam-15.jpg",
+      "url": "https://store.steampowered.com/app/2163330/?l=schinese"
+    }
+  ],
+  "trends": [
+    "科隆游戏展开幕夜成为今日主线，国产动作新作、经典IP续作和实机演示集中释放信息。",
+    "游戏讨论从预告观感延伸到发售窗口、平台版本和硬件迭代，玩家更关注内容能否按期交付。",
+    "Minecraft中文社区今日新增模组集中在服务器同步、工程管理、轻量生存和冒险维度扩展。",
+    "MC百科实时热度显示剧情冒险包与大型水槽包占据前列；Steam国区冻结清单核验后保留十五款有效优惠。"
+  ]
+}

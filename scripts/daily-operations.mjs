@@ -2,9 +2,15 @@ import { createHash } from "node:crypto";
 import { appendFile, mkdir, open, readFile, readdir, unlink, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { GAME_DEAL_COVERAGE_EFFECTIVE_DATE, beijingDate, steamAppIdFromUrl } from "./game-lib.mjs";
-import { SOURCE_REGISTRY, canonicalSourceId, canonicalSourceLabel, channelSections, requiredSourceIds } from "./source-registry.mjs";
+import { SOURCE_REGISTRY, allowedSourceIds, canonicalSourceId, canonicalSourceLabel, channelSections, requiredSourceIds } from "./source-registry.mjs";
 
 export const LEDGER_STATUSES = new Set(["started", ...SOURCE_REGISTRY.terminalStatuses]);
+export const CONTENT_CANDIDATE_TARGETS = Object.freeze({
+  minsheng: Object.freeze({ domestic: 10, international: 10, tech: 10, ai: 5, metrics: 6 }),
+  game: Object.freeze({ features: 2, news: 10, packs: 10, mods: 6, deals: 6, trends: 4 })
+});
+export const EVIDENCE_COMPLETE_SECTIONS = Object.freeze(new Set(["game/packs", "game/mods"]));
+export const STEAM_DISCOVERY_FREEZE_EFFECTIVE_DATE = "2026-08-27";
 
 export function operationPaths(root, date) {
   assertDate(date);
@@ -15,8 +21,57 @@ export function operationPaths(root, date) {
     ledger: path.join(directory, `${date}-research-ledger.jsonl`),
     audit: path.join(directory, `${date}-source-audit.json`),
     lease: path.join(directory, `${date}-run-lease.json`),
-    readiness: path.join(directory, `${date}-readiness.json`)
+    readiness: path.join(directory, `${date}-readiness.json`),
+    steamDiscovery: path.join(directory, `${date}-steam-discovery-frozen.json`)
   };
+}
+
+export async function freezeSteamDiscovery(root, options = {}) {
+  const date = options.date || beijingDate();
+  const runId = requiredText(options.runId, "runId");
+  const paths = operationPaths(root, date);
+  const sourceUrl = requiredText(options.sourceUrl, "sourceUrl");
+  if (!isHttps(sourceUrl)) throw new Error("Steam发现面 URL 必须使用 HTTPS");
+  const appIds = normalizeSteamIds(options.appIds);
+  const extraAppIds = normalizeSteamIds(options.extraAppIds || []);
+  const allIds = new Set([...appIds, ...extraAppIds]);
+  if (appIds.size < CONTENT_CANDIDATE_TARGETS.game.deals) {
+    throw new Error(`Steam官方首个结果页至少需要 ${CONTENT_CANDIDATE_TARGETS.game.deals} 个不同 appId`);
+  }
+  const snapshot = {
+    schemaVersion: 1,
+    date,
+    runId,
+    frozenAt: options.frozenAt || new Date().toISOString(),
+    sourceUrl,
+    appIds: [...appIds],
+    extraAppIds: [...extraAppIds],
+    discoveredCount: allIds.size,
+    frozen: true
+  };
+  await mkdir(paths.directory, { recursive: true });
+  const existing = await readJsonIfExists(paths.steamDiscovery);
+  if (existing) {
+    assertValidSteamDiscovery(existing, date);
+    if (!sameSet(new Set([...existing.appIds, ...(existing.extraAppIds || [])]), allIds)) {
+      throw new Error(`${date} Steam发现面已经冻结，禁止用刷新后的动态列表覆盖`);
+    }
+    return existing;
+  }
+  await writeJson(paths.steamDiscovery, snapshot);
+  const state = await readJsonIfExists(paths.state);
+  if (state) {
+    state.steamDiscovery = {
+      file: path.relative(root, paths.steamDiscovery).replaceAll("\\", "/"),
+      sha256: sha256(Buffer.from(`${JSON.stringify(snapshot, null, 2)}\n`, "utf8")),
+      discoveredCount: snapshot.discoveredCount,
+      frozenAt: snapshot.frozenAt,
+      runId
+    };
+    state.lastCheckpointAt = new Date().toISOString();
+    await writeJson(paths.state, state);
+  }
+  return snapshot;
 }
 
 export async function acquireRunLease(root, options = {}) {
@@ -196,7 +251,7 @@ export async function appendResearchLedger(root, rawEntry) {
   const paths = operationPaths(root, date);
   const sourceId = canonicalSourceId(rawEntry.sourceId || rawEntry.source);
   if (!sourceId) throw new Error(`来源不在注册表中：${rawEntry.sourceId || rawEntry.source}`);
-  if (!SOURCE_REGISTRY.requirements?.[rawEntry.channel]?.[rawEntry.section]?.includes(sourceId)) {
+  if (!allowedSourceIds(rawEntry.channel, rawEntry.section).includes(sourceId)) {
     throw new Error(`来源 ${sourceId} 不属于 ${rawEntry.channel}/${rawEntry.section}`);
   }
   if (!LEDGER_STATUSES.has(rawEntry.status)) throw new Error(`无效检索状态：${rawEntry.status}`);
@@ -216,6 +271,7 @@ export async function appendResearchLedger(root, rawEntry) {
     availableCount: nonNegativeInteger(rawEntry.availableCount),
     rejectedCount: nonNegativeInteger(rawEntry.rejectedCount),
     coverageComplete: Boolean(rawEntry.coverageComplete),
+    evidenceComplete: Boolean(rawEntry.evidenceComplete),
     reasons: normalizeReasons(rawEntry.reasons),
     candidateIds: normalizeStringList(rawEntry.candidateIds)
   };
@@ -261,6 +317,20 @@ export async function assertGameDealCoverage(root, date, brief) {
     throw new Error(`${date} 网页 Steam 优惠 ${selectedIds.size} 款与账本全部合格优惠 ${eligibleIds.size} 款不一致，禁止只取前若干条`);
   }
 
+  if (date >= STEAM_DISCOVERY_FREEZE_EFFECTIVE_DATE) {
+    const paths = operationPaths(root, date);
+    const [snapshot, state] = await Promise.all([readJsonIfExists(paths.steamDiscovery), readJsonIfExists(paths.state)]);
+    assertValidSteamDiscovery(snapshot, date);
+    const frozenIds = new Set([...snapshot.appIds, ...(snapshot.extraAppIds || [])]);
+    for (const appId of eligibleIds) {
+      if (!frozenIds.has(appId)) throw new Error(`${date} Steam appId ${appId} 不在当天冻结发现面中`);
+    }
+    if (state?.steamDiscovery?.sha256) {
+      const snapshotBuffer = await readFile(paths.steamDiscovery);
+      if (sha256(snapshotBuffer) !== state.steamDiscovery.sha256) throw new Error(`${date} Steam冻结发现面在记录后被修改`);
+    }
+  }
+
   const lowIds = new Set(brief.deals.filter((deal) => String(deal.label).includes("史低")).map((deal) => steamAppIdFromUrl(deal.url)));
   const history = latestTerminalEntry(entries, "steam-price-history");
   if (!history) throw new Error(`${date} 缺少 Steam 价格历史终态记录`);
@@ -300,15 +370,52 @@ export async function researchCompleteness(root, date, channel) {
       else if (terminal.at(-1).status === "unavailable" && terminal.filter((entry) => entry.status === "unavailable").length < SOURCE_REGISTRY.minimumUnavailableAttempts) incomplete.push(sourceId);
       else if (date >= GAME_DEAL_COVERAGE_EFFECTIVE_DATE && channel === "game" && section === "deals" && terminal.at(-1).status === "accepted" && terminal.at(-1).coverageComplete !== true) incomplete.push(sourceId);
     }
-    const sectionComplete = !missing.length && !incomplete.length;
+    const accepted = ledger.filter((entry) => entry.date === date && entry.channel === channel && entry.section === section && entry.status === "accepted");
+    const candidateIds = new Set(accepted.flatMap((entry) => normalizeStringList(entry.candidateIds)));
+    const target = CONTENT_CANDIDATE_TARGETS[channel]?.[section] || 0;
+    const evidenceRequired = EVIDENCE_COMPLETE_SECTIONS.has(`${channel}/${section}`);
+    const evidenceCandidateIds = new Set(accepted.filter((entry) => entry.evidenceComplete === true).flatMap((entry) => normalizeStringList(entry.candidateIds)));
+    const evidenceComplete = !evidenceRequired || evidenceCandidateIds.size >= target;
+    const candidateCountComplete = candidateIds.size >= target;
+    const frozenDiscoveryComplete = !(channel === "game" && section === "deals" && date >= STEAM_DISCOVERY_FREEZE_EFFECTIVE_DATE)
+      || Boolean(await readJsonIfExists(operationPaths(root, date).steamDiscovery));
+    const sectionComplete = !missing.length && !incomplete.length && candidateCountComplete && evidenceComplete && frozenDiscoveryComplete;
     sections[section] = {
       complete: sectionComplete,
       missing: missing.map((id) => SOURCE_REGISTRY.sources[id].label),
-      incomplete: incomplete.map((id) => SOURCE_REGISTRY.sources[id].label)
+      incomplete: incomplete.map((id) => SOURCE_REGISTRY.sources[id].label),
+      candidateCount: candidateIds.size,
+      target,
+      shortfall: Math.max(0, target - candidateIds.size),
+      evidenceComplete,
+      frozenDiscoveryComplete
     };
     complete &&= sectionComplete;
   }
   return { date, channel, complete, sections };
+}
+
+export async function reconcileRunState(root, date) {
+  const paths = operationPaths(root, date);
+  const state = await readJsonIfExists(paths.state);
+  if (!state) throw new Error(`${date} 运行状态不存在，请先执行 init`);
+  const results = {};
+  for (const channelName of ["minsheng", "game"]) {
+    const channel = state.channels[channelName];
+    if (channel.published || channel.status === "ready") continue;
+    const status = await researchCompleteness(root, date, channelName);
+    const missingSections = Object.entries(status.sections).filter(([, value]) => !value.complete).map(([name]) => name);
+    channel.missingSections = missingSections;
+    channel.status = status.complete ? "researched" : "researching";
+    results[channelName] = status;
+  }
+  if (Object.values(state.channels).every((channel) => channel.published)) state.stage = "published";
+  else if (Object.values(state.channels).some((channel) => channel.status === "ready")) state.stage = "ready";
+  else if (Object.values(state.channels).every((channel) => ["researched", "ready", "published"].includes(channel.status))) state.stage = "candidate";
+  else state.stage = "research";
+  state.lastCheckpointAt = new Date().toISOString();
+  await writeJson(paths.state, state);
+  return { state, results };
 }
 
 export async function assertResearchComplete(root, date, channel) {
@@ -316,7 +423,16 @@ export async function assertResearchComplete(root, date, channel) {
   if (!status.complete) {
     const details = Object.entries(status.sections)
       .filter(([, section]) => !section.complete)
-      .map(([name, section]) => `${name}: 未尝试 ${section.missing.join("、") || "无"}; 未完成 ${section.incomplete.join("、") || "无"}`);
+      .map(([name, section]) => {
+        const blockers = [
+          `未尝试 ${section.missing.join("、") || "无"}`,
+          `未完成 ${section.incomplete.join("、") || "无"}`,
+          `候选 ${section.candidateCount}/${section.target}`
+        ];
+        if (!section.evidenceComplete) blockers.push("逐项证据未闭环");
+        if (!section.frozenDiscoveryComplete) blockers.push("Steam发现面未冻结");
+        return `${name}: ${blockers.join("; ")}`;
+      });
     throw new Error(`${date} ${channel} 检索账本未完成：\n- ${details.join("\n- ")}`);
   }
   return status;
@@ -450,6 +566,22 @@ function normalizeStringList(value) {
   if (!value) return [];
   const values = Array.isArray(value) ? value : String(value).split("|");
   return [...new Set(values.map((item) => String(item).trim()).filter(Boolean))];
+}
+
+function normalizeSteamIds(values) {
+  return normalizedSteamCandidateIds(normalizeStringList(values));
+}
+
+function assertValidSteamDiscovery(snapshot, date) {
+  if (!snapshot || snapshot.date !== date || snapshot.frozen !== true) throw new Error(`${date} 缺少已冻结的 Steam 发现面`);
+  if (!isHttps(snapshot.sourceUrl)) throw new Error(`${date} Steam冻结发现面缺少 HTTPS 来源`);
+  const appIds = normalizeSteamIds(snapshot.appIds);
+  const extraAppIds = normalizeSteamIds(snapshot.extraAppIds || []);
+  const discoveredCount = new Set([...appIds, ...extraAppIds]).size;
+  if (appIds.size < CONTENT_CANDIDATE_TARGETS.game.deals || snapshot.discoveredCount !== discoveredCount) {
+    throw new Error(`${date} Steam冻结发现面计数无效`);
+  }
+  return snapshot;
 }
 
 function latestTerminalEntry(entries, sourceId) {

@@ -97,6 +97,10 @@
     grid-template-columns: 1fr 1fr;
   }
 
+  .aligned-columns > .news-column .story {
+    height: auto !important;
+  }
+
   .aligned-columns .side-column {
     display: grid;
     height: auto !important;

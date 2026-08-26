@@ -25,7 +25,10 @@
     "china-minecraft-site": { "label": "中国Minecraft网站", "aliases": ["国内Minecraft网站", "中国 Minecraft 网站"] },
     "china-minecraft-mod-site": { "label": "中国Minecraft Mod网站", "aliases": ["国内Minecraft Mod网站", "中国的 Minecraft Mod 网站"] },
     "steam-cn": { "label": "Steam国区", "aliases": ["Steam", "Steam国区实时页面"] },
-    "steam-price-history": { "label": "Steam价格历史核验", "aliases": ["SteamDB", "价格历史"] }
+    "steam-price-history": { "label": "Steam价格历史核验", "aliases": ["SteamDB", "价格历史"] },
+    "external-news-authority": { "label": "外网权威新闻／机构来源", "aliases": ["Reuters", "AP", "AFP", "BBC", "联合国", "国际组织／外媒"] },
+    "external-primary-technology": { "label": "外网原始科技／AI来源", "aliases": ["论文／科研机构／公司官网"] },
+    "external-market": { "label": "境外交易所／数据服务", "aliases": [] }
   },
   "requirements": {
     "minsheng": {
@@ -42,6 +45,15 @@
       "mods": ["china-minecraft-mod-site"],
       "deals": ["steam-cn", "steam-price-history"],
       "trends": ["china-game-media", "china-minecraft-site", "steam-cn"]
+    }
+  },
+  "optionalRequirements": {
+    "minsheng": {
+      "domestic": ["external-news-authority"],
+      "international": ["external-news-authority"],
+      "tech": ["external-news-authority", "external-primary-technology"],
+      "ai": ["external-news-authority", "external-primary-technology"],
+      "metrics": ["external-market"]
     }
   }
 }

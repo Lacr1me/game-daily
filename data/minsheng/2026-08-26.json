@@ -1,0 +1,411 @@
+{
+  "date": "2026-08-26",
+  "issue": 5,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期三",
+  "lunarDate": "农历丙午年七月十四",
+  "cutoff": "2026-08-26 12:48（北京时间）",
+  "productionTime": "2026-08-26 12:48（北京时间）",
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "下半年经济工作将加力扩内需惠民生",
+        "summary": "国家发展改革委报告提出用好存量政策并谋划增量举措，加快重大项目和债券资金落地，同时兜牢基层民生保障底线。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25 21:06",
+        "url": "https://www.news.cn/politics/20260825/b2b6034456a247b29e3829fe588d4760/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "我国交通强国指数升至世界第五",
+        "summary": "最新交通强国指数达到九十点八，班轮运输连通性、铁路电化率和港口集装箱吞吐等多项指标处于国际领先水平。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25 20:57",
+        "url": "https://www.news.cn/politics/20260825/636a2634e6574fbebb880c6bc99852a8/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "常态化帮扶持续巩固脱贫攻坚成果",
+        "summary": "国务院报告显示脱贫人口务工规模超过三千二百万人，监测帮扶机制持续运行，并将以社会保障兜牢返贫致贫风险底线。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25 20:09",
+        "url": "https://www.news.cn/politics/20260825/ac9937d14a4a4eac97cc8bdeac575c35/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "全国八点二万家助餐点服务老年人",
+        "summary": "全国老年助餐点每天服务四百多万人次，多地通过社区食堂、配送和数字化点餐，缓解高龄及失能老人吃饭难题。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25 20:09",
+        "url": "https://www.news.cn/politics/20260825/85ca6e398dea4fe5a4cffd178f104414/c.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "两部门推动服务类社会救助发展",
+        "summary": "有关部门完善服务类社会救助政策，推动物质救助与照护、心理支持等服务衔接，更精准回应困难群众多层次需求。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-21",
+        "url": "https://www.news.cn/politics/20260821/1ec8df0214084aed86ad98786fcf3020/c.html"
+      },
+      {
+        "id": "domestic-06",
+        "title": "高质量发展部署强化就业与增收支持",
+        "summary": "政策部署强调加大高校毕业生等重点群体就业支持，完善新就业形态权益保障，并以居民增收举措增强消费能力。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25 08:33",
+        "url": "https://cpc.people.com.cn/n1/2026/0825/c64387-40785592.html"
+      },
+      {
+        "id": "domestic-07",
+        "title": "今年重点民生领域财政投入继续增长",
+        "summary": "教育、社保、卫生和住房等预算资金合计十二点四万亿元，财政还将支持育儿补贴、学生资助和养老服务消费补贴。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-21 18:41",
+        "url": "https://m.gmw.cn/2026-08/21/content_1304551823.htm"
+      },
+      {
+        "id": "domestic-08",
+        "title": "全民医保十五五规划明确提质路径",
+        "summary": "规划提出未来五年健全多层次医疗保障体系，完善参保服务、待遇保障和长期护理制度，提升群众就医保障可及性。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-20 09:14",
+        "url": "https://www.news.cn/politics/20260820/6b33ba7d6c48469396ff32a161f93970/c.html"
+      },
+      {
+        "id": "domestic-09",
+        "title": "多部门指导地方严查甲醛白菜",
+        "summary": "国务院食安办等部门要求属地依法调查处置涉事产品，追查生产流通环节责任，及时回应群众对食品安全的关切。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-23",
+        "url": "https://www.news.cn/politics/20260823/f3e011979e944fc29c1d3af8ab408468/c.html"
+      },
+      {
+        "id": "domestic-10",
+        "title": "水利部对五省份启动洪水防御响应",
+        "summary": "针对西北和华北较强降雨过程，水利部启动四级应急响应，要求加密监测预警、调度工程并提前转移危险区人员。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25 18:59",
+        "url": "https://www.news.cn/politics/20260825/d660786a4fdc47b2b5e067d2917358dc/c.html"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "伊朗战事拖累特朗普支持率创新低",
+        "summary": "最新民调显示美国选民对政府处理中东冲突的评价走弱，战事成本和国内经济压力共同推低总统支持率。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 08:51",
+        "url": "https://world.people.com.cn/n1/2026/0826/c1002-40786350.html"
+      },
+      {
+        "id": "international-02",
+        "title": "美国西部七州水资源争端再升级",
+        "summary": "围绕科罗拉多河水量分配与联邦方案，内华达州提起诉讼，长期干旱背景下区域用水协调面临新的司法考验。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 08:49",
+        "url": "https://world.people.com.cn/n1/2026/0826/c1002-40786346.html"
+      },
+      {
+        "id": "international-03",
+        "title": "英法加码对乌军援仍难解冬季压力",
+        "summary": "英国和法国宣布增加对乌军事支持，但装备交付、能源设施修复与财政缺口叠加，乌方今冬保障仍面临较大压力。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 08:46",
+        "url": "https://world.people.com.cn/n1/2026/0826/c1002-40786325.html"
+      },
+      {
+        "id": "international-04",
+        "title": "一名在韩失踪中国公民确认遇害",
+        "summary": "韩国警方确认一名此前失踪的中国公民遇害并已逮捕嫌疑人，案件调查及相关领事协助工作正在推进。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 08:45",
+        "url": "https://world.people.com.cn/n1/2026/0826/c1002-40786321.html"
+      },
+      {
+        "id": "international-05",
+        "title": "伊朗与阿曼拟建海峡安全通道",
+        "summary": "伊朗与阿曼讨论在霍尔木兹海峡建立安全海上通道，以降低航运风险并维持能源运输，地区安全协调出现新动向。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 08:44",
+        "url": "https://world.people.com.cn/n1/2026/0826/c1002-40786319.html"
+      },
+      {
+        "id": "international-06",
+        "title": "美国八月消费者信心指数继续下滑",
+        "summary": "受通胀、就业预期和地缘冲突不确定性影响，美国消费者信心再度走弱，家庭支出意愿与经济前景判断趋于谨慎。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 08:44",
+        "url": "https://world.people.com.cn/n1/2026/0826/c1002-40786317.html"
+      },
+      {
+        "id": "international-07",
+        "title": "休达危机推动西班牙移民制度改革",
+        "summary": "面对休达口岸持续移民压力，西班牙推进移民与庇护制度调整，边境管理、人道安置和欧盟协作成为改革重点。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 08:39",
+        "url": "https://world.people.com.cn/n1/2026/0826/c1002-40786287.html"
+      },
+      {
+        "id": "international-08",
+        "title": "叙利亚民主力量宣布解散",
+        "summary": "叙利亚民主力量宣布结束现有组织形态，相关人员和安全安排如何衔接，将影响东北部地区治理与局势稳定。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 08:39",
+        "url": "https://world.people.com.cn/n1/2026/0826/c1002-40786283.html"
+      },
+      {
+        "id": "international-09",
+        "title": "加拿大对美七百多种商品加征反制关税",
+        "summary": "加拿大宣布对美国七百多种商品实施等额反制，双边贸易摩擦从关税威胁走向具体清单，企业成本面临上升。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 08:39",
+        "url": "https://world.people.com.cn/n1/2026/0826/c1002-40786281.html"
+      },
+      {
+        "id": "international-10",
+        "title": "哈萨克斯坦完成首届一院制议会选举",
+        "summary": "哈萨克斯坦执政党赢得首届一院制议会选举，新议会将在制度调整后承担立法与监督职责，政治改革进入实施阶段。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 08:36",
+        "url": "https://world.people.com.cn/n1/2026/0826/c1002-40786261.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "机器人拥有灵巧双手后加速进入实用场景",
+        "summary": "灵巧手的感知、抓取和力控能力持续提升，机器人正从展示动作转向装配、分拣与服务等需要精细操作的真实任务。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26",
+        "url": "https://www.news.cn/tech/20260826/6e90d2a8f2ef47518657f1e1f4f73a04/c.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "高技术产业吸引外资同比增长三成多",
+        "summary": "今年一至七月我国高技术产业吸引外资同比增长百分之三十二点七，先进制造与创新领域继续展现投资吸引力。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 09:08",
+        "url": "https://www.news.cn/tech/20260826/e92a2057caa945679d8b8014aa35eb86/c.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "税惠政策支持机器人产业创新生态",
+        "summary": "税费服务与研发支持政策持续向机器人企业和产业链协同倾斜，帮助创新成果加快验证并降低规模化应用成本。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26",
+        "url": "https://www.news.cn/tech/20260826/83720573cc374f7eabf2b247c1b15d33/c.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "国家数据局规范公共数据授权运营",
+        "summary": "全国已有二十五个省区市实质开展公共数据授权运营，后续将强化信息披露监督并完善登记、定价和责任机制。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 09:08",
+        "url": "https://www.news.cn/tech/20260826/b86f9941bf1a45bbb136cb35274fc2ea/c.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "工业文化研学解锁智造教育新场景",
+        "summary": "工业遗址、智慧工厂和高端制造基地转化为实践课堂，各地探索课程化研学，同时补齐互动体验和数字赋能短板。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 09:08",
+        "url": "https://www.news.cn/tech/20260826/b5628942b58b460f93f26f0a54496c1c/c.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "第五批公共数据示范场景集中发布",
+        "summary": "国家数据局发布第五批五十个公共数据跑起来示范场景，累计数量达到一百五十个，覆盖更多重点行业应用。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 09:07",
+        "url": "https://www.news.cn/tech/20260826/a4a510beabd446a1a48b8e19dce02246/c.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "智能产业由技术试点转向规模化落地",
+        "summary": "工业机器人、低空飞行器和智能体多线推进，机器人出口与产量增长，产业竞争重点转向可交付方案和真实价值。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 09:07",
+        "url": "https://www.news.cn/tech/20260826/5d6478f8c6774822831852b335541df1/c.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "人工智能公司毁书获取数据引发争议",
+        "summary": "部分企业购入实体书进行破坏性扫描，以获得未被生成内容污染的数据，合理使用边界与文化遗产保护再受关注。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 09:07",
+        "url": "https://www.news.cn/tech/20260826/c341736e43e74c0b82874dc3186f0633/c.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "汽车垂直平台由资讯流量转向决策服务",
+        "summary": "汽车之家通过人工智能、线上交易与线下履约重构内容链路，行业平台竞争从获取流量转向服务购车全过程。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 10:33",
+        "url": "https://www.news.cn/tech/20260826/e009219832d94c72b4fc0725aaa87ada/c.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "无锡部署住建领域人工智能应用场景",
+        "summary": "无锡计划五年内在工程、住房、城市、产业和政务领域打造五十个人工智能应用场景，服务城市更新与风险预警。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26",
+        "url": "https://js.news.cn/20260826/2a0a5ff65cf64affbd34a60305143de3/c.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "长虹以软硬协同推进具身智能量产",
+        "summary": "企业依托机器人训练场采集高质量数据，并把大模型延伸到家庭和工业场景，打通训练、验证与成果转化链路。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-24 11:12",
+        "url": "https://www.news.cn/tech/20260824/8cc4bda60cba4269822642170f35265b/c.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "烹饪机器人从执行菜谱走向理解过程",
+        "summary": "多模态烹饪模型结合视觉感知和动态决策，可根据食材状态调整火力与时间，推动无人后厨从自动化迈向智能化。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-23 16:26",
+        "url": "https://www.news.cn/tech/20260823/62591315568d4d9c91a4370d71a9d906/c.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "通用具身模型驱动三类产线任务",
+        "summary": "同一基础模型在物流分拣、食材处理和多机器人协作中实时泛化，展示精细力控、长时记忆与跨场景迁移能力。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-21 18:23",
+        "url": "https://www.news.cn/tech/20260821/612284967fc549d8a016e85b4dbab56b/c.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "人形机器人从炫技转向能干活能交付",
+        "summary": "世界机器人大会集中展示餐饮、清洁、康养和巡检方案，具身智能开始围绕稳定作业、成本与交付能力接受检验。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-24 09:16",
+        "url": "https://news.cnr.cn/kuaixun/20260824/t20260824_527788931.shtml"
+      },
+      {
+        "id": "ai-05",
+        "title": "人形机器人产业标准体系将征求意见",
+        "summary": "征求意见稿拟到二〇二八年完成至少一百项关键标准，覆盖能力测试、关键技术、场景应用、安全治理与伦理评估。",
+        "source": "中国经济网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25 08:37",
+        "url": "https://scitech.ce.cn/sy/zx/202608/t20260825_3169016.shtml"
+      }
+    ]
+  },
+  "topStoryIds": ["domestic-01", "international-09", "tech-07"],
+  "metrics": [
+    {
+      "kind": "gold",
+      "icon": "🥇",
+      "name": "国内金价",
+      "value": "Au99.99：1005.0元/克",
+      "note": "2026-08-26延时最新价",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/h5_sjzx/yshq",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "北京油价",
+      "value": "92号7.78元/升；95号8.29元/升",
+      "note": "2026-08-14起最高零售价",
+      "source": "北京市发展和改革委员会",
+      "sourceUrl": "https://fgw.beijing.gov.cn/bmcx/djcx/cxldj/202003/t20200331_1752783.htm",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "布伦特原油",
+      "value": "86.80美元/桶",
+      "note": "2026-08-25 23:44盘中价",
+      "source": "第一财经",
+      "sourceUrl": "https://www.yicai.com/news/103333723.html",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "international_oil_wti",
+      "icon": "🛢️",
+      "name": "WTI原油",
+      "value": "81.57美元/桶",
+      "note": "2026-08-25 23:44盘中价",
+      "source": "第一财经",
+      "sourceUrl": "https://www.yicai.com/news/103333723.html",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "usd_cny",
+      "icon": "💵",
+      "name": "人民币兑美元",
+      "value": "1美元＝6.7829元人民币",
+      "note": "2026-08-26中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "eur_cny",
+      "icon": "💶",
+      "name": "人民币兑欧元",
+      "value": "1欧元＝7.8807元人民币",
+      "note": "2026-08-26中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "jpy_cny",
+      "icon": "💴",
+      "name": "人民币兑日元",
+      "value": "100日元＝4.2450元人民币",
+      "note": "2026-08-26中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    }
+  ],
+  "metricsCutoff": "2026-08-26 12:48（北京时间）",
+  "metricSources": ["上海黄金交易所", "北京市发展和改革委员会", "第一财经", "国家外汇管理局"],
+  "observation": "今天的民生主线由稳增长与兜底保障共同构成：下半年政策强调扩大内需、促进就业增收，养老助餐、常态化帮扶、医保提质和防汛响应则落在具体生活场景。国际上，关税反制、水资源争端和中东航运安全继续抬高不确定性。科技侧，公共数据授权、机器人规模化交付和低空经济并行推进，人工智能的竞争重点已从模型演示转向真实数据、精细操作、行业标准与可持续交付。",
+  "sources": ["新华网", "人民网", "光明网", "央广网", "中国经济网"]
+}

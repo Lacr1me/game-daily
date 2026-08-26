@@ -1,7 +1,7 @@
 import { mkdtemp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
-import { acquireRunLease, appendResearchLedger, assertGameDealCoverage, assertReadyProof, createReadyProof, initializeRunState, mergeSourceAudits, releaseRunLease, researchCompleteness } from "./daily-operations.mjs";
+import { CONTENT_CANDIDATE_TARGETS, acquireRunLease, appendResearchLedger, assertGameDealCoverage, assertReadyProof, createReadyProof, freezeSteamDiscovery, initializeRunState, mergeSourceAudits, reconcileRunState, releaseRunLease, researchCompleteness } from "./daily-operations.mjs";
 import { runDailyHealth } from "./check-daily-health.mjs";
 import { validateGame } from "./game-lib.mjs";
 import { validateMinshengSourceAudit } from "./minsheng-lib.mjs";
@@ -13,6 +13,7 @@ const tempRoot = await mkdtemp(path.join(os.tmpdir(), "daily-operations-"));
 try {
   await testSourceAliasesAndAudit();
   await testResumableLedger();
+  await testSemanticCandidateCompleteness();
   await testAuditMerge();
   await testRunLease();
   await testReadyProof();
@@ -93,20 +94,75 @@ async function testResumableLedger() {
 
 async function recordRequiredSources(root, date, runId, channel, options = {}) {
   const pairs = channelSections(channel).flatMap((section) => requiredSourceIds(channel, section).map((sourceId) => ({ section, sourceId })));
+  const seededSections = new Set();
   for (const [index, pair] of pairs.entries()) {
     const isLast = index === pairs.length - 1;
     const unavailable = options.unavailableOnce && index === 0;
+    const target = CONTENT_CANDIDATE_TARGETS[channel][pair.section];
+    const shouldSeed = !seededSections.has(pair.section) && !unavailable;
+    const candidateCount = shouldSeed ? Math.min(target, options.candidateLimit ?? target) : 0;
+    const candidateIds = Array.from({ length: candidateCount }, (_, candidateIndex) => `${channel}-${pair.section}-${candidateIndex + 1}`);
+    if (shouldSeed) seededSections.add(pair.section);
     await appendResearchLedger(root, {
       date,
       runId,
       channel,
       ...pair,
       status: isLast && options.leaveLastStarted ? "started" : unavailable ? "unavailable" : "accepted",
-      availableCount: unavailable ? 0 : 1,
+      availableCount: unavailable ? 0 : Math.max(1, candidateIds.length),
+      candidateIds,
       coverageComplete: channel === "game" && pair.section === "deals" && !unavailable,
+      evidenceComplete: channel === "game" && ["packs", "mods"].includes(pair.section) && !options.omitEvidence && candidateIds.length >= target,
       reasons: unavailable ? "首次访问不可用" : ""
     });
   }
+}
+
+async function testSemanticCandidateCompleteness() {
+  const date = "2026-08-26";
+  const shallowRoot = path.join(tempRoot, "semantic-shortfall");
+  await initializeRunState(shallowRoot, { date, runId: "0730", kind: "main" });
+  await recordRequiredSources(shallowRoot, date, "0730", "minsheng", { candidateLimit: 1 });
+  let status = await researchCompleteness(shallowRoot, date, "minsheng");
+  assert(!status.complete && status.sections.domestic.shortfall === 9, "来源均有终态但候选数量不足时必须继续失败");
+  await appendResearchLedger(shallowRoot, {
+    date,
+    runId: "0830",
+    channel: "minsheng",
+    section: "domestic",
+    sourceId: "external-news-authority",
+    tier: "fallback",
+    status: "accepted",
+    availableCount: 9,
+    candidateIds: Array.from({ length: 9 }, (_, index) => `external-domestic-${index + 1}`),
+    reasons: "国内必查来源已穷尽后补精确差额"
+  });
+  status = await researchCompleteness(shallowRoot, date, "minsheng");
+  assert(status.sections.domestic.complete && status.sections.domestic.candidateCount === 10, "允许的外网权威回退候选必须能补精确差额");
+  const reconciled = await reconcileRunState(shallowRoot, date);
+  assert(reconciled.state.channels.minsheng.status === "researching" && !reconciled.state.channels.minsheng.missingSections.includes("domestic"), "reconcile必须从真实语义缺口更新状态并清除已补足栏目");
+
+  const evidenceRoot = path.join(tempRoot, "semantic-evidence");
+  await initializeRunState(evidenceRoot, { date, runId: "0830", kind: "main" });
+  await recordRequiredSources(evidenceRoot, date, "0830", "game", { omitEvidence: true });
+  status = await researchCompleteness(evidenceRoot, date, "game");
+  assert(!status.complete && !status.sections.packs.evidenceComplete && !status.sections.mods.evidenceComplete, "整合包和Mod只有名称清单时不得伪装成证据闭环");
+  for (const section of ["packs", "mods"]) {
+    const target = CONTENT_CANDIDATE_TARGETS.game[section];
+    await appendResearchLedger(evidenceRoot, {
+      date,
+      runId: "0930",
+      channel: "game",
+      section,
+      sourceId: requiredSourceIds("game", section)[0],
+      status: "accepted",
+      availableCount: target,
+      candidateIds: Array.from({ length: target }, (_, index) => `verified-${section}-${index + 1}`),
+      evidenceComplete: true
+    });
+  }
+  status = await researchCompleteness(evidenceRoot, date, "game");
+  assert(status.complete, "逐项证据和数量都闭环后游戏研究才可完成");
 }
 
 async function testAuditMerge() {
@@ -207,8 +263,9 @@ async function testGameRules() {
 
 async function testSteamAllVerifiedCoverage() {
   const root = path.join(tempRoot, "steam-coverage");
-  const date = "2026-08-25";
-  const brief = JSON.parse(await readFile(path.join(projectRoot, "data", `${date}.json`), "utf8"));
+  const date = "2026-08-27";
+  const brief = JSON.parse(await readFile(path.join(projectRoot, "data", "2026-08-25.json"), "utf8"));
+  brief.date = date;
   const appIds = brief.deals.map((deal) => /\/app\/(\d+)/.exec(deal.url)[1]);
   const lowIds = brief.deals.filter((deal) => deal.label.includes("史低")).map((deal) => /\/app\/(\d+)/.exec(deal.url)[1]);
   await initializeRunState(root, { date, runId: "0930", kind: "main" });
@@ -218,8 +275,21 @@ async function testSteamAllVerifiedCoverage() {
 
   await appendResearchLedger(root, { date, runId: "1030", channel: "game", section: "deals", sourceId: "steam-cn", status: "accepted", availableCount: appIds.length, candidateIds: appIds, coverageComplete: true });
   await appendResearchLedger(root, { date, runId: "1030", channel: "game", section: "deals", sourceId: "steam-price-history", status: "accepted", availableCount: lowIds.length, candidateIds: lowIds, coverageComplete: true });
+  await assertRejects(() => assertGameDealCoverage(root, date, brief), "新策略日期没有冻结发现面时必须拒绝发布");
+  await freezeSteamDiscovery(root, {
+    date,
+    runId: "0830",
+    sourceUrl: "https://store.steampowered.com/search/?specials=1&cc=cn&l=schinese",
+    appIds
+  });
   const coverage = await assertGameDealCoverage(root, date, brief);
   assert(coverage.selectedCount === appIds.length, "完整账本中的全部合格优惠必须通过");
+  await assertRejects(() => freezeSteamDiscovery(root, {
+    date,
+    runId: "1030",
+    sourceUrl: "https://store.steampowered.com/search/?specials=1&cc=cn&l=schinese",
+    appIds: [...appIds.slice(1), "99999999"]
+  }), "冻结后的Steam发现面不得被动态刷新结果覆盖");
 
   await appendResearchLedger(root, { date, runId: "1110", channel: "game", section: "deals", sourceId: "steam-cn", status: "accepted", availableCount: appIds.length + 1, candidateIds: [...appIds, "99999999"], coverageComplete: true });
   await assertRejects(() => assertGameDealCoverage(root, date, brief), "账本比网页多一项时必须拒绝截断发布");

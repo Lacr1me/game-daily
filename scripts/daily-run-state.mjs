@@ -1,5 +1,5 @@
 import process from "node:process";
-import { acquireRunLease, appendResearchLedger, checkpointRunState, createReadyProof, initializeRunState, mergeSourceAudits, operationPaths, releaseRunLease, researchCompleteness } from "./daily-operations.mjs";
+import { acquireRunLease, appendResearchLedger, checkpointRunState, createReadyProof, freezeSteamDiscovery, initializeRunState, mergeSourceAudits, operationPaths, reconcileRunState, releaseRunLease, researchCompleteness } from "./daily-operations.mjs";
 import { beijingDate } from "./game-lib.mjs";
 
 const root = process.cwd();
@@ -31,6 +31,7 @@ if (command === "init") {
     availableCount: args.available,
     rejectedCount: args.rejected,
     coverageComplete: args["coverage-complete"] === "true",
+    evidenceComplete: args["evidence-complete"] === "true",
     reasons: args.reason,
     candidateIds: args.candidates
   }), null, 2));
@@ -66,6 +67,16 @@ if (command === "init") {
   }), null, 2));
 } else if (command === "merge-audit") {
   console.log(JSON.stringify(await mergeSourceAudits(root, date), null, 2));
+} else if (command === "steam-freeze") {
+  console.log(JSON.stringify(await freezeSteamDiscovery(root, {
+    date,
+    runId: args["run-id"],
+    sourceUrl: args["source-url"],
+    appIds: args["app-ids"],
+    extraAppIds: args["extra-app-ids"]
+  }), null, 2));
+} else if (command === "reconcile") {
+  console.log(JSON.stringify(await reconcileRunState(root, date), null, 2));
 } else if (command === "status") {
   const output = { date, paths: operationPaths(root, date), channels: {} };
   for (const channel of ["minsheng", "game"]) output.channels[channel] = await researchCompleteness(root, date, channel);
