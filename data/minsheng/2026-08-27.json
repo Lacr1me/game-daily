@@ -1,0 +1,401 @@
+{
+  "date": "2026-08-27",
+  "issue": 6,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期四",
+  "lunarDate": "农历丙午年七月十五",
+  "cutoff": "2026-08-27 09:30（北京时间）",
+  "productionTime": "2026-08-27 09:39（北京时间）",
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "全国政协常委围绕保障民生与共同富裕建言",
+        "summary": "全国政协常委围绕就业、劳动权益、农村长护险、儿童健康、托育和适老化改造等议题提出建议，强调提升公共服务可及性。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 19:46",
+        "url": "https://www.news.cn/politics/20260826/b50450712aa947168477bbe672d05cea/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "多部门部署农村高额彩礼整治提质增效",
+        "summary": "中央农办等部门要求完善村规民约、纠纷化解和跨区域协同，巩固低彩礼、简办婚事成效，减轻农村家庭婚嫁负担。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 21:56",
+        "url": "https://www.news.cn/politics/20260826/b8a29e5e714048d38dfae9c7e096f0e0/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "产教融合行动计划将服务万名职校师生",
+        "summary": "新华网联合上市公司和职业院校启动产教融合服务计划，拟在五年内连接百家企业、千所院校，为万名师生提供实践资源。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 10:29",
+        "url": "https://www.news.cn/finance/20260826/e4150b7b516846da868393f094566909/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "道路交通安全法迎来首次系统性大修",
+        "summary": "修订草案回应自动驾驶、电动自行车、平台骑手算法和盲驾飙车等问题，兼顾通行效率与安全，强化日常出行保护。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 08:32",
+        "url": "https://www.news.cn/legal/20260826/8e8f4c9ef7c34f0fa6731ae5ee9be926/c.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "西藏吉隆口岸泥石流救援全面展开",
+        "summary": "针对吉隆口岸泥石流造成的伤亡和失联，相关方面正搜救失联人员、救治伤员并转移受威胁群众，同时排查次生风险。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 15:32",
+        "url": "https://www.news.cn/politics/leaders/20260826/e73cdedcfa6e4384b15cebedc9a13378/c.html"
+      },
+      {
+        "id": "domestic-06",
+        "title": "基层卫生试验区探索在家门口看好病",
+        "summary": "国家基层卫生健康综合试验区通过专家下沉、号源预留和互联网门诊等措施，把优质医疗资源送到社区和乡村。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 20:25",
+        "url": "https://www.news.cn/politics/20260826/0aeec8e7d33b437585dfdccc4884f44f/c.html"
+      },
+      {
+        "id": "domestic-07",
+        "title": "公安先进典型讲述守护群众平安实践",
+        "summary": "五名公安先进典型介绍法医取证、交通管理、网络安全和景区治安等一线工作，呈现基层公共安全服务的具体做法。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 23:05",
+        "url": "https://www.news.cn/politics/20260826/3d30734ea2164cc099f3d4989fab266f/c.html"
+      },
+      {
+        "id": "domestic-08",
+        "title": "琼粤台风登陆地区加快恢复生产生活",
+        "summary": "海南昌江和广东湛江在台风过后恢复港口通行，组织道路清理、农田排水和渔船复工准备，继续防范强降雨次生灾害。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 19:36",
+        "url": "https://www.news.cn/20260826/7308297df8964dcc8f708e0c9246b1bc/c.html"
+      },
+      {
+        "id": "domestic-09",
+        "title": "公益慢火车连接山区百姓出行与生计",
+        "summary": "多地公益慢火车以低票价服务沿线群众上学、就医和务工，并为农产品交易提供流动空间，维系偏远地区基本交通。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 16:45",
+        "url": "https://www.news.cn/politics/20260826/44e010e49c954eca9c127e33adde06ca/c.html"
+      },
+      {
+        "id": "domestic-10",
+        "title": "一老一小服务保障向供需协同转型",
+        "summary": "养老和托育服务正从单一设施供给转向识别差异化需求，各地加快普惠托育、社区照护和医养协作，减轻家庭照料负担。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 08:03",
+        "url": "https://health.people.com.cn/n1/2026/0826/c14739-40786131.html"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "以色列开始拆除联合国近东救济工程处机构",
+        "summary": "以色列启动对东耶路撒冷一所联合国近东救济工程处职业培训中心的撤离和拆除行动，联合国机构运作再受冲击。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 00:07",
+        "url": "https://www.news.cn/world/20260826/2c7f97bb031e49f8971b092924787ce6/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "美方称暂不对伊朗发动新一轮打击",
+        "summary": "美国国务卿鲁比奥向盟国表示暂不恢复大规模军事行动，当前重点转向海军封锁和经济制裁，但保留反击可能。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 07:15",
+        "url": "https://www.news.cn/world/20260826/7bf03d63426c4866a8705b2457893514/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "乌克兰称袭击俄罗斯多地军事目标",
+        "summary": "乌军方称对俄境内及相关地区多处军事目标发动袭击，涉及空军基地、通信干扰站和物资设施，局势继续紧张。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25 20:41",
+        "url": "https://www.news.cn/world/20260825/0ece6863d9ad4e4c8cb93c1cc91dc79a/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "俄方证实美国中情局局长访问俄罗斯",
+        "summary": "俄罗斯方面证实美国中央情报局局长到访，双方在俄乌冲突持续背景下保持接触，访问议题和后续影响受到关注。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 13:13",
+        "url": "https://www.news.cn/world/20260826/f5e310df8b7a42a6bec8468a9de968ad/c.html"
+      },
+      {
+        "id": "international-05",
+        "title": "俄方反对北约国家向乌克兰部署军队",
+        "summary": "俄罗斯表示北约国家在乌克兰部署军队不可接受，并称在当前缺乏和解条件时将继续军事行动，同时保留和平解决立场。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25 22:15",
+        "url": "https://www.news.cn/world/20260825/5ae446bc97004c5b8d3870afe49d37b9/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "哥伦比亚强震死亡人数升至331人",
+        "summary": "哥伦比亚国家灾害风险管理局称西部强震已造成331人死亡、4439人受伤和240人失踪，受灾范围覆盖多个省市。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25 10:28",
+        "url": "https://www.news.cn/world/20260825/1c1bdd69fa5a4ff28a057e31a499e762/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "海地首都附近帮派袭击致40余人死亡",
+        "summary": "海地媒体称武装帮派袭击太子港附近肯斯科夫市并纵火绑架，造成40余人死亡，安全力量进入最高警戒状态。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25 07:43",
+        "url": "https://www.news.cn/world/20260825/66d87c399b5f40ca87859bc65919743d/c.html"
+      },
+      {
+        "id": "international-08",
+        "title": "美国正式撤销叙利亚支恐国家认定",
+        "summary": "美国国务卿批准撤销叙利亚支持恐怖主义国家认定，叙过渡政府表示欢迎，相关决定将影响投资、援助与重建进程。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25 06:34",
+        "url": "https://www.news.cn/world/20260825/a2961ea523db4344baa30bc6e99cc608/c.html"
+      },
+      {
+        "id": "international-09",
+        "title": "美国拟对H-1B签证收取逾十万美元费用",
+        "summary": "美国国土安全部提出对部分H-1B工作签证申请收取约10.3万美元费用，拟议规则将进入公众意见征集程序。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25 10:20",
+        "url": "https://www.news.cn/world/20260825/0da9565f098c420e94eb8422b8b9eba0/c.html"
+      },
+      {
+        "id": "international-10",
+        "title": "普京会见印度外长讨论经贸能源合作",
+        "summary": "俄印双方积极评价经贸关系，并讨论能源、化肥、核能和高科技合作，两国领导人期待在上合组织框架下会晤。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25 07:49",
+        "url": "https://www.news.cn/world/20260825/efd484687191442eb9246ef256daa7fe/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "我国首次实现地月双向高速激光通信",
+        "summary": "科研团队在超过四十万公里的地月距离建立双向激光链路，实现上行一点二五兆比特、下行一百兆比特每秒通信。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 16:50",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/26/content_570163.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "木铎一号即时遥感卫星星座成功入轨",
+        "summary": "北师大研制的两星星座可协同发现并诊断地表异常，把遥感观测到预警的响应时间压缩至一分钟左右。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 07:35",
+        "url": "https://www.stdaily.com/web/2026-08/26/content_569748.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "核聚变能工程化产业化路线进一步明晰",
+        "summary": "核聚变能大会发布托卡马克技术图谱、环流四号目标图像和高温超导磁体研制路线图，推进聚变工程协同攻关。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 07:55",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/26/content_569761.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "国内首次完成525千伏直流海缆热稳定试验",
+        "summary": "国网舟山团队完成同电压等级首个完整热稳定性试验，海缆系统性能全部达标并获国际实验室见证认可。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 15:22",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/26/content_570060.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "基因组学与人工智能加速精准医疗转化",
+        "summary": "人类基因组计划二十五周年研讨会展示单细胞多组学、三维基因组和测序芯片复用进展，推动疾病机制解析。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25 22:06",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/25/content_569704.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "异种移植中国方案逐步形成完整技术链",
+        "summary": "国内团队围绕供体猪培育、病毒清除、移植术式和免疫调控持续突破，推动异种移植从科研探索走向规范转化。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 21:03",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/26/content_570245.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "一点六亿年前远古抗菌多肽被复原",
+        "summary": "科研人员重建远古哺乳动物乳铁蛋白序列，发现部分远古抗菌多肽对耐药细菌的杀伤能力超过现代对应分子。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25 18:38",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/25/content_569577.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "中国科学家证实胶球这一新物质形态存在",
+        "summary": "团队通过北京谱仪实验数据和振幅分析证明胶球存在，为检验粒子物理标准模型中的强相互作用预言提供实验证据。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 14:29",
+        "url": "https://www.news.cn/liangzi/20260826/9eff5cd896454a73a9c920bf50d63bd4/c.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "东北地区里程最长跨海大桥建设取得进展",
+        "summary": "长海大桥十一点六千米主线钢栈桥全线贯通，为复杂浅滩海域的物资、设备和人员全天候施工通行提供保障。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 07:42",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/26/content_569757.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "全国科普月将集中展示大科学装置成果",
+        "summary": "九月科普月将围绕拉索、东方超环等大科学装置和脑科学成果，推出五十三件首台套展品及多类互动科普活动。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 18:57",
+        "url": "https://tech.gmw.cn/2026-08/26/content_38965857.htm"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "工信部部署人工智能强供给促应用育生态",
+        "summary": "我国人工智能开源大模型累计下载突破百亿次，工信部将攻关芯片、多模态算法和世界模型并加强安全风险监测。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 18:09",
+        "url": "https://news.cctv.com/2026/08/26/ARTIyib9ZxxhmIBBk2GbsRYp260826.shtml"
+      },
+      {
+        "id": "ai-02",
+        "title": "调查显示公众更担心被更懂AI的人替代",
+        "summary": "腾讯与复旦两轮调查发现，受访者对技能差距的担忧高于对机器直接取代岗位的担忧，学习和转型行动同步增加。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 10:52",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/26/content_569915.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "人形机器人加速落地催生安全伦理新题",
+        "summary": "专家围绕数据采集、内容审核、人机责任边界和公众安全展开研讨，提出具身智能发展需同步完善伦理治理机制。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 17:45",
+        "url": "https://finance.people.com.cn/n1/2026/0826/c1004-40786707.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "具身智能创新活动聚焦技术攻坚与产业落地",
+        "summary": "产学研各方围绕具身机器人关键技术、核心零部件、行业标准和应用场景交流，推动协同攻关与成果转化。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25 19:55",
+        "url": "https://www.bj.chinanews.com.cn/news/2026/0825/103262.html"
+      },
+      {
+        "id": "ai-05",
+        "title": "AI时代互联网基础设施需升级智能体能力",
+        "summary": "行业提出以智能体发现、协商和任务委派协议升级应用层，并结合六代通信、云边端算网与智能运维强化底座。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25 15:35",
+        "url": "https://finance.cnr.cn/ycbd/20260825/t20260825_527791171.shtml"
+      }
+    ]
+  },
+  "topStoryIds": ["domestic-05", "international-06", "tech-01"],
+  "metrics": [
+    {
+      "kind": "gold",
+      "icon": "🥇",
+      "name": "国内金价",
+      "value": "Au99.99：995.00元/克",
+      "note": "2026-08-27 06:30延时最新价",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/h5_sjzx/yshq",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "北京油价",
+      "value": "92号7.78元/升；95号8.29元/升",
+      "note": "2026-08-14 24时起最高零售价",
+      "source": "北京市发展和改革委员会",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202608/t20260814_4823165.htm",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际油价",
+      "value": "布伦特87.84美元/桶；WTI82.23美元/桶",
+      "note": "2026-08-26最近收盘",
+      "source": "新华网",
+      "sourceUrl": "https://www.news.cn/fortune/20260827/2ac510f9d1244ff6b2b75dfde745cb6d/c.html",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "usd_cny",
+      "icon": "💵",
+      "name": "人民币兑美元",
+      "value": "1美元＝6.7829元人民币",
+      "note": "2026-08-26中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "eur_cny",
+      "icon": "💶",
+      "name": "人民币兑欧元",
+      "value": "1欧元＝7.8807元人民币",
+      "note": "2026-08-26中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "jpy_cny",
+      "icon": "💴",
+      "name": "人民币兑日元",
+      "value": "100日元＝4.2450元人民币",
+      "note": "2026-08-26中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    }
+  ],
+  "metricsCutoff": "2026-08-27 06:30（北京时间）",
+  "metricSources": ["上海黄金交易所", "北京市发展和改革委员会", "新华网", "国家外汇管理局"],
+  "observation": "今天的民生议题集中在灾害救援、公共服务和制度更新：西藏泥石流与台风灾后恢复要求搜救、转移和生产生活重建同步推进；高额彩礼整治、基层医疗、一老一小照护及道路安全修法继续回应家庭负担与日常出行。国际上，地震、帮派暴力和地区冲突交织，安全与人道压力上升。科技侧，地月激光通信、核聚变、异种移植和人工智能基础设施并行突破，也把数据、安全伦理和产业协同推到更重要的位置。",
+  "sources": ["新华网", "人民网", "中国科技网", "光明网", "央视网", "中国新闻网", "央广网"]
+}
