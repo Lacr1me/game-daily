@@ -1,0 +1,430 @@
+{
+  "date": "2026-08-28",
+  "issue": 7,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期五",
+  "lunarDate": "农历丙午年七月十六",
+  "cutoff": "2026-08-28 09:30（北京时间）",
+  "productionTime": "2026-08-28 09:34（北京时间）",
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "挺近吉隆口岸：道路通信抢通与群众安置推进",
+        "summary": "救援力量持续向吉隆口岸核心区推进，受灾路段已抢通约八百米，一座基站抢通、两座新增基站投用，受影响群众与滞留游客陆续转移安置。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-28 01:29",
+        "url": "https://www.news.cn/politics/20260828/22c26d1f181b45b1837692d64b786a9c/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "台风“沙德尔”登陆前发布红色预警",
+        "summary": "中央气象台发布台风红色预警，预计“沙德尔”28日早晨至中午在浙闽沿海登陆；强风、暴雨与天文大潮叠加，沿海低洼区需防倒灌内涝。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 23:32",
+        "url": "https://www.news.cn/politics/20260827/3e531f163c0b48f5807af84de4dd65d3/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "“九五”普法规划推动法治精神走进千家万户",
+        "summary": "国新办介绍2026至2030年法治宣传教育安排，强调面向青少年、网络空间和基层治理推进精准普法，提升公民法治素养与依法办事能力。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 22:22",
+        "url": "https://www.news.cn/politics/20260827/e72cabde557246c792993e91da428f08/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "川陕哲罗鲑十年拯救行动计划发布",
+        "summary": "农业农村部等四部门部署自然种群监测、人工繁育、增殖放流和栖息地修复等七大行动，计划到2035年推动这一国家一级保护动物种群恢复。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 22:02",
+        "url": "https://www.news.cn/politics/20260827/f50c5ef170264e0fb2b04238f9598f29/c.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "上海静安近八公里排水管道完成修复",
+        "summary": "静安区完成十二条道路五十个路段的排水管道修复，累计修复二百七十二个管段，提升沿线居民区、医院和商圈的排水能力与结构安全。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 19:50",
+        "url": "https://www.sh.chinanews.com.cn/shms/2026-08-27/148795.shtml"
+      },
+      {
+        "id": "domestic-06",
+        "title": "多地因地制宜探索集中供冷惠民降碳",
+        "summary": "徐州利用废弃矿井冷源，武汉、南京利用江水，杭州利用中水开展集中供冷；相关项目需综合评估资源条件、服务半径和经济性。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 06:12",
+        "url": "https://opinion.people.com.cn/n1/2026/0827/c461529-40786793.html"
+      },
+      {
+        "id": "domestic-07",
+        "title": "消费市场结构升级释放内需潜力",
+        "summary": "1至7月社会消费商品和服务零售总额同比增长2.6%，文旅、演出和零售场景活跃，优质供给与消费升级继续支撑内需韧性。",
+        "source": "中国经济网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 07:01",
+        "url": "https://finance.ce.cn/stock/gsgdbd/202608/t20260827_3172085.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "title": "高速服务区提质升级缓解新能源出行焦虑",
+        "summary": "多地高速服务区扩充充电设施、引入地方餐饮文旅并探索开放式互通，从单一停靠点转为便民综合驿站，改善长途出行体验。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 09:24",
+        "url": "https://finance.people.com.cn/n1/2026/0826/c1004-40786440.html"
+      },
+      {
+        "id": "domestic-09",
+        "title": "川渝居住证互通互认范围再扩容",
+        "summary": "重庆将达州、遂宁、南充纳入居住证互通互认范围，符合条件人员可当场申领，并享受公租房、义务教育和基本公共就业服务等权益。",
+        "source": "重庆市人民政府",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 17:11",
+        "url": "https://wap.cq.gov.cn/zt/cyscjjq/xtfz/ggfw/202608/t20260826_15983205.html"
+      },
+      {
+        "id": "domestic-10",
+        "title": "重庆轨道站边便民集市畅通城乡供需",
+        "summary": "重庆轨道交通丛岩寺站盘活站外闲置空间设置规范农贸专区，方便周边农户销售时令农产品，也让居民就近购买新鲜平价食材。",
+        "source": "重庆日报",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 08:06",
+        "url": "https://cq.news.cn/20260827/1addbe386b274c1f9baf6aa1c1253f73/c.html"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "乌克兰十个地区遭俄军新一轮空袭",
+        "summary": "乌克兰总理称包括基辅、哈尔科夫和敖德萨在内的十个地区遭袭，多处关键基础设施受损，约三百名救援人员投入处置。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 17:26",
+        "url": "https://www.news.cn/20260827/cb59adb361684d359647421c5c89d527/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "朝鲜称将强力回应美国敌对行为",
+        "summary": "朝鲜外务省发言人表示，将回应美国对韩军售及相关行动，称这些举措损害朝鲜安全环境并破坏地区稳定。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 17:58",
+        "url": "https://www.news.cn/world/20260827/3f3480f07f874e0a8ef46bf1a77b36d2/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "韩国法院签发中国留学生遇害案嫌疑人拘捕令",
+        "summary": "韩国大邱地方法院以存在逃跑风险为由签发拘捕令，嫌疑人已部分供认，警方将继续补充调查并推进精神鉴定。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 15:09",
+        "url": "https://cn.chinadaily.com.cn/a/202608/27/WS6a8fe2bce4b09a165c786629.html"
+      },
+      {
+        "id": "international-04",
+        "title": "芝加哥奥黑尔机场一个月内四度发生飞机爆胎",
+        "summary": "一架波音737-800客机因轮胎故障中止起飞，为该机场一个月内第四起类似事件；无人受伤，美国联邦航空局已介入调查。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 14:21",
+        "url": "https://www2.xinhuanet.com/20260827/ba8f14d9368c4509898b47c51c2a6daf/c.html"
+      },
+      {
+        "id": "international-05",
+        "title": "“9·11”案件主谋庭审推迟至2028年",
+        "summary": "美国军事法官将案件主谋等人的庭审日期定于2028年6月，审前证据争议仍未解决，案件日程仍可能继续延后。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 14:12",
+        "url": "https://www.news.cn/20260827/f079bad50eba4b5aaea4952a8f74cb63/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "日本艺术家草间弥生去世",
+        "summary": "日本共同社报道，前卫艺术家草间弥生因多器官功能衰竭于8月14日去世，终年97岁，其波点与装置艺术享誉国际。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 10:27",
+        "url": "https://www.xinhuanet.com/20260827/57863f27a3a043cfa8c3758ad67ab655/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "加纳总统调整内阁人员",
+        "summary": "加纳总统马哈马重新安排劳工部长和特别倡议部长职务，这是本月第二次内阁调整，后续政策分工仍待观察。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 09:58",
+        "url": "https://www.news.cn/world/20260827/37f73eac93114d7ca4051f8b1cbe0d8b/c.html"
+      },
+      {
+        "id": "international-08",
+        "title": "阿尔及利亚多地野火造成12人死亡",
+        "summary": "阿尔及利亚多省发生野火，吉杰勒、贝贾亚和提济乌祖三省共报告12人死亡，内政和卫生部门已赴灾区指导灭火与救治。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 07:09",
+        "url": "https://www.news.cn/world/20260827/46290e2a6cac4b20b7fa9f4f9823681b/c.html"
+      },
+      {
+        "id": "international-09",
+        "title": "Meta拟以最高170亿美元和解社交媒体成瘾诉讼",
+        "summary": "Meta与美国多州就青少年社交媒体成瘾诉讼达成原则性和解，拟加强未成年人保护与家长控制；协议仍需法院批准。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 03:05",
+        "url": "https://www.xinhuanet.com/20260827/2ae3a4dd75f8468e95beedb30435a1b5/c.html"
+      },
+      {
+        "id": "international-10",
+        "title": "全球日均海表温度刷新历史纪录",
+        "summary": "欧盟哥白尼气候变化服务局称全球海表日均温度达到21.10摄氏度并刷新8月纪录，海洋生态、沿海社区和极端天气风险上升。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-24 21:25",
+        "url": "https://www.news.cn/world/20260824/acc54b31eec94265a3d146da46e0f3c4/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "三点二四亿年前两栖昆虫改写登陆演化史",
+        "summary": "中外团队发现先驱乔昔虫化石，其桨状腹足和半水生习性填补约八千万年演化空白，证明昆虫登陆经历渐进式两栖过渡。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 19:54",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/27/content_570924.html",
+        "paper": {
+          "journal": "Nature",
+          "url": "https://doi.org/10.1038/s41586-026-10961-2",
+          "doi": "10.1038/s41586-026-10961-2"
+        }
+      },
+      {
+        "id": "tech-02",
+        "title": "宜宾以科学智能推动新能源研发和生产升级",
+        "summary": "宜宾建设电池材料智能实验平台与数字化产线，企业N型TOPCon电池转换效率达百分之二十七点二五，并持续攻关固态电池材料。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 20:05",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/27/content_570923.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "闽宁协作让海鱼陆养等技术加速落地",
+        "summary": "科研团队突破大黄鱼长途运输和盐碱水驯养瓶颈，并共建半导体级硅晶圆、食用菌等创新平台，推动技术适配宁夏场景。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 19:57",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/27/content_570922.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "多源技防矩阵守护长三角铁路汛期安全",
+        "summary": "沿海铁路布设智能视频、监测光纤、雷达和无人机，定制算法识别侵限、坍塌及火情准确率超过百分之九十八。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 18:45",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/27/content_570882.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "云南月季技术体系从实验室走向万亩花棚",
+        "summary": "团队建立花期预测、畸形花矫正和病害预警体系，把花期误差压至三天、畸形率降至百分之八，并推广低成本半基质栽培。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 18:47",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/27/content_570881.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "AC313A铁鸟试验机完成总装交付",
+        "summary": "十三吨级大型民用直升机的铁鸟试验机按一比一框架集成航电、控制和液压设备，将开展约五十小时地面联合测试。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 15:41",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/27/content_570747.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "可重复使用火箭瞄准航班化发射",
+        "summary": "航天科研院所和企业围绕回收后检修、复飞评估、快速周转、安全控制及全寿命标准展开研讨，为工程攻关提供参考。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 13:40",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/27/content_570615.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "心肌再生双重开关研究取得新进展",
+        "summary": "团队锁定NFYB与NR3C1两项关键因子，双靶点联合干预使小鼠心脏瘢痕约减半、心功能提升约三分之一。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 08:05",
+        "url": "https://cq.news.cn/20260827/583723c5142b4809b33cedb2dc13a721/c.html",
+        "paper": {
+          "journal": "Circulation",
+          "url": "https://doi.org/10.1161/CIRCULATIONAHA.125.079049",
+          "doi": "10.1161/CIRCULATIONAHA.125.079049"
+        }
+      },
+      {
+        "id": "tech-09",
+        "title": "中国一汽推进固态电池与增材制造工程化",
+        "summary": "中国一汽建成二十五兆瓦时全固态电芯中试线，实现大容量电芯小批量下线，并启用汽车全场景增材制造创新中心。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 07:56",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/27/content_570391.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "科技赋能寒地稻米育种与数字化生产",
+        "summary": "北大荒以功能育种、物联网和全程追溯拓展稻米价值，团队培育中等升糖指数品种，并探索云端定制种植。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 20:43",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/26/content_570241.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "北京亦庄发布全国首个AI4Chip专项政策",
+        "summary": "行动计划推动人工智能嵌入芯片设计、制造、封测和设备材料全链条，提出培育领军企业与标杆应用。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 19:55",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/27/content_570926.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "人工智能医学影像研究伦理指引发布",
+        "summary": "新指引覆盖算法研究、临床验证和成果转化，要求保护隐私、控制偏差并建立可阐释可核验的全生命周期风险治理。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 17:18",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/27/content_570839.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "科学智能加速重塑科研全流程",
+        "summary": "自主实验室、科学基础大模型和科研智能体正打通文献、计算、实验与反馈环节，多家平台已服务高校和科研机构。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 08:53",
+        "url": "https://edu.cnr.cn/sy/sytjB/20260827/t20260827_527793843.shtml"
+      },
+      {
+        "id": "ai-04",
+        "title": "AI深度参与个性化mRNA癌症疫苗设计",
+        "summary": "人工智能从基因组数据中筛选患者特异变异、评估抗原递呈并优化递送材料，使个性化疫苗走向大规模临床验证。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 07:55",
+        "url": "https://www.stdaily.com/web/2026-08/27/content_570396.html"
+      },
+      {
+        "id": "ai-05",
+        "title": "医疗智能体与影像云推动优质服务下沉",
+        "summary": "多语种专科智能体已内化三百八十七种疾病场景，广西医保影像云覆盖四百六十三家机构并支持跨院秒级调阅。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 07:55",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/27/content_570392.html"
+      }
+    ]
+  },
+  "topStoryIds": [
+    "domestic-02",
+    "international-01",
+    "tech-01"
+  ],
+  "metrics": [
+    {
+      "kind": "gold",
+      "icon": "🥇",
+      "name": "国内金价",
+      "value": "Au99.99：995.00元/克",
+      "note": "2026-08-28 06:30延时最新价",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/h5_sjzx/yshq",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "北京油价",
+      "value": "92号7.78元/升；95号8.29元/升",
+      "note": "2026-08-14 24时起最高零售价",
+      "source": "北京市发展和改革委员会",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202608/t20260814_4823165.htm",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际油价",
+      "value": "布伦特87.84美元/桶；WTI82.23美元/桶",
+      "note": "2026-08-26最近收盘",
+      "source": "新华网",
+      "sourceUrl": "https://www.news.cn/fortune/20260827/2ac510f9d1244ff6b2b75dfde745cb6d/c.html",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "usd_cny",
+      "icon": "💵",
+      "name": "人民币兑美元",
+      "value": "1美元＝6.7840元人民币",
+      "note": "2026-08-27中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "eur_cny",
+      "icon": "💶",
+      "name": "人民币兑欧元",
+      "value": "1欧元＝7.8739元人民币",
+      "note": "2026-08-27中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "jpy_cny",
+      "icon": "💴",
+      "name": "人民币兑日元",
+      "value": "100日元＝4.2491元人民币",
+      "note": "2026-08-27中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    }
+  ],
+  "metricsCutoff": "2026-08-28 06:30（北京时间）",
+  "metricSources": [
+    "上海黄金交易所",
+    "北京市发展和改革委员会",
+    "新华网",
+    "国家外汇管理局"
+  ],
+  "observation": "今日民生主线集中在灾害应对、公共服务与技术赋能。吉隆口岸救援和台风红色预警凸显抢险、通信恢复与沿海防灾的紧迫性；居住证互认、排水管网修复、高速服务区升级和便民集市，则从出行、安居与社区供给改善日常生活。国际上，乌克兰多地遭袭、阿尔及利亚野火及航空安全事件延续公共安全压力。科技与AI从远古昆虫演化、新能源制造延伸到医学影像伦理和科研智能体，创新效率与治理责任需要同步推进。",
+  "sources": [
+    "新华网",
+    "中国新闻网",
+    "人民网",
+    "中国经济网",
+    "重庆市人民政府",
+    "重庆日报",
+    "中国日报中文网",
+    "中国科技网",
+    "央广网"
+  ]
+}

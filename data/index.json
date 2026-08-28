@@ -4,6 +4,14 @@
   "publishAt": "11:00",
   "editions": [
     {
+      "date": "2026-08-28",
+      "issue": 7,
+      "publishAt": "2026-08-28T11:00:00+08:00",
+      "title": "游戏与 Minecraft 每日简报",
+      "headline": "《GTA6》26分钟PS5实机前瞻公开",
+      "file": "data/2026-08-28.json"
+    },
+    {
       "date": "2026-08-27",
       "issue": 6,
       "publishAt": "2026-08-27T11:00:00+08:00",
