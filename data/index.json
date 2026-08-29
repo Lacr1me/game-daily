@@ -4,6 +4,14 @@
   "publishAt": "11:00",
   "editions": [
     {
+      "date": "2026-08-29",
+      "issue": 8,
+      "publishAt": "2026-08-29T11:00:00+08:00",
+      "title": "游戏与 Minecraft 每日简报",
+      "headline": "国产《湮灭之潮》获科隆展“最具史诗感”奖",
+      "file": "data/2026-08-29.json"
+    },
+    {
       "date": "2026-08-28",
       "issue": 7,
       "publishAt": "2026-08-28T11:00:00+08:00",

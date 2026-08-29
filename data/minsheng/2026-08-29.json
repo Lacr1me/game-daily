@@ -1,0 +1,422 @@
+{
+  "date": "2026-08-29",
+  "issue": 8,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期六",
+  "lunarDate": "农历丙午年七月十七",
+  "cutoff": "2026-08-29 09:30（北京时间）",
+  "productionTime": "2026-08-29 09:35（北京时间）",
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "医疗保障法出台并明确多层次全民医保制度",
+        "summary": "十四届全国人大常委会表决通过医疗保障法，法律将于2027年1月1日起施行，并对异地结算、长期护理保险和基金监管作出制度安排。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-28 21:53",
+        "url": "https://www.xinhuanet.com/politics/20260828/c2b8fdbd1d5445a38f6386ab50b2b247/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "四川隆昌5.1级地震暂未发现人员伤亡",
+        "summary": "隆昌市启动地震应急响应并开展全域隐患排查，截至通报时未发现人员伤亡和房屋倒塌，电力、通信、燃气、供水及交通秩序正常。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-28 22:24",
+        "url": "https://www.news.cn/20260828/45019305ae0b4fe0afe3ed8b28b5fc37/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "四部门开展车辆可靠性耐久性专项整治",
+        "summary": "工业和信息化部等四部门启动为期一年的专项行动，集中整治车辆生产一致性、可靠性、耐久性及新技术测试验证等问题。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 19:14",
+        "url": "https://www.news.cn/politics/20260827/b0e9fe62541741bfb8e3c4451ae4bdb6/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "多部门联合部署加力做好稳投资工作",
+        "summary": "有关部门部署加快重大工程和专项债项目，强化用地、环评及数据等要素保障，并推出吸引民营企业参与的重大项目。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-28 20:17",
+        "url": "https://www.news.cn/20260828/c5fbb0563e004e90b55633936d35088a/c.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "证监会发文支持房地产开发企业合理融资",
+        "summary": "证监会发布资本市场支持房地产发展新模式的意见，完善股票、债券、资产支持证券和不动产投资信托基金等融资制度。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-28 21:34",
+        "url": "https://www.news.cn/fortune/20260828/e193bc313e504ab49a132d98c36bd36a/c.html"
+      },
+      {
+        "id": "domestic-06",
+        "title": "五部门推动生态环境科技多元化投入",
+        "summary": "生态环境部等五部门印发指导意见，构建多主体、多渠道、全链条投入格局，提升生态环境科技创新供给和产业化水平。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-28 19:52",
+        "url": "https://www.news.cn/20260828/91fec4c50e494ecbb6b1d3930c3b2323/c.html"
+      },
+      {
+        "id": "domestic-07",
+        "title": "第五批50个公共数据示范场景发布",
+        "summary": "国家数据局发布第五批50个公共数据示范场景，推动公共、社会与企业数据融合，服务农业决策并缓解中小微企业融资核验难题。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 07:35",
+        "url": "https://finance.people.com.cn/n1/2026/0826/c1004-40786099.html"
+      },
+      {
+        "id": "domestic-08",
+        "title": "住房公积金与人工客服等九月新规将施行",
+        "summary": "九月起住房公积金提取范围扩大，智能客服须设置清晰转人工入口，电子单证、微短剧备案和金融产品网络营销等规则同步落地。",
+        "source": "中国网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 09:26",
+        "url": "https://news.china.com.cn/2026-08/27/content_118665453.html"
+      },
+      {
+        "id": "domestic-09",
+        "title": "四川天府新区开办小区治理学院",
+        "summary": "天府新区成立社区治理学院，面向小区党组织、业委会、社工和物业分岗培训，围绕矛盾调解、公共收益管理等开发77门课程。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-28 19:17",
+        "url": "https://sc.chinadaily.com.cn/a/202608/28/WS6a916e62e4b09a165c786b87.html"
+      },
+      {
+        "id": "domestic-10",
+        "title": "钟南山建言呼吸道疾病医防协同与科普",
+        "summary": "公共卫生论坛聚焦呼吸道传染病防控，专家倡导构建预防、诊疗、管理一体化机制，并加强婴幼儿合胞病毒风险科普。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-28 18:43",
+        "url": "https://cn.chinadaily.com.cn/a/202608/28/WS6a916707e4b09a165c786b6f.html"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "南非库贝赫核电站因汽轮机跳闸停机",
+        "summary": "库贝赫核电站一号机组按程序安全停机，二号机组仍在维护；南非国家电力公司称事件不影响核安全、公众和电网稳定。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-28 23:44",
+        "url": "https://www.news.cn/world/20260828/1e8f71b8e4d842d989bdd71ff902e4a4/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "中方敦促日本加快遗弃化学武器处置",
+        "summary": "外交部表示日遗化武处置进程严重滞后，敦促日本全面履行国际公约和中日政府备忘录规定，切实承担历史与国际法义务。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-28 17:57",
+        "url": "https://www.news.cn/20260828/7237daf856f449bd87b5bc4c0a4ebb31/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "习近平在吉尔吉斯斯坦媒体发表署名文章",
+        "summary": "署名文章提出巩固睦邻友好、坚持互利共赢、赓续传统友谊和践行多边主义，推动中吉关系及上合组织合作迈向新阶段。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-28 15:56",
+        "url": "https://www.news.cn/politics/leaders/20260828/2360ef28c57e4c16bf3cab3f4073473b/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "中方在联合国敦促维护加沙停火",
+        "summary": "中国常驻联合国代表在安理会发言，敦促全面履行停火协议、缓和约旦河西岸紧张局势，并维护两国方案的政治前景。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 16:03",
+        "url": "https://www.news.cn/world/20260827/27cdeb7f4a754321b3ec634de9ef26b2/c.html"
+      },
+      {
+        "id": "international-05",
+        "title": "尼泊尔山洪已致359人死亡910人失联",
+        "summary": "尼泊尔国家减少灾害风险管理局通报，北部山洪受灾地区已发现359具遇难者遗体，失联人员包括多国游客、警务人员和居民。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-28 00:03",
+        "url": "https://www.news.cn/world/20260828/0954e1268efd429090bc5ef35705bff7/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "世卫组织更新刚果（金）埃博拉防控建议",
+        "summary": "世卫组织将刚果（金）疫情风险定为非常高、周边九国定为高，并细化监测、病例调查、临床护理、社区参与和人员流动建议。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-25 12:52",
+        "url": "https://www.news.cn/world/20260825/e62a4b4253ec49da85450e472bebb73f/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "中印边界问题特别代表会晤达成八点共识",
+        "summary": "双方同意维护边境和平安宁，成立划界专家组和边境管控工作组，增加会晤点与联络热线，并推进边贸、朝圣和跨境河流合作。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 23:14",
+        "url": "https://www.news.cn/20260826/2df8723402fd461faafc0c2843d2cc61/c.html"
+      },
+      {
+        "id": "international-08",
+        "title": "“进贡”丑闻发酵令日本自民党担忧选情",
+        "summary": "日本自民党福冈县分支被曝向拟任议长等索要大额资金，在黑金丑闻余波未平之际引发民众不满并冲击地方选举预期。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 21:31",
+        "url": "https://www.news.cn/world/20260826/80553b5e6d0648ea99258c87be8c8499/c.html"
+      },
+      {
+        "id": "international-09",
+        "title": "普京与叙利亚过渡政府总统通电话",
+        "summary": "俄叙领导人表示愿深化政治对话和经贸人文合作，并继续沟通两处俄在叙军事基地调整改造及叙利亚重建等议题。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-26 19:57",
+        "url": "https://www.news.cn/20260826/1e49313876dd4165bd8bf76e0164e638/c.html"
+      },
+      {
+        "id": "international-10",
+        "title": "白宫称美国与伊朗目前没有进行谈判",
+        "summary": "白宫新闻秘书称美伊当前没有谈判，美方将继续以经济手段施压，同时表示美国总统仍保留其他选项。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-27 22:29",
+        "url": "https://www.news.cn/world/20260827/c3c7f9bf95bc4686be52458523c358d6/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "全球首款实时高光谱成像微系统问世",
+        "summary": "北京理工大学团队首创片上光谱计算架构，研制约九百五十克的高光谱成像微系统，可在智能驾驶、烟雾监测等场景实时解析。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-28 18:57",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/28/content_571559.html",
+        "paper": {
+          "journal": "Science",
+          "url": "https://www.science.org/doi/10.1126/science.aef8268",
+          "doi": "10.1126/science.aef8268"
+        }
+      },
+      {
+        "id": "tech-02",
+        "title": "国产核级树脂完成全场景工程验证",
+        "summary": "中广核牵头研制的五款核级树脂已在多座核电站累计应用十二批次，首款产品稳定运行超过三年，核心指标优于进口产品。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-28 19:57",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/28/content_571601.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "中国自研F级重型燃气轮机首次成套出口",
+        "summary": "中国自主研制的五十兆瓦F级重型燃气轮机G50从四川德阳发运哈萨克斯坦，这是该型国产重型燃机首次实现成套出口。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-28 19:43",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/28/content_571603.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "神舟二十三号乘组完成太阳翼舱外维修",
+        "summary": "三名航天员协同完成约五点五小时出舱活动，实施太阳翼维修和空间碎片防护装置安装，进一步保障空间站供电安全。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-28 15:35",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/28/content_571442.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "国内首条柔性钙钛矿电池全工序中试线建成",
+        "summary": "中国乐凯集团突破大面积均匀涂布难题，建成卷对卷柔性钙钛矿电池中试线，组件转换效率达百分之十七点七三。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-28 17:13",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/28/content_571486.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "世界首台35千伏高压直挂调相机投运",
+        "summary": "哈电集团自主研制设备在黑龙江风电场完成一百六十八小时稳定运行，可毫秒级调节无功功率并提升新能源电网稳定性。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-28 17:30",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/28/content_571519.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "绳驱特种机器人破解高危筒仓清堵难题",
+        "summary": "哈工大等单位研制的特种机器人融合防爆激光雷达、人工智能分析和绳驱破碎机械手，可替代人员进入密闭筒仓作业。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-28 17:35",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/28/content_571524.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "核酸空间信息检测技术获中国专利金奖",
+        "summary": "华大智造与深圳华大生命科学研究院的专利利用带空间条形码的DNA纳米球，实现组织到分子四尺度空间转录组分析。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-28 22:06",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/28/content_571666.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "我国发布首版全国几何基准影像成果",
+        "summary": "国家级几何基准影像首次覆盖全部陆地国土，以统一高精度位置基准支撑导航、应急救灾、城乡建设和时空智能应用。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-28 09:17",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/28/content_571022.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "遥感科学与技术领域十大前沿问题发布",
+        "summary": "全国遥感地理大会发布十大前沿问题，覆盖虚拟星座协同观测、遥感大模型、多模态实时处理和灾害即时监测等方向。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-28 13:46",
+        "url": "https://tech.gmw.cn/2026-08/28/content_38970102.htm"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "中国开放权重模型加速融入全球AI产业链",
+        "summary": "海外企业正基于Kimi、DeepSeek等中国开放权重模型进行后训练，相关技术还用于合成数据、模型架构和专项智能体开发。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-28 15:01",
+        "url": "https://www.news.cn/liangzi/20260828/5d9baba180c84f098576a76c9fb5ba3b/c.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "工业智能体平台升级补齐生产级工程短板",
+        "summary": "AInnoGC平台以工业本体、驾驭工程和智能编码自动化工作流与评测链路，推动智能体在设备、能源和制造数据场景稳定部署。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-28 15:16",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/28/content_571431.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "家庭智能体多多发布并强化端侧隐私保护",
+        "summary": "家庭机器人以视觉空间智能构建感知、决策和执行闭环，可服务老人儿童及居家巡检，并在端侧完成敏感信息脱敏。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-28 21:48",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/28/content_571647.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "双十亿计划建设专家轨迹与具身操作数据",
+        "summary": "本原智数发布生态计划，拟建设十亿条专家轨迹数据和十亿小时具身操作数据，为模型优化与智能体落地提供高质量数据底座。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-28 16:45",
+        "url": "https://www.news.cn/digital/20260828/3969fea9b57f45f9be6da892d7b123fc/c.html"
+      },
+      {
+        "id": "ai-05",
+        "title": "生产级AI落地转向安全治理与成本度量",
+        "summary": "数智创新大会聚焦人工智能规模化部署，提出统筹开发、数据、算力、安全和智能体治理，以解决可靠性与投入产出难题。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-28 17:36",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/28/content_571521.html"
+      }
+    ]
+  },
+  "topStoryIds": [
+    "domestic-01",
+    "international-05",
+    "tech-01"
+  ],
+  "metrics": [
+    {
+      "kind": "gold",
+      "icon": "🥇",
+      "name": "国内金价",
+      "value": "Au99.99：999.00元/克",
+      "note": "2026-08-27最近可核验收盘",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/h5_sjzx/yshq",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "北京油价",
+      "value": "92号8.09元/升；95号8.61元/升",
+      "note": "2026-08-28 24时起最高零售价",
+      "source": "北京市发展和改革委员会",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202608/t20260828_4841556.htm",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际油价",
+      "value": "布伦特89.31美元/桶；WTI83.40美元/桶",
+      "note": "2026-08-28最近收盘",
+      "source": "新华网",
+      "sourceUrl": "https://www.news.cn/fortune/20260829/911927d47ba041bdb9d8369cfec724d0/c.html",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "usd_cny",
+      "icon": "💵",
+      "name": "人民币兑美元",
+      "value": "1美元＝6.7811元人民币",
+      "note": "2026-08-28中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "eur_cny",
+      "icon": "💶",
+      "name": "人民币兑欧元",
+      "value": "1欧元＝7.8683元人民币",
+      "note": "2026-08-28中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "jpy_cny",
+      "icon": "💴",
+      "name": "人民币兑日元",
+      "value": "100日元＝4.2428元人民币",
+      "note": "2026-08-28中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    }
+  ],
+  "metricsCutoff": "2026-08-29 06:37（北京时间）",
+  "metricSources": [
+    "上海黄金交易所",
+    "北京市发展和改革委员会",
+    "新华网",
+    "国家外汇管理局"
+  ],
+  "observation": "今日民生主线集中在法治保障、公共安全与发展支撑。医疗保障法明确异地结算、长期护理保险和基金监管，四川隆昌地震后的快速排查与九月新规回应居民就医、出行和公共服务关切；稳投资、房地产融资和生态科技投入释放稳定预期。国际上，尼泊尔山洪、南非核电机组停机及加沙停火议题延续安全与人道压力。科技与AI从实时高光谱成像、载人航天维修延伸到开放权重模型、家庭智能体和生产级治理，创新正更强调可靠落地、数据质量与安全边界。",
+  "sources": [
+    "新华网",
+    "人民网",
+    "中国网",
+    "中国日报中文网",
+    "中国科技网",
+    "光明网"
+  ]
+}
