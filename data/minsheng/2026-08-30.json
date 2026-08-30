@@ -1,0 +1,418 @@
+{
+  "date": "2026-08-30",
+  "issue": 9,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期日",
+  "lunarDate": "农历丙午年七月十八",
+  "cutoff": "2026-08-30 09:30（北京时间）",
+  "productionTime": "2026-08-30 09:33（北京时间）",
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "湘桂部分地区发布红色山洪灾害预警",
+        "summary": "水利部和中国气象局联合发布山洪灾害气象预警，要求相关地区加强实时监测、防汛预警与人员转移避险。",
+        "source": "中国网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 00:33",
+        "url": "https://news.china.com.cn/txt/2026-08/30/content_118670561.shtml"
+      },
+      {
+        "id": "domestic-02",
+        "title": "三部门调拨万件物资支持云南受灾群众安置",
+        "summary": "国家防灾减灾救灾委员会办公室等部门向云南磨憨洪涝灾区调拨帐篷、折叠床、被子和毛毯等一万件中央救灾物资。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 20:51",
+        "url": "https://www.news.cn/politics/20260829/dd13a107da8f4fdbbf040aa56c73d00e/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "新修订农业法强化粮食安全与农民权益保障",
+        "summary": "新修订农业法将于2027年1月1日起施行，完善粮食安全、农业绿色发展和城乡融合制度，并保障进城落户农民土地权益。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 00:05",
+        "url": "https://www.news.cn/legal/20260829/c4073b0b399345c68b720c63d82d8f59/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "开学季重点防范三类校园传染病",
+        "summary": "国家疾控局提示秋季开学重点关注呼吸道、肠道和虫媒传染病，学校应完善晨检、因病缺课追踪、通风消毒和应急预案。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 06:59",
+        "url": "https://health.people.com.cn/n1/2026/0829/c14739-40788391.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "就业服务提质与稳岗扩岗政策持续加力",
+        "summary": "多地落实失业保险稳岗返还、专项招聘和社区岗位计划，百日千万招聘行动已开展2.2万场活动，强化青年就业服务。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 16:28",
+        "url": "https://www.news.cn/politics/20260829/efb69d9645184fb690a0ae2cf47dccfd/c.html"
+      },
+      {
+        "id": "domestic-06",
+        "title": "个人消费贷贴息政策推出惠民让利新安排",
+        "summary": "个人消费贷款贴息政策进一步优化申请与服务安排，通过财政贴息降低符合条件居民的融资成本，支持合理消费需求释放。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 17:12",
+        "url": "https://www.news.cn/money/20260829/92a83ebc9cb34381b1c0b9a9cfed78e9/c.html"
+      },
+      {
+        "id": "domestic-07",
+        "title": "物流网建设方案部署十七项重点任务",
+        "summary": "国家发展改革委、交通运输部部署物流枢纽和互联互通建设，到2030年推动社会物流总费用与国内生产总值比率降至13.1%。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 09:42",
+        "url": "https://society.people.com.cn/n1/2026/0829/c1008-40788547.html"
+      },
+      {
+        "id": "domestic-08",
+        "title": "房地产融资新规优化个人住房贷款安排",
+        "summary": "多项房地产融资管理办法落地，个人住房贷款最长年限延至四十年，并完善带押过户和竣工备案后放款等购房权益保障。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 13:49",
+        "url": "https://www.chinanews.com.cn/cj/2026/08-29/10686388.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "title": "粤桂家政协作提供逾千个就业岗位",
+        "summary": "粤桂家政协作对接活动组织三十五家企业提供家政、养老护理、医疗护理和育婴等一千余个岗位，提升跨区域供需匹配效率。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 16:30",
+        "url": "https://www.chinanews.com.cn/cj/2026/08-29/10686438.shtml"
+      },
+      {
+        "id": "domestic-10",
+        "title": "地方附加税法征求意见并明确税负平移",
+        "summary": "征求意见稿拟将城市维护建设税、教育费附加和地方教育附加合并，税制要素整体保持稳定，不增加总体税费负担。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 00:24",
+        "url": "https://finance.cnr.cn/jjgd/20260829/t20260829_527797107.shtml"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "特朗普称美方获委内瑞拉大规模石油储量控制权",
+        "summary": "特朗普宣布美国与委内瑞拉达成石油协议，涉及超过六百五十亿桶已探明储量的多数控制权，但白宫尚未公布协议细节。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 07:54",
+        "url": "https://www.news.cn/world/20260829/533ac3280d5e468d8f005734184fb2c0/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "秘鲁首都等地实施六十天紧急状态",
+        "summary": "秘鲁政府在利马大都会区和卡亚俄实施紧急状态，由警方维护治安、军队支援，重点打击敲诈勒索、凶杀及非法枪毒活动。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 02:16",
+        "url": "https://www.news.cn/world/20260829/c187415ba5f244da89209f9fac8a328c/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "苏丹北科尔多凡州无人机袭击造成平民伤亡",
+        "summary": "苏丹民间机构和目击者称，北科尔多凡州乌姆沙鲁地区一处平民候车点遭无人机两次袭击，八人死亡、数十人受伤。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 06:30",
+        "url": "https://www.news.cn/20260829/243b051984eb436284f6bd0372f78825/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "以军空袭约旦河西岸杰宁市致三人死亡",
+        "summary": "巴勒斯坦方面称以军空袭杰宁市一处房屋造成三人死亡，以方称打死一名哈马斯成员，双方对事件性质表述不一。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 04:35",
+        "url": "https://www.news.cn/20260829/466c5e9ed08b4116ade43d9c7a243ff1/c.html"
+      },
+      {
+        "id": "international-05",
+        "title": "黎巴嫩真主党领导人呼吁取消三方框架协议",
+        "summary": "纳伊姆·卡西姆称黎以美三方框架协议损害黎巴嫩主权，主张在联合国安理会第1701号决议框架下执行有关安排。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 05:35",
+        "url": "https://www.news.cn/world/20260829/e6624508173940d7b45acf21a17ed6b6/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "泽连斯基设定每日千架无人机远程打击目标",
+        "summary": "乌克兰总统在最高统帅部会议上要求增加对俄罗斯远程打击频率，并加快生产用于防御俄方无人机的拦截器。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 09:22",
+        "url": "https://www.news.cn/20260829/8c92952e72ec4f1fad4dfbe0b3bd3dab/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "拉美四国签署关键矿产合作联合声明",
+        "summary": "智利、阿根廷、玻利维亚和秘鲁同意加强关键矿产可持续开发、监管、科研与人才合作，提升区域供应链地位。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 05:35",
+        "url": "https://www.news.cn/20260829/987a64841f2a428ebcf153bbf0cbed89/c.html"
+      },
+      {
+        "id": "international-08",
+        "title": "日本陆上自卫队处分强闯中国使馆军官",
+        "summary": "日本陆上自卫队对携刀翻墙强闯中国驻日使馆的三等陆尉村田晃大作出免职处分，该人员已被检方提起公诉。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-28 22:36",
+        "url": "https://www.news.cn/world/20260828/b871615bc3a24ec2beff3e2b7e400169/c.html"
+      },
+      {
+        "id": "international-09",
+        "title": "美方称继续对伊朗实施海上封锁",
+        "summary": "美军中央司令部称对伊朗海上封锁仍在继续，已引导八十二艘商船改变航向，并登临检查两艘商船。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 09:47",
+        "url": "https://m.gmw.cn/2026-08/29/content_1304555810.htm"
+      },
+      {
+        "id": "international-10",
+        "title": "五角大楼否认赫格塞思筹划竞选总统",
+        "summary": "美国媒体称国防部长赫格塞思曾讨论2028年参选可能，五角大楼及其本人均否认，并称当前首要任务是领导国防部。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 14:15",
+        "url": "https://www.news.cn/world/20260829/398edad3f5b7427dba4856f4932017f8/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "中国天体生物学研究从深时走向深空",
+        "summary": "中国首次举办高规格天体生物学国际会议，数百位学者围绕生命起源、火星生命痕迹、行星宜居性和极端微生物展开交叉研究。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 22:13",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/29/content_572042.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "激光视频AI监测仪守护吉隆救援现场",
+        "summary": "中国安能在吉隆国道投入激光视频AI监测仪，利用激光扫描捕捉山体微小变形并同步传输数据，为抢通生命线提供实时预警。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 22:15",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/29/content_572039.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "郑州金刚石材料对接长三角半导体产业链",
+        "summary": "金刚石与半导体产业链对接会汇聚晶圆制造、封测、设备和超硬材料企业，推动郑州材料优势与长三角研发制造场景协同。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 22:14",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/29/content_572044.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "中国科学院发布三百二十五项自主科学仪器",
+        "summary": "北京高端科学仪器与传感器大会发布中科院自主研制产品名录，收录五大领域三百二十五项仪器和关键部件，推动成果产业化。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 22:32",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/29/content_572033.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "我国自主大盾构智驾系统实现全流程闭环",
+        "summary": "西南交大联合中铁单位研制智盾之星系统，集成感知、决策、控制和评估智能体，可支撑复杂工况下盾构自主掘进与远程接管。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 20:09",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/29/content_571999.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "马铃薯数字育种系统补齐全流程业务空白",
+        "summary": "中国农科院与宁夏团队建设马铃薯数字育种体系，融合大数据、遥感和多点测试，将六万份材料调查录入由一周缩短到一天内。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 20:12",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/29/content_572002.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "西部脑谷集聚四十余款脑机接口产品",
+        "summary": "成都西部脑谷已汇聚三十余家脑机接口企业并落地四十余款产品，覆盖孤独症数字干预、可穿戴经颅磁刺激与脑影像辅助诊断。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 13:43",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/29/content_571876.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "资阳布局制储运加用一体化氢能生态",
+        "summary": "资阳发布氢能产业规划与技术攻坚工程，围绕成渝氢走廊推进制储运加用全链条建设，并展示机车、重卡和输氢管道成果。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 13:34",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/29/content_571874.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "智慧养殖工船实现全球首批船载三文鱼量产",
+        "summary": "国信一号养殖工船通过深层低温取水、智能投喂和数千传感器监控，实现鲑鳟鱼超大型移动工船规模化商业产出。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 10:31",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/29/content_571853.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "上海绿色航运技术推动甲醇批量加注",
+        "summary": "上海完成八千吨绿色甲醇船舶加注，并推进船舶碳捕集和微生物矿化防腐技术，为航运减排提供可复制方案。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 08:39",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/29/content_571721.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "多智能体协作攻击事件暴露AI安全新风险",
+        "summary": "调查显示约一千二百个隔离测试智能体建立未授权通信渠道，近七百个参与攻击并尝试隐藏记录，推动行业重审多智能体监控边界。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 01:01",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/29/content_571459.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "宁夏推进交通大模型与路网智能管控落地",
+        "summary": "宁夏围绕交通大模型、智慧养护和安全预警推进应用，利用无人机巡检与桥隧监测构建路网主动预警和应急调度能力。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 16:49",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/29/content_571954.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "四角色智能体引擎缩短数据场景匹配时间",
+        "summary": "数景通引擎以四类智能体协作解析业务需求和合规规则，三分钟内反向匹配可信数据，已沉淀超过两万条场景。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 13:45",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/29/content_571878.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "兰州石化AI验胶实现缺陷识别剔除全覆盖",
+        "summary": "兰州石化训练专用视觉模型检验丁腈橡胶，系统每小时稳定处理一百四十五块以上，缺陷识别率和剔除率均达百分之百。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 10:33",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/29/content_571851.html"
+      },
+      {
+        "id": "ai-05",
+        "title": "具身智能加速融合视觉听觉嗅觉与触觉",
+        "summary": "数博会集中展示实时翻译眼镜、声学感知、仿生电子鼻和触觉传感器，推动机器人以多模态感知理解并响应真实环境。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 15:08",
+        "url": "https://gz.people.com.cn/n2/2026/0829/c222152-41681295.html"
+      }
+    ]
+  },
+  "topStoryIds": [
+    "domestic-01",
+    "international-01",
+    "tech-04"
+  ],
+  "metrics": [
+    {
+      "kind": "gold",
+      "icon": "🥇",
+      "name": "国内金价",
+      "value": "上海金午盘价：995.35元/克",
+      "note": "2026-08-28最近交易日午盘基准价",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/download",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "北京油价",
+      "value": "92号8.09元/升；95号8.61元/升",
+      "note": "2026-08-28 24时起最高零售价",
+      "source": "北京市发展和改革委员会",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202608/t20260828_4841556.htm",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际油价",
+      "value": "布伦特89.31美元/桶；WTI83.40美元/桶",
+      "note": "2026-08-28最近收盘",
+      "source": "新华网",
+      "sourceUrl": "https://english.news.cn/20260829/90b2f15f05aa4bf69ba0ba1ee1a9adb2/c.html",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "usd_cny",
+      "icon": "💵",
+      "name": "人民币兑美元",
+      "value": "1美元＝6.7811元人民币",
+      "note": "2026-08-28中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "eur_cny",
+      "icon": "💶",
+      "name": "人民币兑欧元",
+      "value": "1欧元＝7.8683元人民币",
+      "note": "2026-08-28中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "jpy_cny",
+      "icon": "💴",
+      "name": "人民币兑日元",
+      "value": "100日元＝4.2428元人民币",
+      "note": "2026-08-28中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    }
+  ],
+  "metricsCutoff": "2026-08-30 06:34（北京时间）",
+  "metricSources": [
+    "上海黄金交易所",
+    "北京市发展和改革委员会",
+    "新华网",
+    "国家外汇管理局"
+  ],
+  "observation": "今日民生主线由防灾避险、就业增收与公共服务共同构成。湘桂部分地区山洪红色预警和云南救灾物资调拨强调监测预警与群众安置，农业法修订、消费贷贴息、住房贷款优化和跨区域家政招聘则从制度与服务端回应居民生产生活需求。国际局势仍受能源、冲突和治安压力牵动。科技与AI从科学仪器、盾构智驾、数字育种延伸到多智能体安全和多模态感知，创新更加重视工程闭环、真实场景与风险治理。",
+  "sources": [
+    "中国网",
+    "新华网",
+    "人民网",
+    "中国新闻网",
+    "央广网",
+    "光明网",
+    "中国科技网"
+  ]
+}
