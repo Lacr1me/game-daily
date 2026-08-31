@@ -1,0 +1,416 @@
+{
+  "date": "2026-08-31",
+  "issue": 10,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期一",
+  "lunarDate": "农历丙午年七月十九",
+  "cutoff": "2026-08-31 09:30（北京时间）",
+  "productionTime": "2026-08-31 09:35（北京时间）",
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "国家医保局推进158个基层病种同病同付",
+        "summary": "国家医保局明确31个DRG病种和127个DIP病种实行基层同病同付，同一统筹区按相同标准付费，推动常见病在基层规范诊疗。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 08:21",
+        "url": "https://www.news.cn/politics/20260830/2914dda5f4f141e6b4e036a70cfc53e6/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "新就业形态职业伤害保障试点扩至全国",
+        "summary": "多措并举加强民生保障报道显示，新就业形态人员职业伤害保障试点自7月1日起扩至全国，并同步推进稳岗与公共服务举措。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 08:21",
+        "url": "https://www.news.cn/politics/20260830/298631d67d1f49e0a64831fd962193f4/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "南京公积金异地贷款范围扩至全国",
+        "summary": "南京住房公积金异地贷款范围扩至全国，外地正常缴存职工可按规定申请南京住房贷款，新政策自9月1日起施行。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 11:42",
+        "url": "https://www.chinanews.com.cn/cj/2026/08-30/10686698.shtml"
+      },
+      {
+        "id": "domestic-04",
+        "title": "记者调查医美注射违规使用妆字号产品乱象",
+        "summary": "调查发现部分从业者把仅限皮肤涂抹的妆字号产品用于注射美容，消费者遭受长期损伤，暴露资质与产品用途监管风险。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 19:33",
+        "url": "https://www.chinanews.com.cn/sh/2026/08-30/10686902.shtml"
+      },
+      {
+        "id": "domestic-05",
+        "title": "广西构建青少年常见病综合防控体系",
+        "summary": "广西学校卫生工程覆盖近视、龋病、肥胖和脊柱异常等问题，每年监测900余所学校、27万余名学生并推进精准干预。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 19:42",
+        "url": "https://www.chinanews.com.cn/jk/2026/08-30/10686903.shtml"
+      },
+      {
+        "id": "domestic-06",
+        "title": "厦门通报餐饮门店违规消杀案刑拘6人",
+        "summary": "厦门联合调查组通报消杀公司涉嫌使用敌敌畏为餐饮门店作业，公安机关刑拘6名嫌疑人，抽检场所和餐具指标符合安全标准。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 18:44",
+        "url": "https://www.chinanews.com.cn/sh/2026/08-30/10686868.shtml"
+      },
+      {
+        "id": "domestic-07",
+        "title": "江苏启动江淮及沿江地区防汛四级响应",
+        "summary": "江苏自30日11时启动江淮及沿江地区防汛四级应急响应，多地预计出现强降雨并伴雷暴大风，要求做好排涝和转移避险。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 16:52",
+        "url": "https://www.chinanews.com.cn/sh/2026/08-30/10686832.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "title": "广西调整发布洪水橙色预警",
+        "summary": "广西仍有11条河流15个水文站超警，水文部门预计郁江贵港城区河段将超警3米，并提醒沿江单位和公众及时避险。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 13:03",
+        "url": "https://www.chinanews.com.cn/sh/2026/08-30/10686720.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "title": "儿童心理专家支招缓解开学前焦虑",
+        "summary": "专家建议家长以每天提前15至30分钟的方式渐进调整孩子作息，合理制定新学期计划，并接纳、疏导负面情绪。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 12:53",
+        "url": "https://www.chinanews.com.cn/life/2026/08-30/10686748.shtml"
+      },
+      {
+        "id": "domestic-10",
+        "title": "海南自贸港封关后开放红利加快释放",
+        "summary": "海南封关以来零关税商品税目比例升至74%，截至7月底进出境旅客同比增长27.1%，进口货物平均通关时间缩短20%。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 10:17",
+        "url": "https://www.chinanews.com.cn/cj/2026/08-30/10686669.shtml"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "塞浦路斯北部海域客轮倾覆已致6人死亡",
+        "summary": "一艘载有270余人的客轮在塞浦路斯北部凯里尼亚附近海域倾覆，已造成6人死亡、172人获救，事故原因仍在调查。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 21:10",
+        "url": "https://www.news.cn/world/20260830/747fb27442b94798b1cc7fd47875364e/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "韩国总统李在明提名六名部长人选",
+        "summary": "韩国总统李在明改组内阁，提名法务、财政经济、国防、国土交通、中小风险企业和性别平等家族等六部门长官人选。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 20:29",
+        "url": "https://www.chinanews.com.cn/gj/2026/08-30/10686919.shtml"
+      },
+      {
+        "id": "international-03",
+        "title": "菲律宾强降雨致32人死亡约810万人受影响",
+        "summary": "受热带气旋和增强西南季风影响，菲律宾10个地区约810万人受灾，32人死亡，已有117个地方政府宣布进入灾难状态。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 20:15",
+        "url": "https://www.chinanews.com.cn/gj/2026/08-30/10686913.shtml"
+      },
+      {
+        "id": "international-04",
+        "title": "瑞士阿劳枪击事件致1死5伤",
+        "summary": "瑞士北部阿劳一场派对发生枪击，已造成1人死亡、5人受伤，警方正大规模搜捕枪手，身份和作案动机尚不清楚。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 15:02",
+        "url": "https://www1.xinhuanet.com/20260830/f6eb3ea37e594de9aee90b76c24502eb/c.html"
+      },
+      {
+        "id": "international-05",
+        "title": "日本福井县强降雨触发最高级别警报",
+        "summary": "福井县多地24小时降雨量创观测纪录，多条公路和铁路受影响，福井、大野和胜山三市发布最高级别避难指令。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 14:27",
+        "url": "https://www.news.cn/20260830/8743de45938d47919668a49af8294fc3/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "巴西加强强厄尔尼诺公共卫生应对",
+        "summary": "巴西预计强厄尔尼诺最快9月升至很强水平，卫生部门已部署跨层级应急、物资和救援力量，圣保罗启动常态急救公益培训。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 14:45",
+        "url": "https://www.chinanews.com.cn/gj/2026/08-30/10686782.shtml"
+      },
+      {
+        "id": "international-07",
+        "title": "美媒团队在约旦河西岸采访时遭袭",
+        "summary": "美国全国广播公司三名新闻团队成员在约旦河西岸采访时遭蒙面定居者殴打受伤，内塔尼亚胡随后公开谴责相关暴力。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 13:00",
+        "url": "https://www.chinanews.com.cn/gj/2026/08-30/10686742.shtml"
+      },
+      {
+        "id": "international-08",
+        "title": "日本千叶县东部近海发生4.8级地震",
+        "summary": "千叶县东部近海发生4.8级地震，东京、千叶和茨城等地有震感，东海第二核电站及周边辐射监测均未发现异常。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 10:50",
+        "url": "https://www.chinanews.com.cn/gj/2026/08-30/10686678.shtml"
+      },
+      {
+        "id": "international-09",
+        "title": "冰岛公投反对重启加入欧盟谈判",
+        "summary": "冰岛全民公投初步计票显示多数选民反对重启加入欧盟谈判，冰岛与欧盟关系将继续主要通过欧洲经济区和申根机制维系。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 16:16",
+        "url": "https://www.news.cn/20260830/d767ab4032854916b50b2874974beae8/c.html"
+      },
+      {
+        "id": "international-10",
+        "title": "津巴布韦两车相撞致27人死亡",
+        "summary": "津巴布韦一辆卡车在超车时与对向小客车迎面相撞，造成27人死亡、7人受伤，警方仍在调查事故具体原因。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-29 19:39",
+        "url": "https://www.news.cn/20260829/2444ce8f64b541b2b903a83c21fe54b5/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "全球首个太空算力云进入常态化在轨服务",
+        "summary": "北京邮电大学牵头建设太空算力云，打通卫星、地面站与数据中心任务编排，已完成数百次在轨算力调用。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 21:00",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/30/content_572166.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "可旋转支撑装置解决高铁栅栏立柱固定难题",
+        "summary": "中铁六局团队研制可伸缩旋转支撑工装，适应复杂坡面并实现立柱垂直安装，验收合格率达到百分之百。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 21:00",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/30/content_572168.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "中比科技研讨会拓展生命科学与绿色技术合作",
+        "summary": "中比科研机构、高校和企业围绕生命科学、公共卫生、绿色技术与合成生物学交流，推动联合创新和成果转化。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 20:58",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/30/content_572162.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "两艘超大型矿砂船亮相并预留零碳航行能力",
+        "summary": "恒力重工两艘三十二点五万载重吨矿砂船完成命名，面向铁矿石和铝土矿远洋运输，可实现全航程零碳运行。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 21:00",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/30/content_572159.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "吉木萨尔页岩油基地形成百万吨级开采能力",
+        "summary": "示范区建立薄油层综合识别标准，将钻遇率提高到百分之八十五，并以精细压裂降低成本、提升开采效率。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 18:25",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/30/content_572157.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "长沙望城建设量子精密测量产业集聚区",
+        "summary": "湖南量子科技对接会签约量子超算智算和微型原子钟产线项目，推动量子测量、导航和通信成果工程化。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 18:26",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/30/content_572155.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "全栈自研光量子计算机在广州发布",
+        "summary": "光纵横量子计算机采用五层自主架构，集成光量子芯片、测控系统、操作系统与模拟器，并启动开源社区。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 15:11",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/30/content_572134.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "可降解材料与再生塑料加快规模化应用",
+        "summary": "道恩集团推进PBAT可降解材料量产，并建设废旧塑料回收、分选和改性造粒体系，服务家电汽车等行业。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 18:26",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/30/content_572154.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "华电灵宝抽水蓄能电站主体工程开工",
+        "summary": "项目将安装四台三十万千瓦可逆式机组，并建设数智化管控平台，投运后承担调峰储能和事故备用。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 16:11",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/30/content_572144.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "数博会集中展示算力调度与机器人应用",
+        "summary": "数博会展示高危巡检四足机器人、移动算力车和词元利用平台，呈现算力灵活部署与实体场景融合。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 17:43",
+        "url": "https://www.news.cn/20260830/5884e6e13eac4d739e3b62ca688f0e05/c.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "国产代码与模型平台构建自主开源生态",
+        "summary": "开源中国以代码托管和模型分发双平台适配国产异构算力，形成从模型数据、调度到应用开发的完整链路。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 20:55",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/30/content_572160.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "冰雪运动冠军模型智能体在杭州发布",
+        "summary": "未来教练智能体融合多模态数据与训练科学，可生成训练和康复方案，已服务十余支队伍及千余名运动员。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 16:11",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/30/content_572145.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "数博会聚焦具身智能五类实景能力",
+        "summary": "数博会展示翻译眼镜、嗅觉机器人和传感机械手，专家提出打通目标规划、技能与基础动作以实现规模化。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 16:14",
+        "url": "https://www.gz.news.cn/20260830/28457d44dfcd47558c9ef7e652c35259/c.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "词元与数据标注成为AI产业化关键变量",
+        "summary": "数博会集中呈现词元生产和数据标注实践，我国日均词元调用量突破五百万亿，推理需求正加速增长。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 11:14",
+        "url": "https://news.cctv.com/2026/08/30/ARTIHa9EaoqkmcBlf0IWvxGU260830.shtml#ai-token"
+      },
+      {
+        "id": "ai-05",
+        "title": "人工智能从技术验证加速走向制造生产线",
+        "summary": "产业大会围绕智能装备与算力基础设施展开协同，企业将AI嵌入研发、生产和供应链以重构制造流程。",
+        "source": "中国经济网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 08:58",
+        "url": "https://finance.ce.cn/stock/gsgdbd/202608/t20260830_3179803.shtml"
+      }
+    ]
+  },
+  "topStoryIds": [
+    "domestic-01",
+    "international-01",
+    "tech-01"
+  ],
+  "metrics": [
+    {
+      "kind": "gold",
+      "icon": "🥇",
+      "name": "国内金价",
+      "value": "上海金午盘价：995.35元/克",
+      "note": "2026-08-28最近交易日午盘基准价",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/?p=324",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "北京油价",
+      "value": "92号8.09元/升；95号8.61元/升",
+      "note": "2026-08-29最新有效最高零售价",
+      "source": "北京市发展和改革委员会",
+      "sourceUrl": "https://fgw.beijing.gov.cn/bmcx/djcx/cxldj/202003/t20200331_1752783.htm",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际油价",
+      "value": "布伦特89.31美元/桶；WTI83.40美元/桶",
+      "note": "2026-08-28最近收盘",
+      "source": "新华网",
+      "sourceUrl": "https://www.news.cn/20260829/da73da6b20e7402c8fd7b79ce11f32c3/c.html",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "usd_cny",
+      "icon": "💵",
+      "name": "人民币兑美元",
+      "value": "1美元＝6.7811元人民币",
+      "note": "2026-08-28中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "eur_cny",
+      "icon": "💶",
+      "name": "人民币兑欧元",
+      "value": "1欧元＝7.8683元人民币",
+      "note": "2026-08-28中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "jpy_cny",
+      "icon": "💴",
+      "name": "人民币兑日元",
+      "value": "100日元＝4.2428元人民币",
+      "note": "2026-08-28中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    }
+  ],
+  "metricsCutoff": "2026-08-31 06:34（北京时间）",
+  "metricSources": [
+    "上海黄金交易所",
+    "北京市发展和改革委员会",
+    "新华网",
+    "国家外汇管理局"
+  ],
+  "observation": "今日民生线索集中在基层医疗保障、职业伤害防护与公共安全。基层病种同病同付和新就业形态职业伤害保障扩围，指向公共服务更重可及性；防汛、食品消杀和医美违规调查提醒日常安全治理仍需前置。国际上，多地洪灾、事故和治安事件延续风险压力。科技与人工智能从太空算力、量子计算延伸到制造生产线和数据基础设施，创新加速的同时也考验工程落地、资源调度与治理能力。",
+  "sources": [
+    "新华网",
+    "中国新闻网",
+    "中国科技网",
+    "央视网",
+    "中国经济网"
+  ]
+}
