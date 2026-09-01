@@ -1,0 +1,414 @@
+{
+  "date": "2026-09-01",
+  "issue": 11,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期二",
+  "lunarDate": "农历丙午年七月二十",
+  "cutoff": "2026-09-01 09:30（北京时间）",
+  "productionTime": "2026-09-01 09:33（北京时间）",
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "两部门对福建启动防汛防台风四级应急响应",
+        "summary": "受台风“沙德尔”残余涡旋影响，福建未来三天局地或有特大暴雨，国家防总、应急管理部启动四级应急响应。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 22:11",
+        "url": "https://www.news.cn/20260831/0e2b8691d9e54d91bd1a7450cb2b0b50/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "多部门查处两起涉中医药网络违规营销问题",
+        "summary": "有关部门查处网店虚假宣传日用品功效和医生违规推荐处方药，多个平台下架店铺、商品链接及违规广告。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 19:31",
+        "url": "https://www.news.cn/20260831/ea34194ceee844e09afc0ea8386da64b/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "两部门发布中国数字乡村发展报告",
+        "summary": "报告系统总结2019年以来数字乡村建设成效，提出推进产业数字化、乡村建设信息化与治理智慧化一体发展。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 19:17",
+        "url": "https://www.news.cn/20260831/26ea5d0eca85439f9ebf1ffa323967ea/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "上半年全国铁路发送旅客23.48亿人次",
+        "summary": "国铁集团上半年营业收入5890亿元、净利润18.5亿元，全国铁路发送旅客23.48亿人次，多项运输指标创新高。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 20:49",
+        "url": "https://www.news.cn/20260831/eaa33af80c5f4335bb33ae2758f3cd50/c.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "广西横州洪灾受损学校全部如期开学",
+        "summary": "横州72所学校此前不同程度受灾，当地完成清淤、校舍修缮、防疫消杀和设备补充，受灾学校均达到开学条件。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 15:16",
+        "url": "https://www.news.cn/photo/20260831/80808546f2c54ff893c2ac09662d5cb3/c.html"
+      },
+      {
+        "id": "domestic-06",
+        "title": "江苏泰州完善嵌入式养老服务",
+        "summary": "泰州姜堰建设综合为老服务中心，整合日间照料、医疗康复和助餐功能，并通过政府与慈善补贴减轻老人用餐负担。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 14:23",
+        "url": "https://www.news.cn/photo/20260831/f6aac410f61242cd8bce5e3488948434/c.html"
+      },
+      {
+        "id": "domestic-07",
+        "title": "吉隆救援区物资与通信生命线持续打通",
+        "summary": "保障人员以无人机完成30多趟空中投送，西藏通信行业新增9座基站，持续支撑吉隆口岸核心区搜救和指挥调度。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 01:02",
+        "url": "https://www.news.cn/local/20260901/032cd2bf55b8461b86e924f985149037/c.html"
+      },
+      {
+        "id": "domestic-08",
+        "title": "全国科技馆暑期接待观众超3000万人次",
+        "summary": "全国科技馆暑期开展教育活动及展品体验超10万场，各地通过展陈创新、馆际联动和基层延伸提升公共科普服务。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 14:48",
+        "url": "https://www.news.cn/politics/20260831/f1c161094a3d44cc807f4b6e507ed56c/c.html"
+      },
+      {
+        "id": "domestic-09",
+        "title": "8月份制造业采购经理指数升至49.8%",
+        "summary": "8月制造业采购经理指数比上月上升0.6个百分点，21个行业中有16个环比改善，生产与新订单指数均进入扩张区间。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 18:58",
+        "url": "https://www.news.cn/20260831/a1a761c124b4447c93cf65bbb814e864/c.html"
+      },
+      {
+        "id": "domestic-10",
+        "title": "洗涤用品新国标强化上市前安全评估",
+        "summary": "强制性新国标覆盖洗涤用品研发、生产和销售全流程，要求上市前评估配方安全，并清晰标注潜在风险物质。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 09:33",
+        "url": "https://www.news.cn/fashion/20260831/cdb45558f64d45459626b209f63b134c/c.html"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "德国8月通胀率升至2.9%",
+        "summary": "德国联邦统计局初步数据显示，能源价格同比上涨10.5%，推动8月通胀率升至2.9%，与今年4月高点持平。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 22:03",
+        "url": "https://www.news.cn/20260831/51c4e53249f44c58bc8beb711dee6fa9/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "刚果（金）埃博拉确诊病例超过6000例",
+        "summary": "刚果（金）卫生部通报本轮疫情累计确诊6041例、死亡2911例，已波及6个省60个卫生区，传播仍十分活跃。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 21:46",
+        "url": "https://www.news.cn/20260831/b262af647b994a659b2e2b11052de2cb/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "美军否认超级油轮在霍尔木兹海峡触雷",
+        "summary": "美军中央司令部否认伊朗方面关于超级油轮触雷停航的说法，称霍尔木兹海峡没有船只触雷，双方口径不一。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 21:40",
+        "url": "https://www.news.cn/20260831/ad73fbf000ab4d459965b7d5cac8deb1/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "韩国总统李在明支持率首次跌破40%",
+        "summary": "韩国最新民调显示李在明支持率降至38.9%，连续7周下滑；不支持率升至58.7%，为其上任以来新低。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 20:36",
+        "url": "https://www.news.cn/20260831/1dc681f1397b484eaea0845aae84a847/c.html"
+      },
+      {
+        "id": "international-05",
+        "title": "俄罗斯批准新版汽车工业发展战略",
+        "summary": "俄罗斯新版战略提出提高汽车产量和技术自主性，计划到2035年将年产量提升至约280万辆，并发展零部件产业。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 19:50",
+        "url": "https://www.news.cn/20260831/76e09ca01f30492c82ef7cce2ba8449b/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "沙土巴三国举行共同防务委员会首次会议",
+        "summary": "沙特、土耳其和巴基斯坦首次召开共同防务委员会会议，讨论落实协议和建立机制，并将联盟定名为麦加防务联盟。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 23:53",
+        "url": "https://www.news.cn/world/20260831/3609bc0a5b9049ea89c5031733506bea/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "意大利和西班牙互延边境管控15天",
+        "summary": "意大利与西班牙相互延长临时边境检查措施，意方称此前触发检查的情况仍存在，双方表示将继续与欧盟合作。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 22:18",
+        "url": "https://www.news.cn/world/20260831/ced234157bff4e078bffb909eb43b74d/c.html"
+      },
+      {
+        "id": "international-08",
+        "title": "特朗普称将回击伊朗对美军基地袭击",
+        "summary": "特朗普表示将对伊朗袭击美国驻约旦基地作出回应；伊朗称行动针对美军袭击，阿联酋否认基地遭导弹袭击。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 21:05",
+        "url": "https://www.news.cn/world/20260831/70215d69f48e48b6a6f243f5f4a3c294/c.html"
+      },
+      {
+        "id": "international-09",
+        "title": "以色列与希腊签署35亿美元防空协议",
+        "summary": "以色列国防部称两国签署约30亿欧元协议，以方企业将向希腊提供多层防空系统、雷达和国家指挥控制系统。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 00:21",
+        "url": "https://english.news.cn/20260901/5c8c03bdb83d47a0be17bbaa91f9afd9/c.html"
+      },
+      {
+        "id": "international-10",
+        "title": "印度北方邦爆竹厂爆炸至少11人死亡",
+        "summary": "印度北方邦考沙姆比县一座爆竹厂发生剧烈爆炸，至少11人死亡、多人受伤，警方担心仍有人被困废墟。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 23:31",
+        "url": "https://english.news.cn/20260831/1efb407f85ec45baa7160229cb887891/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "我国牵头制定固态电池首个国际标准",
+        "summary": "我国提出的电动汽车固态电池应用指南在国际电工委员会立项，将统一测试项目与条件，降低研发验证成本。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 21:44",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/31/content_572885.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "金塘海底高铁隧道宁波侧掘进突破四千米",
+        "summary": "国产超大直径盾构机距海中对接点不足千米，工程采用饱和带压作业设备和大模型预控海底高压施工风险。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 19:32",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/31/content_572769.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "风电场气象诊断体系实现发电偏差定量溯源",
+        "summary": "国家气候中心建立覆盖基准校准、尾流还原和天气影响拆分的技术链，为在役风电场优化运维提供量化依据。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 17:23",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/31/content_572725.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "车辆外廓尺寸新国标适配智能网联部件",
+        "summary": "新国标为雷达、摄像头和车路协同天线设置外廓尺寸豁免，并调整新能源商用车轴荷和低风阻车型规则。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 13:50",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/31/content_572502.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "全国首部数据安全管理地方性法规施行",
+        "summary": "重庆条例覆盖数据收集至销毁全生命周期，建立分类分级保护和日志留存制度，推动安全治理转向事前预防。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 21:51",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/31/content_572892.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "山西新型储能装机容量突破五百万千瓦",
+        "summary": "山西已有九十座新型储能电站并网，省级发展指南建立四级承载力评价体系，支撑新能源调峰和电力保供。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 19:14",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/31/content_572771.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "攀枝花推进钒钛资源高值化技术开发",
+        "summary": "当地将布局战略资源创新开发工程，提升钒钛综合利用率，并发展液流储能、增材制造粉末等高端材料。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 20:26",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/31/content_572764.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "中国生物制造加速打通细胞工厂产业链",
+        "summary": "科研团队以合成生物技术创制工业菌种并建设中试平台，推动香料、药物和生物基材料从实验室走向生产线。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 09:00",
+        "url": "https://www.news.cn/sci-tech/20260831/47128a85e86c45a7a0f4c09c68a42273/c.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "世界第一高坝一期三台机组全部投产",
+        "summary": "大渡河双江口水电站三台五十万千瓦机组投产，兼具防洪、发电和水资源调配功能，提升流域综合利用效率。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 20:27",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/31/content_572833.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "香港大学张江基地二期启用人工智能实验室",
+        "summary": "二期空间承载人工智能实验室、智能计算研究院和合作实验室，并与企业开展具身智能及医疗健康项目合作。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 21:51",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/31/content_572887.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "工信部启动人工智能应用服务商培育行动",
+        "summary": "专项行动将建立全国服务商资源池，推动多模型协同、软硬件适配和安全治理，并扩大模型与智能体服务采购。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 17:23",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/31/content_572726.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "触觉机器人幼儿园探索持续学习与自主进化",
+        "summary": "联合实验室以电子皮肤和触觉传感为底座，让机器人在真实物理环境中通过交互试错，采集可训练多模态数据。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 21:38",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/31/content_572877.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "智能体调用增长推动AI商业模式重估",
+        "summary": "行业观察指出词元消耗由智能体长程任务快速拉升，芯片、存储和电力形成刚性成本，企业需平衡能力与收益。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 21:53",
+        "url": "https://www.stdaily.com/web/gdxw/2026-08/31/content_572891.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "人文智能大会展示多语种与古籍大模型进展",
+        "summary": "高校团队展示藏语通用模型、早期中华文明多模态模型及古籍识别技术，探索人工智能与人文学科交叉研究。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-31 11:25",
+        "url": "https://www.sh.chinanews.com.cn/bdrd/2026-08-31/148873.shtml"
+      },
+      {
+        "id": "ai-05",
+        "title": "京西智谷大赛集中展示脑机与隐私计算项目",
+        "summary": "参赛团队展示三维脑机接口芯片、密文生物识别和细胞器健康大模型等成果，覆盖生命科学与工业质检场景。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-08-30 22:07",
+        "url": "https://www.bj.chinanews.com.cn/news/2026/0830/103306.html"
+      }
+    ]
+  },
+  "topStoryIds": [
+    "domestic-01",
+    "international-02",
+    "tech-01"
+  ],
+  "metrics": [
+    {
+      "kind": "gold",
+      "icon": "🥇",
+      "name": "国内金价",
+      "value": "上海金午盘价：959.97元/克",
+      "note": "2026-08-31最近交易日午盘基准价",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/?p=234",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "北京油价",
+      "value": "92号8.09元/升；95号8.61元/升",
+      "note": "2026-08-29最新有效最高零售价",
+      "source": "北京市发展和改革委员会",
+      "sourceUrl": "https://fgw.beijing.gov.cn/bmcx/djcx/cxldj/202003/t20200331_1752783.htm",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际油价",
+      "value": "布伦特90.49美元/桶；WTI85.76美元/桶",
+      "note": "2026-08-31最近收盘",
+      "source": "新华网",
+      "sourceUrl": "https://www.news.cn/fortune/20260901/7f6faea42da84672b3dbaa900e683feb/c.html",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "usd_cny",
+      "icon": "💵",
+      "name": "人民币兑美元",
+      "value": "1美元＝6.7828元人民币",
+      "note": "2026-08-31中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "eur_cny",
+      "icon": "💶",
+      "name": "人民币兑欧元",
+      "value": "1欧元＝7.8344元人民币",
+      "note": "2026-08-31中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "jpy_cny",
+      "icon": "💴",
+      "name": "人民币兑日元",
+      "value": "100日元＝4.2285元人民币",
+      "note": "2026-08-31中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    }
+  ],
+  "metricsCutoff": "2026-09-01 06:38（北京时间）",
+  "metricSources": [
+    "上海黄金交易所",
+    "北京市发展和改革委员会",
+    "新华网",
+    "国家外汇管理局"
+  ],
+  "observation": "今日民生线索集中在防灾保障、公共服务和安全治理。福建防汛防台风响应、吉隆救援生命线与受灾学校如期开学，凸显风险预警、基础设施和民生恢复需同步推进；中医药网络营销整治、洗涤用品安全评估及数字乡村建设回应日常权益与城乡服务。国际上，疫情、通胀、地区冲突和边境管控继续交织。科技与人工智能从固态电池标准、海底高铁隧道延伸到触觉学习、人文模型和服务商生态，创新正更重工程规范、真实场景与安全治理。",
+  "sources": [
+    "新华网",
+    "中国科技网",
+    "中国新闻网"
+  ]
+}
