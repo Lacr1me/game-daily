@@ -1,0 +1,422 @@
+{
+  "date": "2026-09-02",
+  "issue": 12,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期三",
+  "lunarDate": "农历丙午年七月廿一",
+  "cutoff": "2026-09-02 09:30（北京时间）",
+  "productionTime": "2026-09-02 09:33（北京时间）",
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "三项婴童用品国家标准正式实施",
+        "summary": "三项标准覆盖如厕器具、感统训练和游泳配套用品，细化机械、化学与佩戴安全要求，补齐婴童用品细分品类质量规范。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 20:29",
+        "url": "https://www.news.cn/politics/20260901/22b0b48984be4bbab12161ee84dba5a8/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "京九铁路开通三十年发送旅客17.7亿人次",
+        "summary": "京九铁路全线开通运营三十周年，累计发送旅客17.7亿人次、货物10.53亿吨，持续服务沿线区域协调发展。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 21:06",
+        "url": "https://www.news.cn/politics/20260901/1af41e38ecd545da95ae371e73df9eba/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "暑运期间铁路警方保障9.54亿人次出行",
+        "summary": "全国铁路公安机关在六十二天暑运中加强巡查、应急和便民服务，维护9.54亿人次旅客出行安全并解决急难事项。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 19:44",
+        "url": "https://www.news.cn/politics/20260901/0eed47d1d64a47d79721859021707b76/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "无障碍环境建设法施行三周年",
+        "summary": "全国已有三十四家单位获得无障碍环境认证，多地以地方立法、公益诉讼和体验监督推动交通、社区及景区设施持续改造。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 17:11",
+        "url": "https://www.news.cn/politics/20260901/682d809808cd4411b70ac18666c95f44/c.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "全国整治传统工艺市场乱象涉案超6500万元",
+        "summary": "市场监管与公安部门集中打击假证书、假机构、假产品和假网站，已立案769件并清理线上违规信息1892条。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 20:38",
+        "url": "https://www.news.cn/politics/20260901/f87abae78ce74115b6a1b2d8717ed69c/c.html"
+      },
+      {
+        "id": "domestic-06",
+        "title": "海事部门护航2.6万艘渔船黄渤海开渔",
+        "summary": "黄渤海伏季休渔结束，海事部门调派巡航船、无人机和执法人员开展重点水域巡查，防范商渔船碰撞风险。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 19:58",
+        "url": "https://www.news.cn/politics/20260901/91919cd98b074d83b499218ca0b56d1b/c.html"
+      },
+      {
+        "id": "domestic-07",
+        "title": "暑期消费从出行转向深度体验",
+        "summary": "暑期文旅消费季举办超三万场活动并发放超4.5亿元补贴，服务零售增速快于商品零售，慢节奏和沉浸式体验升温。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 17:20",
+        "url": "https://www.news.cn/fortune/20260901/fafa986704a34dd097b4a5747736aa0b/c.html"
+      },
+      {
+        "id": "domestic-08",
+        "title": "电影暑期档票房达到124.98亿元",
+        "summary": "国家电影局发布暑期档成绩单，票房和观影人次同比增长，平均票价降至2022年以来同期最低，文化消费活力提升。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 19:13",
+        "url": "https://www.news.cn/fortune/20260901/717fac75ffac457494834cc4d9312588/c.html"
+      },
+      {
+        "id": "domestic-09",
+        "title": "各地以扩学位和阳光分班护航新学期",
+        "summary": "多地修复受灾校园、增加公办学位并推进随机均衡分班，新教材与项目式学习同步落地，关注学生身心和实践能力。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 19:06",
+        "url": "https://education.news.cn/20260901/651c247ab2cd45d59158bfade8ea3997/c.html"
+      },
+      {
+        "id": "domestic-10",
+        "title": "重庆开发首批4533个养老协管员公益岗",
+        "summary": "重庆首批在渝东北、渝东南按一村一岗开发养老协管员岗位，重点面向十一类就业困难群体，兼顾基层养老与稳岗增收。",
+        "source": "重庆市人民政府网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 07:13",
+        "url": "https://www.cq.gov.cn/ywdt/jrcq/202609/t20260901_16013036.html"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "尼泊尔泥石流已致1068人死亡",
+        "summary": "尼泊尔警方通报，截至当地时间9月1日17时，泥石流受灾地区已发现1068具遇难者遗体，另有4606人失联。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 23:09",
+        "url": "https://www.news.cn/world/20260901/30929fdb1d274834972113d5aef96f31/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "西班牙今夏逾五千人死因与高温相关",
+        "summary": "西班牙公共卫生机构估算6月至8月有5111人死亡与高温相关，刷新2015年以来纪录，心脏病和中风为主要关联原因。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 22:19",
+        "url": "https://www.news.cn/20260901/217f52b0f32a4d80a407b1264e5fda2c/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "欧元区8月通胀率升至3.3%",
+        "summary": "欧盟统计局初步数据显示，能源价格同比上涨14.3%成为主要推手，欧元区整体通胀上升而核心通胀略有回落。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 19:41",
+        "url": "https://www.news.cn/20260901/d1025ceed80940518a23c3f46b8fd324/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "日本十年期国债收益率近三十年首上3%",
+        "summary": "加息预期、原油上涨和财政担忧推动日本国债遭抛售，十年期收益率一度升至3%，为1996年10月以来首次。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 19:08",
+        "url": "https://www.news.cn/20260901/5303e770df2d4c76a18a56bdd950fca3/c.html"
+      },
+      {
+        "id": "international-05",
+        "title": "英国首相称将继续支持乌克兰",
+        "summary": "英国首相伯纳姆在议会表示将延续前任对乌立场，俄方此前警告英国提供武器和转让巡航导弹技术将带来后果。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 01:31",
+        "url": "https://www.news.cn/world/20260902/6fc25ee1042342c3ae5785aa20a2b756/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "俄军称在黑海击中两艘乌军货船",
+        "summary": "俄罗斯国防部称俄军袭击敖德萨州港口和军用物流设施，并击中两艘被指向乌军运送装备与弹药的货船。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 00:04",
+        "url": "https://www.news.cn/world/20260902/8e7b610e6f2d4a26b48f6a6aa1b36464/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "极端天气导致以色列多地供水受影响",
+        "summary": "海水浑浊导致以色列地中海沿岸六座海水淡化厂中五座暂停运行，多地实施限水并在街头设置临时供水点。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 19:15",
+        "url": "https://www.news.cn/photo/20260901/1704fdca09824e9f944392030b6ced2d/c.html"
+      },
+      {
+        "id": "international-08",
+        "title": "匈牙利称已满足百亿欧元资金解冻条件",
+        "summary": "匈政府称已完成欧盟要求的一百多项立法和制度调整，计划将解冻资金用于铁路、保障住房、水资源和能源投资。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 10:25",
+        "url": "https://www.news.cn/world/20260901/7eb49f143dfa48a985170bd048a4a6f1/c.html"
+      },
+      {
+        "id": "international-09",
+        "title": "日本9月近五千种食品预计涨价",
+        "summary": "调查显示日本9月将有4923种食品涨价，约为去年同期三倍，原油、包装材料和日元贬值共同推高生活成本。",
+        "source": "国际在线",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 00:01",
+        "url": "https://news.cri.cn/20260901/7e94ac51-dbeb-4239-8c7e-9386e6f1ba3e.html"
+      },
+      {
+        "id": "international-10",
+        "title": "伦敦警方在诺丁山狂欢节逮捕636人",
+        "summary": "为期两天的诺丁山狂欢节结束，警方通报相关治安行动共逮捕636人，涉嫌毒品、袭击、武器和扰乱公共秩序等行为。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 21:21",
+        "url": "https://www.news.cn/20260901/7d3050a6525645d5a7b7918eeb899f8c/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "中国天眼重绘四十五亿年中性氢演化图景",
+        "summary": "科研团队结合FAST与DESI分析约二百五十万个星系，发现造星活动衰退并非源于中性氢储备同步枯竭。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 19:44",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/01/content_573432.html",
+        "paper": {
+          "journal": "Nature Astronomy",
+          "url": "https://arxiv.org/abs/2607.05326",
+          "doi": "10.48550/arXiv.2607.05326"
+        }
+      },
+      {
+        "id": "tech-02",
+        "title": "智神星一号可重复使用运载火箭首飞成功",
+        "summary": "星河动力自主研发的中大型液体火箭进入预定轨道，设计重复使用不少于二十五次，后续将推进一子级回收。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 12:52",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/01/content_573168.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "新疆春小麦刷新全国万亩方高产纪录",
+        "summary": "昭苏万亩示范田平均亩产六百八十点六二公斤，以新品种和北斗播种、水肥一体化等技术实现规模化增产。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 18:31",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/01/content_573405.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "科研团队揭示吉隆泥石流沿程放大机制",
+        "summary": "团队以卫星影像、地震记录和模型重建灾害链，发现沟谷沿程侵蚀增容是下游破坏规模扩大的关键因素。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 20:36",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/01/content_573465.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "全球首艘三十二点五万吨甲醇双燃料矿砂船完工",
+        "summary": "中国团队联合设计建造的巨轮突破甲醇燃料关键技术并搭载数字交付系统，货舱容量较传统同尺度船提升四成。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 18:05",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/01/content_573396.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "药品追溯体系覆盖全品种全链条",
+        "summary": "新规要求药品上市前完成追溯码激活与关联，各环节统一采集上传数据，并依托大数据开展智慧监管和风险预警。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 20:37",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/01/content_573464.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "卫星遥感与智能农机加速走进黑土地",
+        "summary": "黑龙江把卫星遥感、物联网和人工智能融入耕种管收全流程，覆盖千万亩地块并推动精准选种与智能操控。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 21:48",
+        "url": "https://www.news.cn/politics/20260901/c15b39739b304da4a5573a0bd945d09d/c.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "三大国际科创中心强化实验室与产业协同",
+        "summary": "京津冀、长三角和粤港澳大湾区通过公共平台、产业集群与跨区域协作，缩短科研成果进入生产线的路径。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 15:00",
+        "url": "https://english.news.cn/20260901/754ec576a4eb45c385355fbf2c06d08e/c.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "二〇二六年全国科普月活动全面启动",
+        "summary": "中国科协联合三十四家单位推出高校场馆、科学大师剧和全国网络展播等项目，推动科技资源服务基层公众。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 09:31",
+        "url": "https://www.news.cn/politics/20260901/048cda65441945ffb564b5967853f199/c.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "浙江衢江抽水蓄能电站首台机组投产",
+        "summary": "三十万千瓦机组正式投产，工程以土建机电交叉施工和数智化质量控制压缩工期，为新能源消纳提供调节能力。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 21:00",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-01/10688129.shtml"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "百万级空间智能三维数据开放计划发布",
+        "summary": "二十余家机构将共建真实、重建与仿真相结合的三维和四维场景数据底座，并建立统一质量与评测标准。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 17:22",
+        "url": "https://www.news.cn/tech/20260901/eafa545ea97840469bac6087cf5c1946/c.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "化工行业大模型升级至任务智能执行",
+        "summary": "中国科学院大连化物所联合企业发布化工大模型三点零专业版，从知识问答扩展到研发、设计和生产任务执行。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 09:04",
+        "url": "https://www.news.cn/tech/20260901/b28bb7cc756c46f38beeb013e44e3d30/c.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "词元成为智能经济基础计量与价值锚点",
+        "summary": "数博会展示智能体调用、算力调度和高质量数据集协同机制，推动人工智能服务形成可量化的产业价值体系。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 18:15",
+        "url": "https://www.news.cn/20260901/f397b7e4048c4db892b976cbab7bfaf5/c.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "中央网信办提示人工智能五类安全风险",
+        "summary": "发布会梳理模型脆弱、内容污染、科研伦理、就业重构和极端失控等风险，强调智能体越权访问等新型挑战。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 11:33",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-01/10687770.shtml"
+      },
+      {
+        "id": "ai-05",
+        "title": "高校迎新引入智能体与人形辅导机器人",
+        "summary": "多所高校把问答助手、人形机器人和实验室成果带入迎新场景，让人工智能由后台服务转为可感知的校园入口。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 15:25",
+        "url": "https://edu.people.com.cn/n1/2026/0901/c1006-40790448.html"
+      }
+    ]
+  },
+  "topStoryIds": [
+    "domestic-01",
+    "international-01",
+    "tech-01"
+  ],
+  "metrics": [
+    {
+      "kind": "gold",
+      "icon": "🥇",
+      "name": "国内金价",
+      "value": "上海金午盘价：959.97元/克",
+      "note": "2026-08-31最近可核验午盘基准价",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://sge.com.cn/sjzx/jzj",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "北京油价",
+      "value": "92号8.09元/升；95号8.61元/升",
+      "note": "2026-08-29最新有效最高零售价",
+      "source": "北京市发展和改革委员会",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202608/t20260828_4841556.htm",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际油价",
+      "value": "布伦特94.65美元/桶；WTI90.22美元/桶",
+      "note": "2026-09-01最近收盘",
+      "source": "新华网",
+      "sourceUrl": "https://www.news.cn/fortune/20260902/96dde7fae8404be6802136de17de3399/c.html",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "usd_cny",
+      "icon": "💵",
+      "name": "人民币兑美元",
+      "value": "1美元＝6.7809元人民币",
+      "note": "2026-09-01最近交易日中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "eur_cny",
+      "icon": "💶",
+      "name": "人民币兑欧元",
+      "value": "1欧元＝7.8406元人民币",
+      "note": "2026-09-01最近交易日中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "jpy_cny",
+      "icon": "💴",
+      "name": "人民币兑日元",
+      "value": "100日元＝4.2301元人民币",
+      "note": "2026-09-01最近交易日中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    }
+  ],
+  "metricsCutoff": "2026-09-02 06:39（北京时间）",
+  "metricSources": [
+    "上海黄金交易所",
+    "北京市发展和改革委员会",
+    "新华网",
+    "国家外汇管理局"
+  ],
+  "observation": "今日民生主线集中在安全标准、公共服务与生活成本。婴童用品新国标、铁路暑运保障和无障碍环境建设回应家庭安全与出行便利，养老公益岗、教育扩容及消费场景变化则显示服务供给继续下沉。国际上，高温死亡、通胀、食品涨价与地区冲突交织，气候与物价压力同步影响民生。科技和人工智能从FAST中性氢研究、可重复使用火箭延伸到三维数据开放、行业大模型和安全风险治理，创新正加快连接基础研究、工程应用与制度边界。",
+  "sources": [
+    "新华网",
+    "重庆市人民政府网",
+    "国际在线",
+    "中国科技网",
+    "中国新闻网",
+    "人民网"
+  ]
+}
