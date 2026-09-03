@@ -1,0 +1,423 @@
+{
+  "date": "2026-09-03",
+  "issue": 13,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期四",
+  "lunarDate": "农历丙午年七月廿二",
+  "cutoff": "2026-09-03 09:30（北京时间）",
+  "productionTime": "2026-09-03 09:33（北京时间）",
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "2026年国家基本公共卫生服务提质扩面",
+        "summary": "今年人均财政补助标准提高至99元，服务继续覆盖儿童、孕产妇、老年人和慢性病患者，并推动健康档案开放与转诊衔接。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 10:50",
+        "url": "https://www.news.cn/20260902/205cbad447314ed69d60420beacc6041/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "七部门推动商品消费扩容升级",
+        "summary": "政策聚焦银发、儿童、健康、绿色和智能消费，鼓励乳制品、豆制品及安全婴童用品供给，提升商品与服务适配水平。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 16:11",
+        "url": "https://www.news.cn/food/20260902/b230518188374fddab45e6382ea231e0/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "国家网络安全宣传周定于9月14日至20日",
+        "summary": "活动将在全国统一开展并以济南为主场，安排十五场分论坛及校园、电信、法治、金融、青少年和个人信息保护主题日。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 09:27",
+        "url": "https://www.news.cn/politics/20260902/04e437cd8a5e44779b405625aa0ef354/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "九月全国多地面临洪涝台风和地质灾害风险",
+        "summary": "会商研判显示本月可能有两至三个台风登陆或影响我国，部分地区还需防范洪涝、地质灾害、高温和森林火险。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 16:55",
+        "url": "https://society.people.com.cn/n1/2026/0902/c1008-40791257.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "专项招聘提供4.9万人次能源制造等岗位",
+        "summary": "专项行动组织两千一百余家用人单位，岗位覆盖能源制造、医疗健康、金融和建筑等领域，9月3日还将开展直播招聘。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 10:41",
+        "url": "https://society.people.com.cn/n1/2026/0902/c1008-40791101.html"
+      },
+      {
+        "id": "domestic-06",
+        "title": "全国集中开展全民国防教育月活动",
+        "summary": "十二部门部署九月集中宣传教育，要求主题活动深入基层、面向群众并注重实际效果，同时明确不得增加基层负担。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 06:07",
+        "url": "https://politics.people.com.cn/n1/2026/0902/c1001-40790631.html"
+      },
+      {
+        "id": "domestic-07",
+        "title": "三部门部署水上运输和渔业船舶安全防范",
+        "summary": "有关部门针对开渔期水上交通繁忙、商渔船交汇增多等风险，部署隐患排查、联合执法和重点水域安全管控。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 19:26",
+        "url": "https://tv.cctv.com/2026/09/02/VIDEEAlTJSVeSS1qxUkbA2wf260902.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "title": "家用儿童学习桌椅国家标准发布",
+        "summary": "标准面向三至十四岁儿童，新增夹伤防护、压力安全、五千次耐久测试以及有害物质和电气安全等要求。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 10:45",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-02/10688515.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "title": "辽宁设置9701个护学岗护航开学季",
+        "summary": "当地累计投入警力九万五千人次，设置护学岗9701个，整改校园安全隐患463处，并同步加强校车检查与反诈宣传。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 09:11",
+        "url": "https://www.cnr.cn/ln/gstjln/20260902/t20260902_527801961.shtml"
+      },
+      {
+        "id": "domestic-10",
+        "title": "暑运期间民航累计运输旅客超1.5亿人次",
+        "summary": "暑运期间民航累计运输旅客1.51亿人次、同比增长2.9%，共保障航班121.1万班，入境客运需求保持增长。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 10:07",
+        "url": "https://news.cctv.com/2026/09/02/ARTIm0RcvjZTzh7aQvUQZmAF260902.shtml"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "联合国秘书长对美伊新一轮交火深表关切",
+        "summary": "联合国秘书长就美国与伊朗新一轮交火表达严重关切，呼吁有关方面保持克制、避免局势进一步升级。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03",
+        "url": "https://www.news.cn/world/20260903/ad167bca7ff641a0bf41fb40f18d968c/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "阿根廷外长称须掌握手段实现马岛主权",
+        "summary": "阿根廷外长表示将运用可用手段推进马尔维纳斯群岛主权诉求，总统米莱计划于9月3日发表相关讲话。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 01:42",
+        "url": "https://www.news.cn/world/20260903/404a93ceb7db45e28bd279d312dce387/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "两艘土耳其商船在马尔马拉海相撞十人失联",
+        "summary": "两艘土耳其商船在马尔马拉海发生碰撞，事故造成十人失联，搜救力量已在事发海域展开行动。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 16:41",
+        "url": "https://www.news.cn/world/20260902/00565e9f3b3140ae83d8d34c98209f00/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "秘鲁宣布与伊朗断绝外交关系",
+        "summary": "秘鲁政府宣布中断与伊朗的外交关系，但保留领事关系，以继续处理两国公民领事保护等事务。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 10:57",
+        "url": "https://www.news.cn/world/20260902/599268df55534676ab893014a9b891a6/c.html"
+      },
+      {
+        "id": "international-05",
+        "title": "韩国釜山近海一艘拖船倾覆",
+        "summary": "一艘拖船在韩国釜山近海倾覆，初步消息显示两人获救、六人失踪，海警已调集船艇和航空力量搜救。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 14:48",
+        "url": "https://www.news.cn/20260902/91ed05c8b5ff4b0982cdbaa48835b6da/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "IMF总裁称全球经济前景仍高度不确定",
+        "summary": "国际货币基金组织总裁表示全球增长、公共债务和融资环境仍承压，贸易及地缘政治不确定性继续影响经济前景。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 14:21",
+        "url": "https://www.news.cn/20260902/fce81e188ed948478227de39fa942fcd/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "美国移民执法局纽约行动逮捕2197人引质疑",
+        "summary": "美国移民执法局公布纽约地区执法行动数据，累计逮捕2197人，行动的程序和社区影响引发当地质疑。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 14:46",
+        "url": "https://www.news.cn/world/20260902/18437c6442b2459184b4048688314280/c.html"
+      },
+      {
+        "id": "international-08",
+        "title": "德国关闭俄罗斯驻波恩总领馆",
+        "summary": "德国决定于9月18日关闭俄罗斯驻波恩总领馆，并将决定与莱比锡机场无人机事件关联，俄方否认相关指控。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 02:25",
+        "url": "https://www.news.cn/20260902/dec248de9fe04483a5d0c05980998f34/c.html"
+      },
+      {
+        "id": "international-09",
+        "title": "加拿大总理要求美加贸易谈判尊重本国主权",
+        "summary": "加拿大总理表示对美贸易谈判必须尊重本国主权与经济利益，加方将以此作为后续协商的重要前提。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 19:31",
+        "url": "https://tv.cctv.com/2026/09/02/VIDEdMyC7Zigj9TjzxvcC4AK260902.shtml"
+      },
+      {
+        "id": "international-10",
+        "title": "塞尔维亚将于10月25日提前举行议会选举",
+        "summary": "塞尔维亚宣布将于10月25日提前举行议会选举，国内主要政治力量将据此调整竞选安排和政策主张。",
+        "source": "国际在线",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 23:13",
+        "url": "https://news.cri.cn/20260902/9006a2a5-1af9-4a7b-b387-fcf111764df0.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "海水提铀新材料兼顾高选择性与抗生物污损",
+        "summary": "青岛能源所团队研制磷酸功能化多孔有机笼及复合气凝胶微球，天然海水连续运行十五天仍保持高容量与稳定性。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 13:03",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/02/content_573823.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "我国研制高温超导带材新型铁基合金骨架",
+        "summary": "中国科学院团队研制DW01铁基合金基带，原料成本约为传统材料四分之一，低温强度和抗变形能力同步提升。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 18:23",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/02/content_574120.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "本源悟空验证可扩展量子随机存储路由系统",
+        "summary": "科研团队利用超导量子比特辅助能级构建浅线路量子路由器，单路由信息传输效率达百分之九十八。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 13:37",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/02/content_573879.html",
+        "paper": {
+          "journal": "Physical Review X",
+          "url": "https://journals.aps.org/prx/accepted/10.1103/h5m3-qrn9",
+          "doi": "10.1103/h5m3-qrn9"
+        }
+      },
+      {
+        "id": "tech-04",
+        "title": "全球最大立体测绘星群发布高精度三维成果",
+        "summary": "十九颗高分光学遥感卫星组成多视协同星群，支持大区域高频动态重建并服务资源调查、城市规划和灾害评估。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 17:14",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/02/content_574054.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "青藏高原六十年约七千条小冰川完全消失",
+        "summary": "国家气候中心表示青藏高原冰川面积整体减少约四分之一，快速增温正加剧冰川消融、冰湖扩张和灾害链风险。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 19:53",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/02/content_574166.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "我国高频多普勒监测阵列建成运行",
+        "summary": "成都理工大学牵头建设两座发射站和八座接收站，形成五十六个三维监测点，服务圈层机理与地震监测研究。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 19:04",
+        "url": "https://www.news.cn/politics/20260902/98bf0797a8ff4ed0bf5282ea92ecc4e2/c.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "难选铁矿高效利用技术实现产业化突破",
+        "summary": "全球最大流态化磁化焙烧工程满产运行，可将含铁百分之十一的尾矿加工至百分之六十五品位并降低综合能耗。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 21:15",
+        "url": "https://www.news.cn/tech/20260901/d0faa36815da46bdb8efd1b1f2ca0c80/c.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "深汕铁路盾构机精准下穿运营地铁线",
+        "summary": "超大直径盾构以自动化监测、人工复核、渣土研判和缪子探测构建立体防控体系，沉降远低于预警值。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 19:06",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/02/content_574144.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "国产无创神经调控电子药投入临床应用",
+        "summary": "山东团队实现强交流电刺激设备软硬件国产化，成本约为进口设备八分之一，已在全国近五十家医疗机构应用。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 15:51",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/02/content_573971.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "机器人海洋材料科学家平台形成研发闭环",
+        "summary": "中科院宁波材料所建成四百平方米智能实验室，自动完成材料设计、制备、测试与反馈，AI预测准确率超过九成。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 16:53",
+        "url": "https://english.news.cn/20260902/0fe9e6ddcdb54b3787bfe7b0f47dffbd/c.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "清朗行动第二阶段集中整治AI应用乱象",
+        "summary": "网信部门聚焦AI虚假信息、低俗内容、假冒仿冒和未成年人侵害，已清理违法违规信息五百六十一万余条。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 10:38",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-02/10688509.shtml"
+      },
+      {
+        "id": "ai-02",
+        "title": "我国将建设禁化武履约领域AI公共产品",
+        "summary": "国际研修班聚焦可信和尽责使用，中方提出拓展人工智能技术合作，帮助发展中国家提升化学安全风险防控能力。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 16:46",
+        "url": "https://www.news.cn/politics/20260902/40cead9ff4fc45748beba2d1be3d3875/c.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "AI与智能体推动互联网基础资源体系升级",
+        "summary": "行业会议提出以政策和技术协同补齐域名等互联网底层能力，面向智能体普及重构基础资源技术和安全治理体系。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 17:34",
+        "url": "https://www.news.cn/expo/20260902/9ebc3c2918f14809a2fa45d70be3ed42/c.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "成都实施全国首个人工智能地方政府规章",
+        "summary": "规章围绕科技创新、产业生态、算力算法数据和治理机制作出安排，并推动具身智能、智能体等前沿领域发展。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 19:34",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/02/content_574110.html"
+      },
+      {
+        "id": "ai-05",
+        "title": "北京经开区试运行L4级燃气巡检无人车",
+        "summary": "无人车融合十亿分之一浓度燃气检测、北斗定位与智能视觉模型，可自主识别泄漏点和第三方施工风险。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 15:01",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/02/content_573902.html"
+      }
+    ]
+  },
+  "topStoryIds": [
+    "domestic-01",
+    "international-01",
+    "tech-05"
+  ],
+  "metrics": [
+    {
+      "kind": "gold",
+      "icon": "🥇",
+      "name": "国内金价",
+      "value": "上海金午盘价：935.40元/克",
+      "note": "2026-09-02最近交易日午盘基准价",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/h5_index",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "北京油价",
+      "value": "92号8.09元/升；95号8.61元/升",
+      "note": "2026-08-29起现行最高零售价",
+      "source": "北京市发展和改革委员会",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202608/t20260828_4841556.htm",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际油价",
+      "value": "布伦特95.63美元/桶；WTI91.01美元/桶",
+      "note": "2026-09-02最近收盘",
+      "source": "新华网",
+      "sourceUrl": "https://www.news.cn/fortune/20260903/091397a0a0634899a4f4f4d3638df6b2/c.html",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "usd_cny",
+      "icon": "💵",
+      "name": "人民币兑美元",
+      "value": "1美元＝6.7829元人民币",
+      "note": "2026-09-02最近交易日中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "eur_cny",
+      "icon": "💶",
+      "name": "人民币兑欧元",
+      "value": "1欧元＝7.8267元人民币",
+      "note": "2026-09-02最近交易日中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "jpy_cny",
+      "icon": "💴",
+      "name": "人民币兑日元",
+      "value": "100日元＝4.2218元人民币",
+      "note": "2026-09-02最近交易日中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    }
+  ],
+  "metricsCutoff": "2026-09-03 06:37（北京时间）",
+  "metricSources": [
+    "上海黄金交易所",
+    "北京市发展和改革委员会",
+    "新华网",
+    "国家外汇管理局"
+  ],
+  "observation": "今日民生主线集中在公共服务扩围、安全治理与消费供给。基本公共卫生服务提质、商品消费扩容、专项招聘和儿童桌椅新国标，回应医疗、就业与家庭消费；网络安全、水上运输和灾害风险研判强调预防前置。国际上，地区交火、海上事故、贸易谈判与移民执法交织，安全和规则协调承压。科技与人工智能从海水提铀、量子路由、遥感测绘延伸到AI治理、基础资源和燃气巡检，创新正更深进入公共治理和产业场景。",
+  "sources": [
+    "新华网",
+    "人民网",
+    "央视网",
+    "中国新闻网",
+    "央广网",
+    "国际在线",
+    "中国科技网"
+  ]
+}

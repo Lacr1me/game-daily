@@ -4,6 +4,14 @@
   "publishAt": "11:00",
   "editions": [
     {
+      "date": "2026-09-03",
+      "issue": 13,
+      "publishAt": "2026-09-03T11:00:00+08:00",
+      "title": "游戏与 Minecraft 每日简报",
+      "headline": "Xbox 大规模服务中断持续超过 4 小时",
+      "file": "data/2026-09-03.json"
+    },
+    {
       "date": "2026-09-02",
       "issue": 12,
       "publishAt": "2026-09-02T11:00:00+08:00",
