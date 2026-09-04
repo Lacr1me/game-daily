@@ -1,0 +1,427 @@
+{
+  "date": "2026-09-04",
+  "issue": 14,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期五",
+  "lunarDate": "农历丙午年七月廿三",
+  "cutoff": "2026-09-04 09:30（北京时间）",
+  "productionTime": "2026-09-04 09:34（北京时间）",
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "养老服务将扩大普惠供给并推进消费补贴",
+        "summary": "有关调研提出健全城乡三级养老服务网络，扩大失能失智老人普惠服务，并推进中度以上失能老人养老服务消费补贴。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 18:13",
+        "url": "https://www.news.cn/politics/20260903/9c648f9bff424383aa1f4d3253658da0/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "台风“沙德尔”第三次登陆我国",
+        "summary": "台风于福建漳浦沿海第三次登陆，福建、江西、广东及台湾岛部分地区将有大暴雨，局地可能出现特大暴雨。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 08:03",
+        "url": "https://www.news.cn/20260903/16b5a27d88f24568a585fc05ffb32991/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "北京海淀将从六个维度推进民生提质",
+        "summary": "海淀区提出未来五年统筹人口、就业、教育、健康、住房和社会保障，年均发布不少于八万个岗位并完善养老服务圈。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 09:48",
+        "url": "https://bj.people.com.cn/n2/2026/0903/c14540-41685614.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "市场监管总局继续深化“幽灵外卖”整治",
+        "summary": "市场监管部门将严打食品、电动自行车和计量等民生领域违法行为，健全跨部门协同与行刑衔接并规范执法。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 03:01",
+        "url": "https://news.cctv.com/2026/09/03/ARTIEzrAQim479eXIT4VoR1n260903.shtml"
+      },
+      {
+        "id": "domestic-05",
+        "title": "深圳校服推行自愿购买与市场化供应",
+        "summary": "深圳以统一款式、企业竞争和标准监管降低校服价格，家长可自主决定购买数量与渠道，学校不得强制或变相强制购买。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 12:35",
+        "url": "https://www.chinanews.com.cn/edu/2026/09-03/10689408.shtml"
+      },
+      {
+        "id": "domestic-06",
+        "title": "体育总局将深化体育“饭圈”乱象整治",
+        "summary": "体育部门提出加强赛场文明和体育诚信建设，整治操纵比赛、赛场暴力及体育“饭圈”乱象，持续净化舆论环境。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 10:38",
+        "url": "https://www.chinanews.com.cn/edu/2026/09-03/10689301.shtml"
+      },
+      {
+        "id": "domestic-07",
+        "title": "小升初衔接应避免高强度超前学习",
+        "summary": "教育专家建议家长把小初衔接重点放在时间管理、独立思考和抗挫能力上，适度预习但避免盲目跟风补课。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 15:25",
+        "url": "https://www.chinanews.com.cn/edu/2026/09-03/10689531.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "title": "道路交通安全法首次系统大修",
+        "summary": "修订草案针对自动驾驶、分心驾驶等新问题完善规则，并明确自动驾驶功能激活时违法行为的处理责任。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03",
+        "url": "https://www.chinanews.com.cn/fz/2026/09-03/10689187.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "title": "全民健身计划转向精准供给和扩大覆盖",
+        "summary": "新一轮全民健身计划要求资源向人口密集和需求较大地区倾斜，并把新就业群体纳入便捷健身设施与服务范围。",
+        "source": "中国网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 13:55",
+        "url": "https://news.china.com.cn/2026-09/03/content_118678637.html"
+      },
+      {
+        "id": "domestic-10",
+        "title": "四川北川发生4.8级地震",
+        "summary": "中国地震台网测定，四川绵阳市北川县九月三日十九时三十九分发生4.8级地震，震源深度十千米。",
+        "source": "中国网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 20:04",
+        "url": "https://news.china.com.cn/2026-09/03/content_118679547.shtml"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "尼泊尔泥石流已致1252人死亡",
+        "summary": "尼泊尔警方表示，截至当地时间三日上午十时，泥石流受灾地区已发现一千二百五十二具遇难者遗体，另有四千八百七十五人失联。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 15:21",
+        "url": "https://www.news.cn/world/20260903/397e2b862908447fb745b3cc67a5cab4/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "伊朗称打击科威特和阿联酋境内美军基地",
+        "summary": "伊朗军方称使用导弹和无人机打击科威特与阿联酋境内美军基地，目标涉及通信系统、机库和雷达设施。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 21:49",
+        "url": "https://www.news.cn/world/20260903/1f286bfbab454bd5b8dea0d0fc2a215c/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "加那利群岛附近移民船超80人死亡或失踪",
+        "summary": "一艘载有一百二十八人的移民船漂流二十六天后被发现，救援人员救起四十五人并在船上发现五具遗体。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 18:20",
+        "url": "https://www.news.cn/20260903/ed14b7f36d694d968e854126271345c7/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "美国明尼阿波利斯枪击致3人死亡",
+        "summary": "明尼阿波利斯一栋高层公寓发生枪击，包括枪手在内三人死亡、五人受伤，警方称事件由家庭纠纷引发。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 09:24",
+        "url": "https://www.news.cn/world/20260903/d053b44c4d4e487bb5bced6f01faf95c/c.html"
+      },
+      {
+        "id": "international-05",
+        "title": "日本宫崎县失联渔船三人死亡",
+        "summary": "宫崎县日南市一艘捕捞龙虾的渔船未按时返港，船长等三名船员在海上被发现后确认死亡，海保正在调查。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 11:15",
+        "url": "https://www.news.cn/20260903/52dcfdc80a03492398d2a4da05597ac8/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "欧洲长期国债收益率上行推高融资压力",
+        "summary": "通胀反弹、财政压力和全球资本重新配置共同推高欧洲长期国债收益率，多国政府未来发债融资成本可能继续上升。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 13:17",
+        "url": "https://www.news.cn/20260903/db1e24fdcf7b4db3b51fc12be8e80686/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "联合国呼吁限制全球升温超阈值幅度",
+        "summary": "联合国环境规划署预计未来数年升温超过一点五摄氏度阈值恐难避免，呼吁立即减排并缩短超阈值持续时间。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 15:30",
+        "url": "https://www.news.cn/world/20260903/3dead248620e43fa99161ee002bed7c9/c.html"
+      },
+      {
+        "id": "international-08",
+        "title": "超强厄尔尼诺致极端天气风险上升",
+        "summary": "世界气象组织确认厄尔尼诺事件出现，预计年底可能增强至峰值并延续至明年，全球降雨和温度模式面临显著影响。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 14:29",
+        "url": "https://www.news.cn/world/20260903/21b8c5107b614453bf2e1d0b4820d5ea/c.html"
+      },
+      {
+        "id": "international-09",
+        "title": "马杜罗辩护团队要求美方撤销诉讼",
+        "summary": "辩护律师以主权国家元首豁免权为由请求美国法院撤销刑事诉讼，美方检察官办公室须在十月二日前回应。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 12:02",
+        "url": "https://www.news.cn/world/20260903/838d7408189a4475bed84f9ad1c75083/c.html"
+      },
+      {
+        "id": "international-10",
+        "title": "比利时今夏热浪期间超额死亡近三千人",
+        "summary": "比利时公共卫生研究所称三轮高温期出现近三千例超额死亡，首轮热浪影响最明显，数据仍可能随统计完善而调整。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 22:53",
+        "url": "https://english.news.cn/20260903/ad1e251e21bb47bda421ad7e6e7a4fc1/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "量子纠缠为检验粒子物理标准模型开辟新路径",
+        "summary": "复旦大学团队利用正反超子的量子纠缠与极化信息提取CKM矩阵元，为检验三代夸克混合机制提供独立测量方法。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 17:16",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/03/content_574681.html",
+        "paper": {
+          "journal": "Nature",
+          "url": "https://www.nature.com/articles/s41586-026-10818-8",
+          "doi": "10.1038/s41586-026-10818-8"
+        }
+      },
+      {
+        "id": "tech-02",
+        "title": "科学家揭示远离平衡态双电层动态演化规律",
+        "summary": "厦门大学团队结合时间分辨红外光谱与机器学习分子动力学，揭示电催化界面离子和水分子的异步动态重构。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 14:36",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/03/content_574567.html",
+        "paper": {
+          "journal": "Nature",
+          "url": "https://www.nature.com/articles/s41586-026-10986-7",
+          "doi": "10.1038/s41586-026-10986-7"
+        }
+      },
+      {
+        "id": "tech-03",
+        "title": "中国农大团队开发朝天椒采摘机器人",
+        "summary": "设备以RGB-D视觉识别果尖、果柄和采摘点，两种机型现场采摘成功率约六成，并将继续优化路径规划算法。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 17:27",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/03/content_574606.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "台湾岛以东海域完成地球物理综合调查",
+        "summary": "自然资源部科研团队利用多波束、多道地震、海底地震和重磁等手段，采集海底地形与深部地质构造基础数据。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 11:57",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/03/content_574528.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "亚洲最大宽体机维修机库在上海投运",
+        "summary": "新机库大厅面积约四点六万平方米，可同时容纳九架宽体机和两架窄体机开展整机维修，探索保税维修新模式。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 07:36",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/03/content_574234.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "沪宁合高铁沪宁段启动智能化铺轨",
+        "summary": "建设团队采用智慧云平台、纯电轨道车和智能螺栓机器人，双线长轨铺设机组使作业效率较传统工艺提升三成。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 17:26",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/03/content_574616.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "石家庄地铁六号线一期实现全线洞通",
+        "summary": "项目团队攻克小半径曲线掘进、近距离下穿既有线路和松散地层稳定等难题，最后一台盾构机精准破壁出洞。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 17:24",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/03/content_574653.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "郑州量子智算中心启动量子水务验证",
+        "summary": "中心部署光量子与经典计算混合体系，面向水网调度、管网漏损、水质预测和后量子密码开展算法工程化应用。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 12:00",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/03/content_574529.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "我国热作种质资源保存目标超过十万份",
+        "summary": "我国已建成一百一十多个热带作物种质资源圃库，保存九万余份资源，并计划到二〇三〇年突破十万份。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-02 19:19",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/02/content_574147.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "中国完成百千瓦级二氧化碳发电演示",
+        "summary": "中国航发研制的超临界二氧化碳闭式循环动力装置完成满功率发电演示，验证工业余热高效利用技术路线。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 21:19",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-03/10689859.shtml"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "清华团队用AI推进两万页数学证明核验",
+        "summary": "FormaTheoria工作流从原始文献重建依赖关系，已形成九十九万余行Lean代码并完成四个关键定理形式化。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 15:55",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/03/content_574652.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "贵企AI以语义权限计量支撑企业尽调",
+        "summary": "智能体工作台把业务语义、数据权限和字段计量嵌入底层，企业尽调由数个工作日缩短为分钟级出报告。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 17:12",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/03/content_574683.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "首款AI智能体手机取得入网许可",
+        "summary": "努比亚NaviX Ultra完成大模型备案和终端入网合规流程，将搭载豆包手机助手并计划九月上市销售。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 20:09",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/01/content_573454.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "上市银行加速批量部署AI智能体",
+        "summary": "多家银行半年报披露Token调用量和智能体场景快速增长，AI转型正从科技条线升级为全行级战略议题。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 11:05",
+        "url": "https://finance.cctv.com/2026/09/03/ARTIf30VWcMwjLv0NhiTjt2w260903.shtml"
+      },
+      {
+        "id": "ai-05",
+        "title": "智能体安全综合测评报告在天津发布",
+        "summary": "报告梳理技能供应链、记忆投毒和越权调用等风险，提出来源认证、完整性校验、最小权限及执行隔离措施。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 22:25",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-03/10689922.shtml"
+      }
+    ]
+  },
+  "topStoryIds": [
+    "domestic-01",
+    "international-01",
+    "tech-01"
+  ],
+  "metrics": [
+    {
+      "kind": "gold",
+      "icon": "🥇",
+      "name": "国内金价",
+      "value": "上海金午盘价：956.67元/克",
+      "note": "2026-09-03最近交易日午盘基准价",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://sge.com.cn/sjzx/shanghaiAuAuto?end_date=2026-09-03&start_date=2026-09-03",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "北京油价",
+      "value": "92号8.09元/升；95号8.61元/升",
+      "note": "2026-08-29起现行最高零售价",
+      "source": "北京市发展和改革委员会",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202608/t20260828_4841556.htm",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际油价",
+      "value": "布伦特95.52美元/桶；WTI91.30美元/桶",
+      "note": "2026-09-03最近收盘",
+      "source": "新华网",
+      "sourceUrl": "https://www.xinhuanet.com/fortune/20260904/31aed5afd1db49d19fa0b58a8d4c9849/c.html",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "usd_cny",
+      "icon": "💵",
+      "name": "人民币兑美元",
+      "value": "1美元＝6.7807元人民币",
+      "note": "2026-09-03最近交易日中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/index.html?tab=2",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "eur_cny",
+      "icon": "💶",
+      "name": "人民币兑欧元",
+      "value": "1欧元＝7.8208元人民币",
+      "note": "2026-09-03最近交易日中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/index.html?tab=2",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "jpy_cny",
+      "icon": "💴",
+      "name": "人民币兑日元",
+      "value": "100日元＝4.2495元人民币",
+      "note": "2026-09-03最近交易日中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/index.html?tab=2",
+      "sourceOrigin": "china"
+    }
+  ],
+  "metricsCutoff": "2026-09-04 06:36（北京时间）",
+  "metricSources": [
+    "上海黄金交易所",
+    "北京市发展和改革委员会",
+    "新华网",
+    "中国外汇交易中心"
+  ],
+  "observation": "今日民生主线落在普惠服务、安全治理与极端天气应对。养老服务扩容、校服自愿购买、食品安全整治和交通法规修订回应家庭日常需求；地震与台风信息提示防灾仍需保持前置。国际上，南亚灾害、移民船事故、西亚冲突及欧美社会风险并行，气候与融资压力继续外溢。科技与人工智能从量子测量、电催化界面和智能制造延伸到数学证明、金融智能体与安全测评，创新应用正同步强化可靠性和治理边界。",
+  "sources": [
+    "新华网",
+    "人民网",
+    "央视网",
+    "中国新闻网",
+    "中国网",
+    "中国科技网"
+  ]
+}

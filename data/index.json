@@ -4,6 +4,14 @@
   "publishAt": "11:00",
   "editions": [
     {
+      "date": "2026-09-04",
+      "issue": 14,
+      "publishAt": "2026-09-04T11:00:00+08:00",
+      "title": "游戏与 Minecraft 每日简报",
+      "headline": "State of Play 密集公开多款新作与更新",
+      "file": "data/2026-09-04.json"
+    },
+    {
       "date": "2026-09-03",
       "issue": 13,
       "publishAt": "2026-09-03T11:00:00+08:00",
