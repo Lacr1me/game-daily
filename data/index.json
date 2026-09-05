@@ -4,6 +4,14 @@
   "publishAt": "11:00",
   "editions": [
     {
+      "date": "2026-09-05",
+      "issue": 15,
+      "publishAt": "2026-09-05T11:00:00+08:00",
+      "title": "游戏与 Minecraft 每日简报",
+      "headline": "任天堂连续官宣两场直面会",
+      "file": "data/2026-09-05.json"
+    },
+    {
       "date": "2026-09-04",
       "issue": 14,
       "publishAt": "2026-09-04T11:00:00+08:00",

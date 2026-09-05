@@ -1,0 +1,423 @@
+{
+  "date": "2026-09-05",
+  "issue": 15,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期六",
+  "lunarDate": "农历丙午年七月廿四",
+  "cutoff": "2026-09-05 09:30（北京时间）",
+  "productionTime": "2026-09-05 09:35（北京时间）",
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "西藏吉隆泥石流灾害已致31人遇难",
+        "summary": "吉隆县应急救援指挥部通报，截至九月四日十八时，泥石流灾害已造成三十一人遇难、五百三十一人失联。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04 20:10",
+        "url": "https://www.news.cn/politics/20260904/e075e4a7a8bc4ba697d84b11cc450269/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "医保将扩大重点人群参保与生育保障",
+        "summary": "国家医保局提出扩大灵活就业、农民工和新就业形态人员职工医保规模，推动相关参保人员同步参加生育保险。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04 16:32",
+        "url": "https://www.news.cn/20260904/4630559800164b0793c1099997449bca/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "多地普惠托育服务回应家庭照护需求",
+        "summary": "多地通过托育综合服务中心、用人单位办托和社区嵌入式服务扩充供给，缓解三岁以下婴幼儿家庭照护压力。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04 16:20",
+        "url": "https://www.news.cn/20260904/c472fb0e1cf842cea3ff1cc7bbb68969/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "福祉博览会集中展示助残适老产品",
+        "summary": "福祉博览会展出万余种辅助器具和技术，北京补贴目录新增智能床、电动轮椅及具身智能机器人等产品。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04 18:50",
+        "url": "https://www.news.cn/politics/20260904/5f1ca3f212b14676b64afd302e25daa8/c.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "陪诊师成为医疗服务领域就业新选择",
+        "summary": "陪诊服务覆盖挂号、候诊和资料整理等环节，国家标准开始明确服务框架，行业仍需完善职业准入与培训。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04",
+        "url": "https://data.people.com.cn/rmrb/20260904/11/e9b5ea1899b44f9396d93df4986df782"
+      },
+      {
+        "id": "domestic-06",
+        "title": "全国学生总体近视率连续五年下降",
+        "summary": "国家疾控局介绍，二〇二五年全国学生总体近视率降至百分之四十九点九，并建议控制课余屏幕时间。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04",
+        "url": "https://data.people.com.cn/rmrb/20260904/11/6b3768fb4b5c47dca635b0510951abac"
+      },
+      {
+        "id": "domestic-07",
+        "title": "医保按病种付费3.0版明确落地时限",
+        "summary": "新版分组方案调整病种分类并首设基层病种，要求相关地区和医疗机构在今年底前完成切换准备。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04",
+        "url": "https://data.people.com.cn/rmrb/20260904/11/e74ddacbc77a4e5c965b8ae5d87206c1"
+      },
+      {
+        "id": "domestic-08",
+        "title": "全国巾帼家政技能大赛吸引逾万人参赛",
+        "summary": "全国巾帼家政服务职业技能大赛设母婴护理、整理收纳等项目，入围选手呈现年轻化和专业化趋势。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04",
+        "url": "https://data.people.com.cn/rmrb/20260904/11/47e97bd4566a4b0aa07e412147795d05"
+      },
+      {
+        "id": "domestic-09",
+        "title": "两项强制性国标织密养老机构安全网",
+        "summary": "养老机构基本规范与重大事故隐患判定准则获批发布，分别明确日常服务底线和重大风险识别处置要求。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04",
+        "url": "https://www.cnr.cn/jingji/jjgd/20260904/t20260904_527804864.shtml"
+      },
+      {
+        "id": "domestic-10",
+        "title": "北京国际美食嘉年华向市民免费开放",
+        "summary": "嘉年华汇聚约一百二十家国际风味餐厅，活动持续至九月六日，为市民提供餐饮、文化和休闲消费场景。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04 13:46",
+        "url": "https://cn.chinadaily.com.cn/a/202609/04/WS6a9a5b2fe4b09a165c788059.html"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "以总理称推翻伊朗政权为当前核心目标",
+        "summary": "以色列总理称推翻伊朗政权是当前核心目标，并表示这一目标触手可及，地区紧张局势继续升级。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04 10:53",
+        "url": "https://www.news.cn/world/20260904/fd75affdc0304e3e80eb4d15466e10f2/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "韩国仍在审议向霍尔木兹海峡派兵",
+        "summary": "韩国总统府表示，向霍尔木兹海峡派兵仍处于程序性研究审议阶段，尚未作出决定并需经过国会同意。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04 12:54",
+        "url": "https://www.news.cn/world/20260904/ccc2a179025546eea04e91139808ed8c/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "阿根廷拟制裁马岛争议海域开采公司",
+        "summary": "阿根廷总统宣布将加强制裁在马尔维纳斯群岛及争议海域开采资源的外国公司，并提交主权保卫法案。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04 14:01",
+        "url": "https://www.news.cn/world/20260904/f8ba264a15564dcaba32c7c3897f308c/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "俄罗斯将关闭多家歌德学院回应德国",
+        "summary": "俄方称将关闭德国在俄设立的多家歌德学院，以回应德国关闭俄罗斯之家和俄驻波恩总领事馆的决定。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 23:01",
+        "url": "https://www.news.cn/world/20260903/aa063385eed7437cae71be9172d9ef46/c.html"
+      },
+      {
+        "id": "international-05",
+        "title": "亚美尼亚坚持启动加入欧盟进程法案",
+        "summary": "亚美尼亚总理表示不会放弃议会通过的启动加入欧盟进程法案，俄方则要求亚方尽早明确联盟选择。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04 06:21",
+        "url": "https://www.news.cn/world/20260904/1de1ad7ea0c6417ca1f475c826c41a43/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "也门西部战事升级造成至少90人死亡",
+        "summary": "也门政府军与胡塞武装在荷台达和塔伊兹前线发生激烈交火，医疗部门称双方至少九十人死亡。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04 21:16",
+        "url": "https://english.news.cn/20260904/fce5599a53134720876326f086e0c64d/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "刚果（金）反政府武装控制区再现埃博拉",
+        "summary": "刚果（金）北基伍省一名二十一岁男子确诊埃博拉，世卫组织警告当地安全形势正限制监测与响应。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04 20:18",
+        "url": "https://english.news.cn/africa/20260904/6a94262e1d8e4c52a3a4fb85f66b7063/c.html"
+      },
+      {
+        "id": "international-08",
+        "title": "加纳非法采矿坑坍塌造成7人死亡",
+        "summary": "加纳国家灾害管理机构确认，阿散蒂地区一处非法采矿坑坍塌，十二名矿工中七人死亡、一人仍被困。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04 20:50",
+        "url": "https://english.news.cn/africa/20260904/f2d7df7e1c044a86baca3c4e4057f58e/c.html"
+      },
+      {
+        "id": "international-09",
+        "title": "联合国粮农组织食品价格指数升至三年高位",
+        "summary": "粮农组织称八月食品价格指数环比上涨百分之一点九，五类商品指数普遍走高并创二〇二二年底以来最高。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04 20:53",
+        "url": "https://english.news.cn/europe/20260904/0cc3550b7626431ca4c9dafd09d78467/c.html"
+      },
+      {
+        "id": "international-10",
+        "title": "多国领导人缺席太平洋岛国论坛引关注",
+        "summary": "第五十五届太平洋岛国论坛举行期间，多国领导人未出席，区域议题聚焦气候变化、发展融资与战略自主。",
+        "source": "国际在线",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04 10:43",
+        "url": "https://taiwan.cri.cn/2026-09-04/145795b7-7159-4013-b12b-6630ae4240b9.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "全国卫星导航定位基准站网开启授权运营",
+        "summary": "由七千五百六十九座基准站组成的国家级服务网络启动授权运营，可提供厘米级至毫米级北斗高精度定位服务。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04 17:17",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/04/content_575351.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "世界最长海底高铁隧道陆域段贯通",
+        "summary": "金塘海底隧道陆域段实现贯通，隧道全长十六点一八公里，甬舟铁路总体工程进度已完成百分之七十七。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04 16:46",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/04/content_575345.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "复旦团队制成长达四千米结构色薄膜",
+        "summary": "团队利用单体介导自组装技术在室温下快速制备胶体光子晶体薄膜，连续卷对卷产线速度达到每分钟二十五米。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04 20:30",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/04/content_575451.html",
+        "paper": {
+          "journal": "Science",
+          "url": "https://www.science.org/doi/10.1126/science.aed8723",
+          "doi": "10.1126/science.aed8723"
+        }
+      },
+      {
+        "id": "tech-04",
+        "title": "国际地月立方星座大科学计划启动",
+        "summary": "中国牵头的计划拟分六批部署三十颗十二单元立方星，构建月球空间环境与通信导航综合观测网络。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04 19:55",
+        "url": "https://www.news.cn/tech/20260904/ae03723e037b4067a8662d8d873053bf/c.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "我国集成电路产业延续产销两旺",
+        "summary": "七月全国集成电路产量达到五百三十亿块，前七个月相关出口金额已超过上一年全年，产业规模继续扩大。",
+        "source": "中国经济网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04 07:19",
+        "url": "https://www.ce.cn/cysc/newmain/yc/jsxw/202609/t20260904_3192118.shtml"
+      },
+      {
+        "id": "tech-06",
+        "title": "AI与机器视觉改造货运列车检修流程",
+        "summary": "铁路检修基地通过条码数字档案、机器视觉、机械臂和自动导引车协同作业，提升车辆故障识别与维修效率。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04 07:17",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/04/content_574856.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "安徽茶亭发现超大型潜力铜金矿",
+        "summary": "勘查发现约一点二公里乘一点一公里的隐伏斑岩型矿体，钻孔最大视厚度达一千三百七十一米且尚未穿透。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 12:11",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/01/content_573137.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "陕西佳县科技小院推进设施果蔬试验",
+        "summary": "西北农林科技大学团队在当地开展葡萄品种筛选和食药用菌云仓试验，把科研验证与县域农业需求直接对接。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04 19:04",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/04/content_575421.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "九项中小企业创新技术集中首发",
+        "summary": "首发成果覆盖高性能材料、半导体测试、风力发电、动力电池回收和国产RISC-V人工智能处理器等领域。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04 15:23",
+        "url": "https://www.news.cn/finance/20260904/3f153898496447a1a95d5a12b414192e/c.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "杭州湾跨海高铁大桥七座主塔全部封顶",
+        "summary": "通苏嘉甬高铁杭州湾跨海铁路大桥七座主塔全部封顶，工程进入钢梁、斜拉索和桥面系施工阶段。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04 00:39",
+        "url": "https://zj.cnr.cn/tdzj/20260904/t20260904_527804024.shtml"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "中科大科研智能体完成四轮升级",
+        "summary": "灵境造物已连接十九个科学设施和八十个实验室，集成一千二百余项技能并支撑机器人开展五万余次实验。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04 21:45",
+        "url": "https://www.news.cn/tech/20260904/ea87cd7ebf654412bb888abae570c8dc/c.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "通用导航大脑LightNav-0开源",
+        "summary": "系统以两千个场景和四千余小时数据训练，可在不同机器人本体、任务和环境之间进行零样本迁移导航。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04 14:22",
+        "url": "https://www.news.cn/tech/20260904/6400d2880dd847c7b48a325db1f384b2/c.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "人工智能中小企业创业支持计划印发",
+        "summary": "二〇二六至二〇二八年行动计划设置四方面十五项任务，将建设十个孵化器、十个服务平台和十个产业集群。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04 20:23",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/04/content_575455.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "大连理工人工智能学院AI HUB成立",
+        "summary": "平台采用通用、具身、应用三类研发方向加综合支撑的组织架构，推动人工智能科研、教学和成果转化协同。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04 20:33",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/04/content_575452.html"
+      },
+      {
+        "id": "ai-05",
+        "title": "四川首个Token工厂在雅安投产",
+        "summary": "项目把通用算力转化为适配特定模型的Token产能，已接入首批客户，探索算力基础设施的新型运营模式。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-03 20:16",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/03/content_574773.html"
+      }
+    ]
+  },
+  "topStoryIds": [
+    "domestic-01",
+    "international-09",
+    "tech-03"
+  ],
+  "metrics": [
+    {
+      "kind": "gold",
+      "icon": "🥇",
+      "name": "国内金价",
+      "value": "上海金午盘价：963.44元/克",
+      "note": "2026-09-04最近交易日午盘基准价",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://sge.com.cn/sjzx/shanghaiAuAuto?end_date=2026-09-04&start_date=2026-09-04",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "北京油价",
+      "value": "92号8.09元/升；95号8.61元/升",
+      "note": "2026-08-29起现行最高零售价",
+      "source": "北京市发展和改革委员会",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202608/t20260828_4841556.htm",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际油价",
+      "value": "布伦特95.52美元/桶；WTI91.30美元/桶",
+      "note": "2026-09-03最近收盘",
+      "source": "新华网",
+      "sourceUrl": "https://www.news.cn/fortune/20260904/31aed5afd1db49d19fa0b58a8d4c9849/c.html",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "usd_cny",
+      "icon": "💵",
+      "name": "人民币兑美元",
+      "value": "1美元＝6.7787元人民币",
+      "note": "2026-09-04最近交易日中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/index.html?tab=2",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "eur_cny",
+      "icon": "💶",
+      "name": "人民币兑欧元",
+      "value": "1欧元＝7.8397元人民币",
+      "note": "2026-09-04最近交易日中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/index.html?tab=2",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "jpy_cny",
+      "icon": "💴",
+      "name": "人民币兑日元",
+      "value": "100日元＝4.3135元人民币",
+      "note": "2026-09-04最近交易日中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/index.html?tab=2",
+      "sourceOrigin": "china"
+    }
+  ],
+  "metricsCutoff": "2026-09-05 09:30（北京时间）",
+  "metricSources": [
+    "上海黄金交易所",
+    "北京市发展和改革委员会",
+    "新华网",
+    "中国外汇交易中心"
+  ],
+  "observation": "今日民生主线集中在灾害救援、医保托育与养老安全。吉隆泥石流伤亡和失联数字提醒防灾救援仍处于关键阶段，医保参保生育保障、普惠托育、近视防控与养老机构新国标回应家庭照护和公共服务。国际上，地区冲突、粮价上行、公共卫生与矿难风险交织。科技和人工智能从北斗高精度定位、海底高铁、结构色薄膜延伸到科研智能体、机器人导航与创业支持，创新正加快进入基础设施、科研和产业服务场景。",
+  "sources": [
+    "新华网",
+    "人民网",
+    "央广网",
+    "中国日报中文网",
+    "国际在线",
+    "中国科技网",
+    "中国经济网"
+  ]
+}
