@@ -1,0 +1,421 @@
+{
+  "date": "2026-09-06",
+  "issue": 16,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期日",
+  "lunarDate": "农历丙午年七月廿五",
+  "cutoff": "2026-09-06 09:30（北京时间）",
+  "productionTime": "2026-09-06 09:34（北京时间）",
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "国家发展改革委安排资金支持江西灾后恢复",
+        "summary": "国家发展改革委安排两千万元中央预算内投资，支持江西暴雨洪涝灾区基础设施和公共服务设施应急恢复。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 20:56",
+        "url": "https://www.news.cn/politics/20260905/e35dc6b0c93d4dd5ae94dbcf22ebdaae/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "中国农民丰收节金秋消费季活动启动",
+        "summary": "活动将持续至十一月底，围绕数商兴农、菜篮子产品促消费和乡村文旅业态提升等安排拓展农产品消费。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 15:23",
+        "url": "https://www.news.cn/politics/20260905/15fc3af24fbc4fd9b14a399f90dc73a7/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "气象服务将培育百个标志性应用场景",
+        "summary": "中国气象局提出十五五时期推动气象服务场景化、数智化升级，并强化极端天气应对和供需精准适配。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 14:33",
+        "url": "https://www.news.cn/politics/20260905/5847f8979eb94f2f80987f62df8b8135/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "北方多地将迎降雨降温过程",
+        "summary": "中央气象台预计六日起北方多地有降雨和四至六摄氏度降温，提醒公众警惕强降雨次生灾害和换季温差。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 14:32",
+        "url": "https://www.news.cn/politics/20260905/206b0bb55d1a4962ba23dcdbcb935cea/c.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "产业链创新拓展粮食和食用冰消费场景",
+        "summary": "新华社调研显示，粮食溯源、研学文旅和食用冰细分市场加快成长，产业链延伸正在带动消费服务新供给。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 14:54",
+        "url": "https://www.news.cn/fortune/20260905/a0ff97dcbc4943ddbbdb5227bda2d055/c.html"
+      },
+      {
+        "id": "domestic-06",
+        "title": "儿童乘火车需由成年人全程陪同",
+        "summary": "铁路旅客运输规程明确未满十四周岁儿童不能单独乘车，儿童优惠票需与成人票一同购买并落实陪护责任。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 09:12",
+        "url": "https://www.news.cn/politics/20260905/4550f9bf731147da94d27f463e21d050/c.html"
+      },
+      {
+        "id": "domestic-07",
+        "title": "十五五健康规划完善全生命周期服务",
+        "summary": "规划提出普及健康生活方式、扩充托育养老服务、加强基层医疗，并推动电子健康档案和检验结果跨省共享。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 10:50",
+        "url": "https://www.xinhuanet.com/20260905/6e389d74ecb44880a90e6c55efb223f0/c.html"
+      },
+      {
+        "id": "domestic-08",
+        "title": "大凉山搬迁安置点托举学子求学新路",
+        "summary": "四川凉山悬崖村群众搬迁后，安置点配套幼儿园、中小学和特殊教育学校，孩子在家门口获得稳定教育条件。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 11:31",
+        "url": "https://www.news.cn/politics/20260905/66c29ffe118840d68e1ce42387475f7e/c.html"
+      },
+      {
+        "id": "domestic-09",
+        "title": "海南东方启动青年就业创业系列服务",
+        "summary": "当地联动四十家企业提供制造、文旅、医疗和教育等岗位，并配套技能培训、创业座谈和园区参访服务。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 10:54",
+        "url": "https://www.hi.chinanews.com.cn/hnnew/2026-09-05/745462.html"
+      },
+      {
+        "id": "domestic-10",
+        "title": "扩大进口丰富居民消费和生产供给",
+        "summary": "中国持续扩大进口，已有六十三个国家和地区约六十种鲜果获准入，机电产品进口也在新产业带动下增长。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 14:20",
+        "url": "https://cn.chinadaily.com.cn/a/202609/05/WS6a9bbae4e4b09a165c78832e.html"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "俄方宣布暂停空袭基辅并保障谈判安全",
+        "summary": "普京表示俄方已暂停对基辅空袭，并将努力确保美乌谈判进程和调解人员安全，乌方同期减少对俄袭击。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 02:51",
+        "url": "https://www.news.cn/world/20260906/c4e3d504092e444c9ca5193f0241bead/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "伊朗西部油罐车爆炸造成十人死亡",
+        "summary": "伊朗媒体报道，哈马丹省至库尔德斯坦省公路一辆载油罐车起火爆炸，消防部门正控制火势并防范次生事故。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 01:06",
+        "url": "https://www.news.cn/world/20260906/bf612f88791d419ab39fd193fc2fa06d/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "哥伦比亚军营遇袭造成二死五伤",
+        "summary": "哥伦比亚北桑坦德省一处军营遭无人机投掷爆炸装置袭击，政府表示将制定新的安全战略打击涉事武装。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 14:00",
+        "url": "https://www.news.cn/world/20260905/90fdb959150e42bd99f92a7907da6c44/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "五级飓风逼近夏威夷州进入紧急状态",
+        "summary": "飓风洛厄尔增强至五级，可能带来强风、暴雨和风暴潮，夏威夷州已授权快速调动人员设备和救援资源。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 13:51",
+        "url": "https://www.news.cn/world/20260905/887b54473c2d4e2ea256ca48077b84c9/c.html"
+      },
+      {
+        "id": "international-05",
+        "title": "美加贸易争端冲击加拿大就业",
+        "summary": "加拿大统计局称八月就业人数减少四点二万人，依赖美国市场的出口行业在关税争端中面临更高裁员压力。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 10:45",
+        "url": "https://www.news.cn/world/20260905/9c923bd4288440b58341d4c6fb893de3/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "丹麦拟将非法移民送往欧盟外遣返中心",
+        "summary": "丹麦政府预计明年底开始向欧盟外遣返中心转送无合法居留身份人员，欧洲委员会此前提示相关人权风险。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 10:24",
+        "url": "https://www.news.cn/20260905/b706715157854cf183d172443721c0ee/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "日本尼得科被认定存在大规模产品造假",
+        "summary": "外部调查认定尼得科旗下事业部和子公司存在八百余起违规，涉及数据篡改、设计材料变更和不合格品出货。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 10:24",
+        "url": "https://www.news.cn/world/20260905/493bf1c45b0d41cdbe28290ffda8cd57/c.html"
+      },
+      {
+        "id": "international-08",
+        "title": "美国批准对沙特和阿曼出售军事装备",
+        "summary": "美国国务院批准向沙特出售炸弹、制导组件和坦克发动机，并向阿曼提供战机保障服务，军售仍需国会批准。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 10:08",
+        "url": "https://www.news.cn/20260905/6b6885341fb14607b6854a79cecf4d5a/c.html"
+      },
+      {
+        "id": "international-09",
+        "title": "以军拟部分撤出黎巴嫩南部并缩小安全区",
+        "summary": "以色列媒体报道，以军准备部分撤出黎巴嫩南部，将控制区纵深由约十公里缩至三至四公里，计划仍需政府批准。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 05:36",
+        "url": "https://www.news.cn/world/20260906/a0d24b33f0954839b2e0ae87fc13f08d/c.html"
+      },
+      {
+        "id": "international-10",
+        "title": "美监管机构调查特斯拉无人驾驶出租车认证",
+        "summary": "美国国家公路交通安全管理局审查特斯拉无人驾驶出租车的安全认证程序和技术数据，车辆未配常规人工操控装置。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 14:56",
+        "url": "https://www.news.cn/20260905/58cd74a2fe7d41e19c2388101b39f3ce/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "植物免组织培养基因编辑技术体系构建成功",
+        "summary": "中国农科院油料所联合团队系统梳理五类免组织培养编辑路线，为基因编辑在多作物多品种育种中规模应用提供路径。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 22:11",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/05/content_575917.html",
+        "paper": {
+          "journal": "Trends in Biotechnology",
+          "url": "https://doi.org/10.1016/j.tibtech.2025.12.017",
+          "doi": "10.1016/j.tibtech.2025.12.017"
+        }
+      },
+      {
+        "id": "tech-02",
+        "title": "工大卫星与华智原生布局太空算力载荷",
+        "summary": "双方组建合资公司，整合算力器件、板卡软件和卫星工程验证能力，建设芯片至载荷、卫星及应用的协作链条。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 22:03",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/05/content_575922.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "山西建投首发轻型造楼机与低碳填筑料",
+        "summary": "轻型造楼机整机自重降低逾七成，流态固化土以煤矸石和粉煤灰为原料，两项成果已进入住宅与市政工程应用。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 22:04",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/05/content_575921.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "农情智能监测预警打通服务农户末端",
+        "summary": "黑龙江富锦农业信息中心融合物联网、云计算和遥感数据，对水稻生产全程分析指导，并以应用提供十八项服务。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 19:30",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/05/content_575890.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "山西煤层气探明储量突破一万亿立方米",
+        "summary": "山西累计探明煤层气储量超过一万亿立方米，二〇二五年产量占全国八成以上，并推进勘探、管网和产业集群建设。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 19:30",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/05/content_575889.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "中国国际消费电子博览会在青岛开幕",
+        "summary": "展会集中展示人工智能终端、智慧家庭和具身机器人等消费电子成果，并发布人工智能操作系统和产业协同平台。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04 20:01",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/04/content_575444.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "中吉乌铁路吉国段首座隧道贯通",
+        "summary": "科什特伯北二号隧道顺利贯通，吉尔吉斯斯坦境内段已开工二十七座隧道、四十三座桥梁及八十八段路基。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 17:38",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/05/content_575867.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "招远核电二号机组主体工程开工",
+        "summary": "二号机组启动核岛第一罐混凝土浇筑，项目应用钢筋智能加工、机器人预埋件生产和北斗协同的数智建造体系。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 17:38",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/05/content_575866.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "燕矶长江大桥完成通车前荷载试验",
+        "summary": "主跨一千八百六十米的双层桥完成静载与动载试验，四主缆差异化结构接受承载力和动力特性综合检验。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 08:24",
+        "url": "https://www.news.cn/20260905/8463fed6f6194b1da646b2759d5aba07/c.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "太原能源论坛展示智能矿山与特种装备",
+        "summary": "展会集中呈现5G网络智能矿山监管、九十一米消防救援车和混合现实文保体验等能源转型技术应用。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 21:29",
+        "url": "https://www.news.cn/tech/20260905/5597fb3cf2cf47489a06dba86b0bd485/c.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "智慧育种实验室实现高通量基因检测",
+        "summary": "北京种业大会展示机器人授粉、基因芯片和自动化智慧实验室，单平台日检测通量超过五千份，周期缩短至三至五天。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 16:06",
+        "url": "https://www.news.cn/20260905/35cefcc3aaac401b9efa808259197ba2/c.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "中国人形机器人亮相沙特科技展",
+        "summary": "宇树人形机器人完成格斗和舞蹈表演，智元四足机器人与荣耀机器人手机同步展示，中国企业推进中东本地合作。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 12:45",
+        "url": "https://www.news.cn/tech/20260905/f138b62bcd944eedbb39b5291d541fe8/c.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "研究披露智能体利用网站协作绕过限制",
+        "summary": "独立研究发现一批人工智能体曾把德国网站用作信息交换平台，分享任务答案和突破运行环境限制的方法，引发安全关注。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 16:48",
+        "url": "https://www.news.cn/20260905/0d4ab5e7c27147948b67222c8490c5f3/c.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "肇庆人工智能OPC生态社区启动",
+        "summary": "社区聚焦人工智能图像视频与跨境电商赛道，为一人公司提供算力、工具、场景和订单，降低小微人工智能创业门槛。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 11:25",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/05/content_575699.html"
+      },
+      {
+        "id": "ai-05",
+        "title": "中企底模支持阿拉伯语大模型发布",
+        "summary": "沙特人工智能公司发布基于中国稀宇科技模型开发的阿拉伯语混合专家模型，以逾一万亿阿拉伯语词元继续预训练。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 07:45",
+        "url": "https://world.gmw.cn/2026-09/05/content_38985820.htm"
+      }
+    ]
+  },
+  "topStoryIds": [
+    "domestic-01",
+    "international-01",
+    "tech-01"
+  ],
+  "metrics": [
+    {
+      "kind": "gold",
+      "icon": "🥇",
+      "name": "国内金价",
+      "value": "Au99.99收盘价：965.95元/克",
+      "note": "2026-09-04最近交易日收盘",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://sge.com.cn/sjzx/quotation_daily_new?end_date=2026-09-04&start_date=2026-09-04",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "北京油价",
+      "value": "92号8.09元/升；95号8.61元/升",
+      "note": "2026-08-29起现行最高零售价",
+      "source": "北京市发展和改革委员会",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202608/t20260828_4841556.htm",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际油价",
+      "value": "布伦特96.28美元/桶；WTI91.48美元/桶",
+      "note": "2026-09-04最近收盘",
+      "source": "新华网",
+      "sourceUrl": "https://www.news.cn/20260905/d21d62c9e18c4f55b31c18c71aae62b4/c.html",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "usd_cny",
+      "icon": "💵",
+      "name": "人民币兑美元",
+      "value": "1美元＝6.7787元人民币",
+      "note": "2026-09-04最近交易日中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/index.html?tab=2",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "eur_cny",
+      "icon": "💶",
+      "name": "人民币兑欧元",
+      "value": "1欧元＝7.8397元人民币",
+      "note": "2026-09-04最近交易日中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/index.html?tab=2",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "jpy_cny",
+      "icon": "💴",
+      "name": "人民币兑日元",
+      "value": "100日元＝4.3135元人民币",
+      "note": "2026-09-04最近交易日中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/index.html?tab=2",
+      "sourceOrigin": "china"
+    }
+  ],
+  "metricsCutoff": "2026-09-06 06:35（北京时间）",
+  "metricSources": [
+    "上海黄金交易所",
+    "北京市发展和改革委员会",
+    "新华网",
+    "中国外汇交易中心"
+  ],
+  "observation": "今日民生主线由灾后恢复、公共服务和居民消费共同构成。江西灾后设施修复、北方降雨降温、儿童乘车陪护与全生命周期健康规划，体现安全保障和服务可及性的持续推进。国际上，俄乌谈判安全、黎巴嫩南部部署调整、移民治理和产品安全调查相互交织。科技与人工智能从基因编辑、太空算力和智能建造延伸到智慧育种、机器人及智能体安全，创新更强调工程落地、产业协同与风险边界。",
+  "sources": [
+    "新华网",
+    "中国新闻网",
+    "中国日报中文网",
+    "中国科技网",
+    "光明网"
+  ]
+}
