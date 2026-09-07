@@ -4,6 +4,14 @@
   "publishAt": "11:00",
   "editions": [
     {
+      "date": "2026-09-07",
+      "issue": 17,
+      "publishAt": "2026-09-07T11:00:00+08:00",
+      "title": "民生日报 · 每日35条精选新闻",
+      "headline": "江西遂川受灾孤村恢复道路通信保障",
+      "file": "data/minsheng/2026-09-07.json"
+    },
+    {
       "date": "2026-09-06",
       "issue": 16,
       "publishAt": "2026-09-06T11:00:00+08:00",

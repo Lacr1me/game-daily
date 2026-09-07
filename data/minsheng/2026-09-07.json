@@ -1,0 +1,416 @@
+{
+  "date": "2026-09-07",
+  "issue": 17,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期一",
+  "lunarDate": "农历丙午年七月廿六",
+  "cutoff": "2026-09-07 09:30（北京时间）",
+  "productionTime": "2026-09-07 09:35（北京时间）",
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "江西遂川受灾孤村恢复道路通信保障",
+        "summary": "遂川明坑村泥石流后道路通信逐步抢通，近二百名受灾群众获集中安置，救援力量继续搜寻失联人员。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 01:59",
+        "url": "https://www.news.cn/politics/20260907/24af4a5fbac44c989416b748242e5112/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "青海基层透析服务持续向高原县域下沉",
+        "summary": "青海多地县级医院建成标准化血液透析室，患者就医距离和自付费用下降，专业人才与质控体系同步下沉。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 15:11",
+        "url": "https://www.news.cn/local/20260906/0952bd35155b472cb1f3309f55ea685d/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "教育部明确中小学校服坚持自愿购买",
+        "summary": "教育部门要求校服选购经集体决策并由家长参与监督，严禁强制购买，同时落实质量检验和困难学生保障。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 05:59",
+        "url": "https://society.people.com.cn/n1/2026/0906/c1008-40793129.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "长护险支付管理新规设置三年过渡期",
+        "summary": "国家医保局明确长期护理保险支付范围、方式和标准等关键要素，要求试点地区用三年左右实现待遇平稳衔接。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 09:24",
+        "url": "https://www2.xinhuanet.com/politics/20260906/7e02433f214d48ab8f3b4ebe1aae76dd/c.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "湖北强化产业就业协同支持劳动者转岗",
+        "summary": "湖北把重点产业急需职业纳入补贴目录，推进先进制造业促就业和服务业扩岗，帮助失业群体提升技能转岗。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 08:22",
+        "url": "https://cpc.people.com.cn/n1/2026/0906/c64387-40793192.html"
+      },
+      {
+        "id": "domestic-06",
+        "title": "福州永泰房屋坍塌四名失联者全部脱险",
+        "summary": "福州永泰一处房屋坍塌后，消防救援力量连续奋战二十七个多小时，四名失联被困人员已全部脱险。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 22:04",
+        "url": "https://www.news.cn/20260906/b8c6bd335e944960939df01a68b669e7/c.html"
+      },
+      {
+        "id": "domestic-07",
+        "title": "瑞金至延安首次开行直达高铁",
+        "summary": "瑞金至延安直达高铁九月六日首发，线路跨越赣鄂陕并串联多个城市，七日起两地正式双向对开。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 22:09",
+        "url": "https://tv.cctv.com/2026/09/06/VIDEcpj8CnYeXOxN9XYfFSuT260906.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "title": "北京出台20条措施推动家政服务业升级",
+        "summary": "北京实施方案提出家政服务进社区、线上线下一体化供需对接，并探索照护机器人和健康监测设备协同服务。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 09:24",
+        "url": "https://bj.people.com.cn/n2/2026/0905/c14540-41687676.html"
+      },
+      {
+        "id": "domestic-09",
+        "title": "承德百余所学校获赠智慧教学与食安设备",
+        "summary": "关爱青年工程向承德学校捐赠数字化教学、沉浸式育人和智慧食安监管设备，支持校园安全与教育服务。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 19:18",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-06/10691514.shtml"
+      },
+      {
+        "id": "domestic-10",
+        "title": "老年人控血脂应兼顾优质脂肪与蛋白质",
+        "summary": "健康科普提醒高血脂老年人避免盲目断油断肉，应选择优质油脂、增加蛋白质摄入并防范贫血和肌少症。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 10:58",
+        "url": "https://www1.xinhuanet.com/politics/20260906/3bb6898507944b8c919ef5a67b9225af/c.html"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "乌美欧讨论乌克兰越冬援助与安全保障",
+        "summary": "泽连斯基与美国特使会晤约三小时，讨论防空、能源、战后重建和安全保障，并同意近期举行新一轮三方会谈。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 04:21",
+        "url": "https://www.news.cn/world/20260907/7047a825cd114bf6b04437887868d853/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "德国选择党赢得萨安州议会选举出口民调",
+        "summary": "出口民调显示德国选择党以约四成四得票率成为萨安州第一大党，但预计仍不足以单独取得州议会绝对多数。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 02:25",
+        "url": "https://www.news.cn/world/20260907/01f22c1c10d9480d9b2e6425381070ef/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "也门政府军与胡塞武装交火死亡增至117人",
+        "summary": "也门塔伊兹和荷台达两省持续交火进入第四天，双方医疗人士称至少一百一十七人死亡，战事仍在升级。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 00:08",
+        "url": "https://www.news.cn/world/20260907/46371bfaeab54525a9a29d709be50f2d/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "印度德里学生租住房屋倒塌致三人死亡",
+        "summary": "德里南部一栋主要供学生租住的多层建筑倒塌，造成三人死亡、多人受伤，初查关注地下室维修施工影响。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 00:02",
+        "url": "https://www.news.cn/world/20260907/b5e9d0b427304b949d3e40d57c51d6e2/c.html"
+      },
+      {
+        "id": "international-05",
+        "title": "墨西哥州节庆烟花爆炸造成九死二十四伤",
+        "summary": "墨西哥州一处存放烟花爆竹的房屋在节庆期间爆炸并坍塌，民防、消防和急救部门已展开救援调查。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 23:18",
+        "url": "https://www.news.cn/world/20260906/47cf21965b074bb498cd0ef39ffcfe80/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "两名驻日美军士兵被指殴打冲绳居民",
+        "summary": "两名驻日美军士兵涉嫌醉酒后在冲绳街头推搡殴打三名庆典工作人员，被当地警方逮捕并面临暴行罪指控。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 23:09",
+        "url": "https://www.news.cn/world/20260906/38dd3f5e98dc4928b0eca1c7a5aa057e/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "反移民者堵路致英国多佛港运营一度中断",
+        "summary": "数百名反移民者堵塞通往多佛港的道路并造成长距离拥堵，警方驱散抗议者后港口逐步恢复运营。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 23:09",
+        "url": "https://www.news.cn/world/20260906/d85e45638193467ba905e30f213b887e/c.html"
+      },
+      {
+        "id": "international-08",
+        "title": "印尼火山喷发致雅加达主要机场暂停起降",
+        "summary": "喀拉喀托之子火山持续喷发，火山灰扩散至雅加达和苏门答腊南部，多架国际航班取消或延误。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 14:10",
+        "url": "https://www.news.cn/world/20260906/ba2708218c834c3e9e6c854c9b6f956a/c.html"
+      },
+      {
+        "id": "international-09",
+        "title": "佛得角福古岛大巴坠谷造成至少21人死亡",
+        "summary": "一辆载有当地中学生的大巴在福古岛山区冲出道路坠入沟谷，造成至少二十一人死亡，事故原因仍在调查。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 14:24",
+        "url": "https://www.news.cn/world/20260906/624ae30bac114b23997bd80aa3588301/c.html"
+      },
+      {
+        "id": "international-10",
+        "title": "美国加州小型飞机坠毁致两死两伤",
+        "summary": "一架小型飞机在加州弗雷斯诺河岸附近坠毁起火，两名儿童死亡、两名成年人重伤，事故原因正由有关机构调查。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 14:16",
+        "url": "https://www.news.cn/20260906/6752da1dfaf64ffab28307f6e7471abe/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "新型制冷机支撑祖冲之三号量子计算机",
+        "summary": "国盾量子下线单核心制冷量达到国际领先水平的稀释制冷机，已用于祖冲之三号并支撑千比特超导量子计算研制。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 17:53",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/06/content_576125.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "松花江最大口径天然气管道定向钻穿越完成",
+        "summary": "虎林至长春天然气管道完成一千六百六十一米松花江定向钻穿越，关键控制工程一次性回拖成功。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 15:18",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/06/content_576066.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "吉电入京工程建设跨区域清洁能源通道",
+        "summary": "吉林大安火电调峰项目启动，将与风电、光伏、储能和特高压通道协同，每年向华北输送二百六十四亿千瓦时绿电。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 13:17",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/06/content_576044.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "风云卫星与妈祖系统支援尼泊尔防灾",
+        "summary": "中国气象部门调用风云三号、四号卫星和妈祖预警方案，持续提供多源监测产品支持尼泊尔灾情研判。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 15:34",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/06/content_576090.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "福建数字孪生平台协同调度四百八十九座水库",
+        "summary": "漳州依托数字孪生防汛平台模拟洪水过程并动态分析纳雨能力，三座大型水库合计拦蓄洪水约八千八百六十四万立方米。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 17:54",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/06/content_576121.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "青海自主早熟马铃薯品种进入田间示范",
+        "summary": "青海大学团队自主选育青薯早一号，并在湟中区开展十五个品种对比试验，完善高原早中晚熟良种布局。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 15:21",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/06/content_576081.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "动力电池面向多场景推进体系化技术突破",
+        "summary": "动力电池专题会议聚焦全固态、全气候超充和全过程安全，第二代刀片电池披露常温五分钟快充等进展。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 18:43",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-06/10691503.shtml"
+      },
+      {
+        "id": "tech-08",
+        "title": "动力电池数字身份证覆盖九十六项全生命周期信息",
+        "summary": "动力电池编码与标识系统将生产、装车、维修、退役和回收信息贯通，为安全追溯与梯次利用提供统一数据基础。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 16:03",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-06/10691402.shtml"
+      },
+      {
+        "id": "tech-09",
+        "title": "智能制造重塑新疆农业与工业生产流程",
+        "summary": "新疆棉田无人化管理、果园植保车、驼奶智能产线和工业机器人矩阵加快落地，数据与国产装备共同提升生产效率。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 19:29",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/06/content_576130.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "我国光伏发电装机规模首次超过煤电",
+        "summary": "国家能源局数据显示，截至七月底我国光伏装机达十二点八六亿千瓦，首次超过煤电，成为装机规模最大的电源品类。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-01 16:48",
+        "url": "https://finance.people.com.cn/n1/2026/0901/c1004-40790491.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "国内首款AI辅助原创创新药获批上市",
+        "summary": "西湖大学团队利用人工智能筛选四百九十亿种化合物并持续迭代模型，使艾普司韦从发现到完成临床仅用三年半。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 09:43",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/06/content_575957.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "国家反诈AI应用上线多模态风险研判功能",
+        "summary": "公安部门指导研发的应用融合大语言、多模态模型和智能体技术，可识别诈骗套路、关联案例并提供防范建议。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 17:56",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/06/content_576120.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "能源AI垂类大模型探索物理约束混合架构",
+        "summary": "华南理工团队提出融合通信、控制和电力知识的垂类模型架构，并在长治建设城市级源网荷储一体化平台。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 11:24",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/06/content_576023.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "精益数字化大会展示AI赋能制造新路径",
+        "summary": "大会围绕人工智能与精益管理融合，讨论智能执行、生产流程优化和产业协同，推动技术从试点进入真实制造场景。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-06 17:35",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-06/10691440.shtml"
+      },
+      {
+        "id": "ai-05",
+        "title": "异步在线强化学习框架提升机器人操作成功率",
+        "summary": "星尘智能发布SmoothRL框架，只学习机器人实际执行的动作，三项实测任务成功率分别提升至百分之九十四、八十三和九十。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-04 19:33",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/04/content_575327.html"
+      }
+    ]
+  },
+  "topStoryIds": [
+    "domestic-01",
+    "international-01",
+    "tech-01"
+  ],
+  "metrics": [
+    {
+      "kind": "gold",
+      "icon": "🥇",
+      "name": "国内金价",
+      "value": "Au99.99收盘价：965.95元/克",
+      "note": "2026-09-04最近交易日收盘",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://sge.com.cn/sjzx/quotation_daily_new?end_date=2026-09-04&start_date=2026-09-04",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "北京油价",
+      "value": "92号8.09元/升；95号8.61元/升",
+      "note": "2026-08-29起现行最高零售价",
+      "source": "北京市发展和改革委员会",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202608/t20260828_4841556.htm",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际油价",
+      "value": "布伦特96.28美元/桶；WTI91.48美元/桶",
+      "note": "2026-09-04最近收盘",
+      "source": "新华网",
+      "sourceUrl": "https://www.news.cn/20260905/d21d62c9e18c4f55b31c18c71aae62b4/c.html",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "usd_cny",
+      "icon": "💵",
+      "name": "人民币兑美元",
+      "value": "1美元＝6.7787元人民币",
+      "note": "2026-09-04最近交易日中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/index.html?tab=2",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "eur_cny",
+      "icon": "💶",
+      "name": "人民币兑欧元",
+      "value": "1欧元＝7.8397元人民币",
+      "note": "2026-09-04最近交易日中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/index.html?tab=2",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "jpy_cny",
+      "icon": "💴",
+      "name": "人民币兑日元",
+      "value": "100日元＝4.3135元人民币",
+      "note": "2026-09-04最近交易日中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/index.html?tab=2",
+      "sourceOrigin": "china"
+    }
+  ],
+  "metricsCutoff": "2026-09-07 06:34（北京时间）",
+  "metricSources": [
+    "上海黄金交易所",
+    "北京市发展和改革委员会",
+    "新华网",
+    "中国外汇交易中心"
+  ],
+  "observation": "今日民生主线集中在灾后恢复、公共服务与产业技术落地。江西受灾孤村道路通信抢通、福州坍塌失联者脱险，提示救援与基层保障仍是当日重点；校服自愿购买、长期护理保险支付衔接、就业转岗和县域透析，则回应教育、照护、就业与医疗可及性。国际上，冲突、建筑与交通事故及极端灾害交织，公共安全压力持续。科技与人工智能从量子制冷、清洁能源和防汛数字孪生延伸到AI制药、反诈与机器人学习，创新正在更深进入公共服务和真实生产场景。",
+  "sources": [
+    "新华网",
+    "人民网",
+    "央视网",
+    "中国新闻网",
+    "中国科技网"
+  ]
+}

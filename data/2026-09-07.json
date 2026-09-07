@@ -1,0 +1,420 @@
+{
+  "date": "2026-09-07",
+  "issue": 17,
+  "cutoff": "2026-09-07 06:17（北京时间）",
+  "dataWindow": "2026-09-06 00:00 — 2026-09-07 06:17",
+  "sources": [
+    "游民星空",
+    "3DM",
+    "TapTap",
+    "MC百科",
+    "Steam国区",
+    "SteamDB"
+  ],
+  "features": [
+    {
+      "title": "《文明7》公布原子时代大型更新与首个扩展",
+      "date": "2026-09-06",
+      "summary": "Firaxis 在 PAX West 公布 2027 年大型免费更新“Arc of Tomorrow”和首个太空主题扩展，并确认 1.5.0 更新与 Steam 限时试玩安排。",
+      "source": "游民星空／Firaxis Games",
+      "url": "https://www.gamersky.com/news/202609/2204108.shtml",
+      "image": "game-brief-assets/2026-09-07-feature-game.jpg"
+    },
+    {
+      "title": "《我的世界》联名腕表引发中文社区讨论",
+      "date": "2026-09-06",
+      "summary": "TapTap 中文社区集中讨论 Fossil 以《我的世界》下界、末地和《地下城2》为灵感推出的三款限量腕表及 9 月 8 日发售安排。",
+      "source": "TapTap《我的世界》社区",
+      "url": "https://www.taptap.cn/moment/845796939608886748",
+      "image": "game-brief-assets/2026-09-07-feature-minecraft.jpg"
+    }
+  ],
+  "news": [
+    {
+      "title": "《文明7》公布原子时代大型更新与首个扩展",
+      "date": "2026-09-06",
+      "summary": "Firaxis 公布 2027 年免费大型更新与太空主题扩展；本月 1.5.0 更新将先加入地图、UI 和外交改进。",
+      "source": "游民星空／Firaxis Games",
+      "url": "https://www.gamersky.com/news/202609/2204108.shtml",
+      "image": "game-brief-assets/2026-09-07-news-01.jpg"
+    },
+    {
+      "title": "《我的世界》联名腕表 9 月 8 日发售",
+      "date": "2026-09-06",
+      "summary": "Fossil 推出以下界、末地和《我的世界：地下城2》为主题的三款限量腕表，中文社区已展开价格与设计讨论。",
+      "source": "TapTap《我的世界》社区",
+      "url": "https://www.taptap.cn/moment/845796939608886748",
+      "image": "game-brief-assets/2026-09-07-news-02.jpg"
+    },
+    {
+      "title": "《黎明行者之血》发售两天销量突破 100 万",
+      "date": "2026-09-06",
+      "summary": "Rebel Wolves 宣布游戏发售两天销量突破 100 万份，Steam 最高同时在线约 7 万人，工作室已把系列化可能性提上日程。",
+      "source": "3DM／Rebel Wolves",
+      "url": "https://www.3dmgame.com/news/202609/3952497.html",
+      "image": "game-brief-assets/2026-09-07-news-03.jpg"
+    },
+    {
+      "title": "Xbox 云游戏月度时长上限被指对应盈亏线",
+      "date": "2026-09-06",
+      "summary": "报道称 Game Pass 三档云串流额度分别为 5、10 和 15 小时，未具名内部消息称 Ultimate 的 15 小时上限接近微软盈亏阈值。",
+      "source": "3DM／Windows Central",
+      "url": "https://www.3dmgame.com/news/202609/3952499.html",
+      "image": "game-brief-assets/2026-09-07-news-04.jpg"
+    },
+    {
+      "title": "《俄罗斯方块》版权方否认参与白宫仿制小游戏",
+      "date": "2026-09-06",
+      "summary": "俄罗斯方块公司公开否认参与白宫“街机专区”中的仿制作品，并重申对版权侵权零容忍；是否采取法律行动尚未确认。",
+      "source": "3DM／The Tetris Company",
+      "url": "https://www.3dmgame.com/news/202609/3952514.html",
+      "image": "game-brief-assets/2026-09-07-news-05.jpg"
+    },
+    {
+      "title": "《人类2》团队用幕后视频回应 AI 预告争议",
+      "date": "2026-09-06",
+      "summary": "Amplitude 表示首发预告由真人、动物、实景与 CG 特效共同制作，并用加长幕后视频回应“整片由生成式 AI 制作”的质疑。",
+      "source": "3DM／Amplitude Studios",
+      "url": "https://www.3dmgame.com/news/202609/3952510.html",
+      "image": "game-brief-assets/2026-09-07-news-06.jpg"
+    },
+    {
+      "title": "Cygames 推出小型游戏发行厂牌 Cygames Edge",
+      "date": "2026-09-06",
+      "summary": "新厂牌将以精简团队和较短开发周期推出内部小型作品，首作《Where the Seeds Fall》计划 11 月 5 日登陆多平台。",
+      "source": "3DM／Cygames",
+      "url": "https://www.3dmgame.com/news/202609/3952509.html",
+      "image": "game-brief-assets/2026-09-07-news-07.jpg"
+    },
+    {
+      "title": "前《RuneScape》员工盗取虚拟物品案宣判",
+      "date": "2026-09-06",
+      "summary": "前 Jagex 员工利用后台权限盗取并转售玩家虚拟财产，案件历经多年调查后被判社区服务、康复教育和三年缓刑。",
+      "source": "3DM／剑桥郡警方",
+      "url": "https://www.3dmgame.com/news/202609/3952507.html",
+      "image": "game-brief-assets/2026-09-07-news-08.jpg"
+    },
+    {
+      "title": "Bungie 考虑转租部分总部办公空间",
+      "date": "2026-09-06",
+      "summary": "Bungie 证实正评估转租贝尔维尤园区的部分空间，同时保留当地实体办公室，称此举反映数字化办公与团队规模变化。",
+      "source": "3DM／The Game Post",
+      "url": "https://www.3dmgame.com/news/202609/3952502.html",
+      "image": "game-brief-assets/2026-09-07-news-09.jpg"
+    },
+    {
+      "title": "《心跳陷落》“梦落朝歌”第二季活动上线",
+      "date": "2026-09-06",
+      "summary": "官方公告确认第二季珍藏时装主题活动上线，加入 SSR 珍藏时装、恋语卡、新剧情与玩法等内容。",
+      "source": "TapTap／《心跳陷落》官方",
+      "url": "https://www.taptap.cn/moment/845014725531011461",
+      "image": "game-brief-assets/2026-09-07-news-10.jpg"
+    }
+  ],
+  "packs": [
+    {
+      "name": "万般闲暇｜All The Leisures",
+      "summary": "围绕休闲探索与长期养成组织内容的 1.21.1 NeoForge 魔改包，适合希望降低流程压力的玩家。",
+      "category": "冒险／任务／休闲／大型",
+      "heat": 98,
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/modpack/1497.html",
+      "heatEvidenceAt": "2026-09-06",
+      "heatSignals": "MC百科昨日指数 1021；最后推荐 8 小时前",
+      "image": "game-brief-assets/2026-09-07-pack-01.jpg"
+    },
+    {
+      "name": "直至永恒｜Until Eternity",
+      "summary": "以魔法、冒险和任务推进为核心的 1.20.1 Forge 魔改包，强调持续成长与目标驱动。",
+      "category": "魔法／冒险／任务",
+      "heat": 96,
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/modpack/1492.html",
+      "heatEvidenceAt": "2026-09-06",
+      "heatSignals": "MC百科昨日指数 898；最后推荐 3 小时前",
+      "image": "game-brief-assets/2026-09-07-pack-02.jpg"
+    },
+    {
+      "name": "蜂蜂空坊｜Beebeeblock: The Skyhive",
+      "summary": "以蜂类生态为主题，把科技、魔法和任务串联为空岛流程的 1.21.1 NeoForge 魔改包。",
+      "category": "科技／魔法／任务／空岛",
+      "heat": 93,
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/modpack/1351.html",
+      "heatEvidenceAt": "2026-09-06",
+      "heatSignals": "MC百科昨日指数 613",
+      "image": "game-brief-assets/2026-09-07-pack-03.jpg"
+    },
+    {
+      "name": "雪狐的基础整合｜SF Integrated Modpack",
+      "summary": "覆盖多个游戏版本与三类加载器的轻量原生向基础包，侧重开箱即用和兼容性。",
+      "category": "休闲／轻量",
+      "heat": 85,
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/modpack/1174.html",
+      "heatEvidenceAt": "2026-09-06",
+      "heatSignals": "MC百科昨日指数 194；最后推荐 21 小时前",
+      "image": "game-brief-assets/2026-09-07-pack-04.jpg"
+    },
+    {
+      "name": "异界旅者｜Traveller of the World",
+      "summary": "围绕地图探索、建筑、任务与硬核生存展开的 1.12.2 Forge 魔改冒险包。",
+      "category": "冒险／建筑／地图／任务／硬核",
+      "heat": 77,
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/modpack/443.html",
+      "heatEvidenceAt": "2026-09-06",
+      "heatSignals": "MC百科昨日指数 95",
+      "image": "game-brief-assets/2026-09-07-pack-05.jpg"
+    },
+    {
+      "name": "理想国冒险之旅",
+      "summary": "以轻松冒险为主线、同时覆盖 Forge 与 Fabric 的原生向整合包。",
+      "category": "冒险／休闲",
+      "heat": 72,
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/modpack/963.html",
+      "heatEvidenceAt": "2026-09-06",
+      "heatSignals": "MC百科昨日指数 63",
+      "image": "game-brief-assets/2026-09-07-pack-06.jpg"
+    },
+    {
+      "name": "All of Create",
+      "summary": "把机械动力内容扩展为科技、冒险和任务流程，覆盖 1.19.2 至 1.21.1。",
+      "category": "科技／冒险／任务／休闲",
+      "heat": 69,
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/modpack/705.html",
+      "heatEvidenceAt": "2026-09-06",
+      "heatSignals": "MC百科昨日指数 51",
+      "image": "game-brief-assets/2026-09-07-pack-07.jpg"
+    },
+    {
+      "name": "异世界冒险2",
+      "summary": "面向 1.12.2 的原生向轻量冒险包，兼顾魔法探索和较低上手负担。",
+      "category": "魔法／冒险／休闲／轻量",
+      "heat": 66,
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/modpack/824.html",
+      "heatEvidenceAt": "2026-09-06",
+      "heatSignals": "MC百科昨日指数 41",
+      "image": "game-brief-assets/2026-09-07-pack-08.jpg"
+    },
+    {
+      "name": "Guild Adventures",
+      "summary": "以公会冒险和剧情任务为主轴的 Fabric 魔改包，突出高难挑战和长线推进。",
+      "category": "魔法／冒险／任务／硬核／大型／剧情",
+      "heat": 58,
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/modpack/1303.html",
+      "heatEvidenceAt": "2026-09-06",
+      "heatSignals": "MC百科昨日指数 23",
+      "image": "game-brief-assets/2026-09-07-pack-09.jpg"
+    },
+    {
+      "name": "Modded Together",
+      "summary": "融合科技、魔法、冒险与任务的大型 1.21.1 NeoForge 魔改包，适合多人协作推进。",
+      "category": "科技／魔法／冒险／任务／休闲／大型",
+      "heat": 52,
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/modpack/1401.html",
+      "heatEvidenceAt": "2026-09-06",
+      "heatSignals": "MC百科昨日指数 14",
+      "image": "game-brief-assets/2026-09-07-pack-10.jpg"
+    }
+  ],
+  "mods": [
+    {
+      "name": "龙之生存｜Dragon Survival",
+      "summary": "让玩家以不同龙族形态生存与成长，并围绕能力、资源和战斗建立完整玩法。",
+      "version": "2.0.67／Minecraft 1.15.2—26.1.2",
+      "loader": "Forge／NeoForge",
+      "date": "2026-09-06",
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/class/3838.html"
+    },
+    {
+      "name": "匠魂3｜Tinkers' Construct 3",
+      "summary": "以部件、材料和强化系统重构工具制造；本次更新集中改善性能、装备染色与耐久交互。",
+      "version": "3.12.0.220／Minecraft 1.16.5—1.20.1",
+      "loader": "Forge／NeoForge",
+      "date": "2026-09-05",
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/class/3725.html"
+    },
+    {
+      "name": "物品分组｜Inventory Item Groups",
+      "summary": "为创造模式物品菜单加入类似基岩版的可配置物品分组和排序能力。",
+      "version": "Minecraft 1.20—26.2",
+      "loader": "Forge／Fabric／Quilt／NeoForge",
+      "date": "2026-08-29",
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/class/29794.html"
+    },
+    {
+      "name": "MCPServer",
+      "summary": "通过受控 HTTP 接口让 AI 助手读取服务器状态、日志与性能，并执行需确认的管理命令。",
+      "version": "Minecraft 1.20.1—1.21.11",
+      "loader": "Fabric",
+      "date": "2026-08-28",
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/class/29874.html"
+    },
+    {
+      "name": "BetterMultiWorld",
+      "summary": "面向 26.2 的 MultiWorld 非官方 Fabric 增强移植，补充中文本地化、传送门和世界独立设置。",
+      "version": "1.13.3／Minecraft 26.2",
+      "loader": "Fabric",
+      "date": "2026-08-28",
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/class/29855.html"
+    },
+    {
+      "name": "服务器管理工具｜ServerManger",
+      "summary": "提供登录、公告、掉落物清理、MOTD、家系统与配置热重载等服务器管理功能。",
+      "version": "Minecraft 1.20.1／1.21.1",
+      "loader": "Forge／NeoForge",
+      "date": "2026-08-28",
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/class/28353.html"
+    }
+  ],
+  "deals": [
+    {
+      "name": "Warhammer 40,000: 星际战士2",
+      "discount": "-75%",
+      "original": "¥249.00",
+      "price": "¥62.25",
+      "label": "新史低",
+      "ends": "截至 09-14",
+      "image": "game-brief-assets/2026-09-07-steam-01.jpg",
+      "url": "https://store.steampowered.com/app/2183900/?cc=cn&l=schinese"
+    },
+    {
+      "name": "原子之心",
+      "discount": "-80%",
+      "original": "¥239.00",
+      "price": "¥47.80",
+      "label": "新史低",
+      "ends": "截至 09-15",
+      "image": "game-brief-assets/2026-09-07-steam-02.jpg",
+      "url": "https://store.steampowered.com/app/668580/?cc=cn&l=schinese"
+    },
+    {
+      "name": "BOMBANANA!",
+      "discount": "-38%",
+      "original": "¥29.00",
+      "price": "¥17.98",
+      "label": "平史低",
+      "ends": "截至 09-09",
+      "image": "game-brief-assets/2026-09-07-steam-03.jpg",
+      "url": "https://store.steampowered.com/app/4656000/?cc=cn&l=schinese"
+    },
+    {
+      "name": "红色沙漠：增强版",
+      "discount": "-20%",
+      "original": "¥268.00",
+      "price": "¥214.40",
+      "label": "平史低",
+      "ends": "截至 09-09",
+      "image": "game-brief-assets/2026-09-07-steam-04.jpg",
+      "url": "https://store.steampowered.com/app/3321460/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Call of Duty®: Black Ops III",
+      "discount": "-75%",
+      "original": "¥298.00",
+      "price": "¥74.50",
+      "label": "平史低",
+      "ends": "截至 09-18",
+      "image": "game-brief-assets/2026-09-07-steam-05.jpg",
+      "url": "https://store.steampowered.com/app/311210/?cc=cn&l=schinese"
+    },
+    {
+      "name": "午夜轮班",
+      "discount": "-10%",
+      "original": "¥38.00",
+      "price": "¥34.20",
+      "label": "平史低",
+      "ends": "截至 09-12",
+      "image": "game-brief-assets/2026-09-07-steam-06.jpg",
+      "url": "https://store.steampowered.com/app/3722330/?cc=cn&l=schinese"
+    },
+    {
+      "name": "007 初露锋芒",
+      "discount": "-20%",
+      "original": "¥298.00",
+      "price": "¥238.40",
+      "label": "平史低",
+      "ends": "截至 09-16",
+      "image": "game-brief-assets/2026-09-07-steam-07.jpg",
+      "url": "https://store.steampowered.com/app/3768760/?cc=cn&l=schinese"
+    },
+    {
+      "name": "A Plague Tale: Requiem",
+      "discount": "-70%",
+      "original": "¥199.00",
+      "price": "¥59.70",
+      "label": "平史低",
+      "ends": "截至 09-15",
+      "image": "game-brief-assets/2026-09-07-steam-08.jpg",
+      "url": "https://store.steampowered.com/app/1182900/?cc=cn&l=schinese"
+    },
+    {
+      "name": "席德·梅尔的文明VII",
+      "discount": "-50%",
+      "original": "¥298.00",
+      "price": "¥149.00",
+      "label": "平史低",
+      "ends": "截至 09-18",
+      "image": "game-brief-assets/2026-09-07-steam-09.jpg",
+      "url": "https://store.steampowered.com/app/1295660/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Call of Duty®: Black Ops 7",
+      "discount": "-50%",
+      "original": "¥298.00",
+      "price": "¥149.00",
+      "label": "平史低",
+      "ends": "截至 09-18",
+      "image": "game-brief-assets/2026-09-07-steam-10.jpg",
+      "url": "https://store.steampowered.com/app/3606480/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Call of Duty®: Infinite Warfare",
+      "discount": "-75%",
+      "original": "¥298.00",
+      "price": "¥74.50",
+      "label": "平史低",
+      "ends": "截至 09-18",
+      "image": "game-brief-assets/2026-09-07-steam-11.jpg",
+      "url": "https://store.steampowered.com/app/292730/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Bodycam",
+      "discount": "-20%",
+      "original": "¥128.00",
+      "price": "¥102.40",
+      "label": "今日特惠",
+      "ends": "截至 09-11",
+      "image": "game-brief-assets/2026-09-07-steam-12.jpg",
+      "url": "https://store.steampowered.com/app/2406770/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Sid Meier’s Civilization® VI",
+      "discount": "-90%",
+      "original": "¥220.00",
+      "price": "¥22.00",
+      "label": "今日特惠",
+      "ends": "截至 09-18",
+      "image": "game-brief-assets/2026-09-07-steam-13.jpg",
+      "url": "https://store.steampowered.com/app/289070/?cc=cn&l=schinese"
+    }
+  ],
+  "trends": [
+    "大型策略游戏正在用免费系统更新、试玩与付费扩展组合重新争取玩家。",
+    "《我的世界》跨界联名继续覆盖实体收藏品，并迅速转化为中文社区讨论。",
+    "云游戏额度与工作室办公空间变化同时反映平台和内容公司的成本压力。",
+    "Steam国区冻结发现面25项已逐项核验，13项合格，其中11项新史低或平史低；购买前仍应以实时页面为准。"
+  ]
+}
