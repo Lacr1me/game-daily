@@ -183,6 +183,19 @@ function renderStories(container, stories) {
     source.rel = "noopener noreferrer";
     source.textContent = formatSource(story.source, story.sourceOrigin);
     meta.append(source, document.createTextNode(story.publishedAt));
+    const paperLabel = [story.paper?.journal, story.paper?.doi ? `DOI ${story.paper.doi}` : ""]
+      .filter(Boolean)
+      .join(" · ");
+    if (paperLabel) {
+      const paper = story.paper.url ? document.createElement("a") : document.createElement("span");
+      if (story.paper.url) {
+        paper.href = story.paper.url;
+        paper.target = "_blank";
+        paper.rel = "noopener noreferrer";
+      }
+      paper.textContent = paperLabel;
+      meta.append(paper);
+    }
     article.append(heading, summary, meta);
     return article;
   }));
