@@ -1,0 +1,426 @@
+{
+  "date": "2026-09-08",
+  "issue": 18,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期二",
+  "lunarDate": "农历丙午年七月廿七",
+  "cutoff": "2026-09-08 09:30（北京时间）",
+  "productionTime": "2026-09-08 09:36（北京时间）",
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "三部门启动金融教育宣传周守护安心消费",
+        "summary": "金融监管总局、人民银行和证监会联合开展金融风险提示与社区消保服务，帮助公众识别网络金融骗局并了解维权渠道。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 18:20",
+        "url": "https://www.news.cn/fortune/20260907/c00c9767dd0a4f2bb9a06967b3d0f1c8/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "六部门完善乡村振兴多元投入机制",
+        "summary": "实施方案提出财政优先保障、金融重点倾斜和社会积极参与，并以农业保险、农村资产盘活等措施促进农民增收。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 20:21",
+        "url": "https://www.news.cn/politics/20260907/c08eacc451124ee685bc78d042a19287/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "改善民生与扩大内需形成双向支撑",
+        "summary": "人民日报评论提出稳定就业、增加居民收入和健全社会保障，同时补齐教育、医疗、养老与住房服务短板，释放消费潜力。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 17:21",
+        "url": "https://finance.people.com.cn/n1/2026/0907/c1004-40794139.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "公安部交管局提示儿童乘车一人一座",
+        "summary": "交管部门以抱孩子驾驶和超员案例提醒家长，全程使用安全带并为儿童配置合适座椅，避免让孩子充当成人的安全气囊。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 19:35",
+        "url": "https://society.people.com.cn/n1/2026/0907/c1008-40794176.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "多地推进基础教育优质均衡与身心健康",
+        "summary": "各地通过城乡教育共同体、教师研修、体育求生课程和心理成长活动，改善山区师资供给并守护青少年健康成长。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 13:26",
+        "url": "https://www.news.cn/politics/20260907/2ae7f422c0b640b8a4751f6663ba28b3/c.html"
+      },
+      {
+        "id": "domestic-06",
+        "title": "极端天气推动防灾监测与城乡短板补强",
+        "summary": "国家气候中心分析厄尔尼诺与远洋台风对我国汛期风雨格局的影响，提示持续完善预警体系和城乡防灾减灾能力。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 20:13",
+        "url": "https://www.news.cn/politics/20260907/dbf18b0dc4064c1bbdf76707630a6528/c.html"
+      },
+      {
+        "id": "domestic-07",
+        "title": "上海市民日校与艺术夜校秋季班开学",
+        "summary": "上海在六百七十多个点位开设一千八百余门日校和夜校课程，约三点五万人把传统艺术、生活技能与数字创意融入日常。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 20:49",
+        "url": "https://www.news.cn/photo/20260907/e98d586198f3489a95b0974da603e87b/c.html"
+      },
+      {
+        "id": "domestic-08",
+        "title": "北京试点红灯停表保障外卖骑手权益",
+        "summary": "北京部分区域试运行外卖骑手等红灯自动补时，把合规等待从配送考核中顺延，减少抢行压力并提升骑行安全与规则公平。",
+        "source": "中国经济网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 06:00",
+        "url": "https://www.ce.cn/xwzx/gnsz/gdxw/202609/t20260907_3196830.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "title": "北京怀柔扩大养老儿童残疾人服务供给",
+        "summary": "怀柔区提出统筹养老服务、儿童关爱、残疾人保障和社会救助，扩大普惠性基础性兜底性公共服务并提升专业照护能力。",
+        "source": "怀柔区人民政府",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 11:23",
+        "url": "https://www.beijing.gov.cn/ywdt/gqrd/202609/t20260907_4853222.html"
+      },
+      {
+        "id": "domestic-10",
+        "title": "历史经典产业将拓展康养教育消费场景",
+        "summary": "六部门推动老字号、丝绸、中药和茶产业标准化升级，并与文旅、康养、教育和乡村振兴融合，让农户共享产业链增值收益。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 16:22",
+        "url": "https://www.news.cn/politics/20260907/8712cb1736a34f09a772a13ab6fa9936/c.html"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "土耳其计划三年内提高国防开支",
+        "summary": "土耳其公布二〇二七至二〇二九年经济规划，拟把国防开支提高百分之二百二十九，同时下调增长并上调通胀预期。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 21:36",
+        "url": "https://www.news.cn/world/20260907/8ad79d181d234c839fd8129643a90ce0/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "俄方批评美国在挪威部署导弹发射系统",
+        "summary": "俄罗斯外交部称美方在挪威部署可发射战斧导弹的系统将覆盖俄罗斯大片区域，并削弱战略议题对话基础。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 18:38",
+        "url": "https://www.news.cn/world/20260907/3f03e1746ee54189bb323b5a93476ddd/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "日美韩在东海举行自由之刃联合军演",
+        "summary": "三国投入舰艇和战斗机开展海空、太空与网络等领域演练，并扩大一体化防空反导合作，日本民间团体举行抗议。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 21:04",
+        "url": "https://www.news.cn/20260907/561029eb75ca4588b39f3a9524fc95b4/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "伊朗警告他国勿军事介入霍尔木兹海峡",
+        "summary": "伊朗外交部警告其他国家不要参与海峡军事行动，韩国政府则回到尚未决定派兵的谨慎立场，相关议案仍需国会同意。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 20:26",
+        "url": "https://www.news.cn/world/20260907/0590e1a5d7c8445681950b0387864b93/c.html"
+      },
+      {
+        "id": "international-05",
+        "title": "美媒称伊朗婚礼遇袭或因炸弹偏离目标",
+        "summary": "美国媒体依据弹片和现场损毁分析称，美军炸弹可能偏离通信设施目标击中婚礼现场，造成四人死亡和至少九十人受伤。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 16:50",
+        "url": "https://www.news.cn/20260907/c39e92f846d54124b686720bd0574eda/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "世界气象组织警示气溶胶与臭氧健康风险",
+        "summary": "最新公报指出颗粒物、黑碳、微塑料和近地面臭氧威胁呼吸与血液健康，呼吁加强空气质量和气候协同监测。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 20:08",
+        "url": "https://www.news.cn/world/20260907/d4ebae302f46466495a484f3ca322492/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "以军空袭黎巴嫩南部造成至少十一人死亡",
+        "summary": "黎巴嫩媒体称空袭摧毁南部一栋住宅并击中民用车辆，包括两名婴儿和两名急救人员在内至少十一人死亡。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 15:38",
+        "url": "https://www.news.cn/world/20260907/28e8a0faf0e44570a278b058dc445fce/c.html"
+      },
+      {
+        "id": "international-08",
+        "title": "霍尔木兹海峡商业通航量降至五月来最低",
+        "summary": "国际航运数据显示海峡十日平均每日仅约十艘商业船舶通过，美伊海上互袭使油轮航行风险和能源运输压力显著上升。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 13:09",
+        "url": "https://www.news.cn/20260907/a0fe68fbb88647cf813d0569c356163f/c.html"
+      },
+      {
+        "id": "international-09",
+        "title": "美加关系紧张导致加拿大赴美游客减少",
+        "summary": "加拿大居民跨境出行次数和赴美旅游消费明显下降，美国旅游业计划推出专项推广活动，但受访者仍顾虑安全和贸易摩擦。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 16:50",
+        "url": "https://www.news.cn/world/20260907/64942955ff384b24ae53d2089164d060/c.html"
+      },
+      {
+        "id": "international-10",
+        "title": "维也纳多国重申支持全球治理倡议",
+        "summary": "维也纳全球治理之友小组发表联合声明，主张维护以联合国为核心的国际体系、坚持国际法治并加强多边合作。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 22:11",
+        "url": "https://www.news.cn/20260907/02d1214e830a4ad1ae261cd1d6eab2d6/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "我国科学家以损耗工程调控光波传播方向",
+        "summary": "上海交大等团队利用各向异性碳纳米管薄膜与氧化钼构成异质结构，通过电压调节损耗，实现对光波传播方向的主动控制。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 19:57",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/07/content_576759.html",
+        "paper": {
+          "journal": "Nature Materials",
+          "url": "https://www.nature.com/articles/s41563-026-02734-z",
+          "doi": "10.1038/s41563-026-02734-z"
+        }
+      },
+      {
+        "id": "tech-02",
+        "title": "中国天眼找到中子星源自星团的观测证据",
+        "summary": "中国天眼联合多台望远镜在古老疏散星团潮汐尾发现脉冲星，为部分中子星由星团动力学演化产生提供了直接观测线索。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 11:31",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/07/content_576399.html",
+        "paper": {
+          "journal": "Science Bulletin",
+          "url": "https://doi.org/10.1016/j.scib.2026.07.006",
+          "doi": "10.1016/j.scib.2026.07.006"
+        }
+      },
+      {
+        "id": "tech-03",
+        "title": "麒麟9050 Pro采用逻辑折叠缩短信号路径",
+        "summary": "华为新款芯片通过把有源逻辑层纵向堆叠来缩短互连距离，在有限面积内兼顾延迟、性能和能效，为高端终端提供算力支撑。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 17:16",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/07/content_576667.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "平陆运河将于九月十六日建成通航",
+        "summary": "全长一百三十四点二公里的平陆运河可通行五千吨级船舶，通航后将缩短西南货物出海距离并降低区域综合物流成本。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 18:02",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/07/content_576711.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "河南多项智能农机装备实现从零到一",
+        "summary": "河南研发国内首台氢能拖拉机、电动移栽机和氢能植保机械，并以智能施肥除草技术减少农药投入，推动农业装备绿色升级。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 22:23",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/07/content_576829.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "信息通信十五五规划部署六G与智能算力",
+        "summary": "规划提出到二〇三〇年信息基础设施投资约三点八万亿元，智能算力达到九千八百百亿亿次，并推进六G研发和智能体网络建设。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 21:41",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/07/content_576795.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "新型电力系统中国方案面向APEC发布",
+        "summary": "南方电网发布覆盖源网荷储与数字化的新型电力系统方案，结合人工智能开展功率预测和调度，为亚太能源转型提供实践路径。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 20:54",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/07/content_576787.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "超薄柔性玻璃实现二百万次极限弯折",
+        "summary": "国产三十微米超薄柔性玻璃透光率达到百分之九十三，最小弯折半径零点四毫米，并在极限测试中完成二百万次弯折。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 16:31",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/07/content_576593.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "天语巡天望远镜建成并进入科学观测",
+        "summary": "我国首台米级大视场亚秒级采样巡天望远镜单次可覆盖九平方度并观测百万颗恒星，将用于寻找系外行星和快速暂现源。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-05 15:47",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/05/content_575809.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "中小企业人形机器人进入规模化真实产线",
+        "summary": "人形机器人已在汽车、半导体和生物制造等真实产线开展作业，广东同步启用年产万台生产线，推动智能装备从样机走向量产。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 20:19",
+        "url": "https://www.news.cn/20260907/de27e60097ab4500a9467575ca13f1b6/c.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "AI新职业标准明晰技能评价与成长路径",
+        "summary": "数字人训练师、生成式人工智能系统应用员等职业标准陆续落地，为从业者提供技能评价和晋升依据，也推动企业完善岗位培训。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 07:55",
+        "url": "https://www.stdaily.com/web/2026-09/07/content_576205.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "两款具身智能新品强化物理推演与自诊断",
+        "summary": "可微分粒子世界模型可完成场景理解、预测和规划，另一套系统则记录机器人决策证据并诊断失败原因，支持持续自我改进。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 19:44",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/07/content_576742.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "人工智能重塑中国智造产品与应用链条",
+        "summary": "大湾区企业把人工智能融入增强现实眼镜、空间相机、翻译耳机和物流机器人，推动消费电子与制造装备加速走向海外市场。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 17:17",
+        "url": "https://www.news.cn/liangzi/20260907/497c1d645cbe44a0a4ccdf55868a1120/c.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "讯飞星火X2.5提升代码与智能体能力",
+        "summary": "新模型采用混合专家架构并在国产算力上完成训练推理，重点增强代码、智能体和数学能力，同时开放小模型并支持百万词元上下文。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 16:24",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/07/content_576622.html"
+      },
+      {
+        "id": "ai-05",
+        "title": "研究警示生成式AI可能放大文化与认知同质化",
+        "summary": "多项实验显示，模型输出趋同可能影响用户写作、决策和观点，研究人员建议丰富训练数据并通过提示保留表达多样性。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 07:53",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/07/content_576196.html"
+      }
+    ]
+  },
+  "topStoryIds": [
+    "domestic-01",
+    "international-06",
+    "tech-01"
+  ],
+  "metrics": [
+    {
+      "kind": "gold",
+      "icon": "🥇",
+      "name": "国内金价",
+      "value": "Au99.99收盘价：949.60元/克",
+      "note": "2026-09-07收盘",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://sge.com.cn/sjzx/quotation_daily_new?end_date=2026-09-07&start_date=2026-09-07",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "北京油价",
+      "value": "92号8.09元/升；95号8.61元/升",
+      "note": "2026-08-29起现行最高零售价",
+      "source": "北京市发展和改革委员会",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202608/t20260828_4841556.htm",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际油价",
+      "value": "布伦特96.28美元/桶；WTI91.48美元/桶",
+      "note": "2026-09-04最近收盘",
+      "source": "新华网",
+      "sourceUrl": "https://www.news.cn/20260905/d21d62c9e18c4f55b31c18c71aae62b4/c.html",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "usd_cny",
+      "icon": "💵",
+      "name": "人民币兑美元",
+      "value": "1美元＝6.7795元人民币",
+      "note": "2026-09-07中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/index.html?tab=2",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "eur_cny",
+      "icon": "💶",
+      "name": "人民币兑欧元",
+      "value": "1欧元＝7.8337元人民币",
+      "note": "2026-09-07中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/index.html?tab=2",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "jpy_cny",
+      "icon": "💴",
+      "name": "人民币兑日元",
+      "value": "100日元＝4.3098元人民币",
+      "note": "2026-09-07中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/index.html?tab=2",
+      "sourceOrigin": "china"
+    }
+  ],
+  "metricsCutoff": "2026-09-08 06:42（北京时间）",
+  "metricSources": [
+    "上海黄金交易所",
+    "北京市发展和改革委员会",
+    "新华网",
+    "中国外汇交易中心"
+  ],
+  "observation": "今日民生议题从金融消费者保护、乡村投入和儿童出行安全，延伸到骑手权益、养老助残与基础教育提质，公共服务更加关注规则公平和重点人群保障。国际上，军事对峙、地区冲突与航运风险交织，空气污染健康风险和多边治理同样受到关注。科技与人工智能方面，基础科研、信息基础设施、先进制造和具身智能同步推进，创新正加快进入生产体系，也提醒社会重视生成式AI可能带来的认知同质化。",
+  "sources": [
+    "新华网",
+    "人民网",
+    "中国经济网",
+    "怀柔区人民政府",
+    "中国科技网"
+  ]
+}

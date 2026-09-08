@@ -4,6 +4,14 @@
   "publishAt": "11:00",
   "editions": [
     {
+      "date": "2026-09-08",
+      "issue": 18,
+      "publishAt": "2026-09-08T11:00:00+08:00",
+      "title": "游戏与 Minecraft 每日简报",
+      "headline": "《鬼武者：剑之道》首日销量破百万",
+      "file": "data/2026-09-08.json"
+    },
+    {
       "date": "2026-09-07",
       "issue": 17,
       "publishAt": "2026-09-07T11:00:00+08:00",
