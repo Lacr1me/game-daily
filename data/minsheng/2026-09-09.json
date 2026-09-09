@@ -1,0 +1,424 @@
+{
+  "date": "2026-09-09",
+  "issue": 19,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期三",
+  "lunarDate": "农历丙午年七月廿八",
+  "cutoff": "2026-09-09 09:30（北京时间）",
+  "productionTime": "2026-09-09 09:38（北京时间）",
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "人社部启动全国就业政策宣传月",
+        "summary": "人社部将在九月集中推送就业政策资料、构建宣传矩阵并办理服务事项，帮助劳动者和用人单位更便捷享受稳就业政策红利。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 19:20",
+        "url": "https://www.news.cn/20260908/7c9af873cf014c0f8786051067673b21/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "七部门启动灵活就业人员参保提质行动",
+        "summary": "专项行动将用三年左右完善参保缴费模式和服务体系，持续提高灵活就业人员、农民工及新就业形态人员基本医保参保水平。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 15:01",
+        "url": "https://www.news.cn/politics/20260908/6bfebca2d6b94aafa13ef74e4b7f379e/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "全国计划建设五千个放心消费集聚区",
+        "summary": "市场监管总局启动放心消费主体培育，计划到二〇三〇年形成五千个以上集聚区，并推动消费治理由事后处置转向事前预防。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 21:41",
+        "url": "https://www.news.cn/20260908/bdc26d23415a4ae3ae89e9f6c31281fe/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "网络流量不应侵扰老人私人生活边界",
+        "summary": "人民日报民生观结合老人因网络走红遭围拍打卡的经历，提醒公众区分善意互动与生活侵扰，尊重私人空间和日常安宁。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 06:04",
+        "url": "https://society.people.com.cn/n1/2026/0908/c1008-40794282.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "绍兴以服务消费升级扩大普惠民生供给",
+        "summary": "绍兴把养老、托育、健康、文旅和体育纳入服务消费升级行动，通过民生综合体与消费券降低使用门槛并扩大优质供给。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 08:39",
+        "url": "https://zj.people.com.cn/n2/2026/0908/c186327-41689561.html"
+      },
+      {
+        "id": "domestic-06",
+        "title": "四个招聘专场提供二点一万人次需求",
+        "summary": "百日千万招聘专项行动推出智能硬件、有色金属、康养服务和制造业专场，一千八百余家单位提供二点一万人次招聘需求。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 02:35",
+        "url": "https://news.gmw.cn/2026-09/08/content_38989632.htm"
+      },
+      {
+        "id": "domestic-07",
+        "title": "上海生育保障升级覆盖产检分娩与异地就医",
+        "summary": "自十月一日起，上海参保妇女围产检查服务包和政策内分娩住院费用按规定由生育保险支付，并扩大居民医保和异地生育保障范围。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 22:03",
+        "url": "https://www.news.cn/20260908/1ea0e211ee6c442997cecf9233e44fc9/c.html"
+      },
+      {
+        "id": "domestic-08",
+        "title": "专家提醒电解质水不能替代日常饮水",
+        "summary": "专家指出电解质水适合高温暴晒、剧烈运动或大量失水场景，普通人无需跟风饮用，高血压和肾功能不全人群更应控制摄入。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 09:12",
+        "url": "https://www.cnr.cn/mspd/msyx/20260908/t20260908_527807585.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "title": "三十三年对口帮扶补齐金沙民生短板",
+        "summary": "民进各级组织在贵州金沙持续推进教育、医疗和特色产业项目，通过远程门诊、学校建设与本地就业增强县域公共服务能力。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 16:12",
+        "url": "https://cn.chinadaily.com.cn/a/202609/08/WS6a9fcdefe4b09a165c788bca.html"
+      },
+      {
+        "id": "domestic-10",
+        "title": "上海杨浦推进养老骑手住房和家政服务",
+        "summary": "杨浦区调研综合为老服务、骑手驿站、老旧小区修缮和家政实训，要求按真实需求配置资源并提升基层公共服务品质。",
+        "source": "上海市人民政府",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07",
+        "url": "https://www.shanghai.gov.cn/nw15343/20260908/15d01debbebf43aca2f0496eb5b41484.html"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "伊朗总统称将继续全力抵抗外部进攻",
+        "summary": "伊朗总统佩泽希齐扬表示伊朗反对战争并重视地区安全，但将继续抵抗外部进攻并捍卫国家和民众权利。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 17:55",
+        "url": "https://www.news.cn/world/20260908/9f11314279ef4a748baf118398f180d1/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "日美澳联合演习在日本多地启动",
+        "summary": "约三千七百人参加持续至九月二十四日的联合演习，训练将使用中导和火箭炮系统，日本民间团体担忧永久部署风险。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 21:15",
+        "url": "https://www.news.cn/world/20260908/ca563a9919064a97b401816e6c0ec8f7/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "伊朗战事推高美国家庭燃油支出",
+        "summary": "美国布朗大学跟踪网站估算战事已使美国消费者额外支出超过一千亿美元，汽柴油涨价也可能继续传导至货运和日常物价。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 17:52",
+        "url": "https://www.news.cn/world/20260908/6880f8d1c0594260b02424ce72392dc6/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "阿联酋启用替代物流通道保障贸易",
+        "summary": "面对霍尔木兹海峡通行受阻，阿联酋启动连接阿拉伯湾、红海和阿曼湾的替代通道，并加快东海岸港口和能源管道建设。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 20:15",
+        "url": "https://www.news.cn/world/20260908/686bac4bd8544d198b3ecfa65fcce418/c.html"
+      },
+      {
+        "id": "international-05",
+        "title": "加拿大对美国反制关税正式生效",
+        "summary": "加拿大开始对钢铁、乳制品、农用设备等美国商品征收等额关税，并计划评估施政与贸易多元化安排，中小企业承压。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 14:39",
+        "url": "https://www.news.cn/world/20260908/e0c7994c08164b919e7120b20265be93/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "俄罗斯称将回应匈牙利驱逐外交人员",
+        "summary": "匈牙利决定驱逐十名被指违反维也纳公约的俄罗斯外交人员，俄外交部表示将作出强硬回应，双边关系面临新摩擦。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 21:41",
+        "url": "https://www.news.cn/world/20260908/c6fb5a22abb046338adcbcf084939770/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "玻利维亚军营爆炸死亡人数升至九人",
+        "summary": "玻利维亚国防部称军营爆炸事故已造成九人死亡、八十四人受伤、五人失踪，救援仍在进行，事故原因正由有关部门调查。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 12:23",
+        "url": "https://www.news.cn/world/20260908/c439c05abbc0475ca392f2ad986ced09/c.html"
+      },
+      {
+        "id": "international-08",
+        "title": "哈里夫妇返英后仍不履行王室公务",
+        "summary": "英国王室向政府和军方确认，哈里与梅根返回英国后仍是不履行公务的王室成员，两人的慈善活动属于个人事务。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 14:16",
+        "url": "https://www.news.cn/world/20260908/09161bd304374b29b299a72b810fb6ba/c.html"
+      },
+      {
+        "id": "international-09",
+        "title": "乌克兰首都基辅再次响起强烈爆炸声",
+        "summary": "新华社记者在基辅凌晨听到多轮强烈爆炸，乌克兰空军同期发布预警称多枚弹道导弹正向首都方向飞来。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 09:02",
+        "url": "https://www.news.cn/20260908/a61e4ccf6c4b4afab9d680f8a954f637/c.html"
+      },
+      {
+        "id": "international-10",
+        "title": "欧盟将向格陵兰岛投资二亿欧元",
+        "summary": "欧盟计划在两年内支持格陵兰岛教育、渔业、通信、水电和住房等项目，并通过联合声明进一步强化双方伙伴关系。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 07:28",
+        "url": "https://www.news.cn/world/20260908/10062a80f0074f48a82e07b82ab740ad/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "华龙一号2.0版首次面向全球推介",
+        "summary": "华龙一号二点零版优化十四项安全特征，可实现事故后七十二小时不干预和七天自治，并提升自动化水平与关键设备国产化能力。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 17:16",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/07/content_576657.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "杂交水稻大面积制种刷新高产世界纪录",
+        "summary": "湖南两系法杂交水稻制种示范基地平均亩产五百三十点四公斤，团队以新品种和配套栽培体系突破长期制种产量瓶颈。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-07 20:51",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/07/content_576788.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "中药智能提取精制黑灯工厂投入运行",
+        "summary": "全国首个中药智能化提取精制工厂以七百多台设备、人工智能知识系统和全流程质量控制，实现连续生产与批次一致性提升。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 19:32",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/08/content_577382.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "西渝高铁朱家山隧道顺利贯通",
+        "summary": "全长九千九百五十八米的高风险隧道穿越多处断层、溶洞与地下暗河，贯通后为西渝高铁康渝段按期建设奠定基础。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 16:44",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/08/content_577232.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "滇中引水工程海东隧洞全线贯通",
+        "summary": "二十五点三一三公里隧洞穿越活动断裂和富水破碎带，项目以超前地质预判、主动支护和帷幕灌浆控制复杂施工风险。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 16:47",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/08/content_577231.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "中国全球百强创新集群数量连续四年居首",
+        "summary": "世界知识产权组织报告显示中国拥有二十五个全球百强创新集群，深港广连续第二年居首，北京与上海苏州也进入前十。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 17:18",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/08/content_577319.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "西藏首个RISC-V千卡算力集群投运",
+        "summary": "国产架构千卡算力集群在拉萨完成试运行，可部署七十亿至六千七百一十亿参数模型，并适配高原环境下的多类人工智能服务。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 16:39",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/08/content_577273.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "二点五微米国产手撕钢实现产业化突破",
+        "summary": "国产镍基合金箔厚度降至头发丝约三十分之一，并以热处理精准匹配温度系数，相关核心部件已用于航天与深空探测装备。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 17:08",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/08/content_577309.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "小米自研芯片操作系统与端侧模型集中落地",
+        "summary": "小米发布量产玄戒O3处理器并将其与澎湃OS四、端侧大模型集成至折叠屏终端，推进芯片软件和设备协同商用。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 11:24",
+        "url": "https://www.news.cn/tech/20260908/165881cd696c4f53bc61f77d18ebb183/c.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "江苏推动高校硬科技对接企业真实需求",
+        "summary": "江苏三年开展四千六百多场产学研对接并形成一点九万余项合作，以中试和联合攻关缩短科研成果进入生产线的路径。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 11:10",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/08/content_577057.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "新框架把人类视频转化为机器人可执行技能",
+        "summary": "HSImul3R将物理稳定性纳入三维重建闭环，可从稀疏视角或单目视频恢复人景交互，并把动作迁移到真实人形机器人。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 16:37",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/08/content_577265.html",
+        "paper": {
+          "journal": "European Conference on Computer Vision (ECCV 2026)",
+          "url": "https://arxiv.org/abs/2603.15612",
+          "doi": "10.48550/arXiv.2603.15612"
+        }
+      },
+      {
+        "id": "ai-02",
+        "title": "人工智能应用服务商培育专项行动启动",
+        "summary": "工业和信息化部将摸清服务商底数并推进梯次培育，提升人工智能方案咨询、交付实施、运营管理和安全治理能力。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 09:35",
+        "url": "https://www.news.cn/sci-tech/20260908/e58266e20cfc42fcbc0964afad01d5fc/c.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "工业垂类模型加快进入传统工厂生产流程",
+        "summary": "制造企业把设备数据和工艺经验转为可训练知识，人工智能应用由质检预警延伸至参数优化与生产决策，中小企业共享普惠算力。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 10:12",
+        "url": "https://www.news.cn/20260908/ee1574e4b396431d944eb8520034c91d/c.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "中国推进人工智能能力建设普惠计划",
+        "summary": "新一期人工智能能力建设研讨班在北京大学举办，中国将通过培训与国际合作提升技术服务可及性，支持全球南方形成适配路径。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 15:30",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-08/10692610.shtml"
+      },
+      {
+        "id": "ai-05",
+        "title": "AI治理需兼顾技术效率与公共价值",
+        "summary": "光明日报评论提出人工智能进入社会治理应保留公众参与和申诉渠道，防止技术增加基层负担，并以透明责任边界约束应用。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-08 02:35",
+        "url": "https://news.gmw.cn/2026-09/08/content_38989708.htm"
+      }
+    ]
+  },
+  "topStoryIds": [
+    "domestic-02",
+    "international-03",
+    "tech-03"
+  ],
+  "metrics": [
+    {
+      "kind": "gold",
+      "icon": "🥇",
+      "name": "国内金价",
+      "value": "Au99.99收盘价：951.52元/克",
+      "note": "2026-09-08收盘",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://sge.com.cn/sjzx/quotation_daily_new?end_date=2026-09-08&start_date=2026-09-08",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "北京油价",
+      "value": "92号8.09元/升；95号8.61元/升",
+      "note": "2026-08-29起现行最高零售价",
+      "source": "北京市发展和改革委员会",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202608/t20260828_4841556.htm",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际油价",
+      "value": "布伦特97.92美元/桶；WTI93.03美元/桶",
+      "note": "2026-09-08收盘",
+      "source": "新华网",
+      "sourceUrl": "https://www.news.cn/fortune/20260909/62c4b0b6510d4605b2467da75017d734/c.html",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "usd_cny",
+      "icon": "💵",
+      "name": "人民币兑美元",
+      "value": "1美元＝6.7804元人民币",
+      "note": "2026-09-08中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.news.cn/20260908/0f91445593df42c09a8856a3633af19f/c.html",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "eur_cny",
+      "icon": "💶",
+      "name": "人民币兑欧元",
+      "value": "1欧元＝7.8419元人民币",
+      "note": "2026-09-08中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.news.cn/20260908/0f91445593df42c09a8856a3633af19f/c.html",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "jpy_cny",
+      "icon": "💴",
+      "name": "人民币兑日元",
+      "value": "100日元＝4.3706元人民币",
+      "note": "2026-09-08中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.news.cn/20260908/0f91445593df42c09a8856a3633af19f/c.html",
+      "sourceOrigin": "china"
+    }
+  ],
+  "metricsCutoff": "2026-09-09 07:40（北京时间）",
+  "metricSources": [
+    "上海黄金交易所",
+    "北京市发展和改革委员会",
+    "新华网",
+    "中国外汇交易中心"
+  ],
+  "observation": "今日民生议题集中于就业与参保服务、放心消费、生育保障和养老住房等基层供给，政策落点更强调可及性与风险预防。国际局势中，中东冲突外溢至能源、物流和家庭成本，美加关税与欧洲外交摩擦并行。科技方面，核电、粮食、重大工程、先进材料和自主算力持续推进，人工智能也从工业落地扩展到服务商培育、机器人技能迁移与公共治理，效率提升与透明责任需要同步落实。",
+  "sources": [
+    "新华网",
+    "人民网",
+    "光明网",
+    "央广网",
+    "中国日报中文网",
+    "上海市人民政府",
+    "中国科技网",
+    "中国新闻网"
+  ]
+}
