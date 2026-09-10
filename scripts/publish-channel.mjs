@@ -12,6 +12,7 @@ export async function publishChannel({root=process.cwd(), date=beijingDate(), ch
       assertPublishTime(date, now || new Date());
       await operations.assertRunLease(root,date,{runId,now});
       const result=await preflightModule.preflightChannel(root,{...context,now,requireReady:true});
+      await operations.assertRunLease(root,date,{runId,now});
       return {...result, valid:result.ok, errors:result.reasons};
     },
     updateState:async context=>{

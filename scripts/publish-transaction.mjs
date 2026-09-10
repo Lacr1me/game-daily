@@ -32,6 +32,8 @@ export async function runPublishTransaction({ root, date, channel, runId, prefli
   const journalPath = path.join(root, 'artifacts/operations', `${date}-${channel}-publish-transaction.json`);
   const journalBytes = await optional(journalPath);
   let journal = journalBytes && JSON.parse(journalBytes);
+  if (journal && (journal.schemaVersion !== 1 || !journal.id || !Array.isArray(journal.completedSteps) ||
+    hash(jsonBytes(journal.manifestAfter)) !== journal.indexAfterSha256)) conflict('journal schema or saved manifest is damaged');
   let body = await optional(target);
   const draft = await optional(pending);
   if (!journal && body) conflict('unowned archive exists; retain it for inspection');
@@ -68,7 +70,7 @@ export async function runPublishTransaction({ root, date, channel, runId, prefli
     journal = { schemaVersion: 1, id: randomUUID(), identity, createdAt: new Date().toISOString(),
       indexBeforeSha256: hash(currentManifestBytes), indexAfterSha256: hash(jsonBytes(next)), manifestBefore: manifest,
       manifestAfter: next, step: 'prepared', completedSteps: [] };
-    await replace(journalPath, jsonBytes(journal), () => afterBoundary('journal:prepared:staged'));
+    await replace(journalPath, jsonBytes(journal), async () => { await afterBoundary('journal:prepared:staged'); await check(); });
     await afterBoundary('journal:prepared');
   }
   // Repeat all gates against the saved pre-publication manifest even after index commit.
@@ -78,7 +80,7 @@ export async function runPublishTransaction({ root, date, channel, runId, prefli
     journal.step = step;
     journal.completedSteps = [...new Set([...journal.completedSteps, step])];
     journal.updatedAt = new Date().toISOString();
-    await replace(journalPath, jsonBytes(journal), () => afterBoundary(`journal:${step}:staged`));
+    await replace(journalPath, jsonBytes(journal), async () => { await afterBoundary(`journal:${step}:staged`); await check(); });
     await afterBoundary(`journal:${step}`);
     const stateSteps = {body:'content-written',index:'index-written',embedded:'embedded-written'};
     if (stateSteps[step]) {
@@ -103,7 +105,7 @@ export async function runPublishTransaction({ root, date, channel, runId, prefli
   const beforeIndex = await readFile(index);
   if (hash(beforeIndex) === journal.indexBeforeSha256) {
     await check();
-    await replace(index, jsonBytes(journal.manifestAfter), () => afterBoundary('index:staged'));
+    await replace(index, jsonBytes(journal.manifestAfter), async () => { await afterBoundary('index:staged'); await check(); });
     await afterBoundary('index:written');
   } else if (hash(beforeIndex) !== journal.indexAfterSha256) conflict('index changed before replacement');
   if (journal.step !== 'complete') await progress('index');
@@ -115,7 +117,7 @@ export async function runPublishTransaction({ root, date, channel, runId, prefli
     const existing = await optional(embeddedPath);
     if (!existing?.equals(embedded)) {
       await check();
-      await replace(embeddedPath, embedded, () => afterBoundary('embedded:staged'));
+      await replace(embeddedPath, embedded, async () => { await afterBoundary('embedded:staged'); await check(); });
       await afterBoundary('embedded:written');
     }
     if (journal.step !== 'complete') await progress('embedded');

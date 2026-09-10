@@ -43,6 +43,12 @@ for (const channel of ['game', 'minsheng']) {
     await writeFile(path.join(dir,data,'index.json'),JSON.stringify({...manifest,unexpected:'another publisher'}));
     await assert.rejects(runPublishTransaction(options), /CONFLICT/);
     await writeFile(path.join(dir,data,'index.json'),indexBytes);
+    const journalFile=path.join(dir,'artifacts/operations',`${date}-${channel}-publish-transaction.json`);
+    const journalBytes=await readFile(journalFile), journal=JSON.parse(journalBytes);
+    journal.manifestAfter.editions[0].issue=99;
+    await writeFile(journalFile,JSON.stringify(journal));
+    await assert.rejects(runPublishTransaction(options), /CONFLICT/);
+    await writeFile(journalFile,journalBytes);
     await writeFile(pending, JSON.stringify({ date, issue: 99 }));
     await assert.rejects(runPublishTransaction(options), /CONFLICT/);
   }
