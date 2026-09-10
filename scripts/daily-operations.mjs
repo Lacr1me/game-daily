@@ -1,6 +1,8 @@
 import { createHash, randomUUID } from "node:crypto";
 import { appendFile, mkdir, open, readFile, readdir, rename, unlink, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { AsyncLocalStorage } from 'node:async_hooks';
+const mutationContext = new AsyncLocalStorage();
 import { GAME_DEAL_COVERAGE_EFFECTIVE_DATE, beijingDate, steamAppIdFromUrl } from "./game-lib.mjs";
 import { SOURCE_REGISTRY, allowedSourceIds, canonicalSourceId, canonicalSourceLabel, channelSections, requiredSourceIds } from "./source-registry.mjs";
 
@@ -31,6 +33,8 @@ async function freezeSteamDiscoveryUnlocked(root, options = {}) {
   const runId = requiredText(options.runId, "runId");
   const paths = operationPaths(root, date);
   const sourceUrl = requiredText(options.sourceUrl, "sourceUrl");
+  const initialState = await readJsonIfExists(paths.state);
+  if (!initialState || initialState.date !== date) throw operationError('STATE_CONFLICT', '冻结必须绑定同日已初始化状态');
   if (!isHttps(sourceUrl)) throw new Error("Steam发现面 URL 必须使用 HTTPS");
   const appIds = normalizeSteamIds(options.appIds);
   const extraAppIds = normalizeSteamIds(options.extraAppIds || []);
@@ -245,6 +249,11 @@ async function checkpointRunStateUnlocked(root, date, update = {}) {
   if (!state) throw new Error(`${date} 运行状态不存在，请先执行 init`);
   if (state.date !== date) throw operationError('STATE_CONFLICT', '状态日期冲突');
   validateCheckpoint(update);
+  if (['publishing','published'].includes(update.status) || update.published === true) {
+    const { assertPublishTime } = await import('./game-lib.mjs');
+    assertPublishTime(date, clockNow(update));
+  }
+  if (update.status === 'publishing') await assertReadyProof(root, date, update.channel, { now: update.now });
   if (update.status === 'ready') await assertReadyProof(root, date, update.channel, { now: update.now });
   if (update.status === 'published' || update.published === true) {
     const archived = await inspectLocalArchive(root, date, update.channel, { now: update.now });
@@ -319,6 +328,7 @@ async function appendResearchLedgerUnlocked(root, rawEntry) {
     return previous;
   }
   await mkdir(paths.directory, { recursive: true });
+  await mutationContext.getStore()?.checkLease();
   await appendFile(paths.ledger, `${JSON.stringify(entry)}\n`, "utf8");
   return entry;
 }
@@ -417,7 +427,7 @@ export async function researchCompleteness(root, date, channel) {
       const attempts = ledger.filter((entry) => entry.date === date && entry.channel === channel && entry.section === section && canonicalSourceId(entry.sourceId || entry.source) === sourceId);
       const terminal = attempts.filter((entry) => SOURCE_REGISTRY.terminalStatuses.includes(entry.status));
       if (!attempts.length) missing.push(sourceId);
-      else if (!terminal.length) incomplete.push(sourceId);
+      else if (!terminal.length || attempts.at(-1).status === 'started') incomplete.push(sourceId);
       else if (terminal.at(-1).status === "unavailable" && terminal.filter((entry) => entry.status === "unavailable").length < SOURCE_REGISTRY.minimumUnavailableAttempts) incomplete.push(sourceId);
       else if (date >= GAME_DEAL_COVERAGE_EFFECTIVE_DATE && channel === "game" && section === "deals" && terminal.at(-1).status === "accepted" && terminal.at(-1).coverageComplete !== true) incomplete.push(sourceId);
     }
@@ -578,8 +588,10 @@ async function readLeaseIfExists(file) {
 }
 
 async function writeJson(file, value) {
+  await mutationContext.getStore()?.checkLease();
   const temporary = `${file}.${randomUUID()}.tmp`;
   await writeFile(temporary, `${JSON.stringify(value, null, 2)}\n`, { encoding: 'utf8', flag: 'wx' });
+  await mutationContext.getStore()?.checkLease();
   await rename(temporary, file);
 }
 
@@ -710,6 +722,10 @@ function validateCheckpoint(update) {
   if (update.channel !== undefined) requiredChannel(update.channel);
   if (update.exitReason && !EXIT_REASONS.has(update.exitReason)) throw operationError('INVALID_CHECKPOINT', '无效退出原因');
   if (update.exitReason && !update.runId) throw operationError('INVALID_CHECKPOINT', '退出原因必须绑定 runId');
+  if (update.published === true && update.status && update.status !== 'published') throw operationError('INVALID_CHECKPOINT', 'published 与 status 冲突');
+  if ((update.status || update.published !== undefined || update.issue !== undefined || update.mirrorStatus) && !update.channel) throw operationError('INVALID_CHECKPOINT', '频道更新必须指定 channel');
+  if (update.budget && !update.runId) throw operationError('INVALID_CHECKPOINT', '预算必须绑定 runId');
+  if (update.exitReason === 'REPAIRABLE_ERROR' && update.runStatus === 'complete') throw operationError('INVALID_CHECKPOINT', '尚有可修复错误不能作为正常完成的原因');
   if (update.published !== undefined && typeof update.published !== 'boolean') throw operationError('INVALID_CHECKPOINT', 'published 必须为布尔值');
   if (update.issue !== undefined && (!Number.isInteger(update.issue) || update.issue < 1)) throw operationError('INVALID_CHECKPOINT', 'issue 必须为正整数');
   if (update.missingSections && (!update.channel || !Array.isArray(update.missingSections) || update.missingSections.some(s => !channelSections(update.channel).includes(s)))) throw operationError('INVALID_CHECKPOINT', 'missingSections 无效');
@@ -717,6 +733,8 @@ function validateCheckpoint(update) {
     const b = update.budget;
     if (!['configured','environment','handoff'].includes(b.kind) || !Number.isFinite(Date.parse(b.deadlineAt)) || !String(b.basis || '').trim()) throw operationError('INVALID_CHECKPOINT', '预算须注明 kind/deadlineAt/basis');
   }
+  const budgetKinds = { CONFIGURED_BUDGET: 'configured', ENVIRONMENT_LIMIT: 'environment', HANDOFF_BOUNDARY: 'handoff' };
+  if (budgetKinds[update.exitReason] && update.budget?.kind !== budgetKinds[update.exitReason]) throw operationError('INVALID_CHECKPOINT', '预算退出原因必须附带对应种类的边界证据');
 }
 export async function assertRunLease(root, date, options = {}) {
   const lease = await readLeaseIfExists(operationPaths(root, date).lease);
@@ -738,7 +756,7 @@ async function guardedMutation(root, date, options, callback, requireLease = tru
   try {
     await handle.writeFile(JSON.stringify({ runId: options.runId || null, at: clockNow(options).toISOString() }));
     if (requireLease) await assertRunLease(root, date, options);
-    return await callback();
+    return await mutationContext.run({ checkLease: async () => { if (requireLease) await assertRunLease(root, date, options); } }, callback);
   } finally { await handle.close(); await unlink(lockPath); }
 }
 export function acquireRunLease(root, options = {}) { return guardedMutation(root, options.date || beijingDate(), options, () => acquireRunLeaseUnlocked(root, options), false); }
@@ -776,7 +794,7 @@ export async function inspectSteamDiscovery(root, date) {
   const state = await readJsonIfExists(paths.state);
   const identity = state?.steamDiscovery;
   if (state?.date !== date || !identity?.sha256) throw operationError('FREEZE_UNBOUND', '冻结文件缺少状态中的同日哈希绑定');
-  if (sha256(await readFile(paths.steamDiscovery)) !== identity.sha256 || identity.runId !== snapshot.runId || identity.frozenAt !== snapshot.frozenAt || identity.discoveredCount !== snapshot.discoveredCount) throw operationError('FREEZE_CHANGED', '冻结文件与状态身份/哈希不匹配，保留原证据');
+  if (path.resolve(root, identity.file || '') !== paths.steamDiscovery || sha256(await readFile(paths.steamDiscovery)) !== identity.sha256 || identity.runId !== snapshot.runId || identity.frozenAt !== snapshot.frozenAt || identity.discoveredCount !== snapshot.discoveredCount) throw operationError('FREEZE_CHANGED', '冻结文件与状态身份/哈希不匹配，保留原证据');
   return snapshot;
 }
 export function archiveContentPath(root, date, channel) {

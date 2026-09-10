@@ -60,4 +60,50 @@ await test('查询旧状态不写文件且给出证据缺失', async () => {
   assert.deepEqual(Object.keys(result.channels), ['game']);
   assert.deepEqual(await readFile(statePath), before);
 });
+
+await test('租约到期与错误持有人均拒绝写入', async () => {
+  const root=await fixture('expired');
+  await assert.rejects(ops.checkpointRunState(root,date,{runId:'other',now}),{code:'LEASE_MISMATCH'});
+  await assert.rejects(ops.checkpointRunState(root,date,{runId:'0700',now:new Date('2026-09-01T10:00:00+08:00')}),{code:'LEASE_EXPIRED'});
+});
+await test('冻结后篡改内容和身份被识别', async () => {
+  const root=await fixture('freeze-hash');
+  const snapshot=await ops.freezeSteamDiscovery(root,{date,runId:'0700',now,sourceUrl:'https://store.steampowered.com/search/?specials=1',appIds:['100','101','102','103','104','105']});
+  snapshot.appIds[0]='999';
+  await writeFile(ops.operationPaths(root,date).steamDiscovery,JSON.stringify(snapshot));
+  await assert.rejects(ops.inspectSteamDiscovery(root,date),{code:'FREEZE_CHANGED'});
+  assert.equal((await ops.researchCompleteness(root,date,'game')).sections.deals.frozenDiscoveryComplete,false);
+});
+await test('旧布尔证据不能闭环；逐项证据更新与淘汰生效', async () => {
+  const root=await fixture('evidence-update');
+  await ops.appendResearchLedger(root,{...entry,evidenceComplete:true});
+  assert.equal((await ops.researchCompleteness(root,date,'minsheng')).sections.domestic.evidenceComplete,false);
+  const evidence={id:'one',decision:'accepted',url:'https://example.test/one',checkedAt:now.toISOString(),basis:'fixture',facts:{title:'one'}};
+  await ops.appendResearchLedger(root,{...entry,candidateEvidence:[evidence]});
+  assert.equal((await ops.researchCompleteness(root,date,'minsheng')).sections.domestic.evidenceComplete,true);
+  await ops.appendResearchLedger(root,{...entry,candidateIds:[],candidateEvidence:[{...evidence,decision:'rejected',basis:'stale source'}]});
+  assert.equal((await ops.researchCompleteness(root,date,'minsheng')).sections.domestic.candidateCount,0);
+});
+await test('相同 eventId 不允许改变历史内容', async () => {
+  const root=await fixture('event-conflict');
+  await ops.appendResearchLedger(root,{...entry,eventId:'fixed'});
+  const before=await readFile(ops.operationPaths(root,date).ledger);
+  await assert.rejects(ops.appendResearchLedger(root,{...entry,eventId:'fixed',candidateIds:['two']}),{code:'LEDGER_CONFLICT'});
+  assert.deepEqual(await readFile(ops.operationPaths(root,date).ledger),before);
+});
+await test('退出原因区分配置预算和真实环境边界', async () => {
+  const root=await fixture('budget');
+  await assert.rejects(ops.checkpointRunState(root,date,{runId:'0700',runStatus:'complete',exitReason:'ENVIRONMENT_LIMIT',budget:{kind:'configured',deadlineAt:now.toISOString(),basis:'25 minutes'},now}),{code:'INVALID_CHECKPOINT'});
+  const state=await ops.checkpointRunState(root,date,{runId:'0700',runStatus:'complete',exitReason:'CONFIGURED_BUDGET',budget:{kind:'configured',deadlineAt:now.toISOString(),basis:'unverified policy'},now});
+  assert.equal(state.runs[0].exitReason,'CONFIGURED_BUDGET');
+  assert.equal(state.channels.game.published,false);
+});
+await test('并发写入串行锁拒绝交错且保留成功记录', async () => {
+  const root=await fixture('concurrent');
+  const results=await Promise.allSettled([ops.appendResearchLedger(root,{...entry,eventId:'a'}),ops.appendResearchLedger(root,{...entry,eventId:'b',candidateIds:['two']})]);
+  assert(results.some(item=>item.status==='fulfilled'));
+  assert(results.filter(item=>item.status==='rejected').every(item=>item.reason.code==='STATE_BUSY'));
+  assert.equal((await ops.readResearchLedger(root,date)).length,results.filter(item=>item.status==='fulfilled').length);
+});
+
 if (failures) process.exitCode = 1;
