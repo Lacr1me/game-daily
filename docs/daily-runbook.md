@@ -1,62 +1,123 @@
 # 双频道日报运行手册
 
-本手册是两个独立 Codex 计划任务的仓库入口。事实、来源与视觉规则仍以 `$artifact-template-daily-brief`、`$artifact-template-minecraft-daily-brief` 及其 `artifact-template.json`、`references/editorial-rules.md`、`references/layout-spec.md` 为准；网页源码是唯一视觉标准，候选 JSON 是唯一文字标准。
-
-计划任务提示词只负责说明本轮角色和入口。本手册是运行规则的单一事实来源；提示词不得重复整段 Steam、发布、健康检查或失败恢复规则，以免增加上下文并产生版本漂移。
+本手册是 Springhues 日报运行流程的唯一详细来源，适用于游戏制作、民生制作、发布与补跑三个现有任务。项目 AGENTS 负责路由与核心约束；模板技能负责内容标准和渲染契约；提示词只说明角色、入口、阶段目标及必要限制。脚本能力以实际实现为准，不能通过文档虚构接口。
 
 ## 不可变约束
 
-- 时区固定为 `Asia/Shanghai`。游戏制作任务每天 05:00—10:00 每小时整点运行，民生制作任务每天 05:30—10:30 每小时半点运行，两频道错峰使用同一运行租约；发布与补跑任务每天 11:01、11:31 独立执行。`publishAt` 固定为当天 11:00，11:00 前禁止调用发布脚本。提前到05:00开始是为完整来源回退和逐项证据核验预留的硬缓冲，不得等到10:00后才开始主要检索。
-- 每次计划运行是新任务，不读取或延续旧聊天。当天续跑只读取仓库、`data/.pending/` 和 `artifacts/operations/` 中的结构化状态。
-- 禁止 OpenAI Platform API、`OPENAI_API_KEY`、`api.openai.com` 和任何付费模型 API。只使用当前 Codex 任务自带网页检索。
-- 不复制上一期，不复用旧 URL 冒充新内容；保留用户未提交和无关改动。
-- 不得仅因某个站点一次不可用就结束。来源不可用只有在实际重试两次后才是账本终态，其他来源仍须继续。
-- 电脑必须保持开机、网络可用且 ChatGPT/Codex 桌面应用持续运行。计划任务无法弥补关机、休眠或应用退出；恢复后下一次接力运行只从仓库状态续跑。
-- 每次运行只推进到下一个可验证检查点，不在任务中空等下一个钟点。游戏整点轮和民生半点轮各自只处理本频道，未完成内容由本频道下一小时续接；08:30后只按真实语义缺口推进，11:01发布失败由11:31按状态精确重试。
+- 时区固定 `Asia/Shanghai`，`publishAt` 固定当天 11:00；11:00 前禁止调用发布脚本。
+- 现有调度不变：游戏每天 05:00—10:00 每小时整点；民生每天 05:30—10:30 每小时半点；发布补跑每天 11:01、11:31。三个任务继续为本地项目的独立 cron 运行，模型、推理强度、项目、状态、通知策略不由本手册改动。
+- 每次计划运行是新任务，不回到旧聊天；同日接力读取仓库结构化状态。禁止用 heartbeat 替代或新增定时任务绕过本轮边界。
+- 禁止 OpenAI Platform API、`OPENAI_API_KEY`、`api.openai.com` 和任何付费模型 API；每日研究仅使用当前 Codex 任务自带网页检索，不调用 ImageGen 绘制正文。
+- 保留模板的数量、国内来源优先级、时效、逐项证据、所有合格 Steam 项及最近七期去重规则。不得复制上一期、伪造日期、来源或证据。
+- 保留用户未提交和无关改动、已就绪/已发布成果、冻结清单、账本和审计快照。同日写入须持租约且幂等；检查失败禁止发布受影响频道，但不禁止诊断和范围内修复。
+- 日报提交推送授权不包含外部日志等其他载荷。外发须已有对应授权并遵守环境审批；不暴露凭据、不自行变更云服务或安全配置。
+- 定时任务依赖开机、网络与 Codex 桌面应用运行；关机、休眠或应用退出造成的缺口只能在恢复后按实际状态接续。
 
-## 每次运行的启动步骤
+## 状态优先入口
 
-1. 计算北京时间日期，完整读取两个模板技能及各自三个必读文件，并读取 `config/daily-sources.json`、本手册、两个归档索引和最近七期。
-2. 以北京时间 `HHMM` 作为本次 `run-id`，先取得运行租约。制作轮使用3000秒，发布补跑轮使用1500秒：
+只读审计和规则文档修改不执行以下写入步骤，不读取当日新闻正文来模拟制作。每日实际运行按以下顺序：
+
+1. 计算北京时间日期及本轮 HHMM，确认频道和授权目标，查 Git 状态。先读本节、下一节及结构化摘要：当日 `run-state.json` 的 `stage/channels/runs`、readiness 中本频道路径/哈希、索引中当日记录与最新期号，以及发布轮所需的 health 日期、检查时间和分频道结果。文件不存在就记录不存在，不等于必须重做内容。路径均在 `artifacts/operations/YYYY-MM-DD-*`，由 `operationPaths` 定义；健康结果为 `YYYY-MM-DD-health.json`。
+2. 获取共享租约后才执行 init、reconcile、账本、候选、审计、渲染、公开 PNG、发布或健康结果保存。制作 TTL 为 3000 秒，发布补跑为 1500 秒：
 
    `node scripts/daily-run-state.mjs lease-acquire --date=YYYY-MM-DD --run-id=HHMM --ttl=3000`
 
-   返回 `acquired=false` 表示另一轮仍在运行，本轮只记录并结束，不得并发修改候选、索引或构建产物。任务的最后一步无论成功失败都执行：
-
-   `node scripts/daily-run-state.mjs lease-release --date=YYYY-MM-DD --run-id=HHMM`
-
-   每完成研究、渲染、发布或部署一个大阶段，再以相同命令和 `run-id` 续租；意外中断未释放时，租约会自动过期，下一轮可继续。
-
-3. 制作任务为本轮创建阶段目标：尽量推进研究、候选、渲染或预检到下一个检查点；不能完成时必须落盘并正常结束，不得把“本轮时间结束”写成“素材不足”。禁止用 heartbeat 替代独立计划运行。
-4. 以两个索引的“最新期号 + 1”幂等初始化状态：
+   发布轮将 ttl 改为 1500。`acquired=false` 时只报告被有效租约占用并结束；不 init、不 checkpoint、不释放别人的租约。TTL 是互斥有效期，不是允许无限工作或占用下一轮的时长；每个大阶段及长阶段中到期前以同一命令、同一 run-id 续租并检查 acquired，失败即停止写入。
+3. 幂等注册本轮：
 
    `node scripts/daily-run-state.mjs init --date=YYYY-MM-DD --run-id=HHMM --kind=main --minsheng-issue=N --game-issue=N`
 
-   11:01与11:31补跑使用 `--kind=recovery`，不得新建另一套当天状态。
+   发布补跑使用 `--kind=recovery`。仅首次创建状态确需两个 issue 时，分别读取双索引 editions 的 date/issue/file/publishAt 必要字段：无当天归档用最大期号 + 1，已有当天归档沿用当天期号。已有状态时 init 不补写 issue，省略两个参数；发现已有 issue 为空或与归档冲突须诊断，不能靠重跑 init 覆盖。
+4. 持租约执行 `node scripts/daily-run-state.mjs reconcile --date=YYYY-MM-DD`，再执行 `node scripts/daily-run-state.mjs status --date=YYYY-MM-DD`。结合真实文件判断下一步，不能仅看全局 stage。status 只返回双频道研究完整性；它没有频道 ready/published 或健康字段，不支持按频道筛选。只消费本轮相关频道输出，允许现有 reconcile 更新共享汇总，不扩展制作范围。
+5. 按状态阅读本手册所需章节和本频道模板，不预先全文读取两个模板、两个来源集合或两套七期正文。同一轮已读且未变化的资料复用；重新读取因实际改动、发现冲突或进入未读阶段触发。
 
-5. 先运行 `node scripts/daily-run-state.mjs reconcile --date=YYYY-MM-DD`，再运行 `node scripts/daily-run-state.mjs status --date=YYYY-MM-DD`。`reconcile` 按来源终态、去重候选数量、逐项证据和Steam冻结发现面计算真实缺口；后续轮次只处理 `shortfall>0`、`evidenceComplete=false`、`frozenDiscoveryComplete=false`、未就绪或未发布的频道和栏目。已就绪/已发布频道禁止重做，禁止由任务自行手写 `missingSections` 掩盖真实缺口。
+| 当前动作 | 必要补充读取 |
+| --- | --- |
+| 研究/补证据 | 本频道 SKILL.md、完整 editorial-rules.md、本频道来源注册项；按频道/缺口栏目过滤当天 ledger，游戏 deals 再读冻结清单，民生读相关审计类别 |
+| 候选校验 | 本频道内容规则（若未读）、候选、民生同日合并审计、本频道索引必要字段；优先调用现有归档检查器 |
+| 渲染/视觉修复 | 本频道 SKILL.md 渲染与 Output、layout-spec.md、相关网页源码与渲染器接口；仅图库预览或元数据任务才读 artifact-template.json/reference.png |
+| 已 ready 的核验/发布 | 本频道 readiness、关联文件哈希、校验器和本手册发布步骤；证明有效时无需重读全部编辑/布局材料或重渲染 |
+| 已归档/仅部署恢复 | 当日正式索引记录、正式内容/公开 PNG、健康结果、目标提交及 Pages 状态；不读取未使用的模板或重建候选 |
+
+最近七期规则不变：`archive-consistency.mjs <game|minsheng> <候选JSON>` 负责标题/URL 去重、期号和日期门禁。检查器内部目前会读取本频道全部归档再选择最近七期比较；不要求代理在上下文里再全文读取七期。只有失败时查看命中的条目及必要来源，不手工复刻去重规则。已归档频道不再运行“新候选发布一致性”来覆盖正式数据，改用健康检查中的归档校验。
+
+## 状态字段与完成语义
+
+以下取自 daily-run-state.mjs、daily-operations.mjs、发布和健康脚本的现有行为，不是新增枚举：
+
+| 层级 | 实际字段/值 | 使用方式 |
+| --- | --- | --- |
+| 单轮执行 | `runs[].status`：init 写 running；checkpoint 接收 `--run-status=complete\|failed` 并写 finishedAt | complete 表示正常收尾，包括到真实边界保存接力、ready 等待发布、无须重做；failed 表示本轮尚有未修复错误或硬阻塞。两者均不表示日报发布完成 |
+| 频道进度 | `channels.<channel>.status`：pending、researching、researched、ready、publishing、published；另有 issue、missingSections、published 布尔值 | reconcile 写 researching/researched；mark-ready 写 ready；发布脚本写 publishing/published。published 只证明本地发布步骤，不能代替线上证据 |
+| 全局阶段 | 初始化/协调/发布产生 research、candidate、ready、publish、published | 粗略汇总；单个发布脚本也会写全局 published，所以不能据此认定双频道已发完 |
+| 研究摘要 | `channels.<channel>.sections.<section>` 的 candidateCount、target、shortfall、missing、incomplete、evidenceComplete、frozenDiscoveryComplete | 来源终态、数量、证据、冻结分别核对；shortfall=0 仍可能缺来源或证据，且累计候选 ID 不等于最终 JSON 已通过校验 |
+| 就绪证明 | `readiness.channels.<channel>` 的 candidateSha256、htmlSha256、pngSha256、width、verifiedAt 及路径 | 核验文件存在、哈希、3840px 和本频道完整门禁后才称“频道就绪”；mark-ready 本身没有包办所有内容/归档检查 |
+| 线上健康 | health 的 healthy、degraded、warnings、reasonCodes、transport，以及 `channels.<channel>.local/live.content/png/deployment` 的 valid | 本地/线上逐项看；未传 --live 的 healthy 只有本地含义。顶层 healthy 是双频道汇总，单频道成功看它自己的 local/live.valid |
+
+不新增 waiting、blocked、done、day-complete 等状态值；CLI 虽不校验所有字符串，也不能借此创造含义。人工介入原因、下次动作、时间边界和 `DESKTOP_MIRROR_PENDING` 写在操作说明/最终结果中，不塞入频道 status。不要手写 missingSections 掩盖缺口。
+
+每批证据及时落盘，每大阶段可 checkpoint；检查点不是退出条件。正常收尾先 reconcile，再仅结束当前 run：
+
+`node scripts/daily-run-state.mjs checkpoint --date=YYYY-MM-DD --run-id=HHMM --run-status=complete`
+
+研究缺口诊断的预期非零退出不单独决定 run 失败：仍有可执行后续、仅到实际预算边界且进度已保存时用 complete。网站健康而镜像或未获授权的外部日志待补，作为独立 warning 报告。有未修复操作错误或无可执行路径的硬阻塞则用 failed，并报告证据和下一步。结束 run 时不要附带频道 status、published、missing 或全局 stage 来伪造完成。无论前序命令是否失败，都在 finally 中尝试：
+
+`node scripts/daily-run-state.mjs lease-release --date=YYYY-MM-DD --run-id=HHMM`
+
+无法落盘或释放须如实报告，不能假称接力已保存；失去租约后不再改状态。
+
+## 按状态连续推进与时间优先级
+
+时间表规定工作优先级和最晚计划目标，不是进入下一阶段的开放时间。状态满足依赖就同轮继续，不空等钟点；状态未满足则继续补缺，不因已经进入“渲染轮”跳过研究。唯一硬发布时间边界仍是 11:00。
+
+| 频道/轮次 | 优先事项与最晚计划目标 |
+| --- | --- |
+| 游戏 05:00/06:00 | 05:00 开始 Steam 发现与 features/news；06:00 优先完成 2 焦点、10 新闻 |
+| 游戏 07:00/08:00 | 整合包热度与 Mod 逐项证据；最迟 08:00 固定 Steam 发现面，之后只核验冻结 appId |
+| 游戏 09:00/10:00 | 09:00 轮争取候选生成并校验；10:00 轮完成仍缺的证据、图片、统一渲染、公开 PNG、mark-ready |
+| 民生 05:30/06:30/07:30 | 依次优先国内/国际、科技/AI/数据、真实候选与元数据补缺；已完成的栏目不重复 |
+| 民生 08:30 | 国内必查来源逐项穷尽而仍不足的栏目立即用允许的外网权威来源补精确差额；若更早满足回退条件，无须等到此时 |
+| 民生 09:30/10:30 | 09:30 轮争取候选生成并校验；10:30 轮完成缺口修正、统一渲染、公开 PNG、mark-ready |
+| 两频道 10:50 后 | 以最终校验修复和剩余硬缺口为优先，避免非必要换稿；未达标仍可补证据、重生成受影响产物，不把“冻结栏目”当成禁止修复 |
+| 发布 11:01/11:31 | 先推进已满足门禁频道的发布/部署，避免等另一频道研究；随后补明确缺口。11:31 接续当日状态中的遗留项，不重启完整生产 |
+
+删除原先 10:25—10:40 才生成候选、10:40—10:50 才渲染的第二套时段。研究门禁通过就生成候选；候选合法就校验、渲染并就绪，允许早于表中时间。09:00/09:30 候选目标错过要报告实际缺口，不能降低标准；10:00/10:30 轮不得把仍可执行的工作无故留给发布轮。
+
+继续条件：本频道有 missing/incomplete 来源、shortfall、未闭环证据、需要处理的冻结清单、未生成/未合法候选、未有效就绪产物，或发布轮仍有已授权发布/部署步骤，且有可执行的合规下一步。每完成检查点重新判断并继续。
+
+保存退出条件仅限：
+
+- 本频道已有效 ready 且本轮为制作，或 11:00 前所有目标已 ready：保存状态、释放租约，等待现有发布任务，不占着任务空等。
+- 目标已线上健康：只尝试仍欠的镜像等授权附属项；已有成果不重做。
+- 实际执行预算/工具限制或接力边界将至：开始时记录本轮预算，默认最多 25 分钟并预留最后 2 分钟收尾；若环境更早限时或下一已配置运行即将开始，采用更早边界。这是接力预算，不改变调度，也不是写完少量线索就能提前退出的理由。
+- 外部条件确实不可推进，或已逐项穷尽允许来源/回退且证据仍不足：保存真实进度和具体阻塞，禁止无效重复尝试。
+- 需额外权限、不可逆操作、未授权代码/云配置修复，或租约丢失：停止受影响写入，保留其他可独立完成的工作；说明需要人工介入的动作和原因。
+
+单个来源一次失败、一次非零检查退出、某小阶段结束或双频道聚合失败均不是整轮停止条件。11:01 可恢复项留精确接力；11:31 后仍失败应在结果中明确人工待办。权限阻塞、状态损坏或无法安全续跑可提前报告，不要求等 11:31；实际通知仍按现有任务通知策略，不另发消息、不新增监控。
 
 ## 检索并行边界
 
-- 开始新检索前先读取当天 `research-ledger.jsonl`，跳过已经有合格终态的来源，避免跨轮重复访问。
+- 开始新检索前按频道/缺口栏目读取当天 `research-ledger.jsonl`，复用已有合格终态和证据，避免跨轮重复访问同一结果；仍有缺口时可检索同一来源尚未核验的页面或允许的回退路径，不能把一次 accepted 当成该来源所有内容已经穷尽。
 - 互不依赖、只读且不需要根据上一结果改变检索方向的来源可以成组并行查询；单批最多四个搜索请求。每批结束后先按北京时间时效、权威性、重复项和字段完整性统一筛选，再进入下一批。
 - 需要语义判断、来源追踪、页面二次点击或失败重试的查询保持直接执行，不为追求并行而提前决定结论。
 - 并行只适用于网页发现和只读取证。`research-ledger.jsonl`、审计快照、候选 JSON、索引、渲染、就绪证明、发布和 Git 操作仍由持有租约的单一任务顺序写入。
-- 每个来源的结果只写一次终态；批量查询部分失败时只重试失败项，不重复已经成功的调用。所有最终采用内容都必须保留可追溯链接和检索时间。
+- 同一结果不重复记账；两次真实 unavailable 尝试分别记录，后续补核验可追加可追踪记录，不覆盖旧行。批量查询部分失败时只重试失败项，不重复已经成功的调用。所有最终采用内容都必须保留可追溯链接和检索时间。
 
 ## 检索账本与审计
 
 每完成一个来源站点或来源类别，立即记录，不得等任务末尾回忆补写：
 
-`node scripts/daily-run-state.mjs record --date=YYYY-MM-DD --run-id=HHMM --channel=minsheng --section=domestic --source=新华网 --tier=primary --status=accepted --url=https://... --available=3 --rejected=1 --reason=重复1条 --candidates=id-1|id-2`
+`node scripts/daily-run-state.mjs record --date=YYYY-MM-DD --run-id=HHMM --channel=minsheng --section=domestic --source=新华网 --tier=primary --status=accepted --url=https://... --available=2 --rejected=1 --reason=重复1条 "--candidates=id-1|id-2"`
 
 Steam 优惠的确定性发现面是 Steam 官方 Specials 默认相关性首个结果页的全部游戏卡片，加上冻结前当天国内权威优惠报道或价格历史清单中额外出现且能回到 Steam 官方商品页核验的热门史低；不是 Steam 数千项折扣总目录。05:00开始发现，最迟08:00把去重 appId 写入分次快照并执行：
 
 `node scripts/daily-run-state.mjs steam-freeze --date=YYYY-MM-DD --run-id=HHMM "--source-url=https://store.steampowered.com/search/?specials=1&cc=cn&l=schinese" "--app-ids=ID1|ID2|..." "--extra-app-ids=IDx|IDy|..."`
 
-冻结文件创建后，当天后续轮次只复核这组 appId 的国区价格、截止时间和价格历史；页面刷新出现的新排序、新卡片或数量变化不得覆盖冻结发现面。失效或不合格项从最终合格集淘汰即可，不要求追逐10:30或11:31的新动态首屏。终态记录必须使用 `--coverage-complete=true`。`steam-cn` 的 `--candidates` 写冻结发现面内全部最终合格 Steam appId，`--available` 必须与该清单数量一致；候选JSON优惠必须与清单完全相同。`steam-price-history` 的候选ID至少覆盖所有标记为新史低/平史低的 appId。网页渲染全部合格项，静态PNG（以及今后若增加的PDF）只显示排序前6项。
+冻结文件创建后，当天后续轮次只复核这组 appId 的国区价格、截止时间和价格历史；页面刷新出现的新排序、新卡片或数量变化不得覆盖冻结发现面。失效或不合格项从最终合格集淘汰即可，不要求追逐10:30或11:31的新动态首屏。Steam 覆盖核验完成的终态记录使用 `--coverage-complete=true`；只有整组冻结 appId 均有合格或淘汰依据时才可声明覆盖完整。`steam-cn` 的 `--candidates` 写冻结发现面内全部最终合格 Steam appId，`--available` 必须与该清单数量一致；候选JSON优惠必须与清单完全相同。`steam-price-history` 的候选ID至少覆盖所有标记为新史低/平史低的 appId。网页渲染全部合格项，静态PNG（以及今后若增加的PDF）只显示排序前6项。
 
-允许状态为：
+若 08:00 后仍缺冻结文件，只能从已保存的截至 08:00 的当天发现证据恢复原清单，并保留实际恢复时间；无该证据则标记游戏阻塞，不能重新抓动态首屏、冒称按时冻结或伪造时间，民生继续独立推进。
+
+账本允许状态为：
 
 - `started`：已开始但尚未完成，不能通过门禁。
 - `accepted`：完成该来源核验并取得可用候选。
@@ -78,60 +139,147 @@ Steam 优惠的确定性发现面是 Steam 官方 Specials 默认相关性首个
 
 民生国内必查来源全部取得终态但候选仍不足时，允许的回退候选分别以来源类别 `外网权威新闻／机构来源`、`外网原始科技／AI来源` 或 `境外交易所／数据服务` 写入账本，并使用 `tier=fallback`；候选JSON仍保存实际机构名和链接。可选回退类别不属于每日必查集合，国内候选已经填满时不得为它们额外检索。
 
-在判断“证据不足”或调用任一发布脚本前，必须运行：
+完整性检查是诊断入口，不要求先有完整候选或数量达标。研究中、候选生成后和发布前均可按本频道运行：
 
-`node scripts/check-research-completeness.mjs --date=YYYY-MM-DD`
+`node scripts/check-research-completeness.mjs --date=YYYY-MM-DD --channel=<game|minsheng>`
 
-命令现在同时检查来源终态、各栏目真实去重候选数、整合包/Mod逐项证据和Steam冻结状态。失败输出的 `candidateCount/target/shortfall` 是下一轮唯一缺口清单；失败表示仍是“尚未搜完”，不得报告“素材不足”。发布脚本也会再次执行同一门禁。
+检查来源终态、累计去重候选 ID 数、整合包/Mod 证据标记和 Steam 冻结文件；游戏 pending 存在时另查全量优惠覆盖。缺少游戏 pending 时脚本会跳过 dealCoverage，因此诊断通过不能替代候选、覆盖和渲染验收。失败输出的 candidateCount/target/shortfall、missing/incomplete、证据/冻结和 dealCoverage 错误共同决定下一步；保留非零退出码作为未通过证据，继续诊断、补缺或修复后重跑相关门禁，不要求双频道一起通过。只有逐项穷尽所有允许路径并有真实缺口证据，才报告“允许范围内证据仍不足”，不能把工具失败本身解释成素材不足。
 
-## 制作、渲染与发布
+## 候选、渲染与频道就绪
 
-- 游戏整点轮：05:00发现Steam并启动新闻；06:00完成features/news；07:00集中完成整合包热度和Mod逐项证据；08:00最迟冻结Steam发现面并逐项核价；09:00按 `shortfall` 补缺并生成候选；10:00禁止重建Steam发现面，只完成冻结清单复核、图片、统一渲染与预检。
-- 民生半点轮：05:30完成国内/国际；06:30完成科技/AI/数据；07:30补真实候选与元数据；08:30对已穷尽国内来源的栏目立即使用规则允许的外网权威来源补精确差额；09:30按 `shortfall` 补缺并生成候选；10:30只完成门禁修正、统一渲染与预检。每轮只要仍有允许的回退来源、`shortfall>0` 或证据未闭环，就必须继续推进，不得在几分钟内以“阶段结束”为由提前退出。
-- 10:25—10:40：从候选池生成 `data/.pending/minsheng/YYYY-MM-DD.json` 和 `data/.pending/YYYY-MM-DD.json`。民生为 10/10/10/5；游戏为 2 features、10 news、10 packs、6 mods、当天全部已核验合格 deals（至少6项、无上限）、4 trends。
-- 新游戏期次每个 pack 必须包含当天或前一天的 `heatEvidenceAt` 和可追溯的 `heatSignals`；整合包自身不要求当天发布。Mod 只有模板允许时可回退30天。
-- 10:40—10:50：分别调用两个技能的统一 `render.mjs`，使用 `--scale 2 --validate true`，HTML与PNG必须来自同一候选JSON。工作版写入 `artifacts/operations/YYYY-MM-DD-render/`，公开PNG与桌面成品按模板路径复制。
-- 10:50后冻结栏目，只修复校验错误。依次执行来源完整性、Steam冻结发现面与全量覆盖一致性、两个频道校验器、归档一致性、嵌入构建、站点测试、站点构建和构建验证。Steam 优惠可能连续多日有效，因此不套用新闻栏目的固定URL重复上限；改由当天冻结发现面、`coverageComplete` 账本、实时价格、截止时间和史低证据重新证明。
-- 通过全部预检后，必须为每个频道生成就绪证明。以下参数均使用实际绝对或仓库相对路径：
+对每个未发布频道独立执行，已有文件先验证再复用；完整性诊断可在任何阶段运行，成品和发布必须通过所有对应硬门禁。
 
-  `node scripts/daily-run-state.mjs mark-ready --date=YYYY-MM-DD --channel=minsheng --candidate=data/.pending/minsheng/YYYY-MM-DD.json --html=artifacts/operations/YYYY-MM-DD-render/YYYY-MM-DD-民生日报.html --png=artifacts/operations/YYYY-MM-DD-render/YYYY-MM-DD-民生日报.png --public-png=downloads/minsheng/YYYY-MM-DD.png`
+1. 研究及逐项证据通过后写本频道候选：民生 `data/.pending/minsheng/YYYY-MM-DD.json`，游戏 `data/.pending/YYYY-MM-DD.json`。数量、来源优先级、时效窗口和元数据完全遵守本频道 editorial-rules；民生 10/10/10/5、至少六类数据、三头条引用，游戏 2/10/10/6/全部合格优惠（至少 6）/4。不能以账本累计 ID 达标替代最终 JSON 验证。
+2. 民生先写本轮独立来源审计快照并合并，再运行本频道完整性检查、正文校验器和最近七期归档门禁；游戏候选存在时完整性检查还必须返回有效 dealCoverage。具体命令见验证映射。
+3. 用本频道技能统一渲染器：
 
-  `node scripts/daily-run-state.mjs mark-ready --date=YYYY-MM-DD --channel=game --candidate=data/.pending/YYYY-MM-DD.json --html=artifacts/operations/YYYY-MM-DD-render/YYYY-MM-DD-游戏简报.html --png=artifacts/operations/YYYY-MM-DD-render/YYYY-MM-DD-游戏简报.png --public-png=downloads/game/YYYY-MM-DD.png`
+   `node <skill-directory>/scripts/render.mjs --project-root <repo> --brief <候选JSON> --html-out <HTML> --png-out <PNG> --scale 2 --validate true`
 
-  就绪证明记录候选、HTML和PNG哈希；发布脚本会重新计算并拒绝任何就绪后改动、缺失或非3840px的PNG。
-- 11:00后两个频道独立调用 `publish-minsheng.mjs` 与 `publish-brief.mjs`。成功一个就保留一个，失败频道继续展示上一期。
-- 发布后重建、测试、提交并推送 `main`，等待 Pages，再运行 `node scripts/check-daily-health.mjs --live=https://springhues.com --save`，将完整结果保存为当天 `health.json`。
-- 保存健康检查或完成11:31补跑后，运行 `node scripts/sync-admin-logs.mjs --kind=maintenance --date=YYYY-MM-DD --push`。同步失败只保留 warning 和本地 operation 文件，不得回滚已发布日报；下一轮以同一命令幂等补传。
-- 公开 `downloads/` PNG、站点发布和线上健康是发送成功的硬门禁。桌面历史镜像仍须尝试且不得覆盖旧文件；若仅因无人值守权限导致桌面镜像失败，在操作记录中标记 `DESKTOP_MIRROR_PENDING`，不撤销已验证的网站发布，由11:31再次补拷贝。
+   工作产物写 `artifacts/operations/YYYY-MM-DD-render/`。HTML 和 PNG 必须来自同一个候选 JSON；渲染器使用真实网页并检查桌面/移动快照一致性。只改一个频道时只渲染该频道；共享视觉变更才渲染两个频道。
+4. 用 `view_image` 原始精度检查本频道最终 PNG，确认准确宽 3840px、无缺字/裁切/溢出、图片和日期链接正确。公开 PNG 复制到 `downloads/<channel>/YYYY-MM-DD.png`，与渲染 PNG 哈希一致。游戏网页和可编辑 HTML 保留全部合格 Steam 项，静态 PNG 只显示排序前 6 项。
+5. 完成本频道预检后创建就绪证明（使用实际路径）：
 
-## 11:01与11:31决策顺序
+   `node scripts/daily-run-state.mjs mark-ready --date=YYYY-MM-DD --channel=minsheng --candidate=data/.pending/minsheng/YYYY-MM-DD.json --html=artifacts/operations/YYYY-MM-DD-render/YYYY-MM-DD-民生日报.html --png=artifacts/operations/YYYY-MM-DD-render/YYYY-MM-DD-民生日报.png --public-png=downloads/minsheng/YYYY-MM-DD.png`
 
-1. 读取健康检查的 `healthy`、`degraded`、`warnings`、`reasonCodes`、`transport` 和每频道 `content/png/deployment`。
-2. 今日双频道全部健康：只记录结果并补做尚未完成的桌面镜像，不重做内容、不发布、不触发Pages。
-3. 本地正式内容与PNG健康、仅线上部署失败：只处理部署，不重新生成内容。
-4. 正式内容缺失但pending合法：继续渲染、复制PNG、校验和发布。
-5. 语义门禁显示研究未完成：只补 `shortfall`、未闭环证据或未完成的冻结清单价格核验；沿用当天账本和08:30前冻结的Steam发现面，不覆盖此前审计快照，不得重新扫描动态Steam首屏。11:31只处理11:01留下的明确失败项。
-6. TLS证书异常且同域HTTP只读复核完整：视为 `healthy=true, degraded=true`，只报告TLS待修复。
-7. 只有来源完整性门禁通过后仍缺素材、频道内容无效、PNG无效、归档门禁失败或Pages明确失败，才按失败处理并通知人工。
+   `node scripts/daily-run-state.mjs mark-ready --date=YYYY-MM-DD --channel=game --candidate=data/.pending/YYYY-MM-DD.json --html=artifacts/operations/YYYY-MM-DD-render/YYYY-MM-DD-游戏简报.html --png=artifacts/operations/YYYY-MM-DD-render/YYYY-MM-DD-游戏简报.png --public-png=downloads/game/YYYY-MM-DD.png`
 
-每次完成阶段后用 `daily-run-state.mjs checkpoint` 更新 `stage`、频道状态和缺失栏目。所有同日操作必须幂等，已发布频道不得覆盖。
+   每次只执行相关频道命令。readiness 绑定候选/HTML/渲染 PNG/公开 PNG 哈希；发布脚本重新检查。候选或产物改变后旧证明失效，必须重跑受影响校验、同源渲染和 mark-ready；不能修改哈希绕过检查。
+6. 桌面镜像按模板的月份目录复制 HTML、PNG 和兄弟资源目录，只处理本日期。目标已存在且内容一致就复用；内容不一致不覆盖已有历史，记录冲突。目录权限导致镜像失败时记录 `DESKTOP_MIRROR_PENDING`，不撤销有效 readiness；发布补跑只重试缺失拷贝。此标记属于操作说明，不是状态脚本枚举。
+
+已 ready 再次进入：reconcile 会跳过它，因此另检查 readiness 文件和实际哈希、必要内容门禁。有效则保留；无效则只修复该频道的实际错误，在产物变更后重新就绪。不得对已 published 频道调用 mark-ready（它会写 published=false）或重建候选。
+
+## 发布与精确恢复
+
+以下仅适用于已获授权的正式发布任务，规则修改或只读审计不得执行。
+
+1. 发布轮读现有健康结果以定位问题，但旧检查不能证明本轮线上状态；需要确认时运行：
+
+   `node scripts/check-daily-health.mjs --date=YYYY-MM-DD --live=https://springhues.com --save`
+
+   保存须持租约。读取顶层和各频道 local/live 的 content/png/deployment；未归档频道的 CONTENT_MISSING 是待推进事实，不能让非零退出中止另一 ready 频道。
+2. 先处理已 ready、尚未发布的频道：独立复核本频道完整性、正文、归档、覆盖（游戏）、readiness 和时间门禁，11:00 后调用对应 `node scripts/publish-minsheng.mjs` 或 `node scripts/publish-brief.mjs`。一个频道失败不阻止另一个满足门禁的频道先发布；不要用双频道完整性命令作单频道前置条件。
+3. 候选合法但未 ready：补本频道渲染、公开 PNG、预检和 mark-ready，然后发布。研究仍缺：仅补真实缺口和证据，沿用当天账本、审计快照与冻结 Steam appId；在本轮预算内依次推进候选至健康，不人为停在某检查点。
+4. 已正式归档：先核验当日索引/正文/公开 PNG，禁止重复发布。只有本地正式文件有效、线上部署失败时，仅检查已有目标提交、推送是否到达和 Pages 执行状态，修复部署并复核线上；不重搜、不重生成 JSON/PNG、不重跑发布脚本。已有部署还在运行时等待有界进展，不能反复触发。重试同一部署需已有授权，涉及额外配置/代码的修复按范围判断。
+5. 新归档后按“正式发布验证链”重建、测试和构建验证；仅提交本次发布涉及的文件，确认无无关已暂存内容，再按已有授权推送 origin/main。等待目标提交的 Pages 工作流成功并运行新鲜线上健康检查。另一频道仍显示上一期可正常构建部署；全局健康尚不通过时仅报告已成功频道。
+6. 发布脚本意外中断、出现 publishing/正式正文存在但索引缺失等状态时，先只读核对各文件与证明。当前脚本不是可恢复事务，禁止盲目重复发布、手改索引或重新生成内容掩盖冲突；记录接口缺口并请求范围明确的修复任务，继续另一不受影响频道。
+7. TLS 异常只有健康脚本确认同域 HTTP 只读复核完整、返回 `healthy=true, degraded=true` 且警告仅为已定义的 TLS 证书问题时才允许降级成功；明确报告 TLS 待修复。普通请求失败不得自行绕过证书校验或判定健康。
+8. 保存健康检查或完成 11:31 补跑后，外部管理员日志仅在已有该载荷外发授权且环境允许时调用 `node scripts/sync-admin-logs.mjs --kind=maintenance --date=YYYY-MM-DD --push`。未授权、失败或被审批阻止只记录 warning/待办，保留本地 operation 证据，之后在获准范围内幂等补传；不回滚已健康日报。
+9. 最后按“状态字段与完成语义”结束当前 run 并释放租约。结果分别报告本轮执行、各频道研究缺口/证据、候选、ready、本地归档、Pages、线上 PNG/健康、TLS、镜像及外发待办。研究轮结束不能写成已发送，失败频道保留上一期有效内容。
 
 ## 发送成功判定
 
-同时满足以下条件才报告“每日发送成功”：
+“本轮正常结束”“某频道就绪”“某频道本地已归档”分别按相应证据报告；“当天双频道发送成功”必须同时满足：
 
-1. 两个索引和正文均为当天、期号连续且 `publishAt` 为当天11:00。
-2. 两频道发布脚本分别成功，构建与Pages工作流成功。
-3. 线上门户、两频道最新期、至少一个历史期均返回200，页面日期、归档值和下载文件名一致。
-4. 两个当天PNG实际请求成功、`Content-Type=image/png`、非空且宽度3840px。
-5. `check-daily-health` 为 `healthy=true`；只允许规则定义的TLS证书问题表现为 `degraded=true`。
+1. 两个索引和正式正文均为当天，期号连续，publishAt 为当天 11:00，页面日期、归档和下载文件名一致。
+2. 两频道本地发布证据完整，readiness 所对应内容/公开 PNG 一致；构建验证及包含目标提交的 Pages 工作流成功。
+3. 线上门户、两个频道的当天页面及至少一个历史期均可读取有效内容（不仅 HTTP 200）；日期深链接和下载链接正确。
+4. 两个当天 PNG 实际请求成功，Content-Type 为 image/png、非空、宽 3840px；核对线上 JSON 与本地正式 JSON、线上 PNG 与 readiness/公开 PNG 的内容或哈希一致。
+5. 带正确 date 和 --live 的新鲜 `check-daily-health` 返回 healthy=true；仅允许上一节定义的 TLS 降级。
+6. 本轮检查点与租约收尾完成。桌面历史镜像仍须尝试，失败单独列为待补；不会改变网站已健康的结论。外部日志失败同样独立报告。
 
-任何一项未满足都保留上一期有效内容，并在11:31精确重试；11:31后仍失败才通知人工，不得伪造成功。
+健康脚本未包办第 2—4 项所有验证，见“接口缺口”。一频道 local/live.valid 全通过且部署证据完整时可报告“该频道已发布并线上验证”，但另一频道缺失造成顶层 healthy=false 时，不得报告“双频道发送成功”。11:31 后仍有发布失败则列明人工待办；不能回滚另一成功频道，也不能把研究预算结束说成发布成功。
+
+## 验证映射
+
+本表是 AGENTS 与手册共用的唯一验证清单。按改动的实际影响选择；同一输入的检查已通过且未再改变时不重复，失败只重跑相关项。下列命令中的日期/频道/路径使用真实值，不运行占位符命令。
+
+| 任务类型 | 必须执行的验证 | 范围与产物边界 |
+| --- | --- | --- |
+| 只读审计 | 核对相关文件/接口/结构化证据，报告已确认与未验证 | 不 init/reconcile，不写账本/候选；不为审计触发检索、渲染、构建或发布；status/完整性诊断可只读按需运行 |
+| 文档、技能说明、提示词修改 | 差异/引用/命令字段检查，验收情景走查，git diff --check；技能 frontmatter 验证；自动化用工具更新并 view 读回，核对其余配置未变 | 不生成日报，不运行站点测试/构建/渲染来“验证文字”，不触发任务；仅提交获准项目文档 |
+| 单频道正文制作/候选修复 | 本频道完整性诊断转硬门禁、正文校验、七期归档检查、游戏覆盖或民生审计、统一渲染、3840px 原图检查、公开哈希与 mark-ready | 只处理该频道；没有完整候选时可先诊断，不能以预检通过替代成品检查 |
+| 单频道视觉修改 | 下述代码基础链 + 该频道渲染器、3840px 元数据/原图检查及桌面/移动快照比较 | 使用已核验输入，不因此检索当天新闻或制作另一频道；既有 ready 产物受影响时须重新证明 |
+| 共享代码/样式/流程脚本修改 | 代码基础链 + 按模块追加测试；共享视觉/渲染行为影响双频道时两份统一渲染及原图检查 | 普通非视觉共享改动不强制浏览器/PNG；保护历史和另一频道产物 |
+| 正式发布/部署恢复 | 发布频道全部内容与 readiness 门禁 + 正式发布验证链 + Pages 目标提交 + 新鲜线上健康与发送成功判定 | 缺另一频道当日内容不是该频道前置失败；仅部署故障复用已通过且未变化的内容/产物证明 |
+
+代码基础链（普通代码修改，含单频道视觉修改）：
+
+```powershell
+node scripts/test-site.mjs
+node scripts/test-daily-operations.mjs
+node scripts/build-site.mjs
+node scripts/verify-build.mjs
+```
+
+模块追加：留言/审核/Supabase 用 `node scripts/test-messages.mjs`；管理员日志用 `node scripts/test-admin-logs.mjs`；离线编辑器另用 `node scripts/test-offline-homepage-editor.mjs`。独立离线编辑器仅修改其独立文件时可只跑独立测试，触及共享站点再加基础链。
+
+频道内容门禁：
+
+```powershell
+node scripts/check-research-completeness.mjs --date=YYYY-MM-DD --channel=minsheng
+node scripts/validate-minsheng.mjs data/.pending/minsheng/YYYY-MM-DD.json artifacts/operations/YYYY-MM-DD-source-audit.json
+node scripts/archive-consistency.mjs minsheng data/.pending/minsheng/YYYY-MM-DD.json
+```
+
+```powershell
+node scripts/check-research-completeness.mjs --date=YYYY-MM-DD --channel=game
+node scripts/validate-game.mjs data/.pending/YYYY-MM-DD.json
+node scripts/archive-consistency.mjs game data/.pending/YYYY-MM-DD.json
+```
+
+正式发布验证链与现有 Pages 工作流保持一致（待发布频道预检和归档后构建按依赖执行，不能用旧构建证明新归档）：
+
+```powershell
+node scripts/build-embedded.mjs
+node scripts/test-daily-operations.mjs
+node scripts/test-site.mjs
+node scripts/test-messages.mjs
+node scripts/test-admin-logs.mjs
+node scripts/build-site.mjs
+node scripts/verify-build.mjs
+git diff --check
+```
+
+既有测试失败也须保留真实错误并判断影响，不删测试、不降低门禁、不提交无关修复；超过本次授权的代码问题另立任务。
+
+## 验收情景决策表
+
+本表为文档规则与现有接口的静态走查，不等于执行当天生产或验证线上状态。
+
+| 情景 | 应执行 | 退出/成功口径 |
+| --- | --- | --- |
+| 已就绪频道再次进入 | 读 ready 与证明，核对关联文件及必要门禁；有效即复用，损坏只修相关项 | 制作轮正常结束；发布轮到时发布。不得因为 reconcile 跳过 ready 就认定证明仍有效 |
+| 单频道仍有缺口 | 按 missing/incomplete/shortfall/证据补本频道，其他已完成栏目复用；允许的来源继续 | 到真实预算边界保存接力，或范围穷尽后列硬阻塞；不得称频道/发布完成 |
+| 检查失败但可修复 | 保留错误，定位、修复、重跑受影响检查，再推进下阶段 | 非零退出仅禁止当前未达标发布，不自动结束整轮 |
+| 11:00 前全部就绪 | 核验并保存证明，checkpoint 当前 run、释放租约 | 本轮 complete、频道 ready；等待已有发布任务，不发布、不空等 |
+| 仅线上部署失败 | 复用本地正式内容/PNG，检查目标提交/Pages，修复部署后线上复核 | 本地 published 不等于发送成功；未修复则 failed 并交接部署项 |
+| 一个频道成功、另一个失败 | 保留成功频道，先部署已满足门禁的成果，只补失败频道 | 分频道报告；顶层 healthy=false 时不声称双频道成功，不回滚成功频道 |
+| 桌面镜像失败但网站健康 | 记录 DESKTOP_MIRROR_PENDING，保留 readiness/健康证据，后续只补拷贝 | 网站可以健康成功；明确镜像待补，不重做内容或触发 Pages |
+
+## 现有接口缺口与另立代码任务
+
+本次流程修订不修改脚本。以下限制通过明确的额外核对和边界处理，不假装脚本已支持：
+
+- **状态汇总与阶段恢复**：status 仅研究输出且不能筛频道；reconcile 修改共享状态、跳过 ready/published，不验证文件哈希或恢复真实归档；init 已有状态不补 issue。checkpoint 未校验状态枚举且没有退出原因/镜像待办专用字段。需要另立受控状态/恢复接口任务，当前以文件证据和操作说明补足。
+- **研究证据强度**：candidateCount 和 evidenceComplete 累积历史 accepted ID/布尔标记，不能撤销已淘汰 ID，也不核验逐项事实；frozenDiscoveryComplete 仅检查文件存在，冻结 CLI 不强制 08:00 截止；Steam 全量覆盖依赖最后账本合格清单，不能证明每个淘汰项均已核验。保留原始取证、逐项核验和最终校验要求，不能把摘要当事实证明。
+- **readiness 不是全部门禁**：mark-ready 校验指定文件、PNG、部分 HTML 和游戏覆盖，不执行全部研究/正文/审计/归档或视觉验证；须由本手册前置门禁补足。可另立集中预检接口任务。
+- **发布中断恢复**：发布先 rename 正文再更新索引/嵌入/状态，并非跨文件事务；中断后没有安全的一键恢复接口。半发布需独立修复任务，不靠重跑或手改索引绕过保护。
+- **线上成功证据**：check-daily-health 没有频道参数，healthy 是双频道汇总；部署组件仅检查页面 HTTP，未核对 Pages 工作流提交、页面实际渲染日期、历史期页面交互或本地/线上 JSON/PNG 哈希一致。正式成功前单独补读验证；可另立健康证据增强任务。
+- **历史读取与时间元数据**：归档 CLI/发布脚本读取全部历史再取七期；test-site 仍固定断言索引 generateAt=09:30，该字段不是实际 cron 调度或阶段准入开关。本次不改索引/测试；需要时另立按七期读取和时间元数据清理任务。
 
 ## 本地性能与产物维护
 
-- `artifacts/operations/` 是当天接力状态和就绪证明的一部分，任何自动清理都不得删除当前日期或尚未发布日期的内容。
-- 普通修改使用快速验证链路：`node scripts/test-site.mjs`、`node scripts/test-daily-operations.mjs`、`node scripts/build-site.mjs`。只有日报制作或视觉变更才运行网页检索、浏览器渲染和 3840px PNG 检查。
-- `powershell -NoProfile -File scripts/perf-check.ps1 -RunChecks` 输出工作区规模、Git 状态耗时及三条快速验证的基准数据。
-- `powershell -NoProfile -File scripts/local-maintenance.ps1 -MinimumAgeDays 14` 默认只预览可归档的非运行产物；必须显式增加 `-Archive` 才会复制、逐文件校验并移出工作区。旧 `artifacts/operations/YYYY-MM-DD-render/` 还必须显式增加 `-ArchiveOperationRenders`，操作状态 JSON 始终留在仓库工作区。
-- 维护脚本不得自动运行，不得添加杀毒软件排除项，也不得处理 `.git/`、`downloads/`、`data/.pending/` 或 `artifacts/operations/` 中的非渲染状态文件。
+- artifacts/operations 是接力和证明的一部分，自动清理不得删除当前日期或尚未完成运行的内容。维护不自动触发。
+- 验证范围只按上表选择；`scripts/perf-check.ps1 -RunChecks` 仅为显式性能任务的基准工具，不能代替应有的 verify-build。
+- `powershell -NoProfile -File scripts/local-maintenance.ps1 -MinimumAgeDays 14` 默认预览；只有明确授权并显式加 -Archive 才可复制、逐文件核验并移出。旧 operation 渲染归档另需 -ArchiveOperationRenders，运行状态 JSON 始终保留。
+- 维护不得添加杀毒排除，不处理 .git、downloads、data/.pending 或 operations 内非渲染状态文件。
