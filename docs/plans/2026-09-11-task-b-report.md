@@ -1,6 +1,6 @@
 # B 状态与证据接口交接
 
-接口版本：`state-evidence/v1`。当前阶段：接口约定，尚未实现；实现提交及测试结果完成后补充。工作树：`F:/Codex-App/日报设计/.worktrees/task-b-state-evidence`，分支 `codex/2026-09-11-task-b-state-evidence`，基线 `6b34e7a`。
+接口版本：`state-evidence/v1`。当前阶段：首版接口已实现，7 个缺陷回归、双频道 20 项预检/恢复检查和既有运行测试通过；手册、额外一致性检查及 C 集成仍在推进。工作树：`F:/Codex-App/日报设计/.worktrees/task-b-state-evidence`，分支 `codex/2026-09-11-task-b-state-evidence`，基线 `6b34e7a`。草案提交 `ebcf6eb` 的标题时间为人工命名标签，真实提交时间以 Git 元数据为准。
 
 ## C 可先使用的约定
 
@@ -26,4 +26,16 @@ await updatePublicationState(root, {
 
 ## 验证和交付记录
 
-待实现。未操作当天状态、生产租约、候选、部署、调度或外部日志；未修改 C 的文件。
+2026-09-11 首版验证：`node scripts/test-state-evidence.mjs`（修复前 7 失败，修复后 7 通过）、`node scripts/test-daily-preflight.mjs`（20 项通过）、`node scripts/test-daily-operations.mjs`（通过）。所有夹具默认保留，未操作当天状态、生产租约、候选、部署、调度或外部日志；未修改 C 的文件。
+
+## 可复用隔离夹具与证据形状
+
+`scripts/state-evidence-fixtures.mjs` 的 `makeReadyFixture(base, channel, projectRoot=process.cwd())` 返回 `{root,date,channel,now,runId,candidate,html,png,publicPng,renderEvidence,visualEvidence,candidateSha256,pngSha256,brief}`，只在传入的独立 base 内建立 2026-09-10 模拟状态。然后调用 `createReadyProof(f.root, f)`。所有来源、渲染及视觉记录是明确标注的测试替身，不能移作生产验收。
+
+`candidateEvidence` 数组元素为 `{id,decision:'accepted'|'rejected',url,checkedAt,basis,facts}`；接受项须有非空 facts，淘汰须有 basis；HTTPS URL 与同日 checkedAt 必须存在。最终正文 ID/URL/kind/name/title（Steam appId）须能匹配当前有效集合。`revokedCandidateIds` 配 reasons 可撤销；重复 eventId 幂等，复用 eventId 却改变内容拒绝。旧 accepted ID 仍可读数量，但无逐项证据不能完成；程序不代替事实来源核验。
+
+渲染记录文件放当天 render 目录：`{date,channel,renderer:'render.mjs',scale:2,validate:true,checkedAt,candidateSha256,htmlSha256,pngSha256}`。视觉记录文件同目录：`{date,channel,method:'view_image',result:'pass',inspector,inspectedAt,pngSha256,findings:[]}`。只在实际统一渲染和原图检查后记录，不能由 PNG 尺寸推断。mark-ready 新增 `--render-evidence`、`--visual-evidence`、`--run-id`。readiness 还绑定本频道账本、审计/冻结、七期归档及两份记录的哈希；任一相关依赖变化使证明失效。
+
+`queryRunState(...).channels[channel].publication` 是发布进度位置；update 返回 `{apiVersion,unchanged,publication,state}`。读取线上证据同时考虑默认双频道和分频道 health 文件，选最新对应频道记录，要求 15 分钟内 JSON/PNG 哈希及 page/deployment 有效。
+
+兼容限制：旧写入调用省略 runId 时仍要求已有唯一有效租约；新的 C 调用显式 runId。旧 readiness 缺预检/视觉证明会失效，须补真实证据，不能通过迁移脚本自动认定就绪。`now` 仅供 JS 隔离测试，CLI 无时钟覆盖。冻结迟到或损坏一律保留、拒绝自动重扫/改时间；从原始证据重建冻结属于需另行核验的恢复动作。

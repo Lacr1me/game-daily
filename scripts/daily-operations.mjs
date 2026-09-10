@@ -1,5 +1,5 @@
-import { createHash } from "node:crypto";
-import { appendFile, mkdir, open, readFile, readdir, unlink, writeFile } from "node:fs/promises";
+import { createHash, randomUUID } from "node:crypto";
+import { appendFile, mkdir, open, readFile, readdir, rename, unlink, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { GAME_DEAL_COVERAGE_EFFECTIVE_DATE, beijingDate, steamAppIdFromUrl } from "./game-lib.mjs";
 import { SOURCE_REGISTRY, allowedSourceIds, canonicalSourceId, canonicalSourceLabel, channelSections, requiredSourceIds } from "./source-registry.mjs";
@@ -26,7 +26,7 @@ export function operationPaths(root, date) {
   };
 }
 
-export async function freezeSteamDiscovery(root, options = {}) {
+async function freezeSteamDiscoveryUnlocked(root, options = {}) {
   const date = options.date || beijingDate();
   const runId = requiredText(options.runId, "runId");
   const paths = operationPaths(root, date);
@@ -42,7 +42,7 @@ export async function freezeSteamDiscovery(root, options = {}) {
     schemaVersion: 1,
     date,
     runId,
-    frozenAt: options.frozenAt || new Date().toISOString(),
+    frozenAt: clockNow(options).toISOString(),
     sourceUrl,
     appIds: [...appIds],
     extraAppIds: [...extraAppIds],
@@ -52,12 +52,14 @@ export async function freezeSteamDiscovery(root, options = {}) {
   await mkdir(paths.directory, { recursive: true });
   const existing = await readJsonIfExists(paths.steamDiscovery);
   if (existing) {
-    assertValidSteamDiscovery(existing, date);
+    await inspectSteamDiscovery(root, date);
     if (!sameSet(new Set([...existing.appIds, ...(existing.extraAppIds || [])]), allIds)) {
       throw new Error(`${date} Steam发现面已经冻结，禁止用刷新后的动态列表覆盖`);
     }
     return existing;
   }
+  if (options.frozenAt && options.frozenAt !== snapshot.frozenAt) throw operationError('FREEZE_LATE', '不能覆盖实际冻结时间；迟到恢复需要另行核验已保存发现证据');
+  assertValidSteamDiscovery(snapshot, date);
   await writeJson(paths.steamDiscovery, snapshot);
   const state = await readJsonIfExists(paths.state);
   if (state) {
@@ -74,14 +76,14 @@ export async function freezeSteamDiscovery(root, options = {}) {
   return snapshot;
 }
 
-export async function acquireRunLease(root, options = {}) {
+async function acquireRunLeaseUnlocked(root, options = {}) {
   const date = options.date || beijingDate();
   const runId = requiredText(options.runId, "runId");
   const ttlSeconds = Number(options.ttlSeconds ?? 3300);
   if (!Number.isInteger(ttlSeconds) || ttlSeconds < 60 || ttlSeconds > 7200) throw new Error("租约时长必须为60—7200秒");
   const paths = operationPaths(root, date);
   await mkdir(paths.directory, { recursive: true });
-  const now = Date.now();
+  const now = clockNow(options).getTime();
   const lease = {
     schemaVersion: 1,
     date,
@@ -113,23 +115,28 @@ export async function acquireRunLease(root, options = {}) {
   return { acquired: false, reason: "lease-race" };
 }
 
-export async function releaseRunLease(root, options = {}) {
+async function releaseRunLeaseUnlocked(root, options = {}) {
   const date = options.date || beijingDate();
   const runId = requiredText(options.runId, "runId");
   const paths = operationPaths(root, date);
   const existing = await readLeaseIfExists(paths.lease);
   if (!existing) return { released: false, reason: "missing" };
-  if (existing.runId !== runId && Date.parse(existing.expiresAt) > Date.now()) {
+  if (existing.runId !== runId && Date.parse(existing.expiresAt) > clockNow(options).getTime()) {
     throw new Error(`运行 ${runId} 不能释放 ${existing.runId} 的有效租约`);
   }
   await unlink(paths.lease).catch((error) => { if (error.code !== "ENOENT") throw error; });
   return { released: true, lease: existing };
 }
 
-export async function createReadyProof(root, options = {}) {
+async function createReadyProofUnlocked(root, options = {}) {
   const date = options.date || beijingDate();
   const channel = requiredChannel(options.channel);
   const paths = operationPaths(root, date);
+  const initialState = await readJsonIfExists(paths.state);
+  if (!initialState || initialState.date !== date) throw operationError('STATE_CONFLICT', 'mark-ready 需要同日已初始化状态');
+  if (initialState.channels?.[channel]?.published || ['publishing', 'published'].includes(initialState.channels?.[channel]?.status)) throw operationError('STATE_CONFLICT', '已发布或发布中的频道不能重新 mark-ready');
+  const { assertChannelPreflight } = await import('./daily-preflight.mjs');
+  const preflight = await assertChannelPreflight(root, { ...options, date, channel, requireReady: false });
   const expected = expectedArtifactPaths(root, date, channel);
   const candidate = requireExactPath(options.candidate, expected.candidate, "候选JSON");
   const publicPng = requireExactPath(options.publicPng, expected.publicPng, "公开PNG");
@@ -153,6 +160,9 @@ export async function createReadyProof(root, options = {}) {
   const readiness = await readJsonIfExists(paths.readiness) || { schemaVersion: 1, date, channels: {} };
   if (readiness.date !== date) throw new Error(`就绪证明日期 ${readiness.date} 与 ${date} 不一致`);
   readiness.channels[channel] = {
+    apiVersion: STATE_EVIDENCE_API_VERSION,
+    issue: brief.issue,
+    preflight,
     candidate: path.relative(root, candidate).replaceAll("\\", "/"),
     candidateSha256: sha256(candidateBuffer),
     html: path.relative(root, html).replaceAll("\\", "/"),
@@ -162,23 +172,29 @@ export async function createReadyProof(root, options = {}) {
     pngSha256: renderPngSha256,
     width: 3840,
     ...(dealCoverage ? { dealCoverage } : {}),
-    verifiedAt: new Date().toISOString()
+    verifiedAt: clockNow(options).toISOString()
   };
   await writeJson(paths.readiness, readiness);
-  await checkpointRunState(root, date, { stage: "ready", channel, status: "ready", published: false, missingSections: [] });
+  await checkpointRunStateUnlocked(root, date, { channel, status: "ready", published: false, missingSections: [], now: options.now });
   return readiness.channels[channel];
 }
 
-export async function assertReadyProof(root, date, channel) {
+export async function assertReadyProof(root, date, channel, options = {}) {
+  const { assertChannelPreflight } = await import('./daily-preflight.mjs');
+  const result = await assertChannelPreflight(root, { ...options, date, channel, requireReady: true });
+  return result.proof;
+}
+
+export async function inspectReadyArtifacts(root, date, channel, options = {}) {
   requiredChannel(channel);
   const paths = operationPaths(root, date);
   const [state, readiness] = await Promise.all([readJsonIfExists(paths.state), readJsonIfExists(paths.readiness)]);
-  if (state?.channels?.[channel]?.status !== "ready") throw new Error(`${date} ${channel} 尚未标记为ready，拒绝发布`);
   const proof = readiness?.channels?.[channel];
-  if (!proof) throw new Error(`${date} ${channel} 缺少就绪证明，拒绝发布`);
+  if (!proof || readiness.date !== date) throw operationError('PROOF_MISSING', `${date} ${channel} 缺少同日就绪证明`);
+  if (proof.apiVersion !== STATE_EVIDENCE_API_VERSION || !proof.preflight?.ok) throw operationError('PROOF_MISSING', '旧证明缺少集中预检及视觉证据，不能自动升级');
   const expected = expectedArtifactPaths(root, date, channel);
   const files = {
-    candidate: requireExactPath(path.resolve(root, proof.candidate), expected.candidate, "候选JSON"),
+    candidate: requireExactPath(path.resolve(root, options.candidate || proof.candidate), options.recovery ? archiveContentPath(root, date, channel) : expected.candidate, "候选JSON"),
     publicPng: requireExactPath(path.resolve(root, proof.publicPng), expected.publicPng, "公开PNG"),
     html: requireInsidePath(path.resolve(root, proof.html), path.resolve(root, "artifacts", "operations", `${date}-render`), "渲染HTML"),
     renderPng: requireInsidePath(path.resolve(root, proof.renderPng), path.resolve(root, "artifacts", "operations", `${date}-render`), "渲染PNG")
@@ -187,20 +203,20 @@ export async function assertReadyProof(root, date, channel) {
     readFile(files.candidate), readFile(files.html), readFile(files.renderPng), readFile(files.publicPng)
   ]);
   const brief = JSON.parse(candidateBuffer.toString("utf8"));
-  if (channel === "game") await assertGameDealCoverage(root, date, brief);
+  if (brief.date !== date || brief.issue !== proof.issue || (state?.channels?.[channel]?.issue != null && state.channels[channel].issue !== brief.issue)) throw operationError('STATE_CONFLICT', '正文日期/期号与证明或状态冲突');
   validatePng3840(renderPngBuffer, "渲染PNG");
   validatePng3840(publicPngBuffer, "公开PNG");
-  if (sha256(candidateBuffer) !== proof.candidateSha256 || sha256(htmlBuffer) !== proof.htmlSha256) throw new Error(`${channel}候选或HTML在就绪后被修改`);
-  if (sha256(renderPngBuffer) !== proof.pngSha256 || sha256(publicPngBuffer) !== proof.pngSha256) throw new Error(`${channel}PNG在就绪后被修改`);
+  if (sha256(candidateBuffer) !== proof.candidateSha256 || sha256(htmlBuffer) !== proof.htmlSha256) throw operationError('PROOF_CHANGED', `${channel}候选或HTML在就绪后被修改`);
+  if (sha256(renderPngBuffer) !== proof.pngSha256 || sha256(publicPngBuffer) !== proof.pngSha256) throw operationError('PROOF_CHANGED', `${channel}PNG在就绪后被修改`);
   return proof;
 }
 
-export async function initializeRunState(root, options = {}) {
+async function initializeRunStateUnlocked(root, options = {}) {
   const date = options.date || beijingDate();
   const paths = operationPaths(root, date);
   await mkdir(paths.directory, { recursive: true });
   const existing = await readJsonIfExists(paths.state);
-  const now = new Date().toISOString();
+  const now = clockNow(options).toISOString();
   const runId = options.runId || `${date}-${now.slice(11, 16).replace(":", "")}-${options.kind || "main"}`;
   const state = existing || {
     schemaVersion: 1,
@@ -214,6 +230,7 @@ export async function initializeRunState(root, options = {}) {
     runs: []
   };
   if (state.date !== date) throw new Error(`运行状态日期 ${state.date} 与 ${date} 不一致`);
+  state.runs ??= [];
   if (!state.runs.some((run) => run.id === runId)) {
     state.runs.push({ id: runId, kind: options.kind || "main", startedAt: now, status: "running" });
   }
@@ -222,31 +239,43 @@ export async function initializeRunState(root, options = {}) {
   return state;
 }
 
-export async function checkpointRunState(root, date, update = {}) {
+async function checkpointRunStateUnlocked(root, date, update = {}) {
   const paths = operationPaths(root, date);
   const state = await readJsonIfExists(paths.state);
   if (!state) throw new Error(`${date} 运行状态不存在，请先执行 init`);
+  if (state.date !== date) throw operationError('STATE_CONFLICT', '状态日期冲突');
+  validateCheckpoint(update);
+  if (update.status === 'ready') await assertReadyProof(root, date, update.channel, { now: update.now });
+  if (update.status === 'published' || update.published === true) {
+    const archived = await inspectLocalArchive(root, date, update.channel, { now: update.now });
+    if (!archived.valid) throw operationError('STATE_CONFLICT', '正式归档证据无效', archived);
+  }
   if (update.stage) state.stage = update.stage;
   if (update.channel) {
     if (!state.channels?.[update.channel]) throw new Error(`未知频道：${update.channel}`);
     const channel = state.channels[update.channel];
+    if (channel.published && (update.published === false || (update.status && update.status !== 'published'))) throw operationError('STATE_CONFLICT', '禁止降级已发布频道');
     if (update.status) channel.status = update.status;
     if (update.published !== undefined) channel.published = Boolean(update.published);
     if (update.issue !== undefined) channel.issue = update.issue;
     if (update.missingSections) channel.missingSections = [...new Set(update.missingSections)];
+    if (update.mirrorStatus) channel.mirrorStatus = update.mirrorStatus;
   }
   if (update.runId) {
-    const run = state.runs.find((item) => item.id === update.runId);
-    if (!run) throw new Error(`运行 ${update.runId} 不存在`);
+    const run = state.runs?.find((item) => item.id === update.runId);
+    if (!run && (update.runStatus || update.exitReason)) throw operationError('STATE_CONFLICT', `运行 ${update.runId} 不存在`);
     if (update.runStatus) run.status = update.runStatus;
-    if (["complete", "failed"].includes(update.runStatus)) run.finishedAt = new Date().toISOString();
+    if (["complete", "failed"].includes(update.runStatus)) run.finishedAt = clockNow(update).toISOString();
+    if (update.exitReason) run.exitReason = update.exitReason;
+    if (update.budget) run.budget = update.budget;
   }
-  state.lastCheckpointAt = new Date().toISOString();
+  state.stage = deriveStage(state);
+  state.lastCheckpointAt = clockNow(update).toISOString();
   await writeJson(paths.state, state);
   return state;
 }
 
-export async function appendResearchLedger(root, rawEntry) {
+async function appendResearchLedgerUnlocked(root, rawEntry) {
   const date = rawEntry.date || beijingDate();
   const paths = operationPaths(root, date);
   const sourceId = canonicalSourceId(rawEntry.sourceId || rawEntry.source);
@@ -257,7 +286,7 @@ export async function appendResearchLedger(root, rawEntry) {
   if (!LEDGER_STATUSES.has(rawEntry.status)) throw new Error(`无效检索状态：${rawEntry.status}`);
   if (rawEntry.url && !isHttps(rawEntry.url)) throw new Error("检索账本 URL 必须使用 HTTPS");
   const entry = {
-    schemaVersion: 1,
+    schemaVersion: 2,
     date,
     runId: requiredText(rawEntry.runId, "runId"),
     channel: rawEntry.channel,
@@ -266,15 +295,29 @@ export async function appendResearchLedger(root, rawEntry) {
     source: SOURCE_REGISTRY.sources[sourceId].label,
     tier: rawEntry.tier || "primary",
     url: rawEntry.url || "",
-    attemptedAt: rawEntry.attemptedAt || new Date().toISOString(),
+    attemptedAt: rawEntry.attemptedAt || clockNow(rawEntry).toISOString(),
     status: rawEntry.status,
     availableCount: nonNegativeInteger(rawEntry.availableCount),
     rejectedCount: nonNegativeInteger(rawEntry.rejectedCount),
     coverageComplete: Boolean(rawEntry.coverageComplete),
     evidenceComplete: Boolean(rawEntry.evidenceComplete),
     reasons: normalizeReasons(rawEntry.reasons),
-    candidateIds: normalizeStringList(rawEntry.candidateIds)
+    candidateIds: normalizeStringList(rawEntry.candidateIds),
+    revokedCandidateIds: normalizeStringList(rawEntry.revokedCandidateIds),
+    candidateEvidence: rawEntry.candidateEvidence || []
   };
+  if (!Array.isArray(entry.candidateEvidence)) throw operationError('EVIDENCE_INVALID', 'candidateEvidence 必须为数组');
+  if (entry.revokedCandidateIds.length && !entry.reasons.length) throw operationError('EVIDENCE_INVALID', '撤销候选必须记录原因');
+  if (entry.revokedCandidateIds.some(id => entry.candidateIds.includes(id))) throw operationError('EVIDENCE_INVALID', '同一记录不能接受并撤销同一候选');
+  for (const evidence of entry.candidateEvidence) validateCandidateEvidence(evidence, date);
+  const { attemptedAt, ...semantic } = entry;
+  entry.eventId = rawEntry.eventId || sha256(Buffer.from(JSON.stringify(entry.status === 'unavailable' ? { ...semantic, attemptedAt: rawEntry.attemptedAt || rawEntry.runId } : semantic)));
+  const previous = (await readResearchLedger(root, date)).find(item => item.eventId === entry.eventId);
+  if (previous) {
+    const { eventId, attemptedAt: oldTime, ...oldSemantic } = previous;
+    if (JSON.stringify(oldSemantic) !== JSON.stringify(semantic)) throw operationError('LEDGER_CONFLICT', '相同 eventId 对应不同内容');
+    return previous;
+  }
   await mkdir(paths.directory, { recursive: true });
   await appendFile(paths.ledger, `${JSON.stringify(entry)}\n`, "utf8");
   return entry;
@@ -287,7 +330,7 @@ export async function readResearchLedger(root, date) {
     throw error;
   });
   return text.split(/\r?\n/).filter(Boolean).map((line, index) => {
-    try { return JSON.parse(line); }
+    try { const entry = JSON.parse(line); if (entry.date !== date) throw new Error('date mismatch'); return entry; }
     catch { throw new Error(`检索账本第 ${index + 1} 行不是有效 JSON`); }
   });
 }
@@ -304,12 +347,14 @@ export async function assertGameDealCoverage(root, date, brief) {
   }
 
   const ledger = await readResearchLedger(root, date);
-  const entries = ledger.filter((entry) => entry.channel === "game" && entry.section === "deals");
+  const entries = ledger.filter((entry) => entry.date === date && entry.channel === "game" && entry.section === "deals");
   const steam = latestTerminalEntry(entries, "steam-cn");
   if (!steam || steam.status !== "accepted" || steam.coverageComplete !== true) {
     throw new Error(`${date} Steam国区检索未留下 coverageComplete=true 的完整终态记录，拒绝截断网页优惠`);
   }
   const eligibleIds = normalizedSteamCandidateIds(steam.candidateIds);
+  const active = currentCandidates(entries.filter(entry => canonicalSourceId(entry.sourceId || entry.source) === 'steam-cn'));
+  if (!sameSet(eligibleIds, new Set([...active.keys()]))) throw operationError('STEAM_COVERAGE_INVALID', 'Steam 当前有效集合与最后覆盖清单不一致');
   if (eligibleIds.size !== steam.availableCount) {
     throw new Error(`${date} Steam国区账本 availableCount=${steam.availableCount} 与合格 appId 数量 ${eligibleIds.size} 不一致`);
   }
@@ -319,15 +364,20 @@ export async function assertGameDealCoverage(root, date, brief) {
 
   if (date >= STEAM_DISCOVERY_FREEZE_EFFECTIVE_DATE) {
     const paths = operationPaths(root, date);
-    const [snapshot, state] = await Promise.all([readJsonIfExists(paths.steamDiscovery), readJsonIfExists(paths.state)]);
-    assertValidSteamDiscovery(snapshot, date);
+    const snapshot = await inspectSteamDiscovery(root, date);
     const frozenIds = new Set([...snapshot.appIds, ...(snapshot.extraAppIds || [])]);
     for (const appId of eligibleIds) {
       if (!frozenIds.has(appId)) throw new Error(`${date} Steam appId ${appId} 不在当天冻结发现面中`);
     }
-    if (state?.steamDiscovery?.sha256) {
-      const snapshotBuffer = await readFile(paths.steamDiscovery);
-      if (sha256(snapshotBuffer) !== state.steamDiscovery.sha256) throw new Error(`${date} Steam冻结发现面在记录后被修改`);
+    const decisions = new Map();
+    for (const entry of entries.filter(item => canonicalSourceId(item.sourceId || item.source) === 'steam-cn')) {
+      for (const evidence of entry.candidateEvidence || []) decisions.set(evidence.id, evidence);
+    }
+    for (const appId of frozenIds) {
+      const evidence = decisions.get(appId);
+      if (!evidence) throw operationError('STEAM_COVERAGE_INVALID', `冻结 appId ${appId} 缺少接受或淘汰证据`);
+      validateCandidateEvidence(evidence, date);
+      if (eligibleIds.has(appId) !== (evidence.decision === 'accepted')) throw operationError('STEAM_COVERAGE_INVALID', `appId ${appId} 的证据决定与当前集合冲突`);
     }
   }
 
@@ -355,6 +405,7 @@ export async function assertGameDealCoverage(root, date, brief) {
 }
 
 export async function researchCompleteness(root, date, channel) {
+  requiredChannel(channel);
   const ledger = await readResearchLedger(root, date);
   const sections = {};
   let complete = true;
@@ -370,52 +421,75 @@ export async function researchCompleteness(root, date, channel) {
       else if (terminal.at(-1).status === "unavailable" && terminal.filter((entry) => entry.status === "unavailable").length < SOURCE_REGISTRY.minimumUnavailableAttempts) incomplete.push(sourceId);
       else if (date >= GAME_DEAL_COVERAGE_EFFECTIVE_DATE && channel === "game" && section === "deals" && terminal.at(-1).status === "accepted" && terminal.at(-1).coverageComplete !== true) incomplete.push(sourceId);
     }
-    const accepted = ledger.filter((entry) => entry.date === date && entry.channel === channel && entry.section === section && entry.status === "accepted");
-    const candidateIds = new Set(accepted.flatMap((entry) => normalizeStringList(entry.candidateIds)));
+    const entries = ledger.filter((entry) => entry.date === date && entry.channel === channel && entry.section === section);
+    const current = currentCandidates(entries);
+    const candidateIds = new Set(current.keys());
     const target = CONTENT_CANDIDATE_TARGETS[channel]?.[section] || 0;
-    const evidenceRequired = EVIDENCE_COMPLETE_SECTIONS.has(`${channel}/${section}`);
-    const evidenceCandidateIds = new Set(accepted.filter((entry) => entry.evidenceComplete === true).flatMap((entry) => normalizeStringList(entry.candidateIds)));
-    const evidenceComplete = !evidenceRequired || evidenceCandidateIds.size >= target;
+    const evidenceCandidateIds = new Set([...current].filter(([, item]) => {
+      try { validateCandidateEvidence(item.evidence, date); return item.evidence.decision === 'accepted'; } catch { return false; }
+    }).map(([id]) => id));
+    const evidenceComplete = candidateIds.size > 0 && evidenceCandidateIds.size === candidateIds.size;
     const candidateCountComplete = candidateIds.size >= target;
-    const frozenDiscoveryComplete = !(channel === "game" && section === "deals" && date >= STEAM_DISCOVERY_FREEZE_EFFECTIVE_DATE)
-      || Boolean(await readJsonIfExists(operationPaths(root, date).steamDiscovery));
+    let frozenDiscoveryComplete = true;
+    let frozenDiscoveryError = null;
+    if (channel === 'game' && section === 'deals' && date >= STEAM_DISCOVERY_FREEZE_EFFECTIVE_DATE) {
+      try { await inspectSteamDiscovery(root, date); }
+      catch (error) { frozenDiscoveryComplete = false; frozenDiscoveryError = { code: error.code || 'FREEZE_INVALID', message: error.message }; }
+    }
     const sectionComplete = !missing.length && !incomplete.length && candidateCountComplete && evidenceComplete && frozenDiscoveryComplete;
     sections[section] = {
       complete: sectionComplete,
       missing: missing.map((id) => SOURCE_REGISTRY.sources[id].label),
       incomplete: incomplete.map((id) => SOURCE_REGISTRY.sources[id].label),
       candidateCount: candidateIds.size,
+      candidateIds: [...candidateIds],
+      evidenceMissingIds: [...candidateIds].filter(id => !evidenceCandidateIds.has(id)),
       target,
       shortfall: Math.max(0, target - candidateIds.size),
       evidenceComplete,
-      frozenDiscoveryComplete
+      frozenDiscoveryComplete,
+      frozenDiscoveryError
     };
     complete &&= sectionComplete;
   }
   return { date, channel, complete, sections };
 }
 
-export async function reconcileRunState(root, date) {
+async function reconcileRunStateUnlocked(root, date, options = {}) {
   const paths = operationPaths(root, date);
   const state = await readJsonIfExists(paths.state);
   if (!state) throw new Error(`${date} 运行状态不存在，请先执行 init`);
+  if (state.date !== date) throw operationError('STATE_CONFLICT', '状态日期冲突');
+  const view = await queryRunState(root, date, options);
   const results = {};
-  for (const channelName of ["minsheng", "game"]) {
-    const channel = state.channels[channelName];
-    if (channel.published || channel.status === "ready") continue;
-    const status = await researchCompleteness(root, date, channelName);
+  const conflicts = [];
+  state.channels ??= {};
+  for (const [channelName, evidence] of Object.entries(view.channels)) {
+    const channel = state.channels[channelName] || { issue: null, status: 'pending', published: false };
+    if ((channel.published || channel.status === 'published') && !evidence.archive.valid) {
+      conflicts.push({ channel: channelName, code: 'STATE_CONFLICT', message: 'published 标签缺少有效归档证据', reasons: evidence.archive.reasons });
+      continue;
+    }
+    if (evidence.archive.valid) {
+      state.channels[channelName] = { ...channel, issue: evidence.archive.issue, status: 'published', published: true, missingSections: [] };
+      results[channelName] = evidence;
+      continue;
+    }
+    if (evidence.archive.exists) { conflicts.push({ channel: channelName, code: 'STATE_CONFLICT', message: '存在未完整归档或冲突，请由发布事务恢复', reasons: evidence.archive.reasons }); continue; }
+    if (evidence.readiness.valid) { state.channels[channelName] = { ...channel, status: 'ready', published: false, missingSections: [] }; results[channelName] = evidence; continue; }
+    if (channel.status === 'ready' || channel.status === 'publishing') { conflicts.push({ channel: channelName, code: 'STATE_CONFLICT', message: '现有就绪/发布标签证据失效，保留原证据', reasons: evidence.readiness.reasons }); continue; }
+    const status = evidence.research;
     const missingSections = Object.entries(status.sections).filter(([, value]) => !value.complete).map(([name]) => name);
     channel.missingSections = missingSections;
     channel.status = status.complete ? "researched" : "researching";
+    state.channels[channelName] = channel;
     results[channelName] = status;
   }
-  if (Object.values(state.channels).every((channel) => channel.published)) state.stage = "published";
-  else if (Object.values(state.channels).some((channel) => channel.status === "ready")) state.stage = "ready";
-  else if (Object.values(state.channels).every((channel) => ["researched", "ready", "published"].includes(channel.status))) state.stage = "candidate";
-  else state.stage = "research";
-  state.lastCheckpointAt = new Date().toISOString();
+  if (conflicts.length) return { ok: false, code: 'STATE_CONFLICT', conflicts, results, state: await readJsonIfExists(paths.state) };
+  state.stage = deriveStage(state);
+  state.lastCheckpointAt = clockNow(options).toISOString();
   await writeJson(paths.state, state);
-  return { state, results };
+  return { ok: true, state, results, conflicts };
 }
 
 export async function assertResearchComplete(root, date, channel) {
@@ -438,7 +512,7 @@ export async function assertResearchComplete(root, date, channel) {
   return status;
 }
 
-export async function mergeSourceAudits(root, date) {
+async function mergeSourceAuditsUnlocked(root, date) {
   const paths = operationPaths(root, date);
   const names = await readdir(paths.directory).catch((error) => {
     if (error.code === "ENOENT") return [];
@@ -495,16 +569,18 @@ async function readJsonIfExists(file) {
 async function readLeaseIfExists(file) {
   try {
     const text = await readFile(file, "utf8");
-    if (!text.trim()) return null;
+    if (!text.trim()) throw operationError('LEASE_INVALID', '租约文件为空，保留以供诊断');
     return JSON.parse(text);
   } catch (error) {
-    if (error.code === "ENOENT" || error instanceof SyntaxError) return null;
+    if (error.code === "ENOENT") return null;
     throw error;
   }
 }
 
 async function writeJson(file, value) {
-  await writeFile(file, `${JSON.stringify(value, null, 2)}\n`, "utf8");
+  const temporary = `${file}.${randomUUID()}.tmp`;
+  await writeFile(temporary, `${JSON.stringify(value, null, 2)}\n`, { encoding: 'utf8', flag: 'wx' });
+  await rename(temporary, file);
 }
 
 function assertDate(value) {
@@ -575,6 +651,9 @@ function normalizeSteamIds(values) {
 function assertValidSteamDiscovery(snapshot, date) {
   if (!snapshot || snapshot.date !== date || snapshot.frozen !== true) throw new Error(`${date} 缺少已冻结的 Steam 发现面`);
   if (!isHttps(snapshot.sourceUrl)) throw new Error(`${date} Steam冻结发现面缺少 HTTPS 来源`);
+  const frozenAt = Date.parse(snapshot.frozenAt);
+  if (!Number.isFinite(frozenAt) || frozenAt < Date.parse(`${date}T00:00:00+08:00`) || frozenAt > Date.parse(`${date}T08:00:00+08:00`)) throw operationError('FREEZE_LATE', `${date} 冻结时间不是当天 08:00 前`);
+  if (!Array.isArray(snapshot.appIds) || !Array.isArray(snapshot.extraAppIds || []) || [...snapshot.appIds, ...(snapshot.extraAppIds || [])].some(id => !/^\d{3,}$/.test(String(id)))) throw operationError('FREEZE_INVALID', '冻结 appId 身份无效');
   const appIds = normalizeSteamIds(snapshot.appIds);
   const extraAppIds = normalizeSteamIds(snapshot.extraAppIds || []);
   const discoveredCount = new Set([...appIds, ...extraAppIds]).size;
@@ -605,4 +684,186 @@ function sameSet(left, right) {
 function isHttps(value) {
   try { return new URL(value).protocol === "https:"; }
   catch { return false; }
+}
+
+export const STATE_EVIDENCE_API_VERSION = 'state-evidence/v1';
+export const EXIT_REASONS = new Set(['READY_WAITING_PUBLISH', 'ONLINE_HEALTHY', 'CONFIGURED_BUDGET', 'ENVIRONMENT_LIMIT', 'HANDOFF_BOUNDARY', 'SOURCE_EXHAUSTED', 'PERMISSION_REQUIRED', 'LEASE_LOST', 'REPAIRABLE_ERROR', 'HARD_BLOCKER']);
+const PUBLICATION_STEPS = ['prepared', 'content-written', 'index-written', 'embedded-written', 'complete'];
+
+function clockNow(options = {}) {
+  const now = new Date(options.now ?? Date.now());
+  if (!Number.isFinite(now.getTime())) throw operationError('INVALID_TIME', '无效时钟');
+  return now;
+}
+function operationError(code, message, details) { return Object.assign(new Error(message), { code, details }); }
+function deriveStage(state) {
+  const channels = ['game', 'minsheng'].map(name => state.channels?.[name]);
+  if (channels.every(item => item?.published)) return 'published';
+  if (channels.some(item => item?.status === 'publishing')) return 'publish';
+  if (channels.some(item => item?.status === 'ready')) return 'ready';
+  if (channels.every(item => ['researched', 'ready', 'published'].includes(item?.status))) return 'candidate';
+  return 'research';
+}
+function validateCheckpoint(update) {
+  const enums = { stage: ['research','candidate','ready','publish','published'], status: ['pending','researching','researched','ready','publishing','published'], runStatus: ['running','complete','failed'], mirrorStatus: ['pending','complete','conflict'] };
+  for (const [key, values] of Object.entries(enums)) if (update[key] !== undefined && !values.includes(update[key])) throw operationError('INVALID_CHECKPOINT', `无效 ${key}: ${update[key]}`);
+  if (update.channel !== undefined) requiredChannel(update.channel);
+  if (update.exitReason && !EXIT_REASONS.has(update.exitReason)) throw operationError('INVALID_CHECKPOINT', '无效退出原因');
+  if (update.exitReason && !update.runId) throw operationError('INVALID_CHECKPOINT', '退出原因必须绑定 runId');
+  if (update.published !== undefined && typeof update.published !== 'boolean') throw operationError('INVALID_CHECKPOINT', 'published 必须为布尔值');
+  if (update.issue !== undefined && (!Number.isInteger(update.issue) || update.issue < 1)) throw operationError('INVALID_CHECKPOINT', 'issue 必须为正整数');
+  if (update.missingSections && (!update.channel || !Array.isArray(update.missingSections) || update.missingSections.some(s => !channelSections(update.channel).includes(s)))) throw operationError('INVALID_CHECKPOINT', 'missingSections 无效');
+  if (update.budget) {
+    const b = update.budget;
+    if (!['configured','environment','handoff'].includes(b.kind) || !Number.isFinite(Date.parse(b.deadlineAt)) || !String(b.basis || '').trim()) throw operationError('INVALID_CHECKPOINT', '预算须注明 kind/deadlineAt/basis');
+  }
+}
+export async function assertRunLease(root, date, options = {}) {
+  const lease = await readLeaseIfExists(operationPaths(root, date).lease);
+  if (!lease) throw operationError('LEASE_REQUIRED', `${date} 写入需要有效租约`);
+  if (lease.date !== date || !lease.runId || !Number.isFinite(Date.parse(lease.expiresAt))) throw operationError('LEASE_INVALID', '租约字段损坏');
+  if (Date.parse(lease.expiresAt) <= clockNow(options).getTime()) throw operationError('LEASE_EXPIRED', '租约已过期');
+  if (options.runId && lease.runId !== options.runId) throw operationError('LEASE_MISMATCH', `当前租约属于 ${lease.runId}`);
+  return lease;
+}
+async function guardedMutation(root, date, options, callback, requireLease = true) {
+  const paths = operationPaths(root, date);
+  // Check before mkdir so a refused write does not initialize production state.
+  if (requireLease) await assertRunLease(root, date, options);
+  await mkdir(paths.directory, { recursive: true });
+  const lockPath = path.join(paths.directory, `${date}-state-write.lock`);
+  let handle;
+  try { handle = await open(lockPath, 'wx'); }
+  catch (error) { if (error.code === 'EEXIST') throw operationError('STATE_BUSY', '另一个状态写入正在执行或遗留锁需诊断'); throw error; }
+  try {
+    await handle.writeFile(JSON.stringify({ runId: options.runId || null, at: clockNow(options).toISOString() }));
+    if (requireLease) await assertRunLease(root, date, options);
+    return await callback();
+  } finally { await handle.close(); await unlink(lockPath); }
+}
+export function acquireRunLease(root, options = {}) { return guardedMutation(root, options.date || beijingDate(), options, () => acquireRunLeaseUnlocked(root, options), false); }
+export function releaseRunLease(root, options = {}) { return guardedMutation(root, options.date || beijingDate(), options, () => releaseRunLeaseUnlocked(root, options), false); }
+export function initializeRunState(root, options = {}) { return guardedMutation(root, options.date || beijingDate(), options, () => initializeRunStateUnlocked(root, options)); }
+export function checkpointRunState(root, date, options = {}) { return guardedMutation(root, date, options, () => checkpointRunStateUnlocked(root, date, options)); }
+export function appendResearchLedger(root, options) { return guardedMutation(root, options.date || beijingDate(), options, () => appendResearchLedgerUnlocked(root, options)); }
+export function freezeSteamDiscovery(root, options = {}) { return guardedMutation(root, options.date || beijingDate(), options, () => freezeSteamDiscoveryUnlocked(root, options)); }
+export function createReadyProof(root, options = {}) { return guardedMutation(root, options.date || beijingDate(), options, () => createReadyProofUnlocked(root, options)); }
+export function reconcileRunState(root, date, options = {}) { return guardedMutation(root, date, options, () => reconcileRunStateUnlocked(root, date, options)); }
+export function mergeSourceAudits(root, date, options = {}) { return guardedMutation(root, date, options, () => mergeSourceAuditsUnlocked(root, date)); }
+
+function validateCandidateEvidence(evidence, date) {
+  if (!evidence || !String(evidence.id || '').trim() || !['accepted', 'rejected'].includes(evidence.decision) || !isHttps(evidence.url) || !Number.isFinite(Date.parse(evidence.checkedAt)) || beijingDate(new Date(evidence.checkedAt)) !== date || !String(evidence.basis || '').trim()) throw operationError('EVIDENCE_INVALID', '逐项证据须包含 id/decision/HTTPS url/同日 checkedAt/basis');
+  if (evidence.decision === 'accepted' && (!evidence.facts || typeof evidence.facts !== 'object' || Array.isArray(evidence.facts) || !Object.keys(evidence.facts).length)) throw operationError('EVIDENCE_INVALID', '接受候选须记录 facts；结构通过不代表来源事实已核实');
+}
+function currentCandidates(entries) {
+  const current = new Map();
+  for (const entry of entries) {
+    for (const id of normalizeStringList(entry.revokedCandidateIds)) current.delete(id);
+    if (entry.status === 'accepted') for (const id of normalizeStringList(entry.candidateIds)) {
+      current.set(id, { sourceId: canonicalSourceId(entry.sourceId || entry.source), evidence: (entry.candidateEvidence || []).find(item => item.id === id) || current.get(id)?.evidence || null });
+    }
+    for (const evidence of entry.candidateEvidence || []) {
+      if (evidence.decision === 'rejected') current.delete(evidence.id);
+      else if (current.has(evidence.id)) current.set(evidence.id, { ...current.get(evidence.id), evidence });
+    }
+  }
+  return current;
+}
+export async function inspectSteamDiscovery(root, date) {
+  const paths = operationPaths(root, date);
+  const snapshot = await readJsonIfExists(paths.steamDiscovery);
+  assertValidSteamDiscovery(snapshot, date);
+  const state = await readJsonIfExists(paths.state);
+  const identity = state?.steamDiscovery;
+  if (state?.date !== date || !identity?.sha256) throw operationError('FREEZE_UNBOUND', '冻结文件缺少状态中的同日哈希绑定');
+  if (sha256(await readFile(paths.steamDiscovery)) !== identity.sha256 || identity.runId !== snapshot.runId || identity.frozenAt !== snapshot.frozenAt || identity.discoveredCount !== snapshot.discoveredCount) throw operationError('FREEZE_CHANGED', '冻结文件与状态身份/哈希不匹配，保留原证据');
+  return snapshot;
+}
+export function archiveContentPath(root, date, channel) {
+  requiredChannel(channel); assertDate(date);
+  return path.resolve(root, 'data', ...(channel === 'minsheng' ? ['minsheng'] : []), `${date}.json`);
+}
+export async function inspectLocalArchive(root, date, channel, options = {}) {
+  const target = archiveContentPath(root, date, channel);
+  const result = { exists: false, valid: false, reasons: [] };
+  try {
+    const data = await readFile(target);
+    result.exists = true;
+    const brief = JSON.parse(data);
+    const manifest = await readJsonIfExists(path.join(path.dirname(target), 'index.json'));
+    const editions = manifest?.editions?.filter(item => item.date === date) || [];
+    if (editions.length !== 1) throw operationError('ARCHIVE_INCOMPLETE', '正式正文没有唯一匹配索引');
+    const { assertManifestEdition } = await import('./archive-consistency.mjs');
+    assertManifestEdition(editions[0], brief, channel === 'game' ? '游戏日报' : '民生日报');
+    const { assertChannelPreflight } = await import('./daily-preflight.mjs');
+    const preflight = await assertChannelPreflight(root, { date, channel, candidate: target, recovery: true, requireReady: true, now: options.now });
+    result.valid = true; result.issue = brief.issue; result.candidateSha256 = sha256(data); result.pngSha256 = preflight.identity.pngSha256;
+  } catch (error) { result.reasons.push({ code: error.code || 'ARCHIVE_INVALID', message: error.message }); }
+  return result;
+}
+export async function queryRunState(root, date, options = {}) {
+  const paths = operationPaths(root, date);
+  const result = { apiVersion: STATE_EVIDENCE_API_VERSION, date, checkedAt: clockNow(options).toISOString(), paths, lease: null, channels: {}, reasons: [] };
+  let state = null;
+  try { state = await readJsonIfExists(paths.state); if (state && state.date !== date) throw operationError('STATE_CONFLICT', '状态日期与请求不符'); }
+  catch (error) { result.reasons.push({ code: error.code || 'STATE_INVALID', message: error.message }); state = null; }
+  try { const lease = await readLeaseIfExists(paths.lease); result.lease = lease ? { ...lease, active: lease.date === date && Date.parse(lease.expiresAt) > clockNow(options).getTime() } : null; }
+  catch (error) { result.reasons.push({ code: error.code || 'LEASE_INVALID', message: error.message }); }
+  for (const channel of options.channel ? [requiredChannel(options.channel)] : ['minsheng','game']) {
+    let research;
+    try { research = await researchCompleteness(root, date, channel); }
+    catch (error) { research = { date, channel, complete: false, sections: {}, reasons: [{ code: error.code || 'LEDGER_INVALID', message: error.message }] }; }
+    const archive = await inspectLocalArchive(root, date, channel, options);
+    const readiness = { valid: false, reasons: [] };
+    try {
+      const proof = await assertReadyProof(root, date, channel, { now: options.now, ...(archive.exists ? { candidate: archiveContentPath(root, date, channel), recovery: true } : {}) });
+      readiness.valid = true; readiness.proof = proof; readiness.verifiedAt = proof.verifiedAt;
+    } catch (error) { readiness.reasons.push({ code: error.code || 'PROOF_INVALID', message: error.message }); }
+    const online = { valid: false, reasons: [] };
+    try {
+      const observations = await Promise.all([`${date}-${channel}-health.json`, `${date}-health.json`].map(name => readJsonIfExists(path.join(paths.directory, name))));
+      const health = observations.filter(item => item?.date === date && item.channels?.[channel]).sort((a,b) => Date.parse(b.checkedAt) - Date.parse(a.checkedAt))[0];
+      const item = health?.channels?.[channel];
+      const checkedAt = health?.checkedAt;
+      const age = clockNow(options).getTime() - Date.parse(checkedAt);
+      // Only evidence that binds both target hashes can confirm an online edition.
+      online.recorded = Boolean(item); online.checkedAt = checkedAt || null;
+      online.valid = Boolean(archive.valid && health?.date === date && age >= 0 && age <= 15 * 60 * 1000 && item?.live?.valid && item.live.content?.sha256 === archive.candidateSha256 && item.live.png?.sha256 === archive.pngSha256 && item.live.page?.valid && item.live.deployment?.valid);
+      if (!online.valid) online.reasons.push({ code: 'ONLINE_UNVERIFIED', message: '缺少15分钟内匹配目标 JSON/PNG 哈希、页面与部署的线上证据；旧健康标签不能代替' });
+    } catch (error) { online.reasons.push({ code: 'HEALTH_INVALID', message: error.message }); }
+    result.channels[channel] = { ...research, research, stored: state?.channels?.[channel] || null, readiness, archive, online, publication: state?.channels?.[channel]?.publication || null, reasons: [...(research.reasons || []), ...readiness.reasons, ...archive.reasons, ...online.reasons] };
+  }
+  return result;
+}
+export function updatePublicationState(root, options = {}) {
+  const { date, channel } = options;
+  requiredChannel(channel); requiredText(options.runId, 'runId');
+  return guardedMutation(root, date, options, async () => {
+    const { transactionId, step, candidateSha256, pngSha256 } = options;
+    requiredText(transactionId, 'transactionId');
+    if (!PUBLICATION_STEPS.includes(step) || !/^[a-f0-9]{64}$/.test(candidateSha256 || '') || !/^[a-f0-9]{64}$/.test(pngSha256 || '')) throw operationError('PUBLICATION_CONFLICT', '发布步骤或身份无效');
+    const paths = operationPaths(root, date);
+    const state = await readJsonIfExists(paths.state);
+    if (!state || state.date !== date || !state.channels?.[channel]) throw operationError('STATE_CONFLICT', '缺少同日频道状态');
+    const previous = state.channels[channel].publication;
+    if (previous && (previous.transactionId !== transactionId || previous.candidateSha256 !== candidateSha256 || previous.pngSha256 !== pngSha256 || PUBLICATION_STEPS.indexOf(step) < PUBLICATION_STEPS.indexOf(previous.step))) throw operationError('PUBLICATION_CONFLICT', '事务身份冲突或进度倒退');
+    if (!previous && step !== 'prepared') throw operationError('PUBLICATION_CONFLICT', '新事务必须从 prepared 注册');
+    if (state.channels[channel].published && previous?.step !== 'complete') throw operationError('PUBLICATION_CONFLICT', '已归档频道禁止新事务');
+    const candidate = options.candidate || (step === 'prepared' ? expectedArtifactPaths(root, date, channel).candidate : archiveContentPath(root, date, channel));
+    const recovery = path.resolve(root, candidate) === archiveContentPath(root, date, channel);
+    const { assertChannelPreflight } = await import('./daily-preflight.mjs');
+    await assertChannelPreflight(root, { date, channel, candidate, recovery, requireReady: true, candidateSha256, pngSha256, now: options.now });
+    const { assertPublishTime } = await import('./game-lib.mjs');
+    assertPublishTime(date, clockNow(options));
+    if (['index-written','embedded-written','complete'].includes(step)) {
+      const archive = await inspectLocalArchive(root, date, channel, options);
+      if (!archive.valid) throw operationError('PUBLICATION_CONFLICT', '发布完成步骤缺少正式归档证据', archive);
+    }
+    if (previous?.step === step) return { apiVersion: STATE_EVIDENCE_API_VERSION, unchanged: true, publication: previous, state };
+    const publication = { transactionId, step, candidateSha256, pngSha256, runId: options.runId, updatedAt: clockNow(options).toISOString() };
+    state.channels[channel] = { ...state.channels[channel], publication, status: step === 'complete' ? 'published' : 'publishing', published: step === 'complete', ...(step === 'complete' ? { missingSections: [] } : {}) };
+    state.stage = deriveStage(state); state.lastCheckpointAt = publication.updatedAt;
+    await writeJson(paths.state, state);
+    return { apiVersion: STATE_EVIDENCE_API_VERSION, unchanged: false, publication, state };
+  });
 }

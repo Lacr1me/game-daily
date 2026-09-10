@@ -1,7 +1,8 @@
-import { mkdtemp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
+import { mkdtemp, mkdir, readFile, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
-import { CONTENT_CANDIDATE_TARGETS, acquireRunLease, appendResearchLedger, assertGameDealCoverage, assertReadyProof, createReadyProof, freezeSteamDiscovery, initializeRunState, mergeSourceAudits, reconcileRunState, releaseRunLease, researchCompleteness } from "./daily-operations.mjs";
+import { CONTENT_CANDIDATE_TARGETS, acquireRunLease, appendResearchLedger as recordRaw, assertGameDealCoverage, assertReadyProof, createReadyProof, freezeSteamDiscovery as freezeRaw, initializeRunState as initRaw, mergeSourceAudits as mergeRaw, reconcileRunState as reconcileRaw, releaseRunLease, researchCompleteness } from "./daily-operations.mjs";
+import { evidenceFor, makeReadyFixture } from './state-evidence-fixtures.mjs';
 import { runDailyHealth } from "./check-daily-health.mjs";
 import { validateGame } from "./game-lib.mjs";
 import { validateMinshengSourceAudit } from "./minsheng-lib.mjs";
@@ -9,6 +10,29 @@ import { SOURCE_REGISTRY, canonicalSourceId, channelSections, requiredSourceIds,
 
 const projectRoot = process.cwd();
 const tempRoot = await mkdtemp(path.join(os.tmpdir(), "daily-operations-"));
+
+// Each legacy test operation obtains its own explicit fixture lease. No production paths.
+const fixtureLeases = new Map();
+async function fixtureLease(root, date, runId = 'fixture', now = new Date(date+'T07:00:00+08:00')) {
+  const key = root + '/' + date;
+  const old = fixtureLeases.get(key);
+  if (old && old !== runId) await releaseRunLease(root,{date,runId:old,now});
+  const lease = await acquireRunLease(root,{date,runId,now});
+  assert(lease.acquired,'fixture lease must be acquired');
+  fixtureLeases.set(key,runId);
+  return {date,runId,now};
+}
+async function initializeRunState(root, options) { return initRaw(root,{...options,...await fixtureLease(root,options.date,options.runId)}); }
+async function appendResearchLedger(root, options) {
+  const lease = await fixtureLease(root,options.date,options.runId);
+  const omit = options.channel==='game' && ['packs','mods'].includes(options.section) && options.evidenceComplete !== true;
+  const candidateEvidence = omit ? [] : (options.candidateIds || []).map(id=>evidenceFor(id,options.date));
+  return recordRaw(root,{...options,candidateEvidence,...lease});
+}
+async function freezeSteamDiscovery(root, options) { return freezeRaw(root,{...options,...await fixtureLease(root,options.date,options.runId)}); }
+async function mergeSourceAudits(root, date) { return mergeRaw(root,date,await fixtureLease(root,date)); }
+async function reconcileRunState(root,date) { return reconcileRaw(root,date,await fixtureLease(root,date)); }
+
 
 try {
   await testSourceAliasesAndAudit();
@@ -23,7 +47,7 @@ try {
   await testTlsDegradedSuccess();
   console.log("日报运行状态、来源门禁、游戏规则和健康检查测试通过。");
 } finally {
-  await rm(tempRoot, { recursive: true, force: true });
+  console.log(`保留隔离测试夹具：${tempRoot}`);
 }
 
 async function testSourceAliasesAndAudit() {
@@ -158,6 +182,8 @@ async function testSemanticCandidateCompleteness() {
       status: "accepted",
       availableCount: target,
       candidateIds: Array.from({ length: target }, (_, index) => `verified-${section}-${index + 1}`),
+      revokedCandidateIds: Array.from({ length: target }, (_, index) => `game-${section}-${index + 1}`),
+      reasons: ['replace unverified fixture candidates'],
       evidenceComplete: true
     });
   }
@@ -209,25 +235,12 @@ async function testRunLease() {
 }
 
 async function testReadyProof() {
-  const root = path.join(tempRoot, "ready");
-  const date = "2026-08-24";
-  const candidate = path.join(root, "data", ".pending", `${date}.json`);
-  const renderDirectory = path.join(root, "artifacts", "operations", `${date}-render`);
-  const html = path.join(renderDirectory, `${date}-游戏简报.html`);
-  const renderPng = path.join(renderDirectory, `${date}-游戏简报.png`);
-  const publicPng = path.join(root, "downloads", "game", `${date}.png`);
-  await mkdir(path.dirname(candidate), { recursive: true });
-  await mkdir(renderDirectory, { recursive: true });
-  await mkdir(path.dirname(publicPng), { recursive: true });
-  await initializeRunState(root, { date, runId: "1030", kind: "main", gameIssue: 4 });
-  await writeFile(candidate, JSON.stringify({ date, issue: 4 }), "utf8");
-  await writeFile(html, `<a href="downloads/game/${date}.png">${date}</a>`, "utf8");
-  await writeFile(renderPng, fakePng());
-  await writeFile(publicPng, fakePng());
-  await createReadyProof(root, { date, channel: "game", candidate, html, png: renderPng, publicPng });
-  await assertReadyProof(root, date, "game");
+  const fixture = await makeReadyFixture(path.join(tempRoot, 'ready'), 'game', projectRoot);
+  const { root, date, candidate, now } = fixture;
+  await createReadyProof(root, fixture);
+  await assertReadyProof(root, date, "game", { now });
   await writeFile(candidate, JSON.stringify({ date, issue: 5 }), "utf8");
-  await assertRejects(() => assertReadyProof(root, date, "game"), "就绪后修改候选必须阻止发布");
+  await assertRejects(() => assertReadyProof(root, date, "game", { now }), "就绪后修改候选必须阻止发布");
 }
 
 async function testGameRules() {
@@ -315,7 +328,7 @@ async function testHealthKeepsChecking() {
   const result = await runDailyHealth({ root, date: "2026-08-25", liveBase: "https://example.test", fetchImpl: fakeFetch });
   assert(!result.healthy, "当天正文缺失时健康状态必须失败");
   assert(result.local.game.png.valid && result.live.game.png.valid, "正文缺失时仍必须独立验证PNG");
-  assert(result.live.game.deployment.valid && result.live.minsheng.deployment.valid, "正文缺失时仍必须独立验证频道页面");
+  assert((result.live.game.reachability || result.live.game.deployment).valid && (result.live.minsheng.reachability || result.live.minsheng.deployment).valid, "正文缺失时仍必须独立验证频道页面可达性");
   assert(requested.some((url) => url.includes("downloads/game/2026-08-25.png")) && requested.some((url) => url.includes("downloads/minsheng/2026-08-25.png")), "两个线上PNG都必须实际请求");
   assert(result.transport.effective === "https", "HTTPS可达但内容缺失时transport不得为null");
 }
@@ -339,7 +352,11 @@ async function testTlsDegradedSuccess() {
     const buffer = await readFile(path.join(projectRoot, relative));
     return new Response(buffer, { status: 200, headers: { "content-type": "application/json" } });
   };
-  const result = await runDailyHealth({ root: projectRoot, date: "2026-08-24", liveBase: "https://example.test", fetchImpl: fakeFetch });
+  const result = await runDailyHealth({ root: projectRoot, date: "2026-08-24", liveBase: "https://example.test", fetchImpl: fakeFetch,
+    targetCommit: 'a'.repeat(40),
+    deploymentProof: { source: 'github-pages-api', checkedAt: new Date().toISOString(), headSha: 'a'.repeat(40), conclusion: 'success', siteUrl: 'https://example.test', evidenceUrl: 'https://api.github.com/repos/test/fixture/pages/builds/1' },
+    pageProbe: async ({ url, date, channel, checkedAt }) => ({ method: 'browser', url, checkedAt, displayedDate: date, selectedDate: date, downloadUrl: `http://example.test/downloads/${channel}/${date}.png` })
+  });
   assert(result.healthy && result.degraded, "TLS异常但同域HTTP内容完整时必须视为降级成功");
   assert(result.warnings.length === 1 && result.reasonCodes.includes("TLS_CERTIFICATE_DEGRADED"), "TLS降级必须只有一条去重警告和稳定原因码");
   assert(result.transport.effective === "http-fallback", "TLS降级必须明确记录HTTP只读复核");

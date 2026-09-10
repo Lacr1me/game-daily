@@ -1,5 +1,6 @@
 import process from "node:process";
-import { acquireRunLease, appendResearchLedger, checkpointRunState, createReadyProof, freezeSteamDiscovery, initializeRunState, mergeSourceAudits, operationPaths, reconcileRunState, releaseRunLease, researchCompleteness } from "./daily-operations.mjs";
+import { readFile } from 'node:fs/promises';
+import { acquireRunLease, appendResearchLedger, checkpointRunState, createReadyProof, freezeSteamDiscovery, initializeRunState, mergeSourceAudits, queryRunState, reconcileRunState, releaseRunLease } from "./daily-operations.mjs";
 import { beijingDate } from "./game-lib.mjs";
 
 const root = process.cwd();
@@ -10,6 +11,7 @@ const args = Object.fromEntries(process.argv.slice(2).filter((arg) => arg.starts
 }));
 const date = args.date || beijingDate();
 
+try {
 if (command === "init") {
   console.log(JSON.stringify(await initializeRunState(root, {
     date,
@@ -25,6 +27,7 @@ if (command === "init") {
     channel: args.channel,
     section: args.section,
     source: args.source,
+    sourceId: args['source-id'],
     tier: args.tier,
     url: args.url,
     status: args.status,
@@ -33,7 +36,11 @@ if (command === "init") {
     coverageComplete: args["coverage-complete"] === "true",
     evidenceComplete: args["evidence-complete"] === "true",
     reasons: args.reason,
-    candidateIds: args.candidates
+    candidateIds: args.candidates,
+    revokedCandidateIds: args['revoke-candidates'],
+    eventId: args['event-id'],
+    attemptedAt: args['attempted-at'],
+    candidateEvidence: args['evidence-file'] ? JSON.parse(await readFile(args['evidence-file'], 'utf8')) : []
   }), null, 2));
 } else if (command === "checkpoint") {
   console.log(JSON.stringify(await checkpointRunState(root, date, {
@@ -43,7 +50,10 @@ if (command === "init") {
     published: args.published === undefined ? undefined : args.published === "true",
     missingSections: args.missing === undefined ? undefined : args.missing.split(",").filter(Boolean),
     runId: args["run-id"],
-    runStatus: args["run-status"]
+    runStatus: args["run-status"],
+    exitReason: args['exit-reason'],
+    mirrorStatus: args['mirror-status'],
+    budget: args['budget-file'] ? JSON.parse(await readFile(args['budget-file'], 'utf8')) : undefined
   }), null, 2));
 } else if (command === "lease-acquire") {
   console.log(JSON.stringify(await acquireRunLease(root, {
@@ -59,14 +69,17 @@ if (command === "init") {
 } else if (command === "mark-ready") {
   console.log(JSON.stringify(await createReadyProof(root, {
     date,
+    runId: args['run-id'],
     channel: args.channel,
     candidate: args.candidate,
     html: args.html,
     png: args.png,
-    publicPng: args["public-png"]
+    publicPng: args["public-png"],
+    renderEvidence: args['render-evidence'],
+    visualEvidence: args['visual-evidence']
   }), null, 2));
 } else if (command === "merge-audit") {
-  console.log(JSON.stringify(await mergeSourceAudits(root, date), null, 2));
+  console.log(JSON.stringify(await mergeSourceAudits(root, date, { runId: args['run-id'] }), null, 2));
 } else if (command === "steam-freeze") {
   console.log(JSON.stringify(await freezeSteamDiscovery(root, {
     date,
@@ -76,13 +89,18 @@ if (command === "init") {
     extraAppIds: args["extra-app-ids"]
   }), null, 2));
 } else if (command === "reconcile") {
-  console.log(JSON.stringify(await reconcileRunState(root, date), null, 2));
+  const result = await reconcileRunState(root, date, { channel: args.channel, runId: args['run-id'] });
+  console.log(JSON.stringify(result, null, 2));
+  if (!result.ok) process.exitCode = 1;
 } else if (command === "status") {
-  const output = { date, paths: operationPaths(root, date), channels: {} };
-  for (const channel of ["minsheng", "game"]) output.channels[channel] = await researchCompleteness(root, date, channel);
+  const output = await queryRunState(root, date, { channel: args.channel });
   console.log(JSON.stringify(output, null, 2));
 } else {
   throw new Error(`未知命令：${command}`);
+}
+} catch (error) {
+  console.log(JSON.stringify({ ok: false, date, code: error.code || 'OPERATION_FAILED', message: error.message, result: error.result || error.details }, null, 2));
+  process.exitCode = 1;
 }
 
 function numberOrUndefined(value) {

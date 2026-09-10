@@ -12,6 +12,7 @@ const channels = args.channel ? [args.channel] : ["minsheng", "game"];
 const output = { date, channels: {} };
 let failed = false;
 for (const channel of channels) {
+  try {
   output.channels[channel] = await researchCompleteness(process.cwd(), date, channel);
   try { await assertResearchComplete(process.cwd(), date, channel); }
   catch { failed = true; }
@@ -24,9 +25,13 @@ for (const channel of channels) {
       if (error.code !== "ENOENT") {
         output.channels[channel].dealCoverage = { complete: false, error: error.message };
         failed = true;
+      } else {
+        output.channels[channel].dealCoverage = { complete: false, skipped: true, code: 'CANDIDATE_MISSING', error: '诊断未含候选覆盖，不能作为 ready 门禁' };
+        if (args['require-candidate'] === 'true') failed = true;
       }
     }
   }
+  } catch (error) { output.channels[channel] = { complete: false, code: error.code || 'RESEARCH_INVALID', error: error.message }; failed = true; }
 }
 console.log(JSON.stringify(output, null, 2));
 if (failed) process.exitCode = 1;
