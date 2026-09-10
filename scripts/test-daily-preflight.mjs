@@ -75,4 +75,3 @@ async function treeHashes(root) {
   for (const entry of entries) { const file=path.join(root,entry.name); if(entry.isDirectory()) result[entry.name]=await treeHashes(file); else result[entry.name]=createHash('sha256').update(await readFile(file)).digest('hex'); }
   return result;
 }
-

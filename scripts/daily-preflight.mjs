@@ -151,4 +151,3 @@ if (path.resolve(process.argv[1] || '') === fileURLToPath(import.meta.url)) {
   const result = await preflightChannel(process.cwd(), { date: args.date, channel: args.channel, candidate: args.candidate, html: args.html, png: args.png, publicPng: args['public-png'], renderEvidence: args['render-evidence'], visualEvidence: args['visual-evidence'], requireReady: args['require-ready'] === 'true', recovery: args.recovery === 'true', candidateSha256: args['candidate-sha256'], pngSha256: args['png-sha256'] });
   console.log(JSON.stringify(result,null,2)); if (!result.ok) process.exitCode = 1;
 }
-

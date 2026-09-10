@@ -11,8 +11,8 @@ export async function writeJson(file, data) { await mkdir(path.dirname(file), { 
 export function evidenceFor(id, date, item = {}) {
   return { id, decision: 'accepted', url: item.url || 'https://example.test/source/' + encodeURIComponent(id), checkedAt: date+'T07:00:00+08:00', basis: 'synthetic isolated fixture; not source verification', facts: { fixture: true, ...item } };
 }
-export async function makeReadyFixture(base, channel = 'minsheng', projectRoot = process.cwd()) {
-  const root = path.join(base, channel);
+export async function makeReadyFixture(base, channel = 'minsheng', projectRoot = process.cwd(), options = {}) {
+  const root = options.root || path.join(base, channel);
   const date = fixtureDate, now = fixtureNow, runId = 'fixture';
   const brief = JSON.parse(await readFile(ops.archiveContentPath(projectRoot,date,channel),'utf8'));
   brief.issue = 1;
@@ -54,4 +54,3 @@ export async function makeReadyFixture(base, channel = 'minsheng', projectRoot =
   await writeJson(visualEvidence,{date,channel,method:'view_image',result:'pass',inspector:'synthetic-test-double',inspectedAt:now.toISOString(),pngSha256,findings:[],fixture:true});
   return {root,date,channel,now,runId,candidate,html,png,publicPng,renderEvidence,visualEvidence,candidateSha256,pngSha256,brief};
 }
-
