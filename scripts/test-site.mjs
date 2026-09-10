@@ -12,7 +12,8 @@ const gameManifest = await readJson("data/index.json");
 
 for (const [name, manifest] of [["民生", civicManifest], ["游戏", gameManifest]]) {
   assert(manifest.timezone === "Asia/Shanghai", `${name}频道时区必须为 Asia/Shanghai`);
-  assert(manifest.generateAt === "09:30", `${name}频道必须在 09:30 开始制作`);
+  // Legacy display metadata does not govern cron or production admission.
+  assert(manifest.generateAt === undefined || /^([01]\d|2[0-3]):[0-5]\d$/.test(manifest.generateAt), `${name} generateAt 若提供须为有效 HH:mm`);
   assert(manifest.publishAt === "11:00", `${name}频道必须在 11:00 发布`);
   assert(Array.isArray(manifest.editions) && manifest.editions.length > 0, `${name}频道必须至少有一期归档`);
   assert(new Set(manifest.editions.map((edition) => edition.date)).size === manifest.editions.length, `${name}归档日期不能重复`);
@@ -185,7 +186,7 @@ assert(portalCss.includes(".channel-card.game{--accent:var(--blue)}"), "游戏�
 assert(!portalCss.includes("--green:"), "首页模板不得保留游戏频道绿色主题变量");
 assert(!portalHtml.includes('class="update-chip"') && !portalCss.includes(".update-chip"), "首页不得保留发布时间轴及其样式");
 assert(portalCss.includes("grid-template-columns: repeat(2, minmax(0, 1fr));") && portalCss.includes("column-gap: 24px;"), "首页首屏双栏必须与日报卡片网格对齐");
-assert(portalCss.includes(".hero-primary,\n.hero-secondary { display: contents; }") && portalCss.includes("grid-row: 2;"), "首页标题与 Logo 必须位于可精确对齐的独立网格行");
+assert(/\.hero-primary,\s*\.hero-secondary\s*\{\s*display:\s*contents;\s*\}/.test(portalCss) && portalCss.includes("grid-row: 2;"), "首页标题与 Logo 必须位于可精确对齐的独立网格行");
 assert(gameHtml.includes('<a href="./">首页</a>') && civicHtml.includes('<a href="../">首页</a>'), "双频道导航入口必须统一命名为首页");
 assert(!gameHtml.includes("双频道首页") && !civicHtml.includes("双频道首页"), "频道导航不得继续显示双频道首页旧名称");
 for (const sharedHeaderClass of ["site-bar", "mini-brand", "archive-trigger"]) {

@@ -14,6 +14,27 @@ export const GAME_DUPLICATE_LIMITS = {
 
 export const MINSHENG_DUPLICATE_LIMIT = 10;
 
+// Select metadata before reading bodies. Full archive gates remain independent.
+export function selectPriorEditions(manifest, date, channel) {
+  if (!['game', 'minsheng'].includes(channel)) throw new Error('Unknown archive channel');
+  const seen = new Map();
+  for (const edition of manifest.editions) {
+    const prefix = channel === 'game' ? 'data' : 'data/minsheng';
+    if (edition.file !== `${prefix}/${edition.date}.json`) throw new Error('Archive channel/path mismatch');
+    if (seen.has(edition.date) && JSON.stringify(seen.get(edition.date)) !== JSON.stringify(edition)) throw new Error('Conflicting duplicate archive date');
+    seen.set(edition.date, edition);
+  }
+  return [...seen.values()].filter(item => item.date < date).sort((a, b) => b.date.localeCompare(a.date)).slice(0, 7);
+}
+
+export async function loadPriorBriefs(root, manifest, date, channel, read = readFile) {
+  return Promise.all(selectPriorEditions(manifest, date, channel).map(async edition => {
+    const brief = JSON.parse(await read(path.resolve(root, edition.file), 'utf8'));
+    assertManifestEdition(edition, brief, channel === 'game' ? '游戏日报' : '民生日报');
+    return brief;
+  }));
+}
+
 export function assertGameArchiveConsistency(candidate, priorBriefs) {
   for (const prior of recentPriorBriefs(candidate, priorBriefs)) {
     for (const [section, limit] of Object.entries(GAME_DUPLICATE_LIMITS)) {
@@ -163,9 +184,7 @@ if (path.resolve(process.argv[1] || "") === fileURLToPath(import.meta.url)) {
   const manifestFile = channel === 'game' ? 'data/index.json' : 'data/minsheng/index.json';
   const manifest = JSON.parse(await readFile(path.resolve(manifestFile), 'utf8'));
   const candidate = JSON.parse(await readFile(path.resolve(candidateFile), 'utf8'));
-  const priorBriefs = await Promise.all(manifest.editions.map(async (edition) => (
-    JSON.parse(await readFile(path.resolve(edition.file), 'utf8'))
-  )));
+  const priorBriefs = await loadPriorBriefs(process.cwd(), manifest, candidate.date, channel);
   if (channel === 'game') assertGamePublishCandidate(candidate, manifest, priorBriefs);
   else assertMinshengPublishCandidate(candidate, manifest, priorBriefs);
   console.log(`归档一致性门禁通过：${channel} ${candidate.date}，已比对最近 ${Math.min(7, priorBriefs.length)} 期。`);
