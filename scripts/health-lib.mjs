@@ -10,12 +10,38 @@ export function assertFreshEvidence(evidence, checkedAt, maxAgeMs = 15 * 60 * 10
 }
 export function verifyDeploymentProof(proof, {targetCommit, checkedAt, base}) {
   requireEvidence(/^[a-f0-9]{40}$/i.test(targetCommit || ''), 'TARGET_COMMIT_MISSING', 'A full target commit is required');
+  if (proof?.source === 'github-actions-pages-api') return verifyActionsPagesProof(proof, {targetCommit, checkedAt, base});
   requireEvidence(proof?.source === 'github-pages-api', 'DEPLOYMENT_PROOF_MISSING', 'GitHub Pages API proof is missing');
   assertFreshEvidence(proof, checkedAt);
   requireEvidence(proof.headSha === targetCommit && proof.conclusion === 'success', 'DEPLOYMENT_COMMIT_MISMATCH', 'Pages build does not prove the target commit succeeded');
   const evidence = new URL(proof.evidenceUrl);
   requireEvidence(evidence.protocol === 'https:' && evidence.hostname === 'api.github.com' && /^\/repos\/[^/]+\/[^/]+\/pages\/builds\/\d+$/.test(evidence.pathname), 'DEPLOYMENT_SOURCE_INVALID', 'Expected a GitHub Pages build API URL');
   requireEvidence(new URL(proof.siteUrl).host === new URL(base).host, 'DEPLOYMENT_SITE_MISMATCH', 'Pages evidence is for another site');
+  return {...proof, targetCommit};
+}
+
+function verifyActionsPagesProof(proof, {targetCommit, checkedAt, base}) {
+  assertFreshEvidence(proof, checkedAt);
+  const deployment=proof.deployment, status=proof.deploymentStatus, run=proof.workflowRun;
+  requireEvidence(deployment && status && run, 'DEPLOYMENT_PROOF_MISSING', 'Actions Pages requires deployment, status and workflow API records');
+  const endpoint=new URL(deployment.url);
+  const match=endpoint.pathname.match(/^\/repos\/([^/]+\/[^/]+)\/deployments\/(\d+)$/);
+  requireEvidence(endpoint.origin==='https://api.github.com' && match && String(deployment.id)===match[2], 'DEPLOYMENT_SOURCE_INVALID', 'Expected a GitHub deployment API record');
+  const api=`https://api.github.com/repos/${match[1]}`;
+  const runUrl=`https://github.com/${match[1]}/actions/runs/${run.id}`;
+  requireEvidence(proof.evidenceUrl===deployment.url && deployment.statuses_url===`${deployment.url}/statuses` &&
+    Number.isSafeInteger(status.id) && status.url===`${deployment.url}/statuses/${status.id}` &&
+    Number.isSafeInteger(run.id) && run.url===`${api}/actions/runs/${run.id}` && run.html_url===runUrl &&
+    (status.log_url===runUrl || new RegExp(`^${runUrl.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}/job/\\d+$`).test(status.log_url || '')),
+    'DEPLOYMENT_SOURCE_INVALID', 'Deployment, status and workflow records must identify the same repository and run');
+  requireEvidence(deployment.environment==='github-pages' && status.environment==='github-pages' && run.path==='.github/workflows/pages.yml',
+    'DEPLOYMENT_ENVIRONMENT_MISMATCH', 'Expected this project Pages workflow and github-pages environment');
+  requireEvidence(proof.headSha===targetCommit && deployment.sha===targetCommit && run.head_sha===targetCommit &&
+    proof.conclusion==='success' && status.state==='success' && run.status==='completed' && run.conclusion==='success',
+    'DEPLOYMENT_COMMIT_MISMATCH', 'Actions workflow and deployment must prove the target commit succeeded');
+  requireEvidence(new URL(status.environment_url).origin===new URL(base).origin &&
+    new URL(proof.siteUrl).href===new URL(status.environment_url).href,
+    'DEPLOYMENT_SITE_MISMATCH', 'Deployment status is for another site');
   return {...proof, targetCommit};
 }
 export function verifyPageEvidence(proof, {date, channel, url, checkedAt}) {

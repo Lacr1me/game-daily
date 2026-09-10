@@ -189,6 +189,8 @@ Steam 优惠的确定性发现面是 Steam 官方 Specials 默认相关性首个
    保存须持租约。民生用 channel=minsheng；省略 channel 保留双频道检查。单频道保存 `YYYY-MM-DD-game-health.json` 或 `-minsheng-health.json`，双频道保留 `YYYY-MM-DD-health.json`，不覆盖另一频道证明。读取顶层和各频道 local/live 的 content/png/reachability/page/deployment；CONTENT_MISSING 不阻止另一 ready 频道继续。
 
    C 的健康接口要求证明 JSON 含 `deployment`、`pages.game/minsheng`、可选 mirror。页面证明为 `method:browser,checkedAt,url,displayedDate,selectedDate,downloadUrl`；Pages 证明为 `source:github-pages-api,checkedAt,headSha,conclusion:success,siteUrl,evidenceUrl`，对应完整目标 SHA 和站点的 Pages build API。证明默认不得早于检查 15 分钟、不得超前 60 秒。仅在已授权只读采集后提供；HTTP 200 只记 reachability，不等于页面/部署通过。生产门户及历史交互仍需额外验收。CLI 不自动获取凭据或生成浏览器证明。
+
+   本仓库使用 Actions 部署，旧 `/pages/builds/latest` 可能返回 404。此时从仓库 deployment、对应 status 和 `.github/workflows/pages.yml` workflow run API 采集真实记录。使用 `source:github-actions-pages-api`，保留上述时间、目标 SHA、成功结论、站点和 evidenceUrl（deployment API URL），并附 `deployment`、`deploymentStatus`、`workflowRun` 三份原始 API 对象。校验器核对同仓库/部署/运行关联、github-pages 环境、目标 SHA、成功状态及站点；不能改造 URL 冒充旧 build 证明，也不能仅凭某个 Actions 测试成功当作部署成功。新增兼容检查：`node scripts/test-pages-deployment-proof.mjs`。
 2. 先处理已 ready、尚未发布的频道：独立复核本频道完整性、正文、归档、覆盖（游戏）、readiness 和时间门禁，11:00 后调用 `node scripts/publish-minsheng.mjs --run-id=HHMM` 或 `node scripts/publish-brief.mjs --run-id=HHMM`。新发布入口要求显式 run-id；状态通过 B 的 updatePublicationState 接口写入。一个频道失败不阻止另一满足门禁的频道；不以双频道完整性作为单频道前置条件。
 3. 候选合法但未 ready：补本频道渲染、公开 PNG、预检和 mark-ready，然后发布。研究仍缺：仅补真实缺口和证据，沿用当天账本、审计快照与冻结 Steam appId；在本轮预算内依次推进候选至健康，不人为停在某检查点。
 4. 已正式归档：先核验当日索引/正文/公开 PNG，禁止重复发布。只有本地正式文件有效、线上部署失败时，仅检查已有目标提交、推送是否到达和 Pages 执行状态，修复部署并复核线上；不重搜、不重生成 JSON/PNG、不重跑发布脚本。已有部署还在运行时等待有界进展，不能反复触发。重试同一部署需已有授权，涉及额外配置/代码的修复按范围判断。
