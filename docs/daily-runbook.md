@@ -49,10 +49,10 @@
 | --- | --- | --- |
 | 单轮执行 | `runs[].status`：init 写 running；checkpoint 接收 `--run-status=complete\|failed` 并写 finishedAt | complete 表示正常收尾，包括到真实边界保存接力、ready 等待发布、无须重做；failed 表示本轮尚有未修复错误或硬阻塞。两者均不表示日报发布完成 |
 | 频道进度 | `channels.<channel>.status`：pending、researching、researched、ready、publishing、published；另有 issue、missingSections、published 布尔值 | reconcile 写 researching/researched；mark-ready 写 ready；发布脚本写 publishing/published。published 只证明本地发布步骤，不能代替线上证据 |
-| 全局阶段 | 初始化/协调/发布产生 research、candidate、ready、publish、published | 粗略汇总；单个发布脚本也会写全局 published，所以不能据此认定双频道已发完 |
+| 全局阶段 | 初始化/协调/发布产生 research、candidate、ready、publish、published | deriveStage 按双频道状态汇总；仅两频道 published 均为 true 时为 published。仍须分别核验文件与线上证据，不能用全局阶段证明双频道发送成功 |
 | 研究摘要 | `channels.<channel>.sections.<section>` 的 candidateCount、candidateIds、target、shortfall、missing、incomplete、evidenceComplete、evidenceMissingIds、frozenDiscoveryComplete | 数量来自账本当前有效集合；撤销/淘汰会减少数量。旧 ID 和布尔标记不能单独证明证据完成；来源事实仍需人工逐项核验 |
 | 就绪证明 | `readiness.channels.<channel>` 的 candidateSha256、htmlSha256、pngSha256、width、verifiedAt、preflight 及路径 | mark-ready 运行集中预检；绑定本频道研究、正文、审计/冻结、七期归档、渲染和视觉记录。任一相关依赖变化都必须重新证明 |
-| 线上健康 | health 的 healthy、degraded、warnings、reasonCodes、transport，以及 `channels.<channel>.local/live.content/png/deployment` 的 valid | 本地/线上逐项看；未传 --live 的 healthy 只有本地含义。顶层 healthy 是双频道汇总，单频道成功看它自己的 local/live.valid |
+| 线上健康 | health 的 healthy、degraded、warnings、reasonCodes、transport，以及 `channels.<channel>.local/live.content/png/reachability/page/deployment` 的 valid | 未传 --live 的 healthy 只有本地含义；顶层 healthy 汇总本次选定范围，省略 --channel 为双频道，指定后仅代表该频道。单频道成功不能证明双频道发送成功 |
 
 checkpoint 校验 stage/status/runStatus 枚举，不新增 waiting、blocked、done、day-complete 等状态值。退出原因独立使用 `--exit-reason=READY_WAITING_PUBLISH|ONLINE_HEALTHY|CONFIGURED_BUDGET|ENVIRONMENT_LIMIT|HANDOFF_BOUNDARY|SOURCE_EXHAUSTED|PERMISSION_REQUIRED|LEASE_LOST|REPAIRABLE_ERROR|HARD_BLOCKER`；镜像用频道 `--mirror-status=pending|complete|conflict`，对外仍可报告 DESKTOP_MIRROR_PENDING。预算退出须附 `--budget-file=<JSON>`，含 `kind=configured|environment|handoff`、`deadlineAt`、`basis`，与退出原因匹配。可修复错误不能作为 run complete 的理由。旧调用可省略退出原因，但不能据此声称预算已验证；不要手写 missingSections 掩盖缺口。
 
