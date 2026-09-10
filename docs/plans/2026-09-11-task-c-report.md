@@ -5,11 +5,13 @@
 ## 提交与变更清单
 
 - C 实现：`c9da28a`（发布恢复、健康、七期与时间语义）；C 集成修正：`5712f51`（租约提交边界、日志损坏拒绝、共享根独立性和租约转交验收）。报告收口另为文档提交。
-- 已集成 B 原始提交 `ebcf6eb`、`22cc9b2`、`16aa571`、`c13de80`；集成分支对应 `75fbbe7`、`65d2a78`、`ab2025d`、`8c167f8`。B 后续手册/报告由 B 独占维护，不能将未集成版本视作已验证版本。
+- 已集成 B 代码提交 `ebcf6eb`、`22cc9b2`、`16aa571`、`c13de80`；集成分支对应 `75fbbe7`、`65d2a78`、`ab2025d`、`8c167f8`。B 文档收口 `b14faf2` 已集成为 `39c6272`，包含 C 的发布恢复、健康、七期与时间语义手册建议。该提交只改手册和 B 报告，代码测试证据仍对应最终代码；B 文档由 B 独占维护。
 - C 修改：`scripts/publish-brief.mjs`、`scripts/publish-minsheng.mjs`、`scripts/check-daily-health.mjs`、`scripts/health-lib.mjs`、`scripts/archive-consistency.mjs`、`scripts/test-site.mjs`。
 - C 新增：`scripts/publish-channel.mjs`、`scripts/publish-transaction.mjs`、`scripts/health-browser-probe.mjs`、`scripts/test-publish-legacy-repro.mjs`、`scripts/test-publish-recovery.mjs`、`scripts/test-publish-integration.mjs`、`scripts/test-health-evidence.mjs`、`scripts/test-health-browser.mjs`、`scripts/test-archive-window.mjs`及本报告。
 
 ## 恢复协议
+
+文档追加复核：已纳入 B 的 `dcea2c6`，修正手册表格中全局阶段与单频道 healthy 的两处旧语义；只涉及两行文档，不改变代码验收范围。
 
 - `publish-brief.mjs`、`publish-minsheng.mjs` 进入共用 `publish-channel.mjs`，要求显式 `--run-id=...`。日期仍由北京时间计算，CLI 不开放时钟覆盖。每个文件写入前经 B 的只读完整预检和租约检查；生产 11:00 门禁保留。
 - `publish-transaction.mjs` 负责文件事务，日志为 `artifacts/operations/YYYY-MM-DD-CHANNEL-publish-transaction.json`。绑定日期、频道、正文 SHA256、PNG SHA256、事务 ID、索引修改前后哈希及内容、已完成步骤。
