@@ -4,6 +4,14 @@
   "publishAt": "11:00",
   "editions": [
     {
+      "date": "2026-09-12",
+      "issue": 22,
+      "publishAt": "2026-09-12T11:00:00+08:00",
+      "title": "游戏与 Minecraft 每日简报",
+      "headline": "《战狗》上线首日销量破125万",
+      "file": "data/2026-09-12.json"
+    },
+    {
       "date": "2026-09-11",
       "issue": 21,
       "publishAt": "2026-09-11T11:00:00+08:00",

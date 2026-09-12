@@ -1,0 +1,67 @@
+{
+  "date": "2026-09-12",
+  "issue": 22,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期六",
+  "lunarDate": "农历丙午年八月初二",
+  "cutoff": "2026-09-12 05:45（北京时间）",
+  "productionTime": "2026-09-12 05:45（北京时间）",
+  "sections": {
+    "domestic": [
+      {"id":"domestic-01","title":"国办推动治理拖欠中小企业账款难题","summary":"国务院办公厅发文完善大企业向中小企业付款机制，鼓励货物交付后六十日内以现金支付款项。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-10 17:01","url":"https://www.news.cn/20260910/8ff70cba6fb048a2806d553adf3d3cb4/c.html"},
+      {"id":"domestic-02","title":"国家对国内成品油价格实施临时调控","summary":"经临时调控后，汽油和柴油价格每吨分别上调二百六十元和二百五十元，低于机制测算涨幅。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-11 15:01","url":"https://www.news.cn/fortune/20260911/343d4c562c854a309a253c44e9f661b0/c.html"},
+      {"id":"domestic-03","title":"市场监管总局公布六起盲盒经营违法案例","summary":"六起案例涉及虚假宣传、销售假冒商品和侵害未成年人权益等问题，提示经营者依法规范盲盒销售。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-11 15:06","url":"https://www.news.cn/fortune/20260911/59b3175b04d04bda9161c8f01a9d215c/c.html"},
+      {"id":"domestic-04","title":"知识产权行政执法十大典型案例发布","summary":"市场监管部门发布二〇二五至二〇二六年度典型案例，其中一起假冒奢侈品案涉案金额超过五千万元。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-11 03:56","url":"https://www.news.cn/politics/20260911/7a7c88d4e77d4d2c9a80d0718d52fd99/c.html"},
+      {"id":"domestic-05","title":"贵州明确临时救助实行“小额快救”","summary":"贵州将五类急难情形纳入直接登记救助，小额快速救助上限原则上不超过当地一个月最低生活保障标准。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-11 14:42","url":"https://www.news.cn/20260911/ac0d90e18b694ba5bc2d85faed34e6ee/c.html"},
+      {"id":"domestic-06","title":"首批新版充电宝三Ｃ认证证书发放","summary":"首批三十二张新版证书发放，二〇二七年四月起出厂销售的充电宝须符合新增挤压和针刺等安全要求。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-11 10:43","url":"https://www.chinanews.com.cn/gn/2026/09-11/10694490.shtml"},
+      {"id":"domestic-07","title":"我国去年新发现非油气矿产地二百处","summary":"二〇二五年全国新发现矿产地中大型六十三处、中型五十七处、小型八十处，黄金和铁矿发现数量居前。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-11 11:12","url":"https://www.news.cn/politics/20260911/f1f377e8d6d549c59be6b665c9bda769/c.html"},
+      {"id":"domestic-08","title":"八月全国受理网络举报一千七百九十七万件","summary":"中央网信办举报中心通报，八月全国受理网络违法和不良信息举报一千七百九十七点二万件。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-10 15:43","url":"https://www.news.cn/politics/20260910/dbbc64eef4f84bca939acc8fc17cd72c/c.html"},
+      {"id":"domestic-09","title":"我国直接投资实现基本可兑换","summary":"国家外汇管理局出台新措施，进一步便利境内外主体直接投资资金跨境使用，提升资本项目开放水平。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-10 16:09","url":"https://www.news.cn/fortune/20260910/5c376d4bfb8a499e9e4d3f50760d208e/c.html"},
+      {"id":"domestic-10","title":"金融监管总局整治“价格战”和高息高返","summary":"金融监管总局部署规范行业竞争秩序，重点纠治无序价格竞争、高息揽储和高额返佣等违规行为。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-10 15:43","url":"https://www.news.cn/20260910/2dc8a0f3cf0d4b2d9ffa0a0c04319fba/c.html"}
+    ],
+    "international": [
+      {"id":"international-01","title":"特朗普称不后悔发动伊朗战争","summary":"特朗普表示即使重新选择仍会作出同样决定，美国媒体则称白宫官员判断战事可能延续至其任期结束。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-11 13:53","url":"https://www.news.cn/20260911/20b3aae715404f65ab17dcbad356ec78/c.html"},
+      {"id":"international-02","title":"日本防卫大臣重申不排除拥有核动力潜艇","summary":"日本防卫大臣称修订安保文件的研究不会排除核动力潜艇，引发与和平利用核能原则相冲突的质疑。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-11 13:20","url":"https://www.news.cn/world/20260911/158ab0ef64e347bcbad48d2721e42eba/c.html"},
+      {"id":"international-03","title":"日本企业物价指数连续三个月涨幅超百分之七","summary":"日本八月企业物价指数同比上涨百分之七点六，能源成本与日元贬值继续推高企业进口和生产成本。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-11 11:57","url":"https://www.news.cn/world/20260911/dffecb90a97f4109a2d515fe372d7950/c.html"},
+      {"id":"international-04","title":"尹锡悦涉嫌妨碍司法案一审获判无罪","summary":"韩国首尔中央地方法院对前总统尹锡悦涉嫌使犯罪嫌疑人逃避司法追究案作出一审无罪判决。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-11 14:13","url":"https://www.news.cn/20260911/c04aa84aa7ba42778f8a0ff4c1489697/c.html"},
+      {"id":"international-05","title":"也门胡塞武装占领红海哈尼什群岛","summary":"也门政府海军撤出后胡塞武装进入哈尼什群岛并部署兵力，该群岛靠近曼德海峡重要航运通道。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-11 04:52","url":"https://www.news.cn/20260911/2105c0a64106442498859faaf3549a07/c.html"},
+      {"id":"international-06","title":"美国举行首次太空实飞演习","summary":"美国太空司令部以真实航天器开展在轨机动，测试对抗环境下行动、后勤保障和多国商业力量协同。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-10 18:10","url":"https://www.news.cn/world/20260910/eccce6c1a11b4ed9b9c102a8c4918a2f/c.html"},
+      {"id":"international-07","title":"二〇二六年亚太经合组织工商峰会日期确定","summary":"峰会将于十一月十七日至十八日在深圳举办，约一千名代表将讨论亚太自贸区、互联互通和人工智能。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-10 18:46","url":"https://www.news.cn/world/20260910/4e2e3eb27c204cc6878e64b107ec37ad/c.html"},
+      {"id":"international-08","title":"特朗普否认美军战机在约旦遭伊朗袭击受损","summary":"特朗普否认驻约旦美军战机受损报道；此前美国媒体称一架攻击机和八架战斗机在袭击中受损。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-11 05:47","url":"https://www.news.cn/world/20260911/e1a5d08830b3415c8ec1973481b31f85/c.html"},
+      {"id":"international-09","title":"埃及外长表示愿深化对华务实合作","summary":"埃及外长表示将推动苏伊士经贸合作区建设，并拓展电动汽车、可再生能源和清洁能源领域合作。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-11 12:34","url":"https://www.news.cn/world/20260911/2a42c847904c4347ba3d500b311752b5/c.html"},
+      {"id":"international-10","title":"韩国爱宝乐园新生大熊猫幼崽得名“曙宝”","summary":"在韩国出生满百天的大熊猫幼崽正式得名“曙宝”并首次与公众见面，出生时体重为一百七十一克。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-11 08:44","url":"https://www.news.cn/world/20260911/a4722136cd69405395584525a9cc3762/c.html"}
+    ],
+    "tech": [
+      {"id":"tech-01","title":"“苍穹九〇”液体火箭发动机完成长程试车","summary":"百吨级液氧煤油发动机完成一百三十秒额定工况试车，累计二十余次试验后进入可靠性增长阶段。","source":"中国科技网","sourceOrigin":"china","publishedAt":"2026-09-10 19:05","url":"https://www.stdaily.com/web/gdxw/2026-09/10/content_578751.html"},
+      {"id":"tech-02","title":"全球最大级甲醇双燃料集装箱船海试","summary":"我国建造的二万四千一百六十八标箱甲醇双燃料集装箱船开展海试，船长约四百米、载重二十二点五万吨。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-11 17:00","url":"https://www.chinanews.com.cn/cj/2026/09-11/10694741.shtml"},
+      {"id":"tech-03","title":"“东方慧眼”计划二〇三〇年建成二百五十八星星座","summary":"商业遥感星座规划部署二百五十八颗卫星，面向全球提供高频高分辨率对地观测与数据服务。","source":"中国科技网","sourceOrigin":"china","publishedAt":"2026-09-10 19:04","url":"https://www.stdaily.com/web/gdxw/2026-09/10/content_578752.html"},
+      {"id":"tech-04","title":"定频构网技术首次用于边远牧区微电网","summary":"内蒙古风光储微电网投运，系统可在主网故障后孤岛运行并稳定供电至少三天，服务一百二十二户群众。","source":"中国科技网","sourceOrigin":"china","publishedAt":"2026-09-10 19:22","url":"https://www.stdaily.com/web/gdxw/2026-09/10/content_578691.html"},
+      {"id":"tech-05","title":"铁矿山首台全断面硬岩掘进机二次始发","summary":"“基石号”将承担约二点五千米胶带斜井掘进任务，以机械化作业提升施工效率并降低井下风险。","source":"中国科技网","sourceOrigin":"china","publishedAt":"2026-09-10 19:20","url":"https://www.stdaily.com/web/gdxw/2026-09/10/content_578685.html"},
+      {"id":"tech-06","title":"非开挖技术为城市地下管线做“微创手术”","summary":"新方案集成智能检测、专用材料和修复机器人，缺陷检测达到毫米级，机器人施工效率较人工提高五倍以上。","source":"中国科技网","sourceOrigin":"china","publishedAt":"2026-09-10 19:21","url":"https://www.stdaily.com/web/gdxw/2026-09/10/content_578692.html"},
+      {"id":"tech-07","title":"中国玉石标准首次纳入国际珠宝标准体系","summary":"国际《玉石》指南纳入中国评价体系，并将汉语拼音“Fei Cui”确立为翡翠专属国际宝石学名称。","source":"中国科技网","sourceOrigin":"china","publishedAt":"2026-09-10 15:12","url":"https://www.stdaily.com/web/gdxw/2026-09/10/content_578506.html"},
+      {"id":"tech-08","title":"混凝土模块化技术推动“好房子工厂造”","summary":"智能建造产品将约八成工序转入工厂，深圳百米保障房以六百五十四个模块完成主体吊装。","source":"中国科技网","sourceOrigin":"china","publishedAt":"2026-09-10 19:34","url":"https://www.stdaily.com/web/gdxw/2026-09/10/content_578696.html"},
+      {"id":"tech-09","title":"“测控除抑”技术体系降低蒿草花粉致敏风险","summary":"治理体系融合遥感调查、生态替代和智能除草装备，示范区蒿草密度下降、花粉浓度保持低位。","source":"中国科技网","sourceOrigin":"china","publishedAt":"2026-09-10 19:36","url":"https://www.stdaily.com/web/gdxw/2026-09/10/content_578695.html"},
+      {"id":"tech-10","title":"我国核保险实现本土模型定价和人民币结算","summary":"我国核保险业务启用本土风险定价模型和人民币本币结算，增强核能产业风险评估与保障的自主能力。","source":"中国科技网","sourceOrigin":"china","publishedAt":"2026-09-10 19:30","url":"https://www.stdaily.com/web/gdxw/2026-09/10/content_578690.html"}
+    ],
+    "ai": [
+      {"id":"ai-01","title":"“天机”气象大模型登顶国内外权威评测","summary":"该模型可分钟级预测全球未来四十五天、五公里十分钟分辨率天气，并在风速和降水指标上表现领先。","source":"中国科技网","sourceOrigin":"china","publishedAt":"2026-09-10 19:07","url":"https://www.stdaily.com/web/gdxw/2026-09/10/content_578688.html"},
+      {"id":"ai-02","title":"京医千询三点〇面向真实医疗任务发布","summary":"医疗大模型支持三维影像连续浏览、病灶定位测量和长程任务协作，相关工作台用于辅助医生完成临床任务。","source":"中国科技网","sourceOrigin":"china","publishedAt":"2026-09-10 15:13","url":"https://www.stdaily.com/web/gdxw/2026-09/10/content_578508.html"},
+      {"id":"ai-03","title":"Anthropic研究人员公开警告高级人工智能风险","summary":"多名研究人员认为模型能力快速提升而对齐方案仍不足，呼吁行业审慎处理递归式自我改进等高风险方向。","source":"中国科技网","sourceOrigin":"china","publishedAt":"2026-09-10 15:10","url":"https://www.stdaily.com/web/gdxw/2026-09/10/content_578505.html"},
+      {"id":"ai-04","title":"工业智能体开始替工厂排产和质检","summary":"工业互联网大会展示模型基于订单、库存和设备状态自主排产，并将经验转化为可复用的质检与运维能力。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-10 21:36","url":"https://www.news.cn/fortune/20260910/b3b2ebd8c156486ab6408e1a076d91aa/c.html"},
+      {"id":"ai-05","title":"人工智能工具进入高原口语教学与作文批改","summary":"多地教师将人工智能用于口语纠音、作文批改和学情分析，把标准化任务交给机器并保留教师个性化辅导。","source":"中国科技网","sourceOrigin":"china","publishedAt":"2026-09-10 19:31","url":"https://www.stdaily.com/web/gdxw/2026-09/10/content_578689.html"}
+    ]
+  },
+  "topStoryIds": ["domestic-02", "international-02", "tech-04"],
+  "metrics": [
+    {"kind":"gold","icon":"🥇","name":"国内金价","value":"Au99.99最新价：940.00元/克","note":"2026-09-11延时行情","source":"上海黄金交易所","sourceUrl":"https://www.sge.com.cn/h5_sjzx/yshq","sourceOrigin":"china"},
+    {"kind":"domestic_oil","icon":"⛽","name":"北京油价","value":"92号8.29元/升；95号8.83元/升","note":"2026-09-11 24时起最高零售价","source":"北京市发展和改革委员会","sourceUrl":"https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202609/t20260911_4860093.htm","sourceOrigin":"china"},
+    {"kind":"international_oil","icon":"🛢️","name":"国际油价","value":"WTI 102.48美元/桶；布伦特107.63美元/桶","note":"2026-09-10最近完整收盘","source":"新华网","sourceUrl":"https://www.news.cn/fortune/20260911/da6e848104dd4c7482aca708b9ff8d6a/c.html","sourceOrigin":"china"},
+    {"kind":"usd_cny","icon":"💵","name":"人民币兑美元","value":"1美元＝6.7743元人民币","note":"2026-09-11中间价","source":"中国外汇交易中心","sourceUrl":"https://www.news.cn/20260911/039e50e87386488b9604bf242c71795c/c.html","sourceOrigin":"china"},
+    {"kind":"eur_cny","icon":"💶","name":"人民币兑欧元","value":"1欧元＝7.8367元人民币","note":"2026-09-11中间价","source":"中国外汇交易中心","sourceUrl":"https://www.news.cn/20260911/039e50e87386488b9604bf242c71795c/c.html","sourceOrigin":"china"},
+    {"kind":"jpy_cny","icon":"💴","name":"人民币兑日元","value":"100日元＝4.3614元人民币","note":"2026-09-11中间价","source":"中国外汇交易中心","sourceUrl":"https://www.news.cn/20260911/039e50e87386488b9604bf242c71795c/c.html","sourceOrigin":"china"}
+  ],
+  "metricsCutoff": "2026-09-12 05:45（北京时间）",
+  "metricSources": ["上海黄金交易所", "北京市发展和改革委员会", "新华网", "中国外汇交易中心"],
+  "observation": "今天的民生线索集中在安全规则、困难救助与市场秩序。成品油调控、新版充电宝认证和拖欠账款治理，说明公共政策正同时回应生活成本、产品安全与中小企业现金流。国际局势仍受军事冲突与能源成本牵动，日本企业物价高位也提示输入性压力未退。科技侧从牧区微电网、地下管线修复延伸到医疗和工业智能体，技术落地越深，可靠性、权限边界与人工复核越应成为默认配置。",
+  "sources": ["新华网", "中国新闻网", "中国科技网"]
+}
