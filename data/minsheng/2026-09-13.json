@@ -1,0 +1,67 @@
+{
+  "date": "2026-09-13",
+  "issue": 23,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期日",
+  "lunarDate": "农历丙午年八月初三",
+  "cutoff": "2026-09-13 05:40（北京时间）",
+  "productionTime": "2026-09-13 05:40（北京时间）",
+  "sections": {
+    "domestic": [
+      {"id":"domestic-01","title":"各地各部门进一步压实安全生产责任","summary":"青岛外籍货轮火灾造成重大人员伤亡后，各地各部门部署排查火灾隐患、压实责任，防范遏制重特大事故。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-12 00:21","url":"https://www.news.cn/politics/20260912/f7001db881ee40c4b16865e35eb8c0c4/c.html"},
+      {"id":"domestic-02","title":"六起地方政府隐性债务问责案例公开通报","summary":"有关部门通报六起地方政府隐性债务追责问责典型案例，释放严肃财经纪律、遏制违法违规举债的明确信号。","source":"人民网","sourceOrigin":"china","publishedAt":"2026-09-12 08:12","url":"https://cpc.people.com.cn/n1/2026/0912/c64387-40797363.html"},
+      {"id":"domestic-03","title":"个人消费贷款贴息政策提额扩围","summary":"个人消费贷款财政贴息政策提高年度贴息上限并扩大支持范围，信用卡分期等消费信贷场景也被纳入政策覆盖。","source":"人民网","sourceOrigin":"china","publishedAt":"2026-09-12 08:45","url":"https://finance.people.com.cn/n1/2026/0912/c1004-40797410.html"},
+      {"id":"domestic-04","title":"农村集体三资治理推动账目公开到户","summary":"多地以数字平台公开农村集体资金、资产和资源账目，让村民通过移动端查账监督，提升基层治理透明度。","source":"人民网","sourceOrigin":"china","publishedAt":"2026-09-12 08:44","url":"https://finance.people.com.cn/n1/2026/0912/c1004-40797404.html"},
+      {"id":"domestic-05","title":"优化营商环境加快破除地方保护","summary":"全国统一大市场建设持续纠治地方保护和市场分割，政策重点从局部优惠转向稳定规则、公平准入和协同服务。","source":"人民网","sourceOrigin":"china","publishedAt":"2026-09-12 08:44","url":"https://finance.people.com.cn/n1/2026/0912/c1004-40797406.html"},
+      {"id":"domestic-06","title":"服贸会展示绿色金融可触摸成果","summary":"服贸会展区集中呈现碳中和凭证、绿色保险和跨境风险保障等案例，让绿色金融从概念走向可核验的服务场景。","source":"人民网","sourceOrigin":"china","publishedAt":"2026-09-12 09:31","url":"https://finance.people.com.cn/n1/2026/0912/c1004-40797452.html"},
+      {"id":"domestic-07","title":"投洽会释放外资深耕中国市场新信号","summary":"第二十六届投洽会吸引一百二十九个国家和地区客商，多家企业看好健康消费、绿色转型和本土研发机遇。","source":"人民网","sourceOrigin":"china","publishedAt":"2026-09-12 05:11","url":"https://finance.people.com.cn/n1/2026/0912/c1004-40797275.html"},
+      {"id":"domestic-08","title":"保险服务探索托举居家养老需求","summary":"我国六十岁以上人口占比已达23%，超三点二亿老年人依托居家养老，保险机构正探索打通照护供需堵点。","source":"人民网","sourceOrigin":"china","publishedAt":"2026-09-11 09:09","url":"https://finance.people.com.cn/n1/2026/0911/c1004-40796817.html"},
+      {"id":"domestic-09","title":"银发产品市场加快建立标准与认证","summary":"适老产品供给持续丰富，但选品和辨质仍有堵点，政策建议以认证标识、线下体验和支付保障扩大银发消费。","source":"人民网","sourceOrigin":"china","publishedAt":"2026-09-11 07:43","url":"https://finance.people.com.cn/n1/2026/0911/c1004-40796526.html"},
+      {"id":"domestic-10","title":"车企供应链账期呼唤更多刚性约束","summary":"汽车产业整治无序竞争进一步聚焦付款账期，业内建议完善合同、验收和现金支付规则，缓解中小供应商压力。","source":"人民网","sourceOrigin":"china","publishedAt":"2026-09-12 08:44","url":"https://finance.people.com.cn/n1/2026/0912/c1004-40797407.html"}
+    ],
+    "international": [
+      {"id":"international-01","title":"中方警告勿随意扩大苏丹制裁范围","summary":"中国代表在联合国安理会表示，对苏丹制裁应服务政治解决和人道目标，避免扩大范围加剧普通民众困境。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-12 04:47","url":"https://www.news.cn/20260912/0526e2b8be794e488d589cdd4c85fa4e/c.html"},
+      {"id":"international-02","title":"中方在联合国呼吁深化南南合作","summary":"中方呼吁让发展重回联合国议程中心，并表示全球发展倡议五年来累计动员二百三十多亿美元资金。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-12 06:54","url":"https://www.news.cn/20260912/ce4675e497ac4e89a07f5b3c5f17c1f8/c.html"},
+      {"id":"international-03","title":"中国代表团参加粮农组织渔业委员会会议","summary":"中方在罗马参加全球渔业治理会议，并与粮农组织围绕水产养殖创新、绿色发展和区域合作举办专题边会。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-12 02:18","url":"https://www.news.cn/world/20260912/0d9cacd23e194f4ab70f71a7396fbc9a/c.html"},
+      {"id":"international-04","title":"中国第五批援尼泊尔物资运抵加德满都","summary":"中国向尼泊尔提供的第五批紧急援助物资抵达加德满都，继续支持受灾地区恢复生活和推进灾后重建。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-11 15:51","url":"https://www.xinhuanet.com/20260911/1d3412c586e74c01bddd7dcae709f03f/c.html"},
+      {"id":"international-05","title":"多种传染病蔓延加剧苏丹卫生危机","summary":"武装冲突破坏供水和医疗系统，霍乱等传染病持续扩散，苏丹公共卫生体系面临药品短缺和救治能力不足。","source":"国际在线","sourceOrigin":"china","publishedAt":"2026-09-11 11:05","url":"https://news.cri.cn/20260911/2f2e9a66-52ea-4eaf-8389-3f1671f03efc.html"},
+      {"id":"international-06","title":"纪录片披露加沙空袭平民伤亡决策","summary":"一部纪录片援引调查材料称，以军在掌握平民伤亡风险的情况下仍实施部分空袭，引发对交战规则的追问。","source":"国际在线","sourceOrigin":"china","publishedAt":"2026-09-11 09:58","url":"https://news.cri.cn/20260911/148c2443-3d79-429f-95b7-fd08b4a61960.html"},
+      {"id":"international-07","title":"金砖合作聚焦全球南方发展与治理","summary":"第十八次金砖国家领导人会晤在新德里举行前夕，各方期待加强经贸金融合作并提升全球南方治理话语权。","source":"人民网","sourceOrigin":"china","publishedAt":"2026-09-11 14:27","url":"https://world.people.com.cn/n1/2026/0911/c1002-40796987.html"},
+      {"id":"international-08","title":"菲律宾客轮起火致五死多人失联","summary":"菲律宾巴拉望省附近海域一艘客轮发生火灾，事故已造成五人死亡、八十七人下落不明，搜救仍在继续。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-10 08:16","url":"https://www.news.cn/world/20260910/33741ef274fb4880ad5afc608664957a/c.html"},
+      {"id":"international-09","title":"乌克兰苏梅市购物中心遇袭造成伤亡","summary":"乌克兰苏梅市一家购物中心遭无人机袭击，至少两人死亡、二十人受伤，其中四名伤者伤势严重。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-10 07:33","url":"https://www.news.cn/world/20260910/114dbab2ba7a4d68a61ada0324e7576c/c.html"},
+      {"id":"international-10","title":"全球针对学校的袭击事件大幅增加","summary":"联合国教科文组织称二〇二五年全球发生一千六百八十起针对学校的袭击，同比增加百分之三十三。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-09 11:41","url":"https://www.news.cn/world/20260909/5352923c72dd4758a3f25db22c9779b9/c.html"}
+    ],
+    "tech": [
+      {"id":"tech-01","title":"科技金融成为产业起飞的重要支点","summary":"地方以种子基金、信贷和产业资本联动支持早期科技项目，推动实验室成果跨过中试和规模化应用门槛。","source":"人民网","sourceOrigin":"china","publishedAt":"2026-09-12 08:45","url":"https://finance.people.com.cn/n1/2026/0912/c1004-40797411.html"},
+      {"id":"tech-02","title":"人形机器人灵巧手加快建立行业标准","summary":"人形机器人末端执行器接口规范进入标准制定计划，产业从展示抓取转向真实工序成功率和可靠性验证。","source":"人民网","sourceOrigin":"china","publishedAt":"2026-09-12 08:43","url":"https://finance.people.com.cn/n1/2026/0912/c1004-40797399.html"},
+      {"id":"tech-03","title":"算力与电力协同探索多维度新路径","summary":"我国大型智算集群快速增长，行业正从布局、调度和绿色能源供给等方面推进算电协同，降低算力能耗压力。","source":"人民网","sourceOrigin":"china","publishedAt":"2026-09-12 08:45","url":"https://finance.people.com.cn/n1/2026/0912/c1004-40797412.html"},
+      {"id":"tech-04","title":"智能眼镜技术竞争回归真实用户体验","summary":"智能眼镜企业把多语种识别、离线翻译和佩戴舒适度作为落地重点，产品价值最终仍需由高频场景检验。","source":"人民网","sourceOrigin":"china","publishedAt":"2026-09-12 08:44","url":"https://finance.people.com.cn/n1/2026/0912/c1004-40797408.html"},
+      {"id":"tech-05","title":"低空经济加快补齐协同治理能力","summary":"我国注册无人机数量持续增长，行业提出统筹空域、基础设施、监管与应用场景，降低重复建设和安全风险。","source":"人民网","sourceOrigin":"china","publishedAt":"2026-09-12 08:44","url":"https://finance.people.com.cn/n1/2026/0912/c1004-40797405.html"},
+      {"id":"tech-06","title":"实用机器人展示中国智造落地能力","summary":"机器人展品从表演转向剥虾、分拣等具体任务，以作业完整率、成功率和效率衡量产品在真实场景的价值。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-11 10:55","url":"https://www.news.cn/tech/20260911/1fdc8cfdb0ff41f298b617092fc29514/c.html"},
+      {"id":"tech-07","title":"新理论解释超高能光子跨越二十亿光年","summary":"研究团队提出极端高能条件下光子传播规律可能出现细微变化，以解释三百TeV光子的超远距离到达。","source":"中国科技网","sourceOrigin":"china","publishedAt":"2026-09-11 01:45","url":"https://www.stdaily.com/web/gdxw/2026-09/11/content_578646.html"},
+      {"id":"tech-08","title":"迄今最遥远原始星系团被发现","summary":"天文学团队发现诞生于宇宙年龄约二十一亿年时的原始星系团，其质量约为银河系的五千倍。","source":"中国科技网","sourceOrigin":"china","publishedAt":"2026-09-11 01:35","url":"https://www.stdaily.com/web/gdxw/2026-09/11/content_578645.html"},
+      {"id":"tech-09","title":"冷冻结构化让豆类形成仿肉纤维","summary":"研究人员借助冰晶单向生长让整颗豆制品形成定向纤维结构，减少分离加工并保留更多营养成分。","source":"中国科技网","sourceOrigin":"china","publishedAt":"2026-09-11 01:35","url":"https://www.stdaily.com/web/gdxw/2026-09/11/content_578644.html"},
+      {"id":"tech-10","title":"服贸会前沿科技加快走进服务场景","summary":"服贸会集中展示信息通信、数智医疗和机器人服务等成果，以动态演示和实景体验推动技术走向市场。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-11 10:51","url":"https://www.news.cn/expo/20260911/0ffb2b7e911e489e964504f249ba9236/c.html"}
+    ],
+    "ai": [
+      {"id":"ai-01","title":"人工智能加交通明确十个重点方向","summary":"交通运输领域提出十个发展方向和四十一项优先场景，推动人工智能在规划、运营、服务和安全监管中落地。","source":"人民网","sourceOrigin":"china","publishedAt":"2026-09-12 08:45","url":"https://finance.people.com.cn/n1/2026/0912/c1004-40797409.html"},
+      {"id":"ai-02","title":"人工智能产业扶持转向精准评价","summary":"多地反思粗放补贴和同质化园区竞争，政策重心正转向真实场景、持续研发能力和可衡量的产业贡献。","source":"人民网","sourceOrigin":"china","publishedAt":"2026-09-12 08:44","url":"https://finance.people.com.cn/n1/2026/0912/c1004-40797401.html"},
+      {"id":"ai-03","title":"京东发布物理人工智能六项成果","summary":"京东公布机器人和物理人工智能布局，提出围绕供应链真实任务建设模型、算力与数据闭环，验证规模化能力。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-09 17:12","url":"https://www.news.cn/tech/20260909/c606d9a006db4af2a703dfcf1124417d/c.html"},
+      {"id":"ai-04","title":"人工智能全球治理议题在上海展开讨论","summary":"人工智能与发展大会汇聚产业和学界代表，讨论技术创新、公共服务与治理协同，强调让智能能力形成普惠价值。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-10 20:39","url":"https://www.sh.chinanews.com.cn/kjjy/2026-09-10/149142.shtml"},
+      {"id":"ai-05","title":"基因组语言模型加速遗传变异识别","summary":"新模型借助进化比对学习三十亿碱基的语法，以更低计算成本筛选可能致病的遗传变异和调控元件。","source":"中国科技网","sourceOrigin":"china","publishedAt":"2026-09-11 01:45","url":"https://www.stdaily.com/web/gdxw/2026-09/11/content_578647.html"}
+    ]
+  },
+  "topStoryIds": ["domestic-03", "international-01", "tech-02"],
+  "metrics": [
+    {"kind":"gold","icon":"🥇","name":"国内金价","value":"Au99.99最新价：940.00元/克","note":"2026-09-11延时行情","source":"上海黄金交易所","sourceUrl":"https://www.sge.com.cn/h5_sjzx/yshq","sourceOrigin":"china"},
+    {"kind":"domestic_oil","icon":"⛽","name":"北京油价","value":"92号8.29元/升；95号8.83元/升","note":"2026-09-11 24时起最高零售价","source":"北京市发展和改革委员会","sourceUrl":"https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202609/t20260911_4860093.htm","sourceOrigin":"china"},
+    {"kind":"international_oil","icon":"🛢️","name":"国际油价","value":"WTI 102.48美元/桶；布伦特107.63美元/桶","note":"2026-09-10最近完整收盘","source":"新华网","sourceUrl":"https://www.news.cn/fortune/20260911/da6e848104dd4c7482aca708b9ff8d6a/c.html","sourceOrigin":"china"},
+    {"kind":"usd_cny","icon":"💵","name":"人民币兑美元","value":"1美元＝6.7743元人民币","note":"2026-09-11中间价","source":"中国外汇交易中心","sourceUrl":"https://www.news.cn/20260911/039e50e87386488b9604bf242c71795c/c.html","sourceOrigin":"china"},
+    {"kind":"eur_cny","icon":"💶","name":"人民币兑欧元","value":"1欧元＝7.8367元人民币","note":"2026-09-11中间价","source":"中国外汇交易中心","sourceUrl":"https://www.news.cn/20260911/039e50e87386488b9604bf242c71795c/c.html","sourceOrigin":"china"},
+    {"kind":"jpy_cny","icon":"💴","name":"人民币兑日元","value":"100日元＝4.3614元人民币","note":"2026-09-11中间价","source":"中国外汇交易中心","sourceUrl":"https://www.news.cn/20260911/039e50e87386488b9604bf242c71795c/c.html","sourceOrigin":"china"}
+  ],
+  "metricsCutoff": "2026-09-11 15:30（北京时间）",
+  "metricSources": ["上海黄金交易所", "北京市发展和改革委员会", "新华网", "中国外汇交易中心"],
+  "observation": "今天的民生线索集中在安全治理、消费支持和产业规则。消费贷贴息提额扩围，农村集体三资公开与安全生产排查同步推进，说明政策既在稳需求，也在补治理短板。国际局势仍受冲突、人道危机和全球南方合作牵动。科技侧从灵巧手标准、算电协同延伸到基因模型，落地价值越来越依赖真实场景、可靠指标与持续复核，而不是单次展示。",
+  "sources": ["新华网", "人民网", "国际在线", "中国科技网", "中国新闻网"]
+}
