@@ -1,0 +1,67 @@
+{
+  "date": "2026-09-14",
+  "issue": 24,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期一",
+  "lunarDate": "农历丙午年八月初四",
+  "cutoff": "2026-09-14 05:45（北京时间）",
+  "productionTime": "2026-09-14 05:45（北京时间）",
+  "sections": {
+    "domestic": [
+      {"id":"domestic-01","title":"国家医保局通报医院商业贿赂案件","summary":"国家医保局通报河北一医院工作人员长期收受医药企业商业贿赂，并将案源交地方开展信用评价和飞检。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-13 22:05","url":"https://www.news.cn/20260913/c925bcdaf4744635bb305ba7d1e25b0b/c.html"},
+      {"id":"domestic-02","title":"海南强降雨已转移三万余名群众","summary":"海南多地持续强降雨，全省紧急转移危险区域群众三万一千余人，多地停课并关闭部分景区。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-13 21:53","url":"https://www.news.cn/local/20260913/661cb25bb4d04644b735987974737c0b/c.html"},
+      {"id":"domestic-03","title":"多地以演练宣讲排查筑牢消防防线","summary":"山东、河南等地开展消防应急演练、科普宣讲和隐患排查，面向企业、社区和学校提升防火避险能力。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-13 19:19","url":"https://www.news.cn/photo/20260913/c8819a9ee940404ab7e3e5836aeaafa2/c.html"},
+      {"id":"domestic-04","title":"硬纤维瘤患者关爱平台在京启动","summary":"患者组织和医学专家启动硬纤维瘤关爱之家，推动诊疗知识共享、病友互助和多学科资源整合。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-13 22:04","url":"https://www.news.cn/politics/20260913/6c5c6be49f0f482c85c3312e5e1f90e9/c.html"},
+      {"id":"domestic-05","title":"雄安微服务回应疏解人员日常需求","summary":"雄安以定制通勤、安心暑托、社区响应和落户咨询等微服务，改善疏解人员工作生活衔接。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-13 10:31","url":"https://www.news.cn/politics/20260913/d5bfb6dc574e4f18a8087f199b89cd84/c.html"},
+      {"id":"domestic-06","title":"二〇二六年服贸会达成千余项成果","summary":"本届服贸会在北京闭幕，共达成七类一千二百余项成果，线上线下参展企业超过七千家，合作覆盖多个领域。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-13 19:11","url":"https://www.news.cn/photo/20260913/a8af39c866f64983ab3addb0905d5091/c.html"},
+      {"id":"domestic-07","title":"多地精细田管护航秋粮关键生长期","summary":"秋粮进入产量形成关键期，各地组织科技服务、排涝补肥和农资保供，稳定粮食作物长势。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-13 01:47","url":"https://www.news.cn/politics/20260913/80e8c71a06de4106b171780a242440be/c.html"},
+      {"id":"domestic-08","title":"夫妻警务室扎根大漠服务边境群众","summary":"两名基层警务人员共同守护三千余平方公里边境辖区，并以智能监控和无人机提升巡防效率。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-13 10:27","url":"https://www.news.cn/photo/20260913/fe115e4683594975afbb48b5e3a37d33/c.html"},
+      {"id":"domestic-09","title":"福建长汀水土治理带动生态富民","summary":"长汀水土流失率由三成以上降至百分之六点三一，并通过林下产业和油茶种植带动群众增收。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-13 20:55","url":"https://www.news.cn/politics/20260913/b35c218ae8ab4d08a772e6f8d50026a3/c.html"},
+      {"id":"domestic-10","title":"乡村供水与低空物流补齐服务短板","summary":"甘肃完善城乡供水保障，四川渠县开通四十八条无人机乡村航线，让近六万村民获得更便捷的服务。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-13 10:38","url":"https://www.news.cn/politics/20260913/56b2eb1a6b8341edbf1eed9f055ef07c/c.html"}
+    ],
+    "international": [
+      {"id":"international-01","title":"金砖国家发布新德里宣言","summary":"金砖国家重申深化政治安全、经贸财金和人文交流合作，推动多边体系改革与包容性增长。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-13 02:33","url":"https://www.news.cn/world/20260913/90532f95215444e29769adba68ee0ffe/c.html"},
+      {"id":"international-02","title":"俄乌报告新一轮大规模空袭与伤亡","summary":"俄方称打击乌克兰军工保障设施，乌方称四百余架无人机来袭，敖德萨已有人员伤亡，双方说法仍待核验。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-13 20:57","url":"https://www.news.cn/20260913/5e2282214e3343fcb7e8cd8ca7367de0/c.html"},
+      {"id":"international-03","title":"印尼客轮倾覆造成六死百余人失踪","summary":"印度尼西亚一艘客轮在爪哇海倾覆，已确认六人遇难、一百三十人失踪，一百余人获救，搜救行动仍在继续。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-13 20:30","url":"https://www.news.cn/20260913/0250d064588f4c5185bc9fecc300f0c3/c.html"},
+      {"id":"international-04","title":"胡塞武装称在穆哈释放二百一十人","summary":"也门胡塞武装称攻占红海港口穆哈后释放二百一十名被关押成员，政府方面暂未就该事件发表评论。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-13 18:16","url":"https://www.news.cn/20260913/f5349850a9bd4fb19ab6bd0b271709a5/c.html"},
+      {"id":"international-05","title":"伊朗一艘商船遇袭造成人员伤亡","summary":"伊朗媒体称一艘商船在南部格什姆岛附近海域遭袭，造成一人死亡、三人受伤，袭击方身份暂不明确。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-13 12:47","url":"https://www.news.cn/20260913/c82c130c25ae4f6994567bfb7e4e1417/c.html"},
+      {"id":"international-06","title":"阿曼推迟霍尔木兹议题地区会议","summary":"阿曼外交大臣表示，为寻求地区国家共识，原定十四日在塞拉莱举行的霍尔木兹议题会议已推迟。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-14 04:04","url":"https://www.news.cn/world/20260914/681743cd85c94bd0bd278f13e9c64c95/c.html"},
+      {"id":"international-07","title":"自民党支持候选人当选冲绳知事","summary":"古谢玄太在冲绳县知事选举中胜出，美军普天间基地搬迁是本次选举焦点，地方立场可能由此转向。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-14 03:44","url":"https://www.news.cn/world/20260914/c62e3b64e7ab456b88fd0c563723ca66/c.html"},
+      {"id":"international-08","title":"特朗普爱尔兰统一言论遭英国反对","summary":"特朗普访问爱尔兰时表示希望爱尔兰统一，英国保守党和改革党领导人均公开反对，相关表态引发争议。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-13 20:55","url":"https://www.news.cn/world/20260913/a54f35ed0b6b4c419a8646ce0d35735e/c.html"},
+      {"id":"international-09","title":"德国民调显示默茨支持率持续走低","summary":"一项线上民调显示，近八成受访者认为默茨不适合继续担任德国总理，仅一成多表示认可。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-13 15:01","url":"https://www.news.cn/world/20260913/6d5ccd4b33e847faa4b19b8f9f64b8c0/c.html"},
+      {"id":"international-10","title":"南亚八国加强打击野生动植物走私","summary":"南亚八国通过加德满都宣言，承诺以协调执法、金融调查和司法合作打击非法野生动植物贸易。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-12 10:49","url":"https://www.news.cn/world/20260912/fca0d30804ab4b668ed59a321ca8ef5c/c.html"}
+    ],
+    "tech": [
+      {"id":"tech-01","title":"全国算力一张网加快形成一体化调度","summary":"全国一体化算力网已布局七十余条跨区域算力传输通道，十七个国家枢纽区域节点推进资源统一监测调度。","source":"中国科技网","sourceOrigin":"china","publishedAt":"2026-09-13 11:50","url":"https://www.stdaily.com/web/gdxw/2026-09/13/content_580143.html"},
+      {"id":"tech-02","title":"长三角基础研究协同再添平台支撑","summary":"浦江创新论坛启动长三角基础研究联合基金重大专项和科学数据共享平台，推动跨区域资源协同。","source":"中国科技网","sourceOrigin":"china","publishedAt":"2026-09-13 08:26","url":"https://www.stdaily.com/web/2026-09/13/content_580103.html"},
+      {"id":"tech-03","title":"我国高端数字化能力加速走向海外","summary":"中国企业依托全球网络节点、海缆和云服务能力，为一百三十多个国家提供数字基础设施与智能服务。","source":"中国科技网","sourceOrigin":"china","publishedAt":"2026-09-11 07:35","url":"https://www.stdaily.com/web/2026-09/11/content_578912.html"},
+      {"id":"tech-04","title":"三维打印耳廓为软骨修复提供新路径","summary":"国内团队以酪蛋白生物墨水和自体细胞打印复杂耳廓结构，为个性化软骨修复和组织再生提供方案。","source":"中国科技网","sourceOrigin":"china","publishedAt":"2026-09-13 11:48","url":"https://www.stdaily.com/web/gdxw/2026-09/13/content_580148.html"},
+      {"id":"tech-05","title":"中国智能矿业技术服务全球南方","summary":"我国智能煤矿产能占比已超六成，数千辆无人矿卡投入作业，相关技术服务覆盖七十八个国家。","source":"中国科技网","sourceOrigin":"china","publishedAt":"2026-09-13 13:28","url":"https://www.stdaily.com/web/gdxw/2026-09/13/content_580163.html"},
+      {"id":"tech-06","title":"柳州万台级人形机器人智慧工厂投产","summary":"柳州人形机器人智慧工厂实现机器人参与机器人制造，设计产能达年产一万台，平均十分钟下线一台。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-13 13:51","url":"https://www.news.cn/tech/20260913/66fe597171834a658409b09f2015c13a/c.html"},
+      {"id":"tech-07","title":"超级稻计划三十年持续推进高产攻关","summary":"我国超级稻研发从品种创制延伸到绿色高效栽培，多地开展新品种示范和百亩方产量验收。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-13 18:46","url":"https://www.news.cn/20260913/a713c08529564e7eba02dd1cd3218661/c.html"},
+      {"id":"tech-08","title":"六省市综合科技创新水平领先全国","summary":"最新区域科技创新评价报告显示，全国综合科技创新水平得分提高，上海、北京等六省市继续领跑。","source":"中国科技网","sourceOrigin":"china","publishedAt":"2026-09-11 15:39","url":"https://www.stdaily.com/web/gdxw/2026-09/11/content_579332.html"},
+      {"id":"tech-09","title":"我国首次发布智能填图与智能找矿系统","summary":"两套自主系统覆盖地质调查和矿产勘查全链条，可将部分预测评价工作由半年压缩至一周。","source":"中国科技网","sourceOrigin":"china","publishedAt":"2026-09-11 12:37","url":"https://www.stdaily.com/web/gdxw/2026-09/11/content_579221.html"},
+      {"id":"tech-10","title":"全球创新城市联盟启动筹建","summary":"上海与联合国教科文组织等发布共识，推动全球创新城市在科研协作、成果转化与人才交流方面建立常态网络。","source":"中国科技网","sourceOrigin":"china","publishedAt":"2026-09-12 22:20","url":"https://www.stdaily.com/web/gdxw/2026-09/12/content_580063.html"}
+    ],
+    "ai": [
+      {"id":"ai-01","title":"科创问答智能体小科热线正式上线","summary":"科技日报依托四十年科技报道资源构建垂类语料库，推出已完成备案、面向公众服务的科创问答智能体。","source":"中国科技网","sourceOrigin":"china","publishedAt":"2026-09-11 15:24","url":"https://www.stdaily.com/web/gdxw/2026-09/11/content_579326.html"},
+      {"id":"ai-02","title":"人工智能加软件专项行动明确路线图","summary":"工信部部署智能编程、工业智能体和技能包生态建设，提出到二〇三〇年推动关键软件全面智能化升级。","source":"中国科技网","sourceOrigin":"china","publishedAt":"2026-09-11 13:31","url":"https://www.stdaily.com/web/gdxw/2026-09/11/content_579258.html"},
+      {"id":"ai-03","title":"人工智能让工业互联网进入决策环节","summary":"制造企业把大模型和智能体用于排产、质检、设备预警与能耗调度，工业互联从连接设备转向辅助决策。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-11 08:46","url":"https://www.news.cn/tech/20260911/f8bdb88c78554d5b84a221c39d7c1833/c.html"},
+      {"id":"ai-04","title":"中国东盟金融AI共享网络落地","summary":"金融展区推出分布式组网和隐私计算基础设施，并建设反洗钱数据集和多语种金融语料库。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-12 09:12","url":"https://www.gx.news.cn/20260912/5e85a15b4104484d8a42f0e5a6ed54ac/c.html"},
+      {"id":"ai-05","title":"人工智能重塑程序员岗位能力结构","summary":"行业解读人工智能加软件方案称，编码执行权重下降，需求理解、架构设计和生成结果校验成为核心能力。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-11 19:06","url":"https://www.news.cn/20260911/5fb61e122095434c9ea6af0badc2ecab/c.html"}
+    ]
+  },
+  "topStoryIds": ["domestic-01", "international-03", "tech-01"],
+  "metrics": [
+    {"kind":"gold","icon":"🥇","name":"国内金价","value":"Au99.99最新价：935.49元/克","note":"2026-09-11延时行情","source":"上海黄金交易所","sourceUrl":"https://sge.com.cn/h5_sjzx/yshq","sourceOrigin":"china"},
+    {"kind":"domestic_oil","icon":"⛽","name":"北京油价","value":"92号8.29元/升；95号8.83元/升","note":"2026-09-11 24时起最高零售价","source":"北京市发展和改革委员会","sourceUrl":"https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202609/t20260911_4860093.htm","sourceOrigin":"china"},
+    {"kind":"international_oil","icon":"🛢️","name":"国际油价","value":"WTI 102.48美元/桶；布伦特107.63美元/桶","note":"2026-09-10最近完整收盘","source":"新华网","sourceUrl":"https://www.news.cn/fortune/20260911/da6e848104dd4c7482aca708b9ff8d6a/c.html","sourceOrigin":"china"},
+    {"kind":"usd_cny","icon":"💵","name":"人民币兑美元","value":"1美元＝6.7743元人民币","note":"2026-09-11中间价","source":"中国外汇交易中心","sourceUrl":"https://www.news.cn/fortune/20260911/01eb48fe64b04131a4dcae3dea7ab550/c.html","sourceOrigin":"china"},
+    {"kind":"eur_cny","icon":"💶","name":"人民币兑欧元","value":"1欧元＝7.8367元人民币","note":"2026-09-11中间价","source":"中国外汇交易中心","sourceUrl":"https://www.news.cn/fortune/20260911/01eb48fe64b04131a4dcae3dea7ab550/c.html","sourceOrigin":"china"},
+    {"kind":"jpy_cny","icon":"💴","name":"人民币兑日元","value":"100日元＝4.3614元人民币","note":"2026-09-11中间价","source":"中国外汇交易中心","sourceUrl":"https://www.news.cn/fortune/20260911/01eb48fe64b04131a4dcae3dea7ab550/c.html","sourceOrigin":"china"}
+  ],
+  "metricsCutoff": "2026-09-11 15:30（北京时间）",
+  "metricSources": ["上海黄金交易所", "北京市发展和改革委员会", "新华网", "中国外汇交易中心"],
+  "observation": "今天的民生线索一端指向公共服务和安全治理：医保商业贿赂通报、防汛转移与基层消防排查都强调责任闭环；另一端指向技术基础设施，算力调度、工业智能体和智能找矿正在进入真实生产环节。周末市场数据沿用最近完整交易日，国际局势仍受地区冲突、海上安全与外交协调牵动。判断进展时，应继续区分发布、试点、量产和实际普惠效果。",
+  "sources": ["新华网", "中国科技网", "上海黄金交易所", "北京市发展和改革委员会", "中国外汇交易中心"]
+}
