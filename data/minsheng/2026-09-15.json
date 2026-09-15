@@ -1,0 +1,416 @@
+{
+  "date": "2026-09-15",
+  "issue": 25,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期二",
+  "lunarDate": "农历丙午年八月初五",
+  "cutoff": "2026-09-15 05:40（北京时间）",
+  "productionTime": "2026-09-15 05:40（北京时间）",
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "国务院提级调查青岛重大火灾事故",
+        "summary": "国务院成立调查组，对青岛北海造船有限公司九月十日造成25人死亡、5人受伤的重大火灾事故提级调查。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 18:41",
+        "url": "https://www.news.cn/politics/20260914/d8e1d6c8759d42d6b1a5d5b38c7570cd/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "全国政协协商推进特殊教育法治保障",
+        "summary": "全国政协围绕加快残疾人教育立法召开重点提案办理协商会，聚焦融合教育、职业教育和部门协同。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 20:15",
+        "url": "https://www.news.cn/politics/20260914/e7c34f0f32f54c7395a698708bf2e144/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "应收账款电子凭证平均期限缩短九十二天",
+        "summary": "央行表示，应收账款电子凭证平均期限较规范前缩短九十二天，七月末余额二点四万亿元，平台收费同步下降。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 21:00",
+        "url": "https://www.news.cn/fortune/20260914/400eb6c93aa24dce869f69755b5923f8/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "全国推普周开幕 普通话普及率达八成七",
+        "summary": "第二十九届全国推广普通话宣传周启动，二〇二五年全国普通话普及率达到百分之八十七点七二。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 18:47",
+        "url": "https://www.news.cn/20260914/47640d20e1f34aab8f1974e9b61a673e/c.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "四项矿山安全强制性国家标准发布",
+        "summary": "四项矿山安全强制性国家标准获批发布，将于明年三月实施，并要求矿山至少每三年开展一次隐蔽致灾因素普查。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 17:52",
+        "url": "https://www.news.cn/politics/20260914/50a349b634334e08ab798f9c666de37b/c.html"
+      },
+      {
+        "id": "domestic-06",
+        "title": "秋收临近 多地需防连阴雨与早霜",
+        "summary": "全国秋粮进入成熟收获关键期，气象部门提示西北、西南防范连阴雨，东北北部留意早霜风险。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 19:37",
+        "url": "https://www.news.cn/politics/20260914/eb4a599e12e34849b93e36b11dbb6d08/c.html"
+      },
+      {
+        "id": "domestic-07",
+        "title": "退役军人服务保障十五五规划印发",
+        "summary": "有关部门印发退役军人服务保障十五五规划，部署安置就业、服务中心、纪念设施和医疗康复等重点任务。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 17:31",
+        "url": "https://www.news.cn/politics/20260914/6a1caac52090472eaca174da843d5613/c.html"
+      },
+      {
+        "id": "domestic-08",
+        "title": "十五五卫生健康工作明确监测与服务重点",
+        "summary": "卫生健康系统将完善基层服务和传染病监测，目前全国医疗卫生机构达一百一十万所，报告时效继续缩短。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 16:50",
+        "url": "https://www.news.cn/politics/20260914/8ea10455807e4b458692e4c1b75bef80/c.html"
+      },
+      {
+        "id": "domestic-09",
+        "title": "国家网络安全宣传周在济南开幕",
+        "summary": "二〇二六年国家网络安全宣传周在济南开幕，十部门联合主办，各地将开展论坛、体验和基层科普活动。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 19:34",
+        "url": "https://www.news.cn/photo/20260914/bbf7c9447b824e2fbced015cb154e249/c.html"
+      },
+      {
+        "id": "domestic-10",
+        "title": "欢乐科学周五天开展近两千场活动",
+        "summary": "全国科普月欢乐科学周收官，五天内近两千场活动联动开展，甘肃主场线上直播观看量超过六百四十四万。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 18:56",
+        "url": "https://www.news.cn/20260914/864882c54f0f4d9d82c21a0682cbca3a/c.html"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "日本首相拟于十七日改组内阁",
+        "summary": "日本首相高市早苗计划十六日调整自民党高层、十七日改组内阁，这是其去年十月就任以来首次大规模人事调整。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-15 00:07",
+        "url": "https://www.news.cn/world/20260915/22cb2d8104134aeb9f230c1b0af849fa/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "胡塞武装称袭击沙特空军基地",
+        "summary": "也门胡塞武装称以导弹和无人机袭击沙特一处空军基地，沙特多地发布安全警报，相关战况尚待独立核实。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 18:36",
+        "url": "https://www.news.cn/world/20260914/334eb1c3d6c4444eb6d178f58ecd5958/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "特朗普称俄乌同意不攻击能源目标",
+        "summary": "特朗普称俄乌双方同意暂停攻击能源目标，美方特使此前分别访问莫斯科和基辅，协议执行情况仍需观察。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-15 00:09",
+        "url": "https://www.news.cn/world/20260915/80f550632ace4df89499199e8195bbb7/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "伊朗称美国施压致其缺席核机构大会",
+        "summary": "伊朗称奥地利未向代表团签发签证，导致其原子能组织主席缺席国际原子能机构第七十届大会。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 21:22",
+        "url": "https://www.news.cn/world/20260914/7cafd6e264c84911952ac1ab8934925a/c.html"
+      },
+      {
+        "id": "international-05",
+        "title": "韩国总统支持率降至三成三",
+        "summary": "韩国一项面向二千五百余名成年人的调查显示，李在明施政支持率降至百分之三十三点八，不支持率升至六成三。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 21:18",
+        "url": "https://www.news.cn/20260914/8f889e4d16904473b8f43757531a389a/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "俄方称全球石油市场形势显著恶化",
+        "summary": "俄罗斯政府称沙特管道事故使全球石油供应减少超过百分之四，俄方同时禁止成品油出口以稳定国内市场。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 20:49",
+        "url": "https://www.news.cn/20260914/60eb24aa0fe04a709b5d4e42fd0da771/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "中方回应所谓人工智能威胁论",
+        "summary": "外交部表示，渲染所谓中国人工智能威胁不符合任何一方利益，并呼吁以开放包容方式推进全球人工智能治理。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 21:59",
+        "url": "https://www.news.cn/20260914/1dd01550f20f453f82505028d80c3516/c.html"
+      },
+      {
+        "id": "international-08",
+        "title": "中欧圆桌会议聚焦贸易与人工智能治理",
+        "summary": "第二十一次中欧圆桌会议在杭州举行，双方代表围绕减贫与社会包容、贸易投资和以人为本的人工智能交换意见。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 21:47",
+        "url": "https://www.news.cn/world/20260914/70d690d534374e4b92947baea9c66b12/c.html"
+      },
+      {
+        "id": "international-09",
+        "title": "约旦亚喀巴氨气泄漏致十一人中毒",
+        "summary": "约旦亚喀巴工业区一家企业发生氨气泄漏，十一人中毒送医，当地部门称泄漏已得到控制并启动调查。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 20:12",
+        "url": "https://www.news.cn/world/20260914/e735556c4af84eb5a564ae04a61019f0/c.html"
+      },
+      {
+        "id": "international-10",
+        "title": "芬兰加入法国前沿威慑合作计划",
+        "summary": "法国总统府称芬兰加入其前沿威慑合作计划，双方将设立核事务指导小组，芬方强调和平时期不部署核武器。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 23:02",
+        "url": "https://www.news.cn/world/20260914/a9e85ca89fe54d6a8021a8bba78d56dd/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "我国团队找到胶球关键实验证据",
+        "summary": "北京谱仪实验团队经过十五年分析，给出迄今最明确的胶球实验证据，为理解强相互作用提供新支点。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 07:50",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/14/content_580327.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "原子层滑移实现一千九百万倍电阻开关",
+        "summary": "国内团队利用原子层滑移构建存储器件，开关电阻相差一千九百万倍，完成超过一千亿次稳定切换。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 20:11",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/14/content_580832.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "新一代通信网进入工业与低空场景",
+        "summary": "我国推进一百三十六个万兆光网试点项目，并以大范围通信覆盖和边缘计算服务工厂、低空等生产场景。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 07:54",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/14/content_580345.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "种业数智化覆盖育种到质量筛选",
+        "summary": "全国种子双交会展示智能育种机器人和种子分选设备，我国农作物自主选育品种面积占比超过九成五。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 07:54",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/14/content_580340.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "陇电入浙工程甘肃段全线贯通",
+        "summary": "陇电入浙特高压工程甘肃段实现全线贯通，线路计划明年投运，每年可向浙江输送三百六十亿千瓦时电量。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 15:52",
+        "url": "https://www.news.cn/photo/20260914/c4abf9618750428bae2fb624a372f2c3/c.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "航空物探技术为地下结构做立体扫描",
+        "summary": "科研团队将直升机电磁探测与高灵敏磁场测量结合，可识别十亿分之一量级磁场变化并探测千米级地层。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-13 14:55",
+        "url": "https://www.news.cn/photo/20260913/f7a0a5237624452f98d23f99de6273ca/c.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "我国创新药对外授权突破千二百亿美元",
+        "summary": "今年我国创新药对外授权金额突破一千二百亿美元，同比增长百分之三十六，已有五十九款创新药获批上市。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 21:00",
+        "url": "https://www.news.cn/20260914/401a6090b0f0439b916251b729289cf2/c.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "福建发现五十一点五米最高古树",
+        "summary": "科研人员以无人机激光雷达和攀树测量确认，建瓯万木林一株古柳杉树高五十一点五米、树龄约一百九十年。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 20:41",
+        "url": "https://www.news.cn/20260914/6d1e7dc60d9f4f4fb383edb21921da24/c.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "成渝中线高铁无砟轨道全线完工",
+        "summary": "成渝中线高铁二百九十二公里无砟轨道全部完成，项目将转入静态验收和联调联试准备阶段。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 14:28",
+        "url": "https://www.news.cn/photo/20260914/9c8e67327e174d71ab8f3fc1ad8b85f4/c.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "我国已建成五万六千余家基础级智能工厂",
+        "summary": "我国累计建成五万六千余家基础级、九千余家先进级智能工厂，部分领航工厂实现产能和人均效率显著提升。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 21:10",
+        "url": "https://www.news.cn/fortune/20260914/e23540780daa4c308aec60e04815923c/c.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "首个人工智能脑机接口医疗器械标准发布",
+        "summary": "我国发布全球首个人工智能加脑机接口医疗器械标准，规范脑电数据的人工智能处理，明年九月起实施。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 21:01",
+        "url": "https://www.news.cn/tech/20260914/bf369ac79b224d74bbe73a153cc90fd7/c.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "人工智能为公共机构降碳提速",
+        "summary": "公共机构试用大小模型协同的能源管理方案，冷站分析从两个月缩短至一小时，并引入多智能体协同核算。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 07:47",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/14/content_580320.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "人工智能重塑文化内容全链条生产",
+        "summary": "人工智能已进入文化内容策划、生成、后期与分发环节，但高清输出、长叙事和行业规范仍需持续完善。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 07:45",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/14/content_580321.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "人工智能模型解读三十亿碱基语法",
+        "summary": "美国研究团队推出基因组人工智能模型，通过物种间序列比对评估遗传变异影响，显著降低训练和推理资源需求。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-11 01:45",
+        "url": "https://www.stdaily.com/web/gjxw/2026-09/11/content_578711.html"
+      },
+      {
+        "id": "ai-05",
+        "title": "人工智能提升传染病监测预警速度",
+        "summary": "天津、上海等地将人工智能用于传染病筛查与风险研判，部分流程可在数十秒至二十四小时内完成。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 20:35",
+        "url": "https://www.news.cn/politics/20260914/67ca2ef33b154239893cbe1551a548f2/c.html"
+      }
+    ]
+  },
+  "topStoryIds": [
+    "domestic-01",
+    "international-03",
+    "tech-02"
+  ],
+  "metrics": [
+    {
+      "kind": "gold",
+      "icon": "🥇",
+      "name": "国内金价",
+      "value": "Au99.99最新价：932.00元/克",
+      "note": "2026-09-15延时行情",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/sjzx/yshqbg?ad_check=1",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "北京油价",
+      "value": "92号8.29元/升；95号8.83元/升",
+      "note": "2026-09-11 24时起最高零售价",
+      "source": "北京市发展和改革委员会",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202609/t20260911_4860093.htm",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际油价",
+      "value": "WTI 102.48美元/桶；布伦特107.63美元/桶",
+      "note": "2026-09-10最近完整收盘",
+      "source": "新华网",
+      "sourceUrl": "https://www.news.cn/fortune/20260911/da6e848104dd4c7482aca708b9ff8d6a/c.html",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "usd_cny",
+      "icon": "💵",
+      "name": "人民币兑美元",
+      "value": "1美元＝6.7743元人民币",
+      "note": "2026-09-11中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.news.cn/fortune/20260911/01eb48fe64b04131a4dcae3dea7ab550/c.html",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "eur_cny",
+      "icon": "💶",
+      "name": "人民币兑欧元",
+      "value": "1欧元＝7.8367元人民币",
+      "note": "2026-09-11中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.news.cn/fortune/20260911/01eb48fe64b04131a4dcae3dea7ab550/c.html",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "jpy_cny",
+      "icon": "💴",
+      "name": "人民币兑日元",
+      "value": "100日元＝4.3614元人民币",
+      "note": "2026-09-11中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.news.cn/fortune/20260911/01eb48fe64b04131a4dcae3dea7ab550/c.html",
+      "sourceOrigin": "china"
+    }
+  ],
+  "metricsCutoff": "2026-09-15 05:40（北京时间）",
+  "metricSources": [
+    "上海黄金交易所",
+    "北京市发展和改革委员会",
+    "新华网",
+    "中国外汇交易中心"
+  ],
+  "observation": "今天的民生信息一端集中在安全与公共服务：重大火灾提级调查、矿山强制标准、特殊教育协商和传染病监测都在补强制度闭环；另一端则是技术进入真实生产，原子层存储、万兆通信、智能工厂和人工智能降碳开始用量化指标检验效果。国际局势仍受冲突、能源供应和外交协调牵动，油价与汇率采用最近完整交易日数据，阅读时应区分公开表态、已实施措施与待核实战况。",
+  "sources": [
+    "新华网",
+    "中国科技网",
+    "上海黄金交易所",
+    "北京市发展和改革委员会",
+    "中国外汇交易中心"
+  ]
+}

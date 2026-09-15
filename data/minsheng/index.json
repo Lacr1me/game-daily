@@ -4,6 +4,14 @@
   "publishAt": "11:00",
   "editions": [
     {
+      "date": "2026-09-15",
+      "issue": 25,
+      "publishAt": "2026-09-15T11:00:00+08:00",
+      "title": "民生日报 · 每日35条精选新闻",
+      "headline": "国务院提级调查青岛重大火灾事故",
+      "file": "data/minsheng/2026-09-15.json"
+    },
+    {
       "date": "2026-09-14",
       "issue": 24,
       "publishAt": "2026-09-14T11:00:00+08:00",
