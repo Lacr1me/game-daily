@@ -4,6 +4,14 @@
   "publishAt": "11:00",
   "editions": [
     {
+      "date": "2026-09-16",
+      "issue": 26,
+      "publishAt": "2026-09-16T11:00:00+08:00",
+      "title": "游戏与 Minecraft 每日简报",
+      "headline": "《毁灭战士：黑暗时代》Steam 国区永久降价",
+      "file": "data/2026-09-16.json"
+    },
+    {
       "date": "2026-09-15",
       "issue": 25,
       "publishAt": "2026-09-15T11:00:00+08:00",

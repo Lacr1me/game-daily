@@ -1,0 +1,415 @@
+{
+  "date": "2026-09-16",
+  "issue": 26,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期三",
+  "lunarDate": "农历丙午年八月初六",
+  "cutoff": "2026-09-16 05:39（北京时间）",
+  "productionTime": "2026-09-16 05:42（北京时间）",
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "国家网信办公布网络与数据安全执法典型案例",
+        "summary": "案例涵盖网页篡改、恶意程序、个人信息泄露及人工智能生成合成内容标识等问题，明确新技术上线前的安全责任。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-15 21:21",
+        "url": "https://www.news.cn/politics/20260915/6af1e7420302486ea3e6513aa3dda411/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "雄安新区完善就业公共服务链条",
+        "summary": "当地面向高校毕业生、青年和农民工等群体推进就业服务，以重点项目吸纳就业并衔接技能培训、岗位对接和政策咨询。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-15 20:12",
+        "url": "https://www.news.cn/politics/20260915/362b05727fb0473ba5ba4b86868a17db/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "两部门规范网络酒店预订平台竞争秩序",
+        "summary": "指导意见针对强制独家合作、最低价限制等问题提出要求，促进平台、酒店经营者公平交易，保障消费者合法权益。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-15 17:19",
+        "url": "https://www.news.cn/politics/20260915/9f206904974c4bd9af510f76fa5e4d50/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "医疗服务价格项目启动预立项机制",
+        "summary": "新机制在创新医疗技术临床审批前提前开展价格项目研究，力求实现一省立项、全国跟进，已统一二百余项价格项目。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-15 19:03",
+        "url": "https://www.news.cn/politics/20260915/94c91881df7046eabb0c654111fe5eff/c.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "天津拟扩围住房公积金提取用途",
+        "summary": "征求意见稿拟允许缴存人提取公积金支付物业费和新房装修费，其中物业费年度上限三千元，装修提取上限十五万元。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-15 20:44",
+        "url": "https://www.news.cn/20260915/94e183f424884828b78f1a48b0e4bcb4/c.html"
+      },
+      {
+        "id": "domestic-06",
+        "title": "云南墨江四点五级地震未造成人员伤亡",
+        "summary": "地震发生后当地启动四级应急响应，组织排查灾情和基础设施情况；截至报道时无人员伤亡，受影响地区生产生活秩序正常。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-15 20:34",
+        "url": "https://www.news.cn/20260915/9adcb9b554304c16a875ddac3a103bf0/c.html"
+      },
+      {
+        "id": "domestic-07",
+        "title": "科学运动应避免久坐后突击过量训练",
+        "summary": "专家建议长期久坐人群先从低强度、可持续的运动开始，单周训练量增幅不宜超过百分之十至十五，减少运动损伤风险。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-15 16:10",
+        "url": "https://www.news.cn/20260915/eafc921686954b38acf304a1e0f058e3/c.html"
+      },
+      {
+        "id": "domestic-08",
+        "title": "海南终止暴雨三级应急响应并推进恢复",
+        "summary": "随着强降雨影响减弱，海南终止暴雨三级应急响应，各地继续清理道路淤积、抢修供电线路，有序恢复交通和生产生活。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-15 19:43",
+        "url": "https://www.news.cn/photo/20260915/304761839cb8455c9e05feffd9177d1b/c.html"
+      },
+      {
+        "id": "domestic-09",
+        "title": "八部门联合部署扩大智能家居消费",
+        "summary": "七方面举措聚焦产品供给、标准互联、适老化改造、旧品回收和金融支持，旨在扩大智能家居有效需求并改善使用体验。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-15 09:05",
+        "url": "https://www.news.cn/tech/20260915/fe64eb80a5f04c5fb6d07f239b38086e/c.html"
+      },
+      {
+        "id": "domestic-10",
+        "title": "八月经济延续恢复向好态势",
+        "summary": "八月全国城镇调查失业率为百分之五点三，居民消费价格同比上涨百分之零点八，高技术制造业和进出口保持较快增长。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-15 16:58",
+        "url": "https://www.news.cn/20260915/f0d0089978d645f2b58eeb0be26f290c/c.html"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "美国防部报告评估伊朗战争损失",
+        "summary": "美国国防部报告称，伊朗战争期间数百座建筑受损，美军有五十多架飞机遭到损坏；报道同时提醒，相关损失统计仍待继续核实。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-15 13:28",
+        "url": "https://www.news.cn/world/20260915/727248f3d66b4b79a64de3e2b5b106e8/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "美国法官叫停国际学生与访客停留期限新规",
+        "summary": "美国联邦法官暂时阻止针对国际学生和访问学者设定固定停留期限的规则生效，案件将继续审理，现行管理安排暂时维持。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-15 08:57",
+        "url": "https://www.news.cn/world/20260915/2a457ab7067744efa130c2dcc2429761/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "巴勒斯坦教育系统面临大规模停摆",
+        "summary": "巴勒斯坦教育部长称，超过七十二万名学生失去基本教育条件，九成以上学校及八成以上高校被毁，恢复教育成为人道援助重点。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-15 10:44",
+        "url": "https://www.news.cn/world/20260915/cf4e6cd0f78a4311882e503c7fee5204/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "国际原子能机构大会呼吁维护多边主义",
+        "summary": "第七十届大会于维也纳开幕，约四千名与会者围绕核技术和不扩散议题展开讨论，会议将持续至九月十八日。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 23:37",
+        "url": "https://www.news.cn/world/20260914/5627069e0f58469296a3fb571fa1f802/c.html"
+      },
+      {
+        "id": "international-05",
+        "title": "智利消除犬传人狂犬病",
+        "summary": "世界卫生组织确认智利成为南美洲首个消除犬传人狂犬病的国家，这一成果与长期犬只免疫、疫情监测和公共卫生合作有关。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-15 12:46",
+        "url": "https://www.news.cn/world/20260915/ac4b9582d3a6481c90ce42563f0556f1/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "沙特主导的多国联军称遇袭造成十三人受伤",
+        "summary": "沙特主导的多国联军表示，也门胡塞武装发动的袭击造成十三人受伤；相关信息主要来自冲突参与方，具体细节仍需独立核实。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-15 09:50",
+        "url": "https://www.news.cn/world/20260915/103bfcb54d5845b09947e9b952956005/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "美军否认油轮近期在霍尔木兹海峡触雷",
+        "summary": "美军就油轮在霍尔木兹海峡触雷的说法作出否认，地区船运安全和能源通道风险仍受关注，相关方尚未公布更多调查细节。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-15 08:06",
+        "url": "https://www.news.cn/world/20260915/b80f47d6ec4b42aa85aaf1f436c46bc0/c.html"
+      },
+      {
+        "id": "international-08",
+        "title": "特朗普称愿与伊朗谈判并寻求护航补偿",
+        "summary": "美国总统特朗普表示愿意与伊朗进行谈判，同时提出有关航道护航补偿的主张；相关表态尚未转化为明确谈判议程或协议。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-15 05:01",
+        "url": "https://www.news.cn/world/20260915/01fda5e49485489b887905123d757ccf/c.html"
+      },
+      {
+        "id": "international-09",
+        "title": "联合国伊朗问题调查机制呼吁遵守国际法",
+        "summary": "联合国伊朗问题调查机制呼吁美国和以色列在相关行动中遵守国际法，强调保护平民和对可能违法行为开展责任追究。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-15 03:41",
+        "url": "https://www.news.cn/world/20260915/dc1f4310252547579d44979a5efd501b/c.html"
+      },
+      {
+        "id": "international-10",
+        "title": "伊拉克北部水库区域遭五枚火箭弹袭击",
+        "summary": "伊拉克北部一处水库区域遭到五枚火箭弹袭击，当地安全部门已介入调查；截至报道时尚无组织宣称责任，伤亡和损失待确认。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-15 00:09",
+        "url": "https://www.news.cn/world/20260915/01390f19bd034db68198543fddd662f2/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "电子信息制造业“十五五”规划公布",
+        "summary": "规划提出到二○三○年规模以上企业营收突破三十万亿元，研发投入强度达到百分之三点五，突出集成电路和先进计算等方向。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-15 09:02",
+        "url": "https://www.news.cn/20260915/4f6b79607e6b478bad40776d3d3fc9ac/c.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "嫦娥六号月背样品赠予联合国",
+        "summary": "中国向联合国赠送嫦娥六号采集的月球背面样品，将作为永久展品展示，并通过数据和科研合作扩大月球科学成果共享。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-15 08:33",
+        "url": "https://www.news.cn/20260915/7a337d0d06854c4faab07f067fd44ad2/c.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "我国上半年锂电池产量超千吉瓦时",
+        "summary": "上半年全国锂电池总产量超过一千二百四十吉瓦时，同比增长百分之四十四；产品出口额三千三百七十亿元，同比增长百分之三十七。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-15 21:36",
+        "url": "https://www.news.cn/20260915/3c66fb1aa0f34761a347263a94e73d13/c.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "一体化算力网监测调度能力加速成形",
+        "summary": "全国三十一个省份已接入监测调度体系，覆盖两百家供给方、两千余项产品和三百个模型，为万余名用户提供算力服务。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-15 09:04",
+        "url": "https://www.news.cn/tech/20260915/9b60bb124e9a4fc1a74cae4ba80e4615/c.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "北斗应用峰会集中展示新型实景装备",
+        "summary": "第五届北斗规模应用国际峰会展出自动导航农机、工业无人机、无人船及低空经济应用，约九百名产学研代表参会。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-15 20:27",
+        "url": "https://www.news.cn/photo/20260915/09b52cce906d468ca1c6fe86e6d3050d/c.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "我国新一轮矿产资源勘查成果集中发布",
+        "summary": "报告显示十四种矿产资源储量位居世界第一，新发现非油气矿产地两百余处，历史遗留矿山生态修复治理面积达二十二点三万公顷。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 11:42",
+        "url": "https://www.news.cn/energy/20260914/ef13b2c0d2534bb8a67ca85321e33576/c.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "中国区域科技创新能力综合得分继续上升",
+        "summary": "最新评价报告显示中国区域科技创新综合得分达八十一点一三，上海、北京、江苏、广东、浙江和天津继续位于第一梯队。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-11 15:39",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/11/content_579332.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "张宏团队细胞自噬研究获未来科学大奖",
+        "summary": "团队发现局部短暂的内质网钙信号能启动细胞自噬，为理解细胞稳态维持和相关疾病机制提供新线索，相关工作获得奖项肯定。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-09 07:47",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/09/content_577514.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "中科院在江苏推动二十七项科技成果落地",
+        "summary": "中科院“融合点”活动聚焦人工智能、生物医药和先进材料等方向，促成二十七项成果转化合作，推进科研供给与地方产业需求对接。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-12 15:18",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/12/content_579877.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "中国与中东欧科技创新合作网络持续扩围",
+        "summary": "合作网络已覆盖十七个国家、两百余家机构，中国钠离子电池等技术面向低温市场开展应用对接，助力科研成果跨境转化。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-11 07:35",
+        "url": "https://www.stdaily.com/web/2026-09/11/content_578911.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "服贸会展示人工智能与量子技术首发成果",
+        "summary": "会场集中展示五十余项人工智能、量子科技和金融科技首发成果，达成八十余项合作，机器人和智能体正加快进入真实业务场景。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-15 10:55",
+        "url": "https://www.news.cn/liangzi/20260915/ab7e06d02cc044f1ab094760cf1ec734/c.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "中国人工智能产品与服务加快出海",
+        "summary": "出海已从硬件产品延伸至行业应用和本地化运营，部分企业通过海外服务团队和合规体系承接需求，金蝶已签约约一百四十家海外客户。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 09:02",
+        "url": "https://www.xinhuanet.com/tech/20260914/eb0c140b52184c0ea4160a3571f6e1a6/c.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "本地部署模式成为企业办公智能体新路线",
+        "summary": "面向企业隐私和内网场景的本地模型方案快速增多，三百五十亿参数模型可在四十TOPS算力和八GB内存设备上运行，降低部署门槛。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-14 09:00",
+        "url": "https://www.xinhuanet.com/tech/20260914/b5a92db7feab4a68baadb3b1ac58ef42/c.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "AI编程助手数据绕道风险引发安全警示",
+        "summary": "安全测试发现，某些评分较高的AI编程工具可能通过第三方服务传递代码或数据，企业应审查扩展、模型网络请求与数据流向。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-15 06:51",
+        "url": "https://apicnrapp.cnr.cn/html/share.html?id=28895320"
+      },
+      {
+        "id": "ai-05",
+        "title": "前沿人工智能减速倡议引发市场关注",
+        "summary": "部分科技领军人物呼吁放缓前沿人工智能系统开发，以完善安全测试和治理机制；相关表态引发美国科技股波动和行业风险讨论。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-15 11:21",
+        "url": "https://www.news.cn/fortune/20260915/d1a6089a23b7487886c8341cc3c80dea/c.html"
+      }
+    ]
+  },
+  "topStoryIds": [
+    "domestic-01",
+    "international-03",
+    "tech-01"
+  ],
+  "metrics": [
+    {
+      "kind": "gold",
+      "icon": "🥇",
+      "name": "国内金价",
+      "value": "928.17元/克",
+      "note": "Au99.99，2026-09-15收盘",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/sjzx/quotation_daily_new?end_date=2026-09-15&start_date=2026-09-15",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "北京成品油",
+      "value": "92号8.29元/升·95号8.83元/升",
+      "note": "2026-09-11 24时起最高零售价",
+      "source": "北京市发展改革委",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202609/t20260911_4860093.htm",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际油价",
+      "value": "WTI 101.39美元/桶·布伦特105.68美元/桶",
+      "note": "2026-09-14最近收盘",
+      "source": "新华网",
+      "sourceUrl": "https://www.news.cn/20260915/580543255e56430da315bf200f14b60e/c.html",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "usd_cny",
+      "icon": "💵",
+      "name": "美元兑人民币",
+      "value": "1美元=6.7670人民币",
+      "note": "2026-09-15中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.news.cn/20260915/5f33005708814962b79f4d36cf6b4f1f/c.html",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "eur_cny",
+      "icon": "💶",
+      "name": "欧元兑人民币",
+      "value": "1欧元=7.7811人民币",
+      "note": "2026-09-15中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.news.cn/20260915/5f33005708814962b79f4d36cf6b4f1f/c.html",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "jpy_cny",
+      "icon": "💴",
+      "name": "日元兑人民币",
+      "value": "100日元=4.3592人民币",
+      "note": "2026-09-15中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.news.cn/20260915/5f33005708814962b79f4d36cf6b4f1f/c.html",
+      "sourceOrigin": "china"
+    }
+  ],
+  "metricsCutoff": "2026-09-15 17:00（北京时间）",
+  "metricSources": [
+    "上海黄金交易所",
+    "北京市发展改革委",
+    "新华网",
+    "中国外汇交易中心"
+  ],
+  "observation": "今日信息呈现两条并行主线：一方面，从网络执法、平台竞争到医疗价格预立项，公共治理更多转向前置规则和可执行细则；另一方面，电子信息、算力、北斗和人工智能应用继续提速。但外部冲突、航运安全和教育人道压力仍在累积，阅读数据与市场信号时，应区分已落地措施、机构表态与待独立核实信息，避免把政策目标当成已实现结果。",
+  "sources": [
+    "新华网",
+    "中国科技网",
+    "央视网",
+    "央广网"
+  ]
+}
