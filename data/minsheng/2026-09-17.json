@@ -1,0 +1,67 @@
+{
+  "date": "2026-09-17",
+  "issue": 27,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期四",
+  "lunarDate": "农历丙午年八月初七",
+  "cutoff": "2026-09-17 05:49（北京时间）",
+  "productionTime": "2026-09-17 05:54（北京时间）",
+  "sections": {
+    "domestic": [
+      {"id":"domestic-01","title":"全国统一医保服务目录首批发布","summary":"首批目录覆盖参保登记、关系转移、异地就医备案等十三类高频服务，推动医保事项跨省办理和结算标准进一步统一。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 08:51","url":"https://www.chinanews.com.cn/gn/2026/09-16/10697167.shtml"},
+      {"id":"domestic-02","title":"公共法律服务将推进全天候供给","summary":"司法行政部门提出完善热线、网络与实体平台衔接，推进二十四小时公共法律服务；既有平台累计提供咨询一亿七千万人次。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 16:16","url":"https://www.chinanews.com.cn/gn/2026/09-16/10697577.shtml"},
+      {"id":"domestic-03","title":"夏粮旺季收购总体进展平稳","summary":"全国主产区累计收购小麦超过一亿吨、早籼稻约一千二百万吨，进度同比略快；各地正衔接秋粮收购准备。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 16:31","url":"https://www.chinanews.com.cn/gn/2026/09-16/10697606.shtml"},
+      {"id":"domestic-04","title":"平陆运河建设进入攻坚阶段","summary":"这条长一百三十四点二公里的江海联运通道建成后，可使西南地区部分货物出海航程缩短五百六十公里以上。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 09:26","url":"https://www.chinanews.com.cn/sh/2026/09-16/10697186.shtml"},
+      {"id":"domestic-05","title":"仿冒交管应用被用于伪造车辆信息","summary":"调查发现网上有人售卖仿冒“交管12123”界面的模拟工具，可篡改证件和车辆信息，给租车核验与网络交易带来诈骗风险。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 09:19","url":"https://www.chinanews.com.cn/sh/2026/09-16/10697183.shtml"},
+      {"id":"domestic-06","title":"海南紧急下达一千九百万元救灾资金","summary":"海南紧急安排一千九百万元支持受灾地区开展应急抢险、群众救助和灾后恢复，相关资金将向重点受灾区域倾斜。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 15:52","url":"https://www.chinanews.com.cn/gn/2026/09-16/10697556.shtml"},
+      {"id":"domestic-07","title":"前八月全国办理行政复议案件七十七万件","summary":"今年一至八月全国办理行政复议案件七十七点二万件，行政复议继续发挥化解行政争议、监督依法行政的主渠道作用。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 16:19","url":"https://www.chinanews.com.cn/gn/2026/09-16/10697584.shtml"},
+      {"id":"domestic-08","title":"开学季网络诈骗瞄准学生与家长","summary":"不法分子借缴费通知、兼职招募和账号异常等话术诱导转账或泄露验证码，学校和家庭需通过官方渠道交叉核验。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 16:02","url":"https://www.chinanews.com.cn/sh/2026/09-16/10697569.shtml"},
+      {"id":"domestic-09","title":"香港提出十一项生育支持措施","summary":"香港特区政府公布十一项鼓励生育措施，覆盖医疗、住房与家庭支持等环节，进一步降低育儿家庭的现实负担。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 16:19","url":"https://www.chinanews.com.cn/dwq/2026/09-16/10697587.shtml"},
+      {"id":"domestic-10","title":"国庆假期首日火车票今日开售","summary":"十月一日车票于九月十七日开售；铁路国庆运输期为九月二十三日至十月八日，计划日均开行旅客列车约一万三千列。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 08:17","url":"https://www.chinanews.com.cn/sh/2026/09-16/10697164.shtml"}
+    ],
+    "international": [
+      {"id":"international-01","title":"南非就美国签证限制表达关切","summary":"南非外交部门认为美方对其国内政策和种族问题的描述存在失实，并就新签证限制可能影响双边往来表达关切。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 23:27","url":"https://www.chinanews.com.cn/gj/2026/09-16/10697943.shtml"},
+      {"id":"international-02","title":"日本茨城县发生四点八级地震","summary":"日本茨城县附近发生四点八级地震，东京等地有震感；截至报道时未见重大人员伤亡和设施损坏通报。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 23:24","url":"https://www.chinanews.com.cn/gj/2026/09-16/10697942.shtml"},
+      {"id":"international-03","title":"尼泊尔山体滑坡死亡人数升至一千四百零九人","summary":"尼泊尔山体滑坡灾害死亡人数升至一千四百零九人，救援、安置与基础设施恢复仍在推进，灾情数字可能继续更新。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 23:21","url":"https://www.chinanews.com.cn/gj/2026/09-16/10697940.shtml"},
+      {"id":"international-04","title":"柬埔寨红十字会再向中国灾区捐款","summary":"柬埔寨红十字会再次捐赠十万美元用于支持中国灾区救援和恢复，体现两国民间机构在灾害应对中的持续合作。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 21:47","url":"https://www.chinanews.com.cn/gj/2026/09-16/10697908.shtml"},
+      {"id":"international-05","title":"俄罗斯就日本军事化趋势发出警告","summary":"俄方表示，日本若继续强化进攻性军事能力将引发反制；相关表态反映东北亚安全议题上的分歧仍在加深。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 21:47","url":"https://www.chinanews.com.cn/gj/2026/09-16/10697871.shtml"},
+      {"id":"international-06","title":"韩国法院审理民用无人机进入朝鲜案","summary":"韩国法院就民用无人机进入朝鲜相关案件作出裁判，事件再次引发对边境飞行活动、个人行为与半岛安全风险的讨论。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 15:48","url":"https://www.chinanews.com.cn/gj/2026/09-16/10697548.shtml"},
+      {"id":"international-07","title":"高市早苗调整自民党领导层","summary":"日本首相高市早苗调整自民党领导层，新人事安排将影响执政党政策协调与国会运营，后续施政走向受到关注。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 15:47","url":"https://www.chinanews.com.cn/gj/2026/09-16/10697538.shtml"},
+      {"id":"international-08","title":"委内瑞拉与英国同意提升双边关系","summary":"委内瑞拉与英国同意升级双边关系，双方将就外交沟通和务实合作继续接触，具体合作项目仍待后续公布。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 08:51","url":"https://www.chinanews.com.cn/gj/2026/09-16/10697166.shtml"},
+      {"id":"international-09","title":"韩国法院判令朝鲜赔偿四百四十六亿韩元","summary":"韩国法院支持政府就朝韩联络办公室被拆除提出的损害赔偿请求，判令朝方赔偿四百四十六亿韩元。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 15:19","url":"https://www.chinanews.com.cn/gj/2026/09-16/10697499.shtml"},
+      {"id":"international-10","title":"埃及与沙特强调红海航行安全","summary":"埃及总统与沙特王储会晤时强调维护红海航道安全，双方就地区局势和双边合作交换意见。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 14:18","url":"https://www.chinanews.com.cn/gj/2026/09-16/10697445.shtml"}
+    ],
+    "tech": [
+      {"id":"tech-01","title":"我国建成温室气体垂直监测网络","summary":"我国温室气体垂直监测网络建设取得进展，可从不同高度观测大气成分变化，为碳源汇评估和气候研究提供数据支撑。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 16:34","url":"https://www.chinanews.com.cn/gn/2026/09-16/10697607.shtml"},
+      {"id":"tech-02","title":"我国牵头制定两项新材料国际标准","summary":"两项由中国牵头的新材料国际标准发布，为相关材料的性能评价、质量控制和跨国应用提供统一技术依据。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 16:20","url":"https://www.chinanews.com.cn/gn/2026/09-16/10697593.shtml"},
+      {"id":"tech-03","title":"中国天眼发现超短周期双中子星系统","summary":"FAST发现迄今轨道周期极短、总质量很低的双中子星系统，为研究致密天体演化和引力波源形成提供新样本。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 15:51","url":"https://www.chinanews.com.cn/gn/2026/09-16/10697543.shtml"},
+      {"id":"tech-04","title":"洪山实验室推进粮食种业自主创新","summary":"洪山实验室围绕水稻等作物开展基因资源、育种技术与品种研发，推动关键种源和育种工具自主可控。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 09:56","url":"https://www.chinanews.com.cn/sh/2026/09-16/10697216.shtml"},
+      {"id":"tech-05","title":"云南集中表彰年度科技创新成果","summary":"云南公布年度科学技术奖励，获奖项目覆盖高原特色农业、生物医药和绿色能源等领域，突出成果转化与区域需求衔接。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 09:48","url":"https://www.chinanews.com.cn/gn/2026/09-16/10697198.shtml"},
+      {"id":"tech-06","title":"数字能源展聚焦新型电力系统","summary":"二○二六国际数字能源展集中展示数字电网、储能和绿色用能方案，行业各方讨论算力与新能源协同调度。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 09:48","url":"https://www.chinanews.com.cn/cj/2026/09-16/10697210.shtml"},
+      {"id":"tech-07","title":"激光能量传输试验覆盖武汉城市圈","summary":"相关试验探索利用激光实现远距离能量传输，为无人装备补能和特殊场景供电积累工程数据。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 09:45","url":"https://www.chinanews.com.cn/gn/2026/09-16/10697200.shtml"},
+      {"id":"tech-08","title":"算力网络发展大会推动资源协同","summary":"二○二六算力网络发展大会围绕跨区域调度、网络互联和绿色算力展开交流，推动算力供给与行业需求更高效匹配。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 09:45","url":"https://www.chinanews.com.cn/gn/2026/09-16/10697197.shtml"},
+      {"id":"tech-09","title":"空客中国第二条总装线交付首架飞机","summary":"空客在中国的第二条总装线完成首架飞机交付，天津生产基地的装配能力进一步扩大，并带动航空产业链协作。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 09:33","url":"https://www.chinanews.com.cn/gn/2026/09-16/10697188.shtml"},
+      {"id":"tech-10","title":"引力一号完成一箭九星发射","summary":"引力一号运载火箭以一箭九星方式完成发射任务，多颗卫星进入预定轨道，商业航天发射能力继续接受实战检验。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 07:45","url":"https://www.chinanews.com.cn/tp/hd2011/2026/09-16/1204391.shtml"}
+    ],
+    "ai": [
+      {"id":"ai-01","title":"人工智能安全治理框架升级至三点零版","summary":"新版框架更新人工智能风险分类，明确区分智能体和具身智能风险，并从技术防护、管理制度和协同治理提出措施。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 15:42","url":"https://www.chinanews.com.cn/sh/2026/09-16/10697537.shtml"},
+      {"id":"ai-02","title":"高质量数据成为人工智能竞争关键变量","summary":"人工智能训练与应用更依赖合法、准确、可追溯的数据供给，行业需同步处理数据清洗、授权和安全边界。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 07:42","url":"https://www.chinanews.com.cn/sh/2026/09-16/10697154.shtml"},
+      {"id":"ai-03","title":"人工智能成为科研副驾驶也带来核验难题","summary":"人工智能工具正参与文献整理、编码和实验设计，但输出可靠性、来源追溯及研究责任仍需人工把关。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 06:03","url":"https://www.chinanews.com.cn/sh/2026/09-16/10697143.shtml"},
+      {"id":"ai-04","title":"智能客服不应成为人工服务拦路虎","summary":"部分智能客服存在答非所问、人工入口隐蔽等问题，平台需要设置清晰转人工路径并以问题解决率检验服务质量。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-16 09:04","url":"https://www.chinanews.com.cn/sh/2026/09-16/10697177.shtml"},
+      {"id":"ai-05","title":"电子信息规划加快布局人工智能终端","summary":"相关规划提出发展人工智能手机、电脑和眼镜等新型终端，推进端侧模型与智能体应用，并强化软硬件协同。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-16 09:27","url":"https://www.news.cn/tech/20260916/50da4ef381cd4239aec022a98c4b4daa/c.html"}
+    ]
+  },
+  "topStoryIds": ["domestic-01", "international-03", "tech-03"],
+  "metrics": [
+    {"kind":"gold","icon":"🥇","name":"国内金价","value":"936.75元/克","note":"Au99.99，2026-09-16收盘","source":"上海黄金交易所","sourceUrl":"https://www.sge.com.cn/sjzx/quotation_daily_new?end_date=2026-09-16&start_date=2026-09-16","sourceOrigin":"china"},
+    {"kind":"domestic_oil","icon":"⛽","name":"北京成品油","value":"92号8.29元/升·95号8.83元/升","note":"2026-09-11 24时起最高零售价","source":"北京市发展改革委","sourceUrl":"https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202609/t20260911_4860093.htm","sourceOrigin":"china"},
+    {"kind":"international_oil","icon":"🛢️","name":"国际油价","value":"WTI 101.39美元/桶·布伦特105.68美元/桶","note":"2026-09-14最近完整收盘","source":"新华网","sourceUrl":"https://www.news.cn/20260915/580543255e56430da315bf200f14b60e/c.html","sourceOrigin":"china"},
+    {"kind":"usd_cny","icon":"💵","name":"美元兑人民币","value":"1美元=6.7628人民币","note":"2026-09-16中间价","source":"国家外汇管理局","sourceUrl":"https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760","sourceOrigin":"china"},
+    {"kind":"eur_cny","icon":"💶","name":"欧元兑人民币","value":"1欧元=7.7762人民币","note":"2026-09-16中间价","source":"国家外汇管理局","sourceUrl":"https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760","sourceOrigin":"china"},
+    {"kind":"jpy_cny","icon":"💴","name":"日元兑人民币","value":"100日元=4.3419人民币","note":"2026-09-16中间价","source":"国家外汇管理局","sourceUrl":"https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760","sourceOrigin":"china"}
+  ],
+  "metricsCutoff": "2026-09-17 05:45（北京时间）",
+  "metricSources": ["上海黄金交易所", "北京市发展改革委", "新华网", "国家外汇管理局"],
+  "observation": "今日信息的共同线索是公共服务与基础能力继续向可执行、可核验方向推进：医保目录、法律服务和粮食收购更重统一规则，科研与产业端则从温室气体监测、FAST到人工智能终端加速落地。与此同时，灾害、地区安全与平台诈骗风险提醒读者，应区分官方落地措施、单方表态和仍会更新的灾情数字，对高波动市场数据也需保留时间截面意识。",
+  "sources": ["中国新闻网", "新华网", "上海黄金交易所", "北京市发展改革委", "国家外汇管理局"]
+}
