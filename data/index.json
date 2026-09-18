@@ -4,6 +4,14 @@
   "publishAt": "11:00",
   "editions": [
     {
+      "date": "2026-09-18",
+      "issue": 28,
+      "publishAt": "2026-09-18T11:00:00+08:00",
+      "title": "游戏与 Minecraft 每日简报",
+      "headline": "《卧龙2》登Xbox发布会！新BOSS公布 中国神话怪物",
+      "file": "data/2026-09-18.json"
+    },
+    {
       "date": "2026-09-17",
       "issue": 27,
       "publishAt": "2026-09-17T11:00:00+08:00",

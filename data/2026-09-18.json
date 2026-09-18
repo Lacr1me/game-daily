@@ -1,0 +1,478 @@
+{
+  "date": "2026-09-18",
+  "issue": 28,
+  "cutoff": "2026-09-18 05:12（北京时间）",
+  "dataWindow": "2026-09-17 00:00 至 2026-09-18 05:12（北京时间）",
+  "features": [
+    {
+      "title": "《卧龙2》登Xbox发布会！新BOSS公布 中国神话怪物",
+      "date": "2026-09-17",
+      "summary": "在今日（9月17日）播出的Xbox东京电玩展2026情报节目“XBOX Tokyo Game Show 2026”中，光荣特库摩正式公开了《卧龙2：凤火连天》（Wo Long 2: Wings of Ember）的新Boss——“凿齿”。",
+      "source": "游民星空",
+      "url": "https://www.gamersky.com/news/202609/2211721.shtml",
+      "image": "game-brief-assets/2026-09-18-feature-game.jpg"
+    },
+    {
+      "title": "MC百科收录 Jaam's Weaponry",
+      "date": "2026-09-17",
+      "summary": "用新武器和独特的战斗机制扩展你的武器库。",
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/class/30960.html",
+      "image": "game-brief-assets/2026-09-18-feature-mc.jpg"
+    }
+  ],
+  "news": [
+    {
+      "title": "《火焰纹章：万缕千丝》首个更新上线！IGN 10分封神之作",
+      "date": "2026-09-17",
+      "summary": "《火焰纹章：万缕千丝》是任天堂《火焰纹章》系列的全新作品，已于今日（2026年9月17日）在NS2平台独占发售。",
+      "source": "游民星空",
+      "url": "https://www.gamersky.com/news/202609/2211215.shtml",
+      "image": "game-brief-assets/2026-09-18-news-01.jpg"
+    },
+    {
+      "title": "PS5 Pro玩家爽了！新版本更新大加强 PSSR强制突破",
+      "date": "2026-09-17",
+      "summary": "据IGN报道，索尼为PS5推送了版本号26.06‑14.00.00的系统固件更新，带来画质、社交、主页组件等多项功能优化，PS4也同步收到小版本补丁。",
+      "source": "游民星空",
+      "url": "https://www.gamersky.com/news/202609/2211252.shtml",
+      "image": "game-brief-assets/2026-09-18-news-02.jpg"
+    },
+    {
+      "title": "《GTA6》实体版专辑正式公布!三个版本 最便宜134元",
+      "date": "2026-09-17",
+      "summary": "Rockstar Games公布的《Grand Theft Auto VI: The Album》现已开启预购，共推出三个实体版本。",
+      "source": "游民星空",
+      "url": "https://www.gamersky.com/news/202609/2211725.shtml",
+      "image": "game-brief-assets/2026-09-18-news-03.jpg"
+    },
+    {
+      "title": "Epic喜加二：《将军对决》《心灵警探》免费领",
+      "date": "2026-09-17",
+      "summary": "Epic游戏商城已开放领取本周最新免费游戏：《Shogun Showdown》（将军 对决）、《MIND COP》（心灵警探）。领取时间为9月17日-9月24日。",
+      "source": "游民星空",
+      "url": "https://www.gamersky.com/news/202609/2211768.shtml",
+      "image": "game-brief-assets/2026-09-18-news-04.jpg"
+    },
+    {
+      "title": "国产哪吒新游《古神风里希》登Xbox发布会!定档2028",
+      "date": "2026-09-17",
+      "summary": "在今天的TGS Xbox发布会上，国产动作游戏《古神风里希》公开了全新的宣传片，正式定档2028年。",
+      "source": "游民星空",
+      "url": "https://www.gamersky.com/news/202609/2211701.shtml",
+      "image": "game-brief-assets/2026-09-18-news-05.jpg"
+    },
+    {
+      "title": "《使命召唤23》战役预告公布！拔叔亮相 激燃开打",
+      "date": "2026-09-17",
+      "summary": "在今天的TGS Xbox发布会上，《使命召唤23：现代战争4》公开了全新预告片。",
+      "source": "游民星空",
+      "url": "https://www.gamersky.com/news/202609/2211689.shtml",
+      "image": "game-brief-assets/2026-09-18-news-06.jpg"
+    },
+    {
+      "title": "小岛秀夫《PHYSINT》主演公布！金毛忧郁帅哥太帅了",
+      "date": "2026-09-17",
+      "summary": "在今日举行的Xbox东京电玩展发布会上，知名游戏制作人小岛秀夫登台，介绍了小岛工作室与Xbox正在合作开发的两个全新IP的最新动态。",
+      "source": "游民星空",
+      "url": "https://www.gamersky.com/news/202609/2211696.shtml",
+      "image": "game-brief-assets/2026-09-18-news-07.jpg"
+    },
+    {
+      "title": "《仁王3》突然更新！内容超多 体验大增强",
+      "date": "2026-09-17",
+      "summary": "《仁王3》是黑暗战国动作RPG《仁王》系列的最新作，由忍者组Team Ninja开发，光荣特库摩发行。游戏已于2月6日正式发售，登陆PC和PS5平台。",
+      "source": "游民星空",
+      "url": "https://www.gamersky.com/news/202609/2211485.shtml",
+      "image": "game-brief-assets/2026-09-18-news-08.jpg"
+    },
+    {
+      "title": "新增\"妈妈\"英雄!割草爆刷!一刀清屏!《轮回保险公司 R.I.P.》1.0 版本现已上线！首发限时-30%折扣",
+      "date": "2026-09-17",
+      "summary": "游民星空于9月17日报道了新增\"妈妈\"英雄!割草爆刷!一刀清屏!《轮回保险公司 R.I.P.》1.0 版本现已上线！首发限时-30%折扣的最新确定性消息。",
+      "source": "游民星空",
+      "url": "https://www.gamersky.com/news/202609/2211720.shtml",
+      "image": "game-brief-assets/2026-09-18-news-09.jpg"
+    },
+    {
+      "title": "《赤痕：绯红誓约》登Xbox发布会！真·恶魔城来了",
+      "date": "2026-09-17",
+      "summary": "在今天的TGS Xbox发布会上，505 Games发布了《赤痕：绯红誓约》的最新宣传片。",
+      "source": "游民星空",
+      "url": "https://www.gamersky.com/news/202609/2211717.shtml",
+      "image": "game-brief-assets/2026-09-18-news-10.jpg"
+    }
+  ],
+  "packs": [
+    {
+      "name": "元素觉醒（正式版）",
+      "summary": "国产 RPG 整合包正式版，围绕职业成长、冒险探索与任务推进展开。",
+      "category": "RPG／冒险／任务",
+      "heat": 97,
+      "source": "哔哩哔哩",
+      "url": "https://www.bilibili.com/video/BV1RVeM6NEdq/",
+      "heatEvidenceAt": "2026-09-17",
+      "heatSignals": "05:1x实查B站发布时间排序结果：播放15307、点赞1013、收藏512、评论33；按时效与互动综合排序。",
+      "image": "game-brief-assets/2026-09-18-pack-01.jpg"
+    },
+    {
+      "name": "农场物语 1.5.2",
+      "summary": "展示饮品类食物的进食动画，持续完善农耕与生活玩法细节。",
+      "category": "农业／生活／休闲",
+      "heat": 94,
+      "source": "哔哩哔哩",
+      "url": "https://www.bilibili.com/video/BV1TXeu6tEqt/",
+      "heatEvidenceAt": "2026-09-17",
+      "heatSignals": "05:1x实查B站发布时间排序结果：播放6094、点赞325、收藏175、评论80；按时效与互动综合排序。",
+      "image": "game-brief-assets/2026-09-18-pack-02.jpg"
+    },
+    {
+      "name": "齿轮与腐肉 0.51",
+      "summary": "大型末日生存整合包更新，包含枪械、机动、卓越与硬核模拟内容。",
+      "category": "末日／生存／枪械",
+      "heat": 91,
+      "source": "哔哩哔哩",
+      "url": "https://www.bilibili.com/video/BV1aCeu6eEMV/",
+      "heatEvidenceAt": "2026-09-17",
+      "heatSignals": "05:1x实查B站发布时间排序结果：播放4359、点赞216、收藏238、评论79；按时效与互动综合排序。",
+      "image": "game-brief-assets/2026-09-18-pack-03.jpg"
+    },
+    {
+      "name": "神奇宝贝整合包客户端",
+      "summary": "面向多人游玩的宝可梦整合包客户端，强调手机与电脑适配。",
+      "category": "宝可梦／联机／收集",
+      "heat": 88,
+      "source": "哔哩哔哩",
+      "url": "https://www.bilibili.com/video/BV1ZTeM6uEZo/",
+      "heatEvidenceAt": "2026-09-17",
+      "heatSignals": "05:1x实查B站发布时间排序结果：播放2648、点赞124、收藏124、评论65；按时效与互动综合排序。",
+      "image": "game-brief-assets/2026-09-18-pack-04.jpg"
+    },
+    {
+      "name": "落幕曲",
+      "summary": "围绕落幕曲整合包的真实游玩体验与争议展开讨论。",
+      "category": "冒险／生存／讨论",
+      "heat": 85,
+      "source": "哔哩哔哩",
+      "url": "https://www.bilibili.com/video/BV1qyeK6KEWL/",
+      "heatEvidenceAt": "2026-09-17",
+      "heatSignals": "05:1x实查B站发布时间排序结果：播放1588、点赞9、收藏0、评论10；按时效与互动综合排序。",
+      "image": "game-brief-assets/2026-09-18-pack-05.jpg"
+    },
+    {
+      "name": "虚饰作品",
+      "summary": "以弓箭流派推进的整合包实况，集中展示战斗构筑与成长路线。",
+      "category": "战斗／构筑／实况",
+      "heat": 82,
+      "source": "哔哩哔哩",
+      "url": "https://www.bilibili.com/video/BV14reA6rEBg/",
+      "heatEvidenceAt": "2026-09-17",
+      "heatSignals": "05:1x实查B站发布时间排序结果：播放1052、点赞67、收藏7、评论7；按时效与互动综合排序。",
+      "image": "game-brief-assets/2026-09-18-pack-06.jpg"
+    },
+    {
+      "name": "永恒的 MC 2",
+      "summary": "分享近期沉浸游玩的永恒的 MC 2，呈现探索与长期成长体验。",
+      "category": "综合／探索／成长",
+      "heat": 79,
+      "source": "哔哩哔哩",
+      "url": "https://www.bilibili.com/video/BV1N1eN62EsT/",
+      "heatEvidenceAt": "2026-09-17",
+      "heatSignals": "05:1x实查B站发布时间排序结果：播放691、点赞58、收藏12、评论31；按时效与互动综合排序。",
+      "image": "game-brief-assets/2026-09-18-pack-07.jpg"
+    },
+    {
+      "name": "兰斯的 MC 大冒险",
+      "summary": "自制整合包实况首期，在实际游玩中持续调整内容与平衡。",
+      "category": "冒险／实况／自制",
+      "heat": 76,
+      "source": "哔哩哔哩",
+      "url": "https://www.bilibili.com/video/BV1UUeu6cEfa/",
+      "heatEvidenceAt": "2026-09-17",
+      "heatSignals": "05:1x实查B站发布时间排序结果：播放655、点赞44、收藏31、评论13；按时效与互动综合排序。",
+      "image": "game-brief-assets/2026-09-18-pack-08.jpg"
+    },
+    {
+      "name": "慢砌山河",
+      "summary": "生存建筑休闲整合包更新日志，持续完善建筑与轻量生活体验。",
+      "category": "建筑／休闲／生存",
+      "heat": 73,
+      "source": "哔哩哔哩",
+      "url": "https://www.bilibili.com/video/BV1BjeA6ZEHf/",
+      "heatEvidenceAt": "2026-09-17",
+      "heatSignals": "05:1x实查B站发布时间排序结果：播放403、点赞13、收藏2、评论4；按时效与互动综合排序。",
+      "image": "game-brief-assets/2026-09-18-pack-09.jpg"
+    },
+    {
+      "name": "灰烬扳机：遗境远征",
+      "summary": "围绕遗境远征整合包的安装与内容配置，面向希望快速开始冒险的玩家。",
+      "category": "冒险／任务／教程",
+      "heat": 70,
+      "source": "哔哩哔哩",
+      "url": "https://www.bilibili.com/video/BV1XNe36MEnf/",
+      "heatEvidenceAt": "2026-09-17",
+      "heatSignals": "05:1x实查B站发布时间排序结果：播放424、点赞4、收藏3、评论1；按时效与互动综合排序。",
+      "image": "game-brief-assets/2026-09-18-pack-10.jpg"
+    }
+  ],
+  "mods": [
+    {
+      "name": "Relics: Thirteen Flames",
+      "summary": "遗物的官方内容扩展，在原模组作者的参与下开发。它引入了十三个可进化的神器。",
+      "version": "Minecraft 1.21.1",
+      "loader": "NeoForge",
+      "date": "2026-09-17",
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/class/30959.html"
+    },
+    {
+      "name": "龙之眼：重生（Eye of Dragons Reborn）",
+      "summary": "添加了寻找三种龙的道具。",
+      "version": "Minecraft 1.20.1／1.21.1",
+      "loader": "Forge ／NeoForge",
+      "date": "2026-09-17",
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/class/30958.html"
+    },
+    {
+      "name": "[MCB] Modern Content Backport",
+      "summary": "移植了 1.21.11 群起纷争以及少部分其他版本内容至 1.20.1。",
+      "version": "Minecraft 1.20.1／1.20.3",
+      "loader": "Forge",
+      "date": "2026-09-17",
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/class/30957.html"
+    },
+    {
+      "name": "Village Shop System",
+      "summary": "添加了售卖货架和收购货架与收银台方块，村民可以自主购物、用绿宝石交易物品、在收银台付款。",
+      "version": "Minecraft 1.21.1／1.20.1",
+      "loader": "Forge ／Fabric ／NeoForge",
+      "date": "2026-09-17",
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/class/30956.html"
+    },
+    {
+      "name": "Trading Stalls",
+      "summary": "可以让玩家搭建属于自己的市场摊位。",
+      "version": "Minecraft 1.21.11／1.21.10",
+      "loader": "Fabric",
+      "date": "2026-09-17",
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/class/30955.html"
+    },
+    {
+      "name": "[HI] Helium的物品（Helium's Item）",
+      "summary": "添加了探索、生存、采集与自动化物品。",
+      "version": "Minecraft 1.20.1",
+      "loader": "Forge",
+      "date": "2026-09-17",
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/class/30954.html"
+    }
+  ],
+  "deals": [
+    {
+      "name": "《猎人：荒野的召唤™》",
+      "discount": "-85%",
+      "original": "¥70.00",
+      "price": "¥10.50",
+      "label": "今日特惠",
+      "ends": "截至 09-22",
+      "image": "game-brief-assets/2026-09-18-steam-01.jpg",
+      "url": "https://store.steampowered.com/app/518790/?cc=cn&l=schinese"
+    },
+    {
+      "name": "《暗黑破坏神® IV》",
+      "discount": "-75%",
+      "original": "¥348.00",
+      "price": "¥87.00",
+      "label": "今日特惠",
+      "ends": "截至 09-25",
+      "image": "game-brief-assets/2026-09-18-steam-02.jpg",
+      "url": "https://store.steampowered.com/app/2344520/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Resident Evil 4",
+      "discount": "-75%",
+      "original": "¥198.00",
+      "price": "¥49.50",
+      "label": "今日特惠",
+      "ends": "截至 09-22",
+      "image": "game-brief-assets/2026-09-18-steam-03.jpg",
+      "url": "https://store.steampowered.com/app/2050650/?cc=cn&l=schinese"
+    },
+    {
+      "name": "DEATH STRANDING DIRECTOR'S CUT",
+      "discount": "-75%",
+      "original": "¥198.00",
+      "price": "¥49.50",
+      "label": "今日特惠",
+      "ends": "截至 09-25",
+      "image": "game-brief-assets/2026-09-18-steam-04.jpg",
+      "url": "https://store.steampowered.com/app/1850570/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Monster Hunter: World",
+      "discount": "-74%",
+      "original": "¥148.00",
+      "price": "¥38.48",
+      "label": "今日特惠",
+      "ends": "截至 09-22",
+      "image": "game-brief-assets/2026-09-18-steam-05.jpg",
+      "url": "https://store.steampowered.com/app/582010/?cc=cn&l=schinese"
+    },
+    {
+      "name": "No Man's Sky 无人深空",
+      "discount": "-60%",
+      "original": "¥175.00",
+      "price": "¥70.00",
+      "label": "今日特惠",
+      "ends": "截至 09-22",
+      "image": "game-brief-assets/2026-09-18-steam-06.jpg",
+      "url": "https://store.steampowered.com/app/275850/?cc=cn&l=schinese"
+    },
+    {
+      "name": "猎杀：对决 1896",
+      "discount": "-60%",
+      "original": "¥128.00",
+      "price": "¥51.20",
+      "label": "今日特惠",
+      "ends": "截至 09-22",
+      "image": "game-brief-assets/2026-09-18-steam-07.jpg",
+      "url": "https://store.steampowered.com/app/594650/?cc=cn&l=schinese"
+    },
+    {
+      "name": "无主之地®4",
+      "discount": "-54%",
+      "original": "¥318.56",
+      "price": "¥145.20",
+      "label": "今日特惠",
+      "ends": "截至 09-25",
+      "image": "game-brief-assets/2026-09-18-steam-08.jpg",
+      "url": "https://store.steampowered.com/app/1285190/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Grand Theft Auto V 增强版",
+      "discount": "-50%",
+      "original": "¥149.00",
+      "price": "¥74.50",
+      "label": "今日特惠",
+      "ends": "截至 09-22",
+      "image": "game-brief-assets/2026-09-18-steam-09.jpg",
+      "url": "https://store.steampowered.com/app/3240220/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Ready or Not",
+      "discount": "-50%",
+      "original": "¥159.00",
+      "price": "¥79.50",
+      "label": "今日特惠",
+      "ends": "截至 09-19",
+      "image": "game-brief-assets/2026-09-18-steam-10.jpg",
+      "url": "https://store.steampowered.com/app/1144200/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Rust",
+      "discount": "-50%",
+      "original": "¥138.00",
+      "price": "¥69.00",
+      "label": "今日特惠",
+      "ends": "截至 09-27",
+      "image": "game-brief-assets/2026-09-18-steam-11.jpg",
+      "url": "https://store.steampowered.com/app/252490/?cc=cn&l=schinese"
+    },
+    {
+      "name": "我们到了吗？",
+      "discount": "-40%",
+      "original": "¥33.00",
+      "price": "¥19.80",
+      "label": "今日特惠",
+      "ends": "截至 09-24",
+      "image": "game-brief-assets/2026-09-18-steam-12.jpg",
+      "url": "https://store.steampowered.com/app/3949040/?cc=cn&l=schinese"
+    },
+    {
+      "name": "R.E.P.O.",
+      "discount": "-35%",
+      "original": "¥35.00",
+      "price": "¥22.75",
+      "label": "今日特惠",
+      "ends": "截至 09-21",
+      "image": "game-brief-assets/2026-09-18-steam-13.jpg",
+      "url": "https://store.steampowered.com/app/3241660/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Resident Evil Requiem",
+      "discount": "-30%",
+      "original": "¥348.00",
+      "price": "¥243.60",
+      "label": "今日特惠",
+      "ends": "截至 09-22",
+      "image": "game-brief-assets/2026-09-18-steam-14.jpg",
+      "url": "https://store.steampowered.com/app/3764200/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Monster Hunter Wilds",
+      "discount": "-25%",
+      "original": "¥198.00",
+      "price": "¥148.50",
+      "label": "今日特惠",
+      "ends": "截至 09-22",
+      "image": "game-brief-assets/2026-09-18-steam-15.jpg",
+      "url": "https://store.steampowered.com/app/2246340/?cc=cn&l=schinese"
+    },
+    {
+      "name": "机械狂欢",
+      "discount": "-20%",
+      "original": "¥33.00",
+      "price": "¥26.40",
+      "label": "今日特惠",
+      "ends": "截至 09-27",
+      "image": "game-brief-assets/2026-09-18-steam-16.jpg",
+      "url": "https://store.steampowered.com/app/4108000/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Escape the Backrooms",
+      "discount": "-20%",
+      "original": "¥37.00",
+      "price": "¥29.60",
+      "label": "今日特惠",
+      "ends": "截至 09-27",
+      "image": "game-brief-assets/2026-09-18-steam-17.jpg",
+      "url": "https://store.steampowered.com/app/1943950/?cc=cn&l=schinese"
+    },
+    {
+      "name": "PRAGMATA",
+      "discount": "-20%",
+      "original": "¥268.00",
+      "price": "¥214.40",
+      "label": "今日特惠",
+      "ends": "截至 09-22",
+      "image": "game-brief-assets/2026-09-18-steam-18.jpg",
+      "url": "https://store.steampowered.com/app/3357650/?cc=cn&l=schinese"
+    },
+    {
+      "name": "007 初露锋芒",
+      "discount": "-20%",
+      "original": "¥338.00",
+      "price": "¥270.40",
+      "label": "今日特惠",
+      "ends": "截至 09-30",
+      "image": "game-brief-assets/2026-09-18-steam-19.jpg",
+      "url": "https://store.steampowered.com/app/3768760/?cc=cn&l=schinese"
+    }
+  ],
+  "trends": [
+    "9月17日晚国内游戏资讯集中于TGS Xbox发布会、平台更新和新作发售信息，确定性公告密集。",
+    "《卧龙2》新Boss与国产动作游戏《古神风里希》同台亮相，亚洲题材动作游戏继续获得集中曝光。",
+    "MC百科在9月17日晚连续收录多款新模组，Forge、NeoForge与Fabric生态均有新增内容。",
+    "Steam国区05:0x冻结首屏50项，其中19项通过人民币折扣和覆盖当日的截止时间门禁。"
+  ],
+  "sources": [
+    "游民星空",
+    "MC百科",
+    "哔哩哔哩",
+    "Steam国区"
+  ]
+}

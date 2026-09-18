@@ -1,0 +1,67 @@
+{
+  "date": "2026-09-18",
+  "issue": 28,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期五",
+  "lunarDate": "农历丙午年八月初八",
+  "cutoff": "2026-09-18 05:40（北京时间）",
+  "productionTime": "2026-09-18 05:42（北京时间）",
+  "sections": {
+    "domestic": [
+      {"id":"domestic-01","title":"电视机将逐步内置机顶盒软件功能","summary":"广电总局提出推动机顶盒功能以软件形态内置于电视机，减少外接设备和连线，让开机、选台与观看操作进一步简化。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-17 13:16","url":"https://www.news.cn/politics/20260917/1b104a866eef4034afb798f8fa6ab9be/c.html"},
+      {"id":"domestic-02","title":"我国部署提升粮食综合生产能力","summary":"相关规划提出到二〇三〇年粮食综合生产能力稳步提升，强化耕地保护、种业振兴和农机装备，农业科技进步贡献率超过百分之六十四。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-17 13:02","url":"https://www.news.cn/politics/20260917/fb90b494bc37471ea2b29d6d7eb01069/c.html"},
+      {"id":"domestic-03","title":"慢性病患者安全管理强调全程守护","summary":"世界患者安全日聚焦非传染性疾病诊疗风险，我国已建设五百七十八个慢性病综合防控示范区，推动筛查、治疗与长期管理衔接。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-17 15:24","url":"https://www.news.cn/20260917/51f7942ae3be4e788504b6d4750cef67/c.html"},
+      {"id":"domestic-04","title":"晋城把群众建议转化为民生项目","summary":"当地通过三级筛选和多方研判处理九千余条有效意见，围绕停车、养老等高频诉求形成项目清单，并以办理反馈检验治理成效。","source":"人民网","sourceOrigin":"china","publishedAt":"2026-09-17 06:06","url":"https://society.people.com.cn/n1/2026/0917/c1008-40800136.html"},
+      {"id":"domestic-05","title":"重庆扩大新就业形态劳动者社保支持","summary":"重庆将符合条件的新就业形态就业困难人员纳入社会保险补贴范围，并配套创业担保贷款等支持，覆盖外卖、网约车等灵活就业群体。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-17 09:27","url":"https://cq.news.cn/20260917/d837308bda094d18932f53efd2073746/c.html"},
+      {"id":"domestic-06","title":"最高法发布网络法治典型案例","summary":"四起案例涉及网络暴力、直播侵权、搜索引擎责任和跨境赌博技术支持，明确平台治理、人格权保护与技术服务边界。","source":"人民网","sourceOrigin":"china","publishedAt":"2026-09-16 13:50","url":"https://society.people.com.cn/n1/2026/0916/c1008-40799912.html"},
+      {"id":"domestic-07","title":"人工智能等招聘专场释放十七万余岗位需求","summary":"专项招聘汇集约一万二千家用人单位、提供十七点八万人次需求，其中人工智能专场约一千七百家单位提供一点三万个岗位。","source":"人民网","sourceOrigin":"china","publishedAt":"2026-09-17 08:30","url":"https://edu.people.com.cn/n1/2026/0917/c1006-40800299.html"},
+      {"id":"domestic-08","title":"健康领域讨论长期照护与智能筛查","summary":"健康论坛围绕老龄化、慢病管理和人工智能辅助筛查展开讨论，多地实践显示早筛与长期照护仍需基层服务、支付机制和数据能力协同。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-17 22:26","url":"https://www.news.cn/fortune/20260917/90f6d344ce3c496ea639ab4861cecf70/c.html"},
+      {"id":"domestic-09","title":"文化和旅游发展十五五规划印发","summary":"规划对未来五年公共文化服务、文化遗产保护、文旅消费和产业融合作出部署，强调提升优质产品供给与便民服务质量。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-16 21:22","url":"https://www.news.cn/politics/20260916/8f1dc48761df4c51b4c4ef77ec225906/c.html"},
+      {"id":"domestic-10","title":"统计改革发展十五五规划发布","summary":"规划提出完善经济社会、人口就业和民生领域统计，加强数据质量全流程管理与统计监督，为宏观决策提供更及时可靠依据。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-16 20:11","url":"https://www.news.cn/politics/20260916/2261beb2db7c4a1a82ae75548d00104d/c.html"}
+    ],
+    "international": [
+      {"id":"international-01","title":"中方呼吁也门各方立即停火止战","summary":"中方在安理会呼吁也门各方停止军事行动、重返政治谈判，并强调维护红海航道与地区国家安全，避免冲突继续外溢。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-17 04:00","url":"https://www.news.cn/world/20260917/3b86affe79de46558303a65e50654180/c.html"},
+      {"id":"international-02","title":"特朗普称美国利率应降至百分之一或更低","summary":"特朗普再次公开施压美联储大幅降息；联邦基金利率此前上调二十五个基点至百分之三点七五至四区间，政策分歧继续影响市场预期。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-17 07:49","url":"https://www.news.cn/world/20260917/f407d443b125403d960d123ddce18822/c.html"},
+      {"id":"international-03","title":"中方敦促国际社会加强同阿富汗对话","summary":"中方在联合国表示应通过接触推动阿富汗和平重建，持续提供人道与发展支持，同时要求有关方面切实打击恐怖主义。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-17 09:53","url":"https://www.news.cn/world/20260917/d646c7f6abbe453bbd13a30614f2bec0/c.html"},
+      {"id":"international-04","title":"日本首相高市早苗改组内阁","summary":"日本首相高市早苗完成内阁改组，多名关键阁僚职位出现调整；新班子的经济、安全与外交政策走向受到外界关注。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-17 12:30","url":"https://www.news.cn/world/20260917/328c1ac31f804cfc8294e4d3094fbefc/c.html"},
+      {"id":"international-05","title":"美方就欧盟允许加拿大参与发出关税威胁","summary":"特朗普称欧盟若允许加拿大成为部分机制的联席成员可能被视为敌对行为，并以关税施压，跨大西洋经贸关系再添不确定性。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-17 11:47","url":"https://www.news.cn/world/20260917/8c860087c628498cbe3c1db6e64fecd5/c.html"},
+      {"id":"international-06","title":"乌克兰首都基辅传出强烈爆炸声","summary":"基辅清晨传出两轮强烈爆炸声，乌方称遭遇导弹袭击，部分区域供水中断；人员伤亡和设施损失仍待权威通报。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-17 08:04","url":"https://www.news.cn/world/20260917/9b2bd9cba2544019b5251b13a28dee82/c.html"},
+      {"id":"international-07","title":"美国将加拿大产品排除出政府采购计划","summary":"特朗普签署备忘录，要求联邦政府采购计划排除加拿大产品；新措施可能进一步加剧美加贸易摩擦并影响跨境供应链。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-17 07:31","url":"https://www.news.cn/world/20260917/969dd445c7a24ee9a859f386b368d90b/c.html"},
+      {"id":"international-08","title":"欧盟年度政策演说聚焦竞争力与能源安全","summary":"欧盟委员会主席冯德莱恩在年度演说中把产业竞争力、能源安全和防务能力列为重点，成员国在资金与政策节奏上仍需协调。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-17 00:12","url":"https://www.news.cn/world/20260917/f71cf120f1e94eadab4519cd6f3115b3/c.html"},
+      {"id":"international-09","title":"美军高官提出为月球周边行动作准备","summary":"美国军方高官称需为在月球周边空间开展军事行动作准备，相关表态显示太空安全议题正从近地轨道向更远空间延伸。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-17","url":"https://www.news.cn/world/20260917/061ebc4ff4a04822b1b7b55998a4dab7/c.html"},
+      {"id":"international-10","title":"以色列与摩洛哥同意互派大使","summary":"以色列与摩洛哥同意升级外交关系并互派大使，双方计划扩大经贸与安全等领域合作，地区外交格局出现新的调整。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-17","url":"https://www.news.cn/world/20260917/1ee24bd1a313498498815161197fb7f2/c.html"}
+    ],
+    "tech": [
+      {"id":"tech-01","title":"雪龙二号护送塔拉极地站开启越冬考察","summary":"雪龙二号完成护送任务，支持塔拉极地站在北冰洋开展越冬观测，为海冰、海洋和大气长期连续研究补充现场数据。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-17 12:53","url":"https://www.news.cn/tech/20260917/0f6c978178874114a5f0070c9ac709bd/c.html"},
+      {"id":"tech-02","title":"电子信息产业瞄准核心技术与智能终端","summary":"未来五年产业将加强集成电路、基础软件和开源指令集攻关，发展人工智能终端与智能体应用，目标到二〇三〇年营收超过三十万亿元。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-17 09:22","url":"https://www.news.cn/tech/20260917/392f85032a094852b359fc37d594af76/c.html"},
+      {"id":"tech-03","title":"民营火箭批量执行卫星组网任务","summary":"商业火箭一次发射八颗千帆星座卫星和一颗无线电试验卫星，载荷总质量超过三吨，卫星进入约八百公里预定轨道。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-17 09:21","url":"https://www.news.cn/tech/20260917/30e754f6e7f9441c8a1c20918355e39e/c.html"},
+      {"id":"tech-04","title":"农业科技大会发布绿色转型成果","summary":"世界农业科技创新大会汇集三十多个机构和约三百名嘉宾，发布六项合作成果，讨论以育种、数字农业和低碳技术改善农食系统。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-17 21:29","url":"https://www.news.cn/20260917/9a2ead2c8ef745d682457b738ab66d54/c.html"},
+      {"id":"tech-05","title":"国产种源支撑冬储蔬菜稳产","summary":"我国甘蓝育种团队持续建设种质资源和商业化育种体系，国产冬储大白菜种子市场占比超过七成，每年筛选约两千个新品种。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-16 22:36","url":"https://www.news.cn/local/20260916/066a7d8a01f44b30b2709a65f601561b/c.html"},
+      {"id":"tech-06","title":"浦江创新论坛呈现六类科技新动向","summary":"论坛从基础研究、产业协同、开放合作等维度梳理创新趋势，多项成果集中发布，强调让实验室突破更顺畅地连接产业需求。","source":"中国科技网","sourceOrigin":"china","publishedAt":"2026-09-15 07:37","url":"https://www.stdaily.com/web/2026-09/15/content_580946.html"},
+      {"id":"tech-07","title":"人工智能加速成为科研基础设施","summary":"人工智能正进入文献分析、实验设计和材料发现等科研环节，专家同时提醒建立数据、可复现性与责任边界，避免黑箱结论。","source":"人民网","sourceOrigin":"china","publishedAt":"2026-09-15 08:08","url":"https://kpzg.people.com.cn/n1/2026/0915/c404214-40798775.html"},
+      {"id":"tech-08","title":"先进制造业明确智能绿色融合方向","summary":"有关部署提出推动制造业高端化、智能化、绿色化与融合化发展，加强关键核心技术攻关和产业链协同，培育新质生产力。","source":"人民网","sourceOrigin":"china","publishedAt":"2026-09-17 12:08","url":"https://politics.people.com.cn/BIG5/n1/2026/0917/c1024-40800556.html"},
+      {"id":"tech-09","title":"人工智能介入科研需要明确规则","summary":"随着模型参与科研流程，数据来源、结果复核、署名责任和敏感信息保护成为关键问题，科研机构需建立可追溯的使用规范。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-17","url":"https://www.news.cn/tech/20260917/7ef426857b3349a0af74d382209c095c/c.html"},
+      {"id":"tech-10","title":"数据可申请全国通用数字身份证","summary":"全国数据权益登记服务系统上线，为数据资源、产品和服务提供统一登记凭证，推动权属确认、流通交易与跨区域互认。","source":"中国科技网","sourceOrigin":"china","publishedAt":"2026-09-16 07:29","url":"https://www.stdaily.com/web/gdxw/2026-09/16/content_581627.html"}
+    ],
+    "ai": [
+      {"id":"ai-01","title":"人工智能治理强调以人为本与普惠发展","summary":"政协委员建议在加快应用的同时强化伦理、安全和就业转型保障，通过人才培训与公共服务缩小数字鸿沟，让技术收益覆盖更多群体。","source":"人民网","sourceOrigin":"china","publishedAt":"2026-09-17 06:07","url":"https://politics.people.com.cn/n1/2026/0917/c461001-40800150.html"},
+      {"id":"ai-02","title":"中国东盟讨论人工智能治理合作","summary":"中国—东盟人工智能部长圆桌会议在南宁举行，各方围绕政策沟通、能力建设、伦理安全和产业合作探讨建立常态化协作机制。","source":"中国新闻网","sourceOrigin":"china","publishedAt":"2026-09-17 23:45","url":"https://www.chinanews.com.cn/aseaninfo/2026/09-17/10698607.shtml"},
+      {"id":"ai-03","title":"人工智能训练师走进新职业现场","summary":"报道梳理人工智能训练师的数据标注、模型评测与场景优化工作，显示岗位正从基础数据处理转向理解业务和协同改进模型。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-17 09:22","url":"https://www.news.cn/tech/20260917/bfcd111e69894d13978074ad82f69d85/c.html"},
+      {"id":"ai-04","title":"国产具身智能在烧烤直播中接受实测","summary":"以太大模型驱动的机器人在真实餐饮场景中完成协同操作，全程不依赖人工遥控，重点检验感知、规划和连续执行能力。","source":"新华网","sourceOrigin":"china","publishedAt":"2026-09-17 18:02","url":"https://www.news.cn/fortune/20260917/4cd714bf9a9e493b97fecdba09e3d074/c.html"},
+      {"id":"ai-05","title":"智能经济论坛关注产业智能体落地","summary":"论坛围绕人工智能从提供答案走向交付任务展开讨论，产业界关注智能体在制造和服务中的可靠性、安全性与实际投入产出。","source":"人民日报","sourceOrigin":"china","publishedAt":"2026-09-17","url":"https://paper.people.com.cn/rmrb/pc/content/202609/17/content_30181556.html"}
+    ]
+  },
+  "topStoryIds": ["domestic-02", "international-01", "tech-03"],
+  "metrics": [
+    {"kind":"gold","icon":"🥇","name":"国内金价","value":"941.20元/克","note":"Au99.99，2026-09-17延时行情","source":"上海黄金交易所","sourceUrl":"https://www.sge.com.cn/h5_sjzx/yshq","sourceOrigin":"china"},
+    {"kind":"domestic_oil","icon":"⛽","name":"北京成品油","value":"92号8.29元/升·95号8.83元/升","note":"2026-09-11 24时起最高零售价","source":"北京市发展改革委","sourceUrl":"https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202609/t20260911_4860093.htm","sourceOrigin":"china"},
+    {"kind":"international_oil","icon":"🛢️","name":"国际油价","value":"WTI 102.43美元/桶·布伦特105.83美元/桶","note":"2026-09-16收盘","source":"新华网","sourceUrl":"https://www.news.cn/fortune/20260917/4177e30790fe4dd780c67af328eb0135/c.html","sourceOrigin":"china"},
+    {"kind":"usd_cny","icon":"💵","name":"美元兑人民币","value":"1美元=6.7580人民币","note":"2026-09-17中间价","source":"国家外汇管理局","sourceUrl":"https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760","sourceOrigin":"china"},
+    {"kind":"eur_cny","icon":"💶","name":"欧元兑人民币","value":"1欧元=7.7350人民币","note":"2026-09-17中间价","source":"国家外汇管理局","sourceUrl":"https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760","sourceOrigin":"china"},
+    {"kind":"jpy_cny","icon":"💴","name":"日元兑人民币","value":"100日元=4.3252人民币","note":"2026-09-17中间价","source":"国家外汇管理局","sourceUrl":"https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760","sourceOrigin":"china"}
+  ],
+  "metricsCutoff": "2026-09-18 05:40（北京时间）",
+  "metricSources": ["上海黄金交易所", "北京市发展改革委", "新华网", "国家外汇管理局"],
+  "observation": "第28期信息的主线是公共服务、产业升级与技术治理同步推进：粮食、医疗、就业和社保政策继续向可执行的规则落地，商业航天、电子信息与数据确权则加快连接产业场景。与此同时，地区冲突、贸易摩擦和人工智能介入科研提示我们，面对快速变化的事件和技术，应始终区分已生效措施、单方表态与仍待验证的结果，并保留清晰的时间截面。",
+  "sources": ["新华网", "人民网", "人民日报", "中国新闻网", "中国科技网", "上海黄金交易所", "北京市发展改革委", "国家外汇管理局"]
+}
