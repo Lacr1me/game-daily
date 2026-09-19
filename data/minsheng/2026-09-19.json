@@ -1,0 +1,427 @@
+{
+  "date": "2026-09-19",
+  "issue": 29,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期六",
+  "lunarDate": "农历丙午年八月初九",
+  "cutoff": "2026-09-19 06:40（北京时间）",
+  "productionTime": "2026-09-19 06:40（北京时间）",
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "机动车排放检验将强化全过程监管",
+        "summary": "生态环境部与市场监管总局联合印发意见，从准入退出、检验运行、设备质量及精准监管等方面提升车检质量，禁止使用作弊软硬件。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 22:50",
+        "url": "https://www.news.cn/politics/20260918/431b35f94a11453ca2a28a1d615d89df/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "上海老字号博览会集中展示日常消费新品",
+        "summary": "第二十届中华老字号博览会在上海开幕，展品覆盖食品、服装、文创等领域，新增定制专区，将非遗技艺与居家、出行等生活场景结合。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 21:56",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-18/10699187.shtml"
+      },
+      {
+        "id": "domestic-03",
+        "title": "深圳铁路双节运输将增开夜间高铁",
+        "summary": "深圳铁路预计中秋国庆运输期间发送573.12万人次，将通过夜间高铁、动卧和动车组重联增加运力，并按售票及候补情况动态调整。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 21:48",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-18/10699274.shtml"
+      },
+      {
+        "id": "domestic-04",
+        "title": "住房建设将统筹新房、旧房与社区服务",
+        "summary": "住建部介绍新房建设、老房改造和服务提升安排，提出补齐养老、托幼及用餐服务，建立房屋全生命周期安全管理制度。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 21:38",
+        "url": "https://www.xinhuanet.com/politics/20260918/adbeed75a7c44166b37108ee2c243c1c/c.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "长江武汉段倾倒淤泥事件调查结果公布",
+        "summary": "联合调查组认定倾倒物为有污染特性的清淤淤泥，涉事企业被立案查处，十一名责任人被追责；监测显示下游取水点及水厂供水符合相关标准。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 21:26",
+        "url": "https://cnews.chinadaily.com.cn/a/202609/18/WS6aad3c12e4b09a165c78b108.html"
+      },
+      {
+        "id": "domestic-06",
+        "title": "沈阳撞钟鸣警纪念九一八事变95周年",
+        "summary": "九月十八日上午，沈阳举行撞钟鸣警仪式，十四响钟声纪念十四年抗战，各界代表与市民缅怀遇难同胞，表达珍视和平与传承历史记忆的心愿。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 21:17",
+        "url": "https://www.news.cn/politics/20260918/31f147fd57ec4c66996bc204dc216dda/c.html"
+      },
+      {
+        "id": "domestic-07",
+        "title": "未成年人安全用网规定公开征求意见",
+        "summary": "网信部门公布征求意见稿，拟限制面向未成年人的陌生人社交和虚拟亲密关系服务，明确未满十六岁不得发布网络直播，反馈截至十月十七日。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 21:03",
+        "url": "https://www.news.cn/politics/20260918/6cbe3f9bafab49a08da6c9f80aee9497/c.html"
+      },
+      {
+        "id": "domestic-08",
+        "title": "宁淮城际铁路进入长钢轨存储阶段",
+        "summary": "首列满载14铺轨公里长钢轨的列车运抵南京北铺轨基地，为全线铺轨作准备；宁淮城际新建线路179公里，设计时速350公里。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 21:01",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-18/10699225.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "title": "国务院部署医疗康复护理扩容提升",
+        "summary": "国务院常务会议提出以基层为重点建强康复护理服务体系，推动资源向社区和家庭延伸，并完善服务目录、价格机制与人才培养保障。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 19:45",
+        "url": "https://www.news.cn/politics/leaders/20260918/bb354fed5b574a829702249ff55fe0b5/c.html"
+      },
+      {
+        "id": "domestic-10",
+        "title": "无认证充电宝整治已发现395件问题线索",
+        "summary": "市场监管总局披露，集中整治检查充电宝生产企业425家和店铺5.56万家，发现395件问题线索，并督促平台拦截违规商品。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 19:34",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-18/10699134.shtml"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "联合国秘书长遴选完成第三轮意向性投票",
+        "summary": "法国常驻联合国代表宣布，安理会已完成下任秘书长遴选第三轮意向性投票，八名候选人名单未变；投票结果不公开，将通过各提名国向候选人通报。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-19 00:15",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-19/10699318.shtml"
+      },
+      {
+        "id": "international-02",
+        "title": "巴菲特卸任伯克希尔董事长",
+        "summary": "伯克希尔哈撒韦宣布巴菲特卸任董事长，即日起担任荣誉董事长并继续留任董事；董事会选举霍华德·巴菲特接任董事长，苏珊·德克尔出任首席独立董事。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 20:19",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-18/10699167.shtml"
+      },
+      {
+        "id": "international-03",
+        "title": "泰国扩大居民太阳能发电收购计划",
+        "summary": "泰国国家能源政策委员会批准将居民太阳能发电累计收购目标由五千兆瓦增至一万兆瓦，富余电力按每千瓦时二点二泰铢收购，合同期限二十年。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 20:06",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-18/10699153.shtml"
+      },
+      {
+        "id": "international-04",
+        "title": "马来西亚前总理纳吉布获准居家服刑",
+        "summary": "马来西亚最高元首批准纳吉布有条件特赦，准其居家服完SRC案剩余刑期；他须缴纳五千万林吉特罚款，该决定不影响一马公司案及相关上诉。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 19:19",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-18/10699122.shtml"
+      },
+      {
+        "id": "international-05",
+        "title": "日本央行将政策利率上调至约1.25%",
+        "summary": "日本央行结束货币政策会议，将政策利率由约百分之一升至百分之一点二五，是年内第二次加息；公告将原油涨价和日元贬值列为通胀风险。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 14:06",
+        "url": "https://www3.xinhuanet.com/20260918/0d07365c9adb4567bf49d19813752ae3/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "美国向中国返还64件套文物及化石",
+        "summary": "中国国家文物局在华盛顿和纽约接收两批共64件套文物艺术品及古生物化石，包括天龙山石窟造像身躯、陶俑及恐龙化石等。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 11:25",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-18/10698796.shtml"
+      },
+      {
+        "id": "international-07",
+        "title": "欧洲投资机构调整美国国债配置",
+        "summary": "新华社梳理多家欧洲机构观点发现，部分机构降低美国长期国债配置或提出调整建议，主要关注通胀、政策不确定性与美国政府借贷规模。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 10:50",
+        "url": "https://www.news.cn/world/20260918/256d809fe11e4f9ebefccba50d5eda76/c.html"
+      },
+      {
+        "id": "international-08",
+        "title": "联合国旅游组织下调国际游客增长预期",
+        "summary": "联合国旅游组织将全年国际游客增长预期由百分之三至四下调至百分之一至二；上半年跨境游客约6.9亿人次，增幅仅为百分之零点四。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 10:24",
+        "url": "https://www.news.cn/world/20260918/be9ae7ce3a9b4216b07cc3c8c7d3d78c/c.html"
+      },
+      {
+        "id": "international-09",
+        "title": "美国三十年期房贷利率升至百分之六点九五",
+        "summary": "房地美公布的美国三十年期固定房贷平均利率升至百分之六点九五，高于前一周的百分之六点七六，连续第四周上涨，并创去年一月三十日以来最高水平。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 06:53",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-18/10698628.shtml"
+      },
+      {
+        "id": "international-10",
+        "title": "巴黎国际旅游专业展闭幕",
+        "summary": "为期三天的巴黎国际旅游专业展于九月十七日结束，中国展台参与行业交流。这一创办于1979年的展会为旅游目的地和专业从业者提供合作平台。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 00:56",
+        "url": "https://www.news.cn/world/20260918/e32bec293d0544878a740d882ca12c59/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "医药工业规划明确创新药械发展目标",
+        "summary": "十部门发布医药工业新规划，提出到2030年首创新药占全球比例达到25%以上，并部署原始创新、临床转化及药械供应保障等任务。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 18:16",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/18/content_583711.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "清华团队观测仙女座星系118个超泡",
+        "summary": "清华团队联合中国天眼与美国甚大阵列观测，发现仙女座星系118个膨胀超泡，为成群超新星爆发足以维持星系气体湍流提供定量证据。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 15:15",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/18/content_583605.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "甘肃构建草种保护与育种创新平台",
+        "summary": "甘肃已建成草种质资源库、八个资源圃和十六个省级区域试验站，贯通资源保护、品种选育和成果转化，目前资源库保存草种质资源8210份。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 14:05",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/18/content_583498.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "鄂通两头乌猪新品种进入产业化推广",
+        "summary": "华中农业大学与通城县等单位合作选育的鄂通两头乌猪通过国家审定并启动推广，在保留地方猪种特性的基础上改善生长和繁殖性能。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 10:13",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/18/content_583253.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "钙钛矿光伏测试迎来首项国家标准",
+        "summary": "市场监管总局发布钙钛矿电池及组件电流电压测量国家标准，统一稳定化处理、面积定义与效率计算方法，计划于2027年正式实施。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 10:08",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-18/10698728.shtml"
+      },
+      {
+        "id": "tech-06",
+        "title": "合肥低空产业拓展物流与医疗送检场景",
+        "summary": "合肥已集聚十三家整机制造企业和三百余家配套企业，应用从文旅观光、巡检向医疗样本送检、岛屿物资补给及即时配送等场景延伸。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 09:04",
+        "url": "https://www.news.cn/tech/20260918/3128ddd5997b477cba2bac81238f572e/c.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "数字孪生推动沈鼓装备升级",
+        "summary": "沈阳鼓风机集团将一键启停、动态仿真和数字孪生技术用于大型透平机械与压缩机装备升级，展示传统重大装备制造向数字化运行转变的实践。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 09:04",
+        "url": "https://www.news.cn/tech/20260918/bf713b38d41047a3abd945710988fd11/c.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "具身机器人参与AI服务器主板生产",
+        "summary": "广东东莞的联合实验室揭牌现场展示机器人完成服务器主板上下料，能够处理物料偏移与混料异常，为服务器产线自动化提供新的实践样本。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 09:04",
+        "url": "https://www.news.cn/tech/20260918/8def2d9e91004490bb765583c1e8fbe1/c.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "ColorOS 17发布并推进三品牌系统升级",
+        "summary": "OPPO在珠海开发者大会发布ColorOS 17，宣布OPPO、一加和realme同步升级，并展示主动智能在个性化服务及场景交互中的应用探索。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 09:02",
+        "url": "https://www.news.cn/tech/20260918/0a8141117ced448bbac30587cea24738/c.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "卫星互联网低轨25组卫星发射成功",
+        "summary": "九月十七日，长征十二号运载火箭从海南商业航天发射场升空，将卫星互联网低轨25组卫星送入预定轨道，本次发射任务取得成功。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-17 10:11",
+        "url": "https://news.cnr.cn/native/gd/kx/20260917/t20260917_527816285.shtml?sign=ABZ0cnNfd2NtX3ByZXZpZXdfYWNjZXNzAAAH6gAAAAgAAAARAAAACgAAABcAAAAP"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "前八个月上线微短剧中AI剧超九成",
+        "summary": "广电总局在国新办发布会上介绍，今年前八个月全国上线微短剧四十三万部，其中AI剧占比超过九成，人工智能正快速改变短剧内容生产结构。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 09:04",
+        "url": "https://www.news.cn/tech/20260918/6c9eb8a004434442b34ced83ea34e562/c.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "网络安全治理关注智能体权限与供应链",
+        "summary": "国家网络安全宣传周相关论坛聚焦人工智能带来的攻防变化，专家提出加强数据调用、权限控制、行为监测与供应链证据管理，完善主动防护。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 09:00",
+        "url": "https://www.news.cn/tech/20260918/fc2015c09b20485ebf6a9ec9c09b136e/c.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "AI视觉系统在3D打印过程中检查缺陷",
+        "summary": "美国研究团队以摄像头和机器学习逐层检查直接墨水书写打印件，在55个零件上测试，可提前发现断丝和尺寸异常；距离生产应用仍需进一步评估。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 02:02",
+        "url": "https://www.stdaily.com/web/gjxw/2026-09/18/content_582843.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "日内瓦边会讨论人工智能助残与普惠服务",
+        "summary": "中方在联合国人权理事会期间举办主题边会，二十余国代表与专家交流智能辅具、多语种公共服务等实践，并讨论技术应用的公平性和治理风险。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-17 21:50",
+        "url": "https://www.news.cn/world/20260917/f65816871cc2412581abf6e45c929962/c.html"
+      },
+      {
+        "id": "ai-05",
+        "title": "东盟十四个人工智能应用场景发布",
+        "summary": "面向东盟的首批十四个跨境揭榜应用场景覆盖七国，涉及公路、机场巡检和棕榈果采收等真实产业需求，将组织国内外团队联合攻关。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-17 08:53",
+        "url": "https://world.gmw.cn/2026-09/17/content_39004714.htm"
+      }
+    ]
+  },
+  "topStoryIds": [
+    "domestic-09",
+    "domestic-07",
+    "tech-05"
+  ],
+  "metrics": [
+    {
+      "id": "metric-gold",
+      "kind": "gold",
+      "name": "国内金价",
+      "value": "946.00元/克",
+      "note": "Au99.99，2026-09-19延时行情最新价；采集05:43",
+      "source": "上海黄金交易所",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.sge.com.cn/h5_sjzx/yshq",
+      "icon": "🥇"
+    },
+    {
+      "id": "metric-domestic-oil",
+      "kind": "domestic_oil",
+      "name": "北京成品油",
+      "value": "92号8.29元/升·95号8.83元/升",
+      "note": "2026-09-11 24时起最高零售价",
+      "source": "北京市发展改革委",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202609/t20260911_4860093.htm",
+      "icon": "⛽"
+    },
+    {
+      "id": "metric-international-oil",
+      "kind": "international_oil",
+      "name": "国际油价",
+      "value": "WTI 100.30美元/桶 · 布伦特103.87美元/桶",
+      "note": "2026-09-18收盘；WTI十月、布伦特十一月期货",
+      "source": "第一财经",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.yicai.com/brief/103370689.html",
+      "icon": "🛢️"
+    },
+    {
+      "id": "metric-usd",
+      "kind": "usd_cny",
+      "name": "美元兑人民币",
+      "value": "1美元=6.7521人民币",
+      "note": "2026-09-18最近交易日中间价",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760",
+      "icon": "💵"
+    },
+    {
+      "id": "metric-eur",
+      "kind": "eur_cny",
+      "name": "欧元兑人民币",
+      "value": "1欧元=7.7257人民币",
+      "note": "2026-09-18最近交易日中间价",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760",
+      "icon": "💶"
+    },
+    {
+      "id": "metric-jpy",
+      "kind": "jpy_cny",
+      "name": "日元兑人民币",
+      "value": "100日元=4.3173人民币",
+      "note": "2026-09-18最近交易日中间价",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760",
+      "icon": "💴"
+    }
+  ],
+  "metricsCutoff": "2026-09-19 05:49（北京时间）",
+  "metricSources": [
+    "上海黄金交易所",
+    "北京市发展改革委",
+    "第一财经",
+    "国家外汇管理局"
+  ],
+  "observation": "本期新闻呈现出公共服务与技术应用同时向具体环节深入的趋势：康复护理扩容、未成年人网络保护和机动车排放检验，都在把宏观要求转化为服务与监管规则；草种保护、钙钛矿测试标准和数字化装备，则关注技术如何可靠地进入产业。国际利率与能源政策变化提醒我们，观察市场数据需要同时看清日期、单位和适用口径。面对人工智能的新应用，也应区分研究测试、现场展示与已经形成的稳定服务能力。",
+  "sources": [
+    "新华网",
+    "中国新闻网",
+    "中国日报中文网",
+    "中国科技网",
+    "央广网",
+    "光明网",
+    "上海黄金交易所",
+    "北京市发展改革委",
+    "第一财经",
+    "国家外汇管理局"
+  ]
+}
