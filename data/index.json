@@ -4,6 +4,14 @@
   "publishAt": "11:00",
   "editions": [
     {
+      "date": "2026-09-20",
+      "issue": 30,
+      "publishAt": "2026-09-20T11:00:00+08:00",
+      "title": "游戏与 Minecraft 每日简报",
+      "headline": "IG击败JDG，取得全球总决赛资格",
+      "file": "data/2026-09-20.json"
+    },
+    {
       "date": "2026-09-19",
       "issue": 29,
       "publishAt": "2026-09-19T11:00:00+08:00",
