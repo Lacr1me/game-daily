@@ -1,0 +1,426 @@
+{
+  "date": "2026-09-21",
+  "issue": 31,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期一",
+  "lunarDate": "农历丙午年八月十一",
+  "cutoff": "2026-09-21 10:38（北京时间）",
+  "productionTime": "2026-09-21 10:38（北京时间）",
+  "metricsCutoff": "2026-09-21 10:24（北京时间）",
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "世界清洁日全球主场活动在绍兴举行",
+        "summary": "世界清洁日全球主场活动首次落地中国，在绍兴围绕减少食物浪费与清洁城市建设开展交流，发布绍兴实践和倡议，并举办建设成果展、环境卫生博览会及论坛。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 07:36",
+        "url": "https://world.people.com.cn/n1/2026/0921/c1002-40802389.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "湖南农技服务下沉田间助力粮食增产",
+        "summary": "湖南在55个县开展种粮大户示范、农技人员包联和田间培训，把增产技术送到生产一线，帮助种粮农户解决实际问题，提高粮食生产技术的应用水平。",
+        "publishedAt": "2026-09-20 23:43",
+        "url": "https://www.news.cn/politics/20260920/34439077f2d6454f883aff666c057d66/c.html",
+        "source": "新华网",
+        "sourceOrigin": "china"
+      },
+      {
+        "id": "domestic-03",
+        "title": "基层法院代表介绍便民司法与权益保护实践",
+        "summary": "五位人民法院代表在国新办见面会介绍巡回审判、老年人赡养和财产权保护、生态修复及知识产权保护等实践，推动司法服务贴近群众日常需求。",
+        "publishedAt": "2026-09-20 23:16",
+        "url": "https://www.news.cn/politics/20260920/1544de9f5b9744849fa8035debd4931d/c.html",
+        "source": "新华网",
+        "sourceOrigin": "china"
+      },
+      {
+        "id": "domestic-04",
+        "title": "广州技能培训服务送到居民家门口",
+        "summary": "广州通过羊城技能加油站建设十五分钟技能培训服务圈。广东聚焦先进制造、新能源汽车和康养服务等领域开展专项培训，上半年完成补贴性职业技能培训30.5万人次。",
+        "publishedAt": "2026-09-20 19:10",
+        "url": "https://www.news.cn/local/20260920/5617fb5e843e47de949062ffbe7c9ff1/c.html",
+        "source": "新华网",
+        "sourceOrigin": "china"
+      },
+      {
+        "id": "domestic-05",
+        "title": "全国城市联合招聘秋季专场启动",
+        "summary": "人社部启动全国城市联合招聘高校毕业生秋季专场，重点服务2027届及往届未就业毕业生，提供网络招聘、城市直播带岗、行业专场和就业指导等服务。",
+        "source": "湖北省人力资源和社会保障厅",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 17:49",
+        "url": "https://rst.hubei.gov.cn/bmdt/rsyw/202609/t20260920_6018688.shtml"
+      },
+      {
+        "id": "domestic-06",
+        "title": "海南环岛高铁试点自行车随身行服务",
+        "summary": "海南环岛高铁9月20日起在13座车站试点自行车随身行，旅客可经12306预约付费。携车进站需拆下前轮并包装，车站提供工具和包装袋，列车设专用存放处。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 16:04",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-20/10700096.shtml"
+      },
+      {
+        "id": "domestic-07",
+        "title": "四川熊猫消费节将发放超6亿元商贸服务消费券",
+        "summary": "第五届四川国际熊猫消费节将于9月22日至11月30日举行，计划发放超6亿元商贸服务消费券，推出票根优惠，并围绕购物、美食、旅游和展演开展活动。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 15:47",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-20/10700135.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "title": "婴幼儿配方食品标签问答明确奶源与致敏提示要求",
+        "summary": "市场监管总局发布标签标识问答，明确生产日期、保质期、致敏物质和奶源等标注要求。相关管理办法于2027年3月16日实施，过渡期产品需区分是否违反禁止性规定。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 15:40",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-20/10700116.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "title": "30款App被通报个人信息问题，限期整改",
+        "summary": "中央网信办通报30款App存在未公开收集规则、索要非必要权限、个人信息清单不完整或注销功能无效等问题，要求运营者在通报发布后15个工作日内完成整改。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 09:19",
+        "url": "https://news.cnr.cn/native/gd/20260920/t20260920_527818977.shtml"
+      },
+      {
+        "id": "domestic-10",
+        "title": "公积金新规施行，装修与物业费纳入提取范围",
+        "summary": "修订后的住房公积金管理条例9月20日起施行，新增装修自住住房、支付自住住房物业费等提取情形，并明确灵活就业人员可自愿缴存。",
+        "publishedAt": "2026-09-20 08:36",
+        "url": "https://www.news.cn/politics/20260920/a3f75681aff247c39e8f4af7a14219a7/c.html",
+        "source": "新华网",
+        "sourceOrigin": "china"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "布鲁塞尔无车日鼓励步行与骑行",
+        "summary": "布鲁塞尔9月20日举行年度无车日，大区在9时30分至19时限制机动车通行，公交、出租车和公共服务等车辆获豁免；活动鼓励居民体验步行、骑行及公共交通。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 08:45",
+        "url": "https://world.people.com.cn/n1/2026/0921/c1002-40802638.html"
+      },
+      {
+        "id": "international-02",
+        "title": "联合国大会一般性辩论将于22日开始",
+        "summary": "第81届联合国大会一般性辩论将于9月22日在纽约开始，预计118位国家元首或政府首脑参加辩论及高级别周相关活动；联合国议程列出22日至26日及28日的会议安排。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 21:31",
+        "url": "https://www.news.cn/world/20260920/50ea1b5987ca469d9b1f7bde4439e196/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "瑞士伯尔尼举办中秋文化交流活动",
+        "summary": "伯尔尼中国文化中心9月18日在老城广场举办中秋文化交流活动，中国驻瑞士使馆提供支持，现场通过武术、书法、汉服及花灯等形式展示中国传统文化。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 20:16",
+        "url": "https://www.news.cn/world/20260920/909e955de5c04223abb18b6f129fabb1/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "韩国举办首届全球K12校长论坛",
+        "summary": "首届全球K12校长论坛9月19日在首尔延世大学举行，来自中国、韩国、马来西亚等国家的近50所学校校长参与，讨论人工智能赋能教育和国际教育协作。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 14:24",
+        "url": "https://world.people.com.cn/n1/2026/0920/c1002-40802133.html"
+      },
+      {
+        "id": "international-05",
+        "title": "中国援圣普医疗队开展运动损伤培训",
+        "summary": "第20批中国援圣多美和普林西比医疗队开展为期五周的运动损伤培训，面向柔道、空手道等项目教练和运动员，介绍损伤预防及康复知识，支持当地体育健康服务。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 14:12",
+        "url": "https://world.people.com.cn/n1/2026/0920/c1002-40802127.html"
+      },
+      {
+        "id": "international-06",
+        "title": "中国赴阿卜耶伊直升机分队通过专项核查",
+        "summary": "中国第六批赴阿卜耶伊维和直升机分队9月17日通过联合国第三季度专项核查，检查涵盖航空器适航、航电、机务台账及飞行安全等内容。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 14:03",
+        "url": "https://world.people.com.cn/n1/2026/0920/c1002-40802125.html"
+      },
+      {
+        "id": "international-07",
+        "title": "汉诺威运输博览会展示绿色商用车技术",
+        "summary": "9月15日至20日举行的汉诺威国际交通运输博览会集中展示电动、氢能及智能驾驶技术。主办方负责人接受采访时介绍，中国参展企业超过300家。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 10:28",
+        "url": "https://www.news.cn/world/20260920/4f43c26ef9de4b1191290310de577837/c.html"
+      },
+      {
+        "id": "international-08",
+        "title": "墨西哥开展全国地震演习检验应急能力",
+        "summary": "墨西哥9月19日举行2026年第二次全国地震演习，检验应急机制并提升公众避险能力。这是预先安排的演练，相关模拟情景不代表当地发生真实地震。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 09:10",
+        "url": "https://world.people.com.cn/n1/2026/0920/c1002-40801971.html"
+      },
+      {
+        "id": "international-09",
+        "title": "马德里动物园为旅西大熊猫庆生",
+        "summary": "西班牙马德里动物园9月19日为旅西大熊猫金喜和茱萸庆祝六岁生日，当地居民和游客参加庆生活动。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 08:24",
+        "url": "https://www.news.cn/world/20260920/5d6b11757df9462483aede4ce399060f/c.html"
+      },
+      {
+        "id": "international-10",
+        "title": "俄罗斯进步货运飞船向空间站运送补给",
+        "summary": "俄罗斯进步MS-35货运飞船9月19日与国际空间站探索号舱对接，运送食品、燃料和设备等补给，为空间站乘组工作与生活提供物资支持。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 02:50",
+        "url": "https://www.news.cn/world/20260920/38a6eccc8fcf4ce1ba13b8360f87609c/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "合肥先进光源直线加速器电子束全程贯通",
+        "summary": "合肥先进光源192米直线加速器实现电子束全程贯通，为后续储存环注入调试奠定基础。项目将继续推进储存环及整机调试，为开展高亮度同步辐射研究创造条件。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 09:55",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/21/content_584836.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "深部矿井风热协同技术在大红山铜矿示范",
+        "summary": "昆明有色冶金设计研究院联合团队在大红山铜矿示范通风与降温技术，将温度、湿度和比焓纳入评价，结合通风网络模型、喷淋预冷和移动制冷改善井下作业环境。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 07:45",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/21/content_584772.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "未来网络设施CENI拓展跨地域算力服务",
+        "summary": "南京披露未来网络试验设施CENI应用进展，其网络覆盖58个城市，正在支撑跨地域算力调度与科学数据协作；未来网络大会计划10月举行，相关新成果尚待发布。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 22:34",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/20/content_584741.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "中国空间站已开展14种植物在轨培养试验",
+        "summary": "航天医学工程大会披露，中国空间站已开展14种植物、20余个品种在轨培养试验。基质培和气雾培装置持续运行，小麦完成全周期栽培，并用在轨收获种子再次播种。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 20:22",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/20/content_584690.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "鹏城南科一号首星入轨开展通信与计算验证",
+        "summary": "鹏城南科一号首星随力箭一号遥十八运载火箭进入预定轨道，将开展卫星互联网、激光通信及在轨计算等技术验证，为天地融合网络研究提供试验平台。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 16:04",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-20/10700143.shtml"
+      },
+      {
+        "id": "tech-06",
+        "title": "长鑫存储宣布新一代DRAM平台量产",
+        "summary": "长鑫存储在世界制造业大会宣布G5技术平台进入量产，并发布两款单颗容量24Gb的LPDDR5X产品，面向移动设备应用，提供不同封装方案。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 15:11",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-20/10700064.shtml"
+      },
+      {
+        "id": "tech-07",
+        "title": "交通安全光学计量研发形成系列校准装置",
+        "summary": "陕西省计量科研团队针对能见度、逆反射与眩光参数研发校准装置及测量系统，形成从计量方法到现场设备的技术路径，成果已用于民航保障、道路交通和公共安全等领域。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 10:41",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-20/10699809.shtml"
+      },
+      {
+        "id": "tech-08",
+        "title": "地星三号卧床实验完成，验证航天生理防护方案",
+        "summary": "中国航天员科研训练中心完成地星三号卧床实验，通过头低位或头高位卧床模拟失重及低变重力影响，验证面向空间站长期飞行和载人登月的骨肌、心血管防护方案。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 09:31",
+        "url": "https://www.news.cn/tech/20260920/b4a5b89db23b4431929c50082de0e21d/c.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "太空交通管理平台支持在轨风险分析",
+        "summary": "齐鲁空天信息研究院发布太空交通管理综合服务平台等成果，平台支持空间态势感知、在轨风险分析及模拟推演，并展示合成孔径雷达载荷和低轨精密测量技术。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-19 21:50",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-19/10699709.shtml"
+      },
+      {
+        "id": "tech-10",
+        "title": "星语望远镜推进智能观测与数字仿真",
+        "summary": "国家天文台介绍星语望远镜智能观测进展：系统已预警8颗极早期超新星候选目标，其中2颗触发后续观测，并构建大口径科研级望远镜数字仿真环境，支持观测任务验证。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 20:37",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-18/10699151.shtml"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "人民网发布写易智能体与办公工作站",
+        "summary": "人民网发布写易智能体，结合W70工作站和人民智媒模型，面向办文、办会、办事等办公任务，采用本机留存数据的设计，探索人工智能在办公流程中的应用。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 09:01",
+        "url": "https://finance.people.com.cn/n1/2026/0921/c1004-40802697.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "智达AI输入法发布，支持藏汉英混合输入",
+        "summary": "青海师范大学发布智达AI输入法及配套藏文字体集，支持藏语三大方言语音输入、藏汉英混合识别和文字图像识别，并提供纠错、润色与双向翻译等功能。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 07:45",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/21/content_584773.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "剪映发布Hub工作台与对话式创作助手",
+        "summary": "剪映推出由无限画布和多轨道编辑器组成的Hub工作台，并发布可协助构思、整理素材和剪辑的智能助手；移动端小映整合创作、剪辑及营销功能，生成作品仍可继续调整。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 22:27",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/20/content_584720.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "有道公布流式语音识别与智能体进展",
+        "summary": "网易有道在近日举行的AI开放日介绍子曰Live同传模型与流式语音识别进展，并展示办公、学习和营销场景的智能体，推动语音能力接入实时交互应用。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 20:30",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/20/content_584697.html"
+      },
+      {
+        "id": "ai-05",
+        "title": "江苏用AI声纹与视频识别开展鸟类监测",
+        "summary": "江苏在森林、湿地等区域使用AI视频和声纹识别，结合本土鸟类样本库开展持续监测，相关网络累计识别200余种鸟类，为生物多样性调查和生态修复评估提供数据。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-19 17:24",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/19/content_584140.html"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "id": "metric-gold",
+      "kind": "gold",
+      "name": "国内金价",
+      "value": "943.7元/克",
+      "note": "2026-09-21 Au99.99延时行情，非收盘价",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/h5_sjzx/yshq",
+      "icon": "🥇",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-domestic-oil",
+      "kind": "domestic_oil",
+      "name": "北京成品油",
+      "value": "92号8.29元/升 · 95号8.83元/升",
+      "note": "2026-09-11 24时起最高零售价，现行有效",
+      "source": "北京市发展改革委",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202609/t20260911_4860093.htm",
+      "icon": "⛽",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-international-oil",
+      "kind": "international_oil",
+      "name": "国际油价",
+      "value": "WTI 100.30美元/桶 · 布伦特103.87美元/桶",
+      "note": "2026-09-18最近收盘；十月WTI、十一月布伦特期货",
+      "source": "新华网",
+      "sourceUrl": "https://www.xinhuanet.com/fortune/20260919/2d2add943e4f4e87a8b8487fb93fe846/c.html",
+      "icon": "🛢️",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-usd",
+      "kind": "usd_cny",
+      "name": "美元兑人民币",
+      "value": "1美元=6.7487人民币",
+      "note": "2026-09-21人民币汇率中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760",
+      "icon": "💵",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-eur",
+      "kind": "eur_cny",
+      "name": "欧元兑人民币",
+      "value": "1欧元=7.7192人民币",
+      "note": "2026-09-21人民币汇率中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760",
+      "icon": "💶",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-jpy",
+      "kind": "jpy_cny",
+      "name": "日元兑人民币",
+      "value": "100日元=4.2898人民币",
+      "note": "2026-09-21人民币汇率中间价",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760",
+      "icon": "💴",
+      "sourceOrigin": "china"
+    }
+  ],
+  "topStoryIds": [
+    "domestic-10",
+    "international-02",
+    "tech-01"
+  ],
+  "observation": "本期公共服务进展集中在更具体的生活环节：公积金提取范围扩大、技能培训走进社区、食品标签规则进一步明确，政策价值需要通过清晰流程落实到个人。科技报道则展现了从设备调试到在轨验证的不同阶段，电子束贯通、卫星入轨与平台发布各有下一步任务。人工智能正进入语言输入、语音交互和日常办公，评价其价值仍要看具体任务中的可靠性。阅读市场数据时，也应分清延时行情、期货收盘和本地最高零售价格。",
+  "metricSources": [
+    "上海黄金交易所",
+    "北京市发展改革委",
+    "新华网",
+    "国家外汇管理局"
+  ],
+  "sources": [
+    "人民网",
+    "新华网",
+    "湖北省人力资源和社会保障厅",
+    "中国新闻网",
+    "央广网",
+    "中国科技网",
+    "上海黄金交易所",
+    "北京市发展改革委",
+    "国家外汇管理局"
+  ]
+}
