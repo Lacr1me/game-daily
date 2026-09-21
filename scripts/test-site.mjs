@@ -209,6 +209,7 @@ for (const platform of platformOrder) {
   previousPlatformIndex = platformIndex;
 }
 assert(gameHtml.includes("<b>01</b> 中国玩家关注") && gameHtml.includes("<b>02</b> Minecraft 热门整合包"), "游戏日报正文板块必须从 01 开始编号");
+assert(/<[^>]+id="features"[^>]+class="[^"]*feature-grid[^"]*"[^>]*>/.test(gameHtml) && !/<[^>]+id="features"[^>]+hidden/.test(gameHtml), "游戏日报必须可见渲染两张焦点卡片");
 assert(!gameHtml.includes(">报</span>") && !civicHtml.includes(">报</span>"), "双频道页头不得继续显示旧的报字标识");
 assert(gameHtml.includes("brand-assets/springhues-logo.png") && civicHtml.includes("../brand-assets/springhues-logo.png"), "双频道页头必须使用唯一的 Springhues 正式 Logo");
 await access(path.join(root, "brand-assets", "springhues-logo.png"));
