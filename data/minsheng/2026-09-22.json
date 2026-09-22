@@ -1,0 +1,427 @@
+{
+  "date": "2026-09-22",
+  "issue": 32,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期二",
+  "lunarDate": "农历丙午年八月十二",
+  "cutoff": "2026-09-22 08:44（北京时间）",
+  "productionTime": "2026-09-22 08:44（北京时间）",
+  "metricsCutoff": "2026-09-22 07:53（北京时间）",
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "五大国产手机接入中国地震预警网",
+        "summary": "荣耀手机地震预警应用通过技术评测后，华为、vivo、OPPO、小米和荣耀均已接入中国地震预警网。用户在手机设置中开启地震预警，即可免费接收官方预警服务。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 22:42",
+        "url": "https://www.news.cn/20260921/4a2275844ec4421e99df712a45889f36/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "全国苹果产销形势分析会在山西大宁举行",
+        "summary": "全国苹果产销形势分析会在山西大宁举行，产区、科研机构与采购商交流新产季供销情况，并开展采购签约。当地完善冷链仓储和智能分选设施，拓展果农销售渠道。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 22:08",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-21/10701106.shtml"
+      },
+      {
+        "id": "domestic-03",
+        "title": "邮政兜底试点让2939个建制村实现快递进村",
+        "summary": "国家邮政局公布，中西部17个试点县已有2939个建制村实现快递进村，完成年初试点目标。试点通过邮政网络补充农村配送，投递汽车化率由62%提高至97%。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 22:07",
+        "url": "https://www.news.cn/20260921/da6175c897454ca086bfa89196224453/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "重庆大足提前转移七人避开滑坡灾情",
+        "summary": "重庆大足基层巡查发现山坡变形后，经地质工程师研判及时转移两户七人。次日发生的滑坡损坏两间房屋，未造成人员伤亡，当地继续划定危险区并安置撤离群众。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 20:58",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-21/10701059.shtml"
+      },
+      {
+        "id": "domestic-05",
+        "title": "贵州多地开放政府广场供农户晒粮",
+        "summary": "贵州从江、松桃和福泉等地开放政府广场、大院及公共空地，缓解秋收期间农户晾晒场地不足的问题，引导有序晒粮，减少占道晾晒带来的交通隐患与粮食损耗。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 20:42",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-21/10701048.shtml"
+      },
+      {
+        "id": "domestic-06",
+        "title": "瓦卡金沙江大桥建成连接川滇两岸",
+        "summary": "瓦卡金沙江大桥9月21日建成，连接四川得荣与云南德钦，桥梁全长212米。报道介绍，大桥通车后两岸通行时间由约一小时缩短至十分钟，改善沿线居民出行条件。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 19:50",
+        "url": "https://www.news.cn/20260921/f3bf497a68da4623ac7da5a46d05c47c/c.html"
+      },
+      {
+        "id": "domestic-07",
+        "title": "两部门拨付2亿元救灾资金支持四省",
+        "summary": "财政部、应急管理部拨付2亿元中央自然灾害救灾资金，支持四川、海南、浙江和福建抢险救灾，重点用于群众安置、排危除险、过渡期生活救助及倒损民房修复。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 18:29",
+        "url": "https://www.news.cn/politics/20260921/8d0bd268bfd34375897408b5ddfe3d1d/c.html"
+      },
+      {
+        "id": "domestic-08",
+        "title": "北京秋季招聘会初步达成1910人就业意向",
+        "summary": "北京公布秋季大型现场招聘会成果，400余家企事业单位提供超两万个岗位，7000余名求职者到场，初步达成就业意向1910人。现场同时提供新职业体验和培训就业项目。",
+        "source": "北京市人民政府",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 14:20",
+        "url": "https://www.beijing.gov.cn/fuwu/bmfw/sy/jrts/202609/t20260921_4873924.html"
+      },
+      {
+        "id": "domestic-09",
+        "title": "国家粮食和物资储备局介绍粮食市场保供情况",
+        "summary": "国家粮食和物资储备局在国新办发布会上介绍，中国粮食市场总体平稳，粮食生产、储备和加工体系保障供给，全国各类粮食加工企业达2.4万家，成品粮油加工能力充足。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 11:59",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-21/10700642.shtml"
+      },
+      {
+        "id": "domestic-10",
+        "title": "雄安征集双节食品抽检建议",
+        "summary": "雄安新区综合执法局面向居民征集食品抽检建议，将按投票结果在商超、菜市场等场所抽检重点食品，随后公开检测结果并处置不合格产品，居民可扫码选择雄安问卷参与。",
+        "source": "雄安新区综合执法局",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 08:54",
+        "url": "https://www.xiongan.gov.cn/20260921/17f743dd87ea48cfba1dac7b75c61a42/c.html"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "丹麦与格陵兰岛拟同美国签署安全协议",
+        "summary": "丹麦首相府宣布，丹麦、格陵兰岛与美国拟于9月22日在纽约签署安全协议，涉及北极及北大西洋地区安全。截至报道发布时，具体条款尚未披露，签署仍是预定安排。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 04:34",
+        "url": "https://www.news.cn/20260922/12178320ba364026a90a084067eafa9c/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "俄中选委公布杜马选举初步计票结果",
+        "summary": "俄罗斯中央选举委员会9月21日公布初步统计结果，统一俄罗斯党在第九届国家杜马选举中获得57.83%的选票，处于领先位置。此次投票于9月18日至20日举行，所报比例仍属初步结果。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 16:18",
+        "url": "https://www.news.cn/world/20260921/a815f7bc0b084ad99f7ee08b9c076f98/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "阿富汗报告巴方空袭造成平民伤亡",
+        "summary": "阿富汗方面称，巴基斯坦9月21日凌晨对阿境内实施空袭。美联社报道，联合国驻阿援助团确认库纳尔省至少三名平民死亡、四人受伤；巴方表示行动针对武装人员，双方口径存在差异。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 15:27",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-21/10700757.shtml"
+      },
+      {
+        "id": "international-04",
+        "title": "中美在纽约举行新一轮经贸会谈",
+        "summary": "中共中央政治局委员、国务院副总理何立峰在纽约与美国财政部长贝森特、贸易代表格里尔举行经贸会谈。双方围绕落实既有共识、贸易投资及人工智能对话等议题交换意见。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 10:03",
+        "url": "https://www.news.cn/world/20260921/41d44361ba57428aa1c9a947e3ca3da0/c.html"
+      },
+      {
+        "id": "international-05",
+        "title": "印尼巴淡中秋活动促进跨文化交流",
+        "summary": "第五届印尼多彩活动庆中秋文化活动在巴淡举行，近800名师生、华社及各界人士参加。活动结合中国书法、川剧变脸和印尼传统音乐舞蹈，为当地青年提供语言学习与文化体验机会。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 09:14",
+        "url": "https://world.people.com.cn/n1/2026/0921/c1002-40802713.html"
+      },
+      {
+        "id": "international-06",
+        "title": "日本65岁以上人口占比升至29.6%",
+        "summary": "日本总务省公布，截至9月15日，65岁及以上人口为3624万，占总人口29.6%，创历史新高。2025年老年就业人数为943万，占就业人口13.8%，老龄化与就业结构变化受到关注。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 08:33",
+        "url": "https://world.people.com.cn/n1/2026/0921/c1002-40802563.html"
+      },
+      {
+        "id": "international-07",
+        "title": "法加领导人会谈讨论深化合作",
+        "summary": "法国总统马克龙与加拿大总理卡尼在圣皮埃尔和密克隆会谈，讨论渔业、安全和能源合作。马克龙表示支持加拿大与欧盟建立更紧密联系，卡尼强调双方应加强合作与经济韧性。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 08:32",
+        "url": "https://world.people.com.cn/n1/2026/0921/c1002-40802553.html"
+      },
+      {
+        "id": "international-08",
+        "title": "德国基民盟首次无缘州一级议会",
+        "summary": "德国梅前州公布的初步计票结果显示，基民盟得票率为4.9%，未达到进入州议会的5%门槛。德国选择党成为该州第一大党，默茨表示政府将继续推进改革并重建公众信任。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 07:56",
+        "url": "https://www.news.cn/world/20260921/41cf57e769b24f6185e34f1d593248ec/c.html"
+      },
+      {
+        "id": "international-09",
+        "title": "中国光伏设备改善肯尼亚社区供电",
+        "summary": "新华社现场报道显示，肯尼亚内罗毕穆库鲁社区的职业技能培训中心采用中国制造的光伏板和储能设备，为学习、培训及社区活动提供较稳定电力，缓解停电和电费压力。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 07:49",
+        "url": "https://www.news.cn/world/20260921/3d3bce50793e4b8b8866740732ca3daf/c.html"
+      },
+      {
+        "id": "international-10",
+        "title": "卡塔尔称正推动美伊恢复谈判",
+        "summary": "卡塔尔外交部发言人安萨里表示，卡塔尔正与美国和伊朗保持沟通，努力弥合分歧并推动恢复谈判。他未给出重启时间表，并强调任何解决方案都应维护地区稳定与战略水道安全。",
+        "source": "国际在线",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 06:17",
+        "url": "https://news.cri.cn/20260921/92e379a8-6046-f9e4-3c5e-c5e725bd1759.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "360米测风塔在新疆木垒建成投用",
+        "summary": "新疆木垒实验风电场建成360米测风塔，用于分层观测风速、风向、湍流等数据。配套风电标准技术验证基地同步揭牌，将为高空风资源研究和大型风电机组设计提供实测依据。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 21:50",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/21/content_585453.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "2吨级系留气球在西藏输电工程试运行",
+        "summary": "国内首个2吨级载重系留气球在藏东南至粤港澳大湾区特高压工程西藏段完成试运行。装备以氦气提供浮力、多根缆索控制运动，为陡峭山区运输施工物料提供新办法。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 19:45",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/21/content_585365.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "国产中型海洋救助船北海救151入列",
+        "summary": "我国自行设计建造的北海救151轮在烟台入列，采用全回转电力推进并具备动力定位能力。该船可搭载百名获救人员，浅吃水与冰区加强设计拓展了北部海区浅水、冬季救助作业范围。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 14:41",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-21/10700741.shtml"
+      },
+      {
+        "id": "tech-04",
+        "title": "天关与拉索观测揭示宇宙线定向传播",
+        "summary": "天关卫星与拉索联合观测发现，脉冲星附近高能粒子沿约42光年的狭长路径传播。相关成果9月21日发表，为理解高能粒子离开源头后的传播过程提供新的观测证据。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 11:28",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/21/content_585016.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "水下机器人在真实海况比拼采捕能力",
+        "summary": "第十届全国水下机器人大赛在大连落幕，30支队伍在近海环境检验感知、定位与作业能力。当地企业介绍，已有机器人在海洋牧场试用，科研装备正向捕捞和生态监测场景转化。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 09:49",
+        "url": "https://www.news.cn/tech/20260921/91da3ff8455245ccbaccf77e57559caa/c.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "银河麒麟服务器系统通过Ⅱ级安全可靠测评",
+        "summary": "中国信息安全测评中心与国家保密科技测评中心公布最新结果，银河麒麟高级服务器操作系统V11 SP1获Ⅱ级评定，受测内核版本为Linux 6.6。公告明确测评结果自发布之日起有效三年。",
+        "source": "中国信息安全测评中心",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-20",
+        "url": "https://www.itsec.gov.cn/aqkkcp/cpgg/202609/t20260920_275291.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "5G远程单孔机器人完成苏青跨省手术",
+        "summary": "江苏省肿瘤医院医生9月18日在南京操控国产单孔机器人，为青海一名肾癌患者实施保肾肿瘤剜除术。两地团队提前开展多学科会诊，青海手术室同步配备专家和工程保障。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-19 21:11",
+        "url": "https://www.chinanews.com.cn/jk/2026/09-19/10699673.shtml"
+      },
+      {
+        "id": "tech-08",
+        "title": "古基因组揭示东天山两千年人群交流史",
+        "summary": "中国科研团队取得东天山11处遗址135例古代个体的全基因组数据，建立跨越近两千年的时间序列。研究显示当地人群在延续本土遗传基础的同时持续交流融合，成果发表于《科学》。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 02:09",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-18/10698617.shtml"
+      },
+      {
+        "id": "tech-09",
+        "title": "玉净虫化石为步带动物早期演化提供证据",
+        "summary": "西北大学等团队在澄江生物群发现胶膜玉净虫，四件化石保留软躯体与滤食附肢。系统分析将其置于接近现生步带动物共同祖先的位置，为解释海星与柱头虫的形态差异提供新证据。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-17 13:10",
+        "url": "https://www.news.cn/tech/20260917/73cb7683da4142a4933f4fad0512d8b3/c.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "海水制氢联产淡水研究完成系统验证",
+        "summary": "大连化物所团队发表海水制氢与淡水联产研究，利用电解废热驱动低温淡化。250千瓦系统每小时产氢48标准立方米、联产约32千克淡水，稳定运行超过40天，验证了工艺放大路径。",
+        "source": "中国科学院大连化学物理研究所",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-16",
+        "url": "https://dicp.cas.cn/xwdt/kyjz/202609/t20260916_8283606.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "年度报告关注智能体带来的算力需求变化",
+        "summary": "IDC与浪潮信息在北京发布年度人工智能计算力评估报告，指出多轮推理、工具调用等智能体任务推动算力需求增长，并强调计算、存储、网络和调度协同对提升系统效率的作用。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 23:10",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-21/10701180.shtml"
+      },
+      {
+        "id": "ai-02",
+        "title": "联合国科学小组评估AI智能体失控风险",
+        "summary": "联合国人工智能独立国际科学小组发布专题简报的预先未编辑版本，分析智能体偏离人类意图、绕过限制等风险，讨论事件监测与经验共享，并指出终止一次异常活动不等于掌控未来更强系统。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 20:43",
+        "url": "https://www.news.cn/20260921/7e92976f213e4c07b8a13f983ca66ade/c.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "湖北词元交易中心聚合200余款模型服务",
+        "summary": "湖北大数据集团发布面向企业的词元交易中心，支持统一调用200余款模型，并提供费用统计、配额与审计。报道中的15%至30%成本降幅属于测算结果，实际效果仍取决于使用场景。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 09:55",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/21/content_584847.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "隧道智能建造方案融合大模型与现场感知",
+        "summary": "中铁隧道局与华为发布钻爆法隧道智能建造方案，连接施工现场、项目部与企业数据，融合隧道大模型和多模态感知。方案已在长赣高铁等项目应用，用于风险识别、作业协同和施工管理。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-19 22:35",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/19/content_584222.html"
+      },
+      {
+        "id": "ai-05",
+        "title": "北京部署词元评测与智能体软件生态建设",
+        "summary": "北京公布词元经济行动方案，提出建设质量评测和分发平台，为开发者提供模型聚合、计量与结算服务，并推进智能体记忆管理、安全权限等软件技术，政策实施至2028年底。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-19 08:31",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/19/content_583905.html"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "id": "ms-m-20260922-gold",
+      "kind": "gold",
+      "icon": "金",
+      "name": "国内金价",
+      "value": "938.09元/克",
+      "note": "2026-09-21最近收盘，Au99.99",
+      "source": "上海黄金交易所",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.sge.com.cn/sjzx/quotation_daily_new?end_date=2026-09-21&start_date=2026-09-21"
+    },
+    {
+      "id": "ms-m-20260922-domestic-oil",
+      "kind": "domestic_oil",
+      "icon": "油",
+      "name": "北京92号汽油",
+      "value": "8.29元/升",
+      "note": "2026-09-11调整后现行最高零售价",
+      "source": "北京市发展改革委员会",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202609/t20260911_4860093.htm"
+    },
+    {
+      "id": "ms-m-20260922-usd",
+      "kind": "usd_cny",
+      "icon": "$",
+      "name": "美元兑人民币",
+      "value": "1美元=6.7487人民币",
+      "note": "2026-09-21最近交易日中间价",
+      "source": "证券时报",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.stcn.com/article/detail/4192528.html"
+    },
+    {
+      "id": "ms-m-20260922-eur",
+      "kind": "eur_cny",
+      "icon": "€",
+      "name": "欧元兑人民币",
+      "value": "1欧元=7.7192人民币",
+      "note": "2026-09-21最近交易日中间价",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760"
+    },
+    {
+      "id": "ms-m-20260922-jpy",
+      "kind": "jpy_cny",
+      "icon": "¥",
+      "name": "日元兑人民币",
+      "value": "100日元=4.2898人民币",
+      "note": "2026-09-21最近交易日中间价",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760"
+    },
+    {
+      "id": "ms-m-20260922-international-oil",
+      "kind": "international_oil",
+      "icon": "油",
+      "name": "布伦特原油",
+      "value": "100.02美元/桶",
+      "note": "2026-09-21最近收盘，LCOX6衍生报价，非交易所结算价",
+      "source": "英为财情",
+      "sourceOrigin": "external",
+      "sourceUrl": "https://www.investing.com/commodities/brent-oil-historical-data"
+    }
+  ],
+  "topStoryIds": [
+    "domestic-01",
+    "domestic-07",
+    "international-04"
+  ],
+  "observation": "本期民生进展集中在服务如何抵达个人：手机接入地震预警、快递进村和公共场地开放晒粮，都在缩短公共资源与实际需求的距离。科技报道则呈现不同阶段的成果，远程手术是具体临床应用，海水制氢是系统验证，操作系统测评也有明确版本和有效期。人工智能进入施工、企业服务与公共治理后，能力、成本和风险需要分别核验。阅读市场数据时，同样应区分最近交易日、地区零售限价与数据商衍生报价。",
+  "metricSources": [
+    "上海黄金交易所",
+    "北京市发展改革委员会",
+    "证券时报",
+    "国家外汇管理局",
+    "英为财情"
+  ],
+  "sources": [
+    "新华网",
+    "中国新闻网",
+    "北京市人民政府",
+    "雄安新区综合执法局",
+    "人民网",
+    "国际在线",
+    "中国科技网",
+    "中国信息安全测评中心",
+    "中国科学院大连化学物理研究所"
+  ]
+}

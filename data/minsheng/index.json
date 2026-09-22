@@ -4,6 +4,14 @@
   "publishAt": "11:00",
   "editions": [
     {
+      "date": "2026-09-22",
+      "issue": 32,
+      "publishAt": "2026-09-22T11:00:00+08:00",
+      "title": "民生日报 · 每日35条精选新闻",
+      "headline": "五大国产手机接入中国地震预警网",
+      "file": "data/minsheng/2026-09-22.json"
+    },
+    {
       "date": "2026-09-21",
       "issue": 31,
       "publishAt": "2026-09-21T11:00:00+08:00",
