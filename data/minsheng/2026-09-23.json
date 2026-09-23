@@ -1,0 +1,447 @@
+{
+  "date": "2026-09-23",
+  "issue": 33,
+  "sourcePolicyVersion": 2,
+  "cutoff": "2026-09-23 09:43（北京时间）",
+  "productionTime": "2026-09-23 09:43（北京时间）",
+  "metricsCutoff": "2026-09-23 08:54（北京时间）",
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "福建首次开行面向华南的白货专列",
+        "summary": "载有22个集装箱涤纶短纤的专列从泉州黄塘站驶向广东三水西站，福建首次开行面向华南地区的白货专列。铁路部门为企业提供入厂装载、快速发送等运输服务。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 22:22",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-22/10701814.shtml"
+      },
+      {
+        "id": "domestic-02",
+        "title": "嘉兴南湖机场开通芝加哥货运航线",
+        "summary": "一架装载电子产品、日用品和跨境电商包裹的全货机从嘉兴飞往芝加哥，标志着新货运航线开通。这是南湖机场继卢森堡航线后新增的国际货运通道。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 22:08",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-22/10701817.shtml"
+      },
+      {
+        "id": "domestic-03",
+        "title": "白云机场口岸预计迎来双节客流高峰",
+        "summary": "白云边检站预计，9月24日至10月7日机场口岸出入境客流将超过75万人次，单日峰值约6万人次。相关东南亚航线将加密，假期日均客运航班预计约370架次。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 21:45",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-22/10701738.shtml"
+      },
+      {
+        "id": "domestic-04",
+        "title": "新能源汽车晕动舒适性拟纳入统一测评",
+        "summary": "在世界新能源汽车大会相关论坛上，交通运输部公路科学研究所研究人员介绍，行业正推进晕车等体验的统一测评，结合主观感受、生理数据与机器人测试形成评价。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 21:18",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-22/10701742.shtml"
+      },
+      {
+        "id": "domestic-05",
+        "title": "清远赴武汉招聘提供逾1.3万个岗位",
+        "summary": "清远组织300多家用人单位赴武汉三所高校开展招聘，线上线下提供逾1.3万个岗位。三场活动累计收取简历3736份，达成就业意向2168人次。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 20:56",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-22/10701727.shtml"
+      },
+      {
+        "id": "domestic-06",
+        "title": "武铁假期计划增开逾三千列始发列车",
+        "summary": "中秋国庆假期，武汉铁路部门计划加开3300余列始发列车，实行高峰运行图，并通过加挂车厢、动车组重联和夜行高铁增加热门线路运力。相关安排将随客流动态调整。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 17:07",
+        "url": "https://www.xinhuanet.com/fortune/20260922/652e073d154c43cba48ccb89132d9504/c.html"
+      },
+      {
+        "id": "domestic-07",
+        "title": "金秋购物节启动跨区域消费维权协作",
+        "summary": "“3·15金秋购物节”全国主会场活动在成都启动，持续至10月15日，并联动重庆、德阳、眉山、资阳开展促消费活动。相关安排推动优惠互认、权益互认和投诉互通，现场企业公开诚信经营承诺。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 16:34",
+        "url": "https://sc.cnr.cn/scpd/szlb/20260922/t20260922_527821549.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "title": "广州双节促消费将推出逾两千场活动",
+        "summary": "广州介绍中秋国庆促消费安排，购物节将于9月23日启动。全市11个区联动逾百家商业综合体和5000家品牌商户，计划推出超过2000场主题促销活动。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 13:52",
+        "url": "https://www.cnr.cn/gd/nyhkt/20260922/t20260922_527821399.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "title": "民政部提示防范非法养老APP诈骗",
+        "summary": "民政部养老服务司发布提示，声明未设立或批准“民惠通”等项目，也未推出相关APP。对以发放补贴为由收取保证金、诱导充值返利等行为，提醒公众提高警惕，受损后及时报案。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 11:49",
+        "url": "https://www.news.cn/legal/20260922/2b9aa55f45994ae7b2496f8f1755e2cf/c.html"
+      },
+      {
+        "id": "domestic-10",
+        "title": "黑龙江部署应急预警与基层救援建设",
+        "summary": "黑龙江发布现代化应急体系建设五年规划，提出强化预警信息接收、风险监测与跨域救援，完善极端条件下通信保障，并推进城市防洪排涝和基层救援力量建设。相关内容属于规划安排。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 08:29",
+        "url": "https://hlj.cnr.cn/hljyw/20260922/t20260922_527820969.shtml"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "欧盟延长涉乌克兰危机个人制裁至2029年",
+        "summary": "欧盟理事会22日决定，将有关个人和实体的涉乌克兰危机制裁延长36个月至2029年9月22日。措施涉及逾3000个对象，包括旅行限制、资产冻结和禁止提供资金。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 04:53",
+        "url": "https://www.xinhuanet.com/20260923/3aea980ed2e248689c1817616996bfed/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "柏林轨道交通展开幕聚焦绿色与智能化",
+        "summary": "第十五届柏林国际轨道交通技术博览会9月22日开幕，绿色转型和人工智能应用成为展示重点。包括中国中车、中国国家铁路集团及华为在内的200多家中国企业参展，展期持续至25日。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 22:19",
+        "url": "https://www.xinhuanet.com/photo/20260922/4b33d959e39e42cda69de5c41672676a/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "西班牙法官裁定首相妻子就涉嫌腐败受审",
+        "summary": "西班牙法官9月21日裁定，首相桑切斯的妻子戈麦斯需就涉嫌腐败接受陪审团审理，具体开庭日期尚未确定。首相府否认存在犯罪行为，并批评调查不公正；案件尚无定罪结论。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 18:55",
+        "url": "https://www.xinhuanet.com/20260922/e749adde70f64f4187a0a34ad684be26/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "中国与中亚气象合作推出两年早期预警行动计划",
+        "summary": "中国气象局在中国—中亚气象合作论坛发布两年“妈祖”行动计划，拟共同开发预警产品、共享观测数据并开展联合研究。多语种预警与本地化模型属于后续建设安排。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 17:28",
+        "url": "https://www.news.cn/20260922/0dd65263a93246e3ac398d9c3b9d86fd/c.html"
+      },
+      {
+        "id": "international-05",
+        "title": "拉加经委会评估厄尔尼诺经济风险",
+        "summary": "联合国拉加经委会发布报告，估算极端厄尔尼诺情景下，拉美和加勒比地区三年累计GDP损失至少2%。报告提出基础设施防护、早期预警与社会保障等十项政策建议，相关数字属于情景估计。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 16:18",
+        "url": "https://www.news.cn/world/20260922/600b57c9e5a24fbcb51bd75d6e15c47b/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "韩国法院将金建希一案二审刑期改为5年",
+        "summary": "韩国首尔高等法院9月22日就金建希收受高价礼品、涉及不当请托一案作出二审判决，将7年刑期改为5年。两项指控因证据不足改判无罪，其余维持有罪，并追缴2440万韩元。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 15:52",
+        "url": "https://www.news.cn/world/20260922/c4652367ce3f4edc8e4c8761416c6594/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "白宫推出全天候政务视频频道",
+        "summary": "白宫宣布推出“特朗普电视”，在其官方优兔频道播放政府过往活动、公告等内容。官方页面确认9月21日上线；新华社报道，该频道全天候运行，是否直播政府活动仍未明确。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 14:49",
+        "url": "https://www.news.cn/world/20260922/8b761bd6b0ae4b6090df93d997ea57b4/c.html"
+      },
+      {
+        "id": "international-08",
+        "title": "米莱称将通过外交途径处理马岛主权争端",
+        "summary": "阿根廷总统米莱9月21日接受法国LCI采访时表示，政府不考虑以战争解决马尔维纳斯群岛主权争端，将寻求外交途径。该群岛被英国称为福克兰群岛，双方的主权争议仍未解决。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 11:18",
+        "url": "https://www.news.cn/world/20260922/39a4bb0ef76c4e81965b306f3da512f2/c.html"
+      },
+      {
+        "id": "international-09",
+        "title": "美国民调显示多数受访者支持对华合作",
+        "summary": "芝加哥全球事务学会报告显示，57%的美国受访者支持与中国友好合作和接触。调查于7月10日至21日覆盖2156名成年人，全样本抽样误差为正负2.2个百分点。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 10:06",
+        "url": "https://www.news.cn/world/20260922/920a4578e4fa4dc6a76f82a1a589cdda/c.html"
+      },
+      {
+        "id": "international-10",
+        "title": "新西兰与印度完成自贸协定批准程序",
+        "summary": "新西兰与印度已完成自由贸易协定批准程序，协定将于10月20日生效。新西兰政府公告称，生效首日其对印度57%的出口将免关税，苹果和猕猴桃等将获得优惠配额准入。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 08:17",
+        "url": "https://english.news.cn/20260922/1af67d745a3f41e9bbe2687d2633a20d/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "海太长江隧道双线通过江底最低点",
+        "summary": "海太长江隧道左线沧渊号盾构机完成5334米掘进，通过长江入海口水下约75米的最低点，至此双线均通过该关键区段。项目采用实时监测和参数动态优化应对高水压等复杂工况。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 20:47",
+        "url": "https://www.chinanews.com.cn/sh/shipin/cns-d/2026/09-22/news1069822.shtml"
+      },
+      {
+        "id": "tech-02",
+        "title": "四川大学眉山数据中心启用，算力资源向四校区开放",
+        "summary": "四川大学与中国联通共建的数据中心9月19日在眉山校区启用，打通望江、江安、华西、眉山四校区高速算力网络，面向教学、科研和管理开放弹性算力，为跨校区协同科研及大型仿真提供基础设施。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 14:19",
+        "url": "https://sc.news.cn/20260922/27a6fff7a3054c699b6008b14aa13fca/c.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "远洋智能捕捞装备完成现场验收",
+        "summary": "上海海洋大学牵头的科研项目在舟山开展现场验收，鱿鱼钓和金枪鱼围网智能装备达到项目目标及出海示范要求。团队将继续优化船载系统集成，并开展远洋生产示范。",
+        "source": "上海海洋大学",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-22",
+        "url": "https://hyxy.shou.edu.cn/2026/0922/c7379a355629/page.htm"
+      },
+      {
+        "id": "tech-04",
+        "title": "复旦团队发现渐冻症共同细胞损伤通路",
+        "summary": "复旦大学与华山医院团队在患者来源神经元及小鼠研究中发现，不同遗传背景的渐冻症可共同出现TBK1功能不足，并触发炎症性细胞死亡。成果为机制研究提供线索，尚非临床疗法。",
+        "source": "复旦大学生命科学学院",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-22",
+        "url": "https://life.fudan.edu.cn/16/79/c28140a792185/page.htm",
+        "paper": {
+          "journal": "Cell Death & Differentiation",
+          "doi": "10.1038/s41418-026-01874-8",
+          "url": "https://www.nature.com/articles/s41418-026-01874-8"
+        }
+      },
+      {
+        "id": "tech-05",
+        "title": "中国科大团队实现液晶拓扑编织",
+        "summary": "中国科大与香港科大等团队利用光操控液晶中的胶体和缺陷线，在室温下实现可重构的非阿贝尔编织操作，并展示三线网络中操作次序影响结果，为拓扑信息处理提供经典实验平台。",
+        "source": "Nature Materials",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-22",
+        "url": "https://www.nature.com/articles/s41563-026-02728-x",
+        "paper": {
+          "journal": "Nature Materials",
+          "doi": "10.1038/s41563-026-02728-x",
+          "url": "https://www.nature.com/articles/s41563-026-02728-x"
+        }
+      },
+      {
+        "id": "tech-06",
+        "title": "中国学者量化空气污染对科研产出的影响",
+        "summary": "厦门大学与合肥工业大学学者结合空气质量和论文数据，研究中国科研人员的生产率。模型估计年均PM2.5每增加1微克每立方米，论文数量下降约0.23%，为评估污染成本提供微观证据。",
+        "source": "合肥工业大学",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-22",
+        "url": "https://www.hfut.edu.cn/info/1132/13032.htm",
+        "paper": {
+          "journal": "Nature Human Behaviour",
+          "doi": "10.1038/s41562-026-02576-4",
+          "url": "https://www.nature.com/articles/s41562-026-02576-4"
+        }
+      },
+      {
+        "id": "tech-07",
+        "title": "中新合作研究提升电解水催化稳定性",
+        "summary": "中科院苏州纳米所、四川大学与新加坡国立大学等合作，通过顺序电子结构重构改善电解水催化剂。研究在60摄氏度加速老化条件下实现近3500小时稳定运行，为耐久制氢材料设计提供依据。",
+        "source": "Nature Sustainability",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-22",
+        "url": "https://www.nature.com/articles/s41893-026-01940-6",
+        "paper": {
+          "journal": "Nature Sustainability",
+          "doi": "10.1038/s41893-026-01940-6",
+          "url": "https://www.nature.com/articles/s41893-026-01940-6"
+        }
+      },
+      {
+        "id": "tech-08",
+        "title": "丙酸甲酯新工艺完成百吨级中试验证",
+        "summary": "中国中化9月21日披露，西南院与山东衡兴合作的100吨级丙酸甲酯中试项目打通全流程，满负荷连续运行超300小时。试验验证了催化与分离工艺，工业化生产装置仍待推进建设。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 20:42",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/21/content_585419.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "奇台射电望远镜俯仰轴承通过出厂验收",
+        "summary": "奇台射电望远镜俯仰轴承于9月17日至18日完成出厂检验与验收。该部件服务于110米口径望远镜的精密转动，需支撑约3000吨天线转动部分；本次完成的是部件验收，望远镜仍在建设中。",
+        "source": "中国科学院新疆天文台",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-21",
+        "url": "https://www.xao.cas.cn/xwdt/tpxw/202609/t20260921_8285658.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "燕赵电力实验室揭牌运行，推进电力装备联合攻关",
+        "summary": "燕赵电力实验室9月19日在保定揭牌运行，已组建20支跨学科校企团队，聚焦新能源、电网安全与高端装备。华北电力大学与企业依托平台推进电磁线制造、仿真软件等研发和成果转化。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 09:23",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/20/content_584262.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "电力人工智能标准大模型发布",
+        "summary": "中电联相关机构等四家单位联合发布电力人工智能标准体系和标准大模型。大模型面向标准问答、条款比对及标准编制三类任务提供辅助；配套体系覆盖基础支撑、关键技术、业务应用与治理等方向。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 16:24",
+        "url": "https://www.xinhuanet.com/energy/20260922/d3f7bf4962bf49918a265f42ac7393ef/c.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "多国倡议加强前沿人工智能模型管控",
+        "summary": "芬兰与挪威发起国际倡议，呼吁企业开展部署前测试和独立评估，各国协调标准并通报重大安全事件，同时探索国际核查机制。芬兰总统府已公布倡议原文。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 14:05",
+        "url": "https://www.news.cn/world/20260922/2a8e9f6a769b48988f036930bf2112f4/c.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "腾讯发布混元图像3.5预览版",
+        "summary": "腾讯9月22日发布混元图像3.5预览版，支持文生图、图生图与多轮编辑，最多使用5张参考图并输出2K图像。模型已接入元宝、ima等应用，面向生活与专业创作场景。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 12:17",
+        "url": "https://tech.cnr.cn/techph/20260922/t20260922_527821347.shtml"
+      },
+      {
+        "id": "ai-04",
+        "title": "APUS开源本地浏览器决策工具",
+        "summary": "APUS实验室开源fast-browser-use，用本地模型从网页可交互元素中选择动作，支持三大桌面系统，采用MIT许可。公开代码不等于复现原方案未公开的模型权重。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 18:50",
+        "url": "https://tech.cnr.cn/techph/20260920/t20260920_527819594.shtml"
+      },
+      {
+        "id": "ai-05",
+        "title": "中科闻歌发布SciencePro科研决策平台",
+        "summary": "中科闻歌9月17日发布SciencePro磐石·智研决策平台，将模型、专业数据和工具调用结合，支持项目预评、开题及论文预审，并提供个人订阅、机构服务和本地部署。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-17 22:11",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/17/content_583026.html"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "id": "ms0923-m-usd",
+      "kind": "usd_cny",
+      "icon": "$",
+      "name": "美元兑人民币",
+      "value": "1美元=6.7459人民币",
+      "note": "2026-09-22最近交易日中间价",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760"
+    },
+    {
+      "id": "ms0923-m-eur",
+      "kind": "eur_cny",
+      "icon": "€",
+      "name": "欧元兑人民币",
+      "value": "1欧元=7.7059人民币",
+      "note": "2026-09-22最近交易日中间价",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760"
+    },
+    {
+      "id": "ms0923-m-jpy",
+      "kind": "jpy_cny",
+      "icon": "¥",
+      "name": "日元兑人民币",
+      "value": "100日元=4.2794人民币",
+      "note": "2026-09-22最近交易日中间价",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760"
+    },
+    {
+      "id": "ms0923-m-domestic-oil",
+      "kind": "domestic_oil",
+      "icon": "油",
+      "name": "北京92号汽油",
+      "value": "8.29元/升",
+      "note": "2026-09-11调整后现行最高零售价",
+      "source": "北京市发展和改革委员会",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202609/t20260911_4860093.htm"
+    },
+    {
+      "id": "ms0923-m-gold",
+      "kind": "gold",
+      "icon": "金",
+      "name": "上金所Au99.99",
+      "value": "931.98元/克",
+      "note": "2026-09-22最近交易日收盘价",
+      "source": "上海黄金交易所",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://sge.com.cn/sjzx/quotation_daily_new?end_date=2026-09-22&start_date=2026-09-22"
+    },
+    {
+      "id": "ms0923-m-international-oil",
+      "kind": "international_oil",
+      "icon": "油",
+      "name": "布伦特原油期货",
+      "value": "99.25美元/桶",
+      "note": "2026-09-22收盘；11月交货合约",
+      "source": "第一财经",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.yicai.com/news/103374848.html"
+    }
+  ],
+  "weekday": "星期三",
+  "lunarDate": "农历丙午年八月十三",
+  "topStoryIds": [
+    "domestic-05",
+    "tech-01",
+    "domestic-09"
+  ],
+  "observation": "本期民生消息围绕节前出行、消费与就业展开：铁路增开列车、机场预测客流、跨区域消费维权和校园招聘，各自回应具体需求。应急规划与非法养老APP风险提示，则分别关注公共防护和个人资金安全。科技进展既有隧道掘进、装备验收，也有材料和生命科学研究；部件验收、实验结果与实际应用处于不同阶段。人工智能平台继续扩展到电力和科研场景，阅读时仍需分清预览、开源与正式发布。",
+  "sources": [
+    "中国新闻网",
+    "新华网",
+    "央广网",
+    "上海海洋大学",
+    "复旦大学生命科学学院",
+    "Nature Materials",
+    "合肥工业大学",
+    "Nature Sustainability",
+    "中国科技网",
+    "中国科学院新疆天文台"
+  ],
+  "metricSources": [
+    "国家外汇管理局",
+    "北京市发展和改革委员会",
+    "上海黄金交易所",
+    "第一财经"
+  ]
+}
