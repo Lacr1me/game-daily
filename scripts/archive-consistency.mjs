@@ -107,7 +107,14 @@ function assertNextEdition(candidate, manifest, channel) {
   const existing = manifest.editions.find((edition) => edition.date === candidate.date);
   if (existing) throw new Error(`${channel} ${candidate.date} 已成功归档，拒绝覆盖或重复发布`);
   const latest = [...manifest.editions].sort((a, b) => b.date.localeCompare(a.date))[0];
-  if (latest && candidate.date <= latest.date) throw new Error(`${channel}候选日期 ${candidate.date} 必须晚于最新归档 ${latest.date}`);
+  if (latest && candidate.date <= latest.date) {
+    const publishedAt = Date.parse(`${candidate.date}T11:00:00+08:00`);
+    const backfilledAt = Date.parse(candidate.backfilledAt);
+    if (channel !== '游戏日报' || !Number.isFinite(backfilledAt) || backfilledAt <= publishedAt ||
+        backfilledAt <= Date.parse(latest.publishAt) || backfilledAt > Date.now() + 60_000) {
+      throw new Error(`${channel}候选日期 ${candidate.date} 必须晚于最新归档 ${latest.date}；历史补档须标记真实补档时间`);
+    }
+  }
   const expectedIssue = Math.max(0, ...manifest.editions.map((edition) => edition.issue)) + 1;
   if (candidate.issue !== expectedIssue) throw new Error(`${channel} ${candidate.date} 期号必须为 ${expectedIssue}`);
 }

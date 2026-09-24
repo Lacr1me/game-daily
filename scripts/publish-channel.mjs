@@ -33,6 +33,7 @@ export async function publishChannel({root=process.cwd(), date=beijingDate(), ch
     makeEdition:brief=>{
       const headline=channel==='game'?brief.features?.[0]?.title:Object.values(brief.sections).flat().find(story=>story.id===brief.topStoryIds[0])?.title;
       return {date,issue:brief.issue,publishAt:`${date}T11:00:00+08:00`,
+        ...(brief.backfilledAt ? {backfilledAt:brief.backfilledAt} : {}),
         title:channel==='game'?'游戏与 Minecraft 每日简报':'民生日报 · 每日35条精选新闻',
         headline:headline||(channel==='game'?'今日游戏与方块世界':'每日35条精选新闻'),
         file:channel==='game'?`data/${date}.json`:`data/minsheng/${date}.json`};

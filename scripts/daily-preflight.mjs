@@ -26,6 +26,14 @@ function sameDateTime(value, date, now) {
   const time = Date.parse(value);
   return Number.isFinite(time) && time >= Date.parse(date + 'T00:00:00+08:00') && time <= now.getTime();
 }
+function issueEvidenceTime(value, brief, now) {
+  const time = Date.parse(value);
+  if (!brief?.backfilledAt) return sameDateTime(value, brief?.date, now);
+  const backfilledAt = Date.parse(brief.backfilledAt);
+  return Number.isFinite(time) && Number.isFinite(backfilledAt) &&
+    backfilledAt > Date.parse(`${brief.date}T11:00:00+08:00`) &&
+    time >= backfilledAt && time <= now.getTime();
+}
 export async function preflightChannel(root, options = {}) {
   const { date, channel } = options;
   const now = new Date(options.now ?? Date.now());
@@ -96,7 +104,7 @@ export async function preflightChannel(root, options = {}) {
     if (current.length) assertManifestEdition(current[0], brief, channel === 'game' ? '游戏日报' : '民生日报');
     // A published edition keeps its original proof when later editions appear.
     // Validate it against the archive prefix that existed when it was published.
-    const priorManifest = { ...manifest, editions: options.recovery && current.length
+    const priorManifest = { ...manifest, editions: options.recovery && current.length && !brief.backfilledAt
       ? manifest.editions.filter(item => item.date < date)
       : manifest.editions.filter(item => item.date !== date) };
     const recent = priorManifest.editions.filter(item => item.date < date).sort((a,b) => b.date.localeCompare(a.date)).slice(0,7);
@@ -126,7 +134,7 @@ export async function preflightChannel(root, options = {}) {
     const evidenceFile = inside(root, artifactOptions.renderEvidence, renderDirectory);
     const evidenceBuffer = await readFile(evidenceFile);
     const evidence = JSON.parse(evidenceBuffer);
-    if (evidence.date !== date || evidence.channel !== channel || evidence.renderer !== 'render.mjs' || evidence.scale !== 2 || evidence.validate !== true || evidence.candidateSha256 !== result.identity.candidateSha256 || evidence.htmlSha256 !== result.identity.htmlSha256 || evidence.pngSha256 !== pngSha256 || !sameDateTime(evidence.checkedAt, date, now)) fail('RENDER_EVIDENCE_INVALID','缺少匹配当前 JSON/HTML/PNG 的统一渲染记录');
+    if (evidence.date !== date || evidence.channel !== channel || evidence.renderer !== 'render.mjs' || evidence.scale !== 2 || evidence.validate !== true || evidence.candidateSha256 !== result.identity.candidateSha256 || evidence.htmlSha256 !== result.identity.htmlSha256 || evidence.pngSha256 !== pngSha256 || !issueEvidenceTime(evidence.checkedAt, brief, now)) fail('RENDER_EVIDENCE_INVALID','缺少匹配当前 JSON/HTML/PNG 的统一渲染记录');
     result.dependencyHashes.renderEvidence = digest(evidenceBuffer);
     result.evidencePaths = { renderEvidence: path.relative(root, evidenceFile).replaceAll('\\','/') };
   });
@@ -134,7 +142,7 @@ export async function preflightChannel(root, options = {}) {
     const evidenceFile = inside(root, artifactOptions.visualEvidence, renderDirectory);
     const buffer = await readFile(evidenceFile);
     const evidence = JSON.parse(buffer);
-    if (evidence.date !== date || evidence.channel !== channel || evidence.method !== 'view_image' || evidence.result !== 'pass' || !String(evidence.inspector || '').trim() || !sameDateTime(evidence.inspectedAt, date, now) || evidence.pngSha256 !== result.identity.pngSha256 || !Array.isArray(evidence.findings) || evidence.findings.length) fail('VISUAL_EVIDENCE_INVALID','缺少 view_image 原图检查通过记录或目标 PNG 哈希不符');
+    if (evidence.date !== date || evidence.channel !== channel || evidence.method !== 'view_image' || evidence.result !== 'pass' || !String(evidence.inspector || '').trim() || !issueEvidenceTime(evidence.inspectedAt, brief, now) || evidence.pngSha256 !== result.identity.pngSha256 || !Array.isArray(evidence.findings) || evidence.findings.length) fail('VISUAL_EVIDENCE_INVALID','缺少 view_image 原图检查通过记录或目标 PNG 哈希不符');
     result.dependencyHashes.visualEvidence = digest(buffer);
     result.evidencePaths = { ...result.evidencePaths, visualEvidence: path.relative(root, evidenceFile).replaceAll('\\','/') };
   });

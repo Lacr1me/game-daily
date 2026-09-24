@@ -198,7 +198,7 @@ export async function inspectReadyArtifacts(root, date, channel, options = {}) {
   if (proof.apiVersion !== STATE_EVIDENCE_API_VERSION || !proof.preflight?.ok) throw operationError('PROOF_MISSING', '旧证明缺少集中预检及视觉证据，不能自动升级');
   const expected = expectedArtifactPaths(root, date, channel);
   const files = {
-    candidate: requireExactPath(path.resolve(root, options.candidate || proof.candidate), options.recovery ? archiveContentPath(root, date, channel) : expected.candidate, "候选JSON"),
+    candidate: requireExactPath(path.resolve(root, options.candidate || (options.recovery ? archiveContentPath(root, date, channel) : proof.candidate)), options.recovery ? archiveContentPath(root, date, channel) : expected.candidate, "候选JSON"),
     publicPng: requireExactPath(path.resolve(root, proof.publicPng), expected.publicPng, "公开PNG"),
     html: requireInsidePath(path.resolve(root, proof.html), path.resolve(root, "artifacts", "operations", `${date}-render`), "渲染HTML"),
     renderPng: requireInsidePath(path.resolve(root, proof.renderPng), path.resolve(root, "artifacts", "operations", `${date}-render`), "渲染PNG")
@@ -387,6 +387,15 @@ export async function assertGameDealCoverage(root, date, brief) {
       const evidence = decisions.get(appId);
       if (!evidence) throw operationError('STEAM_COVERAGE_INVALID', `冻结 appId ${appId} 缺少接受或淘汰证据`);
       validateCandidateEvidence(evidence, date);
+      if (evidence.backfillProof) {
+        for (const [file, expected] of [[evidence.backfillProof.sourcePath, evidence.backfillProof.sourceSha256], [evidence.backfillProof.discoveryPath, evidence.backfillProof.discoverySha256]]) {
+          const base = path.resolve(root, 'artifacts', 'operations');
+          const target = path.resolve(root, file);
+          if (!target.startsWith(base + path.sep) || sha256(await readFile(target)) !== expected) {
+            throw operationError('STEAM_COVERAGE_INVALID', `appId ${appId} 历史补证文件或哈希不符`);
+          }
+        }
+      }
       if (eligibleIds.has(appId) !== (evidence.decision === 'accepted')) throw operationError('STEAM_COVERAGE_INVALID', `appId ${appId} 的证据决定与当前集合冲突`);
     }
   }
@@ -770,7 +779,22 @@ export function reconcileRunState(root, date, options = {}) { return guardedMuta
 export function mergeSourceAudits(root, date, options = {}) { return guardedMutation(root, date, options, () => mergeSourceAuditsUnlocked(root, date)); }
 
 function validateCandidateEvidence(evidence, date) {
-  if (!evidence || !String(evidence.id || '').trim() || !['accepted', 'rejected'].includes(evidence.decision) || !isHttps(evidence.url) || !Number.isFinite(Date.parse(evidence.checkedAt)) || beijingDate(new Date(evidence.checkedAt)) !== date || !String(evidence.basis || '').trim()) throw operationError('EVIDENCE_INVALID', '逐项证据须包含 id/decision/HTTPS url/同日 checkedAt/basis');
+  const checkedAt = Date.parse(evidence?.checkedAt);
+  const sameDay = Number.isFinite(checkedAt) && beijingDate(new Date(checkedAt)) === date;
+  const proof = evidence?.backfillProof;
+  let historical = false;
+  if (proof && !sameDay) {
+    const sourceTime = Date.parse(proof.sourceObservedAt);
+    const frozenTime = Date.parse(proof.frozenAt);
+    historical = Number.isFinite(checkedAt) && beijingDate(new Date(checkedAt)) > date &&
+      proof.editionDate === date && ['same-sale-crosscheck', 'historical-evidence-insufficient'].includes(proof.method) &&
+      Number.isFinite(sourceTime) && sourceTime <= Date.parse(`${date}T23:59:59+08:00`) &&
+      Number.isFinite(frozenTime) && beijingDate(new Date(frozenTime)) === date &&
+      typeof proof.sourcePath === 'string' && typeof proof.discoveryPath === 'string' &&
+      /^[a-f0-9]{64}$/.test(proof.sourceSha256) && /^[a-f0-9]{64}$/.test(proof.discoverySha256) &&
+      (evidence.decision !== 'accepted' || proof.method === 'same-sale-crosscheck');
+  }
+  if (!evidence || !String(evidence.id || '').trim() || !['accepted', 'rejected'].includes(evidence.decision) || !isHttps(evidence.url) || !Number.isFinite(checkedAt) || !(sameDay || historical) || !String(evidence.basis || '').trim()) throw operationError('EVIDENCE_INVALID', '逐项证据须包含 id/decision/HTTPS url/同日 checkedAt/basis；历史补证须保留真实复核时间及原始文件哈希');
   if (evidence.decision === 'accepted' && (!evidence.facts || typeof evidence.facts !== 'object' || Array.isArray(evidence.facts) || !Object.keys(evidence.facts).length)) throw operationError('EVIDENCE_INVALID', '接受候选须记录 facts；结构通过不代表来源事实已核实');
 }
 function currentCandidates(entries) {
