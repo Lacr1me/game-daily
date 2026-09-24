@@ -94,7 +94,11 @@ export async function preflightChannel(root, options = {}) {
     if (current.length && !options.recovery) fail('ARCHIVE_CONFLICT','目标期已在正式索引');
     if (current.length > 1) fail('ARCHIVE_CONFLICT','目标期重复索引');
     if (current.length) assertManifestEdition(current[0], brief, channel === 'game' ? '游戏日报' : '民生日报');
-    const priorManifest = { ...manifest, editions: manifest.editions.filter(item => item.date !== date) };
+    // A published edition keeps its original proof when later editions appear.
+    // Validate it against the archive prefix that existed when it was published.
+    const priorManifest = { ...manifest, editions: options.recovery && current.length
+      ? manifest.editions.filter(item => item.date < date)
+      : manifest.editions.filter(item => item.date !== date) };
     const recent = priorManifest.editions.filter(item => item.date < date).sort((a,b) => b.date.localeCompare(a.date)).slice(0,7);
     const prior = [];
     const identities = [];

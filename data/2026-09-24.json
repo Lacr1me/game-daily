@@ -1,0 +1,872 @@
+{
+  "date": "2026-09-24",
+  "issue": 33,
+  "cutoff": "2026-09-24 11:13（北京时间）",
+  "dataWindow": "新闻与专题覆盖2026-09-23至2026-09-24 11:13（北京时间）；整合包热度依据9月24日BBSMC目录和Bilibili视频快照：BBSMC项按累计下载/关注的对数标准化值60%/40%加权，视频项按播放/点赞/评论的对数标准化值60%/25%/15%加权，均为平台内可见累计信号，不代表单日新增或跨平台绝对排名；Mod候选保留页面所示版本日期并优先近7天项目；Steam于9月24日07:08:59冻结国区特惠首屏50个appId，逐项核验后保留50项，其中49项有可用历史标签、1项仅列今日特惠。所有热度值均非官方排名。",
+  "sources": [
+    "游民星空",
+    "MCBBS",
+    "Minecraft官网",
+    "17173",
+    "TGBUS",
+    "TapTap",
+    "BBSMC",
+    "Steam国区",
+    "SteamDB",
+    "KOEI TECMO Games"
+  ],
+  "features": [
+    {
+      "id": "20260924-feature-imo-mobile-launch",
+      "title": "《伊莫》移动端上线，PC与手机数据互通",
+      "date": "2026-09-23",
+      "source": "游民星空",
+      "summary": "爪印工作室的跨平台大世界捉宠RPG《伊莫》移动端于9月23日上线，PC与手机数据互通，玩家可继续使用已开始的冒险进度。游戏官网也将当天列为全平台正式上线日期。",
+      "url": "https://www.gamersky.com/news/202609/2215798.shtml",
+      "image": "game-brief-assets/2026-09-24-feature-imo-source-01.jpg"
+    },
+    {
+      "id": "20260924-feature-minecraft-264",
+      "title": "MCBBS转发《Minecraft 26.4 快照 1》中文资讯",
+      "date": "2026-09-23",
+      "source": "MCBBS",
+      "summary": "中文转发帖介绍了Java版26.4快照1：涉及Vulkan默认图形API、蘑菇放置规则和旧世界硫磺洞生成。观察时该帖有21次浏览、0条回复，仅作为新帖动态记录，不推断为社区热度上升。",
+      "url": "https://files.mcbbs.co/thread-6388-1-1.html",
+      "image": "game-brief-assets/2026-09-24-feature-minecraft-264.jpg"
+    }
+  ],
+  "news": [
+    {
+      "id": "20260924-news-darkzone-update",
+      "title": "《暗区突围：无限》9月24日不停服更新公告",
+      "date": "2026-09-23",
+      "source": "17173",
+      "summary": "官方运营团队安排9月24日10:00不停服更新，包含秋季登录与挑战奖励、精兵铲产出调整、感染区平衡及多项问题修复。",
+      "url": "https://news.17173.com/content/09232026/235028398.shtml",
+      "image": "game-brief-assets/2026-09-24-news-darkzone-update.png"
+    },
+    {
+      "id": "20260924-news-showa-fusion",
+      "title": "《昭和米国物语》将于核聚变北京站开放国内首次公开线下试玩",
+      "date": "2026-09-23",
+      "source": "游民星空",
+      "summary": "铃空游戏确认《昭和米国物语》参展核聚变北京站，A02展位将在10月24日至25日开放国内首次公开线下试玩。",
+      "url": "https://www.gamersky.com/news/202609/2215541.shtml",
+      "image": "game-brief-assets/2026-09-24-news-showa-fusion.png"
+    },
+    {
+      "id": "20260924-news-kalia-tgs-interview",
+      "title": "《卡莉亚的炼金工房》TGS采访：通过“吃”让调合系统更有趣",
+      "date": "2026-09-23",
+      "source": "TGBUS（DoNews/A9VG联合采访）",
+      "summary": "制作人细井顺三与总监福井大晖谈到新增的进食系统会影响体型、能力与探索；调合重新强调研究深度，并与战斗、探索和剧情联动。",
+      "url": "https://www.tgbus.com/news/245063",
+      "image": "game-brief-assets/2026-09-24-news-kalia-tgs-interview.jpg"
+    },
+    {
+      "id": "20260924-news-destiny-stars-maintenance",
+      "title": "《命运：群星》9月24日维护公告",
+      "date": "2026-09-23",
+      "source": "17173",
+      "summary": "公告安排9月24日06:45维护，预计约4小时；更新将开放遗物附魔系统，队伍等级100解锁附魔页签，词缀可带来技能联动。",
+      "url": "https://news.17173.com/content/09232026/231856849.shtml",
+      "image": "game-brief-assets/2026-09-24-news-destiny-stars-maintenance.png"
+    },
+    {
+      "id": "20260924-news-dragon-soul-pinocchio",
+      "title": "《龙魂旅人》更新公告：匹诺曹即将登场",
+      "date": "2026-09-23",
+      "source": "17173",
+      "summary": "9月24日14:00维护后开放传说+刺客刃偶匹诺曹限时召唤与心之工坊活动；配套限时活动预计于9月25日至10月9日进行。",
+      "url": "https://news.17173.com/content/09232026/232505650.shtml",
+      "image": "game-brief-assets/2026-09-24-news-dragon-soul-pinocchio.jpg"
+    },
+    {
+      "id": "20260924-news-genshin-71-update",
+      "title": "TapTap玩家围绕《原神》7.1角色选择与入坑时机展开讨论",
+      "date": "2026-09-24",
+      "source": "TapTap玩家讨论",
+      "summary": "该讨论帖关联9月23日上线的7.1版本，回复涉及角色抽取选择和当前是否适合入坑；这是帖内玩家发言样本，不代表整体玩家意见。",
+      "url": "https://www.taptap.cn/moment/851520146462737868?group_id=201765",
+      "image": "game-brief-assets/2026-09-24-news-genshin-71-update.jpg"
+    },
+    {
+      "id": "20260924-news-bless-unleashed-september-update",
+      "title": "《神佑释放》2026年9月23日维护公告",
+      "date": "2026-09-23",
+      "source": "17173",
+      "summary": "维护内容包括五套装备预设、守护者职业调整、游侠元素范围技能调整，以及中秋和世界首领活动。",
+      "url": "https://news.17173.com/content/09232026/035126186.shtml",
+      "image": "game-brief-assets/2026-09-24-news-bless-unleashed-september-update.jpg"
+    },
+    {
+      "id": "20260924-news-legend-world-remake-midautumn",
+      "title": "《传奇世界》重制版9月23日停机维护公告",
+      "date": "2026-09-23",
+      "source": "17173",
+      "summary": "中秋活动“月宫探索”于9月24日10:00开启，持续至10月8日24:00；指定服务器中角色等级达到35级可参与。",
+      "url": "https://news.17173.com/content/09232026/101646899.shtml",
+      "image": "game-brief-assets/2026-09-24-news-legend-world-remake-midautumn.jpg"
+    },
+    {
+      "id": "20260924-news-zhuxian-world-seasonal-events",
+      "title": "《诛仙世界》盛事逢秋，锋决乾坤！仙友请留步，这是你参加的活动吗？",
+      "date": "2026-09-23",
+      "source": "17173",
+      "summary": "9月23日的新报道列出跨服帮派联赛报名、妙法游云与七脉会武等安排，并介绍百花劫煞新角色及限时活动。",
+      "url": "https://news.17173.com/content/09232026/202054737.shtml",
+      "image": "game-brief-assets/2026-09-24-news-zhuxian-world-seasonal-events.png"
+    },
+    {
+      "id": "20260924-news-naraka-midautumn-event",
+      "title": "《永劫无间》让蓝梦做月饼？这会是啥子馅儿的啊！",
+      "date": "2026-09-23",
+      "source": "17173",
+      "summary": "中秋玩法“寻味广寒记”于9月24日更新后至10月15日开放；参与多种模式可收集月果粉，也可每日与蓬莱岛机关互动领取，最多10个。",
+      "url": "https://news.17173.com/content/09232026/223627432.shtml",
+      "image": "game-brief-assets/2026-09-24-news-naraka-midautumn-event.png"
+    }
+  ],
+  "packs": [
+    {
+      "id": "20260924-pack-vanilla-era",
+      "name": "香草纪元:食旅纪行｜VanillaEra:FaresChron",
+      "summary": "农夫乐事全附属与异界冒险",
+      "category": "农业 / 冒险",
+      "source": "BBSMC",
+      "heat": 96,
+      "heatEvidenceAt": "2026-09-24",
+      "heatSignals": "BBSMC 9月24日快照：累计下载118.1万、关注1378；为存量关注数据，不代表单日新增。",
+      "url": "https://bbsmc.net/modpack/vefc",
+      "image": "game-brief-assets/2026-09-24-pack-vanilla-era.webp"
+    },
+    {
+      "id": "20260924-pack-immersive-fight",
+      "name": "沉浸战斗｜Immersive Fight",
+      "summary": "史诗战斗冒险整合包",
+      "category": "冒险 / 战斗 / 多人游戏",
+      "source": "BBSMC",
+      "heat": 93,
+      "heatEvidenceAt": "2026-09-24",
+      "heatSignals": "BBSMC 9月24日快照：累计下载105.5万、关注855；为存量关注数据，不代表单日新增。",
+      "url": "https://bbsmc.net/modpack/immersive-fight",
+      "image": "game-brief-assets/2026-09-24-pack-immersive-fight.webp"
+    },
+    {
+      "id": "20260924-pack-luomuqu",
+      "name": "落幕曲",
+      "summary": "拔刀剑与TaCZ枪械核心，带任务引导",
+      "category": "拔刀剑 / 枪械 / 任务",
+      "source": "BBSMC",
+      "heat": 93,
+      "heatEvidenceAt": "2026-09-24",
+      "heatSignals": "BBSMC 9月24日快照：累计下载63.7万、关注1250；为存量关注数据，不代表单日新增。",
+      "url": "https://bbsmc.net/modpack/luomuqu",
+      "image": "game-brief-assets/2026-09-24-pack-luomuqu.webp"
+    },
+    {
+      "id": "20260924-pack-dragon-adventure",
+      "name": "龙之冒险：新征程",
+      "summary": "任务引导、冒险与魔法玩法",
+      "category": "冒险 / 魔法 / 任务",
+      "source": "BBSMC",
+      "heat": 92,
+      "heatEvidenceAt": "2026-09-24",
+      "heatSignals": "BBSMC 9月24日快照：累计下载75.7万、关注1019；为存量关注数据，不代表单日新增。",
+      "url": "https://bbsmc.net/modpack/lzmx",
+      "image": "game-brief-assets/2026-09-24-pack-dragon-adventure.png"
+    },
+    {
+      "id": "20260924-pack-the-fool",
+      "name": "愚者｜The Fool",
+      "summary": "伪装、欺诈与冒险战斗魔法主题",
+      "category": "冒险 / 战斗 / 魔法",
+      "source": "BBSMC",
+      "heat": 98,
+      "heatEvidenceAt": "2026-09-24",
+      "heatSignals": "BBSMC 9月24日快照：累计下载164.2万、关注1666；为存量关注数据，不代表单日新增。",
+      "url": "https://bbsmc.net/modpack/the-fool",
+      "image": "game-brief-assets/2026-09-24-pack-the-fool.webp"
+    },
+    {
+      "id": "20260924-pack-utopia",
+      "name": "乌托邦探险之旅",
+      "summary": "田园养老、任务冒险与多人游戏",
+      "category": "田园 / 冒险 / 多人游戏",
+      "source": "BBSMC",
+      "heat": 100,
+      "heatEvidenceAt": "2026-09-24",
+      "heatSignals": "BBSMC 9月24日快照：累计下载231.0万、关注1805；为存量关注数据，不代表单日新增。",
+      "url": "https://bbsmc.net/modpack/utopia-journey",
+      "image": "game-brief-assets/2026-09-24-pack-utopia.webp"
+    },
+    {
+      "id": "20260924-pack-nirvana",
+      "name": "涅槃",
+      "summary": "禁忌镰刀与奥法是视频标题突出的主题；该条目按整合包发布视频的实际累计播放和互动描述。",
+      "category": "冒险 / 魔法 / 战斗",
+      "source": "哔哩哔哩",
+      "heat": 100,
+      "heatEvidenceAt": "2026-09-24",
+      "heatSignals": "Bilibili视频发表于2026-09-23；9月24日09:16累计播放2930、点赞175、评论15，为观察时累计值，不代表单日新增。",
+      "url": "https://www.bilibili.com/video/BV11Cht6vECK/",
+      "image": "game-brief-assets/2026-09-24-pack-nirvana-bilibili.jpg"
+    },
+    {
+      "id": "20260924-pack-xplus-263",
+      "name": "XPlus基础整合包 26.3",
+      "summary": "视频介绍XPlus基础整合包的26.3更新，重点呈现优化与基础生电方向。",
+      "category": "优化 / 生电 / 基础整合",
+      "source": "哔哩哔哩",
+      "heat": 90,
+      "heatEvidenceAt": "2026-09-24",
+      "heatSignals": "Bilibili视频发表于2026-09-23；9月24日09:16累计播放1674、点赞81、评论9，为观察时累计值，不代表单日新增。",
+      "url": "https://www.bilibili.com/video/BV1zXht6bEfb/",
+      "image": "game-brief-assets/2026-09-24-pack-xplus-263-bilibili.jpg"
+    },
+    {
+      "id": "20260924-pack-millennaire",
+      "name": "Millénaire｜千年村庄",
+      "summary": "视频围绕Millénaire整合包和千年村庄主题展开分享。",
+      "category": "村庄 / 模拟 / 探索",
+      "source": "哔哩哔哩",
+      "heat": 88,
+      "heatEvidenceAt": "2026-09-24",
+      "heatSignals": "Bilibili视频发表于2026-09-23；9月24日09:16累计播放1488、点赞71、评论9，为观察时累计值，不代表单日新增。",
+      "url": "https://www.bilibili.com/video/BV1MZh46TEaY/",
+      "image": "game-brief-assets/2026-09-24-pack-millennaire-bilibili.jpg"
+    },
+    {
+      "id": "20260924-pack-old-world-125",
+      "name": "旧世界 v1.25",
+      "summary": "视频介绍《旧世界》v1.25更新，标题提及人类阵营加强、传染病防控与坏结局。",
+      "category": "更新 / 生存策略",
+      "source": "哔哩哔哩",
+      "heat": 78,
+      "heatEvidenceAt": "2026-09-24",
+      "heatSignals": "Bilibili视频发表于2026-09-23；9月24日09:16累计播放495、点赞33、评论13，为观察时累计值，不代表单日新增。",
+      "url": "https://www.bilibili.com/video/BV1Zqh46DEqP/",
+      "image": "game-brief-assets/2026-09-24-pack-old-world-125-bilibili.jpg"
+    }
+  ],
+  "mods": [
+    {
+      "id": "20260924-mod-item-alchemy",
+      "name": "Item Alchemy",
+      "summary": "ProjectE等价交换模组的非官方Fabric重制版；该版本修复EMC并调整硫磺EMC（该Mod版本 1.3.9-fix.1）",
+      "version": "26.1.x、1.21.x、1.20.6、1.20.4",
+      "loader": "Fabric",
+      "date": "2026-09-22",
+      "source": "BBSMC",
+      "url": "https://bbsmc.net/mod/item-alchemy/changelog"
+    },
+    {
+      "id": "20260924-mod-creativecore",
+      "name": "CreativeCore",
+      "summary": "CreativeMD多个模组依赖的前置；2.14.17在创造模式加载器中添加onItemToos（该Mod版本 2.14.17）",
+      "version": "26.3、26.1.2、26.1、1.21.11、1.21.7-1.21.9、1.21.4-1.21.5、1.21-1.21.1",
+      "loader": "Fabric / Forge / NeoForge",
+      "date": "2026-09-22",
+      "source": "BBSMC",
+      "url": "https://bbsmc.net/mod/creativecore/changelog"
+    },
+    {
+      "id": "20260924-mod-mcwifipnp",
+      "name": "更高级联机设置 - LAN World Plug-n-Play (mcwifipnp)",
+      "summary": "扩展局域网联机设置，可控制正版验证、离线UUID、端口与UPnP映射、PVP、MOTD和玩家权限。（该Mod版本 2.1.4-26.3-forge）",
+      "version": "26.3、26.2、1.21–1.21.10、1.20.x、1.19.x、1.18.x、1.17.x、1.16.2–1.16.5、1.15.2",
+      "loader": "Fabric / Forge / NeoForge / Quilt",
+      "date": "2026-09-22",
+      "source": "BBSMC",
+      "url": "https://bbsmc.net/mod/mcwifipnp/changelog"
+    },
+    {
+      "id": "20260924-mod-yacl",
+      "name": "YetAnotherConfigLib (YACL)",
+      "summary": "为Fabric与NeoForge模组提供可扩展的游戏内配置界面与控件库。（该Mod版本 3.9.7）",
+      "version": "26.1、26.2、26.3",
+      "loader": "Fabric / NeoForge",
+      "date": "2026-09-20",
+      "source": "BBSMC",
+      "url": "https://bbsmc.net/mod/yacl/changelog"
+    },
+    {
+      "id": "20260924-mod-pixelmon",
+      "name": "宝可梦:重铸 - Pixelmon",
+      "summary": "将宝可梦生物、对战、交易、繁殖、精灵球、技能机器和相关资源加入Minecraft。（该Mod版本 9.4.1）",
+      "version": "1.21.1–1.21.10、1.20.1–1.20.2、1.16.5、1.12.2",
+      "loader": "Forge / NeoForge",
+      "date": "2026-09-17",
+      "source": "BBSMC",
+      "url": "https://bbsmc.net/mod/pixelmon/changelog"
+    },
+    {
+      "id": "20260924-mod-moonlight-lib",
+      "name": "月光依赖库 - Moonlight Lib",
+      "summary": "为其他模组提供村民AI、数据驱动交易、地图标记、物品动画及动态资源注册等通用能力。（该Mod版本 3.6.8 (NeoForge 1.21.1); 3.6.7 (Fabric 1.21.1); 4.0.8 (Fabric/NeoForge 26.1.2)）",
+      "version": "26.1.2、1.21–1.21.1、1.20.4、1.20–1.20.1、1.19.x、1.18.x、1.17.1、1.16.3–1.16.5",
+      "loader": "Fabric / Forge / NeoForge",
+      "date": "2026-09-21",
+      "source": "BBSMC",
+      "url": "https://bbsmc.net/mod/selene/changelog"
+    }
+  ],
+  "trends": [
+    "版本节点成为当天资讯主轴之一：原神7.1于9月23日上线，报道同时将上线安排与9月28日六周年活动相连。",
+    "中秋档运营公告集中出现：传奇世界重制版、世界之外与诛仙世界先后披露9月23日起的节庆活动排期。",
+    "BBSMC当日热门列表前列，冒险与战斗标签出现频繁，也有农场经营主题整合包保持高下载和关注度，玩法供给呈分化。",
+    "Steam国区特惠首屏的优惠跨度明显：如Watch_Dogs 2为95%折扣，而针影裁梦为10%，深折扣与轻折扣并存。"
+  ],
+  "deals": [
+    {
+      "id": "447040",
+      "name": "Watch_Dogs® 2",
+      "discount": "-95%",
+      "original": "¥298",
+      "price": "¥14.9",
+      "label": "平史低",
+      "ends": "截至 10-01",
+      "url": "https://store.steampowered.com/app/447040/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-447040.jpg"
+    },
+    {
+      "id": "2290180",
+      "name": "极限国度",
+      "discount": "-90%",
+      "original": "¥168",
+      "price": "¥16.8",
+      "label": "平史低",
+      "ends": "截至 10-01",
+      "url": "https://store.steampowered.com/app/2290180/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-2290180.jpg"
+    },
+    {
+      "id": "2221490",
+      "name": "全境封锁2",
+      "discount": "-90%",
+      "original": "¥128",
+      "price": "¥12.8",
+      "label": "平史低",
+      "ends": "截至 10-01",
+      "url": "https://store.steampowered.com/app/2221490/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-2221490.jpg"
+    },
+    {
+      "id": "2369390",
+      "name": "Far Cry® 6",
+      "discount": "-90%",
+      "original": "¥298",
+      "price": "¥29.8",
+      "label": "平史低",
+      "ends": "截至 10-01",
+      "url": "https://store.steampowered.com/app/2369390/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-2369390.jpg"
+    },
+    {
+      "id": "534380",
+      "name": "消逝的光芒2: 重装上阵版",
+      "discount": "-80%",
+      "original": "¥198",
+      "price": "¥39.6",
+      "label": "平史低",
+      "ends": "截至 09-26",
+      "url": "https://store.steampowered.com/app/534380/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-534380.jpg"
+    },
+    {
+      "id": "1282100",
+      "name": "遗迹2",
+      "discount": "-80%",
+      "original": "¥245",
+      "price": "¥49",
+      "label": "平史低",
+      "ends": "截至 09-28",
+      "url": "https://store.steampowered.com/app/1282100/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-1282100.jpg"
+    },
+    {
+      "id": "2344520",
+      "name": "《暗黑破坏神® IV》",
+      "discount": "-75%",
+      "original": "¥348",
+      "price": "¥87",
+      "label": "平史低",
+      "ends": "截至 09-24",
+      "url": "https://store.steampowered.com/app/2344520/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-2344520.jpg"
+    },
+    {
+      "id": "1850570",
+      "name": "DEATH STRANDING DIRECTOR'S CUT",
+      "discount": "-75%",
+      "original": "¥198",
+      "price": "¥49.5",
+      "label": "平史低",
+      "ends": "截至 09-24",
+      "url": "https://store.steampowered.com/app/1850570/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-1850570.jpg"
+    },
+    {
+      "id": "1462040",
+      "name": "FINAL FANTASY VII REMAKE INTERGRADE",
+      "discount": "-75%",
+      "original": "¥198",
+      "price": "¥49.5",
+      "label": "平史低",
+      "ends": "截至 10-01",
+      "url": "https://store.steampowered.com/app/1462040/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-1462040.jpg"
+    },
+    {
+      "id": "728880",
+      "name": "Overcooked! 2",
+      "discount": "-75%",
+      "original": "¥98",
+      "price": "¥24.5",
+      "label": "平史低",
+      "ends": "截至 10-01",
+      "url": "https://store.steampowered.com/app/728880/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-728880.jpg"
+    },
+    {
+      "id": "477160",
+      "name": "人类一败涂地 / Human Fall Flat",
+      "discount": "-70%",
+      "original": "¥58",
+      "price": "¥17.4",
+      "label": "平史低",
+      "ends": "截至 09-28",
+      "url": "https://store.steampowered.com/app/477160/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-477160.jpg"
+    },
+    {
+      "id": "2909400",
+      "name": "FINAL FANTASY VII REBIRTH",
+      "discount": "-70%",
+      "original": "¥248",
+      "price": "¥74.4",
+      "label": "平史低",
+      "ends": "截至 10-01",
+      "url": "https://store.steampowered.com/app/2909400/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-2909400.jpg"
+    },
+    {
+      "id": "1172620",
+      "name": "Sea of Thieves: 2026 Edition",
+      "discount": "-65%",
+      "original": "¥138",
+      "price": "¥48.3",
+      "label": "平史低",
+      "ends": "截至 09-27",
+      "url": "https://store.steampowered.com/app/1172620/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-1172620.jpg"
+    },
+    {
+      "id": "3159330",
+      "name": "刺客信条：影",
+      "discount": "-60%",
+      "original": "¥298",
+      "price": "¥119.2",
+      "label": "平史低",
+      "ends": "截至 10-01",
+      "url": "https://store.steampowered.com/app/3159330/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-3159330.jpg"
+    },
+    {
+      "id": "1971650",
+      "name": "歧路旅人 II",
+      "discount": "-60%",
+      "original": "¥198",
+      "price": "¥79.2",
+      "label": "平史低",
+      "ends": "截至 10-01",
+      "url": "https://store.steampowered.com/app/1971650/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-1971650.jpg"
+    },
+    {
+      "id": "3008130",
+      "name": "《消逝的光芒：困兽》",
+      "discount": "-50%",
+      "original": "¥248",
+      "price": "¥124",
+      "label": "平史低",
+      "ends": "截至 09-26",
+      "url": "https://store.steampowered.com/app/3008130/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-3008130.jpg"
+    },
+    {
+      "id": "1260320",
+      "name": "猛兽派对",
+      "discount": "-50%",
+      "original": "¥98",
+      "price": "¥49",
+      "label": "平史低",
+      "ends": "截至 09-26",
+      "url": "https://store.steampowered.com/app/1260320/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-1260320.jpg"
+    },
+    {
+      "id": "3691330",
+      "name": "Call to Arms - Gates of Hell: Finest Hour",
+      "discount": "-50%",
+      "original": "¥108",
+      "price": "¥54",
+      "label": "平史低",
+      "ends": "截至 09-28",
+      "url": "https://store.steampowered.com/app/3691330/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-3691330.jpg"
+    },
+    {
+      "id": "3949040",
+      "name": "我们到了吗？",
+      "discount": "-40%",
+      "original": "¥33",
+      "price": "¥19.8",
+      "label": "平史低",
+      "ends": "截至 09-24",
+      "url": "https://store.steampowered.com/app/3949040/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-3949040.jpg"
+    },
+    {
+      "id": "2001120",
+      "name": "双影奇境",
+      "discount": "-35%",
+      "original": "¥198",
+      "price": "¥128.7",
+      "label": "平史低",
+      "ends": "截至 09-28",
+      "url": "https://store.steampowered.com/app/2001120/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-2001120.jpg"
+    },
+    {
+      "id": "2444750",
+      "name": "梦之形",
+      "discount": "-30%",
+      "original": "¥88",
+      "price": "¥61.6",
+      "label": "平史低",
+      "ends": "截至 09-28",
+      "url": "https://store.steampowered.com/app/2444750/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-2444750.jpg"
+    },
+    {
+      "id": "2879840",
+      "name": "密室逃脱模拟器2",
+      "discount": "-30%",
+      "original": "¥65",
+      "price": "¥45.5",
+      "label": "平史低",
+      "ends": "截至 09-28",
+      "url": "https://store.steampowered.com/app/2879840/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-2879840.jpg"
+    },
+    {
+      "id": "2384580",
+      "name": "真・三国无双 起源",
+      "discount": "-30%",
+      "original": "¥349",
+      "price": "¥244.3",
+      "label": "平史低",
+      "ends": "截至 09-28",
+      "url": "https://store.steampowered.com/app/2384580/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-2384580.jpg"
+    },
+    {
+      "id": "3484100",
+      "name": "挂灵 (Bait Soul)",
+      "discount": "-25%",
+      "original": "¥46",
+      "price": "¥34.5",
+      "label": "平史低",
+      "ends": "截至 10-06",
+      "url": "https://store.steampowered.com/app/3484100/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-3484100.jpg"
+    },
+    {
+      "id": "4108000",
+      "name": "机械狂欢",
+      "discount": "-20%",
+      "original": "¥33",
+      "price": "¥26.4",
+      "label": "平史低",
+      "ends": "截至 09-26",
+      "url": "https://store.steampowered.com/app/4108000/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-4108000.jpg"
+    },
+    {
+      "id": "3319700",
+      "name": "新世界：暗影成双",
+      "discount": "-19%",
+      "original": "¥36.8",
+      "price": "¥29.8",
+      "label": "平史低",
+      "ends": "截至 10-06",
+      "url": "https://store.steampowered.com/app/3319700/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-3319700.jpg"
+    },
+    {
+      "id": "3699590",
+      "name": "黯井微光 (Well Dweller)",
+      "discount": "-15%",
+      "original": "¥68",
+      "price": "¥57.8",
+      "label": "平史低",
+      "ends": "截至 10-06",
+      "url": "https://store.steampowered.com/app/3699590/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-3699590.jpg"
+    },
+    {
+      "id": "3255500",
+      "name": "Ved: 疗愈所",
+      "discount": "-15%",
+      "original": "¥68",
+      "price": "¥57.8",
+      "label": "平史低",
+      "ends": "截至 10-05",
+      "url": "https://store.steampowered.com/app/3255500/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-3255500.jpg"
+    },
+    {
+      "id": "3751950",
+      "name": "刺客信条：黑旗 记忆重置",
+      "discount": "-10%",
+      "original": "¥248",
+      "price": "¥223.2",
+      "label": "平史低",
+      "ends": "截至 10-01",
+      "url": "https://store.steampowered.com/app/3751950/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-3751950.jpg"
+    },
+    {
+      "id": "3328490",
+      "name": "机场管制 27",
+      "discount": "-10%",
+      "original": "¥198",
+      "price": "¥178.2",
+      "label": "平史低",
+      "ends": "截至 10-01",
+      "url": "https://store.steampowered.com/app/3328490/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-3328490.jpg"
+    },
+    {
+      "id": "3804370",
+      "name": "黎明门前的吹笛人",
+      "discount": "-10%",
+      "original": "¥42",
+      "price": "¥37.8",
+      "label": "平史低",
+      "ends": "截至 10-06",
+      "url": "https://store.steampowered.com/app/3804370/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-3804370.jpg"
+    },
+    {
+      "id": "4019220",
+      "name": "针影裁梦",
+      "discount": "-10%",
+      "original": "¥59",
+      "price": "¥53.1",
+      "label": "平史低",
+      "ends": "截至 09-28",
+      "url": "https://store.steampowered.com/app/4019220/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-4019220.jpg"
+    },
+    {
+      "id": "1238810",
+      "name": "《战地风云 5》",
+      "discount": "-90%",
+      "original": "¥228",
+      "price": "¥22.8",
+      "label": "今日特惠",
+      "ends": "截至 09-28",
+      "url": "https://store.steampowered.com/app/1238810/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-1238810.jpg"
+    },
+    {
+      "id": "582160",
+      "name": "刺客信条：起源",
+      "discount": "-85%",
+      "original": "¥248",
+      "price": "¥37.2",
+      "label": "今日特惠",
+      "ends": "截至 10-01",
+      "url": "https://store.steampowered.com/app/582160/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-582160.jpg"
+    },
+    {
+      "id": "1222140",
+      "name": "底特律：化身为人",
+      "discount": "-80%",
+      "original": "¥136",
+      "price": "¥27.2",
+      "label": "今日特惠",
+      "ends": "截至 09-28",
+      "url": "https://store.steampowered.com/app/1222140/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-1222140.jpg"
+    },
+    {
+      "id": "812140",
+      "name": "Assassin's Creed® Odyssey",
+      "discount": "-80%",
+      "original": "¥248",
+      "price": "¥49.6",
+      "label": "今日特惠",
+      "ends": "截至 10-01",
+      "url": "https://store.steampowered.com/app/812140/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-812140.jpg"
+    },
+    {
+      "id": "239140",
+      "name": "Dying Light",
+      "discount": "-80%",
+      "original": "¥98",
+      "price": "¥19.6",
+      "label": "今日特惠",
+      "ends": "截至 09-26",
+      "url": "https://store.steampowered.com/app/239140/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-239140.jpg"
+    },
+    {
+      "id": "599140",
+      "name": "Graveyard Keeper",
+      "discount": "-80%",
+      "original": "¥76",
+      "price": "¥15.2",
+      "label": "今日特惠",
+      "ends": "截至 09-28",
+      "url": "https://store.steampowered.com/app/599140/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-599140.jpg"
+    },
+    {
+      "id": "400750",
+      "name": "Call to Arms - Gates of Hell: Ostfront",
+      "discount": "-75%",
+      "original": "¥128",
+      "price": "¥32",
+      "label": "今日特惠",
+      "ends": "截至 09-28",
+      "url": "https://store.steampowered.com/app/400750/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-400750.jpg"
+    },
+    {
+      "id": "1426210",
+      "name": "双人成行",
+      "discount": "-70%",
+      "original": "¥198",
+      "price": "¥59.4",
+      "label": "今日特惠",
+      "ends": "截至 09-28",
+      "url": "https://store.steampowered.com/app/1426210/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-1426210.jpg"
+    },
+    {
+      "id": "281990",
+      "name": "Stellaris",
+      "discount": "-70%",
+      "original": "¥198",
+      "price": "¥59.4",
+      "label": "今日特惠",
+      "ends": "截至 10-01",
+      "url": "https://store.steampowered.com/app/281990/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-281990.jpg"
+    },
+    {
+      "id": "1285190",
+      "name": "无主之地®4",
+      "discount": "-54%",
+      "original": "¥318.56",
+      "price": "¥145.2",
+      "label": "今日特惠",
+      "ends": "截至 09-24",
+      "url": "https://store.steampowered.com/app/1285190/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-1285190.jpg"
+    },
+    {
+      "id": "252490",
+      "name": "Rust",
+      "discount": "-50%",
+      "original": "¥138",
+      "price": "¥69",
+      "label": "今日特惠",
+      "ends": "截至 09-26",
+      "url": "https://store.steampowered.com/app/252490/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-252490.jpg"
+    },
+    {
+      "id": "3527290",
+      "name": "PEAK",
+      "discount": "-38%",
+      "original": "¥33",
+      "price": "¥20.46",
+      "label": "今日特惠",
+      "ends": "截至 10-01",
+      "url": "https://store.steampowered.com/app/3527290/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-3527290.jpg"
+    },
+    {
+      "id": "2445690",
+      "name": "失落城堡2",
+      "discount": "-30%",
+      "original": "¥68",
+      "price": "¥47.6",
+      "label": "今日特惠",
+      "ends": "截至 10-01",
+      "url": "https://store.steampowered.com/app/2445690/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-2445690.jpg"
+    },
+    {
+      "id": "4466620",
+      "name": "SiNiSistar 2",
+      "discount": "-25%",
+      "original": "¥59",
+      "price": "¥44.25",
+      "label": "今日特惠",
+      "ends": "截至 10-01",
+      "url": "https://store.steampowered.com/app/4466620/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-4466620.jpg"
+    },
+    {
+      "id": "3768760",
+      "name": "007 初露锋芒",
+      "discount": "-20%",
+      "original": "¥338",
+      "price": "¥270.4",
+      "label": "今日特惠",
+      "ends": "截至 09-29",
+      "url": "https://store.steampowered.com/app/3768760/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-3768760.jpg"
+    },
+    {
+      "id": "1903340",
+      "name": "光与影：33号远征队",
+      "discount": "-20%",
+      "original": "¥218",
+      "price": "¥174.4",
+      "label": "今日特惠",
+      "ends": "截至 09-28",
+      "url": "https://store.steampowered.com/app/1903340/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-1903340.jpg"
+    },
+    {
+      "id": "1943950",
+      "name": "Escape the Backrooms",
+      "discount": "-20%",
+      "original": "¥37",
+      "price": "¥29.6",
+      "label": "今日特惠",
+      "ends": "截至 09-26",
+      "url": "https://store.steampowered.com/app/1943950/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-1943950.jpg"
+    },
+    {
+      "id": "3020510",
+      "name": "英雄立志传：三国志",
+      "discount": "-10%",
+      "original": "¥68",
+      "price": "¥61.2",
+      "label": "今日特惠",
+      "ends": "截至 09-30",
+      "url": "https://store.steampowered.com/app/3020510/?cc=cn&l=schinese",
+      "image": "game-brief-assets/2026-09-24-steam-3020510.jpg"
+    }
+  ]
+}

@@ -1,0 +1,427 @@
+{
+  "date": "2026-09-24",
+  "issue": 34,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期四",
+  "lunarDate": "农历丙午年八月十四",
+  "cutoff": "2026-09-24 13:46（北京时间）",
+  "productionTime": "2026-09-24 13:52（北京时间）",
+  "metricsCutoff": "2026-09-24 13:49（北京时间）",
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "北京铁警双节安保精准护航旅客平安出行",
+        "summary": "北京铁路警方启动双节安保，按站车制定警力方案、增加安检通道并排查设备，预案覆盖大客流疏散、极端天气和站区交通疏导。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 21:15",
+        "url": "https://news.cctv.com/2026/09/23/ARTINZqIJVtD1Q7mL3TEhkNJ260923.shtml"
+      },
+      {
+        "id": "domestic-02",
+        "title": "民政部：我国将持续推进普惠性、基础性、兜底性民生建设",
+        "summary": "民政部公布十五五民政工作重点，提出健全城乡三级养老服务网络，推动养老机构护理型床位占比达到73%，并加强失能失智老人照护。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 16:32",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-23/10702376.shtml"
+      },
+      {
+        "id": "domestic-03",
+        "title": "加快教育强国建设 基础教育更加公平优质",
+        "summary": "教育强国建设提出到2030年推动基础教育更加公平优质，增加高中和高等教育学位供给，并支持一批高校和学科进入世界一流行列。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 16:01",
+        "url": "https://www.xinhuanet.com/20260923/e476a305bd38478b97a124230a9d9741/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "三部门将奥啡类物质整类列入《非药用类麻醉药品和精神药品目录》",
+        "summary": "公安部、国家卫生健康委和国家药监局将奥啡类物质整类列入非药用类麻醉药品和精神药品目录，相关规定自10月1日起施行。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 15:15",
+        "url": "https://cn.chinadaily.com.cn/a/202609/23/WS6ab37c86e4b09a165c78c39f.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "伪造营业执照用于“幽灵外卖”等一批典型案例发布",
+        "summary": "最高法、最高检公布食品安全典型案例，涵盖假蜂蜜、伪劣奶粉、非法添加及幽灵外卖，并提到伪造3961张国家机关证件开设虚假店铺。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 09:21",
+        "url": "https://www.cnr.cn/mspd/yw/20260923/t20260923_527822335.shtml"
+      },
+      {
+        "id": "domestic-06",
+        "title": "深化食品安全全链条监管 以严管严治提升监管质效",
+        "summary": "有关部门要求压实生产、储存、运输和销售环节责任，将网络订餐、直播销售和社区团购纳入重点治理，并推进明厨亮灶与巡查抽检。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 06:25",
+        "url": "https://politics.people.com.cn/BIG5/n1/2026/0923/c1001-40803801.html"
+      },
+      {
+        "id": "domestic-07",
+        "title": "湖北省推出三四季度稳增长措施，含消费券和消费贷贴息",
+        "summary": "湖北9月至年底将组织消费券和有奖发票活动；对新发生的个人消费贷款与信用卡分期给予1%贴息，单家金融机构每人年度最高5000元。",
+        "source": "湖北省经济和信息化厅",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 09:33",
+        "url": "https://jxt.hubei.gov.cn/bmdt/rdjj/202609/t20260922_6020202.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "title": "“李鬼”充电宝“撞脸”主流品牌，消费者误借被扣99元",
+        "summary": "多地出现外观近似主流品牌的共享充电宝机柜，厦门消费者误借后因附近无正确归还点被扣99元买断费，律师提示刻意仿冒可能违法。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 09:28",
+        "url": "https://www.cnr.cn/mspd/yw/20260922/t20260922_527821123.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "title": "假流水、假合同，央视起底明码标价的骗保灰色产业链",
+        "summary": "调查揭示中介伪造工资流水和劳动合同挂靠参保、收费代办失业金等骗保方式；专家提示无真实用工者可按个人身份参加相应养老医保。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 09:28",
+        "url": "https://www.cnr.cn/mspd/yw/20260922/t20260922_527821125.shtml"
+      },
+      {
+        "id": "domestic-10",
+        "title": "整治网约车平台“阴阳账单”",
+        "summary": "报道记录网约车聚合平台订单多次转包分利、司机结算低于乘客实付及佣金规则不透明等问题，部分订单价差可达一半，专家呼吁公开分账并持续监管。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 09:20",
+        "url": "https://www.cnr.cn/mspd/yw/20260921/t20260921_527819994.shtml"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "中方呼吁国际社会携手发展共享人权",
+        "summary": "中国常驻联合国副代表孙磊在联大纪念《发展权利宣言》通过40周年会议发言，呼吁捍卫发展权、推进共同发展和坚持多边主义以完善人权治理。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 10:19",
+        "url": "https://cn.chinadaily.com.cn/a/202609/24/WS6ab48d71e4b09a165c78c612.html"
+      },
+      {
+        "id": "international-02",
+        "title": "八国外长发声明：吁以色列履行加沙停火协议有关义务",
+        "summary": "土耳其、埃及、印尼、约旦、巴基斯坦、卡塔尔、沙特和阿联酋外长联合呼吁落实加沙停火首阶段承诺，保障人道援助安全畅通并反对驱逐巴勒斯坦人。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 10:10",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-23/10702029.shtml"
+      },
+      {
+        "id": "international-03",
+        "title": "推动构建更加开放、包容、更具韧性的多边贸易体制",
+        "summary": "世贸组织2026年公共论坛在日内瓦举行，为期三天、吸引4600余名政商学界人士，围绕服务业与全球贸易展开讨论，并强调产业政策应符合组织规则。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 10:02",
+        "url": "https://gd.people.com.cn/n2/2026/0923/c123932-41705516.html"
+      },
+      {
+        "id": "international-04",
+        "title": "2026年国际和平日纪念活动在武汉举行",
+        "summary": "来自60个国家的代表参加武汉国际和平日纪念活动，联合国秘书长古特雷斯发表视频致辞；活动讨论国际合作应对挑战与共建和平。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 08:24",
+        "url": "https://world.people.com.cn/n1/2026/0923/c1002-40803997.html"
+      },
+      {
+        "id": "international-05",
+        "title": "亚洲开发银行略微上调亚太发展中经济体增长预期",
+        "summary": "亚行9月版报告把2026年亚太发展中经济体增长预测略上调至5.0%，维持2027年5.1%预测，并预计今年通胀率为4.2%。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 08:09",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-23/10701939.shtml"
+      },
+      {
+        "id": "international-06",
+        "title": "卢旺达和比利时恢复外交关系",
+        "summary": "卢旺达与比利时外长联合声明宣布恢复外交关系并计划近期重开使馆；两国曾于2025年3月断交，双方表示将继续坦诚对话。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 08:01",
+        "url": "https://www.xinhuanet.com/20260923/9595bc5d9e1140ecb01c1fc4334d64f1/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "欧盟宣布：延长涉乌克兰危机制裁措施至2029年",
+        "summary": "欧盟理事会将涉乌克兰危机个人和实体限制措施延长36个月至2029年9月22日，名单覆盖3000余对象，涉及旅行限制、资产冻结和资金禁令。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 07:57",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-23/10701937.shtml"
+      },
+      {
+        "id": "international-08",
+        "title": "英国警方逮捕两名涉嫌策划恐袭的男子",
+        "summary": "伦敦警察厅称两名30多岁男子因涉嫌策划针对曼彻斯特犹太社区的恐袭于9月20日被捕，仍被拘留，警方称行动中断了疑似计划。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 07:36",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-23/10701931.shtml"
+      },
+      {
+        "id": "international-09",
+        "title": "也门冲突升级 沙特寻求多国支持 胡塞武装严厉警告",
+        "summary": "报道称沙特寻求多国支持也门防务，英国同意提供空中加油但称不涉更广军事行动；也门政府军与胡塞武装在塔伊兹交战，相关外长也在联大期间会谈。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 06:53",
+        "url": "https://news.cnr.cn/sq/20260923/t20260923_527822082.shtml"
+      },
+      {
+        "id": "international-10",
+        "title": "中方将于9月25日在纽约举行全球发展倡议五周年高级别对话",
+        "summary": "外交部介绍全球发展倡议五周年高级别对话拟于9月25日在纽约联合国总部举行，并称倡议提出五年来已动员230多亿美元开展2000多个合作项目。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 05:06",
+        "url": "https://news.cctv.com/2026/09/22/ARTI14v5qHi29ECJyzHbjuug260922.shtml"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "“中国天眼”FAST运行十周年在即",
+        "summary": "“中国天眼”运行十周年报道回顾其科研成果，称FAST发现脉冲星超过1300颗；本文梳理运行十年进展，并非新发现单项。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 20:38",
+        "url": "https://www.news.cn/tech/20260923/02af03a51622491290710202ba8598bb/c.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "我国光子集成研究取得新进展",
+        "summary": "中山大学团队在12英寸硅光子晶圆上异质集成磷化铟激光器，键合良率超过90%；报道还介绍探测器暗电流与宽带光电振荡器的测试结果。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 17:25",
+        "url": "https://www.news.cn/tech/20260923/dc9cfcf4cfdb4899a3aad545047e1ade/c.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "京东方全球创新伙伴大会举行，光电融合擘画万物智联新图景",
+        "summary": "京东方大会展示原生FHD 1000Hz显示、P0.7 Micro LED等产品，并介绍钙钛矿光伏标准、玻璃基TGV载板和Micro LED光互连验证样机，均为大会披露。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 11:33",
+        "url": "https://tech.gmw.cn/2026-09/23/content_39016760.htm"
+      },
+      {
+        "id": "tech-04",
+        "title": "深瞳丨庞大鳗鱼产业缘何困于“一株苗”",
+        "summary": "集美大学团队将初孵鳗鱼仔鱼存活时长从21天提高到60天、体长超过1.3厘米；报道说明阶段研究取得进展，玻璃鳗关键技术及规模化繁育仍待攻关。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 07:57",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/23/content_586221.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "我国自主研制6MW级核柴一号正式发布",
+        "summary": "中国船舶集团发布自主研制的6MW级核柴一号，机组额定功率6.6MW、启动时间不足10秒，报道给出的平均无故障工作时间超过2000小时。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 22:09",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-22/10701822.shtml"
+      },
+      {
+        "id": "tech-06",
+        "title": "打通地月“信息高速公路”",
+        "summary": "我国科研团队完成地月双向高速激光通信试验，下行速率100Mbps、上行约1.25Mbps；报道说明现阶段速率和最远距离仍与部分成熟系统有差距。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 12:38",
+        "url": "https://news.cctv.com/2026/09/22/ARTIWe5sxIz2Gka8BMnq4zU1260922.shtml"
+      },
+      {
+        "id": "tech-07",
+        "title": "脑机接口：从“认识大脑”走向“人机共生”",
+        "summary": "报道按信息流将脑机接口分为脑控、控脑与双向闭环，并介绍运动、语言和感觉功能重建探索；研究者强调设备、神经基础与临床验证协同及伦理边界。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 09:44",
+        "url": "https://tech.cnr.cn/gstj/20260922/t20260922_527821147.shtml"
+      },
+      {
+        "id": "tech-08",
+        "title": "望宇登月服研制进展顺利",
+        "summary": "人民日报报道望宇登月服研制进展，并介绍空间站再生生保系统累计在轨运行超过5年、氧气资源闭合度100%；相关数据不代表登月服已完成月面验证。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22",
+        "url": "https://paper.people.com.cn/rmrb/pc/content/202609/22/content_30182437.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "华为发布首个采用NPO的超节点——昇腾960超节点",
+        "summary": "华为发布采用NPO光引擎Hi-ONE的昇腾960超节点，称可扩展至4096卡，多个超节点可组最大51.2万卡集群；算力参数均为企业发布会数据。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 14:02",
+        "url": "https://www.news.cn/tech/20260918/42277cf892f84d4dade743dbf2f734e1/c.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "第九届中国机器人峰会开幕，嘉宾共探具身智能落地之路",
+        "summary": "第九届中国机器人峰会启动康养机器人协同创新平台，发布具身智能产业出海研究报告和能力评测框架，报道指后者为产业建立统一评测参考。",
+        "source": "中国经济网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-18 10:44",
+        "url": "https://www.ce.cn/xwzx/gnsz/gdxw/202609/t20260918_3221884.shtml"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "AI终端加速走向场景应用",
+        "summary": "首届AI终端创新大会有9家企业发布10余项技术或产品，报道举例AI书写笔、医疗耳机和XR远程操控，并称现场展出400余项成果。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 13:32",
+        "url": "https://tech.gmw.cn/2026-09/23/content_39016852.htm"
+      },
+      {
+        "id": "ai-02",
+        "title": "如何应对人工智能安全漏洞 院士专家来渝论道",
+        "summary": "重庆人工智能安全大会发布国家人工智能安全漏洞库首批技术支撑单位名单，1600余名嘉宾参会，分论坛讨论AI漏洞研究治理与法治安全。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 07:51",
+        "url": "https://cq.people.com.cn/n2/2026/0923/c365402-41705112.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "AI时代，我们需要什么样的学术规范",
+        "summary": "科研人员讨论AI生成科研点子、平滑补全数据、替代实验与未发表数据外传等风险，强调原创性需要文献和实验验证，研究过程需披露且可追溯。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 07:12",
+        "url": "https://news.cctv.com/2026/09/21/ARTIgiKqAjoHXchFQ8Acc59k260921.shtml"
+      },
+      {
+        "id": "ai-04",
+        "title": "AI拓展中国—东盟产业协作新空间",
+        "summary": "首批14个面向东盟的AI跨境应用场景覆盖7国，包括老挝机场无人机巡检和印尼高速公路智能巡检；合作园区截至8月已签约102个国内AI项目。",
+        "source": "中国经济网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 22:11",
+        "url": "https://www.ce.cn/xwzx/gnsz/gdxw/202609/t20260920_3226081.shtml"
+      },
+      {
+        "id": "ai-05",
+        "title": "端侧AI探索新进展：AI PC追求从“能运行”到“能办事”",
+        "summary": "联想天禧AI Pro更新版支持本地部署35B参数模型，并兼容0.6B小模型处理会议转写、图文识别和向量检索；常规业务完成比例来自企业人员估算。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 15:44",
+        "url": "https://www.news.cn/tech/20260920/f71f6be01dd84325bacb17e5bd175a95/c.html"
+      }
+    ]
+  },
+  "topStoryIds": [
+    "domestic-02",
+    "international-07",
+    "tech-06"
+  ],
+  "observation": "本期民生议题集中在养老、教育、食品与消费权益，假期出行和社保安全也有新安排；全球消息涉及制裁、冲突外交、贸易与增长预期，国际治理议题同步升温。科技报道从地月激光通信、芯片光电集成延伸到脑机接口和海洋装备，既有试验与阶段成果，也保留距离、规模化和临床验证边界。AI应用走进终端、跨境场景与科研，数据真实性、隐私和人工核验仍是落地条件。",
+  "metrics": [
+    {
+      "id": "20260924-metric-gold-au9999",
+      "kind": "gold",
+      "icon": "金",
+      "name": "国内金价",
+      "value": "927.19元/克",
+      "note": "2026-09-24 13:49核验的盘中延时行情；最高935.78、最低924.60、今开932.00元/克。",
+      "source": "上海黄金交易所",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.sge.com.cn/h5_sjzx/yshq"
+    },
+    {
+      "id": "20260924-metric-usd",
+      "kind": "usd_cny",
+      "icon": "$",
+      "name": "美元兑人民币",
+      "value": "1美元=6.7489人民币",
+      "note": "2026-09-24人民币汇率中间价。",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760"
+    },
+    {
+      "id": "20260924-metric-eur",
+      "kind": "eur_cny",
+      "icon": "€",
+      "name": "欧元兑人民币",
+      "value": "1欧元=7.6631人民币",
+      "note": "2026-09-24人民币汇率中间价。",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760"
+    },
+    {
+      "id": "20260924-metric-jpy",
+      "kind": "jpy_cny",
+      "icon": "¥",
+      "name": "日元兑人民币",
+      "value": "100日元=4.2590人民币",
+      "note": "2026-09-24人民币汇率中间价。",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760"
+    },
+    {
+      "id": "20260924-metric-domestic-oil-beijing92",
+      "kind": "domestic_oil",
+      "icon": "油",
+      "name": "中国油价",
+      "value": "北京92号汽油8.29元/升",
+      "note": "2026-09-11 24时起执行的北京最高零售价；截至9月24日官方列表未见更新调价。",
+      "source": "北京市发展和改革委员会",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202609/t20260911_4860093.htm"
+    },
+    {
+      "id": "20260924-metric-international-oil",
+      "kind": "international_oil",
+      "icon": "油",
+      "name": "国际油价",
+      "value": "WTI 92.16美元/桶；布伦特103.08美元/桶",
+      "note": "2026-09-23期货结算价。",
+      "source": "新华财经",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.cnfin.com/dz-lb/detail/20260924/4474413_1.html"
+    }
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "国家外汇管理局",
+    "北京市发展和改革委员会",
+    "新华财经"
+  ],
+  "sources": [
+    "中国新闻网",
+    "新华网",
+    "中国日报中文网",
+    "央广网",
+    "人民网",
+    "央视网",
+    "湖北省经济和信息化厅",
+    "中国科技网",
+    "光明网",
+    "中国经济网"
+  ]
+}

@@ -4,6 +4,14 @@
   "publishAt": "11:00",
   "editions": [
     {
+      "date": "2026-09-24",
+      "issue": 33,
+      "publishAt": "2026-09-24T11:00:00+08:00",
+      "title": "游戏与 Minecraft 每日简报",
+      "headline": "《伊莫》移动端上线，PC与手机数据互通",
+      "file": "data/2026-09-24.json"
+    },
+    {
       "date": "2026-09-23",
       "issue": 32,
       "publishAt": "2026-09-23T11:00:00+08:00",
