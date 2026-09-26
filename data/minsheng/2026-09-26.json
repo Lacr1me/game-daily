@@ -1,0 +1,429 @@
+{
+  "date": "2026-09-26",
+  "issue": 36,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期六 · 历史补刊",
+  "lunarDate": "农历丙午年八月十六",
+  "cutoff": "2026-09-26 11:44（北京时间）",
+  "productionTime": "2026-09-27 00:27（北京时间）",
+  "backfilledAt": "2026-09-26T16:27:57.200Z",
+  "metricsCutoff": "2026-09-26 05:52（北京时间）",
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "北京调整商品住房预售与定金规则",
+        "summary": "北京新出让地块项目申请商品住房预售须完成主体结构封顶，预售资金实行全程监管；现房项目定金一般不超过总房价款的1%。相关政策自9月24日起实施。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 08:51",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-25/10703573.shtml"
+      },
+      {
+        "id": "domestic-02",
+        "title": "9月全国日均揽收快递5.85亿件 单日峰值超6.1亿件",
+        "summary": "国家邮政局数据显示，9月全国日均揽收快递5.85亿件，单日峰值超过6.1亿件。报道结合中秋国庆消费需求介绍寄递业务增长和行业服务保障安排。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 12:24",
+        "url": "https://cn.chinadaily.com.cn/a/202609/25/WS6ab5f89ee4b09a165c78cb42.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "四川警方破获55起贷款诈骗案",
+        "summary": "四川多地经侦部门在夏季治安打击整治行动中破获55起贷款诈骗案，抓获173名嫌疑人，涉案资金逾2亿元。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 12:47",
+        "url": "https://news.cctv.com/2026/09/25/ARTIgtjnZN238nBSfbvt3XVB260925.shtml"
+      },
+      {
+        "id": "domestic-04",
+        "title": "中秋假期全国多地持续降雨 出行注意安全",
+        "summary": "华西至黄淮、江淮等地有持续降雨；青藏高原有较强雨雪，高海拔地区局地有暴雪；多地可能出现大雾。报道提醒公众留意道路湿滑、结冰及地质灾害风险。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 11:12",
+        "url": "https://www.news.cn/politics/20260925/d01a3cb1d4db4487bed82fbddd006bbf/c.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "山东金秋消费季覆盖16市近2000场活动",
+        "summary": "山东金秋消费季覆盖商品、服务、新型和数字消费，配套以旧换新、购车、家政、文旅与养老服务优惠。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 11:16",
+        "url": "https://difang.gmw.cn/sd/2026-09/25/content_39020451.htm"
+      },
+      {
+        "id": "domestic-06",
+        "title": "湘鄂赣三省消费者组织发布双节提示：留意游乐项目特种设备安全",
+        "summary": "湖南、湖北、江西三省消费者组织提醒公众规范选择餐饮和网络订餐商家，并在参加高空、高速游乐项目前核对设备安全及自身健康状况。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 08:28",
+        "url": "https://www.hn.chinanews.com.cn/news/shsh/2026/0925/534295.html"
+      },
+      {
+        "id": "domestic-07",
+        "title": "2150项文旅活动等你来打卡",
+        "summary": "江西在中秋国庆期间推出2150项文旅活动和242项惠民举措，涵盖主题游径、展览与演出，其中演出活动465项，博物馆及公共文化活动170项。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 07:53",
+        "url": "https://jx.people.com.cn/n2/2026/0925/c186330-41707783.html"
+      },
+      {
+        "id": "domestic-08",
+        "title": "双节消费呈现文化体验与长线旅行需求",
+        "summary": "经济日报报道双节消费转向文化体验与长线旅行，赏月航班搜索量同比增200%，中秋国庆机票预订同比增44%，长途与多目的地出行增长更快。",
+        "source": "中国经济网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 08:22",
+        "url": "https://www.ce.cn/xwzx/gnsz/gdxw/202609/t20260925_3235373.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "title": "银川上线数字化消费地图",
+        "summary": "银川发布消费“三新”试点建设成果并上线数字化消费地图，整合商圈、美食点位和文旅线路，提供查询、导航与活动查阅；此次征集151个项目，支持63个项目。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 23:12",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-24/10703460.shtml"
+      },
+      {
+        "id": "domestic-10",
+        "title": "烟台发放惠民线上消费券，单笔最高减200元",
+        "summary": "烟台市推出惠民线上消费券，9月25日10时起发放，优惠为85折、单笔最高减200元。使用须满足烟台定位及配送地址条件，每日领取核销一次，券当日有效。",
+        "source": "烟台市商务局",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24",
+        "url": "https://www.yantai.gov.cn/col/col43370/art/2026/art_3996caeda3f648afae385a341fe790e6.html"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "欧洲四大联赛呼吁国际足联进行“根本性”改革",
+        "summary": "英超、德甲、西甲和意甲联赛联合呼吁国际足联建立更透明、客观、均衡、包容的治理架构；其争议涉及拟引入私人投资者参与国际足联商业权益的计划。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-26 08:47",
+        "url": "https://www.cnr.cn/newscenter/sq/20260926/t20260926_527825704.shtml"
+      },
+      {
+        "id": "international-02",
+        "title": "多国推进未成年人社媒监管，落地仍有难题",
+        "summary": "中国日报梳理欧盟、澳大利亚、印度尼西亚等地未成年人社交媒体监管措施，指出年龄核验和绕行监管的现实难题，并引述儿童保护机构对转向监管较弱平台的担忧。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 18:48",
+        "url": "https://cn.chinadaily.com.cn/a/202609/25/WS6ab6519ae4b09a165c78cbde.html"
+      },
+      {
+        "id": "international-03",
+        "title": "报告：今夏热浪预计致德国损失约250亿欧元",
+        "summary": "德国安联集团研究估算，今夏热浪使德国经济损失约250亿欧元，对经济增速影响约0.54个百分点；欧洲30国合计损失估计为1130亿欧元，数字并非政府统计。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 14:51",
+        "url": "https://www.news.cn/world/20260925/94ebf660254b428fb24a78b78e778b97/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "法国拟召集七国集团商讨释放战略石油储备",
+        "summary": "马克龙称法国拟召集七国集团成员讨论协调释放战略石油储备以稳定国际油价；他表示伊朗局势及俄乌冲突影响油价。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 06:30",
+        "url": "https://world.people.com.cn/n1/2026/0925/c1002-40805378.html"
+      },
+      {
+        "id": "international-05",
+        "title": "联合国机构：加沙重建需要约715亿美元",
+        "summary": "联合国贸发会议估计加沙恢复与重建需715亿美元；报告称加沙92%的经济实体自2023年10月以来遭破坏或摧毁，2025年失业率达78%。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 04:58",
+        "url": "https://www.news.cn/world/20260925/bb06d6c7f8ba41a9b28658737f9a617f/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "中东冲突推高全球煤炭需求",
+        "summary": "经济日报依据国际能源署报告称，中东冲突与天然气供应受限促使多国增加煤炭替代。IEA将2026年全球煤炭需求预测修正为增长1.2%、总量89.4亿吨。",
+        "source": "中国经济网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 08:18",
+        "url": "https://www.ce.cn/xwzx/gnsz/gdxw/202609/t20260925_3235370.shtml"
+      },
+      {
+        "id": "international-07",
+        "title": "中国代表：中东安全事务主导权应由中东国家自主掌握",
+        "summary": "中国常驻联合国副代表孙磊在安理会同阿盟“三驾马车”高级别非正式对话会上发言，强调中东安全事务主导权应由中东国家自主掌握，并支持安理会与阿盟加强合作。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 12:08",
+        "url": "https://www.news.cn/world/20260925/d9b41ee2c2d14fc68eefff99631f54ec/c.html"
+      },
+      {
+        "id": "international-08",
+        "title": "巴总理会见伊朗总统 强调落实美伊谅解备忘录",
+        "summary": "据新华网报道，巴基斯坦总理夏巴兹9月24日会见伊朗总统佩泽希齐扬，双方支持落实美伊伊斯兰堡谅解备忘录，并同意就相关问题保持定期磋商。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 07:21",
+        "url": "https://www.news.cn/world/20260925/9a6372476ac149a790fe02cdb8baf8d2/c.html"
+      },
+      {
+        "id": "international-09",
+        "title": "英军新设“太空中队”保护卫星",
+        "summary": "英国空军新设第三太空效应中队，称将运用电子战等技术监测、扰乱和应对太空威胁，并保护通信、导航和导弹预警卫星。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 09:33",
+        "url": "https://world.gmw.cn/2026-09/24/content_39018150.htm"
+      },
+      {
+        "id": "international-10",
+        "title": "古特雷斯称世界正走向多极化 呼吁建立“网络化多极格局”",
+        "summary": "古特雷斯在联大讲话称世界不可逆地走向多极化，主张建立以联合国为核心的多边治理体系，并呼吁改革安理会及共同管理人工智能风险。",
+        "source": "国际在线",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 02:15",
+        "url": "https://news.cri.cn/20260923/67b37cf7-2865-1d5b-40ce-da3dd25c1fa4.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "中国北冰洋考察队在高纬冰区发现极鳕幼鱼",
+        "summary": "中国第16次北冰洋考察队在北纬86度以北的加拿大海盆冰区捕获5尾极鳕幼鱼，冰下影像也记录到其活动。考察队将继续研究该区域对极鳕种群的支撑作用。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 20:05",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/25/content_588308.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "我国科学家破解现代野猪起源之谜",
+        "summary": "崖州湾实验室、华中农业大学领衔团队整合全球猪基因组资源，将现代野猪起源中心定位于亚洲热带大陆；研究还发现古代基因渐渗影响体型与寒冷适应，为育种提供线索。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 13:36",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/25/content_588154.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "我国成功发射遥感四十号04组卫星",
+        "summary": "太原卫星发射中心使用长征六号改运载火箭发射遥感四十号04组卫星，卫星进入预定轨道，主要开展电磁环境探测及相关技术试验。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 17:21",
+        "url": "https://www.news.cn/20260924/47e06ff11ab24c0a9cee8acd694ab967/c.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "园林机器人在通州大运河开展实景驻场检验",
+        "summary": "来自11家企事业单位的17台园林机器人在通州大运河景区驻场40天，执行巡检、清洁、养护、互动和科普任务；活动报道还介绍大模型识别病虫害和入侵物种等方案。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 20:37",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/24/content_587697.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "武汉理工大学团队研发难愈性创面原位组织再生材料",
+        "summary": "武汉理工大学团队研发难愈性创面再生材料，将仿生高分子、微纳支架和生物活性组分结合。报道介绍其与医院开展60余例临床验证，不等同于随机对照疗效结论。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 14:27",
+        "url": "https://www.hb.chinanews.com.cn/news/2026/0924/433530.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "长征八号甲完成升级后第二次全系统验证并发射低轨26组卫星",
+        "summary": "长征八号甲运载火箭9月23日在海南商业航天发射场发射卫星互联网低轨26组卫星，完成性能升级后第二次全系统验证，卫星由中国航天科技集团五院研制。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 09:12",
+        "url": "https://kpzg.people.com.cn/n1/2026/0924/c404214-40805006.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "FAST十年发现超1300颗脉冲星，观测数据支撑多项前沿成果",
+        "summary": "FAST落成十周年之际，新华网报道其累计发现脉冲星超过1300颗，观测数据支撑多项前沿成果。报道依据十周年学术交流会介绍望远镜运行及科研进展。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 09:04",
+        "url": "https://www.news.cn/tech/20260924/d91617373ab54bc7bbac4b608156a2ff/c.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "科学家揭示大气黑碳的增暖潜势",
+        "summary": "南方科技大学及合作团队整合约2500次测量和141类排放源，建立焦炭与烟炱排放清单。研究指出两者吸光能力存在差异，黑碳气候影响评估需纳入组分差别。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 09:42",
+        "url": "https://tech.gmw.cn/2026-09/24/content_39018315.htm"
+      },
+      {
+        "id": "tech-09",
+        "title": "新一代同步辐射光源直线加速器成功出束",
+        "summary": "合肥先进光源（HALF）直线加速器于9月20日成功出束，标志项目建设迈出关键一步。该装置基于衍射极限储存环技术，建成后将为材料、生命和能源科学提供实验支撑。",
+        "source": "中国经济网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 07:27",
+        "url": "https://www.ce.cn/xwzx/kj/202609/t20260921_3226365.shtml"
+      },
+      {
+        "id": "tech-10",
+        "title": "中国农科院展示560余项科研成果",
+        "summary": "中国农业科学院36个研究所展示560余项科研成果，包括低豆腥味大豆、甜糯同粒玉米、可在丘陵田间横移和掉头的农业转运机器人，以及面向动物疫病预警的全球风险模型。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 13:58",
+        "url": "https://news.cctv.com/2026/09/20/ARTIkUEnHV7gFcVPFEweSMwS260920.shtml"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "近千台具身智能机器人进入横琴主题乐园运营",
+        "summary": "长隆集团与智元创新在横琴主题乐园投入近千台具身智能机器人，应用于演艺、科普、导览、研学和酒店接待。报道所述运营于9月24日启动，能力按企业介绍呈现。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-26 09:05",
+        "url": "https://www.news.cn/tech/20260926/9518dae58c1b4497ba0d4f0c47ab066e/c.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "全形态电力AI机器人全链条保障全球数贸会",
+        "summary": "全球数贸会保电采用变电站巡检机器人、无人车搭载机器狗及AI眼镜等设备，覆盖电网到展馆末端。报道介绍平台接入35个业务系统和3万余套在线监测装置。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 12:01",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/25/content_588075.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "广东展示AI辅助科研与产业应用",
+        "summary": "广东“人工智能+”科技成果对接活动展示重大疾病诊疗、脑机反馈训练、材料研发智能体、电力平台和船舶性能预测等应用，呈现AI辅助科研与产业工作的具体场景。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 13:51",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/23/content_586555.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "可靠AI测评体系覆盖芯片至应用全链路",
+        "summary": "工业和信息化部电子第五研究所联合北京智源、浪潮信息等20多家产业链单位发布面向Agent时代的可靠AI测评体系，覆盖芯片、系统、模型、数据和应用等环节。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 20:14",
+        "url": "https://tech.gmw.cn/2026-09/22/content_39015304.htm"
+      },
+      {
+        "id": "ai-05",
+        "title": "推出系列新品 阿里云加速构建Agentic Cloud",
+        "summary": "阿里云在云栖大会推出AgentCore、Agent Sandbox、新一代高性能存储CPFS等产品，并为PAI新增异步AgenticRL训练框架。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 17:09",
+        "url": "https://www.news.cn/tech/20260922/6bd1c77079d74175a692fca1b3f13edd/c.html"
+      }
+    ]
+  },
+  "topStoryIds": [
+    "domestic-01",
+    "international-02",
+    "tech-01"
+  ],
+  "observation": "本期按9月26日观察窗口补刊，实际制作于27日。假期中的民生服务既涉及消费与出行，也涉及交易规则和风险防范：北京调整住房预售要求，地方发放消费券、推出文旅活动，警方查处贷款诈骗。国际报道则呈现儿童网络保护、能源需求和气候损失等公共议题。科技栏目从北冰洋实地观测、基因组研究到农业成果展示，AI应用从电力巡检延伸至园区服务；这些进展的证据层级各不相同，科研结果、现场应用与企业介绍需要分别理解。",
+  "metrics": [
+    {
+      "id": "2026-09-26-metric-gold-au9999",
+      "kind": "gold",
+      "icon": "金",
+      "name": "国内金价",
+      "value": "926.01元/克",
+      "note": "2026-09-24最近交易日收盘，跌7.99元、0.86%。",
+      "source": "上海黄金交易所",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://en.sge.com.cn/data/data_daily_international_new?end_date=2026-09-24&start_date=2026-09-24"
+    },
+    {
+      "id": "2026-09-26-metric-domestic-oil-beijing92",
+      "kind": "domestic_oil",
+      "icon": "油",
+      "name": "中国油价",
+      "value": "8.61元/升",
+      "note": "北京92号汽油，2026-09-25起执行，较此前涨0.32元/升。",
+      "source": "北京市发展和改革委员会",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202609/t20260924_4879948.htm"
+    },
+    {
+      "id": "2026-09-26-metric-international-oil-brent-settlement",
+      "kind": "international_oil",
+      "icon": "油",
+      "name": "国际油价",
+      "value": "布伦特106.60美元/桶",
+      "note": "2026-09-24期货结算价，上涨3.52美元、3.41%。",
+      "source": "新华网",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.xinhuanet.com/fortune/20260925/f93e4b918e934e6882bef68be54e6ac0/c.html"
+    },
+    {
+      "id": "2026-09-26-metric-usd-cny",
+      "kind": "usd_cny",
+      "icon": "$",
+      "name": "美元兑人民币",
+      "value": "1美元=6.7489元人民币",
+      "note": "2026-09-24最近交易日人民币汇率中间价。",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760"
+    },
+    {
+      "id": "2026-09-26-metric-eur-cny",
+      "kind": "eur_cny",
+      "icon": "€",
+      "name": "欧元兑人民币",
+      "value": "1欧元=7.6631元人民币",
+      "note": "2026-09-24最近交易日人民币汇率中间价。",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760"
+    },
+    {
+      "id": "2026-09-26-metric-jpy-cny",
+      "kind": "jpy_cny",
+      "icon": "¥",
+      "name": "日元兑人民币",
+      "value": "100日元=4.2590元人民币",
+      "note": "2026-09-24最近交易日人民币汇率中间价。",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760"
+    }
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "北京市发展和改革委员会",
+    "新华网",
+    "国家外汇管理局"
+  ],
+  "sources": [
+    "中国新闻网",
+    "中国日报中文网",
+    "央视网",
+    "新华网",
+    "光明网",
+    "人民网",
+    "中国经济网",
+    "烟台市商务局",
+    "央广网",
+    "国际在线",
+    "中国科技网"
+  ]
+}

@@ -7,7 +7,7 @@
 - 时区固定 `Asia/Shanghai`，`publishAt` 固定当天 11:00；11:00 前禁止调用发布脚本。
 - 现有调度不变：游戏每天 05:00—10:00 每小时整点；民生每天 05:30—10:30 每小时半点；发布补跑每天 11:01、11:31。三个任务继续为本地项目的独立 cron 运行，模型、推理强度、项目、状态、通知策略不由本手册改动。
 - 每次计划运行是新任务，不回到旧聊天；同日接力读取仓库结构化状态。禁止用 heartbeat 替代或新增定时任务绕过本轮边界。
-- 禁止 OpenAI Platform API、`OPENAI_API_KEY`、`api.openai.com` 和任何付费模型 API；每日研究仅使用当前 Codex 任务自带网页检索，不调用 ImageGen 绘制正文。
+- 禁止 OpenAI Platform API、`OPENAI_API_KEY`、`api.openai.com` 和任何付费模型 API；每日研究使用当前 Codex 任务自带网页检索，不调用 ImageGen 绘制正文。2026-09-27用户明确允许 Steam 官方页的本地只读浏览器备用抓取，范围和入口见下文；其他新闻来源维持网页检索边界。
 - 保留模板的数量、国内来源优先级、时效、逐项证据、所有合格 Steam 项及最近七期去重规则。不得复制上一期、伪造日期、来源或证据。
 - 保留用户未提交和无关改动、已就绪/已发布成果、冻结清单、账本和审计快照。同日写入须持租约且幂等；检查失败禁止发布受影响频道，但不禁止诊断和范围内修复。
 - 日报提交推送授权不包含外部日志等其他载荷。外发须已有对应授权并遵守环境审批；不暴露凭据、不自行变更云服务或安全配置。
@@ -22,7 +22,7 @@
 
    `node scripts/daily-run-state.mjs lease-acquire --date=YYYY-MM-DD --run-id=HHMM --ttl=3000`
 
-   发布轮将 ttl 改为 1500。`acquired=false` 时只报告被有效租约占用并结束；不 init、不 checkpoint、不释放别人的租约。TTL 是互斥有效期，不是允许无限工作或占用下一轮的时长；每个大阶段及长阶段中到期前以同一命令、同一 run-id 续租并检查 acquired，失败即停止写入。
+   发布轮将 ttl 改为 1500。`acquired=false` 时只报告被有效租约占用并结束；不 init、不 checkpoint、不释放别人的租约。TTL只控制互斥有效期，不是执行预算；每个大阶段及长阶段中到期前以同一命令、同一 run-id 续租并检查 acquired，失败即停止写入。制作轮开始时记录下一次另一频道的既定启动时间，进入该实际接力边界前保存并释放租约，不占用下一轮；使用 HANDOFF_BOUNDARY 并记录真实调度依据。11:31后的最后恢复轮没有下一轮同日接力，仍有可修复步骤时续租继续。
 3. 幂等注册本轮：
 
    `node scripts/daily-run-state.mjs init --date=YYYY-MM-DD --run-id=HHMM --kind=main --minsheng-issue=N --game-issue=N`
@@ -93,11 +93,11 @@ checkpoint 校验 stage/status/runStatus 枚举，不新增 waiting、blocked、
 
 - 本频道已有效 ready 且本轮为制作，或 11:00 前所有目标已 ready：保存状态、释放租约，等待现有发布任务，不占着任务空等。
 - 目标已线上健康：只尝试仍欠的镜像等授权附属项；已有成果不重做。
-- 配置执行预算、真实环境限制或接力边界将至：开始时分别记录预算策略、可核验环境期限和下一轮接力时间，采用适用的更早边界。既有默认 25 分钟、最后 2 分钟收尾是**未验证的预算策略**，不是 Codex 硬限制、租约 TTL 或“工作已足够”的证明；按该策略收尾须报告 CONFIGURED_BUDGET，不能写 ENVIRONMENT_LIMIT。本轮代码不延长生产运行、不改变调度。
+- 明确配置的执行预算、真实环境限制或实际接力边界将至：先核对 `config/daily-execution-policy.json`。当前 `configuredBudgetMinutes=null`，没有默认25分钟预算；禁止从1500/3000秒租约或历史记录推算工作期限。CONFIGURED_BUDGET仅在配置为正数、预算文件的 `policyFile=config/daily-execution-policy.json`、deadlineAt匹配本轮开始时间且实际到期时使用。环境期限须有宿主证据，HANDOFF_BOUNDARY须引用下一次既定启动时间。没有这些真实边界时，继续可执行工作并续租，不自行设限。
 - 外部条件确实不可推进，或已逐项穷尽允许来源/回退且证据仍不足：保存真实进度和具体阻塞，禁止无效重复尝试。
 - 需额外权限、不可逆操作、未授权代码/云配置修复，或租约丢失：停止受影响写入，保留其他可独立完成的工作；说明需要人工介入的动作和原因。
 
-单个来源一次失败、一次非零检查退出、某小阶段结束或双频道聚合失败均不是整轮停止条件。11:01 可恢复项留精确接力；11:31 后仍失败应在结果中明确人工待办。权限阻塞、状态损坏或无法安全续跑可提前报告，不要求等 11:31；实际通知仍按现有任务通知策略，不另发消息、不新增监控。
+单个来源一次失败、一次非零检查退出、某小阶段结束或双频道聚合失败均不是整轮停止条件。11:01可恢复项留精确接力；11:31后仍有可执行步骤则继续，真实阻断才以runStatus=failed收尾并明确人工待办。最后恢复轮没有新鲜线上健康证明时，checkpoint会拒绝complete，防止未上线被记为正常完成。通知策略保持现有failed_runs_only，不另发消息、不新增监控。
 
 2026-09-11 只读抽样 09-06、09-08、09-09、09-10 共 55 轮：时长范围 1.29—33.03 分钟，3 轮超过 23 分钟，1 轮超过 25 分钟。样本无退出原因、阶段起止和收尾耗时，不能推出 25/2 足够，也不能从短轮次直接认定提前停工。建议在后续获准生产验收中连续记录至少 7 天每阶段起止、实际退出原因、剩余缺口、收尾耗时及环境期限，分别计算阶段和收尾 P95，再评估预算；不以模拟计时替代现实证据。详细样本哈希见 B 报告。
 
@@ -119,9 +119,17 @@ checkpoint 校验 stage/status/runStatus 枚举，不新增 waiting、blocked、
 
 Steam 优惠的确定性发现面是 Steam 官方 Specials 默认相关性首个结果页的全部游戏卡片，加上冻结前当天国内权威优惠报道或价格历史清单中额外出现且能回到 Steam 官方商品页核验的热门史低；不是 Steam 数千项折扣总目录。05:00开始发现，最迟08:00把去重 appId 写入分次快照并执行：
 
+05:00轮在其他新闻研究前完成Steam发现与冻结；一次官方首屏网页工具不可访问时，立即使用已授权备用入口，不把冻结留到08:00轮才尝试：
+
+`node scripts/collect-steam-discovery.mjs --date=YYYY-MM-DD --out=output/steam/YYYY-MM-DD-HHMM.json`
+
+该脚本使用全新无个人Cookie浏览器，只读默认相关性首个结果页，拒绝非当天与08:00后的采集。保留JSON及兄弟原始响应文件，使用 `--replay=<JSON>`核对解析结果和哈希。持租约将两文件安全复制到artifacts/operations，核对sourceUrl、observedAt、国区币种和完整appIds，再调用下述冻结接口；采集结果的frozen=false不是冻结证明。网络代理只可继承既有无凭据配置，不修改系统代理。网页工具与备用入口都失败时保存错误，后续08:00前的轮次优先重试；不得伪造历史冻结。
+
 `node scripts/daily-run-state.mjs steam-freeze --date=YYYY-MM-DD --run-id=HHMM "--source-url=https://store.steampowered.com/search/?specials=1&cc=cn&l=schinese" "--app-ids=ID1|ID2|..." "--extra-app-ids=IDx|IDy|..."`
 
 冻结文件创建后，当天后续轮次只复核这组 appId 的国区价格、截止时间和价格历史；页面刷新出现的新排序、新卡片或数量变化不得覆盖冻结发现面。失效或不合格项从最终合格集淘汰即可，不要求追逐10:30或11:31的新动态首屏。Steam 覆盖核验完成的终态记录使用 `--coverage-complete=true`；只有整组冻结 appId 均有合格或淘汰依据时才可声明覆盖完整。`steam-cn` 的 `--candidates` 写冻结发现面内全部最终合格 Steam appId，`--available` 必须与该清单数量一致；候选JSON优惠必须与清单完全相同。`steam-price-history` 的候选ID至少覆盖所有标记为新史低/平史低的 appId。网页渲染全部合格项，静态PNG（以及今后若增加的PDF）只显示排序前6项。
+
+冻结后的指定商品页备用入口：`node scripts/collect-steam-product.mjs --app-id=ID --out=output/steam/YYYY-MM-DD-ID.json`；原始响应回放使用 `--replay=<JSON>`。只允许指定 Steam 官方商品 GET 和国区简中参数，移除 Cookie/Authorization。多版本价格须匹配对应购买框；截止文字与明确结束时间分别保留，缺失字段不能推算，未取得价格历史不得标史低。年龄门、地区跳转或来源拒绝须保存原因。当前商品页不证明过去促销连续，历史补刊仍需原期证据。
 
 若 08:00 后仍缺冻结文件，只能从已保存的截至 08:00 的当天发现证据恢复原清单，并保留实际恢复时间；无该证据则标记游戏阻塞，不能重新抓动态首屏、冒称按时冻结或伪造时间，民生继续独立推进。
 
@@ -154,6 +162,8 @@ Steam 优惠的确定性发现面是 Steam 官方 Specials 默认相关性首个
 检查来源终态、当前有效候选集合、逐项证据和冻结文件的内容/日期/身份/状态绑定哈希；游戏 pending 存在时另查全量优惠覆盖及每个冻结 appId 的接受或淘汰依据。冻结创建强制当天 08:00 前；缺失、迟到、损坏或哈希不符均失败，不重扫动态集合。缺少 pending 时输出 `dealCoverage.skipped=true, code=CANDIDATE_MISSING`，可用 `--require-candidate=true` 将其设为硬失败；最终就绪始终要求完整候选。失败输出共同决定下一步；非零退出禁止未达标发布，但允许诊断和授权范围修复。只有逐项穷尽允许路径且有真实缺口证据，才报告来源不足。
 
 ## 候选、渲染与频道就绪
+
+最近七期去重以 `archive-consistency.mjs` 的逐栏目限额为准；整合包出现过不等于一律撤销。历史补刊保留原期观察窗口和真实 `backfilledAt`，民生 `productionTime` 必须与真实补刊时间一致，正文明确标示补刊。历史原文补核不得改写 checkedAt；使用 historicalSourceProof 保留原文发表时间、实际抓取时间、operations 内原始响应路径与 SHA-256，并在完整性门禁重新核对原始文件。
 
 对每个未发布频道独立执行，已有文件先验证再复用；完整性诊断可在任何阶段运行，成品和发布必须通过所有对应硬门禁。
 
@@ -192,7 +202,7 @@ Steam 优惠的确定性发现面是 Steam 官方 Specials 默认相关性首个
 
    本仓库使用 Actions 部署，旧 `/pages/builds/latest` 可能返回 404。此时从仓库 deployment、对应 status 和 `.github/workflows/pages.yml` workflow run API 采集真实记录。使用 `source:github-actions-pages-api`，保留上述时间、目标 SHA、成功结论、站点和 evidenceUrl（deployment API URL），并附 `deployment`、`deploymentStatus`、`workflowRun` 三份原始 API 对象。校验器核对同仓库/部署/运行关联、github-pages 环境、目标 SHA、成功状态及站点；不能改造 URL 冒充旧 build 证明，也不能仅凭某个 Actions 测试成功当作部署成功。新增兼容检查：`node scripts/test-pages-deployment-proof.mjs`。
 2. 先处理已 ready、尚未发布的频道：独立复核本频道完整性、正文、归档、覆盖（游戏）、readiness 和时间门禁，11:00 后调用 `node scripts/publish-minsheng.mjs --run-id=HHMM` 或 `node scripts/publish-brief.mjs --run-id=HHMM`。新发布入口要求显式 run-id；状态通过 B 的 updatePublicationState 接口写入。一个频道失败不阻止另一满足门禁的频道；不以双频道完整性作为单频道前置条件。
-3. 候选合法但未 ready：补本频道渲染、公开 PNG、预检和 mark-ready，然后发布。研究仍缺：仅补真实缺口和证据，沿用当天账本、审计快照与冻结 Steam appId；在本轮预算内依次推进候选至健康，不人为停在某检查点。
+3. 候选合法但未ready：补本频道渲染、公开PNG、预检和mark-ready，然后发布。研究仍缺：仅补真实缺口和证据，沿用当天账本、审计快照与冻结Steam appId；研究齐全后立即生成候选，依次推进至健康，不因租约到期或未配置的25分钟预算停工。
 4. 已正式归档：先核验当日索引/正文/公开 PNG，禁止重复发布。只有本地正式文件有效、线上部署失败时，仅检查已有目标提交、推送是否到达和 Pages 执行状态，修复部署并复核线上；不重搜、不重生成 JSON/PNG、不重跑发布脚本。已有部署还在运行时等待有界进展，不能反复触发。重试同一部署需已有授权，涉及额外配置/代码的修复按范围判断。
 5. 新归档后按“正式发布验证链”重建、测试和构建验证；仅提交本次发布涉及的文件，确认无无关已暂存内容，再按已有授权推送 origin/main。等待目标提交的 Pages 工作流成功并运行新鲜线上健康检查。另一频道仍显示上一期可正常构建部署；全局健康尚不通过时仅报告已成功频道。
 6. 发布中断时先读 `YYYY-MM-DD-<channel>-publish-transaction.json` 和 status 的 publication。C 事务按 prepared → content-written → index-written → game embedded-written → complete 推进，记录正文/PNG 和索引前后哈希；B 仅保存同事务身份/步骤，不维护第二份文件事务。持有效租约、11:00 后可用同一频道发布命令恢复同一期；只复用实际字节匹配的目标。pending 已 rename 时，预检允许该日期该频道正式正文替代，必须仍匹配 readiness 的候选哈希并通过完整门禁。未知正文、不同 PNG、非事务索引改动、事务 ID 冲突一律拒绝并保留证据；无匹配日志不可盲目重复发布或手改索引。该协议可恢复多文件中断，不是跨文件原子事务或断电耐久性保证。
@@ -291,7 +301,7 @@ git diff --check
 - **冻结恢复**：迟到/损坏会明确阻断。已有截至 08:00 原始发现证据的人工核验恢复尚无自动入口，需保留实际恢复时间和可信原清单；无证据不得刷新动态发现面或回填冻结时间。
 - **C 发布/健康**：同事务按实际字节恢复；健康按频道及 JSON/PNG/页面/目标提交验证，镜像问题独立报告。实际生产发布、线上 Pages、门户及历史交互仍需另行授权验收。
 - **C 七期/时间**：selectPriorEditions/loadPriorBriefs 先选择最近七期再读取，正文全历史完整性仍由站点/构建验证负责。generateAt 仅可选 HH:mm 元数据，不是 cron 或准入开关；保留 11:00 硬门禁。
-- **预算与耐久性**：25/2 策略未验证；文件锁仅本地互斥，临时文件/遗留锁须诊断，多文件状态与发布不是跨文件原子事务。断电/磁盘损坏和真实负载仍未验证。
+- **预算与耐久性**：默认25/2策略已取消，租约不再作为预算依据；文件锁仅本地互斥，临时文件/遗留锁须诊断，多文件状态与发布不是跨文件原子事务。断电/磁盘损坏和真实负载仍未验证。
 
 ## 本地性能与产物维护
 

@@ -249,6 +249,7 @@ async function checkpointRunStateUnlocked(root, date, update = {}) {
   if (!state) throw new Error(`${date} 运行状态不存在，请先执行 init`);
   if (state.date !== date) throw operationError('STATE_CONFLICT', '状态日期冲突');
   validateCheckpoint(update);
+  await assertExecutionExit(root, date, state, update);
   if (['publishing','published'].includes(update.status) || update.published === true) {
     const { assertPublishTime } = await import('./game-lib.mjs');
     assertPublishTime(date, clockNow(update));
@@ -282,6 +283,28 @@ async function checkpointRunStateUnlocked(root, date, update = {}) {
   state.lastCheckpointAt = clockNow(update).toISOString();
   await writeJson(paths.state, state);
   return state;
+}
+
+async function assertExecutionExit(root, date, state, update) {
+  const run = state.runs?.find(item => item.id === update.runId);
+  if (update.exitReason === 'CONFIGURED_BUDGET') {
+    const policyPath = path.join(root, 'config', 'daily-execution-policy.json');
+    const policy = await readJsonIfExists(policyPath);
+    if (policy?.schemaVersion !== 1 || !Number.isFinite(policy.configuredBudgetMinutes) || policy.configuredBudgetMinutes <= 0) {
+      throw operationError('BUDGET_UNCONFIGURED', '未配置执行预算；租约 TTL 和历史默认25分钟不能作为停工期限');
+    }
+    const expected = Date.parse(run?.startedAt) + policy.configuredBudgetMinutes * 60_000;
+    if (update.budget?.policyFile !== 'config/daily-execution-policy.json' || !Number.isFinite(expected) || Date.parse(update.budget.deadlineAt) !== expected) {
+      throw operationError('BUDGET_IDENTITY_INVALID', '预算须绑定实际配置文件及本轮开始时间，不能按租约截止时间生成');
+    }
+    if (clockNow(update).getTime() < expected) throw operationError('BUDGET_NOT_REACHED', '配置预算尚未到期，继续处理可执行步骤');
+  }
+  if (run?.kind === 'recovery' && update.runStatus === 'complete' && clockNow(update).getTime() >= Date.parse(`${date}T11:31:00+08:00`)) {
+    const view = await queryRunState(root, date, { channel: update.channel, now: clockNow(update) });
+    if (!Object.values(view.channels).every(channel => channel.online.valid)) {
+      throw operationError('RECOVERY_INCOMPLETE', '最后发布补跑尚未线上健康，不能正常完成并静默退出；继续修复，真实阻断须标记failed并报告');
+    }
+  }
 }
 
 async function appendResearchLedgerUnlocked(root, rawEntry) {
@@ -528,7 +551,22 @@ export async function assertResearchComplete(root, date, channel) {
       });
     throw new Error(`${date} ${channel} 检索账本未完成：\n- ${details.join("\n- ")}`);
   }
+  const entries = (await readResearchLedger(root, date)).filter(entry => entry.channel === channel);
+  for (const entry of entries) for (const evidence of entry.candidateEvidence || []) {
+    if (evidence.historicalSourceProof) await assertRetainedSourceEvidence(root, evidence, date);
+  }
   return status;
+}
+
+export async function assertRetainedSourceEvidence(root, evidence, date) {
+  validateCandidateEvidence(evidence, date);
+  const proof = evidence.historicalSourceProof;
+  if (!proof) return;
+  const base = path.resolve(root, 'artifacts', 'operations');
+  const file = path.resolve(root, proof.sourcePath);
+  if (!file.startsWith(base + path.sep) || sha256(await readFile(file)) !== proof.sourceSha256) {
+    throw operationError('EVIDENCE_CHANGED', '历史原文补核文件或哈希发生变化');
+  }
 }
 
 async function mergeSourceAuditsUnlocked(root, date) {
@@ -794,7 +832,15 @@ function validateCandidateEvidence(evidence, date) {
       /^[a-f0-9]{64}$/.test(proof.sourceSha256) && /^[a-f0-9]{64}$/.test(proof.discoverySha256) &&
       (evidence.decision !== 'accepted' || proof.method === 'same-sale-crosscheck');
   }
-  if (!evidence || !String(evidence.id || '').trim() || !['accepted', 'rejected'].includes(evidence.decision) || !isHttps(evidence.url) || !Number.isFinite(checkedAt) || !(sameDay || historical) || !String(evidence.basis || '').trim()) throw operationError('EVIDENCE_INVALID', '逐项证据须包含 id/decision/HTTPS url/同日 checkedAt/basis；历史补证须保留真实复核时间及原始文件哈希');
+  const retained = evidence?.historicalSourceProof;
+  const sourcePublishedAt = Date.parse(retained?.sourcePublishedAt);
+  const historicalSource = retained && Number.isFinite(checkedAt) && checkedAt <= Date.now() + 60_000 &&
+    beijingDate(new Date(checkedAt)) > date && retained.editionDate === date &&
+    Date.parse(retained.capturedAt) === checkedAt && Number.isFinite(sourcePublishedAt) &&
+    sourcePublishedAt <= Date.parse(`${date}T23:59:59+08:00`) &&
+    sourcePublishedAt >= Date.parse(`${date}T00:00:00+08:00`) - 7 * 86400000 &&
+    retained.sourceUrl === evidence.url && typeof retained.sourcePath === 'string' && /^[a-f0-9]{64}$/.test(retained.sourceSha256);
+  if (!evidence || !String(evidence.id || '').trim() || !['accepted', 'rejected'].includes(evidence.decision) || !isHttps(evidence.url) || !Number.isFinite(checkedAt) || !(sameDay || historical || historicalSource) || !String(evidence.basis || '').trim()) throw operationError('EVIDENCE_INVALID', '逐项证据须包含 id/decision/HTTPS url/同日 checkedAt/basis；历史补证须保留真实复核时间及原始文件哈希');
   if (evidence.decision === 'accepted' && (!evidence.facts || typeof evidence.facts !== 'object' || Array.isArray(evidence.facts) || !Object.keys(evidence.facts).length)) throw operationError('EVIDENCE_INVALID', '接受候选须记录 facts；结构通过不代表来源事实已核实');
 }
 function currentCandidates(entries) {

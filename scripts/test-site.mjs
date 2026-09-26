@@ -260,6 +260,7 @@ function nextIsoDate(value) {
 }
 function makeSourcePolicyBrief(brief) {
   const candidate = structuredClone(brief);
+  delete candidate.backfilledAt;
   candidate.date = "2026-08-25";
   candidate.sourcePolicyVersion = SOURCE_POLICY_VERSION;
   candidate.cutoff = "2026-08-25 10:45（北京时间）";

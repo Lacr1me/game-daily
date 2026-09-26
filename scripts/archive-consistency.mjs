@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { GAME_DEAL_LIMITS } from "./game-lib.mjs";
-import { SOURCE_POLICY_VERSION } from "./minsheng-lib.mjs";
+import { SOURCE_POLICY_VERSION, assertMinshengProductionTime } from "./minsheng-lib.mjs";
 
 export const GAME_DUPLICATE_LIMITS = {
   features: 0,
@@ -80,9 +80,8 @@ export function assertMinshengPublishCandidate(candidate, manifest, priorBriefs)
   if (candidate.sourcePolicyVersion !== SOURCE_POLICY_VERSION) {
     throw new Error(`新发布民生日报 sourcePolicyVersion 必须为 ${SOURCE_POLICY_VERSION}`);
   }
-  for (const [field, value] of [["cutoff", candidate.cutoff], ["productionTime", candidate.productionTime]]) {
-    assertFieldDate(value, candidate.date, `民生日报 ${field}`);
-  }
+  assertFieldDate(candidate.cutoff, candidate.date, '民生日报 cutoff');
+  assertMinshengProductionTime(candidate);
   assertRecentDataDate(candidate.metricsCutoff, candidate.date, 7, "民生日报 metricsCutoff");
   const edition = parseIsoDate(candidate.date);
   const recentCount = allMinshengStories(candidate).filter((story) => {
@@ -110,7 +109,7 @@ function assertNextEdition(candidate, manifest, channel) {
   if (latest && candidate.date <= latest.date) {
     const publishedAt = Date.parse(`${candidate.date}T11:00:00+08:00`);
     const backfilledAt = Date.parse(candidate.backfilledAt);
-    if (channel !== '游戏日报' || !Number.isFinite(backfilledAt) || backfilledAt <= publishedAt ||
+    if (!Number.isFinite(backfilledAt) || backfilledAt <= publishedAt ||
         backfilledAt <= Date.parse(latest.publishAt) || backfilledAt > Date.now() + 60_000) {
       throw new Error(`${channel}候选日期 ${candidate.date} 必须晚于最新归档 ${latest.date}；历史补档须标记真实补档时间`);
     }

@@ -4,6 +4,15 @@
   "publishAt": "11:00",
   "editions": [
     {
+      "date": "2026-09-26",
+      "issue": 36,
+      "publishAt": "2026-09-26T11:00:00+08:00",
+      "backfilledAt": "2026-09-26T16:27:57.200Z",
+      "title": "民生日报 · 每日35条精选新闻",
+      "headline": "北京调整商品住房预售与定金规则",
+      "file": "data/minsheng/2026-09-26.json"
+    },
+    {
       "date": "2026-09-25",
       "issue": 35,
       "publishAt": "2026-09-25T11:00:00+08:00",

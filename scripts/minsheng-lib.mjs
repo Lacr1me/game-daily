@@ -33,6 +33,26 @@ export function assertPublishTime(date, now = new Date()) {
   }
 }
 
+export function assertMinshengProductionTime(brief) {
+  if (!brief.backfilledAt) {
+    if (!brief.productionTime?.startsWith(brief.date)) throw new Error(`productionTime 必须对应日报日期 ${brief.date}`);
+    return;
+  }
+  const time = Date.parse(brief.backfilledAt);
+  if (!Number.isFinite(time) || time <= Date.parse(`${brief.date}T11:00:00+08:00`) || time > Date.now() + 60_000) {
+    throw new Error('backfilledAt 必须是原定发布时刻之后的真实补刊时间');
+  }
+  // Published legacy editions used backfilledAt as an archive timestamp.
+  // Preserve their original same-day production field; new backfills use the contract below.
+  if (time < Date.parse('2026-09-26T00:00:00+08:00') && brief.productionTime?.startsWith(brief.date)) return;
+  const parts = Object.fromEntries(new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit',
+    hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
+  }).formatToParts(new Date(time)).map(part => [part.type, part.value]));
+  const expected = `${parts.year}-${parts.month}-${parts.day} ${parts.hour}:${parts.minute}（北京时间）`;
+  if (brief.productionTime !== expected) throw new Error(`productionTime 必须对应真实补刊时间 ${expected}`);
+}
+
 export function normalizeMinsheng(brief) {
   for (const [category, count] of Object.entries(CATEGORY_COUNTS)) {
     if (!Array.isArray(brief.sections?.[category])) continue;
@@ -64,9 +84,10 @@ export function validateMinsheng(brief, { expectedDate } = {}) {
   for (const field of ["cutoff", "productionTime", "metricsCutoff"]) {
     if (brief[field] && !/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}（北京时间）$/.test(brief[field])) errors.push(`${field} 必须为 YYYY-MM-DD HH:mm（北京时间）`);
   }
-  for (const field of ["cutoff", "productionTime"]) {
+  for (const field of ["cutoff"]) {
     if (brief[field] && brief.date && !brief[field].startsWith(brief.date)) errors.push(`${field} 必须对应日报日期 ${brief.date}`);
   }
+  try { assertMinshengProductionTime(brief); } catch (error) { errors.push(error.message); }
   const editionDate = parseDate(brief.date);
   const metricsDate = parseDate((brief.metricsCutoff || "").slice(0, 10));
   if (editionDate && metricsDate) {

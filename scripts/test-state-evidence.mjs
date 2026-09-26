@@ -1,7 +1,8 @@
 import assert from 'node:assert/strict';
-import { mkdtemp, readFile, writeFile } from 'node:fs/promises';
+import { mkdtemp, mkdir, readFile, writeFile } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
 import * as ops from './daily-operations.mjs';
 
 const base = await mkdtemp(path.join(os.tmpdir(), 'springhues-b-evidence-'));
@@ -94,9 +95,36 @@ await test('相同 eventId 不允许改变历史内容', async () => {
 await test('退出原因区分配置预算和真实环境边界', async () => {
   const root=await fixture('budget');
   await assert.rejects(ops.checkpointRunState(root,date,{runId:'0700',runStatus:'complete',exitReason:'ENVIRONMENT_LIMIT',budget:{kind:'configured',deadlineAt:now.toISOString(),basis:'25 minutes'},now}),{code:'INVALID_CHECKPOINT'});
-  const state=await ops.checkpointRunState(root,date,{runId:'0700',runStatus:'complete',exitReason:'CONFIGURED_BUDGET',budget:{kind:'configured',deadlineAt:now.toISOString(),basis:'unverified policy'},now});
+  await assert.rejects(ops.checkpointRunState(root,date,{runId:'0700',runStatus:'complete',exitReason:'CONFIGURED_BUDGET',budget:{kind:'configured',deadlineAt:now.toISOString(),basis:'lease TTL 1500 seconds'},now}),{code:'BUDGET_UNCONFIGURED'});
+  await mkdir(path.join(root,'config'),{recursive:true});
+  await writeFile(path.join(root,'config','daily-execution-policy.json'),JSON.stringify({schemaVersion:1,configuredBudgetMinutes:25}));
+  const budget={kind:'configured',deadlineAt:'2026-09-01T07:25:00+08:00',basis:'explicit fixture configuration',policyFile:'config/daily-execution-policy.json'};
+  await assert.rejects(ops.checkpointRunState(root,date,{runId:'0700',runStatus:'complete',exitReason:'CONFIGURED_BUDGET',budget,now}),{code:'BUDGET_NOT_REACHED'});
+  const state=await ops.checkpointRunState(root,date,{runId:'0700',runStatus:'complete',exitReason:'CONFIGURED_BUDGET',budget,now:new Date(budget.deadlineAt)});
   assert.equal(state.runs[0].exitReason,'CONFIGURED_BUDGET');
   assert.equal(state.channels.game.published,false);
+});
+await test('最后发布补跑未上线不得正常完成并静默退出', async () => {
+  const root=path.join(base,'last-recovery');
+  const started=new Date('2026-09-01T11:31:00+08:00');
+  await ops.acquireRunLease(root,{date,runId:'1131',now:started,ttlSeconds:3000});
+  await ops.initializeRunState(root,{date,runId:'1131',kind:'recovery',now:started});
+  const ended=new Date('2026-09-01T11:58:00+08:00');
+  await assert.rejects(ops.checkpointRunState(root,date,{runId:'1131',runStatus:'complete',exitReason:'HANDOFF_BOUNDARY',budget:{kind:'handoff',deadlineAt:ended.toISOString(),basis:'next day'},now:ended}),{code:'RECOVERY_INCOMPLETE'});
+  const state=await ops.checkpointRunState(root,date,{runId:'1131',runStatus:'failed',exitReason:'HARD_BLOCKER',now:ended});
+  assert.equal(state.runs[0].status,'failed');
+  assert.equal(state.channels.game.published,false);
+});
+await test('历史原文补核保留真实复核时间并验证原文哈希', async () => {
+  const root=await fixture('historical-source');
+  const sourcePath='artifacts/operations/retained-source.json';
+  const source=Buffer.from('retained source published on 2026-09-01');
+  await writeFile(path.join(root,sourcePath),source);
+  const evidence={id:'one',decision:'accepted',url:'https://example.test/one',checkedAt:'2026-09-02T01:00:00Z',basis:'actual next-day source recheck',facts:{title:'one'},historicalSourceProof:{editionDate:date,sourcePublishedAt:'2026-09-01T01:00:00Z',capturedAt:'2026-09-02T01:00:00Z',sourceUrl:'https://example.test/one',sourcePath,sourceSha256:createHash('sha256').update(source).digest('hex')}};
+  await ops.appendResearchLedger(root,{...entry,candidateEvidence:[evidence]});
+  await ops.assertRetainedSourceEvidence(root,evidence,date);
+  await writeFile(path.join(root,sourcePath),'changed');
+  await assert.rejects(ops.assertRetainedSourceEvidence(root,evidence,date),{code:'EVIDENCE_CHANGED'});
 });
 await test('并发写入串行锁拒绝交错且保留成功记录', async () => {
   const root=await fixture('concurrent');
