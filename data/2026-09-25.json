@@ -1,0 +1,473 @@
+{
+  "date": "2026-09-25",
+  "issue": 35,
+  "cutoff": "2026-09-25 11:51",
+  "dataWindow": "2026-09-24 至 2026-09-25；27日历史补刊，正文与价格采用原期证据，新增核验保留真实补核时间。热度为同源候选内对数归一化参考分（下载60%/关注40%，视频播放60%/点赞25%/评论15%），不代表日增量或官方排名。",
+  "backfilledAt": "2026-09-26T16:55:42.272Z",
+  "sources": [
+    "游民星空",
+    "TapTap",
+    "BBSMC",
+    "MC百科",
+    "哔哩哔哩",
+    "Steam"
+  ],
+  "features": [
+    {
+      "title": "国产开放世界新作《未眠野》曝光18分钟实机",
+      "summary": "开放世界RPG《未眠野》公开18分钟实机演示，展示这款以万物交互为定位的新作。作品由ZEALORY GAMES发行，本次报道聚焦公开演示内容。",
+      "source": "游民星空",
+      "date": "2026-09-24",
+      "url": "https://www.gamersky.com/news/202609/2216867.shtml",
+      "image": "game-brief-assets/2026-09-25-features-01.jpg",
+      "id": "gs-20260924-2216867"
+    },
+    {
+      "title": "《农场物语》社区讨论快照",
+      "summary": "BBSMC 9月24日论坛快照记录273条回复，最近回复距核验约10小时。整合包面向Minecraft 1.20.1 Forge，围绕农耕生活展开。这里呈现社区讨论状态，不将其描述为新版本发布。",
+      "source": "BBSMC",
+      "date": "2026-09-24",
+      "url": "https://bbsmc.net/project/YtS91hhr/forum",
+      "image": "game-brief-assets/2026-09-25-features-02.webp",
+      "id": "20260924-pack-farmingtales-forge"
+    }
+  ],
+  "news": [
+    {
+      "title": "国产开放世界新作《未眠野》曝光18分钟实机",
+      "summary": "ZEALORY GAMES发行的开放世界RPG《未眠野》公开18分钟实机演示，展示这款以万物交互为定位的新作。",
+      "source": "游民星空",
+      "date": "2026-09-24",
+      "url": "https://www.gamersky.com/news/202609/2216867.shtml",
+      "image": "game-brief-assets/2026-09-25-news-01.jpg",
+      "id": "gs-20260924-2216867"
+    },
+    {
+      "title": "《女神异闻录4RE》TGS试玩与制作团队访谈",
+      "summary": "游民星空在TGS试玩《女神异闻录4 REVIVAL》，体验八十稻羽的自由活动与雪子迷宫，并采访制作团队。报道介绍重制后的场景表现和新增的“全力暴打”战斗机制。",
+      "source": "游民星空",
+      "date": "2026-09-25",
+      "url": "https://www.gamersky.com/news/202609/2217137.shtml",
+      "image": "game-brief-assets/2026-09-25-news-02-persona.jpg",
+      "id": "20260927-backfill-25-news-persona4-tgs"
+    },
+    {
+      "title": "《异于天堂》TGS游民试玩&采访：人生五十年",
+      "summary": "游民星空在TGS试玩《异于天堂》并采访制作团队，体验三个不同时代与地点的三场战斗。试玩还开放了部分城市探索、购买补给与餐饮互动。",
+      "source": "游民星空",
+      "date": "2026-09-25",
+      "url": "https://www.gamersky.com/news/202609/2217138.shtml",
+      "image": "game-brief-assets/2026-09-25-news-03.jpg",
+      "id": "gs-20260925-2217138"
+    },
+    {
+      "title": "《GTA6》实体收藏公布！售价约2600元不含游戏本体",
+      "summary": "Rockstar Games公布《GTA6》实体收藏套装The Goodtime State – Vice City Collection，定价400美元，计划11月19日推出。套装不包含游戏本体。",
+      "source": "游民星空",
+      "date": "2026-09-24",
+      "url": "https://www.gamersky.com/news/202609/2217132.shtml",
+      "image": "game-brief-assets/2026-09-25-news-04.png",
+      "id": "gs-20260924-2217132"
+    },
+    {
+      "title": "《羊蹄山之魂》免费更新！顶级大师新曲儿来了",
+      "summary": "《羊蹄山之魂》推出免费音乐更新Watanabe Mode，加入四首由渡边信一郎监制的lofi曲目，面向所有玩家提供此次新增内容。",
+      "source": "游民星空",
+      "date": "2026-09-24",
+      "url": "https://www.gamersky.com/news/202609/2217101.shtml",
+      "image": "game-brief-assets/2026-09-25-news-05.jpg",
+      "id": "gs-20260924-2217101"
+    },
+    {
+      "title": "《剑星》被骂后听劝了！不必强制帧生成 NS2加入开关",
+      "summary": "《剑星 完整版》开发团队表示，Nintendo Switch 2版发售时将提供帧生成开关，让玩家自行选择是否启用。该版本计划11月6日推出。",
+      "source": "游民星空",
+      "date": "2026-09-24",
+      "url": "https://www.gamersky.com/news/202609/2216789.shtml",
+      "image": "game-brief-assets/2026-09-25-news-06.png",
+      "id": "gs-20260924-2216789"
+    },
+    {
+      "title": "《控制：共振》Steam版正式解锁",
+      "summary": "Remedy的《控制：共振》Steam版已于9月24日解锁。作品以Dylan Faden为主角，采用近战动作角色扮演玩法。",
+      "source": "游民星空",
+      "date": "2026-09-24",
+      "url": "https://www.gamersky.com/news/202609/2216656.shtml",
+      "image": "game-brief-assets/2026-09-25-news-07.webp",
+      "id": "gs-20260924-2216656"
+    },
+    {
+      "title": "过秦关，谁敢闯！永劫无间×《秦时明月》×《天行九歌》联动定档，10月9日正式开启！",
+      "summary": "《永劫无间》官方宣布，与《秦时明月》《天行九歌》的联动将于10月9日开启，带来残月谷秦兵列阵玩法、魂玉百步飞剑，以及五位侠客和三把名刃。",
+      "source": "哔哩哔哩",
+      "date": "2026-09-24",
+      "url": "https://www.bilibili.com/video/BV1txaN6kEb1/",
+      "image": "game-brief-assets/2026-09-25-news-08.jpg",
+      "id": "bili-yj-20260924-bv1txaN6kEb1"
+    },
+    {
+      "title": "全新Boss「奈茵」登场！《苍翼：混沌效应》大型免费更新现已上线",
+      "summary": "《苍翼：混沌效应》官方称秋季大型免费更新已全平台上线，加入遗迹关卡，以及奈茵、失落巨械两位高阶敌人，玩家可体验敌人的全新招式。",
+      "source": "TapTap",
+      "date": "2026-09-24",
+      "url": "https://www.taptap.cn/moment/852120849111584090",
+      "image": "game-brief-assets/2026-09-25-news-09.jpg",
+      "id": "taptap-cxhy-20260925-naien-update"
+    },
+    {
+      "title": "《寂静岭：小镇陷落》宣布开发PC性能补丁",
+      "summary": "《寂静岭：小镇陷落》团队宣布，正在开发针对Steam与Epic平台PC版本性能问题的更新补丁。具体上线时间尚未确认，后续将通过官方渠道公布。",
+      "source": "游民星空",
+      "date": "2026-09-24",
+      "url": "https://www.gamersky.com/news/202609/2216207.shtml",
+      "image": "game-brief-assets/2026-09-25-news-10-silent-hill.jpg",
+      "id": "20260927-backfill-25-news-silent-hill-patch"
+    }
+  ],
+  "packs": [
+    {
+      "name": "香草纪元：食旅纪行",
+      "summary": "结合农夫乐事全附属、烹饪养老与异界冒险的380余模组整合包",
+      "category": "整合包",
+      "source": "BBSMC",
+      "url": "https://bbsmc.net/modpack/vefc",
+      "image": "game-brief-assets/2026-09-25-packs-01.webp",
+      "heat": 98,
+      "heatEvidenceAt": "2026-09-25",
+      "heatSignals": "cumulativeDownloads=118.7万（2026-09-25；https://bbsmc.net/）；followers=1385（2026-09-25；https://bbsmc.net/）",
+      "id": "20260925-pack-vefc"
+    },
+    {
+      "name": "猎杀：历史 1949 - Hunt: History 1949",
+      "summary": "历史题材PVE搜打撤、枪械成长与Boss攻坚",
+      "category": "整合包",
+      "source": "BBSMC",
+      "url": "https://bbsmc.net/modpack/mc-1949",
+      "image": "game-brief-assets/2026-09-25-packs-02.png",
+      "heat": 65,
+      "heatEvidenceAt": "2026-09-24",
+      "heatSignals": "cumulativeDownloads=2.6万（2026-09-24；https://bbsmc.net/modpacks）；followers=59（2026-09-24；https://bbsmc.net/modpacks）",
+      "id": "20260924-pack-hunt-history-1949"
+    },
+    {
+      "name": "农场物语 - FarmingTales Forge",
+      "summary": "仿星露谷风格的多人整合包",
+      "category": "整合包",
+      "source": "BBSMC",
+      "url": "https://bbsmc.net/modpack/ft-wt",
+      "image": "game-brief-assets/2026-09-25-packs-03.webp",
+      "heat": 92,
+      "heatEvidenceAt": "2026-09-24",
+      "heatSignals": "cumulativeDownloads=56.2万（2026-09-24；https://bbsmc.net/modpacks）；followers=870（2026-09-24；https://bbsmc.net/modpacks）",
+      "id": "20260924-pack-farmingtales-forge"
+    },
+    {
+      "name": "逆转未来",
+      "summary": "把枪械、史诗战斗和铁魔法结合到锚点冒险中的整合包",
+      "category": "整合包",
+      "source": "BBSMC",
+      "url": "https://bbsmc.net/modpack/bff",
+      "image": "game-brief-assets/2026-09-25-packs-04.webp",
+      "heat": 92,
+      "heatEvidenceAt": "2026-09-25",
+      "heatSignals": "cumulativeDownloads=81.6万（2026-09-25；https://bbsmc.net/）；followers=628（2026-09-25；https://bbsmc.net/）",
+      "id": "20260925-pack-reverse-future"
+    },
+    {
+      "name": "愚者 - The Fool",
+      "summary": "围绕变身、遗物与原创Boss构建的冒险战斗整合包",
+      "category": "整合包",
+      "source": "BBSMC",
+      "url": "https://bbsmc.net/modpack/the-fool",
+      "image": "game-brief-assets/2026-09-25-packs-05.webp",
+      "heat": 100,
+      "heatEvidenceAt": "2026-09-25",
+      "heatSignals": "cumulativeDownloads=164.4万（2026-09-25；https://bbsmc.net/）；followers=1669（2026-09-25；https://bbsmc.net/）",
+      "id": "20260925-pack-the-fool"
+    },
+    {
+      "name": "亡者世界 - Deceasedcraft",
+      "summary": "现代城市僵尸末日搜刮生存",
+      "category": "整合包",
+      "source": "BBSMC",
+      "url": "https://bbsmc.net/modpack/deceasedcraft",
+      "image": "game-brief-assets/2026-09-25-packs-06.webp",
+      "heat": 88,
+      "heatEvidenceAt": "2026-09-24",
+      "heatSignals": "cumulativeDownloads=32.5万（2026-09-24；https://bbsmc.net/modpacks）；followers=612（2026-09-24；https://bbsmc.net/modpacks）",
+      "id": "20260924-pack-deceasedcraft"
+    },
+    {
+      "name": "涅槃",
+      "summary": "以禁忌镰刀、奥法与神明挑战为主题的冒险整合包，作者通过发布视频介绍玩法，并提供整合包下载入口。",
+      "category": "社区整合包",
+      "source": "哔哩哔哩",
+      "url": "https://www.bilibili.com/video/BV11Cht6vECK/",
+      "image": "game-brief-assets/2026-09-25-packs-07.jpg",
+      "heat": 100,
+      "heatEvidenceAt": "2026-09-24",
+      "heatSignals": "播放2930、点赞175、评论15（2026-09-24页面累计快照；https://www.bilibili.com/video/BV11Cht6vECK/）",
+      "id": "20260924-pack-nirvana"
+    },
+    {
+      "name": "XPlus 26.3基础整合",
+      "summary": "面向Minecraft 26.3的基础生电优化整合包，视频介绍本次更新，并提供XPlus下载站与国内下载入口。",
+      "category": "社区整合包",
+      "source": "哔哩哔哩",
+      "url": "https://www.bilibili.com/video/BV1zXht6bEfb/",
+      "image": "game-brief-assets/2026-09-25-packs-08.jpg",
+      "heat": 90,
+      "heatEvidenceAt": "2026-09-24",
+      "heatSignals": "播放1674、点赞81、评论9（2026-09-24页面累计快照；https://www.bilibili.com/video/BV1zXht6bEfb/）",
+      "id": "20260924-pack-xplus-263"
+    },
+    {
+      "name": "千年村庄：异域访古纪",
+      "summary": "围绕千年村庄主题展开的整合包分享，视频介绍《异域访古纪》；展示版本为Minecraft 1.21.1的NeoForge测试版。",
+      "category": "社区整合包",
+      "source": "哔哩哔哩",
+      "url": "https://www.bilibili.com/video/BV1MZh46TEaY/",
+      "image": "game-brief-assets/2026-09-25-packs-09.jpg",
+      "heat": 88,
+      "heatEvidenceAt": "2026-09-24",
+      "heatSignals": "播放1488、点赞71、评论9（2026-09-24页面累计快照；https://www.bilibili.com/video/BV1MZh46TEaY/）",
+      "id": "20260924-pack-millennaire"
+    },
+    {
+      "name": "涟漪之篇[As Written By Whom]",
+      "summary": "以BOSS挑战与收集饰品为主的整合包",
+      "category": "整合包",
+      "source": "BBSMC",
+      "url": "https://bbsmc.net/modpack/as-written-by-whom",
+      "image": "game-brief-assets/2026-09-25-packs-10.webp",
+      "heat": 77,
+      "heatEvidenceAt": "2026-09-25",
+      "heatSignals": "cumulativeDownloads=9.3万（2026-09-25；https://bbsmc.net/modpacks）；followers=201（2026-09-25；https://bbsmc.net/modpacks）",
+      "id": "20260925-pack-as-written-by-whom"
+    }
+  ],
+  "mods": [
+    {
+      "name": "[AS] 星辉魔法 (Astral Sorcery)",
+      "summary": "以星能、星座与研究推进的魔法模组；该版本为首个 1.21.1 Alpha，作者说明内容不完整并主要用于机制与兼容性测试。",
+      "version": "2.0.0.3 Alpha / MC 1.21.1",
+      "loader": "NeoForge",
+      "date": "2026-09-24",
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/class/version/639.html?jump=50526",
+      "id": "20260925-mod-astral-sorcery-20003"
+    },
+    {
+      "name": "[MekMM] 通用机械：更多机器",
+      "summary": "为通用机械加入种植机、复制机，以及化学设备的工厂版本。",
+      "version": "1.21.1-1.4.2 SNAPSHOT / MC 1.21.1",
+      "loader": "NeoForge",
+      "date": "2026-09-17",
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/class/20094.html",
+      "id": "20260925-mod-mekmm-142"
+    },
+    {
+      "name": "我的城市 (CityMod)",
+      "summary": "现代城市装饰模组；2.2.0 加入工位、电脑桌、柱子与太阳能热水器，并调整模型和部分方块渲染。",
+      "version": "2.2.0 / MC 1.20.1",
+      "loader": "Forge / NeoForge",
+      "date": "2026-09-04",
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/class/version/14045.html?jump=48835",
+      "id": "20260925-mod-citymod-220"
+    },
+    {
+      "name": "[TiC3] 匠魂3 (Tinkers' Construct 3)",
+      "summary": "工具制作与材料强化模组；本次更新改善不可破坏工具掉落、染色盔甲与多项工具和手册细节。",
+      "version": "3.12.0.220 / MC 1.20.1",
+      "loader": "Forge",
+      "date": "2026-09-05",
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/class/version/3725.html?jump=32898",
+      "id": "20260925-mod-tinkers-3120220"
+    },
+    {
+      "name": "Connectivity",
+      "summary": "修复Minecraft连接问题的服务端实用模组；7.7修正畸形流量跟踪器可能拦截本机流量的问题。",
+      "version": "7.7 / MC 1.20.1",
+      "loader": "Forge / NeoForge",
+      "date": "2026-09-23",
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/class/6761.html",
+      "id": "20260925-mod-connectivity-77"
+    },
+    {
+      "name": "Tectonic",
+      "summary": "大幅调整主世界地形生成，带来绵延山脉、地下河流与峡谷；模组版支持客户端可选、服务端安装。",
+      "version": "3.0.29 / MC 26.3",
+      "loader": "NeoForge / Fabric",
+      "date": "2026-09-21",
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/class/8005.html",
+      "id": "20260925-mod-tectonic-3029"
+    }
+  ],
+  "trends": [
+    "国产新作与重制试玩并行：《未眠野》公布18分钟实机，《异于天堂》展示跨时代战斗与探索；这些是本期已披露内容，不代表销量结论。",
+    "农耕玩法持续有社区讨论：《农场物语》24日论坛快照为273条回复，最近回复距观察约10小时；累计讨论量不能当成当日新增下载。",
+    "测试分支需区分：星辉魔法1.21.1为Alpha，更多机器1.4.2仍标为Snapshot，版本和加载器应按具体文件核对。",
+    "Steam国区折扣跨度明显：本期原始记录中《看门狗2》优惠95%，《女神异闻录5皇家版》优惠70%；价格与截止逐项核验，史低标签另有历史依据。"
+  ],
+  "deals": [
+    {
+      "id": "447040",
+      "name": "Watch_Dogs® 2",
+      "discount": "-95%",
+      "original": "¥298.00",
+      "price": "¥14.90",
+      "label": "平史低",
+      "ends": "截至 10-01",
+      "image": "game-brief-assets/2026-09-25-steam-447040.jpg",
+      "url": "https://store.steampowered.com/app/447040/Watch_Dogs_2/?cc=cn&l=schinese"
+    },
+    {
+      "id": "2221490",
+      "name": "全境封锁2",
+      "discount": "-90%",
+      "original": "¥128.00",
+      "price": "¥12.80",
+      "label": "平史低",
+      "ends": "截至 10-01",
+      "image": "game-brief-assets/2026-09-25-steam-2221490.jpg",
+      "url": "https://store.steampowered.com/app/2221490/"
+    },
+    {
+      "id": "2290180",
+      "name": "极限国度",
+      "discount": "-90%",
+      "original": "¥168.00",
+      "price": "¥16.80",
+      "label": "今日特惠",
+      "ends": "截至 09-30",
+      "image": "game-brief-assets/2026-09-25-steam-2290180.jpg",
+      "url": "https://store.steampowered.com/app/2290180/"
+    },
+    {
+      "id": "812140",
+      "name": "Assassin's Creed® Odyssey",
+      "discount": "-80%",
+      "original": "¥248.00",
+      "price": "¥49.60",
+      "label": "今日特惠",
+      "ends": "截至 09-30",
+      "image": "game-brief-assets/2026-09-25-steam-812140.jpg",
+      "url": "https://store.steampowered.com/app/812140/"
+    },
+    {
+      "id": "2161700",
+      "name": "女神异闻录３ Reload",
+      "discount": "-70%",
+      "original": "¥268.00",
+      "price": "¥80.40",
+      "label": "今日特惠",
+      "ends": "截至 09-30",
+      "image": "game-brief-assets/2026-09-25-steam-2161700.jpg",
+      "url": "https://store.steampowered.com/app/2161700/"
+    },
+    {
+      "id": "1687950",
+      "name": "女神异闻录5皇家版",
+      "discount": "-70%",
+      "original": "¥268.00",
+      "price": "¥80.40",
+      "label": "今日特惠",
+      "ends": "截至 10-01",
+      "image": "game-brief-assets/2026-09-25-steam-1687950.jpg",
+      "url": "https://store.steampowered.com/app/1687950/"
+    },
+    {
+      "id": "3159330",
+      "name": "刺客信条：影",
+      "discount": "-60%",
+      "original": "¥298.00",
+      "price": "¥119.20",
+      "label": "今日特惠",
+      "ends": "截至 09-30",
+      "image": "game-brief-assets/2026-09-25-steam-3159330.jpg",
+      "url": "https://store.steampowered.com/app/3159330/"
+    },
+    {
+      "id": "4209920",
+      "name": "不问凡尘",
+      "discount": "-33%",
+      "original": "¥29.70",
+      "price": "¥19.89",
+      "label": "今日特惠",
+      "ends": "截至 10-06",
+      "image": "game-brief-assets/2026-09-25-steam-4209920.jpg",
+      "url": "https://store.steampowered.com/app/4209920/"
+    },
+    {
+      "id": "5019920",
+      "name": "动物厨房 Tasty Chef",
+      "discount": "-33%",
+      "original": "¥55.00",
+      "price": "¥36.85",
+      "label": "今日特惠",
+      "ends": "截至 10-06",
+      "image": "game-brief-assets/2026-09-25-steam-5019920.jpg",
+      "url": "https://store.steampowered.com/app/5019920/"
+    },
+    {
+      "id": "3319700",
+      "name": "新世界：暗影成双",
+      "discount": "-19%",
+      "original": "¥36.80",
+      "price": "¥29.80",
+      "label": "今日特惠",
+      "ends": "截至 10-05",
+      "image": "game-brief-assets/2026-09-25-steam-3319700.jpg",
+      "url": "https://store.steampowered.com/app/3319700/"
+    },
+    {
+      "id": "4259190",
+      "name": "王国保卫战 6：新启程",
+      "discount": "-10%",
+      "original": "¥77.00",
+      "price": "¥69.30",
+      "label": "今日特惠",
+      "ends": "截至 10-07",
+      "image": "game-brief-assets/2026-09-25-steam-4259190.jpg",
+      "url": "https://store.steampowered.com/app/4259190/"
+    },
+    {
+      "id": "3804370",
+      "name": "黎明门前的吹笛人",
+      "discount": "-10%",
+      "original": "¥42.00",
+      "price": "¥37.80",
+      "label": "今日特惠",
+      "ends": "截至 10-05",
+      "image": "game-brief-assets/2026-09-25-steam-3804370.jpg",
+      "url": "https://store.steampowered.com/app/3804370/"
+    },
+    {
+      "id": "3020510",
+      "name": "英雄立志传：三国志",
+      "discount": "-10%",
+      "original": "¥68.00",
+      "price": "¥61.20",
+      "label": "今日特惠",
+      "ends": "截至 09-25",
+      "image": "game-brief-assets/2026-09-25-steam-3020510.jpg",
+      "url": "https://store.steampowered.com/app/3020510/"
+    },
+    {
+      "id": "3751950",
+      "name": "刺客信条：黑旗 记忆重置",
+      "discount": "-10%",
+      "original": "¥248.00",
+      "price": "¥223.20",
+      "label": "今日特惠",
+      "ends": "截至 09-30",
+      "image": "game-brief-assets/2026-09-25-steam-3751950.jpg",
+      "url": "https://store.steampowered.com/app/3751950/"
+    }
+  ]
+}

@@ -27,7 +27,7 @@
 
    `node scripts/daily-run-state.mjs init --date=YYYY-MM-DD --run-id=HHMM --kind=main --minsheng-issue=N --game-issue=N`
 
-   发布补跑使用 `--kind=recovery`。仅首次创建状态确需两个 issue 时，分别读取双索引 editions 的 date/issue/file/publishAt 必要字段：无当天归档用最大期号 + 1，已有当天归档沿用当天期号。已有状态时 init 不补写 issue，省略两个参数；发现已有 issue 为空或与归档冲突须诊断，不能靠重跑 init 覆盖。
+   发布补跑使用 `--kind=recovery`。仅首次创建状态确需两个 issue 时，分别读取双索引 editions 的 date/issue/file/publishAt 必要字段：无当天归档用最大期号 + 1，已有当天归档沿用当天期号。已有状态时 init 不补写 issue，省略两个参数；发现已有 issue 为空或与归档冲突须诊断，不能靠重跑 init 覆盖。历史补刊占用已初始化的下一期期号时，持租约调用 `daily-operations.mjs` 的 `correctUnpublishedIssue(root, {date, runId, channel, issue})`；仅无候选、无就绪证明、未归档的频道可改为正式索引最大期号加一，冻结记录保持原样。
 4. 先用 `node scripts/daily-run-state.mjs status --date=YYYY-MM-DD --channel=game` 只读查询本频道（民生用 minsheng；省略 channel 保留双频道返回），再在持租约时执行 `node scripts/daily-run-state.mjs reconcile --date=YYYY-MM-DD --channel=game --run-id=HHMM`。status 返回 `apiVersion=state-evidence/v1`、研究、stored 标签、readiness、archive、online、publication、原因及租约摘要，不隐式 init/reconcile/取租约。reconcile 依据文件、内容门禁及哈希恢复；冲突返回 `ok=false, code=STATE_CONFLICT` 且不改原状态，不能盲目重写历史。单频道 reconcile 保留另一频道字段，仅重算共享 stage。
 5. 按状态阅读本手册所需章节和本频道模板，不预先全文读取两个模板、两个来源集合或两套七期正文。同一轮已读且未变化的资料复用；重新读取因实际改动、发现冲突或进入未读阶段触发。
 
@@ -164,6 +164,8 @@ Steam 优惠的确定性发现面是 Steam 官方 Specials 默认相关性首个
 ## 候选、渲染与频道就绪
 
 最近七期去重以 `archive-consistency.mjs` 的逐栏目限额为准；整合包出现过不等于一律撤销。历史补刊保留原期观察窗口和真实 `backfilledAt`，民生 `productionTime` 必须与真实补刊时间一致，正文明确标示补刊。历史原文补核不得改写 checkedAt；使用 historicalSourceProof 保留原文发表时间、实际抓取时间、operations 内原始响应路径与 SHA-256，并在完整性门禁重新核对原始文件。
+
+游戏历史焦点、整合包与趋势可使用 `retainedResearchProof` 恢复本期或前一天的真实研究响应；绑定频道、栏目、观察时间、实际复核时间与原始文件哈希，整合包热度日期必须匹配观察日。Mod 原文补核沿用模板允许的 30 天回退，其他栏目不因此扩展窗口。Steam 历史交叉复核的原始响应须另以 `crosscheckPath/crosscheckSha256` 绑定；当前页面不能替代原期冻结发现面或原期国区价格记录。
 
 对每个未发布频道独立执行，已有文件先验证再复用；完整性诊断可在任何阶段运行，成品和发布必须通过所有对应硬门禁。
 

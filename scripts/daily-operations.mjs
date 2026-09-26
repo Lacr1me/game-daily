@@ -341,7 +341,7 @@ async function appendResearchLedgerUnlocked(root, rawEntry) {
   if (!Array.isArray(entry.candidateEvidence)) throw operationError('EVIDENCE_INVALID', 'candidateEvidence 必须为数组');
   if (entry.revokedCandidateIds.length && !entry.reasons.length) throw operationError('EVIDENCE_INVALID', '撤销候选必须记录原因');
   if (entry.revokedCandidateIds.some(id => entry.candidateIds.includes(id))) throw operationError('EVIDENCE_INVALID', '同一记录不能接受并撤销同一候选');
-  for (const evidence of entry.candidateEvidence) validateCandidateEvidence(evidence, date);
+  for (const evidence of entry.candidateEvidence) validateCandidateEvidence(evidence, date, entry);
   const { attemptedAt, ...semantic } = entry;
   entry.eventId = rawEntry.eventId || sha256(Buffer.from(JSON.stringify(entry.status === 'unavailable' ? { ...semantic, attemptedAt: rawEntry.attemptedAt || rawEntry.runId } : semantic)));
   const previous = (await readResearchLedger(root, date)).find(item => item.eventId === entry.eventId);
@@ -411,7 +411,9 @@ export async function assertGameDealCoverage(root, date, brief) {
       if (!evidence) throw operationError('STEAM_COVERAGE_INVALID', `冻结 appId ${appId} 缺少接受或淘汰证据`);
       validateCandidateEvidence(evidence, date);
       if (evidence.backfillProof) {
-        for (const [file, expected] of [[evidence.backfillProof.sourcePath, evidence.backfillProof.sourceSha256], [evidence.backfillProof.discoveryPath, evidence.backfillProof.discoverySha256]]) {
+        const files = [[evidence.backfillProof.sourcePath, evidence.backfillProof.sourceSha256], [evidence.backfillProof.discoveryPath, evidence.backfillProof.discoverySha256]];
+        if (evidence.backfillProof.crosscheckPath) files.push([evidence.backfillProof.crosscheckPath, evidence.backfillProof.crosscheckSha256]);
+        for (const [file, expected] of files) {
           const base = path.resolve(root, 'artifacts', 'operations');
           const target = path.resolve(root, file);
           if (!target.startsWith(base + path.sep) || sha256(await readFile(target)) !== expected) {
@@ -468,7 +470,7 @@ export async function researchCompleteness(root, date, channel) {
     const candidateIds = new Set(current.keys());
     const target = CONTENT_CANDIDATE_TARGETS[channel]?.[section] || 0;
     const evidenceCandidateIds = new Set([...current].filter(([, item]) => {
-      try { validateCandidateEvidence(item.evidence, date); return item.evidence.decision === 'accepted'; } catch { return false; }
+      try { validateCandidateEvidence(item.evidence, date, {channel, section}); return item.evidence.decision === 'accepted'; } catch { return false; }
     }).map(([id]) => id));
     const evidenceComplete = candidateIds.size > 0 && evidenceCandidateIds.size === candidateIds.size;
     const candidateCountComplete = candidateIds.size >= target;
@@ -553,14 +555,14 @@ export async function assertResearchComplete(root, date, channel) {
   }
   const entries = (await readResearchLedger(root, date)).filter(entry => entry.channel === channel);
   for (const entry of entries) for (const evidence of entry.candidateEvidence || []) {
-    if (evidence.historicalSourceProof) await assertRetainedSourceEvidence(root, evidence, date);
+    if (evidence.historicalSourceProof || evidence.retainedResearchProof) await assertRetainedSourceEvidence(root, evidence, date, entry);
   }
   return status;
 }
 
-export async function assertRetainedSourceEvidence(root, evidence, date) {
-  validateCandidateEvidence(evidence, date);
-  const proof = evidence.historicalSourceProof;
+export async function assertRetainedSourceEvidence(root, evidence, date, context = {}) {
+  validateCandidateEvidence(evidence, date, context);
+  const proof = evidence.historicalSourceProof || evidence.retainedResearchProof;
   if (!proof) return;
   const base = path.resolve(root, 'artifacts', 'operations');
   const file = path.resolve(root, proof.sourcePath);
@@ -816,7 +818,30 @@ export function createReadyProof(root, options = {}) { return guardedMutation(ro
 export function reconcileRunState(root, date, options = {}) { return guardedMutation(root, date, options, () => reconcileRunStateUnlocked(root, date, options)); }
 export function mergeSourceAudits(root, date, options = {}) { return guardedMutation(root, date, options, () => mergeSourceAuditsUnlocked(root, date)); }
 
-function validateCandidateEvidence(evidence, date) {
+export function correctUnpublishedIssue(root, options) {
+  const {date, channel, issue} = options;
+  return guardedMutation(root, date, options, async () => {
+    requiredChannel(channel);
+    const paths = operationPaths(root, date), state = await readJsonIfExists(paths.state);
+    const current = state?.channels?.[channel];
+    const pending = expectedArtifactPaths(root, date, channel).candidate;
+    const readiness = await readJsonIfExists(paths.readiness);
+    if (!current || current.published || ['ready','publishing','published'].includes(current.status) || readiness?.channels?.[channel] || await readJsonIfExists(pending) || await readJsonIfExists(archiveContentPath(root, date, channel))) {
+      throw operationError('ISSUE_LOCKED', '仅未生成候选或就绪证明、未归档的频道可纠正期号');
+    }
+    const manifest = await readJsonIfExists(path.join(root, 'data', ...(channel === 'minsheng' ? ['minsheng'] : []), 'index.json'));
+    const editions = manifest?.editions;
+    if (!Array.isArray(editions) || editions.some(item => !Number.isInteger(item.issue) || item.issue < 1)) throw operationError('ISSUE_INVALID', '期号纠正需要有效正式索引');
+    const next = Math.max(0, ...editions.map(item => item.issue)) + 1;
+    if (!Number.isInteger(issue) || issue !== next) throw operationError('ISSUE_INVALID', '期号必须是正式索引最大期号加一');
+    const previousIssue = current.issue;current.issue = issue;
+    state.issueCorrections ??= [];
+    state.issueCorrections.push({channel, previousIssue, issue, runId: options.runId, correctedAt: clockNow(options).toISOString(), basis: 'next-issued-index'});
+    state.lastCheckpointAt = clockNow(options).toISOString();await writeJson(paths.state, state);return state;
+  });
+}
+
+function validateCandidateEvidence(evidence, date, context = {}) {
   const checkedAt = Date.parse(evidence?.checkedAt);
   const sameDay = Number.isFinite(checkedAt) && beijingDate(new Date(checkedAt)) === date;
   const proof = evidence?.backfillProof;
@@ -838,9 +863,17 @@ function validateCandidateEvidence(evidence, date) {
     beijingDate(new Date(checkedAt)) > date && retained.editionDate === date &&
     Date.parse(retained.capturedAt) === checkedAt && Number.isFinite(sourcePublishedAt) &&
     sourcePublishedAt <= Date.parse(`${date}T23:59:59+08:00`) &&
-    sourcePublishedAt >= Date.parse(`${date}T00:00:00+08:00`) - 7 * 86400000 &&
+    sourcePublishedAt >= Date.parse(`${date}T00:00:00+08:00`) - (context.channel === 'game' && context.section === 'mods' ? 30 : 7) * 86400000 &&
     retained.sourceUrl === evidence.url && typeof retained.sourcePath === 'string' && /^[a-f0-9]{64}$/.test(retained.sourceSha256);
-  if (!evidence || !String(evidence.id || '').trim() || !['accepted', 'rejected'].includes(evidence.decision) || !isHttps(evidence.url) || !Number.isFinite(checkedAt) || !(sameDay || historical || historicalSource) || !String(evidence.basis || '').trim()) throw operationError('EVIDENCE_INVALID', '逐项证据须包含 id/decision/HTTPS url/同日 checkedAt/basis；历史补证须保留真实复核时间及原始文件哈希');
+  const researchProof = evidence?.retainedResearchProof;
+  const observedAt = Date.parse(researchProof?.sourceObservedAt);
+  const retainedResearch = researchProof && context.channel === 'game' && ['features','packs','trends'].includes(context.section) &&
+    researchProof.channel === context.channel && researchProof.section === context.section && researchProof.editionDate === date &&
+    Number.isFinite(checkedAt) && checkedAt <= Date.now() + 60_000 && beijingDate(new Date(checkedAt)) > date && Date.parse(researchProof.capturedAt) === checkedAt &&
+    Number.isFinite(observedAt) && observedAt >= Date.parse(`${date}T00:00:00+08:00`) - 86400000 && observedAt <= Date.parse(`${date}T23:59:59+08:00`) &&
+    (context.section !== 'packs' || String(evidence.facts?.heatEvidenceAt || '').slice(0,10) === beijingDate(new Date(observedAt))) &&
+    typeof researchProof.sourcePath === 'string' && /^[a-f0-9]{64}$/.test(researchProof.sourceSha256);
+  if (!evidence || !String(evidence.id || '').trim() || !['accepted', 'rejected'].includes(evidence.decision) || !isHttps(evidence.url) || !Number.isFinite(checkedAt) || !(sameDay || historical || historicalSource || retainedResearch) || !String(evidence.basis || '').trim()) throw operationError('EVIDENCE_INVALID', '逐项证据须包含 id/decision/HTTPS url/同日 checkedAt/basis；历史补证须保留真实复核时间及原始文件哈希');
   if (evidence.decision === 'accepted' && (!evidence.facts || typeof evidence.facts !== 'object' || Array.isArray(evidence.facts) || !Object.keys(evidence.facts).length)) throw operationError('EVIDENCE_INVALID', '接受候选须记录 facts；结构通过不代表来源事实已核实');
 }
 function currentCandidates(entries) {

@@ -123,8 +123,40 @@ await test('历史原文补核保留真实复核时间并验证原文哈希', as
   const evidence={id:'one',decision:'accepted',url:'https://example.test/one',checkedAt:'2026-09-02T01:00:00Z',basis:'actual next-day source recheck',facts:{title:'one'},historicalSourceProof:{editionDate:date,sourcePublishedAt:'2026-09-01T01:00:00Z',capturedAt:'2026-09-02T01:00:00Z',sourceUrl:'https://example.test/one',sourcePath,sourceSha256:createHash('sha256').update(source).digest('hex')}};
   await ops.appendResearchLedger(root,{...entry,candidateEvidence:[evidence]});
   await ops.assertRetainedSourceEvidence(root,evidence,date);
+  const mod=structuredClone(evidence);mod.historicalSourceProof.sourcePublishedAt='2026-08-12T10:00:00+08:00';
+  await ops.appendResearchLedger(root,{...entry,channel:'game',section:'mods',sourceId:'china-minecraft-mod-site',candidateEvidence:[mod]});
+  assert.equal((await ops.researchCompleteness(root,date,'game')).sections.mods.evidenceComplete,true);
+  await assert.rejects(ops.appendResearchLedger(root,{...entry,candidateEvidence:[mod]}),{code:'EVIDENCE_INVALID'});
+  mod.historicalSourceProof.sourcePublishedAt='2026-08-01T10:00:00+08:00';
+  await assert.rejects(ops.appendResearchLedger(root,{...entry,channel:'game',section:'mods',sourceId:'china-minecraft-mod-site',candidateEvidence:[mod]}),{code:'EVIDENCE_INVALID'});
   await writeFile(path.join(root,sourcePath),'changed');
   await assert.rejects(ops.assertRetainedSourceEvidence(root,evidence,date),{code:'EVIDENCE_CHANGED'});
+});
+await test('历史游戏复用前日快照限定栏目并绑定原始响应哈希', async () => {
+  const root=await fixture('retained-game');
+  const sourcePath='artifacts/operations/prior-pack-response.json',raw=Buffer.from('original 2026-08-31 snapshot: 200 downloads');
+  await writeFile(path.join(root,sourcePath),raw);
+  const proof={editionDate:date,channel:'game',section:'packs',sourceObservedAt:'2026-08-31T06:00:00+08:00',capturedAt:'2026-09-02T01:00:00Z',sourcePath,sourceSha256:createHash('sha256').update(raw).digest('hex')};
+  const evidence={id:'prior-pack',decision:'accepted',url:'https://example.test/pack',checkedAt:proof.capturedAt,basis:'actual historical recheck of retained previous-day response',facts:{heatEvidenceAt:'2026-08-31',downloads:200},retainedResearchProof:proof};
+  const record={date,runId:'0700',channel:'game',section:'packs',sourceId:'china-minecraft-site',status:'accepted',candidateIds:[evidence.id],availableCount:1,candidateEvidence:[evidence],now};
+  await ops.appendResearchLedger(root,record);
+  assert.equal((await ops.researchCompleteness(root,date,'game')).sections.packs.evidenceComplete,true);
+  await ops.assertRetainedSourceEvidence(root,evidence,date,{channel:'game',section:'packs'});
+  await assert.rejects(ops.appendResearchLedger(root,{...record,section:'deals',sourceId:'steam-cn'}),{code:'EVIDENCE_INVALID'});
+  const stale=structuredClone(evidence);stale.retainedResearchProof.sourceObservedAt='2026-08-30T06:00:00+08:00';
+  await assert.rejects(ops.appendResearchLedger(root,{...record,candidateEvidence:[stale]}),{code:'EVIDENCE_INVALID'});
+  await writeFile(path.join(root,sourcePath),'changed');
+  await assert.rejects(ops.assertRetainedSourceEvidence(root,evidence,date,{channel:'game',section:'packs'}),{code:'EVIDENCE_CHANGED'});
+});
+await test('历史补刊后仅空白未就绪频道可纠正下一期编号', async () => {
+  const root=await fixture('next-issue');await mkdir(path.join(root,'data'),{recursive:true});
+  await writeFile(path.join(root,'data/index.json'),JSON.stringify({editions:[{date:'2026-08-31',issue:5,file:'data/2026-08-31.json'}]}));
+  await assert.rejects(ops.correctUnpublishedIssue(root,{date,runId:'0700',channel:'game',issue:7,now}),{code:'ISSUE_INVALID'});
+  const state=await ops.correctUnpublishedIssue(root,{date,runId:'0700',channel:'game',issue:6,now});assert.equal(state.channels.game.issue,6);
+  await mkdir(path.join(root,'data/.pending'),{recursive:true});await writeFile(path.join(root,`data/.pending/${date}.json`),'{}');
+  await assert.rejects(ops.correctUnpublishedIssue(root,{date,runId:'0700',channel:'game',issue:6,now}),{code:'ISSUE_LOCKED'});
+  const other=await fixture('published-issue'),file=ops.operationPaths(other,date).state,published=JSON.parse(await readFile(file));published.channels.game.published=true;await writeFile(file,JSON.stringify(published));
+  await assert.rejects(ops.correctUnpublishedIssue(other,{date,runId:'0700',channel:'game',issue:6,now}),{code:'ISSUE_LOCKED'});
 });
 await test('并发写入串行锁拒绝交错且保留成功记录', async () => {
   const root=await fixture('concurrent');

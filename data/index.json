@@ -4,6 +4,15 @@
   "publishAt": "11:00",
   "editions": [
     {
+      "date": "2026-09-25",
+      "issue": 35,
+      "publishAt": "2026-09-25T11:00:00+08:00",
+      "backfilledAt": "2026-09-26T16:55:42.272Z",
+      "title": "游戏与 Minecraft 每日简报",
+      "headline": "国产开放世界新作《未眠野》曝光18分钟实机",
+      "file": "data/2026-09-25.json"
+    },
+    {
       "date": "2026-09-24",
       "issue": 33,
       "publishAt": "2026-09-24T11:00:00+08:00",
