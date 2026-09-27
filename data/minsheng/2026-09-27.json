@@ -1,0 +1,458 @@
+{
+  "date": "2026-09-27",
+  "issue": 37,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期日",
+  "lunarDate": "农历丙午年八月十七",
+  "cutoff": "2026-09-27 09:54（北京时间）",
+  "productionTime": "2026-09-27 10:50（北京时间）",
+  "metricsCutoff": "2026-09-27 10:49（北京时间）",
+  "sources": [
+    "中国新闻网",
+    "新华网",
+    "央视网",
+    "央广网",
+    "人民网",
+    "中国日报中文网",
+    "光明网",
+    "China.org.cn",
+    "中国科技网",
+    "Scientific Reports"
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "北京市发展和改革委员会",
+    "国家外汇管理局",
+    "新华网"
+  ],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "kind": "ms27-dom-chinanews-rail-passengers",
+        "title": "铁路预计假期末日发送旅客1300万人次",
+        "summary": "铁路部门预计中秋假期最后一日全国发送旅客1300万人次，计划加开644列；截至当日8时，假期车票累计售出1.43亿张，部分区间客流较集中。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-26 15:31",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-26/10704125.shtml"
+      },
+      {
+        "id": "domestic-02",
+        "kind": "ms27-dom-xinhua-food-safety",
+        "title": "政法机关部署全链条食品安全执法",
+        "summary": "会议要求围绕肉制品、校园食品、保健食品、蔬果等重点品类，以及生产、网售、餐饮和进口环节开展全链条执法，并推进食品安全法修订以覆盖新业态。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-26 11:30",
+        "url": "https://www2.xinhuanet.com/politics/20260926/a5f1515e244b49d99db034855d7a83d3/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "kind": "ms27-dom-cctv-midautumn-traffic-culture",
+        "title": "中秋假期多地铁路文旅客流增加",
+        "summary": "中秋假期多地铁路和文旅客流增加：成都车站25日发送58.9万人次、26日预计40万人次；山西晋祠首日接待1.6万人次，陕西举办文化活动1120场。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-26 10:21",
+        "url": "https://news.cctv.com/2026/09/26/ARTI5xhBZNikzJJVmWcCvT3y260926.shtml"
+      },
+      {
+        "id": "domestic-04",
+        "kind": "ms27-dom-prov-hunan-tourism",
+        "title": "湖南中秋假期首日接待游客904万人次",
+        "summary": "湖南中秋假期首日接待游客904.22万人次，其中外省游客96.51万人次、占10.67%；纳入监测的1004家文旅单位接待70.49万人次，数据由手机信令建模统计。",
+        "source": "省级党媒／政府新闻发布平台",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-26 07:13",
+        "url": "https://www.hunan.gov.cn/hnszf/hnyw/zwdt/202609/t20260926_34072601.html"
+      },
+      {
+        "id": "domestic-05",
+        "kind": "ms27-dom-people-market-entities",
+        "title": "1至8月全国新设经营主体1550.2万户",
+        "summary": "市场监管总局介绍，1至8月全国新设经营主体1550.2万户；截至8月底，登记在册的“四新经济”企业2930.1万户，同比增长5.4%，均为发布会披露数据。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-26",
+        "url": "https://paper.people.com.cn/rmrbhwb/pc/content/202609/26/content_30183162.html"
+      },
+      {
+        "id": "domestic-06",
+        "kind": "ms27-dom-xinhua-rail-openings",
+        "title": "四条高铁线路计划9月28日集中开通",
+        "summary": "国铁集团称，京港高铁雄商段、西渝高铁西安至安康段等四条线路已完成联调联试、检测验收和安全评估，计划9月28日集中开通。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 18:06",
+        "url": "https://www.news.cn/politics/20260925/15aced6c226349938d3ec86821ddafa4/c.html"
+      },
+      {
+        "id": "domestic-07",
+        "kind": "ms27-dom-chinadaily-holiday-transport-safety",
+        "title": "多部门部署双节跨区域出行保障",
+        "summary": "多部门部署双节跨区域出行保障，预计中秋、国庆跨区域流动分别达6.5亿和21.3亿人次；高速服务区加强新能源车充电保障，民航计划加开航班3768班。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 17:10",
+        "url": "https://cn.chinadaily.com.cn/a/202609/25/WS6ab63d38e4b09a165c78cbc8.html"
+      },
+      {
+        "id": "domestic-08",
+        "kind": "ms27-dom-cnr-shandong-consumption",
+        "title": "山东16市推出近2000场促消费活动",
+        "summary": "山东16市安排近2000场促消费活动，配套以旧换新、购车、家政、文旅和养老服务优惠；报道列出近百亿元以旧换新资金及超过5.68亿元促销优惠等阶段数据。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 11:44",
+        "url": "https://news.cnr.cn/native/gd/20260925/t20260925_527825060.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "kind": "ms27-dom-chinaorg-school-health-practice",
+        "title": "教育部提出中小学“2115”要求",
+        "summary": "教育部提出中小学“2115”要求：每天综合体育活动不少于2小时、每天一节体育课并落实课间15分钟；还将推动每周至少半天校外实践，完善交通、餐饮和住宿安全预案。",
+        "source": "中国网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 16:35",
+        "url": "https://news.china.com.cn/2026-09/23/content_118709669.html"
+      },
+      {
+        "id": "domestic-10",
+        "kind": "ms27-dom-gmw-vocational-workworld",
+        "title": "上海世界技能大赛聚焦职业教育与岗位变化",
+        "summary": "第48届世界技能大赛在上海举行，项目包括云计算、工业4.0、网络安全和软件测试。报道讨论职业教育持续跟踪岗位技能变化，并提出AI辅助分析、最终判断仍由教育工作者承担。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 03:55",
+        "url": "https://news.gmw.cn/2026-09/23/content_39015572.htm"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "kind": "ms27-int-chinadaily-malaysia-midautumn",
+        "title": "马来西亚雪兰莪举行中秋文化交流活动",
+        "summary": "马来西亚雪兰莪举行中秋文化交流活动，近200位马中嘉宾参与；中国驻马使馆及马方旅游、艺术与文化部支持，现场安排灯谜、舞蹈和传统体验。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-26 19:52",
+        "url": "https://cn.chinadaily.com.cn/a/202609/26/WS6ab7b209e4b09a165c78ccf9.html"
+      },
+      {
+        "id": "international-02",
+        "kind": "ms27-int-xinhua-hormuz-seven-day-plan",
+        "title": "伊朗称已向美方转达霍尔木兹海峡复航方案",
+        "summary": "伊朗外长称，已由卡塔尔向美国转达重开霍尔木兹海峡方案；若美方落实既有谅解备忘录承诺，海峡可在七日内复航并开启谈判，时限以美方接受方案为起点。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-26 07:21",
+        "url": "https://www.news.cn/world/20260926/8ea53a98d5384944841c897ca087a09a/c.html"
+      },
+      {
+        "id": "international-03",
+        "kind": "ms27-int-gmw-worldskills-conference",
+        "title": "世界技能大会政策对话讨论AI与技能发展",
+        "summary": "世界技能大会政策对话讨论AI与技能发展、产教融合及国际标准互认；上海发布境外职业技能比照认定目录，涉及3国7家国际认证机构的16张证书。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-26 04:50",
+        "url": "https://news.gmw.cn/2026-09/26/content_39020950.htm"
+      },
+      {
+        "id": "international-04",
+        "kind": "ms27-int-cctv-pakistan-saudi-turkiye",
+        "title": "巴基斯坦、沙特和土耳其外长讨论防务协议",
+        "summary": "巴基斯坦、沙特和土耳其外长在纽约会晤，讨论《麦加共同防务协议》的执行安排，并谴责针对沙特民用和经济设施的袭击；报道未采用有争议的伤亡数字。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-26 04:25",
+        "url": "https://news.cctv.com/2026/09/26/ARTIgYzavS0W49yXRGHGt24P260926.shtml"
+      },
+      {
+        "id": "international-05",
+        "kind": "ms27-int-chinanews-caspian-accident",
+        "title": "哈萨克斯坦通报里海军演事故14人遇难",
+        "summary": "哈萨克斯坦通报，里海军演事故搜救工作结束，共14人遇难；事故原因调查仍在进行。伤亡数字采用哈方公布口径，报道没有把仍在调查的事故原因提前归因。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 18:49",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-25/10703804.shtml"
+      },
+      {
+        "id": "international-06",
+        "kind": "ms27-int-xinhua-un-netanyahu",
+        "title": "内塔尼亚胡联大发言引发代表离场与抗议",
+        "summary": "以色列总理内塔尼亚胡在联合国大会一般性辩论发言，多国代表离场，场内外抗议引发对立；报道与联合国会议日程及Reuters同期报道交叉核对，未采用争议逮捕人数。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 15:27",
+        "url": "https://www.xinhuanet.com/20260925/3b6c44d0da294174b3631687f3b6c3eb/c.html"
+      },
+      {
+        "id": "international-07",
+        "kind": "ms27-int-cctv-indonesia-ferry-casualty",
+        "title": "印尼客轮倾覆事故造成42人遇难、93人失联",
+        "summary": "印尼搜救部门称，爪哇海客轮倾覆事故已致42人遇难、93人失联、108人获救。客轮从泗水驶往马辰，12日出发后遇恶劣天气失联，打捞前须先排油。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 06:43",
+        "url": "https://news.cctv.com/2026/09/25/ARTI5QUOWYfwb3068GQOmthj260925.shtml"
+      },
+      {
+        "id": "international-08",
+        "kind": "ms27-int-xinhua-panda-cooperation",
+        "title": "两只大熊猫将赴美开展十年保护研究",
+        "summary": "中国野生动物保护协会与亚特兰大动物园去年签署合作协议，成都繁育基地的大熊猫“平平”“福双”将赴美开展十年保护研究，合作涉及疾病防治、科研和野外种群保护。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 02:07",
+        "url": "https://www.news.cn/world/20260925/b3494e7f252f422ba44d70e41c683597/c.html"
+      },
+      {
+        "id": "international-09",
+        "kind": "ms27-int-cnr-global-development-five-years",
+        "title": "全球发展倡议五年开展2000多个合作项目",
+        "summary": "央广网梳理全球发展倡议提出五年来的合作进展：与各方开展2000多个合作项目、培训超过20万人并惠及120多个国家；报道发布时有130多个国家和国际组织参与支持。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 09:34",
+        "url": "https://news.cnr.cn/native/gd/sz/20260921/t20260921_527820026.shtml"
+      },
+      {
+        "id": "international-10",
+        "kind": "ms27-int-chinaorg-imf-economic-risks",
+        "title": "IMF总裁提示通胀、债务和AI投资风险",
+        "summary": "IMF总裁在卡塔尔经济论坛特别场次提示，持续通胀和债务偿付成本上升构成风险，同时需关注人工智能投资中的杠杆与循环融资；IMF新一期世界经济预测计划10月发布。",
+        "source": "China.org.cn",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-21",
+        "url": "https://www.china.org.cn/2026-09/21/content_118705789.shtml"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "kind": "ms27-tech-cnr-cr450-berlin",
+        "title": "CR450模拟驾驶舱亮相柏林轨道交通展",
+        "summary": "复兴号CR450模拟驾驶舱在柏林第15届国际轨道交通技术展亮相；展会设置“人工智能+铁路装备”展示区，本届展会有59国3170家企业参展，其中中国企业200家。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-26 10:35",
+        "url": "https://news.cnr.cn/native/gd/20260926/t20260926_527825884.shtml"
+      },
+      {
+        "id": "tech-02",
+        "kind": "ms27-tech-nature-xinjiang-gust-forecast",
+        "title": "新疆气象团队用机器学习校正阵风预报",
+        "summary": "Scientific Reports评估新疆团队用机器学习校正ECMWF阵风预报；样本中部分站点均方根误差最高下降51.8%，16级阵风准确率最高77.8%，结果限于研究站点。",
+        "source": "Scientific Reports",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-26",
+        "url": "https://www.nature.com/articles/s41598-026-70794-x"
+      },
+      {
+        "id": "tech-03",
+        "kind": "ms27-tech-stdaily-polar-cod",
+        "title": "北冰洋考察队在高纬冰区发现极鳕幼鱼",
+        "summary": "中国第16次北冰洋考察队在加拿大海盆北纬86度以北密集冰区发现5尾1至2年生极鳕幼鱼，冰下影像记录到其活动；考察队称该区域可能支撑极鳕种群，后续仍将研究。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 20:05",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/25/content_588308.html"
+      },
+      {
+        "id": "tech-04",
+        "kind": "ms27-tech-cctv-fast-ten-years",
+        "title": "FAST完成十周年全域检修并重启观测",
+        "summary": "FAST完成建成十周年以来首次全域检修并重启观测；其二期试验阵列的一台40米望远镜进入建设节点。报道介绍FAST快速响应观测能力及团队对重复快速射电暴的长期监测。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 19:19",
+        "url": "https://news.cctv.com/2026/09/25/ARTIqst6kTxmVEz1Rwjo7viJ260925.shtml"
+      },
+      {
+        "id": "tech-05",
+        "kind": "ms27-tech-chinanews-tbm-yuexi",
+        "title": "双护盾TBM“越喜号”完成总装调试",
+        "summary": "全球同类型最大直径双护盾TBM“越喜号”在成都完成总装调试并下线，将用于国内在建最长高速公路隧道越喜隧道；设备针对复杂地质条件定制，工程仍在建设中。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 20:12",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-24/10703316.shtml"
+      },
+      {
+        "id": "tech-06",
+        "kind": "ms27-tech-stdaily-tiangguan-lhaaso",
+        "title": "“天关”与“拉索”数据揭示脉冲星风云尾迹",
+        "summary": "“天关”卫星约7万秒观测与“拉索”1900多天数据联合分析，显示距地约4600光年的脉冲星风云尾迹约42光年；研究称同一批高能电子可解释X射线和伽马射线。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-22 07:13",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/22/content_585016.html"
+      },
+      {
+        "id": "tech-07",
+        "kind": "ms27-tech-people-underground-navigation",
+        "title": "地下大空间定位导航技术通过科技部验收",
+        "summary": "科技部已验收地下大空间高精度定位导航与控制技术，成果由中国电科团队牵头；系统测试可容纳69894个定位节点、同时定位容量超过23675个，并已在雄安地下空间及特大型煤矿验证。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 16:22",
+        "url": "https://finance.people.com.cn/n1/2026/0921/c1004-40802925.html"
+      },
+      {
+        "id": "tech-08",
+        "kind": "ms27-tech-gmw-yujingia-fossil",
+        "title": "澄江生物群发现5.18亿年前软体化石",
+        "summary": "西北大学团队等在云南澄江生物群发现5.18亿年前胶膜玉净虫，4件软躯体标本保留羽状附肢；系统发育分析将其列为接近现生步带动物共同祖先的干群化石。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-21 09:23",
+        "url": "https://tech.gmw.cn/2026-09/21/content_39011678.htm"
+      },
+      {
+        "id": "tech-09",
+        "kind": "ms27-tech-xinhua-half",
+        "title": "合肥先进光源直线加速器取得束流进展",
+        "summary": "合肥先进光源装置直线加速器开展束流调试，报道介绍其在第四代同步辐射光源建设中的作用；项目建成后将支持材料、生命和能源科学实验，当前进展不等同于已投入用户使用。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 18:49",
+        "url": "https://www.xinhuanet.com/politics/20260920/77cc02c14b9b4abba087250edcf05131/c.html"
+      },
+      {
+        "id": "tech-10",
+        "kind": "ms27-tech-cctv-industrial-robots",
+        "title": "机器人应用技能展呈现工业与公共服务场景",
+        "summary": "浙江机器人应用技能展有60家企业、300台机器人参展，内容包括工业点焊、交通执勤和应急服务；报道还介绍杭州交管机器人累计执勤数据，该数字不是单日统计。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 16:25",
+        "url": "https://news.cctv.com/2026/09/20/ARTIZPtZnzE4Bd8IYzPCGimG260920.shtml"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "kind": "ms27-ai-stdaily-art-enzyme-agent",
+        "title": "约950个AI智能体协作发现噬菌体ART系统",
+        "summary": "科技日报报道，Anthropic生命科学团队以约950个Claude智能体并行筛查基因组数据，发现噬菌体中的ART系统；实验确认重复阵列可表达，系统功能与应用仍待验证。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-26 01:50",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/26/content_587534.html"
+      },
+      {
+        "id": "ai-02",
+        "kind": "ms27-ai-chinanews-family-services",
+        "title": "数贸会展示AI家政、助老和家庭服务产品",
+        "summary": "浙江启动数智赋能女性发展行动，数贸会展示20余项家庭服务产品，涉及AI家政匹配、助老助残终端和养老机器人；报道将其作为应用展示，未称已全面普及。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 22:15",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-25/10703849.shtml"
+      },
+      {
+        "id": "ai-03",
+        "kind": "ms27-ai-chinanews-software-action",
+        "title": "工信部部署人工智能赋能软件产业行动",
+        "summary": "工信部发布“人工智能+软件”专项行动方案，按2028年和2030年两个阶段推进产业智能化；中国信通院调研显示，企业AI代码生成采纳率超过40%。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 21:58",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-25/10703855.shtml"
+      },
+      {
+        "id": "ai-04",
+        "kind": "ms27-ai-stdaily-guangdong-platforms",
+        "title": "广东发布电力与材料研发AI平台",
+        "summary": "广东人工智能应用对接活动展示电力工业AI创新平台、高质量数据集平台和材料研发智能体，并介绍医疗垂类模型等场景；报道区分已发布平台与现场展示成果。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 13:51",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/23/content_586555.html"
+      },
+      {
+        "id": "ai-05",
+        "kind": "ms27-ai-xinhua-china-asean",
+        "title": "中国与东盟拓展人工智能应用合作",
+        "summary": "报道介绍中国与东盟围绕人工智能应用和产业协作拓展合作，列出面向东盟七国的14个应用场景及展会参展企业、产品规模；数据按报道所述场景和展示口径呈现。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-20 16:19",
+        "url": "https://www3.xinhuanet.com/tech/20260920/4838ab39ae4642c9aedbd684183f5728/c.html"
+      }
+    ]
+  },
+  "topStoryIds": ["domestic-01", "international-02", "tech-02"],
+  "metrics": [
+    {
+      "id": "ms27-metric-au9999",
+      "kind": "gold",
+      "icon": "金",
+      "name": "国内金价",
+      "value": "926.01元/克",
+      "note": "2026-09-24最近交易日Au99.99收盘价。",
+      "source": "上海黄金交易所",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://en.sge.com.cn/data/data_daily_international_new?end_date=2026-09-24&start_date=2026-09-24"
+    },
+    {
+      "id": "ms27-metric-domestic-oil-adjustment",
+      "kind": "domestic_oil",
+      "icon": "油",
+      "name": "中国油价",
+      "value": "北京92号汽油8.61元/升",
+      "note": "最高零售价，2026-09-24 24:00起执行；加油站可在最高价内自主定价。",
+      "source": "北京市发展和改革委员会",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202609/t20260924_4879948.htm"
+    },
+    {
+      "id": "ms27-metric-wti-nov",
+      "kind": "international_oil",
+      "icon": "油",
+      "name": "国际油价",
+      "value": "WTI 92.41、布伦特104.32美元/桶",
+      "note": "2026-09-25纽约原油11月合约结算价。",
+      "source": "新华网",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www3.xinhuanet.com/world/20260926/b92b1600900842e98893d4f7f04bce86/c.html"
+    },
+    {
+      "id": "ms27-metric-usd-cny",
+      "kind": "usd_cny",
+      "icon": "$",
+      "name": "美元兑人民币",
+      "value": "1美元=6.7489元人民币",
+      "note": "2026-09-24最近交易日人民币汇率中间价，100美元兑674.89元。",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760"
+    },
+    {
+      "id": "ms27-metric-eur-cny",
+      "kind": "eur_cny",
+      "icon": "€",
+      "name": "欧元兑人民币",
+      "value": "1欧元=7.6631元人民币",
+      "note": "2026-09-24最近交易日人民币汇率中间价，100欧元兑766.31元。",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760"
+    },
+    {
+      "id": "ms27-metric-jpy-cny",
+      "kind": "jpy_cny",
+      "icon": "¥",
+      "name": "日元兑人民币",
+      "value": "100日元=4.2590元人民币",
+      "note": "2026-09-24最近交易日人民币汇率中间价，100日元兑4.259元。",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760"
+    }
+  ],
+  "observation": "中秋假期的交通和文旅报道集中呈现客流保障：铁路预计假期末日发送旅客1300万人次，四条新线计划9月28日开通，多地同步部署出行服务。国际层面，联合国大会发言引发场内外抗议，霍尔木兹海峡复航方案仍取决于各方接受条件。科技版面既有CR450展品和极鳕观测等工程与现场进展，也有新疆阵风预报模型的论文结果；AI条目涉及家庭服务、软件和科研场景。数据部分分别采用官方收盘、政策最高零售价与交易结算口径，日期、单位和适用范围均需一并理解。"
+}
