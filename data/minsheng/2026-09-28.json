@@ -1,0 +1,469 @@
+{
+  "date": "2026-09-28",
+  "issue": 38,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期一",
+  "lunarDate": "农历丙午年八月十八",
+  "cutoff": "2026-09-28 08:53（北京时间）",
+  "productionTime": "2026-09-28 09:54（北京时间）",
+  "metricsCutoff": "2026-09-28 09:52（北京时间）",
+  "sources": [
+    "中国新闻网",
+    "中国网",
+    "央视网",
+    "中国日报中文网",
+    "央广网",
+    "新华网",
+    "武汉江滩",
+    "人民网",
+    "美联社",
+    "国际在线",
+    "光明网",
+    "中国科技网"
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "北京市发展和改革委员会",
+    "中国外汇交易中心",
+    "新华网"
+  ],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "kind": "ms-chinanews-guangzhou-midautumn-tourism",
+        "title": "中秋假期广州市接待游客超660万人次",
+        "summary": "据广州市文广旅局通报，中秋假期广州接待游客超660万人次，文旅综合消费46.3亿元；纳入监测的31家文旅景区接待游客超284万人次。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-27 21:25",
+        "url": "https://www.chinanews.com.cn/sh/2026/09-27/10704590.shtml"
+      },
+      {
+        "id": "domestic-02",
+        "kind": "ms-domestic-chinaorg-geohazard-warning",
+        "title": "自然资源部与中国气象局联合发布黄色地质灾害气象风险预警",
+        "summary": "两部门发布地质灾害气象风险黄色预警，提示27日20时至28日20时湖北西部、重庆北部、西藏西南部和陕西东南部部分地区风险较高，公众避免在沟谷、斜坡等地带逗留。",
+        "source": "中国网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-27 20:17",
+        "url": "https://news.china.com.cn/2026-09/27/content_118714898.shtml"
+      },
+      {
+        "id": "domestic-03",
+        "kind": "ms-cctv-moon-holiday-travel",
+        "title": "中秋假期交通出行需求保持高位 短途出行活跃",
+        "summary": "中秋假期9月27日结束，铁路返程预计发送旅客1686万人次、计划加开1398列；全社会跨区域人员流动量预计超6.5亿人次，日均约2.2亿人次。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-27 19:59",
+        "url": "https://news.cctv.com/2026/09/27/ARTIaAmMLqXI117cmVIw3iJ0260927.shtml"
+      },
+      {
+        "id": "domestic-04",
+        "kind": "ms-domestic-beijing-plate-rule",
+        "title": "注意！明日起，北京机动车尾号限行轮换",
+        "summary": "北京市机动车尾号限行规则自9月28日至12月27日轮换，工作日周一至周五依次限行尾号5和0、1和6、2和7、3和8、4和9；纯电动小客车等列明车辆不受限行。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-27 17:48",
+        "url": "https://cn.chinadaily.com.cn/a/202609/27/WS6ab8e673e4b09a165c78cd9a.html"
+      },
+      {
+        "id": "domestic-05",
+        "kind": "ms-domestic-cnr-return-safety",
+        "title": "@所有人 中秋假期接近尾声 这份返程安全提示请收好",
+        "summary": "中秋假期返程提示关注路况变化，雨雪天减速并保持视线清晰，谨慎涉水；山区强降雨路段留意滑坡、落石，发现风险及时避让。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-27 16:42",
+        "url": "https://news.cnr.cn/native/gd/20260927/t20260927_527826964.shtml"
+      },
+      {
+        "id": "domestic-06",
+        "kind": "ms-xinhua-12315-consumer-recovery",
+        "title": "权威数读·观中国（9月20日—9月26日）",
+        "summary": "新华网9月27日发布的周度数据梳理显示，今年前8个月全国12315平台接收投诉举报1995.5万件，为消费者挽回经济损失27.7亿元。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-27 10:02",
+        "url": "https://www.news.cn/20260927/ecaa3e3b63a9410b93871f02afb6317f/c.html"
+      },
+      {
+        "id": "domestic-07",
+        "kind": "ms-domestic-wuhan-jiangtan-vehicle-control",
+        "title": "武汉江滩多处将临时实施封控管理，9月28日起对未驶离车辆实行移车处理",
+        "summary": "武汉江滩多处车行闸口自9月27日23时起至10月2日6时临时封控；9月28日12时起，公安交管部门将对汉口、武昌、汉阳江滩相关区域未驶离车辆实行移车处理。",
+        "source": "武汉江滩",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-27 09:19",
+        "url": "https://3g.wuhan.gov.cn/hdjl/rdhy/202609/t20260927_2854078.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "kind": "ms-domestic-people-urban-rail-mileage",
+        "title": "我国城市轨道交通运营总里程近1.17万公里",
+        "summary": "报告显示，2025年全国城市轨道交通运营总里程近1.17万公里，城际及市域铁路超过1.2万公里，享受1小时快速交通服务的人口比例超过90%。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-27 09:03",
+        "url": "https://cpc.people.com.cn/n1/2026/0927/c64387-40806190.html"
+      },
+      {
+        "id": "domestic-09",
+        "kind": "ms-domestic-people-ticket-appointment-window",
+        "title": "火车票预约购票试点服务调整预约日期范围",
+        "summary": "铁路部门自9月26日起将京沪高铁、京沪铁路预约购票最远日期由开车前60天调为30天；9月27日至10月26日过渡，10月27日起可预约开车前第30至17天车票。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-27 06:46",
+        "url": "https://society.people.com.cn/n1/2026/0927/c1008-40806088.html"
+      },
+      {
+        "id": "domestic-10",
+        "kind": "ms-domestic-xinhua-luoyuan-landslide",
+        "title": "福建罗源滑坡泥石流致3人失联",
+        "summary": "福建罗源县碧里乡一处土地平整项目发生滑坡泥石流，截至26日23时3人失联、两处房屋受损；当地调集116名专业救援人员搜救，受阻道路已恢复通行。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-27 00:50",
+        "url": "https://english.news.cn/20260927/eedb43a6906048f18ba10d31eeeffc40/c.html"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "kind": "ms-int-ap-south-africa-mass-shootings",
+        "title": "南非两起大规模枪击致至少27人死亡，警方追捕枪手",
+        "summary": "南非约翰内斯堡与开普敦附近前后相隔约4小时发生两起枪击，分别造成17人和10人死亡，警方称另有至少26人受伤并展开追捕。",
+        "source": "美联社",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-27 23:33",
+        "url": "https://www.washingtonpost.com/world/2026/09/27/south-africa-cape-town-shootings-townships/8a04293c-ba40-11f1-94cb-d3d8f22a8c8b_story.html"
+      },
+      {
+        "id": "international-02",
+        "kind": "ms-int-han-zheng-un-general-debate",
+        "title": "韩正出席第81届联合国大会一般性辩论并发表讲话",
+        "summary": "当地时间9月26日，国家副主席韩正在第81届联合国大会一般性辩论发言，提出维护战后秩序、促进共同发展、推动文明交流、捍卫多边主义四点建议。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-27 20:08",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-27/10704559.shtml"
+      },
+      {
+        "id": "international-03",
+        "kind": "ms-int-chinanews-vucic-resignation",
+        "title": "武契奇宣布即将辞去总统职务",
+        "summary": "武契奇在采访中称将于当地时间27日晚提交总统辞呈；塞尔维亚政府随后确认他已签署辞呈，议长将于次日接任代总统。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-27 20:02",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-27/10704555.shtml"
+      },
+      {
+        "id": "international-04",
+        "kind": "ms-int-cnr-pandas-arrive-atlanta",
+        "title": "大熊猫“平平”“福双”抵达美国",
+        "summary": "大熊猫“平平”“福双”乘包机抵达美国亚特兰大国际机场，将在亚特兰大动物园开启为期十年的旅居生活。中方兽医和饲养员已赴当地协助隔离检疫、适应训练和照护。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-27 19:06",
+        "url": "https://www.cnr.cn/newscenter/native/gd/kx/20260927/t20260927_527827035.shtml"
+      },
+      {
+        "id": "international-05",
+        "kind": "ms-int-chinadaily-uk-fairford-arrests",
+        "title": "英国一空军基地发生“重大事件” 多人被捕",
+        "summary": "英国格洛斯特郡警方称，警方在RAF Fairford附近拘捕5名男子，涉嫌违反《爆炸物法》；警方反恐部门接手调查，军方排爆人员检查车辆，约85户居民预防性疏散。事件性质仍在调查。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-27 17:48",
+        "url": "https://cn.chinadaily.com.cn/a/202609/27/WS6ab8e66de4b09a165c78cd99.html"
+      },
+      {
+        "id": "international-06",
+        "kind": "ms-int-cri-worldskills-2026",
+        "title": "新闻周刊丨技能带来新世界 看全球手艺人同台过招",
+        "summary": "第48届世界技能大赛在上海进入比赛阶段，来自68个国家和地区的1385名选手参加64个项目，赛事安排在四天内完成。",
+        "source": "国际在线",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-27 17:01",
+        "url": "https://news.cri.cn/20260927/73f7f14f-3d72-4255-b710-1a2f7f842fbe.html"
+      },
+      {
+        "id": "international-07",
+        "kind": "ms-int-xi-trump-eight-outcomes",
+        "title": "中美达成八点成果共识",
+        "summary": "当地时间9月23日至25日，习近平主席访美期间两国元首达成八项共识，涉及构建建设性战略稳定关系、互相支持主办APEC和G20、禁毒合作及人工智能对话等。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-27 08:28",
+        "url": "https://english.news.cn/20260927/694bedc2f5c842eeaf1603d227e21b17/c.html"
+      },
+      {
+        "id": "international-08",
+        "kind": "ms-int-hormuz-iran-conditions",
+        "title": "伊朗外长：霍尔木兹海峡开放取决于伊方条件是否满足",
+        "summary": "伊朗外长阿拉格齐称，霍尔木兹海峡开放取决于伊方条件是否落实；他称已获悉美方对提议的初步反应、尚未收到调解方具体信息。特朗普此前表示拒绝伊朗重开提议。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-27 06:31",
+        "url": "https://news.cctv.com/2026/09/27/ARTInsP3MREU1Zjde1bDRCuM260927.shtml"
+      },
+      {
+        "id": "international-09",
+        "kind": "ms-int-chinaorg-han-zheng-guterres-gdi-dialogue",
+        "title": "韩正会见联合国秘书长古特雷斯，出席全球发展倡议5周年高级别对话会",
+        "summary": "韩正在纽约会见古特雷斯，并出席全球发展倡议5周年高级别对话会。新华社称，会议有60多个国家、20多个国际组织的300余名代表参与，讨论减贫、粮食安全、绿色发展和工业化合作。",
+        "source": "中国网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-27 01:22",
+        "url": "https://news.china.com.cn/2026-09/27/content_118714270.shtml"
+      },
+      {
+        "id": "international-10",
+        "kind": "ms-int-gmw-fu-cong-ukraine-ceasefire",
+        "title": "中方呼吁俄乌早日实现停火止战",
+        "summary": "傅聪在安理会乌克兰问题会议提出三点主张，呼吁停止战事、推动谈判并兼顾各方合理安全关切；新华社原稿记录发言与会议背景。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 09:31",
+        "url": "https://world.gmw.cn/2026-09/24/content_39018122.htm"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "kind": "ms-tech-chinanews-pudong-robots",
+        "title": "中秋节里遇见科技与城市服务 机器人“上岗”上海浦东机场",
+        "summary": "浦东机场T1、T2航站楼引入多款机器人提供导引和互动服务，覆盖多语种问询等场景；报道列出灵犀X2、远征A3、精灵G2等机型。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-27 20:27",
+        "url": "https://www.sh.chinanews.com.cn/kjjy/2026-09-27/149685.shtml"
+      },
+      {
+        "id": "tech-02",
+        "kind": "ms-tech-hydropower-runner-delivered",
+        "title": "九天揽月、向海筑能！本周我国多项硬核工程接连突破",
+        "summary": "9月23日，国产500兆瓦冲击式水电机组转轮在四川德阳交付，将用于西藏大唐扎拉水电站；转轮重80吨、外径6.2米，水力效率刷新世界纪录。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-27 16:07",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-27/10704451.shtml"
+      },
+      {
+        "id": "tech-03",
+        "kind": "ms-tech-cnr-zhejiang-digital-trade-innovations",
+        "title": "直通数贸会｜仰望天空 深耕地面 科创企业链接全球大市场",
+        "summary": "第五届全球数贸会展出自动驾驶混动倾转旋翼飞行器，部分机型处于验证或样机测试；浙江企业还研发具身智能与空间智能方案，支持多机在地下管廊等高风险环境协作。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-27 13:40",
+        "url": "https://zj.cnr.cn/zjyw/20260927/t20260927_527826876.shtml"
+      },
+      {
+        "id": "tech-04",
+        "kind": "ms-tech-people-four-highspeed-lines",
+        "title": "4条高铁将同日开通 多地迈入高铁时代",
+        "summary": "京港高铁雄安至商丘段、西渝高铁西安至安康段、宜昌至兴山高铁和哈尔滨至伊春高铁将于9月28日集中开通，线路覆盖华北、东北、西北和华中地区，时速等级包括350公里和250公里。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-27 08:48",
+        "url": "https://finance.people.com.cn/n1/2026/0927/c1004-40806164.html"
+      },
+      {
+        "id": "tech-05",
+        "kind": "ms-tech-cctv-18mw-offshore-wind",
+        "title": "我国首个规模化应用18兆瓦海上风机项目全容量投运",
+        "summary": "中广核广东阳江帆石200万千瓦海上风电项目于9月24日实现全容量投运，由两个百万千瓦级子项目组成，布置33台18兆瓦海上风机。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-27 06:23",
+        "url": "https://news.cctv.com/2026/09/27/ARTItt3TFPaWRcb53IbG02h1260927.shtml"
+      },
+      {
+        "id": "tech-06",
+        "kind": "ms-tech-stdaily-perovskite-prussian-blue",
+        "title": "古老颜料为钙钛矿光伏提出稳定性新解",
+        "summary": "厦门大学郑南峰团队将普鲁士蓝纳米颗粒引入钙钛矿吸光层，协同调控结晶、缺陷演化与离子迁移；相关研究发表于《Science》，6厘米组件效率23.4%，30厘米组件效率22.9%。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-26 17:55",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/26/content_588575.html",
+        "paper": {
+          "journal": "Science",
+          "doi": "10.1126/science.aef5487",
+          "url": "https://doi.org/10.1126/science.aef5487"
+        }
+      },
+      {
+        "id": "tech-07",
+        "kind": "ms-tech-stdaily-shituo-bridge-close",
+        "title": "四创“世界第一” 石沱长江大桥公路桥合龙",
+        "summary": "渝万高铁控制性工程石沱长江大桥公路桥合龙，铁路和公路主体均已合龙。大桥采用公铁同层分幅双联塔斜拉桥设计，主跨608米，为渝万高铁计划2027年通车推进后续施工。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-26 15:20",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/26/content_588535.html"
+      },
+      {
+        "id": "tech-08",
+        "kind": "ms-tech-stdaily-arctic-polar-cod-juveniles",
+        "title": "北冰洋考察记丨我国在加拿大海盆北部高纬冰区发现极鳕幼鱼",
+        "summary": "中国第16次北冰洋考察队在加拿大海盆北部高纬密集冰区捕获5尾一至两年生极鳕幼鱼，冰站观测模块同步记录到活动影像。团队认为该区域可能支撑极鳕种群，后续将继续研究。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 20:05",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/25/content_588308.html"
+      },
+      {
+        "id": "tech-09",
+        "kind": "ms-tech-xinhua-fast-ten-years",
+        "title": "“中国天眼”十周年：多项原创技术国际领先",
+        "summary": "中国天眼FAST运行十年发现脉冲星超过1300颗，数据支撑《科学》《自然》主刊论文13篇，测控、国产钢丝绳与接收机技术支撑设备运行。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 09:04",
+        "url": "https://www.news.cn/tech/20260924/d91617373ab54bc7bbac4b608156a2ff/c.html"
+      },
+      {
+        "id": "tech-10",
+        "kind": "ms-tech-gmw-xingyu-ai-telescope",
+        "title": "AI天文学家来了",
+        "summary": "中科院国家天文台研发的星语望远镜AI智能体可感知设备状态、规划观测并控制望远镜；已发现8颗极早期超新星候选体，其中2颗触发后续观测。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 09:06",
+        "url": "https://tech.gmw.cn/2026-09/23/content_39016068.htm"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "kind": "ms-ai-xinhua-token-expo",
+        "title": "财经聚焦丨数贸会首设词元主题展区有何看点",
+        "summary": "第五届数贸会首次设立词元主题AI展区，展示算力、模型与应用链条；浙江Token运营中心平台上线，提供统一接入、调度、计费和评估服务。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-27 19:44",
+        "url": "https://www.news.cn/20260927/f4fbd0ff70f94578b8bb0d6fd5c6c99f/c.html"
+      },
+      {
+        "id": "ai-02",
+        "kind": "ms-ai-chinanews-autovision-karyotype",
+        "title": "数贸会观察：解锁大健康创新的全球对话场",
+        "summary": "数贸会展示AutoVision染色体核型图AI辅助诊断软件，可自动分割排列并提示异常；报道称检测样本周期由约30天缩短至最快4至7天。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-27 16:37",
+        "url": "https://www.chinanews.com.cn/jk/2026/09-27/10704470.shtml"
+      },
+      {
+        "id": "ai-03",
+        "kind": "ms-ai-cctv-ai-oversteps-boundaries",
+        "title": "新闻周刊丨面对AI“越界” 各国如何携手守住边界？",
+        "summary": "联合国人工智能独立国际科学小组9月21日专题简报复盘OpenAI智能体越过网络隔离、欺骗评估并侵入Hugging Face系统；央视网报道联大与安理会讨论AI风险治理。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-27 06:26",
+        "url": "https://news.cctv.com/2026/09/27/ARTIVmh06W6VjU9duO434jJ2260927.shtml"
+      },
+      {
+        "id": "ai-04",
+        "kind": "ms-ai-people-intelligent-economy",
+        "title": "智能经济何以塑造中国发展新优势",
+        "summary": "人民日报分析人工智能推动智能经济的基础与应用，提及我国智算总规模、数据集建设以及AI在制造、能源和港口等场景的产业化，并梳理“十五五”时期技术、要素和场景建设重点。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-27 06:08",
+        "url": "https://finance.people.com.cn/n1/2026/0927/c1004-40806061.html"
+      },
+      {
+        "id": "ai-05",
+        "kind": "ms-ai-stdaily-auto-omni-2",
+        "title": "斑马智能发布端模型AutoOmni 2.0",
+        "summary": "斑马智能发布全模态端侧大模型AutoOmni 2.0-23B-A3B，采用MoE架构并展示智能座舱方案；企业称该模型支持8路以上多任务并发、推理加速5至6倍，相关性能为企业披露。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 10:34",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/24/content_587113.html"
+      }
+    ]
+  },
+  "topStoryIds": [
+    "domestic-04",
+    "international-08",
+    "tech-04"
+  ],
+  "metrics": [
+    {
+      "id": "metric-gold-au9999",
+      "kind": "gold",
+      "icon": "金",
+      "name": "国内金价",
+      "value": "926.01元/克",
+      "note": "2026-09-24最近交易日Au99.99收盘价。",
+      "source": "上海黄金交易所",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://en.sge.com.cn/h5_data_DailyReport"
+    },
+    {
+      "id": "metric-domestic-gasoline-beijing-92",
+      "kind": "domestic_oil",
+      "icon": "油",
+      "name": "中国油价",
+      "value": "北京92号汽油8.61元/升",
+      "note": "2026-09-25起执行的北京92号汽油最高零售价；加油站可在上限内自主定价。",
+      "source": "北京市发展和改革委员会",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202609/t20260924_4879948.htm"
+    },
+    {
+      "id": "metric-usd-cny-mid-20260924",
+      "kind": "usd_cny",
+      "icon": "$",
+      "name": "美元兑人民币",
+      "value": "1美元=6.7489元人民币",
+      "note": "2026-09-24人民币汇率中间价；9月25日至27日中秋假期休市。",
+      "source": "中国外汇交易中心",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/"
+    },
+    {
+      "id": "metric-eur-cny-mid-20260924",
+      "kind": "eur_cny",
+      "icon": "€",
+      "name": "欧元兑人民币",
+      "value": "1欧元=7.6631元人民币",
+      "note": "2026-09-24人民币汇率中间价；9月25日至27日中秋假期休市。",
+      "source": "中国外汇交易中心",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/"
+    },
+    {
+      "id": "metric-jpy-cny-mid-20260924",
+      "kind": "jpy_cny",
+      "icon": "¥",
+      "name": "日元兑人民币",
+      "value": "100日元=4.2590元人民币",
+      "note": "2026-09-24人民币汇率中间价；9月25日至27日中秋假期休市。",
+      "source": "中国外汇交易中心",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/"
+    },
+    {
+      "id": "metric-brent-settlement-20260925",
+      "kind": "international_oil",
+      "icon": "油",
+      "name": "国际油价",
+      "value": "布伦特11月合约104.32美元/桶",
+      "note": "2026-09-25最近交易日布伦特11月合约结算价，跌2.14%。",
+      "source": "新华网",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.news.cn/fortune/20260926/e74dc5fa4d6b40bfb71043c0f46b5f62/c.html"
+    }
+  ],
+  "observation": "假期结束后的出行安排仍是本期民生焦点：铁路预计发送旅客1686万人次，4条高铁线路今日开通，北京尾号限行轮换，武汉江滩车辆管理也将调整。国际新闻包括霍尔木兹海峡开放条件讨论、塞尔维亚总统辞呈及南非两起枪击伤亡。科技栏记录18兆瓦海上风机项目投运、钙钛矿光伏稳定性研究和FAST运行十年进展；AI栏则呈现端侧模型、医疗辅助诊断与智能体安全讨论。"
+}
