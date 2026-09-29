@@ -1,0 +1,488 @@
+{
+  "date": "2026-09-29",
+  "issue": 39,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期二",
+  "lunarDate": "农历丙午年八月十九",
+  "cutoff": "2026-09-29 10:56（北京时间）",
+  "productionTime": "2026-09-29 10:56（北京时间）",
+  "metricsCutoff": "2026-09-29 10:50（北京时间）",
+  "sources": [
+    "人民网",
+    "央视网",
+    "中国新闻网",
+    "省级党媒／政府新闻发布平台",
+    "新华网",
+    "央广网",
+    "中国经济网",
+    "美联社",
+    "泰国政府公共关系部",
+    "阿根廷总统府",
+    "梵蒂冈新闻局",
+    "中国网",
+    "中国科技网",
+    "Nature Electronics",
+    "Optics Letters（Optica Publishing Group）",
+    "光明网"
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "北京市发展和改革委员会",
+    "Investing.com",
+    "中国外汇交易中心（新华网受权公告全文转载）"
+  ],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "kind": "ms29-domestic-state-council-meeting-0928",
+        "title": "李强主持召开国务院常务会议",
+        "summary": "国务院常务会议研究宏观政策发力提效和有效投资，要求推进重大工程、加力扩投资和促消费贴息，并研究稳定房地产市场、促进就业增收措施；会议还审议事业单位登记管理条例草案。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-28 20:22",
+        "url": "https://cpc.people.com.cn/n1/2026/0928/c64094-40806970.html"
+      },
+      {
+        "id": "domestic-02",
+        "kind": "ms29-domestic-cctv-safe-china-directive-0928",
+        "title": "央视快评：以更高水平平安中国建设保障中国式现代化行稳致远",
+        "summary": "习近平近日就建设更高水平平安中国作出重要指示；文章提出提升公共安全治理水平、完善现代化社会治理体系，并强调回应群众期盼。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-28 22:16",
+        "url": "https://news.cctv.com/2026/09/28/ARTIwA0F4d2BQvxAQWbgJk2l260928.shtml"
+      },
+      {
+        "id": "domestic-03",
+        "kind": "ms29-domestic-midautumn-mobility-0928",
+        "title": "中秋假期中国跨区域人员流动量超6.4亿人次",
+        "summary": "交通运输部数据显示，中秋三天全社会跨区域人员流动量为6.43亿人次，日均2.14亿人次；铁路、水路和民航客运量分别同比增长26.3%、45.7%和19.8%。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-28 21:37",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-28/10705124.shtml"
+      },
+      {
+        "id": "domestic-04",
+        "kind": "ms29-domestic-food-rapid-tests-0928",
+        "title": "市场监管总局发布13项食品快检方法 可查18种风险物质",
+        "summary": "市场监管总局发布的13项食品快检方法可筛查蔬果、畜禽肉、乳制品、蜂蜜和水产品中的18种农残、药物及抗生素风险物质，供现场快速排查。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-28 16:50",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-28/10704929.shtml"
+      },
+      {
+        "id": "domestic-05",
+        "kind": "ms29-domestic-beijing-midautumn-retail-0928",
+        "title": "中秋假期北京重点监测的127家企业累计实现销售40.4亿元 同比增长20% 2708.8万人次！重点商圈迎客同比增14.7%",
+        "summary": "北京市重点监测的127家企业中秋假期销售额为40.4亿元，同比增长20%；70个重点商圈客流2708.8万人次，同比增长14.7%，百货和餐饮销售额分别增长14.9%和10.5%。",
+        "source": "省级党媒／政府新闻发布平台",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-28 08:27",
+        "url": "https://www.beijing.gov.cn/ywdt/gzdt/202609/t20260928_4882773.html"
+      },
+      {
+        "id": "domestic-06",
+        "kind": "ms29-domestic-hayi-highspeed-opening-0928",
+        "title": "穿山越雪入林海，我国最北高铁来了",
+        "summary": "哈伊高铁9月28日正式开通，线路全长318公里、设计时速250公里；开通后哈尔滨至伊春西最快1小时46分可达，绥化、伊春等地进入高铁时代。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-28 12:52",
+        "url": "https://www.news.cn/politics/20260928/917c02dc3fa04b7689ecdd1bab0ca81e/c.html"
+      },
+      {
+        "id": "domestic-07",
+        "kind": "ms29-domestic-yangzhou-old-town-renewal-0928",
+        "title": "扬州：十年守护千年城 一街焕新一城春",
+        "summary": "扬州第十个“古城保护日”主题活动在皮市街朱自清文化街区举行。当地回顾十年间修缮10万多平方米公房、整治提升60多个老旧小区和150多条老街巷，并启动新项目。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-28 17:46",
+        "url": "https://js.cnr.cn/whly/20260928/t20260928_527827839.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "kind": "ms29-domestic-chongqing-free-concert-0928",
+        "title": "9月29日“重庆之夜·南滨音乐会”开唱 600个观演名额免费抢",
+        "summary": "重庆将于9月29日晚在规划展览馆举办免费户外音乐会，面向市民游客发放600个预约名额；文章列出放票时段、预约方式及未成年人入场要求。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-28 10:35",
+        "url": "https://cq.news.cn/20260928/1030ad1b69b6483792a42c54e73fe309/c.html"
+      },
+      {
+        "id": "domestic-09",
+        "kind": "ms29-domestic-cybersecurity-duty-cases-0928",
+        "title": "公安部网安局发布拒不履行信息网络安全管理义务案例",
+        "summary": "公安部网安局披露两起网络安全管理义务典型案例，涉事公司未履行服务器租赁用户身份核验义务或受诈骗团伙雇佣发布违法信息，此前受罚并被责令整改后仍未及时改正。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-28 08:28",
+        "url": "https://www.news.cn/legal/20260928/b619d589782c47a3ab76e3a320c08e7e/c.html"
+      },
+      {
+        "id": "domestic-10",
+        "kind": "ms29-domestic-ce-market-close-0928",
+        "title": "收评：两市震荡调整沪指跌1.67% 汽车整车板块走强",
+        "summary": "9月28日A股三大指数集体下跌，上证跌1.67%、深成指跌3.44%、创业板指跌4.53%；汽车整车、小家电和风电设备板块涨幅居前。",
+        "source": "中国经济网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-28 15:17",
+        "url": "https://finance.ce.cn/stock/gsgdbd/202609/t20260928_3239541.shtml"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "kind": "ms29-international-drc-ebola-outbreak-0928",
+        "title": "刚果（金）埃博拉累计确诊病例升至8067例",
+        "summary": "美联社援引刚果（金）卫生部数据称，截至9月26日累计确诊8067例、死亡3901例；WHO指出部分地区医疗可及性受限。",
+        "source": "美联社",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-28 17:45",
+        "url": "https://apnews.com/article/3e3b17dca67b96371a4a3629c4814543"
+      },
+      {
+        "id": "international-02",
+        "kind": "ms29-international-thailand-bangkok-floods-0928",
+        "title": "泰国曼谷洪灾影响约70万人 当局加紧排水",
+        "summary": "泰国政府通报，曼谷约32.9万户、约70万人受洪水影响；降雨减弱后，当局正降低运河水位并排水，部分道路仍需谨慎通行。",
+        "source": "泰国政府公共关系部",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-28",
+        "url": "https://thailand.go.th/public/index.php/event-detail/bangkok-flood-update-28-sept-rain-easing-700k-affected"
+      },
+      {
+        "id": "international-03",
+        "kind": "ms29-international-korea-dmz-mine-investigation-0928",
+        "title": "韩军初步判断非军事区爆炸很可能涉及朝鲜地雷",
+        "summary": "韩军联合调查初步认为，非军事区爆炸很可能涉及朝鲜地雷；9月21日事故造成3名韩国士兵受伤，调查仍在继续。",
+        "source": "美联社",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-28 19:46",
+        "url": "https://apnews.com/article/3eb069b3d252d4451958de25893a74ea"
+      },
+      {
+        "id": "international-04",
+        "kind": "ms29-international-us-china-tariff-framework-0928",
+        "title": "商务部公布中美贸易理事会和“300亿对300亿”对等降税框架有关情况",
+        "summary": "商务部公布中美贸易理事会安排与约300亿美元产品对等降税框架，双方称超过90%产品将免除相互加征关税，并设置农业工作组；后续须履行各自法律程序。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-28 14:36",
+        "url": "https://world.people.com.cn/n1/2026/0928/c1002-40806830.html"
+      },
+      {
+        "id": "international-05",
+        "kind": "ms29-international-se-asia-crossborder-haze-0928",
+        "title": "东南亚多国遭遇跨境烟霾侵扰",
+        "summary": "新华网报道，印尼林火烟霾影响印尼、马来西亚和新加坡部分地区空气质量，局地学校采取远程教学或停课措施。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-28 12:11",
+        "url": "https://www.news.cn/world/20260928/a9cf796f429c42f2ba46aa5b6f6397f8/c.html"
+      },
+      {
+        "id": "international-06",
+        "kind": "ms29-international-us-iran-talks-0928",
+        "title": "美伊对峙7个月 美称本周将继续与伊谈判 伊称尚未放弃外交途径",
+        "summary": "美伊围绕霍尔木兹海峡通航和结束冲突方案仍有分歧；特朗普称本周可能继续谈判，伊朗外长阿拉格齐表示已为冲突重启做好准备，同时仍愿通过外交接触寻求解决。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-28 07:23",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-28/10704645.shtml"
+      },
+      {
+        "id": "international-07",
+        "kind": "ms29-international-argentina-falklands-arbitration-0928",
+        "title": "阿根廷启动马尔维纳斯海域油气项目仲裁程序",
+        "summary": "阿根廷总统府称，总统已指示外交部门及法律团队，针对英国在马尔维纳斯群岛附近的Sea Lion油田项目启动《海洋法公约》附件七仲裁程序。",
+        "source": "阿根廷总统府",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-28",
+        "url": "https://www.argentina.gob.ar/noticias/comunicado-oficial-numero-166"
+      },
+      {
+        "id": "international-08",
+        "kind": "ms29-international-xinhua-netanyahu-uae-reported-0928",
+        "title": "多家媒体曝内塔尼亚胡秘密访问阿联酋",
+        "summary": "多家媒体援引匿名官员称内塔尼亚胡9月27日秘密访问阿布扎比并会见阿联酋总统；以方总理办公室和阿联酋外交部均未回应，访问尚未获官方证实。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-28 12:30",
+        "url": "https://www.news.cn/world/20260928/70a870ccc06d43d2a5009be4f6c4ad83/c.html"
+      },
+      {
+        "id": "international-09",
+        "kind": "ms29-international-vatican-europe-peace-address-0928",
+        "title": "教宗呼吁欧洲以国际法和对话处理分歧",
+        "summary": "教宗良十四世9月28日在法国梅斯发表讲话，呼吁欧洲以耐心对话和国际法处理分歧，并警告支配欲是冲突根源。",
+        "source": "梵蒂冈新闻局",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-28",
+        "url": "https://press.vatican.va/content/leo-xiv/en/speeches/2026/september/documents/20260928-francia-radici-europa.html"
+      },
+      {
+        "id": "international-10",
+        "kind": "ms29-international-chinaorg-caspian-exercise-deaths-0925",
+        "title": "哈萨克斯坦里海军演事故致14人遇难 搜救行动结束",
+        "summary": "哈萨克斯坦国防部通报，里海军演事故共造成14名军人遇难、3人获救；检方调查涉嫌监管及救援组织失当，总统宣布全国哀悼日。",
+        "source": "中国网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 19:13",
+        "url": "https://news.china.com.cn/2026-09/25/content_118713057.shtml"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "kind": "ms29-tech-best-tf-coil-boxes-0928",
+        "title": "世界首个紧凑型聚变能实验装置BEST TF线圈盒批量交付",
+        "summary": "我国首个紧凑型聚变能实验装置BEST的8件TF线圈盒完成制造并发运，团队攻克低温高强韧材料、厚锻件锻造和高氮不锈钢焊接等制造技术。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-28 17:24",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/28/content_589255.html"
+      },
+      {
+        "id": "tech-02",
+        "kind": "ms29-tech-chinanews-domestic-embodied-robot-0928",
+        "title": "首台全国产化电子架构具身智能机器人亮相湖北宜昌",
+        "summary": "宜昌发布全球首台搭载全国产化电子架构的具身智能机器人，架构覆盖芯片、控制器、总线和操作系统；现场安全测试显示其保持稳定运行。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-28 15:49",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-28/10704893.shtml"
+      },
+      {
+        "id": "tech-03",
+        "kind": "ms29-tech-fast-superbubbles-0928",
+        "title": "“中国天眼”发现星际超级气泡",
+        "summary": "清华团队结合FAST与JVLA在仙女座星系识别118个中性氢超级气泡；论文测算显示，超新星能量输入可与星系湍流耗散相匹配。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-28 08:12",
+        "url": "https://kpzg.people.com.cn/n1/2026/0928/c404214-40806392.html",
+        "paper": {
+          "journal": "Nature Astronomy",
+          "doi": "10.1038/s41550-026-02981-9",
+          "url": "https://kpzg.people.com.cn/n1/2026/0928/c404214-40806392.html"
+        }
+      },
+      {
+        "id": "tech-04",
+        "kind": "ms29-tech-nature-ic-fibre-0923",
+        "title": "东华大学团队实现可编织集成电路纤维",
+        "summary": "东华大学团队提出在微流控纺丝中集成电路器件，纤维可实现发光、信号处理、逻辑与非接触感知，并可编织和清洗。",
+        "source": "Nature Electronics",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-23",
+        "url": "https://www.nature.com/articles/s41928-026-01712-2",
+        "paper": {
+          "journal": "Nature Electronics",
+          "doi": "10.1038/s41928-026-01712-2",
+          "url": "https://www.nature.com/articles/s41928-026-01712-2"
+        }
+      },
+      {
+        "id": "tech-05",
+        "kind": "ms29-tech-nature-ising-machine-0922",
+        "title": "北航团队研发亚纳秒自旋电子Ising机",
+        "summary": "北航团队将磁阻式存储器集成进CMOS Ising机，96,000自旋实现0.3—1纳秒更新，单自旋能耗低于40飞焦耳，并演示全局布线优化。",
+        "source": "Nature Electronics",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-22",
+        "url": "https://www.nature.com/articles/s41928-026-01700-6",
+        "paper": {
+          "journal": "Nature Electronics",
+          "doi": "10.1038/s41928-026-01700-6",
+          "url": "https://www.nature.com/articles/s41928-026-01700-6"
+        }
+      },
+      {
+        "id": "tech-06",
+        "kind": "ms29-tech-optica-microled-lithography-0922",
+        "title": "上海大学团队改进MicroLED无掩模光刻",
+        "summary": "上海大学团队将双光子聚合微透镜阵列直接集成到MicroLED阵列，改进无掩模光刻曝光，探索微纳制造中的高分辨率并行处理。",
+        "source": "Optics Letters（Optica Publishing Group）",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-22",
+        "url": "https://doi.org/10.1364/OL.612893",
+        "paper": {
+          "journal": "Optics Letters",
+          "doi": "10.1364/OL.612893",
+          "url": "https://doi.org/10.1364/OL.612893"
+        }
+      },
+      {
+        "id": "tech-07",
+        "kind": "ms29-tech-18mw-offshore-wind-0924",
+        "title": "国内首个规模化应用18兆瓦超大型海上风电机组项目投运",
+        "summary": "阳江帆石海上风电项目全容量投运，配置33台18兆瓦机组并建成海上风电场500千伏中间无功补偿站，预计年送电量超66亿千瓦时。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 16:10",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-24/10703009.shtml"
+      },
+      {
+        "id": "tech-08",
+        "kind": "ms29-tech-fast-ten-years-0924",
+        "title": "“中国天眼”十周年：多项原创技术国际领先",
+        "summary": "FAST运行十年来累计发现脉冲星超1300颗，观测成果13篇发表于《科学》《自然》主刊，并在测控、钢丝绳和高性能接收机等方面实现技术创新。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-24 09:04",
+        "url": "https://www.news.cn/tech/20260924/d91617373ab54bc7bbac4b608156a2ff/c.html"
+      },
+      {
+        "id": "tech-09",
+        "kind": "ms29-tech-xinhua-chongqing-agri-innovation-0928",
+        "title": "重庆十大农业科技创新成果发布",
+        "summary": "重庆发布十项农业科技成果，涵盖高抗病油菜品种、畜禽与果树新品种、数字化饲喂和山区水产循环技术，部分成果已推广应用。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-28 09:46",
+        "url": "https://cq.news.cn/20260928/b9b54aba8fa14458bb82c0488fc12132/c.html"
+      },
+      {
+        "id": "tech-10",
+        "kind": "ms29-tech-boe-optoelectronics-0923",
+        "title": "京东方全球创新伙伴大会举行 光电融合擘画万物智联新图景",
+        "summary": "京东方大会展示双四基色RGBX、原生FHD 1000Hz显示、P0.7 Micro LED等技术，并推出钙钛矿组件、玻璃基TGV载板和Micro LED光互连样机。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 11:33",
+        "url": "https://tech.gmw.cn/2026-09/23/content_39016760.htm"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "kind": "ms29-ai-digital-trade-expo-0928",
+        "title": "第五届数贸会AI特色凸显 多项指标创新高",
+        "summary": "数贸会首发首秀首展226项，996家人工智能企业带来100余个应用场景，涵盖数字医疗、出行和脑机接口等领域。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-28 08:50",
+        "url": "https://www.news.cn/tech/20260928/bf444879b3874ae98877ce2d77864cbe/c.html"
+      },
+      {
+        "id": "ai-02",
+        "kind": "ms29-ai-embodied-robot-park-0926",
+        "title": "国内规模化AI机器人主题乐园亮相横琴",
+        "summary": "横琴长隆飞船乐园启用近千台具身智能机器人，覆盖演艺、导览、研学等六类场景，机器人承担园区互动、引路和配送服务。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-26 09:05",
+        "url": "https://www.news.cn/tech/20260926/9518dae58c1b4497ba0d4f0c47ab066e/c.html"
+      },
+      {
+        "id": "ai-03",
+        "kind": "ms29-ai-cctv-ai-terminology-response-0926",
+        "title": "外交部发言人就人工智能问题答记者问",
+        "summary": "针对美方在介绍访问成果时使用“超级智能”而非“人工智能”的问题，外交部表示中美元首就AI问题深入讨论，中方重视并尊重美方提法，各方可结合技术发展加强交流、寻求共识。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-26 18:25",
+        "url": "https://news.cctv.com/2026/09/26/ARTIcNI3aEBMQUfvKbldPcre260926.shtml"
+      },
+      {
+        "id": "ai-04",
+        "kind": "ms29-ai-software-action-0925",
+        "title": "中国信通院王志勤：推动“人工智能+软件”深度融合",
+        "summary": "工信部出台“人工智能+软件”专项行动实施方案，提出2028年、2030年分阶段目标，推进智能编程工具、开发平台与智能体软件发展。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-25 21:58",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-25/10703855.shtml"
+      },
+      {
+        "id": "ai-05",
+        "kind": "ms29-ai-gd-ai-for-science-0923",
+        "title": "AI重塑科学研究新范式 广东“人工智能+”科技成果亮相",
+        "summary": "广东人工智能应用对接大会集中展示科研与产业应用，涉及蛋白质结构预测、药物研发、芯片设计；南方电网发布电力AI创新平台，科研机构推出材料研发智能体。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-23 13:51",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/23/content_586555.html"
+      }
+    ]
+  },
+  "topStoryIds": [
+    "domestic-01",
+    "international-01",
+    "tech-01"
+  ],
+  "metrics": [
+    {
+      "id": "metric-gold-au9999-20260928",
+      "kind": "gold",
+      "icon": "金",
+      "name": "国内金价",
+      "value": "900.89元/克",
+      "note": "2026-09-28最近交易日Au99.99收盘价，较前日下跌25.12元/克（-2.71%）。",
+      "source": "上海黄金交易所",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://sge.com.cn/sjzx/quotation_daily_new?end_date=2026-09-28&start_date=2026-09-28"
+    },
+    {
+      "id": "metric-domestic-gasoline-beijing-92",
+      "kind": "domestic_oil",
+      "icon": "油",
+      "name": "中国油价",
+      "value": "北京92号汽油8.61元/升",
+      "note": "2026-09-25起执行的最高零售价；加油站可在上限内自主定价。",
+      "source": "北京市发展和改革委员会",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202609/t20260924_4879948.htm"
+    },
+    {
+      "id": "metric-brent-settlement-20260928-dec26",
+      "kind": "international_oil",
+      "icon": "油",
+      "name": "国际油价",
+      "value": "布伦特12月合约98.77美元/桶",
+      "note": "2026-09-28最近交易日收盘价（LCOZ6，境外数据服务）。",
+      "source": "Investing.com",
+      "sourceOrigin": "external",
+      "sourceUrl": "https://ca.investing.com/commodities/brent-oil-historical-data"
+    },
+    {
+      "id": "metric-usd-cny-mid-20260928",
+      "kind": "usd_cny",
+      "icon": "$",
+      "name": "美元兑人民币",
+      "value": "1美元=6.7399元人民币",
+      "note": "2026-09-28人民币汇率中间价；9月29日中间价尚未公布。",
+      "source": "中国外汇交易中心（新华网受权公告全文转载）",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www2.xinhuanet.com/20260928/c415f8d367f1405a960d225364a2f975/c.html"
+    },
+    {
+      "id": "metric-eur-cny-mid-20260928",
+      "kind": "eur_cny",
+      "icon": "€",
+      "name": "欧元兑人民币",
+      "value": "1欧元=7.6564元人民币",
+      "note": "2026-09-28人民币汇率中间价；9月29日中间价尚未公布。",
+      "source": "中国外汇交易中心（新华网受权公告全文转载）",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www2.xinhuanet.com/20260928/c415f8d367f1405a960d225364a2f975/c.html"
+    },
+    {
+      "id": "metric-jpy-cny-mid-20260928",
+      "kind": "jpy_cny",
+      "icon": "¥",
+      "name": "日元兑人民币",
+      "value": "100日元=4.2685元人民币",
+      "note": "2026-09-28人民币汇率中间价；9月29日中间价尚未公布。",
+      "source": "中国外汇交易中心（新华网受权公告全文转载）",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www2.xinhuanet.com/20260928/c415f8d367f1405a960d225364a2f975/c.html"
+    }
+  ],
+  "observation": "国务院会议释放扩投资、促消费和稳就业信号，假期跨区域流动超过6.4亿人次，食品快检方法更新，显示政策与公共服务同步关注就业、出行及消费安全。国际栏目关注埃博拉疫情、曼谷洪水、半岛非军事区爆炸等跨区域风险，也记录贸易框架和跨境烟霾。科技方面，聚变装置线圈盒交付、国产具身机器人亮相与天文观测进展并行，近一周原始论文带来可编织电路纤维、Ising计算和MicroLED光刻进展；AI报道涉及智能体应用、具身机器人与科研协作。"
+}
