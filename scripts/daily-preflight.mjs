@@ -5,7 +5,7 @@ import { createHash } from 'node:crypto';
 import { STATE_EVIDENCE_API_VERSION, archiveContentPath, assertGameDealCoverage, assertResearchComplete, inspectReadyArtifacts, operationPaths, readResearchLedger } from './daily-operations.mjs';
 import { validateGame } from './game-lib.mjs';
 import { validateMinsheng, validateMinshengSourceAudit } from './minsheng-lib.mjs';
-import { assertGamePublishCandidate, assertMinshengPublishCandidate, assertManifestEdition } from './archive-consistency.mjs';
+import { assertGamePublishCandidate, assertMinshengPublishCandidate, assertManifestEdition, selectArchiveComparisonEditions } from './archive-consistency.mjs';
 
 const digest = value => createHash('sha256').update(value).digest('hex');
 const fail = (code, message) => { throw Object.assign(new Error(message), { code }); };
@@ -38,6 +38,7 @@ export async function preflightChannel(root, options = {}) {
   const { date, channel } = options;
   const now = new Date(options.now ?? Date.now());
   const result = { apiVersion: STATE_EVIDENCE_API_VERSION, date, channel, ok: false, checkedAt: now.toISOString(), identity: {}, gates: {}, reasons: [], proof: null, dependencyHashes: {} };
+  result.archiveComparisonVersion = 2;
   async function gate(name, callback) {
     try { const value = await callback(); result.gates[name] = { ok: true }; return value; }
     catch (error) { const reason = { code: error.code || name.toUpperCase() + '_INVALID', message: error.message }; result.gates[name] = { ok: false, ...reason }; result.reasons.push(reason); return null; }
@@ -106,7 +107,7 @@ export async function preflightChannel(root, options = {}) {
     const priorManifest = { ...manifest, editions: options.recovery && current.length
       ? manifest.editions.filter(item => item.issue < brief.issue)
       : manifest.editions.filter(item => item.date !== date) };
-    const recent = priorManifest.editions.filter(item => item.date < date).sort((a,b) => b.date.localeCompare(a.date)).slice(0,7);
+    const recent = selectArchiveComparisonEditions(priorManifest, date, channel);
     const prior = [];
     const identities = [];
     for (const edition of recent) {
@@ -117,7 +118,11 @@ export async function preflightChannel(root, options = {}) {
       prior.push(value); identities.push({ edition, sha256: digest(data) });
     }
     (channel === 'game' ? assertGamePublishCandidate : assertMinshengPublishCandidate)(brief, priorManifest, prior);
-    result.dependencyHashes.archive = digest(JSON.stringify({ editions: priorManifest.editions, recent: identities }));
+    // Retain the dependency identity of existing published proofs. All affected
+    // successor bodies still pass the new gate; only the saved hash format differs.
+    const hashedIdentities = options.recovery && proof && !proof.preflight.archiveComparisonVersion
+      ? identities.filter(item => item.edition.date < date) : identities;
+    result.dependencyHashes.archive = digest(JSON.stringify({ editions: priorManifest.editions, recent: hashedIdentities }));
   });
   await gate('render', async () => {
     const html = inside(root, artifactOptions.html, renderDirectory);

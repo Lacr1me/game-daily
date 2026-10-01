@@ -1,4 +1,4 @@
-import { assertGamePublishCandidate, assertMinshengPublishCandidate, loadPriorBriefs } from './archive-consistency.mjs';
+import { assertGamePublishCandidate, assertMinshengPublishCandidate, loadArchiveComparisonBriefs } from './archive-consistency.mjs';
 import { assertPublishTime, beijingDate } from './game-lib.mjs';
 import { runPublishTransaction } from './publish-transaction.mjs';
 
@@ -27,7 +27,7 @@ export async function publishChannel({root=process.cwd(), date=beijingDate(), ch
       return operations.updatePublicationState(root,{...context,step:context.publicationStep,now});
     },
     validateCandidate:async (brief,manifest)=>{
-      const prior=await loadPriorBriefs(root,manifest,date,channel);
+      const prior=await loadArchiveComparisonBriefs(root,manifest,date,channel);
       (channel==='game'?assertGamePublishCandidate:assertMinshengPublishCandidate)(brief,manifest,prior);
     },
     makeEdition:brief=>{

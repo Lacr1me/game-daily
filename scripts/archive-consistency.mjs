@@ -35,6 +35,30 @@ export async function loadPriorBriefs(root, manifest, date, channel, read = read
   }));
 }
 
+// Inserting a historical edition changes the preceding window of the next seven
+// editions too. Read only these affected bodies, keeping the daily path bounded.
+export function selectArchiveComparisonEditions(manifest, date, channel) {
+  const prior = selectPriorEditions(manifest, date, channel);
+  const later = [...new Map(manifest.editions.map(item => [item.date, item])).values()]
+    .filter(item => item.date > date).sort((a,b) => a.date.localeCompare(b.date)).slice(0,7);
+  return [...prior, ...later];
+}
+
+export async function loadArchiveComparisonBriefs(root, manifest, date, channel, read = readFile) {
+  return Promise.all(selectArchiveComparisonEditions(manifest, date, channel).map(async edition => {
+    const brief = JSON.parse(await read(path.resolve(root, edition.file), 'utf8'));
+    assertManifestEdition(edition, brief, channel === 'game' ? '游戏日报' : '民生日报');
+    return brief;
+  }));
+}
+
+function assertPublishedSuccessors(candidate, comparisonBriefs, assertConsistency) {
+  for (const later of comparisonBriefs.filter(item => item.date > candidate.date)
+    .sort((a,b) => a.date.localeCompare(b.date)).slice(0,7)) {
+    assertConsistency(later, [candidate]);
+  }
+}
+
 export function assertGameArchiveConsistency(candidate, priorBriefs) {
   for (const prior of recentPriorBriefs(candidate, priorBriefs)) {
     for (const [section, limit] of Object.entries(GAME_DUPLICATE_LIMITS)) {
@@ -73,6 +97,7 @@ export function assertGamePublishCandidate(candidate, manifest, priorBriefs) {
     }
   }
   assertGameArchiveConsistency(candidate, priorBriefs);
+  assertPublishedSuccessors(candidate, priorBriefs, assertGameArchiveConsistency);
 }
 
 export function assertMinshengPublishCandidate(candidate, manifest, priorBriefs) {
@@ -92,6 +117,7 @@ export function assertMinshengPublishCandidate(candidate, manifest, priorBriefs)
   }).length;
   if (recentCount < 12) throw new Error(`民生日报至少需要 12 条来自当天或前两天，当前只有 ${recentCount} 条`);
   assertMinshengArchiveConsistency(candidate, priorBriefs);
+  assertPublishedSuccessors(candidate, priorBriefs, assertMinshengArchiveConsistency);
 }
 
 export function assertManifestEdition(edition, brief, channel) {
@@ -190,8 +216,8 @@ if (path.resolve(process.argv[1] || "") === fileURLToPath(import.meta.url)) {
   const manifestFile = channel === 'game' ? 'data/index.json' : 'data/minsheng/index.json';
   const manifest = JSON.parse(await readFile(path.resolve(manifestFile), 'utf8'));
   const candidate = JSON.parse(await readFile(path.resolve(candidateFile), 'utf8'));
-  const priorBriefs = await loadPriorBriefs(process.cwd(), manifest, candidate.date, channel);
+  const priorBriefs = await loadArchiveComparisonBriefs(process.cwd(), manifest, candidate.date, channel);
   if (channel === 'game') assertGamePublishCandidate(candidate, manifest, priorBriefs);
   else assertMinshengPublishCandidate(candidate, manifest, priorBriefs);
-  console.log(`归档一致性门禁通过：${channel} ${candidate.date}，已比对最近 ${Math.min(7, priorBriefs.length)} 期。`);
+  console.log(`归档一致性门禁通过：${channel} ${candidate.date}，已比对前后受影响的 ${priorBriefs.length} 期。`);
 }

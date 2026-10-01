@@ -1057,3 +1057,38 @@ export function updatePublicationState(root, options = {}) {
     return { apiVersion: STATE_EVIDENCE_API_VERSION, unchanged: false, publication, state };
   });
 }
+
+// A completed local transaction may fail a deployment gate. This narrow reversal
+// preserves its evidence and is refused once any edition file reaches HEAD.
+export function cancelUncommittedPublication(root, options = {}) {
+  const {date,channel,runId,transactionId,backup} = options;
+  requiredChannel(channel); requiredText(runId,'runId'); requiredText(options.reason,'reason');
+  return guardedMutation(root,date,options,async()=>{
+    const {assertUncommittedPublication} = await import('./publication-repository.mjs');
+    const before = await assertUncommittedPublication(root,options);
+    const paths=operationPaths(root,date),state=await readJsonIfExists(paths.state);
+    const current=state?.channels?.[channel];
+    const historical=state?.publicationCancellations?.findLast(item=>item.transactionId===transactionId&&item.runId===runId);
+    const publication=current?.publication||historical;
+    if(publication?.runId!==runId||publication.transactionId!==transactionId)throw operationError('PUBLICATION_CONFLICT','只能撤回本轮未提交事务');
+    const expectedBackup=path.join(paths.directory,`${date}-${channel}-cancelled-${transactionId}`);
+    if(path.resolve(root,backup)!==expectedBackup)throw operationError('PUBLICATION_CONFLICT','撤回备份路径不匹配');
+    const journal=await readJsonIfExists(path.join(expectedBackup,'journal.json'));
+    const data=channel==='game'?'data':'data/minsheng';
+    if(journal?.id!==transactionId||sha256(before)!==journal.indexBeforeSha256||sha256(await readFile(path.join(root,data,'index.json')))!==journal.indexBeforeSha256||
+      await readJsonIfExists(archiveContentPath(root,date,channel))||sha256(await readFile(expectedArtifactPaths(root,date,channel).candidate))!==publication.candidateSha256||
+      sha256(await readFile(path.join(expectedBackup,'body.json')))!==publication.candidateSha256||sha256(await readFile(path.join(expectedBackup,'public.png')))!==publication.pngSha256)throw operationError('PUBLICATION_CONFLICT','撤回文件或备份证据不匹配');
+    if(!current.publication&&historical){
+      if(current.published||current.status!=='researched')throw operationError('PUBLICATION_CONFLICT','撤回后频道已继续推进');
+      return {cancelled:true,unchanged:true,transactionId,cancelledAt:historical.cancelledAt};
+    }
+    const cancelledAt=clockNow(options).toISOString();
+    state.publicationCancellations=[...(state.publicationCancellations||[]),{...publication,date,channel,cancelledAt,reason:options.reason,backup}];
+    const readiness=await readJsonIfExists(paths.readiness);
+    if(readiness?.channels?.[channel]){delete readiness.channels[channel];await writeJson(paths.readiness,readiness);}
+    state.channels[channel]={...current,status:'researched',published:false,publication:null,mirrorStatus:'pending'};
+    state.stage=deriveStage(state);state.lastCheckpointAt=cancelledAt;
+    await writeJson(paths.state,state);
+    return {cancelled:true,transactionId,cancelledAt};
+  });
+}
