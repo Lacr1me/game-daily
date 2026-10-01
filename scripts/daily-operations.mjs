@@ -483,8 +483,9 @@ export async function researchCompleteness(root, date, channel) {
     const current = currentCandidates(entries);
     const candidateIds = new Set(current.keys());
     const target = CONTENT_CANDIDATE_TARGETS[channel]?.[section] || 0;
+    const originalVerificationPendingIds = [...current].filter(([, item]) => item.evidence?.facts?.originalVerificationPending === true).map(([id]) => id);
     const evidenceCandidateIds = new Set([...current].filter(([, item]) => {
-      try { validateCandidateEvidence(item.evidence, date, {channel, section}); return item.evidence.decision === 'accepted'; } catch { return false; }
+      try { validateCandidateEvidence(item.evidence, date, {channel, section}); return item.evidence.decision === 'accepted' && item.evidence.facts?.originalVerificationPending !== true; } catch { return false; }
     }).map(([id]) => id));
     const evidenceComplete = candidateIds.size > 0 && evidenceCandidateIds.size === candidateIds.size;
     const candidateCountComplete = candidateIds.size >= target;
@@ -531,6 +532,7 @@ export async function researchCompleteness(root, date, channel) {
       candidateCount: candidateIds.size,
       candidateIds: [...candidateIds],
       evidenceMissingIds: [...candidateIds].filter(id => !evidenceCandidateIds.has(id)),
+      originalVerificationPendingIds,
       target,
       shortfall: Math.max(0, target - candidateIds.size),
       evidenceComplete,
