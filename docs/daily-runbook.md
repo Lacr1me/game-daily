@@ -18,6 +18,7 @@
 只读审计和规则文档修改不执行以下写入步骤，不读取当日新闻正文来模拟制作。每日实际运行按以下顺序：
 
 1. 计算北京时间日期及本轮 HHMM，确认频道和授权目标，查 Git 状态。先读本节、下一节及结构化摘要：当日 `run-state.json` 的 `stage/channels/runs`、readiness 中本频道路径/哈希、索引中当日记录与最新期号，以及发布轮所需的 health 日期、检查时间和分频道结果。文件不存在就记录不存在，不等于必须重做内容。路径均在 `artifacts/operations/YYYY-MM-DD-*`，由 `operationPaths` 定义；健康结果为 `YYYY-MM-DD-health.json`。
+   发布补跑轮同时运行只读 `node scripts/check-daily-backlog.mjs`，按实际索引起始日期检查昨天及以前的双频道日历缺口、留存研究缺口和未收尾运行；制作轮可加 `--channel=game|minsheng` 查询本频道。输出不是完成证明，也不会初始化历史状态。先发布当天已满足门禁的频道，再按日期推进历史可恢复项，不让跨日后漏发期次从接力中消失；历史租约有效时跳过该日，缺少真实原期证据时保留具体原因，不重复重扫或补造冻结。
 2. 获取共享租约后才执行 init、reconcile、账本、候选、审计、渲染、公开 PNG、发布或健康结果保存。制作 TTL 为 3000 秒，发布补跑为 1500 秒：
 
    `node scripts/daily-run-state.mjs lease-acquire --date=YYYY-MM-DD --run-id=HHMM --ttl=3000`
@@ -133,7 +134,13 @@ Steam 优惠的确定性发现面是 Steam 官方 Specials 默认相关性首个
 
 冻结后的指定商品页备用入口：`node scripts/collect-steam-product.mjs --app-id=ID --out=output/steam/YYYY-MM-DD-ID.json`；原始响应回放使用 `--replay=<JSON>`。只允许指定 Steam 官方商品 GET 和国区简中参数，移除 Cookie/Authorization。多版本价格须匹配对应购买框；截止文字与明确结束时间分别保留，缺失字段不能推算，未取得价格历史不得标史低。年龄门、地区跳转或来源拒绝须保存原因。当前商品页不证明过去促销连续，历史补刊仍需原期证据。
 
+商品页因年龄提示无法读取购买框时，使用 Steam 自身匿名商店购买信息备用入口：`node scripts/collect-steam-offers.mjs --date=YYYY-MM-DD --out=output/steam/YYYY-MM-DD-HHMM-offers.json`，回放使用 `--replay=<JSON>`。该入口只对已绑定冻结并集请求官方 `IStoreBrowseService/GetItems` 的公开 GET，固定 CN/简中，无 key、Cookie、Authorization 或年龄表单；保留原始响应、真实观察时间和冻结哈希。逐项核对 appId、同一购买包、人民币整数分与显示价格、折扣金额、唯一明确 `discount_end_date`；缺失或矛盾保持 unresolved。实际优惠须持续至本期当天结束，未核价格历史只标今日特惠。持租约复制证据并记账，再检查全量覆盖；HTTP 200 或返回 50 项不等于覆盖通过。历史交叉复核仍须绑定原期国区价格，不能将当前响应冒充原期响应。
+
+2026-10-01 用户在修复聊天 `01a0f4d0-e4a3-7cf1-b58a-fb16f4f704e9` 明确回复“允许今天一次晚采（推荐）”。仅这一天可用同日规范 `YYYY-MM-DD-steam-late-authorization.json` 的原话、聊天引用、真实授权记录/采集时间、原始清单及哈希，经 `steam-freeze --late-authorization-file=<该文件>` 创建一次冻结；实际冻结时间由脚本生成。之后复用该冻结，不新增第二次发现；其他日期继续执行08:00门禁，原有2026-09-21单次授权仅用于历史原证据复核。
+
 若 08:00 后仍缺冻结文件，只能从已保存的截至 08:00 的当天发现证据恢复原清单，并保留实际恢复时间；无该证据则标记游戏阻塞，不能重新抓动态首屏、冒称按时冻结或伪造时间，民生继续独立推进。
+
+Steam 研究摘要会独立检查冻结集合中的每项决定、有效候选和历史文件哈希，并返回 `frozenCoverageComplete/frozenCoverageError/unresolvedAppIds`。多次 unavailable 只证明访问尝试，不能替代冻结商品的接受或有依据淘汰，也不能把整组未决项目标成研究完成。
 
 账本允许状态为：
 
@@ -218,6 +225,18 @@ Steam 优惠的确定性发现面是 Steam 官方 Specials 默认相关性首个
 8. 保存健康检查或完成 11:31 补跑后，外部管理员日志仅在已有该载荷外发授权且环境允许时调用 `node scripts/sync-admin-logs.mjs --kind=maintenance --date=YYYY-MM-DD --push`。未授权、失败或被审批阻止只记录 warning/待办，保留本地 operation 证据，之后在获准范围内幂等补传；不回滚已健康日报。
 9. 最后按“状态字段与完成语义”结束当前 run 并释放租约。结果分别报告本轮执行、各频道研究缺口/证据、候选、ready、本地归档、Pages、线上 PNG/健康、TLS、镜像及外发待办。研究轮结束不能写成已发送，失败频道保留上一期有效内容。
 
+## 每日发布持续授权与验收
+
+2026-09-11，用户在任务 `01a09006-50b3-7c32-81bf-c5d71040f99a` 先明确要求执行当天提交推送、Pages 上线及现有 1 条网站更新日志同步，随后要求“确保日报每天都能正常发布”。据此，现有发布任务 `11-10` 已保存持续的每日发布要求：在原定时段及门禁内，将核验合格的当日日报产物提交并非强制推送至 `https://github.com/Lacr1me/game-daily.git` 的 `main`，触发现有 Pages 和同日 `website_change` 幂等同步。无需因日期变化重复索取同一范围的发布授权。
+
+该授权不包含无关工作区修改、任意代码/云配置变更、强制推送、全局权限放宽或其他外发载荷。环境审批仍有效；需要审批时在请求中说明上述用户要求、目标仓库、实际提交 SHA、文件范围和既有工作流副作用。若仍被拒绝，保留拒绝理由并按 `PERMISSION_REQUIRED` 失败收尾，不能改用其他传输路径绕过拒绝或报告已发送。新任务中的持续授权文字能保留用户意图，不等于预先保证宿主会批准未来操作。
+
+2026-09-11 的实际恢复已核实：`fe0400aeccbfc5854bb214dd48475bb3d185d1ac` 推送成功，Pages 运行 `34590024410` 成功，现有日志同步 1 条。`output/playwright/release-fe0400a-recovery/live-acceptance.json` 记录双频道最新入口、当天/历史期、日期切换、JSON/PNG 与门户共九组通过；`artifacts/operations/2026-09-11-health.json` 的 18:38 北京时间复核为 `healthy=true`、`degraded=false`，恢复轮已结束并释放租约。只表示当天验收通过，不能替代下一天的证明。
+
+采集范例为 `output/playwright/release-fe0400a-recovery/collect-live.mjs`，加载完成后的民生截图范例为同目录 `capture-loaded.mjs`。后续参考时必须使用当日日期、实际部署 SHA 与新的输出目录，并重新从真实 GitHub API、浏览器和 HTTP 获取数据；不得复用范例硬编码的 09-11 目标或旧截图。民生加载遮罩通过 `opacity: 0` 和 `pointer-events: none` 隐藏，页面可用性检查应核对此真实机制。
+
+保持现有三个 cron 的时间、模型、推理强度、项目与失败通知策略；11:31 在原发布任务内复查并恢复，不额外创建 heartbeat。正常生产继续按下列发送成功判定收尾。电脑开机、联网且 Codex 桌面应用运行仍是本地调度前提；不能据一次手动修复声称后续无人值守已全部验收。
+
 ## 发送成功判定
 
 “本轮正常结束”“某频道就绪”“某频道本地已归档”分别按相应证据报告；“当天双频道发送成功”必须同时满足：
@@ -254,6 +273,8 @@ node scripts/verify-build.mjs
 ```
 
 模块追加：留言/审核/Supabase 用 `node scripts/test-messages.mjs`；管理员日志用 `node scripts/test-admin-logs.mjs`；离线编辑器另用 `node scripts/test-offline-homepage-editor.mjs`。独立离线编辑器仅修改其独立文件时可只跑独立测试，触及共享站点再加基础链。
+
+历史接力与 Steam 研究覆盖改动追加 `node scripts/test-daily-backlog.mjs`、`node scripts/test-steam-research-coverage.mjs`；只读历史查询使用 `node scripts/check-daily-backlog.mjs`，已有完整归档仍由健康检查验证真实 JSON/PNG 和页面。
 
 状态/证据改动追加 `node scripts/test-state-evidence.mjs`、`node scripts/test-daily-preflight.mjs`；C 发布/健康集成按其报告运行发布恢复、完整预检集成、健康证据及七期测试。所有 B 测试默认保留明确命名的隔离夹具。构建脚本仍含清理语句；本轮仅在 dist 与源 data/.pending 均不存在的新鲜隔离根运行，不借 Node/Python 绕过批量删除边界；已有产物需保留，另建隔离根验证。
 

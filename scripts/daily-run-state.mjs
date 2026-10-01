@@ -85,6 +85,8 @@ if (command === "init") {
     date,
     runId: args["run-id"],
     sourceUrl: args["source-url"],
+    lateAuthorizationFile: args['late-authorization-file'],
+    frozenAt: args['frozen-at'],
     appIds: args["app-ids"],
     extraAppIds: args["extra-app-ids"]
   }), null, 2));

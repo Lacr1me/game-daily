@@ -217,6 +217,14 @@ async function testAuditMerge() {
   assert(merged.runs.length === 2, "来源审计必须保留两次运行记录");
   assert(merged.status === "complete" && merged.categories.domestic.finalChinaCount === 10, "合并审计必须采用最后一次最终计数");
   assert(merged.categories.domestic.attemptedChinaSources[0] === "新华网", "合并审计必须写标准来源名称");
+  const revised = makeAudit("complete", { domestic: 10, international: 10, tech: 8, ai: 5, metrics: 6 });
+  revised.categories.tech.finalExternalCount = 2;
+  revised.categories.tech.rejectionReasons = ["复核撤销两条过期国内候选"];
+  revised.categories.tech.shortageReason = "国内候选复核后仅8条，原始机构来源补2条";
+  await writeFile(path.join(directory, "2026-08-25-1130-source-audit.json"), JSON.stringify(revised), "utf8");
+  const corrected = await mergeSourceAudits(root, "2026-08-25");
+  assert(corrected.categories.tech.usableChinaCandidates === 8, "撤销候选后可用数必须采用最新快照，不能保留历史峰值");
+  assert(corrected.categories.tech.finalExternalCount === 2 && corrected.runs.length === 3, "补差额时保留新计数和历史审计轨迹");
 }
 
 async function testRunLease() {

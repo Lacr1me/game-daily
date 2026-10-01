@@ -13,6 +13,10 @@ export const CONTENT_CANDIDATE_TARGETS = Object.freeze({
 });
 export const EVIDENCE_COMPLETE_SECTIONS = Object.freeze(new Set(["game/packs", "game/mods"]));
 export const STEAM_DISCOVERY_FREEZE_EFFECTIVE_DATE = "2026-08-27";
+const STEAM_LATE_AUTHORIZATIONS = Object.freeze({
+  '2026-09-21': '允许',
+  '2026-10-01': '允许今天一次晚采（推荐）'
+});
 
 export function operationPaths(root, date) {
   assertDate(date);
@@ -29,6 +33,7 @@ export function operationPaths(root, date) {
 }
 
 async function freezeSteamDiscoveryUnlocked(root, options = {}) {
+  if (options.frozenAt !== undefined) throw operationError('FREEZE_LATE', '不能指定冻结时间；frozenAt 必须由实际运行时生成');
   const date = options.date || beijingDate();
   const runId = requiredText(options.runId, "runId");
   const paths = operationPaths(root, date);
@@ -62,7 +67,15 @@ async function freezeSteamDiscoveryUnlocked(root, options = {}) {
     }
     return existing;
   }
-  if (options.frozenAt && options.frozenAt !== snapshot.frozenAt) throw operationError('FREEZE_LATE', '不能覆盖实际冻结时间；迟到恢复需要另行核验已保存发现证据');
+  if (options.lateAuthorizationFile) {
+    if (beijingDate(clockNow(options)) !== date) throw operationError('FREEZE_AUTH_INVALID', '晚采授权只能在授权当天创建冻结');
+    const expected = path.join(paths.directory, `${date}-steam-late-authorization.json`);
+    if (path.resolve(root, options.lateAuthorizationFile) !== expected) throw operationError('FREEZE_AUTH_INVALID', '晚采授权必须使用同日规范证据路径');
+    const bytes = await readFile(expected);
+    const authorization = JSON.parse(bytes);
+    assertSteamLateAuthorization(authorization, snapshot);
+    snapshot.lateAuthorization = { file: path.relative(root, expected).replaceAll('\\', '/'), sha256: sha256(bytes), approvalRecordedAt: authorization.approvalRecordedAt, collectedAt: authorization.collectedAt };
+  }
   assertValidSteamDiscovery(snapshot, date);
   await writeJson(paths.steamDiscovery, snapshot);
   const state = await readJsonIfExists(paths.state);
@@ -72,6 +85,7 @@ async function freezeSteamDiscoveryUnlocked(root, options = {}) {
       sha256: sha256(Buffer.from(`${JSON.stringify(snapshot, null, 2)}\n`, "utf8")),
       discoveredCount: snapshot.discoveredCount,
       frozenAt: snapshot.frozenAt,
+      ...(snapshot.lateAuthorization ? { lateAuthorization: snapshot.lateAuthorization } : {}),
       runId
     };
     state.lastCheckpointAt = new Date().toISOString();
@@ -476,11 +490,40 @@ export async function researchCompleteness(root, date, channel) {
     const candidateCountComplete = candidateIds.size >= target;
     let frozenDiscoveryComplete = true;
     let frozenDiscoveryError = null;
+    let frozenCoverageComplete = true;
+    let frozenCoverageError = null;
+    let unresolvedAppIds = [];
     if (channel === 'game' && section === 'deals' && date >= STEAM_DISCOVERY_FREEZE_EFFECTIVE_DATE) {
-      try { await inspectSteamDiscovery(root, date); }
-      catch (error) { frozenDiscoveryComplete = false; frozenDiscoveryError = { code: error.code || 'FREEZE_INVALID', message: error.message }; }
+      try {
+        const snapshot = await inspectSteamDiscovery(root, date);
+        const steamEntries = entries.filter(entry => canonicalSourceId(entry.sourceId || entry.source) === 'steam-cn');
+        const steamCandidates = currentCandidates(steamEntries);
+        const decisions = new Map(steamEntries.flatMap(entry => (entry.candidateEvidence || []).map(evidence => [evidence.id, evidence])));
+        unresolvedAppIds = [...snapshot.appIds, ...(snapshot.extraAppIds || [])].filter(id => {
+          const evidence = decisions.get(id);
+          try {
+            validateCandidateEvidence(evidence, date, { channel, section });
+            return steamCandidates.has(id) !== (evidence.decision === 'accepted');
+          } catch { return true; }
+        });
+        try {
+          // Use the same ledger/freeze/file checks as publication, even before a candidate exists.
+          await assertGameDealCoverage(root, date, {
+            date, deals: [...steamCandidates.keys()].map(id => ({ url: `https://store.steampowered.com/app/${id}/` }))
+          });
+        } catch (error) {
+          frozenCoverageComplete = false;
+          frozenCoverageError = { code: error.code || 'STEAM_COVERAGE_INVALID', message: error.message };
+        }
+      }
+      catch (error) {
+        frozenDiscoveryComplete = false;
+        frozenDiscoveryError = { code: error.code || 'FREEZE_INVALID', message: error.message };
+        frozenCoverageComplete = false;
+        frozenCoverageError = frozenDiscoveryError;
+      }
     }
-    const sectionComplete = !missing.length && !incomplete.length && candidateCountComplete && evidenceComplete && frozenDiscoveryComplete;
+    const sectionComplete = !missing.length && !incomplete.length && candidateCountComplete && evidenceComplete && frozenDiscoveryComplete && frozenCoverageComplete;
     sections[section] = {
       complete: sectionComplete,
       missing: missing.map((id) => SOURCE_REGISTRY.sources[id].label),
@@ -492,7 +535,10 @@ export async function researchCompleteness(root, date, channel) {
       shortfall: Math.max(0, target - candidateIds.size),
       evidenceComplete,
       frozenDiscoveryComplete,
-      frozenDiscoveryError
+      frozenDiscoveryError,
+      ...(channel === 'game' && section === 'deals' && date >= STEAM_DISCOVERY_FREEZE_EFFECTIVE_DATE ? {
+        frozenCoverageComplete, frozenCoverageError, unresolvedAppIds
+      } : {})
     };
     complete &&= sectionComplete;
   }
@@ -547,6 +593,7 @@ export async function assertResearchComplete(root, date, channel) {
           `未完成 ${section.incomplete.join("、") || "无"}`,
           `候选 ${section.candidateCount}/${section.target}`
         ];
+        if (section.frozenCoverageComplete === false) blockers.push(`Steam冻结覆盖未闭环：${section.unresolvedAppIds?.join('、') || section.frozenCoverageError?.message}`);
         if (!section.evidenceComplete) blockers.push("逐项证据未闭环");
         if (!section.frozenDiscoveryComplete) blockers.push("Steam发现面未冻结");
         return `${name}: ${blockers.join("; ")}`;
@@ -607,7 +654,7 @@ function mergeAuditEntries(entries) {
   const latest = entries.at(-1);
   return {
     attemptedChinaSources: [...new Set(entries.flatMap((entry) => entry.attemptedChinaSources || []).map(canonicalSourceLabel))],
-    usableChinaCandidates: Math.max(0, ...entries.map((entry) => Number.isInteger(entry.usableChinaCandidates) ? entry.usableChinaCandidates : 0)),
+    usableChinaCandidates: latest.usableChinaCandidates,
     rejectedChinaCandidates: Math.max(0, ...entries.map((entry) => Number.isInteger(entry.rejectedChinaCandidates) ? entry.rejectedChinaCandidates : 0)),
     rejectionReasons: [...new Set(entries.flatMap((entry) => entry.rejectionReasons || []).filter(Boolean))],
     shortageReason: [...entries].reverse().find((entry) => String(entry.shortageReason || "").trim())?.shortageReason || "",
@@ -713,7 +760,8 @@ function assertValidSteamDiscovery(snapshot, date) {
   if (!snapshot || snapshot.date !== date || snapshot.frozen !== true) throw new Error(`${date} 缺少已冻结的 Steam 发现面`);
   if (!isHttps(snapshot.sourceUrl)) throw new Error(`${date} Steam冻结发现面缺少 HTTPS 来源`);
   const frozenAt = Date.parse(snapshot.frozenAt);
-  if (!Number.isFinite(frozenAt) || frozenAt < Date.parse(`${date}T00:00:00+08:00`) || frozenAt > Date.parse(`${date}T08:00:00+08:00`)) throw operationError('FREEZE_LATE', `${date} 冻结时间不是当天 08:00 前`);
+  const midnight = Date.parse(`${date}T00:00:00+08:00`);
+  if (!Number.isFinite(frozenAt) || frozenAt < midnight || frozenAt >= midnight + 86400000 || (frozenAt > Date.parse(`${date}T08:00:00+08:00`) && !(STEAM_LATE_AUTHORIZATIONS[date] && snapshot.lateAuthorization))) throw operationError('FREEZE_LATE', `${date} 冻结时间不是当天 08:00 前，且无匹配的一次性晚采授权`);
   if (!Array.isArray(snapshot.appIds) || !Array.isArray(snapshot.extraAppIds || []) || [...snapshot.appIds, ...(snapshot.extraAppIds || [])].some(id => !/^\d{3,}$/.test(String(id)))) throw operationError('FREEZE_INVALID', '冻结 appId 身份无效');
   const appIds = normalizeSteamIds(snapshot.appIds);
   const extraAppIds = normalizeSteamIds(snapshot.extraAppIds || []);
@@ -722,6 +770,16 @@ function assertValidSteamDiscovery(snapshot, date) {
     throw new Error(`${date} Steam冻结发现面计数无效`);
   }
   return snapshot;
+}
+
+function assertSteamLateAuthorization(authorization, snapshot) {
+  const fail = () => { throw operationError('FREEZE_AUTH_INVALID', '一次性晚采授权的日期、用户原话、时间顺序或发现面身份不匹配'); };
+  const approvalText = STEAM_LATE_AUTHORIZATIONS[snapshot.date];
+  if (!approvalText || authorization?.schemaVersion !== 1 || authorization.date !== snapshot.date || authorization.runId !== snapshot.runId || authorization.scope !== 'steam-late-discovery-once' || authorization.approvalText !== approvalText || !String(authorization.approvalReference || '').trim()) fail();
+  if (snapshot.date === '2026-10-01' && !String(authorization.approvalReference).includes('01a0f4d0-e4a3-7cf1-b58a-fb16f4f704e9')) fail();
+  const times = [authorization.approvalRecordedAt, authorization.collectedAt, snapshot.frozenAt].map(value => Date.parse(value));
+  if (times.some(time => !Number.isFinite(time) || beijingDate(new Date(time)) !== snapshot.date) || times[0] > times[1] || times[1] > times[2]) fail();
+  if (authorization.sourceUrl !== snapshot.sourceUrl || !Array.isArray(authorization.appIds) || !Array.isArray(authorization.extraAppIds) || !sameSet(new Set(authorization.appIds.map(String)), new Set(snapshot.appIds.map(String))) || !sameSet(new Set(authorization.extraAppIds.map(String)), new Set(snapshot.extraAppIds.map(String)))) fail();
 }
 
 function latestTerminalEntry(entries, sourceId) {
@@ -817,7 +875,6 @@ export function freezeSteamDiscovery(root, options = {}) { return guardedMutatio
 export function createReadyProof(root, options = {}) { return guardedMutation(root, options.date || beijingDate(), options, () => createReadyProofUnlocked(root, options)); }
 export function reconcileRunState(root, date, options = {}) { return guardedMutation(root, date, options, () => reconcileRunStateUnlocked(root, date, options)); }
 export function mergeSourceAudits(root, date, options = {}) { return guardedMutation(root, date, options, () => mergeSourceAuditsUnlocked(root, date)); }
-
 export function correctUnpublishedIssue(root, options) {
   const {date, channel, issue} = options;
   return guardedMutation(root, date, options, async () => {
@@ -898,6 +955,16 @@ export async function inspectSteamDiscovery(root, date) {
   const identity = state?.steamDiscovery;
   if (state?.date !== date || !identity?.sha256) throw operationError('FREEZE_UNBOUND', '冻结文件缺少状态中的同日哈希绑定');
   if (path.resolve(root, identity.file || '') !== paths.steamDiscovery || sha256(await readFile(paths.steamDiscovery)) !== identity.sha256 || identity.runId !== snapshot.runId || identity.frozenAt !== snapshot.frozenAt || identity.discoveredCount !== snapshot.discoveredCount) throw operationError('FREEZE_CHANGED', '冻结文件与状态身份/哈希不匹配，保留原证据');
+  if (snapshot.lateAuthorization) {
+    const binding = snapshot.lateAuthorization;
+    const expected = path.join(paths.directory, `${date}-steam-late-authorization.json`);
+    if (path.resolve(root, binding.file || '') !== expected || JSON.stringify(identity.lateAuthorization) !== JSON.stringify(binding)) throw operationError('FREEZE_AUTH_CHANGED', '晚采授权与状态身份不匹配');
+    const bytes = await readFile(expected);
+    if (sha256(bytes) !== binding.sha256) throw operationError('FREEZE_AUTH_CHANGED', '晚采授权证据哈希已变化');
+    const authorization = JSON.parse(bytes);
+    assertSteamLateAuthorization(authorization, snapshot);
+    if (binding.approvalRecordedAt !== authorization.approvalRecordedAt || binding.collectedAt !== authorization.collectedAt) throw operationError('FREEZE_AUTH_CHANGED', '晚采授权时间身份不匹配');
+  }
   return snapshot;
 }
 export function archiveContentPath(root, date, channel) {
