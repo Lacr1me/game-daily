@@ -242,6 +242,10 @@
 }
 
 /* Deep cobalt game identity. */
+/* Static capture has six complete rows; web keeps its scrollable full list. */
+.png-capture .deal-panel{height:auto;min-height:0}
+.png-capture .deal-list-shell{flex:none;max-height:none}
+.png-capture .deal-list{height:auto;overflow:hidden}
 .hero h1 em{color:var(--game);background:linear-gradient(112deg,var(--game-deep) 0%,var(--game) 50%,var(--game-highlight) 100%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .live-dot{background:var(--game-highlight);box-shadow:0 0 0 5px #174a7e19}
 @media(min-width:1800px){.live-dot{box-shadow:0 0 0 7px #174a7e19}}

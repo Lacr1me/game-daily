@@ -281,6 +281,7 @@ node scripts/verify-build.mjs
 状态/证据改动追加 `node scripts/test-state-evidence.mjs`、`node scripts/test-daily-preflight.mjs`；C 发布/健康集成按其报告运行发布恢复、完整预检集成、健康证据及七期测试。所有 B 测试默认保留明确命名的隔离夹具。构建脚本仍含清理语句；本轮仅在 dist 与源 data/.pending 均不存在的新鲜隔离根运行，不借 Node/Python 绕过批量删除边界；已有产物需保留，另建隔离根验证。
 
 页面采集入口改动追加 `node --test scripts/test-collect-live-page-evidence.mjs`；Steam 备用采集入口改动追加 `node --test scripts/test-collect-steam-discovery.mjs scripts/test-collect-steam-product.mjs`。浏览器回归使用本机隔离服务器，真实生产网络与环境审批另行实测。
+游戏导出布局改动追加 `node scripts/test-game-deal-export.mjs --html=<本次统一渲染生成的游戏HTML绝对路径>`，核验桌面和移动端成图前六条完整可见、网页保留全部优惠。随后重新运行统一渲染器并检查实际 3840px PNG，不能以 DOM 边界检查替代原图验收。
 
 频道内容门禁：
 
