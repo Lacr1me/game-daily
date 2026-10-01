@@ -16,6 +16,7 @@
     "cri": { "label": "国际在线", "aliases": [] },
     "provincial-authority": { "label": "省级党媒／政府新闻发布平台", "aliases": ["省级党媒/政府新闻发布平台"] },
     "stdaily": { "label": "中国科技网", "aliases": ["科技日报", "科技日报／中国科技网"] },
+    "sciencenet": { "label": "科学网", "aliases": ["中国科学报"] },
     "official-market": { "label": "国内官方机构或交易所", "aliases": ["国内官方机构及交易所"] },
     "china-finance-media": { "label": "国内权威财经媒体", "aliases": [] },
     "china-game-media": { "label": "国内游戏媒体", "aliases": ["中国游戏媒体"] },
@@ -51,7 +52,7 @@
     "minsheng": {
       "domestic": ["external-news-authority"],
       "international": ["external-news-authority"],
-      "tech": ["external-news-authority", "external-primary-technology"],
+      "tech": ["sciencenet", "external-news-authority", "external-primary-technology"],
       "ai": ["external-news-authority", "external-primary-technology"],
       "metrics": ["external-market"]
     }

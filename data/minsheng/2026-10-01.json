@@ -1,0 +1,463 @@
+{
+  "date": "2026-10-01",
+  "issue": 41,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期四",
+  "lunarDate": "农历丙午年八月廿一",
+  "cutoff": "2026-10-01 12:47（北京时间）",
+  "productionTime": "2026-10-01 12:47（北京时间）",
+  "metricsCutoff": "2026-10-01 09:54（北京时间）",
+  "sources": [
+    "新华网",
+    "中国雄安官网",
+    "国际在线",
+    "北京日报",
+    "中国新闻网",
+    "央广网",
+    "人民网",
+    "央视网",
+    "光明网",
+    "科学网",
+    "中国科技网"
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "上海市发展和改革委员会",
+    "新华网",
+    "国家外汇管理局"
+  ],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "kind": "ms-2026-10-01-domestic-september-pmi-rebound",
+        "title": "9月三大PMI指数重返扩张区间",
+        "summary": "国家统计局与中国物流与采购联合会发布9月数据：制造业PMI为50.1%，非制造业商务活动指数50.2%，综合PMI产出指数50.7%，经济景气水平有所回升。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 17:04",
+        "url": "https://www.news.cn/fortune/20260930/6bad19774bae42358b4c0e1eacabda6c/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "kind": "ms-2026-10-01-domestic-holiday-home-safety-checklist",
+        "title": "国庆离家前检查燃气、水电等风险点",
+        "summary": "消防人员提醒，国庆离家前关闭燃气、水路相关阀门，拔掉储水式热水器和闲置充电器等电源。冰箱可保留通电，但应清空易腐食材，按设备情况做好安全检查。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 16:41",
+        "url": "https://www.news.cn/20260930/c0dae85a82d74a9c845dbda791024088/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "kind": "ms-2026-10-01-domestic-xiongan-long-term-care-insurance",
+        "title": "雄安长期护理保险10月1日起实施",
+        "summary": "雄安新区长期护理保险细则10月1日起实施，初期覆盖职工、退休和灵活就业等群体。持续失能六个月以上可申请评估，重度失能人员按等级获得居家护理服务保障。",
+        "source": "中国雄安官网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 16:03",
+        "url": "https://www.xiongan.gov.cn/20260930/13a0d0c4f0864f42a1851bb12f78eee3/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "kind": "ms-2026-10-01-domestic-livelihood-essay-published",
+        "title": "《求是》刊发民生建设重要论述节录",
+        "summary": "《求是》2026年第19期刊发加强普惠性、基础性、兜底性民生建设相关重要论述节录，覆盖就业、收入分配、社保、教育、医疗和住房，内容整理自此前不同时间的讲话。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 15:37",
+        "url": "https://www.news.cn/20260930/fc413d9899f54103819388bcb38f2909/c.html"
+      },
+      {
+        "id": "domestic-05",
+        "kind": "ms-2026-10-01-domestic-yangtze-rail-holiday-travel",
+        "title": "长三角铁路迎来国庆首波客流高峰",
+        "summary": "中国铁路上海局集团预计9月30日发送旅客376万人次，计划增开513列旅客列车并安排动车组重联。报道提示热门方向余票紧张，旅客应提前安排进站及换乘时间。",
+        "source": "国际在线",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 11:14",
+        "url": "https://news.cri.cn/20260930/7b8b5adc-d9ed-43a7-b730-5e02cf93497d.html"
+      },
+      {
+        "id": "domestic-06",
+        "kind": "ms-2026-10-01-domestic-beijing-holiday-traffic",
+        "title": "北京国庆首日进出京客流预计499.1万人次",
+        "summary": "北京交通部门预计国庆首日进出京客流达499.1万人次，10月1日9至11时出行压力突出。假期安排景区公交接驳、重点地铁夜间延时及临客，方便居民错峰出行。",
+        "source": "北京日报",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 08:47",
+        "url": "https://www.beijing.gov.cn/fuwu/bmfw/sy/jrts/202609/t20260930_4886476.html"
+      },
+      {
+        "id": "domestic-07",
+        "kind": "ms-2026-10-01-domestic-october-rules",
+        "title": "10月新规涉及用药、儿童座椅和外卖",
+        "summary": "10月1日起新规实施：未成年人麻精药品处方原则上需监护人书面同意，抢救等紧急情况可先开具；儿童座椅电子功能有新规范，广东外卖未按规定封口或封口破损可拒收。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 07:25",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-30/10705959.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "kind": "ms-2026-10-01-domestic-national-day-travel-forecast",
+        "title": "国庆七天全社会跨区域流动预计21.3亿人次",
+        "summary": "交通部门预计国庆七天全社会跨区域人员流动达21.3亿人次，各地加强充电查询与救援、热门干线夜间高铁及重点群体售票乘车服务，疏堵保畅并完善假期运输保障。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 04:41",
+        "url": "https://news.cnr.cn/dj/20260930/t20260930_527829538.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "kind": "ms-2026-10-01-domestic-mortgage-interest-subsidy",
+        "title": "符合条件的首套新房贷可享贴息",
+        "summary": "财政部等部门通知，10月1日起符合条件的新发放首套商业住房贷款可享贴息，置换存量贷款不纳入；房屋面积、价格及计息本金设上限，年贴息一个百分点、最长五年。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30",
+        "url": "https://paper.people.com.cn/rmrb/pc/content/202609/30/content_30183828.html"
+      },
+      {
+        "kind": "ms-2026-10-01-domestic-service-consumption-shift",
+        "title": "服务消费向养老托育等生活场景延伸",
+        "summary": "人民日报观察服务消费由文旅、餐饮延伸至养老托育、家政等生活场景。受访专家建议补齐普惠供给、完善行业标准与消费者权益保障，让需求增长与服务质量更好衔接。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30",
+        "url": "https://paper.people.com.cn/rmrb/pc/content/202609/30/content_30183804.html",
+        "id": "domestic-10"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "kind": "ms-2026-10-01-international-australia-august-cpi",
+        "title": "澳大利亚8月CPI同比上涨4%",
+        "summary": "据澳大利亚统计局9月30日公布的数据，8月CPI同比上涨4%，较7月扩大0.5个百分点；住房与交通为主要推动因素，衡量基础通胀的截尾均值通胀率保持3.6%。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 19:39",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-30/10706465.shtml"
+      },
+      {
+        "kind": "ms-2026-10-01-international-cambodia-minimum-wage-2027",
+        "title": "柬埔寨相关制造业最低月薪明年升至212美元",
+        "summary": "柬埔寨9月30日确定，纺织、服装、制鞋及旅行用品等行业最低月薪将从210美元升至212美元，2027年1月1日生效。该标准针对指定行业，并非全国所有岗位的统一工资。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 17:34",
+        "url": "https://www.chinanews.com.cn/aseaninfo/2026/09-30/10706369.shtml",
+        "id": "international-02"
+      },
+      {
+        "id": "international-03",
+        "kind": "ms-2026-10-01-international-china-urges-iran-us-dialogue",
+        "title": "中方希望伊朗与美国尽早重启对话",
+        "summary": "外交部发言人郭嘉昆在9月30日例行记者会上表示，中方支持通过政治外交途径化解争端，希望伊朗和美国坚持和平选择，回归相关谅解备忘录并尽早重启对话谈判。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 15:58",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-30/10706252.shtml"
+      },
+      {
+        "id": "international-04",
+        "kind": "ms-2026-10-01-international-morocco-first-female-pm",
+        "title": "曼苏里获任摩洛哥首位女首相",
+        "summary": "据摩洛哥王室9月29日公报，国王穆罕默德六世任命真实性与现代党领导人法蒂玛·宰赫拉·曼苏里组建新政府；该党在众议院选举中赢得395席中的97席，排名第一。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 13:41",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-30/10706114.shtml"
+      },
+      {
+        "id": "international-05",
+        "kind": "ms-2026-10-01-international-middle-east-security-framework-expert",
+        "title": "中东学者提出长期区域安全机制诉求",
+        "summary": "受访中东学者建议通过外交途径建立包容的区域安全框架，强调地区各方参与及巴勒斯坦问题两国方案。相关内容属于专家判断，不能视为各国已达成的新安全协议。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 11:55",
+        "url": "https://news.cctv.com/2026/09/30/ARTIKOFl6N0Ye1FGyAGPSHGv260930.shtml"
+      },
+      {
+        "id": "international-06",
+        "kind": "ms-2026-10-01-international-china-japan-joint-statement-anniversary",
+        "title": "中方敦促日方回归四个政治文件初心",
+        "summary": "在《中日联合声明》发表54周年之际，外交部发言人郭嘉昆9月29日回应有关提问，敦促日本当政者切实反思纠错，以实际行动回归中日四个政治文件的初心和原点。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 10:17",
+        "url": "https://world.gmw.cn/2026-09/30/content_39029074.htm"
+      },
+      {
+        "id": "international-07",
+        "kind": "ms-2026-10-01-international-italy-fuel-price-cap",
+        "title": "多家油企在意大利采取燃油限价措施",
+        "summary": "Q8宣布10月1日起在意大利实施一个月汽油限价，未披露具体水平；埃尼和SOCAR自9月28日起，对旗下加油站柴油和汽油分别设置每升2.19和1.99欧元上限。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 08:54",
+        "url": "https://world.people.com.cn/n1/2026/0930/c1002-40808042.html"
+      },
+      {
+        "id": "international-08",
+        "kind": "ms-2026-10-01-international-us-airfare-ten-year-high",
+        "title": "美国传统假期境内机票价格上涨",
+        "summary": "央视新闻报道，航空燃料价格上涨推动美国11月末传统假日期间境内航班票价同比上涨约31%，达到十年来高点；相关价格反映未来假期预订，不能当作全部航班均价。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 08:48",
+        "url": "https://news.cnr.cn/sq/20260930/t20260930_527829684.shtml"
+      },
+      {
+        "id": "international-09",
+        "kind": "ms-2026-10-01-international-france-q2-debt",
+        "title": "法国二季度公共债务占GDP比重升至119%",
+        "summary": "法国国家统计与经济研究所9月29日公布，二季度末公共债务达35955亿欧元，较上季增加596亿欧元，占GDP的119%；这些为季度统计值，并非实时债务报价。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 07:40",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-30/10705957.shtml"
+      },
+      {
+        "id": "international-10",
+        "kind": "ms-2026-10-01-international-brazil-unemployment",
+        "title": "巴西6至8月失业率降至5.3%",
+        "summary": "巴西地理统计局9月29日公布，6至8月滚动三个月失业率为5.3%，低于去年同期，为有相关统计以来同期最低。报道同时指出，前八月正式就业岗位新增规模同比减少。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 07:16",
+        "url": "https://www.chinanews.com.cn/gj/2026/09-30/10705956.shtml"
+      }
+    ],
+    "tech": [
+      {
+        "kind": "ms-2026-10-01-tech-csns2-building-completion",
+        "title": "中国散裂中子源二期建安工程竣工",
+        "summary": "中国散裂中子源二期五栋建筑完成建安施工，工程于9月28日竣工。在一期装置持续运行的区域内完成扩建，为后续工艺设备安装、调试和装置建设提供基础。",
+        "source": "科学网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 22:05",
+        "url": "https://news.sciencenet.cn/htmlnews/2026/9/572395.shtm",
+        "id": "tech-01"
+      },
+      {
+        "kind": "ms-2026-10-01-tech-three-gorges-pilot-excavation",
+        "title": "三峡新通道先行开挖区完成爆破开挖",
+        "summary": "9月30日三峡枢纽新通道先行开挖区完成全部爆破开挖。该区兼作施工准备试验工程，积累岩体损伤、边坡支护与卸荷实测数据，为线路迁改和后续船闸主体施工提供依据。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 20:06",
+        "url": "https://www.xinhuanet.com/20260930/10c05b85401e48879da666f4ed3a196d/c.html",
+        "id": "tech-02"
+      },
+      {
+        "kind": "ms-2026-10-01-tech-musico-hong-kong-images",
+        "title": "港科大发布天韵相机首批香港遥感影像",
+        "summary": "港科大发布由天韵相机拍摄的首批香港遥感影像。载荷完成主要在轨测试和校准，进入常规科学运行；本次为处理后的一级数据，温室气体浓度反演及精度验证仍在推进。",
+        "source": "科学网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 18:25",
+        "url": "https://news.sciencenet.cn/htmlnews/2026/9/572379.shtm",
+        "id": "tech-03"
+      },
+      {
+        "id": "tech-04",
+        "kind": "ms-2026-10-01-tech-smile-science-operation",
+        "title": "中欧“微笑”卫星转入科学运行阶段",
+        "summary": "中国科学院与欧洲空间局联合研制的“微笑”卫星通过在轨测试总结评审，转入科学运行阶段，并发布四台科学载荷的首批观测图像与数据；本次进展为在轨运行，非再次发射。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 15:03",
+        "url": "https://www.news.cn/tech/20260930/c01409852263405cbbc3c49c5f6b786b/c.html"
+      },
+      {
+        "id": "tech-05",
+        "kind": "ms-2026-10-01-tech-cas-frontier-breakthrough-plan",
+        "title": "中科院科学前沿极限突破计划启动",
+        "summary": "中国科学院9月29日启动科学前沿极限突破计划，围绕极宏观、极微观、极端条件和极综合交叉部署首批项目，以重大装置开放联用及人工智能辅助科研推进基础研究。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 15:00",
+        "url": "https://www.news.cn/liangzi/20260930/cc11f587312943139c72765df3a5b766/c.html"
+      },
+      {
+        "id": "tech-06",
+        "kind": "ms-2026-10-01-tech-singlebeam-optical-storage",
+        "title": "单光束光存储让单点拥有1024种状态",
+        "summary": "上海理工大学团队研发单光束多维光存储技术，成果发表于《自然·光子学》。单记录点可区分1024种状态，DVD尺寸介质理论容量约0.4PB，尚非量产产品容量。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-29 21:32",
+        "url": "https://www.xinhuanet.com/20260929/d0a79e5f5543412e9b089559eab87f07/c.html"
+      },
+      {
+        "kind": "ms-2026-10-01-tech-smart-cloud-sail-tanker",
+        "title": "五万吨智能油船实现智能与网络安全双认证",
+        "summary": "国产五万吨成品油船智能云帆轮投入运营，搭载运营调度、远程监控及预测性维护系统，并通过网络韧性标准验证与中国船级社认证。船舶可同时装卸三种不同等级货油。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-29 12:42",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-29/10705419.shtml",
+        "id": "tech-07"
+      },
+      {
+        "id": "tech-08",
+        "kind": "ms-2026-10-01-tech-lihong2-pharma-payload",
+        "title": "力鸿二号拟于2027年验证太空制药装备",
+        "summary": "中科宇航与广州实验室联合研制太空制药载荷，计划2027年第一季度搭乘力鸿二号开展亚轨道验证，进行蛋白质及小分子药物结晶实验；首飞与相关实验尚未执行。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-29 09:04",
+        "url": "https://www.news.cn/tech/20260929/021b84c20bc84b439856375e92d06376/c.html"
+      },
+      {
+        "id": "tech-09",
+        "kind": "ms-2026-10-01-tech-mengxiang-drilling",
+        "title": "“梦想”号完成南海大洋钻探试钻",
+        "summary": "“梦想”号历时30天完成南海试钻并返回广州，在约4100米水深海域完成两口井取心，最大完钻深度4929.17米，取得4.27米玄武岩岩心；水深与完钻深度为不同口径。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-29 09:03",
+        "url": "https://www.news.cn/tech/20260929/07ef3729fcad4287af9fa8aac8fef70f/c.html"
+      },
+      {
+        "kind": "ms-2026-10-01-tech-seawater-hydrogen-coproduction",
+        "title": "海水制氢联产装置连续运行超过千小时",
+        "summary": "崂山实验室、日照市政府、广核集团和山东师范大学联合研发的海水制氢联产装置连续稳定运行超过千小时。团队正推进装备大型化和产业化，装置面世不等于已大规模商业投产。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-28 14:54",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/28/content_589116.html",
+        "id": "tech-10"
+      }
+    ],
+    "ai": [
+      {
+        "kind": "ms-2026-10-01-ai-lychee-matverse-cast",
+        "title": "中国科协发布立知与材华两项AI成果",
+        "summary": "中国科协新天工开物科技成就发布会推出立知与材华两项成果，分别面向统一多模态研究和材料科学智能化。研发来自哈工大深圳等团队，此次为科技成果发布，未把未核性能排名写入。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 20:27",
+        "url": "https://www.chinanews.com.cn/gn/2026/09-30/10706501.shtml",
+        "id": "ai-01"
+      },
+      {
+        "id": "ai-02",
+        "kind": "ms-2026-10-01-ai-panshi-science-ecosystem",
+        "title": "磐石科研智能生态1.0正式发布",
+        "summary": "中科院计算机网络信息中心9月30日发布磐石科研智能生态1.0，推出整合数据、模型与工具的平台、五大学科可信评测及薪火计划，推动科研工具与研究任务协同。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 17:56",
+        "url": "https://www.news.cn/tech/20260930/9bcc405cf3054ba793a57cc90ab69a63/c.html"
+      },
+      {
+        "id": "ai-03",
+        "kind": "ms-2026-10-01-ai-smartglasses-acoustic-standard",
+        "title": "智能眼镜声学测试规范10月2日实施",
+        "summary": "市场监管总局发布智能眼镜声学性能测试规范JJF2385—2026，10月2日起实施，统一频率响应、麦克风定向性能及播放漏声等测试口径，为智能眼镜质量评价提供依据。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 16:09",
+        "url": "https://www.chinanews.com.cn/cj/2026/09-30/10706296.shtml"
+      },
+      {
+        "id": "ai-04",
+        "kind": "ms-2026-10-01-ai-corpus-ecosystem-alliance",
+        "title": "科技语料联盟发布标准与社区平台",
+        "summary": "中科院文献情报中心联合50家成员组建全国性语料创新生态联盟，发布语料标准规范、敖仓·语料社区平台及英文期刊，推进科技语料开发利用，事件于9月29日举行。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 08:47",
+        "url": "https://www.news.cn/tech/20260930/ea95a42b0fb0431abdb4aeb964c832b2/c.html"
+      },
+      {
+        "id": "ai-05",
+        "kind": "ms-2026-10-01-ai-tenniix-tennis-prototype",
+        "title": "具身网球机器人展示自主移动与多球路",
+        "summary": "英汉思动力与逐际动力联合开发的网球机器人展示自主移动和多种球路。开发者在新华社专访中说明，目前为工程样机功能展示，距量产交付仍有生产、维护与成本关卡。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-29 09:36",
+        "url": "https://www.news.cn/tech/20260929/0a6b7ef981a449f0b942398b2302b766/c.html"
+      }
+    ]
+  },
+  "topStoryIds": [
+    "domestic-01",
+    "domestic-09",
+    "domestic-03"
+  ],
+  "metrics": [
+    {
+      "id": "ms-2026-10-01-metric-gold-au9999",
+      "kind": "gold",
+      "icon": "🪙",
+      "name": "国内金价（Au99.99）",
+      "value": "907.32元/克",
+      "note": "2026-09-30 最近收盘；非零售金饰价",
+      "source": "上海黄金交易所",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://en.sge.com.cn/data/data_daily_international_new?end_date=2026-09-30&start_date=2026-09-30"
+    },
+    {
+      "id": "ms-2026-10-01-metric-domestic-92-gasoline-shanghai",
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "上海92号汽油",
+      "value": "8.57元/升",
+      "note": "2026-09-24 24时起最高零售价；实际站价可低于上限",
+      "source": "上海市发展和改革委员会",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://fgw.sh.gov.cn/fgw_jggl/20260924/9346a0fd85d74075a9431f83f365cef8.html"
+    },
+    {
+      "id": "ms-2026-10-01-metric-international-oil-prices",
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际原油（11月合约）",
+      "value": "WTI 90.42／布伦特103.53美元/桶",
+      "note": "2026-09-30 纽约及伦敦收盘；11月交货",
+      "source": "新华网",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.xinhuanet.com/fortune/20261001/88dbf73b5e8742b1ac2d223c76a1a7c3/c.html"
+    },
+    {
+      "id": "ms-2026-10-01-metric-usd-cny-central-parity",
+      "kind": "usd_cny",
+      "icon": "💱",
+      "name": "美元兑人民币",
+      "value": "1美元兑人民币6.7351元",
+      "note": "2026-09-30 最近交易日中间价",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760"
+    },
+    {
+      "id": "ms-2026-10-01-metric-eur-cny-central-parity",
+      "kind": "eur_cny",
+      "icon": "💱",
+      "name": "欧元兑人民币",
+      "value": "1欧元兑人民币7.6215元",
+      "note": "2026-09-30 最近交易日中间价",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760"
+    },
+    {
+      "id": "ms-2026-10-01-metric-jpy-cny-central-parity",
+      "kind": "jpy_cny",
+      "icon": "💱",
+      "name": "日元兑人民币",
+      "value": "100日元兑人民币4.2727元",
+      "note": "2026-09-30 最近交易日中间价",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760"
+    }
+  ],
+  "observation": "国庆开始，住房贴息、长期护理保障和十月新规各有适用范围，出行与居家安全则直接关系假期安排。国际通胀、债务和就业数字需要结合统计周期理解。科技成果同样处于不同阶段：卫星已进入科学运行，科研装置完成的是建安工程，太空制药仍为飞行计划，网球机器人仍是样机。把政策条件、工程节点与实际能力分开看，有助于将新消息转化为可靠的生活判断。"
+}
