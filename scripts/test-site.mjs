@@ -154,6 +154,20 @@ externalMetric.metricSources = [...new Set(externalMetric.metrics.map((metric) =
 validateMinsheng(externalMetric);
 validateMinshengSourceAudit(externalMetric, makeSourceAudit(externalMetric));
 
+const clsMetric = structuredClone(sourcePolicyBrief);
+clsMetric.metrics[2].source = "财联社";
+clsMetric.metrics[2].sourceUrl = "https://www.cls.cn/detail/2495271";
+clsMetric.metrics[2].sourceOrigin = "china";
+clsMetric.metricSources = [...new Set(clsMetric.metrics.map((metric) => metric.source))];
+validateMinsheng(clsMetric);
+validateMinshengSourceAudit(clsMetric, makeSourceAudit(clsMetric));
+const clsMarkedExternal = structuredClone(clsMetric);
+clsMarkedExternal.metrics[2].sourceOrigin = "external";
+assertThrows(() => validateMinsheng(clsMarkedExternal), "财联社数据不得误标为外网");
+const fakeClsMetric = structuredClone(clsMetric);
+fakeClsMetric.metrics[2].sourceUrl = "https://cls.cn.example.org/detail/2495271";
+assertThrows(() => validateMinsheng(fakeClsMetric), "相似域名不得冒充国内财经来源");
+
 const incompleteExternalMetric = structuredClone(externalMetric);
 delete incompleteExternalMetric.metrics[2].sourceOrigin;
 assertThrows(() => validateMinsheng(incompleteExternalMetric), "外网数据必须声明来源归属");

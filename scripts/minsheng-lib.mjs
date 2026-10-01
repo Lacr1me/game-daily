@@ -16,7 +16,7 @@ const CHINA_DATA_DOMAINS = [
   ...CHINA_NEWS_DOMAINS,
   "sge.com.cn", "ndrc.gov.cn", "chinamoney.com.cn", "pbc.gov.cn", "safe.gov.cn",
   "sse.com.cn", "szse.cn", "ine.cn", "shfe.com.cn", "csindex.com.cn",
-  "cnfin.com", "cs.com.cn", "cnstock.com", "stcn.com", "yicai.com"
+  "cnfin.com", "cs.com.cn", "cnstock.com", "stcn.com", "yicai.com", "cls.cn"
 ];
 export function beijingDate(now = new Date()) {
   const parts = new Intl.DateTimeFormat("en-CA", {

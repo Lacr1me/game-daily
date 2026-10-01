@@ -125,6 +125,8 @@ Steam 优惠的确定性发现面是 Steam 官方 Specials 默认相关性首个
 
 该脚本使用全新无个人Cookie浏览器，只读默认相关性首个结果页，拒绝非当天与08:00后的采集。保留JSON及兄弟原始响应文件，使用 `--replay=<JSON>`核对解析结果和哈希。持租约将两文件安全复制到artifacts/operations，核对sourceUrl、observedAt、国区币种和完整appIds，再调用下述冻结接口；采集结果的frozen=false不是冻结证明。网络代理只可继承既有无凭据配置，不修改系统代理。网页工具与备用入口都失败时保存错误，后续08:00前的轮次优先重试；不得伪造历史冻结。
 
+若备用浏览器在受限沙箱报 `net::ERR_CONNECTION_RESET`、`ERR_PROXY_CONNECTION_FAILED` 或启动/目录 `EPERM`，先区分环境限制和 Steam 来源拒绝。已授权的同一 Steam 官方只读命令可通过 `exec_command` 的 `sandbox_permissions=require_escalated` 请求环境审批后重试；不要把同一沙箱反复失败当作来源已穷尽，也不要修改系统代理、ACL 或使用个人浏览器配置。审批拒绝时保留确切动作和理由，停止受影响步骤，按权限阻断收尾。2026-10-01 对同一官方商品页的实测为沙箱浏览器连接重置、经审批运行返回 HTTP 200；这是环境恢复路径，不放宽 08:00 门禁。采集与冻结仍须在真实截止前完成，审批延迟不允许回填时间。
+
 `node scripts/daily-run-state.mjs steam-freeze --date=YYYY-MM-DD --run-id=HHMM "--source-url=https://store.steampowered.com/search/?specials=1&cc=cn&l=schinese" "--app-ids=ID1|ID2|..." "--extra-app-ids=IDx|IDy|..."`
 
 冻结文件创建后，当天后续轮次只复核这组 appId 的国区价格、截止时间和价格历史；页面刷新出现的新排序、新卡片或数量变化不得覆盖冻结发现面。失效或不合格项从最终合格集淘汰即可，不要求追逐10:30或11:31的新动态首屏。Steam 覆盖核验完成的终态记录使用 `--coverage-complete=true`；只有整组冻结 appId 均有合格或淘汰依据时才可声明覆盖完整。`steam-cn` 的 `--candidates` 写冻结发现面内全部最终合格 Steam appId，`--available` 必须与该清单数量一致；候选JSON优惠必须与清单完全相同。`steam-price-history` 的候选ID至少覆盖所有标记为新史低/平史低的 appId。网页渲染全部合格项，静态PNG（以及今后若增加的PDF）只显示排序前6项。
@@ -203,6 +205,10 @@ Steam 优惠的确定性发现面是 Steam 官方 Specials 默认相关性首个
    C 的健康接口要求证明 JSON 含 `deployment`、`pages.game/minsheng`、可选 mirror。页面证明为 `method:browser,checkedAt,url,displayedDate,selectedDate,downloadUrl`；Pages 证明为 `source:github-pages-api,checkedAt,headSha,conclusion:success,siteUrl,evidenceUrl`，对应完整目标 SHA 和站点的 Pages build API。证明默认不得早于检查 15 分钟、不得超前 60 秒。仅在已授权只读采集后提供；HTTP 200 只记 reachability，不等于页面/部署通过。生产门户及历史交互仍需额外验收。CLI 不自动获取凭据或生成浏览器证明。
 
    本仓库使用 Actions 部署，旧 `/pages/builds/latest` 可能返回 404。此时从仓库 deployment、对应 status 和 `.github/workflows/pages.yml` workflow run API 采集真实记录。使用 `source:github-actions-pages-api`，保留上述时间、目标 SHA、成功结论、站点和 evidenceUrl（deployment API URL），并附 `deployment`、`deploymentStatus`、`workflowRun` 三份原始 API 对象。校验器核对同仓库/部署/运行关联、github-pages 环境、目标 SHA、成功状态及站点；不能改造 URL 冒充旧 build 证明，也不能仅凭某个 Actions 测试成功当作部署成功。新增兼容检查：`node scripts/test-pages-deployment-proof.mjs`。
+
+   浏览器证明统一用项目入口 `node scripts/collect-live-page-evidence.mjs --channel=minsheng --date=YYYY-MM-DD --out=output/health/YYYY-MM-DD-HHMM-minsheng-pages.json`（游戏替换 channel）。直接调用随 Codex 捆绑的 Playwright 库和全新无个人 Cookie 的 Edge，避免 Playwright CLI 在 AppData 建 daemon 的 `EPERM`。脚本只对本站执行 GET/HEAD，实测目标期、最新入口、历史期与日期选择器、无效/未来日期回退、门户和实际下载 PNG 字节/3840px；失败不生成通过证明，也不覆盖已有证明。浏览器网络受沙箱限制时，同一只读采集命令通过环境审批重试，不放宽文件权限。输出的 `pages` 与另行核验的真实 Pages API `deployment` 合并后才可传给健康检查；页面采集通过不等于部署成功。健康检查与只读 API 采集使用 Node 支持的 `--use-env-proxy` 继承已有代理，不改系统配置。
+
+   `git ls-remote`、fetch 或 push 遇到 `schannel: AcquireCredentialsHandle ... SEC_E_NO_CREDENTIALS` 时，先用 `git -c http.sslBackend=openssl ls-remote origin main` 对照核验。该命令能成功时，后续本次远端操作沿用 `git -c http.sslBackend=openssl ...`；仍须核对仓库、确切 SHA、授权文件集合并非强制推送。这个错误不能直接认定为 GitHub 登录失效；不关闭证书校验、不改全局 Git 配置、不输出凭据，仍遵守环境审批。
 2. 先处理已 ready、尚未发布的频道：独立复核本频道完整性、正文、归档、覆盖（游戏）、readiness 和时间门禁，11:00 后调用 `node scripts/publish-minsheng.mjs --run-id=HHMM` 或 `node scripts/publish-brief.mjs --run-id=HHMM`。新发布入口要求显式 run-id；状态通过 B 的 updatePublicationState 接口写入。一个频道失败不阻止另一满足门禁的频道；不以双频道完整性作为单频道前置条件。
 3. 候选合法但未ready：补本频道渲染、公开PNG、预检和mark-ready，然后发布。研究仍缺：仅补真实缺口和证据，沿用当天账本、审计快照与冻结Steam appId；研究齐全后立即生成候选，依次推进至健康，不因租约到期或未配置的25分钟预算停工。
 4. 已正式归档：先核验当日索引/正文/公开 PNG，禁止重复发布。只有本地正式文件有效、线上部署失败时，仅检查已有目标提交、推送是否到达和 Pages 执行状态，修复部署并复核线上；不重搜、不重生成 JSON/PNG、不重跑发布脚本。已有部署还在运行时等待有界进展，不能反复触发。重试同一部署需已有授权，涉及额外配置/代码的修复按范围判断。
@@ -250,6 +256,8 @@ node scripts/verify-build.mjs
 模块追加：留言/审核/Supabase 用 `node scripts/test-messages.mjs`；管理员日志用 `node scripts/test-admin-logs.mjs`；离线编辑器另用 `node scripts/test-offline-homepage-editor.mjs`。独立离线编辑器仅修改其独立文件时可只跑独立测试，触及共享站点再加基础链。
 
 状态/证据改动追加 `node scripts/test-state-evidence.mjs`、`node scripts/test-daily-preflight.mjs`；C 发布/健康集成按其报告运行发布恢复、完整预检集成、健康证据及七期测试。所有 B 测试默认保留明确命名的隔离夹具。构建脚本仍含清理语句；本轮仅在 dist 与源 data/.pending 均不存在的新鲜隔离根运行，不借 Node/Python 绕过批量删除边界；已有产物需保留，另建隔离根验证。
+
+页面采集入口改动追加 `node --test scripts/test-collect-live-page-evidence.mjs`；Steam 备用采集入口改动追加 `node --test scripts/test-collect-steam-discovery.mjs scripts/test-collect-steam-product.mjs`。浏览器回归使用本机隔离服务器，真实生产网络与环境审批另行实测。
 
 频道内容门禁：
 
