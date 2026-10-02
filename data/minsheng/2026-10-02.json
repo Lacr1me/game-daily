@@ -1,0 +1,459 @@
+{
+  "date": "2026-10-02",
+  "issue": 42,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期五",
+  "lunarDate": "农历丙午年八月廿二",
+  "cutoff": "2026-10-02 07:48（北京时间）",
+  "productionTime": "2026-10-02 07:48（北京时间）",
+  "metricsCutoff": "2026-10-02 07:48（北京时间）",
+  "sources": [
+    "新华网",
+    "中国新闻网",
+    "央广网",
+    "黑龙江省教育厅",
+    "光明网",
+    "人民网",
+    "中国科技网"
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "北京市发展和改革委员会",
+    "第一财经",
+    "国家外汇管理局"
+  ],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "kind": "ms42-domestic-traffic-safety",
+        "title": "公安部提示假期出行错峰规划与事故安全处置",
+        "summary": "国庆首日多地高速出城方向和景区周边车流集中。公安部交管局提醒提前规划、错峰出行；自驾发生事故时及时撤离并报警，切勿留在车道内拍照、协商，以免发生二次事故。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 23:48",
+        "url": "https://www.news.cn/politics/20261001/432c9dc34f314b2484274d588d371c33/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "kind": "ms42-domestic-beijing-tourism-police",
+        "title": "北京警方整治黄牛倒票和非法一日游",
+        "summary": "北京警方在国庆假期加强景区隐患排查和客流疏导，联合多部门整治黄牛倒票、非法一日游及强迫交易等乱象，提醒游客选择正规旅行社和导游服务，警惕不合理低价游。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 21:05",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-01/10706941.shtml"
+      },
+      {
+        "id": "domestic-03",
+        "kind": "ms42-domestic-tianjin-cruise",
+        "title": "天津邮轮母港首日出入境旅客超万人次",
+        "summary": "10月1日天津国际邮轮母港迎来三船同靠，当日出入境旅客超1万人次，创年内新高。口岸部门统筹泊位调度和旅客集疏运，优化查验、安检与登离船流程，应对假期大客流。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 20:40",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-01/10706926.shtml"
+      },
+      {
+        "id": "domestic-04",
+        "kind": "ms42-domestic-qinzhou-outdoor",
+        "title": "钦州平陆运河健步走发布两条户外线路",
+        "summary": "10月1日广西钦州举行平陆运河绿道万人健步走，沿途串联老街、古渡与文体公园等节点。现场设置体育促消费市集，并发布两条户外运动精品线路，丰富市民假期健身休闲选择。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 17:04",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-01/10706782.shtml"
+      },
+      {
+        "id": "domestic-05",
+        "kind": "ms42-domestic-island-school-ferry",
+        "title": "浙江洞头校船护送海岛学子国庆归家",
+        "summary": "国庆前夕，浙江洞头多部门再次开展跨海护学。学生专属校船由教师和保安全程陪护、海巡艇伴航，通勤费用由区财政保障；渡船和码头升级后，单程航程已缩短至20分钟。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 16:42",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-01/10706778.shtml"
+      },
+      {
+        "id": "domestic-06",
+        "kind": "ms42-domestic-rail-oct1",
+        "title": "国庆首日铁路预计发送旅客2480万人次",
+        "summary": "国铁集团消息，10月1日全国铁路预计发送旅客2480万人次，计划加开列车2324列。铁路部门根据热门方向与区间增加运力，部分长途区间至10月12日每日开行高铁动卧。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 16:08",
+        "url": "https://www.news.cn/20261001/e5c6efabe3b749cb92f0a59e426dc66c/c.html"
+      },
+      {
+        "id": "domestic-07",
+        "kind": "ms42-domestic-holiday-ev-charging",
+        "title": "国网部署应急充电枪保障国庆新能源出行",
+        "summary": "为应对国庆补能需求，国家电网计划在易排队站点提前部署435个应急充电枪，并加强视频监测与现场疏导。苏州石湖景区超级充电站采用功率调度，西安服务区配置光伏供电设施。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 12:35",
+        "url": "https://news.cnr.cn/native/gd/kx/20261001/t20261001_527831256.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "kind": "ms42-domestic-online-recruitment",
+        "title": "四行业线上招聘专场提供13.4万余人次需求",
+        "summary": "人社部百日千万招聘行动9月28日至10月4日推出四行业线上专场，7700余家单位招聘需求13.4万余人次。求职者可通过中国公共招聘网、中国国家人才网和就业在线主会场进入。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 12:28",
+        "url": "https://www.news.cn/politics/20261001/38555b901d7e4e0f877ce3588644618b/c.html"
+      },
+      {
+        "id": "domestic-09",
+        "kind": "ms42-domestic-holiday-food-supply",
+        "title": "多地农产品市场国庆备货充足、部分水产降价",
+        "summary": "央视财经走访北京、深圳、郑州和青岛农产品市场发现，节日果蔬水产供应充足。北京新发地商户介绍，皮皮虾和梭子蟹价格由开海前每斤约百元降至四五十元，价格口径仅限受访市场。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 11:37",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-01/10706630.shtml"
+      },
+      {
+        "id": "domestic-10",
+        "kind": "ms42-domestic-vocational-community",
+        "title": "哈尔滨铁道职院牵头国家铁路建设产教共同体",
+        "summary": "9月29日成立的国家铁路建设行业产教融合共同体由中铁集团、山东大学和哈尔滨铁道职业技术学院联合牵头，汇集73家企业、高校及科研机构，将推动人才共育与寒区技术攻关。",
+        "source": "黑龙江省教育厅",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 01:25",
+        "url": "https://jyt.hlj.gov.cn/jyt/c110476/202610/c00_31980979.shtml"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "kind": "ms42-international-chiba-earthquake",
+        "title": "日本千叶县东北部发生 M5.1 地震",
+        "summary": "日本气象厅记录，当地时间10月1日21时27分左右，千叶县东北部发生M5.1地震，震源深度约50公里。此次数字采用气象厅震级M口径，与同页列出的矩震级Mw口径不同。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 21:08",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-01/10706944.shtml"
+      },
+      {
+        "id": "international-02",
+        "kind": "ms42-international-cambodia-road1551",
+        "title": "柬埔寨1551号公路通车，连通西部三省",
+        "summary": "当地时间10月1日，柬埔寨1551号公路举行竣工通车仪式。中国企业承建的道路全长约198.5公里，连接马德望、菩萨和国公三省，为西部路网补充跨区域通道，改善沿线居民出行条件。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 21:02",
+        "url": "https://www.chinanews.com.cn/aseaninfo/2026/10-01/10706936.shtml"
+      },
+      {
+        "id": "international-03",
+        "kind": "ms42-international-embassy-case-hearing",
+        "title": "侵闯中国驻日使馆案首次公开庭审",
+        "summary": "东京地方法院10月1日对村田晃大侵闯中国驻日本大使馆案举行首次公开庭审。中国驻日使馆当天回应，敦促日方严惩凶犯、彻查整改并作出负责任交代；案件仍处于审理阶段。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 11:08",
+        "url": "https://www.news.cn/world/20261001/1a13c43bef2648978778dee4df91130b/c.html"
+      },
+      {
+        "id": "international-04",
+        "kind": "ms42-international-us-consumer-confidence",
+        "title": "美国9月消费者信心指数降至81.9",
+        "summary": "世界大型企业研究会公布9月消费者信心指数为81.9，低于8月修订值88.6。当前状况与预期指数均下降；初步调查基于9月1日至23日在线样本，反映受访者对就业和商业环境的看法。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 10:34",
+        "url": "https://world.gmw.cn/2026-10/01/content_39030488.htm"
+      },
+      {
+        "id": "international-05",
+        "kind": "ms42-international-monet-centenary",
+        "title": "巴黎多家博物馆举办莫奈逝世百年纪念展",
+        "summary": "巴黎奥赛博物馆和橘园美术馆于当地时间9月30日推出莫奈逝世百年纪念展。橘园以《睡莲》为核心，展出约40幅作品；奥赛呈现新近研究或修复的画作，展示画家的创作过程。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 07:27",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-01/10706589.shtml"
+      },
+      {
+        "id": "international-06",
+        "kind": "ms42-intl-us-gdp-q2",
+        "title": "美国二季度实际GDP年化增速修订为2.2%",
+        "summary": "美国经济分析局将二季度实际GDP年化增速从1.5%上修至2.2%，一季度修订为2.5%。消费、投资和出口增长支撑扩张；这些数字为年化环比，并非同比增速。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 07:26",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-01/10706587.shtml"
+      },
+      {
+        "id": "international-07",
+        "kind": "ms42-intl-flydubai-suspension",
+        "title": "迪拜航空暂停以色列航班配合调查",
+        "summary": "迪拜航空在FZ1073航班9月30日发生驾驶舱事件后，宣布调查期间暂停往返以色列的航班。飞机已安全备降沙特塔布克，乘客和机组均安全；原因和动机仍待调查。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 06:44",
+        "url": "https://www.news.cn/world/20261001/1f1bb69af3ae49e7aec0a8f287b293c5/c.html"
+      },
+      {
+        "id": "international-08",
+        "kind": "ms42-international-global-south-forum",
+        "title": "开罗全球南方现代化论坛聚焦 AI 机遇与挑战",
+        "summary": "2026全球南方现代化论坛9月30日在埃及开罗举行，主题为人工智能浪潮下全球南方现代化的机遇与挑战。会议围绕技术变革与发展议题展开交流，新华社10月1日发布现场图文。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 06:02",
+        "url": "https://www.news.cn/world/20261001/a14bddd6c74346d7ac9d06be44192fbd/c.html"
+      },
+      {
+        "id": "international-09",
+        "kind": "ms42-international-southafrica-demarches",
+        "title": "南非再次召见美国大使提出外交交涉",
+        "summary": "南非国际关系与合作部确认，9月29日再次召见美国驻南非大使博泽尔，就其所称的非外交行为交涉，这是其履职以来第三次被召见。美国国务院称会面讨论双边关系，双方仍在沟通。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 04:03",
+        "url": "https://www.news.cn/world/20261001/b376ed11ea4c4cd0b92ea2a33a1482bc/c.html"
+      },
+      {
+        "id": "international-10",
+        "kind": "ms42-international-indonesia-bookfair",
+        "title": "中国出版代表团亮相印尼国际书展",
+        "summary": "第四十六届印尼国际书展9月30日在雅加达开幕。中国展区汇集20余家出版机构，展示1000多册图书，覆盖文化、科技和语言学习等领域；代表团将开展版权对接、翻译出版及行业交流。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01",
+        "url": "https://paper.people.com.cn/rmrb/pc/content/202610/01/content_30184039.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "kind": "ms42-tech-drone-customs-seal",
+        "title": "长沙口岸以无人机完成集装箱远程施封",
+        "summary": "长沙中南集拼中心上线无人机施封项目并完成实柜验证。无人机搭载电子关锁阅读器飞抵堆场，结合视觉大模型核对箱号和箱位，将施封移至集装箱现场，并自动提交运抵申报。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 20:04",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-01/10706902.shtml"
+      },
+      {
+        "id": "tech-02",
+        "kind": "ms42-tech-dawu-grid-connection",
+        "title": "大悟抽蓄220千伏送出线路试送电成功",
+        "summary": "湖北大悟抽蓄电站220千伏送出工程9月29日晚贯通并试送电，21公里线路连通电站与湖北主网。机组调试已启动，当前完成的是送出通道节点，机组投产仍属后续计划。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 18:53",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/01/content_591165.html"
+      },
+      {
+        "id": "tech-03",
+        "kind": "ms42-tech-qinghai-solar-thermal",
+        "title": "青海共和百万千瓦光伏光热项目并网",
+        "summary": "青海共和百万千瓦光伏光热项目并网发电，由90万千瓦光伏与10万千瓦熔盐塔式光热电站组成。项目以熔盐储热和电热转换协同运行，为太阳能跨时段供电提供工程实践。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 15:49",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/01/content_591125.html"
+      },
+      {
+        "id": "tech-04",
+        "kind": "ms42-tech-tectonic-map",
+        "title": "中国团队完成中国及邻区大地构造新图",
+        "summary": "中国地质科学院地质研究所领衔团队完成1:500万中国及邻区大地构造图，统一海陆构造时空格架，并配套综合构造地质数据库。新图覆盖日本、东南亚和中亚等邻区。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 13:10",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/01/content_591101.html"
+      },
+      {
+        "id": "tech-05",
+        "kind": "ms42-tech-variable-speed-pumped-storage",
+        "title": "肇庆浪江国产变速抽蓄机组完成主体安装",
+        "summary": "广东肇庆浪江抽水蓄能工程完成变速机组转子吊装，推进国产机组主体安装收官。项目负责人介绍，下一步将开展50多项试验检验性能；当前完成的是安装节点，机组尚未全面投产。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 11:02",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/01/content_591071.html"
+      },
+      {
+        "id": "tech-06",
+        "kind": "ms42-tech-pepper-field-trial",
+        "title": "内蒙古酱椒示范田验证增密丰产技术",
+        "summary": "央广网现场采访显示，乌拉特前旗示范园区试种内蒙古农牧业科学院选育的“北星一号”，近期测产亩产4559公斤，并配套增密种植与智能水肥管理。数字为示范田测产，不代表一般种植收益。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 07:48",
+        "url": "https://nm.cnr.cn/jiaodiantu/20261001/t20261001_527830921.shtml"
+      },
+      {
+        "id": "tech-07",
+        "kind": "ms42-tech-mini-eeg",
+        "title": "天津团队发布3克无创脑机采集系统",
+        "summary": "科技日报记者从天津大学获悉，脑机海河实验室与企业发布“神工·须弥·脑立方”。系统将脑电电极、电路、电池和无线传输集成于约3克、2立方厘米的空间，旨在改善非侵入式脑电采集的佩戴体验。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 11:19",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/30/content_590361.html"
+      },
+      {
+        "id": "tech-08",
+        "kind": "ms42-tech-gallium-oxide-mosfet",
+        "title": "国产氧化镓垂直MOSFET完成首阶段流片验证",
+        "summary": "上海镓驰动力团队的氧化镓垂直MOSFET完成第一阶段迭代流片与电学测试，导通电流1.2安、击穿电压超过900伏。该成果仍属阶段性器件验证，尚不能等同于规模量产。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-29 21:52",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/29/content_590062.html"
+      },
+      {
+        "id": "tech-09",
+        "kind": "ms42-tech-jianghan-tbm",
+        "title": "国产大直径TBM在引江补汉工程始发",
+        "summary": "9月28日，“江汉神农号”双护盾硬岩掘进机在引江补汉工程始发。设备开挖直径11.93米，配置微震岩爆监测、滚刀监测与减振技术，应对复杂地质；始发不代表隧洞贯通。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-28 21:54",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/28/content_589399.html"
+      },
+      {
+        "id": "tech-10",
+        "kind": "ms42-tech-arctic-lithosphere",
+        "title": "北冰洋调查获取岩石圈演化记录",
+        "summary": "中国第16次北冰洋考察队使用国产海底地震仪、电磁仪等装备，获取跨越2500万年的岩石圈演化记录。加克洋中脊东段调查显示底界面近水平延伸；结论限于调查区域。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-27 20:15",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/27/content_588812.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "kind": "ms42-ai-qingdao-port-agents",
+        "title": "青岛港用 AI 智能体协同调度、配载与巡检",
+        "summary": "科技日报记者在青岛港看到，智能体可综合船期与泊位等要素生成排泊方案，工作人员微调后下发执行。港口还将AI用于集装箱配载和安全视频巡检，将生产、安全与服务流程连接起来。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 21:20",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/01/content_591198.html"
+      },
+      {
+        "id": "ai-02",
+        "kind": "ms42-ai-hangzhou-robot-booth",
+        "title": "杭州人机协同岗亭支持交管机器人自主回舱充电",
+        "summary": "杭州环城西路体育场路口的人机协同智慧岗亭10月1日投用，支持交管机器人通过视觉识别对位充电、上传设备工况。结合自主规划路线和动态避障，机器人可持续承担问路与秩序提醒。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 20:42",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-01/10706920.shtml"
+      },
+      {
+        "id": "ai-03",
+        "kind": "ms42-ai-zhejiang-cultural-applications",
+        "title": "浙江以 AI 识别火情与生成青瓷设计图样",
+        "summary": "中新网采访显示，绍兴古城将AI火情识别、无人机巡防与就近处置串成消防闭环；龙泉青瓷从业者则使用AIGC平台生成设计图样，优化前期打样。相关应用将文化遗产保护与传统工艺设计连接起来。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 16:39",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-01/10706753.shtml"
+      },
+      {
+        "id": "ai-04",
+        "kind": "ms42-ai-underground-robot",
+        "title": "围岩探测机器狗下线，支持自主巡检",
+        "summary": "中国电建成都院研制的“智成深地1号”围岩探测机器狗下线，支持自主行走、避障和返航。无公网洞段可自组网回传，断网时本地缓存，为人员进洞前判断岩体风险提供数据。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 13:02",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/30/content_590442.html"
+      },
+      {
+        "id": "ai-05",
+        "kind": "ms42-ai-mushroom-factory",
+        "title": "上海农业科创现场展示AI调度蘑菇工厂",
+        "summary": "9月29日上海农业科技创新创业大赛决赛展示了AI农业应用。参赛企业介绍，其在崇明的蘑菇工厂以农业大模型调度菌种培育、采摘和搬运，并推进厂房、机器人及智能环控系统的整套方案输出。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-29 22:31",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/29/content_590078.html"
+      }
+    ]
+  },
+  "topStoryIds": [
+    "domestic-01",
+    "domestic-08",
+    "tech-03"
+  ],
+  "metrics": [
+    {
+      "id": "ms42-metric-gold",
+      "kind": "gold",
+      "icon": "🪙",
+      "name": "国内金价（Au99.99）",
+      "value": "907.32元/克",
+      "note": "2026-09-30最近交易日收盘，Au99.99；国庆休市",
+      "source": "上海黄金交易所",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://en.sge.com.cn/data/data_daily_international_new?end_date=2026-09-30&start_date=2026-09-30"
+    },
+    {
+      "id": "ms42-metric-domestic-oil",
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "北京92号汽油",
+      "value": "8.61元/升",
+      "note": "2026-09-24 24时起最高零售价；实际站价可低于上限",
+      "source": "北京市发展和改革委员会",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202609/t20260924_4879948.htm"
+    },
+    {
+      "id": "ms42-metric-international-oil",
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际原油期货",
+      "value": "WTI 92.87 / 布伦特 102.31美元/桶",
+      "note": "2026-10月1日结算；WTI11月合约涨2.71%，布伦特12月合约涨4.37%",
+      "source": "第一财经",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.yicai.com/news/103383775.html"
+    },
+    {
+      "id": "ms42-metric-usd-cny",
+      "kind": "usd_cny",
+      "icon": "💱",
+      "name": "美元兑人民币",
+      "value": "1美元兑人民币6.7351元",
+      "note": "2026-09-30最近公布中间价；国庆期间无新报价",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760"
+    },
+    {
+      "id": "ms42-metric-eur-cny",
+      "kind": "eur_cny",
+      "icon": "💱",
+      "name": "欧元兑人民币",
+      "value": "1欧元兑人民币7.6215元",
+      "note": "2026-09-30最近公布中间价；国庆期间无新报价",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760"
+    },
+    {
+      "id": "ms42-metric-jpy-cny",
+      "kind": "jpy_cny",
+      "icon": "💱",
+      "name": "日元兑人民币",
+      "value": "100日元兑人民币4.2727元",
+      "note": "2026-09-30最近公布中间价；国庆期间无新报价",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760"
+    }
+  ],
+  "observation": "假期出行的重点是运力与安全配套：铁路增开、充电保障、景区执法和海岛校船分别回应不同需求，招聘专场则为求职者保留线上入口。科技消息也需要读清阶段，抽蓄机组安装、送出线路试送电、隧洞设备始发，均不能直接等同于全面投产。机器人与智能体正在交通、港口和农业场景承担具体任务，但示范能力不应放大成普遍成效。数据区同时标注休市沿用与最新结算日期，便于读者区分消息发布时间和指标所属时点。"
+}
