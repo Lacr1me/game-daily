@@ -1,0 +1,460 @@
+{
+  "date": "2026-10-03",
+  "issue": 43,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期六",
+  "lunarDate": "农历丙午年八月廿三",
+  "cutoff": "2026-10-03 09:40（北京时间）",
+  "productionTime": "2026-10-03 09:40（北京时间）",
+  "metricsCutoff": "2026-10-03 09:40（北京时间）",
+  "sources": [
+    "中国新闻网",
+    "三明市人民政府",
+    "央广网",
+    "中国日报中文网",
+    "新华网",
+    "人民网",
+    "中国科技网",
+    "科学网"
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "北京市发展和改革委员会",
+    "国家外汇管理局",
+    "第一财经"
+  ],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "kind": "ms43-domestic-deaf-employment",
+        "title": "杭州街巷小店为残疾人搭建就业平台",
+        "summary": "杭州无声烧饼摊由听障人士轮班经营，公益项目提供免费技能培训、场地和设备支持。同一街区还发展无声理发店与心智障碍青年融合就业平台，为残疾人创业就业提供具体岗位和实训机会。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 15:03",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-02/10707146.shtml"
+      },
+      {
+        "id": "domestic-02",
+        "kind": "ms43-domestic-canal",
+        "title": "山东运河1号首批8条航线投入运营",
+        "summary": "中新网记者现场报道，国庆假期山东运河1号首批8条航线投入运营，覆盖湿地观光、古镇休闲与生态研学。游船叠加非遗演艺等活动，为沿线居民和游客提供水上文旅体验。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 14:05",
+        "url": "https://www.chinanews.com.cn/cul/2026/10-02/10707090.shtml"
+      },
+      {
+        "id": "domestic-03",
+        "kind": "ms43-dom-hangzhou-vancouver",
+        "title": "杭州经青岛至温哥华客运航线恢复",
+        "summary": "10月2日，首都航空JD471航班从杭州起飞，经停青岛前往温哥华，恢复洲际客运运营。航线由空客A330执飞，每周五一班，为华东地区留学、探亲和商务旅客增加赴加拿大的出行选择。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 13:39",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-02/10707080.shtml"
+      },
+      {
+        "id": "domestic-04",
+        "kind": "ms43-domestic-poyang",
+        "title": "鄱阳湖湖口退水后出现大片裸露滩涂",
+        "summary": "中新社10月2日现场报道显示，在鄱阳湖与长江交汇的湖口地区，沿岸退水痕迹明显，湖区中央出现大片裸露滩涂。记者及摄影记录呈现湖区退水后的生态景观，沿湖生产生活需关注水情变化。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 13:33",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-02/10707081.shtml"
+      },
+      {
+        "id": "domestic-05",
+        "kind": "ms43-domestic-houwu",
+        "title": "浙江后吴古村以老屋活化带动返乡创业",
+        "summary": "中新社记者10月2日探访浙江永康后吴村，闲置古民居被改为书画社、咖啡馆和特色体验空间。村庄按各栋老屋的历史与空间特点引入不同业态，吸引青年返乡经营，也为村民增加文化与社交场所。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 11:37",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-02/10707060.shtml"
+      },
+      {
+        "id": "domestic-06",
+        "kind": "ms43-domestic-sanming",
+        "title": "三明推出适老秋季旅居体验",
+        "summary": "三明市政府10月2日公布，国庆假期推出秋韵旅居康养产品，串联温泉、茶园、观星和赏秋资源。当地同时发展短期体验与长期旅居套餐，为老年群体增加适老旅游和康养服务选择。",
+        "source": "三明市人民政府",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 11:13",
+        "url": "https://www.sm.gov.cn/zw/zwxx/sjdt/202610/t20261002_2324887.htm"
+      },
+      {
+        "id": "domestic-07",
+        "kind": "ms43-domestic-risk",
+        "title": "国庆假期自然灾害风险形势发布",
+        "summary": "国家防灾减灾救灾委员会办公室与应急管理部发布风险研判，提示国庆假期重点防范洪涝、风雹、森林草原火灾和地质灾害。各地需关注相关灾害对交通出行、户外活动与农业生产的不利影响。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 11:05",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-02/10707035.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "kind": "ms43-domestic-harvest",
+        "title": "秋收农机服务队下沉田间保障抢收",
+        "summary": "央广记者在秋收一线采访发现，农机服务队通过维修站点和流动抢修队保障收获作业。受访维修人员介绍，接到故障求助后及时赶赴田间处理问题，帮助农户减少停机等待，保障粮食及时收获。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 11:01",
+        "url": "https://china.cnr.cn/news/20261002/t20261002_527832125.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "kind": "ms43-domestic-brokenbridge-service",
+        "title": "杭州断桥警组用手绘地图服务假期游客",
+        "summary": "国庆首日，杭州断桥警组向游客发放手绘地图，标注分流路线、救生设备、服务岗、公厕和走散汇合点，并在桥头疏导人流。中新网现场报道记录了民警将家庭绘图创意转为便民出游指南的过程。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 10:20",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-02/10707022.shtml"
+      },
+      {
+        "id": "domestic-10",
+        "kind": "ms43-domestic-no-alcohol",
+        "title": "交警提醒无醇啤酒也应看清酒精标签",
+        "summary": "央广网采访交警与行业人士发现，不同无醇啤酒的酒精含量和现场检测结果存在差异。交警提醒驾驶人看清标签，含有酒精的饮品不宜在驾车前饮用，不能仅凭无醇或0.0度宣传判断安全。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 09:29",
+        "url": "https://china.cnr.cn/gdgg/20261002/t20261002_527831969.shtml"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "kind": "ms43-int-g7-energy",
+        "title": "七国集团协调释放一亿桶石油及燃料储备",
+        "summary": "七国集团10月2日同意通过国际能源署协调，在四个月内落实一亿桶石油及燃料储备释放，前20天集中释放柴油，并协调炼厂检修与增产。声明重申成员间不限制能源出口，并非全部新增储备。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 23:24",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-02/10707337.shtml"
+      },
+      {
+        "id": "international-02",
+        "kind": "ms43-int-kyrgyz-satellite",
+        "title": "吉尔吉斯斯坦首颗国家卫星成功入轨",
+        "summary": "中新社10月2日报道，吉尔吉斯斯坦首颗国家卫星于当地时间1日在美国加利福尼亚发射入轨。总统扎帕罗夫公开确认发射日期与地点；卫星由比什凯克控制中心操控，用于监测自然资源和灾害。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 20:50",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-02/10707297.shtml"
+      },
+      {
+        "id": "international-03",
+        "kind": "ms43-int-canada-pipeline",
+        "title": "加拿大将太平洋连接线列为国家利益项目",
+        "summary": "加拿大政府10月1日把拟建的西海岸输油管道太平洋连接线列为国家利益项目，以推进联邦审查和协商。政府计划在2027年9月1日前确定项目条件；本次决定不代表项目已开工或建成。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 14:50",
+        "url": "https://world.chinadaily.com.cn/a/202610/02/WS6abf670ee4b09a165c78de2b.html"
+      },
+      {
+        "id": "international-04",
+        "kind": "ms43-int-au-restraint",
+        "title": "非盟呼吁埃塞、厄特和埃及保持克制",
+        "summary": "非盟委员会10月1日呼吁埃塞俄比亚、厄立特里亚和埃及保持最大限度克制，避免加剧地区紧张局势。委员会敦促三国保留沟通渠道，通过外交与和平对话解决分歧，并表示愿支持降温努力。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 14:26",
+        "url": "https://www.news.cn/20261002/35041b0ede584eec96ec84e67e4d230e/c.html"
+      },
+      {
+        "id": "international-05",
+        "kind": "ms43-int-swiss-glacier",
+        "title": "瑞士冰川一年损失超5%体积",
+        "summary": "瑞士科研机构10月1日发布的监测结果显示，该国冰川过去一年损失超过5%的体积，最近五年累计损失接近20%。今年是仅次于2022年的第二严重冰川消融年份。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 13:44",
+        "url": "https://www.news.cn/20261002/e2506ffdcc3d41ab956ca6d24d1efa01/c.html"
+      },
+      {
+        "id": "international-06",
+        "kind": "ms43-int-etihad",
+        "title": "阿提哈德铁路迪拜客运站投入运营",
+        "summary": "阿提哈德铁路迪拜客运站9月30日启用，中铁国际承建的阿布扎比、迪拜和富查伊拉三个车站均已投入运营。迪拜至阿布扎比客运服务扩大了跨酋长国出行选择，旅客可通过铁路官方平台查询班次。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 12:51",
+        "url": "https://world.people.com.cn/n1/2026/1002/c1002-40808933.html"
+      },
+      {
+        "id": "international-07",
+        "kind": "ms43-int-france-budget",
+        "title": "法国提出2027年预算草案和540亿欧元调整计划",
+        "summary": "法国政府10月1日公布2027年预算方向，目标将赤字降至GDP的5%。总调整力度540亿欧元，其中430亿来自新财政文本，其余为既有措施，不能全算新增支出削减；草案仍需议会审议。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 07:52",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-02/10706991.shtml"
+      },
+      {
+        "id": "international-08",
+        "kind": "ms43-int-thai-insurance",
+        "title": "泰国全国灾害保险体系开始保障居民住宅",
+        "summary": "泰国全国灾害保险体系自10月1日起实施，覆盖约3000万户住宅，保障洪灾、风灾和地震。住宅损失按条款最高可获10万泰铢赔偿，灾害致死保障为每人200万泰铢，适用灾害区域认定等条件。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 07:30",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-02/10706983.shtml"
+      },
+      {
+        "id": "international-09",
+        "kind": "ms43-int-us-mortgage",
+        "title": "美国30年期固定房贷平均利率升至7.28%",
+        "summary": "房地美10月1日调查显示，美国30年期固定抵押贷款平均利率升至7.28%，前周为7.03%；15年期升至6.60%。数据为符合调查条件的常规住房贷款均值，并非所有借款人的报价。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 06:45",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-02/10706985.shtml"
+      },
+      {
+        "id": "international-10",
+        "kind": "ms43-int-un-statement",
+        "title": "28国在联大共同发言反对单边强制措施",
+        "summary": "中国常驻联合国代表傅聪10月1日代表28国在联大第三委员会发言，呼吁取消单边强制措施。声明关注药品、能源和粮食供应及脆弱人群处境；这是共同立场声明，并非联大通过的新决议。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 06:41",
+        "url": "https://world.people.com.cn/n1/2026/1002/c1002-40808739.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "kind": "ms43-tech-yuqian",
+        "title": "渝黔换流站进入电气设备安装阶段",
+        "summary": "科技日报记者探访重庆渝黔换流站，工程整体进度过半，场平和桩基已完工，正安装500千伏GIS等电气设备。该站采用背靠背柔性直流技术，具备功率调控与故障隔离能力，预计2027年投产。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 22:23",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/02/content_591451.html"
+      },
+      {
+        "id": "tech-02",
+        "kind": "ms43-tech-co2-storage",
+        "title": "木垒百兆瓦级压缩二氧化碳储能项目并网",
+        "summary": "10月2日，中国华电新疆木垒压缩二氧化碳储能项目成功并网。项目利用二氧化碳在密闭系统内气液转换储存和释放能量，低谷储能、高峰发电，提升电网调峰灵活性；并网不等于全年发电成绩。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 20:49",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-02/10707319.shtml"
+      },
+      {
+        "id": "tech-03",
+        "kind": "ms43-tech-zhongwei",
+        "title": "中卫新能源基地配套调峰电源全容量投产",
+        "summary": "科技日报记者报道，中卫电厂6号机组通过168小时试运行后，4台660兆瓦机组于10月2日全部投产。该电厂作为宁夏腾格里新能源大基地的调峰电源，通过宁夏至湖南特高压直流工程配套外送。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 15:47",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/02/content_591358.html"
+      },
+      {
+        "id": "tech-04",
+        "kind": "ms43-tech-cathode",
+        "title": "无钴高镍正极材料实现微量元素定向设计",
+        "summary": "中科院金属所团队依据元素电荷密度与金属—氧键强度设计无钴高镍正极，改善离子传输和结构稳定性。论文10月1日发表于《自然·合成》，样品在10C循环350次后容量保持率为82.4%。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 13:22",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/02/content_591349.html"
+      },
+      {
+        "id": "tech-05",
+        "kind": "ms43-tech-jiaozhou",
+        "title": "胶州湾第二隧道盾构掘进全部完成",
+        "summary": "10月2日，胶州湾第二隧道服务隧道完成盾构掘进，标志工程盾构任务全部完成。项目采用双主线隧道加中间服务隧道布局，隧道主体长14.37公里，仍须推进后续建设，尚非全线通车。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 10:54",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/02/content_591335.html"
+      },
+      {
+        "id": "tech-06",
+        "kind": "ms43-ai-yangmills",
+        "title": "AI辅助推进粒子散射振幅高圈符号计算",
+        "summary": "中科院理论物理所何颂团队借助自研算法与AI，完成两类六粒子散射振幅的九圈、十圈符号计算。AI承担繁琐步骤和流程自动化，研究者提出方法并检验结果；符号结果仍需补足信息成为完整函数。",
+        "source": "科学网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 19:35",
+        "url": "https://news.sciencenet.cn/htmlnews/2026/10/572424.shtm"
+      },
+      {
+        "id": "tech-07",
+        "kind": "ms43-tech-proteome",
+        "title": "人体蛋白质组导航计划进入实施阶段",
+        "summary": "中国科学家领衔的π-HuB计划进入实施阶段，13项关联研究组成的框架正在审议，先导项目已取得初步进展。国际工作组推进共同标准与数据治理，广州数据中心平台仍在建设中。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 01:01",
+        "url": "https://www.stdaily.com/web/gjxw/2026-10/01/content_590558.html"
+      },
+      {
+        "id": "tech-08",
+        "kind": "ms43-tech-maize-delivery",
+        "title": "17份宜机收玉米育种材料向种企交付",
+        "summary": "9月29日鹤壁品种观摩会上，未米生物向6家种业企业交付17份玉米性状改良材料，覆盖高产、优质和宜机收目标。现场展示华中农大选育的新组合，进展为材料交付与示范，未宣称新论文发表。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 19:52",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/30/content_590729.html"
+      },
+      {
+        "id": "tech-09",
+        "kind": "ms43-tech-cucumber",
+        "title": "华南型黄瓜5K液相育种芯片发布",
+        "summary": "青岛市农科院与企业联合开发华南型黄瓜专用5K液相育种芯片，可用于种质鉴定、遗传多样性分析和分子辅助育种。团队将继续优化位点并开放检测服务，芯片提供育种参考，不能替代田间验证。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 18:47",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/30/content_590707.html"
+      },
+      {
+        "id": "tech-10",
+        "kind": "ms43-tech-brain",
+        "title": "中国科学家解析古老基因与大脑皮层折叠机制",
+        "summary": "昆明动物所团队通过跨物种比较，发现CCNB1IP1基因表达逐步上调与皮层扩张、折叠有关，并在基因敲入小鼠中观察到皮层折叠。研究为理解大脑进化和神经发育提供线索，尚不能推及人体治疗。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 18:22",
+        "url": "https://www3.xinhuanet.com/tech/20260930/b725f0dee3ef4e1194eda0f2fe5ea22e/c.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "kind": "ms43-ai-travel",
+        "title": "AI行程规划进入年轻人出游与旅行服务",
+        "summary": "中新网10月2日实地采访游客及山东AI创作基地，旅行者用预算、兴趣等条件生成路线，企业尝试将AI攻略与人工调整结合。报道展示具体使用场景，不能把个别用户体验推作工具普遍准确率。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 18:00",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-02/10707226.shtml"
+      },
+      {
+        "id": "ai-02",
+        "kind": "ms43-ai-film-production",
+        "title": "生成式AI进入海外短剧后期制作流程",
+        "summary": "总台记者在洛杉矶采访短剧制作团队，生成式AI已用于爆炸等特效画面的生成与多版本修改。制作人介绍，提示词可推动反复迭代；剧本逻辑、镜头选择和最终审美仍由创作者把控。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 11:04",
+        "url": "https://www.chinanews.com.cn/cul/2026/10-02/10707039.shtml"
+      },
+      {
+        "id": "ai-03",
+        "kind": "ms43-ai-domestic-architecture",
+        "title": "国产电子架构具身智能机器人在宜昌发布",
+        "summary": "东土科技9月28日在宜昌发布国产电子架构具身智能机器人，整合操作系统、确定性网络、智能体工具和AI芯片。活动由当地政府及省级部门主办，展示从AI决策到物理执行的底层软硬件协同。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 14:24",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/30/content_590502.html"
+      },
+      {
+        "id": "ai-04",
+        "kind": "ms43-ai-chromagenet",
+        "title": "AI从细胞核图像识别造血干细胞衰老",
+        "summary": "研究者开发ChromAgeNet，利用小鼠造血干细胞核三维图像，以77%准确率区分年轻与衰老细胞。模型识别染色质结构变化，可研究干预线索，尚不能证明细胞功能恢复或人体返老还童。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 02:02",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/30/content_589849.html"
+      },
+      {
+        "id": "ai-05",
+        "kind": "ms43-ai-deepal-cockpit",
+        "title": "深蓝发布搭载豆包大模型的新车座舱",
+        "summary": "深蓝9月28日发布S07 AI激光版。董事长介绍，新座舱通过智能体支持多目的地语音行程规划、场景定制和驾乘偏好记忆。这些属于企业公布的产品能力，不能当作独立性能测试结论。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-29 17:41",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/29/content_589938.html"
+      }
+    ]
+  },
+  "topStoryIds": [
+    "domestic-01",
+    "international-06",
+    "tech-08"
+  ],
+  "metrics": [
+    {
+      "id": "ms43-gold",
+      "kind": "gold",
+      "icon": "🪙",
+      "name": "国内金价（Au99.99）",
+      "value": "907.32 元/克",
+      "note": "2026-09-30最近交易日收盘，Au99.99；国庆休市",
+      "source": "上海黄金交易所",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://en.sge.com.cn/data/data_daily_international_new?end_date=2026-09-30&start_date=2026-09-30"
+    },
+    {
+      "id": "ms43-fuel",
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "北京92号汽油",
+      "value": "8.61 元/升",
+      "note": "2026-09-24 24时起最高零售价；实际站价可低于上限",
+      "source": "北京市发展和改革委员会",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202609/t20260924_4879948.htm"
+    },
+    {
+      "id": "ms43-usd",
+      "kind": "usd_cny",
+      "icon": "💱",
+      "name": "美元兑人民币",
+      "value": "1美元兑人民币6.7351元",
+      "note": "2026-09-30最近公布中间价；国庆期间无新报价",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do"
+    },
+    {
+      "id": "ms43-eur",
+      "kind": "eur_cny",
+      "icon": "💱",
+      "name": "欧元兑人民币",
+      "value": "1欧元兑人民币7.6215元",
+      "note": "2026-09-30最近公布中间价；国庆期间无新报价",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do"
+    },
+    {
+      "id": "ms43-jpy",
+      "kind": "jpy_cny",
+      "icon": "💱",
+      "name": "日元兑人民币",
+      "value": "100日元兑人民币4.2727元",
+      "note": "2026-09-30最近公布中间价；国庆期间无新报价",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do"
+    },
+    {
+      "id": "ms43-oil",
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际原油期货",
+      "value": "WTI 91.11 / 布伦特 102.25美元/桶",
+      "note": "2026-10-02结算；WTI11月合约跌1.90%，布伦特12月合约跌0.06%",
+      "source": "第一财经",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.yicai.com/news/103384007.html"
+    }
+  ],
+  "observation": "假期公共服务需要落到具体场景：残疾人就业平台提供技能和岗位支持，农机维修与抢收服务帮助减少田间等待，铁路客运扩展了跨区域出行选择。科技报道也应区分研发、材料交付和正式运营，品种改良材料交付企业并不等于新品种已完成田间验证。人工智能产品的发布会介绍属于企业公布的能力，不能直接当作独立测试结果。数据区标明黄金与汇率的最近公布日期，并将国际原油期货结算单独标注到交易日，避免把假期沿用数据误认成当天新报价。"
+}
