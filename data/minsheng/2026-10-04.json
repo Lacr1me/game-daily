@@ -1,0 +1,458 @@
+{
+  "date": "2026-10-04",
+  "issue": 44,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期日",
+  "lunarDate": "农历丙午年八月廿四",
+  "cutoff": "2026-10-04 08:34（北京时间）",
+  "productionTime": "2026-10-04 08:35（北京时间）",
+  "metricsCutoff": "2026-10-04 08:34（北京时间）",
+  "sources": [
+    "中国新闻网",
+    "省级党媒／政府新闻发布平台",
+    "新华网",
+    "中国科技网",
+    "央广网",
+    "科学网"
+  ],
+  "metricSources": [
+    "国家外汇管理局",
+    "上海黄金交易所",
+    "北京市发展和改革委员会",
+    "新华网"
+  ],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "kind": "ms44-dom-blood",
+        "title": "杭州运河献血屋国庆假期照常开放",
+        "summary": "中新网记者探访杭州运河爱心献血屋，现场工作人员介绍，国庆七天每日10时至17时开放，无需预约，可携带手机刷脸认证献血。医护与志愿者轮班值守，提供引导与献血科普服务。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-03 18:07",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-03/10707546.shtml"
+      },
+      {
+        "id": "domestic-02",
+        "kind": "ms44-dom-songyang",
+        "title": "浙江松阳古树公园投用串联乡村游",
+        "summary": "浙江松阳后畲村国庆假期投用1.7公顷古树公园，串联古树群并配套游步道、观景平台。村里安排年轻党员值班讲解古树与古村历史，让游客在拍照之外了解乡村文化与保护工作。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-03 10:56",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-03/10707400.shtml"
+      },
+      {
+        "id": "domestic-03",
+        "kind": "ms44-dom-metro",
+        "title": "长沙地铁推出21天晚安语音服务",
+        "summary": "10月1日至21日，长沙地铁每晚十点后播报晚安问候，连续第三年推出晚安地铁计划。主办方面向市民征集原创祝福语，以地铁语音和线上互动为夜间乘客提供特色服务。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-03 19:07",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-03/10707578.shtml"
+      },
+      {
+        "id": "domestic-04",
+        "kind": "ms44-dom-ferry",
+        "title": "香港珊瑚海88号纯电动渡轮投入服务",
+        "summary": "香港珊瑚海88号纯电动渡轮10月3日启航，服务观塘至西湾河短程航线。船务公司介绍，该船可载241人，配有无障碍设施；环保署官员表示，渡轮采用磷酸铁锂电池，夜间充电供日间航行。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-03 19:42",
+        "url": "https://www.chinanews.com.cn/dwq/2026/10-03/10707586.shtml"
+      },
+      {
+        "id": "domestic-05",
+        "kind": "ms44-dom-heritage",
+        "title": "长沙国庆非遗活动提供公益手工课堂",
+        "summary": "长沙国庆非遗系列活动联动景区、街区和商场，安排传统戏曲演出、公益剪纸课堂及手工传习。橘子洲非遗馆推出谷山砚制作、铜官烙画体验，市民与亲子家庭可跟随传承人学习传统技艺。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-03 19:11",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-03/10707579.shtml"
+      },
+      {
+        "id": "domestic-06",
+        "kind": "ms44-dom-liuzhou",
+        "title": "柳州铁路港调车班组假期保障货运",
+        "summary": "国庆假期，柳州铁路港调车班组持续开展送空车、取重车、车辆检查与编组作业。中新网现场报道记录调车员逐辆检查车门、车窗和车钩状态，保障货物在假期按时进出货场。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-03 19:37",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-03/10707590.shtml"
+      },
+      {
+        "id": "domestic-07",
+        "kind": "ms44-dom-suzhou-market",
+        "title": "苏州检查假期食品、价格与网络餐饮安全",
+        "summary": "苏州市场监管部门国庆期间检查农贸市场、超市和餐饮商户，核对食品进货与溯源、明码标价、计量器具及线上线下经营一致性。假期持续巡查人员密集场所，处置消费纠纷与虚假宣传。",
+        "source": "省级党媒／政府新闻发布平台",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-03 00:28",
+        "url": "https://www.suzhou.gov.cn/szsrmzf/szyw/202610/ffa258f77a2741e49f8f808019490a43.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "kind": "ms44-dom-shipai-transformer",
+        "title": "苏州石牌变电站更换主变压器",
+        "summary": "苏州500千伏石牌变电站利用假期更换2号主变并开展设备检修。国网人员介绍，新设备优化磁屏蔽结构以改善散热；工程预计10月中旬完成，提升供电能力仍属于完工后的预期。",
+        "source": "省级党媒／政府新闻发布平台",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-03 00:36",
+        "url": "https://www.suzhou.gov.cn/szsrmzf/szyw/202610/596616b2f45f4972a477a5c5cd41e307.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "kind": "ms44-dom-library",
+        "title": "西工大图书馆以特色馆藏支持学生阅读",
+        "summary": "西北工业大学图书馆将航空、航天、航海特色文献布置在学生常经区域，方便取阅并定期轮换。馆长介绍，特色馆藏结合教授分享活动，为学生提供课堂之外的阅读与学习空间。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-03 20:39",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-03/10707605.shtml"
+      },
+      {
+        "id": "domestic-10",
+        "kind": "ms44-dom-emergency-checks",
+        "title": "应急管理部调度假期隐患整改与值守",
+        "summary": "应急管理部10月3日调度假期安全工作，要求整改暗访发现的隐患。部、省累计派出检查组4200余个，发现隐患40300余个；各地需滚动研判风险，落实火源管控和应急值守。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-03 17:14",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-03/10707521.shtml"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "kind": "ms44-int-fao",
+        "title": "联合国粮农组织9月食品价格指数升至136点",
+        "summary": "粮农组织10月2日发布的9月食品价格指数为136点，较修订后的8月上涨1.5%。谷物、植物油和食糖指数上升，肉类下降、乳制品持平；原始数据还显示指数同比上涨5.8%。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 21:28",
+        "url": "https://www.news.cn/world/20261002/096d2a0bc1454ae7bffe5d1a4fee4548/c.html"
+      },
+      {
+        "id": "international-02",
+        "kind": "ms44-int-euro-inflation",
+        "title": "欧元区9月通胀初值升至3.8%",
+        "summary": "欧盟统计局公布初步数据：欧元区9月通胀率为3.8%，高于8月的3.2%。能源价格同比上涨18.8%，服务上涨3.2%；剔除能源、食品、酒类和烟草后核心通胀率为2.5%。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 20:00",
+        "url": "https://www.news.cn/world/20261002/ae21686eb10f42cdbddbfc985441ee7a/c.html"
+      },
+      {
+        "id": "international-03",
+        "kind": "ms44-int-uk-release",
+        "title": "英格兰和威尔士实施提前释囚安排",
+        "summary": "英格兰和威尔士开始提前释放部分囚犯。地方警务犯罪专员说明，获释人员仍须在社区服完剩余刑期，接受许可条件与监督；违反条件可被召回监狱，部分严重罪行不适用。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 18:05",
+        "url": "https://www.news.cn/world/20261002/5229f8f9176540e3bf8fe45c9f7d9858/c.html"
+      },
+      {
+        "id": "international-04",
+        "kind": "ms44-int-alamein",
+        "title": "首届阿拉曼非洲论坛在埃及开幕",
+        "summary": "首届阿拉曼非洲论坛10月2日在埃及阿拉曼新城开幕，由埃及政府、非洲进出口银行和非洲联盟发展署共同举办。论坛聚焦非洲经济一体化，议题涵盖基础设施、贸易、关键矿产、数字创新与医疗健康。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 23:02",
+        "url": "https://www.news.cn/world/20261002/0eb34bcfa41c48fbace3a6d0ba427519/c.html"
+      },
+      {
+        "id": "international-05",
+        "kind": "ms44-int-us-jobs",
+        "title": "美国9月非农就业增加2.9万个",
+        "summary": "美国劳工统计局10月2日公布，9月非农岗位增加2.9万个，失业率为4.2%。7月和8月增量合计下修6万个，8月由16.2万个修正为13.3万个；主要行业当月就业变化不大。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-03 06:42",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-03/10707344.shtml"
+      },
+      {
+        "id": "international-06",
+        "kind": "ms44-int-g7-oil",
+        "title": "七国集团计划四个月释放至多1亿桶储备",
+        "summary": "法国总统府公报称，七国集团同意在国际能源署协调下，四个月内释放至多1亿桶成品油和原油储备。各方还同意不在成员间设置能源出口禁令或限制，协调应对燃料价格上涨。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-03 06:44",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-03/10707343.shtml"
+      },
+      {
+        "id": "international-07",
+        "kind": "ms44-int-uk-study",
+        "title": "中英游学活动汇聚14所英国高校代表",
+        "summary": "中国驻英国使馆9月30日在伦敦举行中英游学领航计划招待会，14所英国高校代表参加。高校代表介绍赴华游学的作用，三名学生分享与中国学生交流及观察基础设施、科技产业的经历。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-03 02:08",
+        "url": "https://www.news.cn/world/20261003/f619166035354d339766ab498a50ddfd/c.html"
+      },
+      {
+        "id": "international-08",
+        "kind": "ms44-int-crew13",
+        "title": "四名航天员抵达国际空间站",
+        "summary": "NASA通报，Crew-13四名航天员10月1日乘龙飞船抵达国际空间站，与和谐号节点舱对接。发射至对接历时7小时55分钟，创美国飞船赴空间站纪录，随后开展检漏和加压。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 09:57",
+        "url": "https://www.news.cn/tech/20261002/d849ffeea02845278c7bf6014d834fbf/c.html"
+      },
+      {
+        "id": "international-09",
+        "kind": "ms44-int-newyork-music",
+        "title": "纽约中国当代音乐节以追梦故事开幕",
+        "summary": "第九届纽约中国当代音乐节当地时间10月2日在卡内基音乐厅开幕，以追梦为主题，呈现中国作曲家新作及华裔在美经历。开幕音乐会上演独幕歌剧《裂痕》，音乐节持续至10月11日。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-03 14:56",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-03/10707478.shtml"
+      },
+      {
+        "id": "international-10",
+        "kind": "ms44-int-komeito-leader",
+        "title": "冈本三成接任日本公明党党首",
+        "summary": "日本公明党10月3日举行党大会，批准众议员冈本三成接替竹谷敏子担任党首。公明党官方代表履历已列出冈本三成，此前28名公明党系众议员复党，政党组织重新整合。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-03 15:09",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-03/10707492.shtml"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "kind": "ms44-tech-xiamen-transfer",
+        "title": "厦门以转化平台衔接高校技术与产业",
+        "summary": "厦门高校区域技术转移转化中心设立光电显示、海洋氢能特色分中心，为高校创业团队提供服务。负责人介绍，平台已储备逾460项成果、落地30余项项目，衔接高新区产业培育体系。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-03 19:13",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-03/10707567.shtml"
+      },
+      {
+        "id": "tech-02",
+        "kind": "ms44-tech-superconducting-line",
+        "title": "北京亦庄推进铁基超导带材生产线",
+        "summary": "国科超导正在北京亦庄建设铁基超导线材和带材量产线，规划年产约100公里、预计年底建成。项目面向聚变、医疗与量子信息材料需求，当前仍处建设阶段，尚未达到规划产能。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-03 00:02",
+        "url": "https://english.news.cn/20261003/04fcfd9e8f9345af8ab2e1bc5f61a61f/c.html"
+      },
+      {
+        "id": "tech-03",
+        "kind": "ms44-tech-tianjin-inspection",
+        "title": "天津电力新增无人驾驶电缆巡检车",
+        "summary": "中国科技网现场采访显示，国网天津电力国庆前新投运两台无人驾驶巡检车，覆盖拓展至生态城、空港片区。车辆与固定摄像头协同回传电缆路径影像，并与高空摄像头、隧道机械狗组成分场景巡护体系。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 18:49",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/02/content_591421.html"
+      },
+      {
+        "id": "tech-04",
+        "kind": "ms44-tech-dryland-maize",
+        "title": "旱作玉米技术模式在甘肃完成测产",
+        "summary": "中国农科院团队9月26至28日在甘肃环县开展深松垄沟覆膜密植技术测产。示范田玉米亩产782.9公斤，比传统模式增产22.7%；技术结合保墒、集雨与密植，结果限于此次示范条件。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 15:58",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/02/content_591360.html"
+      },
+      {
+        "id": "tech-05",
+        "kind": "ms44-tech-black-pig-demo",
+        "title": "地方猪育种成果在湛江开展推广观摩",
+        "summary": "中国农村技术开发中心9月29日在湛江组织乡下黑猪育种成果观摩。研发团队展示生产、肉质和抗逆特性，介绍基因聚合育种及风味评价技术，并连线育种场和养殖基地；此次重点是成果应用推广。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 11:16",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/02/content_591332.html"
+      },
+      {
+        "id": "tech-06",
+        "kind": "ms44-tech-golmud-unit",
+        "title": "格尔木超超临界煤电1号机组首次并网",
+        "summary": "青海华电格尔木一期煤电项目1号机组10月2日首次并网，已接入电网并具备送电能力。项目规划两台660兆瓦机组，可与风电、光伏互补提供调峰支撑；双机投产仍是年底计划。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-03 10:22",
+        "url": "https://tech.cnr.cn/techyw/kan/20261003/t20261003_527832945.shtml"
+      },
+      {
+        "id": "tech-07",
+        "kind": "ms44-tech-heilongjiang-smartfarm",
+        "title": "黑龙江智慧农场展示无人收获与数字监测",
+        "summary": "新华社报道，近30名国际记者于9月27日至30日走访哈尔滨、佳木斯。现场展示柴油电混合拖拉机、北斗辅助驾驶，以及无人收割机、植保无人机和实时田间监测平台，呈现农业生产的数字化应用。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 23:44",
+        "url": "https://english.news.cn/20261002/07a1a8c58c334869a950454c3bcba6b7/c.html"
+      },
+      {
+        "id": "tech-08",
+        "kind": "ms44-tech-cotton-smartfarm",
+        "title": "昌吉棉花智慧农场展示全链条装备应用",
+        "summary": "10月1日，新疆昌吉农高区华兴农场举行棉花智慧农场技术装备观摩会。院士与科研机构代表进入棉田和加工厂，查看耕种、管理、收获及加工环节的数字化与机械化应用，项目由石河子大学牵头实施。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 15:47",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/02/content_591355.html"
+      },
+      {
+        "id": "tech-09",
+        "kind": "ms44-tech-norellraptor",
+        "title": "巴氏诺瑞龙化石提供飞行演化新证据",
+        "summary": "中国学者领衔团队在辽宁发现巴氏诺瑞龙化石，骨骼长57厘米并保存部分羽毛。9月29日发表于《自然-通讯》的研究比较相关特征，支持小盗龙类与鸟类在不同选择压力下形成飞行适应。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-03 12:03",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-03/10707421.shtml"
+      },
+      {
+        "id": "tech-10",
+        "kind": "ms44-tech-sealevel-invasion",
+        "title": "中国团队评估海平面上升带来的入侵风险",
+        "summary": "中国科学家领衔研究对122种非原生海洋动物建模，预测本世纪中叶及末期，逾三分之二的新淹没沿海陆地可能成为适宜栖息地。论文9月28日发表，属情景预测，仍有不确定性。",
+        "source": "科学网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-03 12:04",
+        "url": "https://wap.sciencenet.cn/mobile.php?cat=news&id=572461&mobile=1&type=detail"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "kind": "ms44-ai-robot-school",
+        "title": "杭州机器人学校开展分科实训",
+        "summary": "人民日报报道，杭州机器人学校首批30台机器人接受场景技能培训。学校由浙江大学机器人研究院等打造，设置技校、卫校、艺校和体校四个方向，训练涵盖安全、感知、运动与场景实操。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-03 09:26",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-03/10707371.shtml"
+      },
+      {
+        "id": "ai-02",
+        "kind": "ms44-ai-glasses-users",
+        "title": "华强北AI眼镜吸引海外游客试戴",
+        "summary": "新华社在深圳华强北采访海外游客，记录试戴录制与翻译功能AI眼镜的体验。企业正拓展文旅剪辑等场景；报道反映消费端需求，厂商参数和行业增长预测不属于独立测试结论。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-03 09:31",
+        "url": "https://www.news.cn/local/20261003/2b473c95a00b4b5cb712dcc521bd5156/c.html"
+      },
+      {
+        "id": "ai-03",
+        "kind": "ms44-ai-industrial-machine",
+        "title": "工业母机探索场景专用AI与智能编程",
+        "summary": "科技日报大会采访显示，机床企业正探索智能编程、精度改善与设备健康管理。企业与高校人员指出，需面向加工场景开发专用模型，并解决数据共享及人才问题；厂商陈述不作独立测试结论。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 13:25",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/02/content_591346.html"
+      },
+      {
+        "id": "ai-04",
+        "kind": "ms44-ai-suncatcher",
+        "title": "Google太空AI试验卫星进入轨道",
+        "summary": "Google宣布，与Planet合作的Project Suncatcher原型卫星10月1日入轨并建立联系。团队将收集TPU在发射、辐射和极端温度下的表现，研究太空机器学习可行性。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-03 10:52",
+        "url": "https://www.news.cn/tech/20261003/4d93029f61a041bda19b17586f1438dc/c.html"
+      },
+      {
+        "id": "ai-05",
+        "kind": "ms44-ai-iros-m1",
+        "title": "国产四足机器人在IROS完成自主任务",
+        "summary": "IROS2026上南洋理工大学团队用国产铜锤M1机器人开展自主任务。企业原始公告确认，大学团队集成感知、路线规划和机械臂操作系统，机器人无需人工遥控完成指定任务。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 09:00",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-02/10707009.shtml"
+      }
+    ]
+  },
+  "topStoryIds": [
+    "domestic-04",
+    "international-01",
+    "tech-09"
+  ],
+  "metrics": [
+    {
+      "id": "ms44-metric-usd",
+      "kind": "usd_cny",
+      "icon": "💱",
+      "name": "美元兑人民币",
+      "value": "1美元兑人民币6.7351元",
+      "note": "2026-09-30 国庆假期，采用最近交易日中间价",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760"
+    },
+    {
+      "id": "ms44-metric-eur",
+      "kind": "eur_cny",
+      "icon": "💱",
+      "name": "欧元兑人民币",
+      "value": "1欧元兑人民币7.6215元",
+      "note": "2026-09-30 国庆假期，采用最近交易日中间价",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760"
+    },
+    {
+      "id": "ms44-metric-jpy",
+      "kind": "jpy_cny",
+      "icon": "💱",
+      "name": "日元兑人民币",
+      "value": "100日元兑人民币4.2727元",
+      "note": "2026-09-30 国庆假期，采用最近交易日中间价",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760"
+    },
+    {
+      "id": "ms44-metric-gold",
+      "kind": "gold",
+      "icon": "🪙",
+      "name": "黄金 Au99.99",
+      "value": "907.32 元/克",
+      "note": "2026-09-30 最近交易日收盘价，非品牌金饰零售价",
+      "source": "上海黄金交易所",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.sge.com.cn/sjzx/quotation_daily_new?start_date=2026-09-30&end_date=2026-09-30"
+    },
+    {
+      "id": "ms44-metric-domestic-oil",
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "北京92号汽油",
+      "value": "8.61 元/升",
+      "note": "2026-09-24 24:00 北京现行最高零售价，其他地区可能不同",
+      "source": "北京市发展和改革委员会",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202609/t20260924_4879948.htm"
+    },
+    {
+      "id": "ms44-metric-international-oil",
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际原油期货",
+      "value": "WTI 91.11 / 布伦特 102.25美元/桶",
+      "note": "2026-10-02 最近收盘；WTI11月、布伦特12月合约，美元/桶",
+      "source": "新华网",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.xinhuanet.com/fortune/20261003/0d476a5310784e1d92829f577b3c42bd/c.html"
+    }
+  ],
+  "observation": "假期服务与安全保障需要落到具体场景：献血屋保持开放，市场监管核对食品和价格，电力与铁路人员持续值守。科技应用也要区分建设计划、现场示范与正式投产，格尔木机组首次并网并不等于双机已全部投产，示范田增产不能直接推广到所有地区。人工智能能力需在真实环境中验证，产品展示与自主任务仍有各自边界。黄金和汇率注明国庆前最近交易日，国际油价单独标注结算日期，避免将沿用数据误认作当天新报价。"
+}
