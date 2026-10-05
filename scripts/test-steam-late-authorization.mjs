@@ -55,5 +55,11 @@ await freezeSteamDiscovery(current.root,current.options);await inspectSteamDisco
 await rejects({date:currentDate,now:new Date(currentDate+'T10:00:00+08:00'),authorization:{...currentAuthorization,approvalText:'允许'}},'FREEZE_AUTH_INVALID');
 await rejects({date:currentDate,now:new Date(currentDate+'T10:00:00+08:00'),authorization:{...currentAuthorization,approvalReference:'other chat'}},'FREEZE_AUTH_INVALID');
 await rejects({date:'2026-10-02',now:new Date('2026-10-02T10:00:00+08:00'),authorization:{...currentAuthorization,approvalRecordedAt:'2026-10-02T09:30:00+08:00',collectedAt:'2026-10-02T09:40:00+08:00'}},'FREEZE_AUTH_INVALID');
+const recoveryDate='2026-10-05';
+const recoveryAuthorization={approvalText:'我让你补齐',approvalReference:'本聊天针对10月5日一次Steam晚采的确认回复',approvalRecordedAt:recoveryDate+'T18:24:00+08:00',collectedAt:recoveryDate+'T18:25:00+08:00'};
+const recovery=await fixture({date:recoveryDate,now:new Date(recoveryDate+'T18:26:00+08:00'),authorization:recoveryAuthorization});
+await freezeSteamDiscovery(recovery.root,recovery.options);await inspectSteamDiscovery(recovery.root,recoveryDate);
+await rejects({date:recoveryDate,now:new Date(recoveryDate+'T18:26:00+08:00'),authorization:{...recoveryAuthorization,approvalText:'允许'}},'FREEZE_AUTH_INVALID');
+await rejects({date:'2026-10-06',now:new Date('2026-10-06T18:26:00+08:00'),authorization:{...recoveryAuthorization,approvalRecordedAt:'2026-10-06T18:24:00+08:00',collectedAt:'2026-10-06T18:25:00+08:00'}},'FREEZE_AUTH_INVALID');
 console.log('Steam一次性晚采授权回归通过：默认门禁、授权与时间/日期/身份/哈希、只读复用和禁止替换。');
 console.log(`隔离夹具：${parent}`);
