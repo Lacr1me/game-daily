@@ -1,0 +1,510 @@
+{
+  "date": "2026-10-05",
+  "issue": 45,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期一",
+  "lunarDate": "农历丙午年八月廿五",
+  "cutoff": "2026-10-05 17:51（北京时间）",
+  "productionTime": "2026-10-05 17:51（北京时间）",
+  "metricsCutoff": "2026-10-05 17:51（北京时间）",
+  "sources": [
+    "新华网",
+    "中国新闻网",
+    "西班牙首相府",
+    "人民网",
+    "埃菲社",
+    "帝国数据库",
+    "科学网",
+    "中国科学院遗传与发育生物学研究所",
+    "中国科学院",
+    "中国科学院海洋研究所",
+    "中国科技网",
+    "微软研究院",
+    "Anthropic"
+  ],
+  "metricSources": [
+    "国家外汇管理局",
+    "上海黄金交易所",
+    "北京市发展和改革委员会",
+    "新华网"
+  ],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "kind": "ms45-dom-tunnel",
+        "title": "天陇铁路安化隧道贯通",
+        "summary": "天陇铁路安化隧道10月5日贯通，全长19.98公里，是线路重点控制工程。天陇铁路连接甘肃天水与陇南，正线长约208公里；隧道贯通为后续铺轨和全线建设推进创造条件。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05 15:18",
+        "url": "https://www.news.cn/local/20261005/bc77e9fac0174253b778088d50600daf/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "kind": "ms45-dom-zhejiang-tourism",
+        "title": "浙江假日文旅增加机器人互动体验",
+        "summary": "中新网记者在杭州滨江具身智能展示应用推广中心看到，机器人制作咖啡吸引游客停留体验。科技展示与假日游览结合，游客可近距离观察机器人操作，了解具身智能的日常应用场景。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05 14:48",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-05/10708128.shtml"
+      },
+      {
+        "id": "domestic-03",
+        "kind": "ms45-dom-rail",
+        "title": "全国铁路今日预计发送旅客2105万人次",
+        "summary": "国铁集团消息，10月5日全国铁路预计发送旅客2105万人次，计划加开旅客列车1463列。10月4日已发送旅客2032万人次，铁路部门继续增加运力，服务假期探亲、旅游和返程出行。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05 14:05",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-05/10708109.shtml"
+      },
+      {
+        "id": "domestic-04",
+        "kind": "ms45-dom-cangzhou",
+        "title": "沧州夜游与商贸场景带动假日消费",
+        "summary": "新华社记者走访河北沧州，记录运河沿线夜游、商贸街区和特色消费场景。游客在赏景之外体验地方文化与餐饮，城市通过文化活动和夜间服务延长假日游览的停留时间。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05 09:24",
+        "url": "https://www.news.cn/fortune/20261005/1f388c00478f4c3f9fa8807e470e48ff/c.html"
+      },
+      {
+        "id": "domestic-05",
+        "kind": "ms45-dom-library",
+        "title": "图书馆与书店成为长假阅读空间",
+        "summary": "新华社10月4日图片报道记录北京、河南安阳和江西峡江等地的假日阅读场景。市民在图书馆与书店翻阅图书、陪伴儿童阅读，在旅行之外选择安静的公共文化空间度过长假。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-04 22:44",
+        "url": "https://www.news.cn/photo/20261004/e58b9bf8a7e842b79258f95d3f6df6e5/c.html"
+      },
+      {
+        "id": "domestic-06",
+        "kind": "ms45-dom-leshan",
+        "title": "乐山大佛景区澄清AI合成养护视频",
+        "summary": "针对网络流传的乐山大佛“掏耳朵”“挖鼻孔”等养护视频，景区管理人员在中新网采访中说明，这些画面由AI合成。记者现场核对相关部位，提醒游客区分真实保护作业与虚构影像。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-04 18:34",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-04/10707887.shtml"
+      },
+      {
+        "id": "domestic-07",
+        "kind": "ms45-dom-clean",
+        "title": "环卫市政人员假期保障城市运转",
+        "summary": "新华社图片报道记录国庆假期一线环卫和市政岗位：工作人员持续开展河道清漂、街道清洁与管道维护。居民休闲出游时，这些日常维护工作仍按岗位安排进行，保障公共环境正常运转。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-04 17:01",
+        "url": "https://www.news.cn/photo/20261004/a866676208fd42788121e4dce44e9a69/c.html"
+      },
+      {
+        "id": "domestic-08",
+        "kind": "ms45-dom-qinglong",
+        "title": "晴隆二十四道拐观景台和展览馆免费开放",
+        "summary": "贵州晴隆二十四道拐景区调整服务，观景台和展览馆免费开放，抗战公路本身也不收取通行费用。景区观光车为自愿选择的收费项目，游客可根据游览需要决定是否乘坐。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-04 16:19",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-04/10707825.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "kind": "ms45-dom-shandong-village",
+        "title": "山东古村把老屋变成乡村体验空间",
+        "summary": "中新网走访山东胶州曹家庄等村落，记录老屋民宿、非遗体验和乡村工坊的假日场景。村落在保留传统建筑风貌的同时引入手工与文化活动，让游客从观光转向参与式体验。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-04 14:16",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-04/10707801.shtml"
+      },
+      {
+        "id": "domestic-10",
+        "kind": "ms45-dom-sluice",
+        "title": "杭州闸站人员假期巡检守护河道运行",
+        "summary": "国庆假期，杭州李佛桥东闸站工作人员陆建康、冷丹丹持续检查泵机、闸门与护栏，观察河道水位。中新网现场报道记录这对夫妻的轮班值守，通过日常巡检维持闸站和河道正常运行。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-04 11:12",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-04/10707735.shtml"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "kind": "ms45-int-spain",
+        "title": "西班牙首相宣布11月29日提前大选",
+        "summary": "西班牙首相桑切斯10月5日发表声明，宣布将于11月29日提前举行大选，并召开特别内阁会议启动解散议会程序。首相府公开讲话确认选举安排，美联社同日报道作了交叉核验。",
+        "source": "西班牙首相府",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-10-05",
+        "url": "https://www.lamoncloa.gob.es/presidente/intervenciones/paginas/2026/20260905-sanchez-decl-inst-convocatoria-elecciones.aspx"
+      },
+      {
+        "id": "international-02",
+        "kind": "ms45-int-brazil",
+        "title": "巴西总统选举进入第二轮",
+        "summary": "巴西最高选举法院公布，首轮总统选举无人获得过半有效票，弗拉维奥·博索纳罗与卢拉将于10月25日进入第二轮。两人首轮得票率分别为47.03%和45.16%。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05 08:39",
+        "url": "https://www.news.cn/world/20261005/57fbfb4aa07545adad8bbfaa3f0cabf0/c.html"
+      },
+      {
+        "id": "international-03",
+        "kind": "ms45-int-germany-aid",
+        "title": "德国宣布追加约10亿欧元对乌援助",
+        "summary": "德国总理默茨在基辅与乌克兰总统泽连斯基举行联合记者会，宣布追加约10亿欧元军事援助。相关支持涉及防空、无人机和通信等领域；德国政府公开记者会材料确认合作安排。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05 06:22",
+        "url": "https://www.news.cn/world/20261005/f398ab5732d945e9a8c5922f373968a8/c.html"
+      },
+      {
+        "id": "international-04",
+        "kind": "ms45-int-oiv",
+        "title": "世界葡萄与葡萄酒大会将在银川举行",
+        "summary": "第47届世界葡萄与葡萄酒大会将于10月12日至16日在宁夏银川举行。国际葡萄与葡萄酒组织总干事巴克接受人民日报采访，表示期待各国通过知识共享与合作，应对行业转型挑战。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05 05:33",
+        "url": "https://world.people.com.cn/n1/2026/1005/c1002-40809506.html"
+      },
+      {
+        "id": "international-05",
+        "kind": "ms45-int-mozambique",
+        "title": "莫桑比克总统提出拓展对华农业合作",
+        "summary": "莫桑比克总统查波10月3日参加万宝农业园水稻收割活动，提出继续加强与中国的农业合作。新华社现场报道记录当地农业生产与人员交流，合作重点涉及种植技术和农业发展经验。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-04 22:12",
+        "url": "https://www.news.cn/world/20261004/a3526a3c6f754c9a8fcb9089af8ae51d/c.html"
+      },
+      {
+        "id": "international-06",
+        "kind": "ms45-int-latvia",
+        "title": "拉脱维亚议会选举公布初步结果",
+        "summary": "拉脱维亚议会选举初步计票显示，联合名单党获得约35%的选票，成为领先力量。新华社与美联社报道均显示，各党仍需围绕组建政府展开协商，初步结果不等于新内阁已经成立。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-04 13:25",
+        "url": "https://www.news.cn/world/20261004/a5065b4900b24dd5b9405772d29d1d30/c.html"
+      },
+      {
+        "id": "international-07",
+        "kind": "ms45-int-guinea-medical",
+        "title": "中国医院船抵达几内亚开展医疗服务",
+        "summary": "中国海军“吉祥方舟”号医院船10月3日抵达几内亚首都科纳克里，开展为期七天的访问和医疗服务。医院船将结合主平台接诊、医疗巡诊和人员培训，与当地开展医疗交流。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-04 01:53",
+        "url": "https://www.news.cn/world/20261004/c6e615d747b24b44a7115385deebdb17/c.html"
+      },
+      {
+        "id": "international-08",
+        "kind": "ms45-int-sudan-convoy",
+        "title": "苏丹援助车队遇袭造成一名司机遇难",
+        "summary": "据埃菲社援引世界粮食计划署声明，两辆运送粮食的援助卡车10月3日在苏丹南科尔多凡州遇袭，一名司机遇难。车辆正从迪灵驶往卡杜格利，损失与事件细节仍在核查。",
+        "source": "埃菲社",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-10-04",
+        "url": "https://efe.com/mundo/2026-10-04/muere-conductor-onu-sudan/"
+      },
+      {
+        "id": "international-09",
+        "kind": "ms45-int-australia-crash",
+        "title": "澳大利亚汽车冲撞人群后司机被捕",
+        "summary": "澳大利亚纽卡斯尔10月3日发生汽车冲撞人群事件，司机已被捕。中新网初报九人受伤，澳大利亚广播公司后续报道更新为十人；警方正在调查事件经过，尚不宜推断司机动机。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-03 13:46",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-03/10707443.shtml"
+      },
+      {
+        "id": "international-10",
+        "kind": "ms45-int-japan-food",
+        "title": "日本调查统计10月3153种食品计划涨价",
+        "summary": "日本帝国数据库对195家食品企业的调查显示，10月共有3153种食品计划调价，酒类和饮料占比最高。统计依据企业公告，同一商品多次提价分别计数，也包括减量不减价的情况。",
+        "source": "帝国数据库",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-30",
+        "url": "https://www.tdb.co.jp/report/economic/20260930-pricepass-on202609/"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "kind": "ms45-tech-alfalfa",
+        "title": "基因编辑创制耐双除草剂苜蓿种质",
+        "summary": "科学网报道，中国农科院团队通过多基因引导编辑，改造紫花苜蓿的除草剂响应靶点，获得耐两类除草剂的种质。研究为苜蓿杂草防控提供育种材料，实验结果不等于已经推广的商品品种。",
+        "source": "科学网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-04 22:09",
+        "url": "https://news.sciencenet.cn/htmlnews/2026/10/572493.shtm",
+        "paper": {
+          "journal": "Plant Biotechnology Journal",
+          "doi": "10.1111/pbi.70752",
+          "url": "https://doi.org/10.1111/pbi.70752"
+        }
+      },
+      {
+        "id": "tech-02",
+        "kind": "ms45-tech-nepal-expedition",
+        "title": "中尼联合科考调查跨境地质灾害链",
+        "summary": "中尼联合科考队10月3日在成都举行出征仪式，随后赴尼泊尔开展调查。十余家机构的50余名人员将研究高山峡谷地区的地质灾害链，为跨境风险认识和相关地区恢复建设提供科学依据。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-04 02:25",
+        "url": "https://world.people.com.cn/n1/2026/1004/c1002-40809186.html"
+      },
+      {
+        "id": "tech-03",
+        "kind": "ms45-tech-openfish",
+        "title": "OpenFISH整合同一切片的转录与代谢信息",
+        "summary": "中科院遗传发育所介绍OpenFISH技术，可在同一组织切片上连接空间转录组与质谱成像。团队已在小鼠脑组织验证方法，便于对照细胞基因表达与代谢信息，相关论文发表于Neuron。",
+        "source": "中国科学院遗传与发育生物学研究所",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-30",
+        "url": "https://genetics.cas.cn/dtxw/kyjz/202609/t20260930_8289015.html",
+        "paper": {
+          "journal": "Neuron",
+          "doi": "10.1016/j.neuron.2026.09.007",
+          "url": "https://doi.org/10.1016/j.neuron.2026.09.007"
+        }
+      },
+      {
+        "id": "tech-04",
+        "kind": "ms45-tech-ceramic",
+        "title": "高温陶瓷形成自适应润滑膜",
+        "summary": "中科院9月30日介绍兰州化物所的陶瓷研究：材料在900℃以上可原位形成液态润滑层，在试验条件下摩擦系数低至0.09。成果面向高温摩擦环境，实际装备应用仍需结合工况验证。",
+        "source": "中国科学院",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-30",
+        "url": "https://www.cas.cn/syky/202609/t20260929_5121182.shtml",
+        "paper": {
+          "journal": "Advanced Functional Materials",
+          "doi": "10.1002/adfm.77611",
+          "url": "https://doi.org/10.1002/adfm.77611"
+        }
+      },
+      {
+        "id": "tech-05",
+        "kind": "ms45-tech-single-metal",
+        "title": "分步蒸发法制备原子级金属单晶",
+        "summary": "中科院9月30日报道上海技物所研究，利用低通量沉积与间歇停顿调控原子排列，制备多种原子级厚度金属单晶。方法为二维金属材料研究提供途径，相关Science论文此前已发表。",
+        "source": "中国科学院",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-30",
+        "url": "https://www.cas.cn/syky/202609/t20260930_5121230.shtml",
+        "paper": {
+          "journal": "Science",
+          "doi": "10.1126/science.aee3132",
+          "url": "https://doi.org/10.1126/science.aee3132"
+        }
+      },
+      {
+        "id": "tech-06",
+        "kind": "ms45-tech-lactate",
+        "title": "研究揭示乳酸调节细胞坏死性凋亡机制",
+        "summary": "中科院9月30日介绍，分子细胞科学卓越创新中心团队发现乳酸可通过调节RIPK3蛋白乳酰化，影响细胞坏死性凋亡。研究基于细胞与动物实验，相关机制尚不能直接等同于临床治疗效果。",
+        "source": "中国科学院",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-30",
+        "url": "https://www.cas.cn/syky/202609/t20260929_5121181.shtml",
+        "paper": {
+          "journal": "Cell Metabolism",
+          "doi": "10.1016/j.cmet.2026.08.022",
+          "url": "https://doi.org/10.1016/j.cmet.2026.08.022"
+        }
+      },
+      {
+        "id": "tech-07",
+        "kind": "ms45-tech-wheat",
+        "title": "调控小麦基因表达增强抗逆能力",
+        "summary": "中科院9月30日介绍，遗传发育所团队通过编辑小麦TaABA2基因的上游开放阅读框，提高脱落酸水平，增强抗旱、抗盐和抗穗发芽表现。研究提供育种思路，效果仍须结合品种与田间条件评估。",
+        "source": "中国科学院",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-30",
+        "url": "https://www.cas.cn/syky/202609/t20260924_5120972.shtml",
+        "paper": {
+          "journal": "Science China Life Sciences",
+          "doi": "10.1007/s11427-026-3494-8",
+          "url": "https://doi.org/10.1007/s11427-026-3494-8"
+        }
+      },
+      {
+        "id": "tech-08",
+        "kind": "ms45-tech-ocean-flood",
+        "title": "研究追踪印度洋变化的沿海洪水影响",
+        "summary": "中科院9月30日报道，海洋所团队结合潮位记录与模式试验，分析印度洋偶极子如何通过大气和海洋过程影响美国东海岸海平面。成果有助于理解远程海洋联系，属于机制研究而非实时预警。",
+        "source": "中国科学院",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-30",
+        "url": "https://www.cas.cn/syky/202609/t20260924_5120973.shtml",
+        "paper": {
+          "journal": "Communications Earth & Environment",
+          "doi": "10.1038/s43247-026-03932-y",
+          "url": "https://doi.org/10.1038/s43247-026-03932-y"
+        }
+      },
+      {
+        "id": "tech-09",
+        "kind": "ms45-tech-taiwan-carbon",
+        "title": "海洋沉积记录揭示隆升与有机碳收支关系",
+        "summary": "中科院海洋所利用南海北部800万年的沉积记录，重建台湾岛岩石有机碳氧化与埋藏变化。研究指出，构造隆升加速下有机碳供应增加、氧化比例下降，为理解地质活动与碳循环提供依据。",
+        "source": "中国科学院海洋研究所",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-30",
+        "url": "https://qdio.cas.cn/2019Ver/News/kyjz/202609/t20260930_8288812.html",
+        "paper": {
+          "journal": "Geology",
+          "doi": "10.1130/G55150.1",
+          "url": "https://doi.org/10.1130/G55150.1"
+        }
+      },
+      {
+        "id": "tech-10",
+        "kind": "ms45-tech-cell-wetting",
+        "title": "仿生微结构揭示肿瘤细胞集体浸润机制",
+        "summary": "中科院理化所9月29日介绍仿生微结构实验：放射状结构促进细胞多方向浸润，平行排列则约束其运动方向。研究揭示细胞群体与周围结构的相互作用，相关结果属于基础研究。",
+        "source": "中国科学院",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-29",
+        "url": "https://www.cas.cn/syky/202609/t20260928_5121137.shtml",
+        "paper": {
+          "journal": "National Science Review",
+          "doi": "10.1093/nsr/nwag593",
+          "url": "https://doi.org/10.1093/nsr/nwag593"
+        }
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "kind": "ms45-ai-hkgai",
+        "title": "香港本地大模型拓展粤语与政务应用",
+        "summary": "新华社采访香港团队，介绍本地大模型对粤语表达和香港语境的适配，以及“港话通”“港文通”等应用。研究人员将问答与文书处理连接到本地使用场景，报道并非本周新版本发布公告。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-04 09:39",
+        "url": "https://www.news.cn/gangao/20261004/a16230b4874c44fcb046195454d54c14/c.html"
+      },
+      {
+        "id": "ai-02",
+        "kind": "ms45-ai-caoxueqin",
+        "title": "曹雪芹纪念馆展示AI交互智能体",
+        "summary": "中国科技网报道，曹雪芹纪念馆在9月29日活动中展示AI智能交互，可围绕人物生平和作品开展问答。主办方计划继续探索研学与导览场景，现场展示尚不代表所有规划功能已经上线。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-09-30 14:28",
+        "url": "https://www.stdaily.com/web/gdxw/2026-09/30/content_590498.html"
+      },
+      {
+        "id": "ai-03",
+        "kind": "ms45-ai-grid",
+        "title": "微软研究用机器学习评估电网空间天气风险",
+        "summary": "微软研究团队整合太阳风观测与地质信息，对美国66935座变电站建立风险模型，研究提前30至60分钟评估地磁扰动影响。系统仍需结合电力企业实际运行数据验证，尚非已部署的预警服务。",
+        "source": "微软研究院",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-30",
+        "url": "https://www.microsoft.com/en-us/research/blog/forecasting-space-weather-risks-on-power-grids/"
+      },
+      {
+        "id": "ai-04",
+        "kind": "ms45-ai-robot-index",
+        "title": "机器人研究区分能力覆盖与经济可行性",
+        "summary": "Anthropic发布机器人任务研究，借助职业任务数据与模型评估现有机器人的能力。报告强调受控环境和成本约束，估计仅0.3%的工作任务具成本竞争力，不能据此推断实际失业人数。",
+        "source": "Anthropic",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-30",
+        "url": "https://www.anthropic.com/research/what-work-can-robots-do"
+      },
+      {
+        "id": "ai-05",
+        "kind": "ms45-ai-quine",
+        "title": "Quine研究系统连接生物模型与实验验证",
+        "summary": "微软介绍Quine早期研究系统，将多模态生物学模型、科研工具与湿实验连接起来，用于提出并验证实验假设。目前仅向部分研究者和合作团队开放，属于实验性科研技术，不用于临床诊疗。",
+        "source": "微软研究院",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-29",
+        "url": "https://www.microsoft.com/en-us/research/blog/introducing-quine-an-ai-research-system-designed-for-the-complexity-of-biology/"
+      }
+    ]
+  },
+  "topStoryIds": [
+    "domestic-03",
+    "international-02",
+    "domestic-01"
+  ],
+  "metrics": [
+    {
+      "id": "ms45-metric-usd",
+      "kind": "usd_cny",
+      "icon": "💱",
+      "name": "美元兑人民币",
+      "value": "1美元兑人民币6.7351元",
+      "note": "2026-09-30 国庆休市，最近交易日中间价",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760"
+    },
+    {
+      "id": "ms45-metric-eur",
+      "kind": "eur_cny",
+      "icon": "💱",
+      "name": "欧元兑人民币",
+      "value": "1欧元兑人民币7.6215元",
+      "note": "2026-09-30 国庆休市，最近交易日中间价",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760"
+    },
+    {
+      "id": "ms45-metric-jpy",
+      "kind": "jpy_cny",
+      "icon": "💱",
+      "name": "日元兑人民币",
+      "value": "100日元兑人民币4.2727元",
+      "note": "2026-09-30 国庆休市，最近交易日中间价",
+      "source": "国家外汇管理局",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760"
+    },
+    {
+      "id": "ms45-metric-gold",
+      "kind": "gold",
+      "icon": "🪙",
+      "name": "黄金 Au99.99",
+      "value": "907.32 元/克",
+      "note": "2026-09-30 最近交易日收盘，非品牌金饰零售价",
+      "source": "上海黄金交易所",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.sge.com.cn/sjzx/quotation_daily_new?start_date=2026-09-30&end_date=2026-09-30"
+    },
+    {
+      "id": "ms45-metric-domestic-oil",
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "北京92号汽油",
+      "value": "8.61 元/升",
+      "note": "2026-09-24 24:00 生效，北京最高零售价",
+      "source": "北京市发展和改革委员会",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202609/t20260924_4879948.htm"
+    },
+    {
+      "id": "ms45-metric-international-oil",
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际原油期货",
+      "value": "WTI 91.11 / 布伦特 102.25美元/桶",
+      "note": "2026-10-02 最近收盘；WTI11月、布伦特12月合约",
+      "source": "新华网",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.xinhuanet.com/fortune/20261003/0d476a5310784e1d92829f577b3c42bd/c.html"
+    }
+  ],
+  "observation": "假期公共服务既体现在铁路增开列车，也体现在闸站巡检、环卫维护和阅读空间的日常运转。文旅中的机器人互动与博物馆智能问答增加了体验方式，AI合成养护视频则提示人们核对影像来源。科技报道需要分清研究机制、实验验证和实际部署：细胞实验不能直接等同于疗效，电网风险模型也仍需运行数据检验。国际新闻中的初步计票、援助声明和企业调价调查各有统计口径；休市期间沿用的金价、汇率同样应保留最近交易日期。"
+}
