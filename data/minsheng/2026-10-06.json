@@ -1,0 +1,470 @@
+{
+  "date": "2026-10-06",
+  "issue": 46,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期二",
+  "lunarDate": "农历丙午年八月廿六",
+  "cutoff": "2026-10-06 08:53（北京时间）",
+  "productionTime": "2026-10-06 08:53（北京时间）",
+  "metricsCutoff": "2026-10-06 08:53（北京时间）",
+  "sources": [
+    "央广网",
+    "新华网",
+    "中国新闻网",
+    "央视网",
+    "人民网",
+    "光明网",
+    "省级党媒／政府新闻发布平台",
+    "科学网",
+    "中国科学院理化技术研究所",
+    "山东大学",
+    "复旦大学",
+    "东南大学",
+    "Science Advances",
+    "Nature Communications",
+    "Communications Physics",
+    "Google DeepMind",
+    "OpenAI",
+    "Anthropic"
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "北京市发展和改革委员会",
+    "新华网",
+    "国家外汇管理局"
+  ],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "kind": "ms46-domestic-beijing-return",
+        "title": "北京高速返程高峰集中于5日至7日下午",
+        "summary": "北京交管部门预计，10月5日至7日高速进京方向迎来返程高峰，16时至20时压力尤为突出。建议出行前查看实时路况、错峰返京，城区出行尽量选择公共交通。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05 08:48",
+        "url": "https://www.cnr.cn/bj/gstjbj/20261005/t20261005_527834355.shtml"
+      },
+      {
+        "id": "domestic-02",
+        "kind": "ms46-domestic-huizhou",
+        "title": "西递宏村假期接待游客量增长",
+        "summary": "西递、宏村以徽剧演出、花灯巡游和古村音乐会丰富国庆体验。10月1日至4日，宏村接待游客11.35万人次、西递4.6万人次，分别同比增长14.56%和8.92%。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05 17:35",
+        "url": "https://www2.xinhuanet.com/politics/20261005/619b306b77314820b6b0ccaae23f91eb/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "kind": "ms46-domestic-safety",
+        "title": "应急管理部调度假期后半程安全防范",
+        "summary": "国务院安委办、应急管理部5日视频调度国庆假期安全防范，要求加强风险监测、点对点防范和森林草原火源管控。会议强调假期后半程仍须加强值班值守与暗访检查。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05 19:09",
+        "url": "https://www2.xinhuanet.com/politics/20261005/d97862179d114bf99803dd489c60932d/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "kind": "ms46-domestic-fujian-slow-tour",
+        "title": "福建县域旅游增添乡村生活体验",
+        "summary": "中新网记者走访福建永泰、尤溪、连江等地，记录游客住院落式民宿、体验割稻晒秋和渔港生活。县域旅游更重视慢节奏与深度体验，乡村闲置民居也获得新的经营机会。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05 13:18",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-05/10708096.shtml"
+      },
+      {
+        "id": "domestic-05",
+        "kind": "ms46-domestic-hotline",
+        "title": "北京12345推动民生诉求协同治理",
+        "summary": "央视实地报道北京接诉即办实践：居民反映的排水、噪声等问题由多方协商解决，骑手停车和换电需求通过专属停车区、驿站及换电柜回应。道路施工也结合群众诉求优化工序、协同推进。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05 20:43",
+        "url": "https://news.cctv.com/2026/10/05/ARTIqSRTWeeWbTY01Mh6tPRw261005.shtml"
+      },
+      {
+        "id": "domestic-06",
+        "kind": "ms46-domestic-consumption",
+        "title": "假期消费市场货足价稳",
+        "summary": "人民日报报道，国庆假期消费市场平稳有序、生活必需品货足价稳。各地商圈推出优惠与文化活动，成都深化放心消费服务，郑州开行适合银发结伴、亲友同行的旅游列车。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05 08:11",
+        "url": "https://cpc.people.com.cn/n1/2026/1005/c64387-40809547.html"
+      },
+      {
+        "id": "domestic-07",
+        "kind": "ms46-domestic-training",
+        "title": "新员工实地培训贯通煤电产业链",
+        "summary": "光明日报采访中国矿业大学毕业生苏发鹏，记录他在新疆天池能源参加新员工培训的经历。培训从准东煤田延伸到贵州盘州电厂，以现场见习连接采煤、储运与发电环节。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05 04:20",
+        "url": "https://news.gmw.cn/2026-10/05/content_39032181.htm"
+      },
+      {
+        "id": "domestic-08",
+        "kind": "ms46-domestic-medical-transfer",
+        "title": "专家讨论如何推动医学成果进入临床",
+        "summary": "在疾病防治与成果转化会议上，专家建议让研发对接患者未满足需求，推动基础研究、临床与产业合作。受访学者强调中试平台和医院提前参与；这些是研讨建议，并非新政策或获批疗法。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05 13:17",
+        "url": "https://www.chinanews.com.cn/jk/2026/10-05/10708095.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "kind": "ms46-domestic-hk-carnival",
+        "title": "香港创科嘉年华将免费向公众开放",
+        "summary": "香港创新科技署介绍创科嘉年华安排：10月24日至11月1日在香港科学园举行，免费参观。部分工作坊需登记，10月6日10时30分开放登记；活动设航天主题展区。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05 19:14",
+        "url": "https://www.chinanews.com.cn/tp/2026/10-05/10708219.shtml"
+      },
+      {
+        "id": "domestic-10",
+        "kind": "ms46-dom-fujian-swap-service",
+        "title": "福建换新服务队把家电回收送到乡镇",
+        "summary": "福建日报记者走访发现，南平组织家电企业流动服务队，为山区居民提供旧机评估、拆装和换新服务。泉州则把展销、旧机回收与补贴核销搬进社区，让居民就近办理。",
+        "source": "省级党媒／政府新闻发布平台",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05 07:27",
+        "url": "https://www.fj.gov.cn/xwdt/mszx/202610/t20261005_7221198.htm"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "kind": "ms46-int-uk-tourism",
+        "title": "中英游客更重视深度文化体验",
+        "summary": "新华社记者在伦敦观察到，中国游客把戏剧、文学和地方文化纳入旅英行程；英国游客赴华也更关注胡同生活与传统技艺。两国旅游业界正围绕体验式产品深化交流。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05 11:24",
+        "url": "https://www.news.cn/world/20261005/36792bdc943e4b3abb03d0bbea230024/c.html"
+      },
+      {
+        "id": "international-02",
+        "kind": "ms46-int-nobel",
+        "title": "三位科学家获2026年诺贝尔医学奖",
+        "summary": "2026年诺贝尔生理学或医学奖授予卡尔·戴塞洛斯、彼得·黑格曼和格奥尔格·纳格尔，表彰光遗传学相关发现。这项技术通过光控制特定神经细胞活动，为研究大脑回路提供工具。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05 17:44",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-05/10708203.shtml"
+      },
+      {
+        "id": "international-03",
+        "kind": "ms46-int-youth-concert",
+        "title": "中德青少年在埃森以音乐交流",
+        "summary": "中德青少年交流音乐会在德国埃森举行，德国伯乐中文合唱团与云南大学附属中学师生同台演唱。德国学生分享赴华中文夏令营经历，以歌曲和亲历故事促进语言学习与民间文化交流。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05 05:33",
+        "url": "https://world.people.com.cn/n1/2026/1005/c1002-40809505.html"
+      },
+      {
+        "id": "international-04",
+        "kind": "ms46-int-indonesia-library",
+        "title": "印尼图书馆探寻与中国古籍保护合作",
+        "summary": "印尼国家图书馆馆长阿齐兹接受新华社专访，期待扩大与中国学术文化机构合作。中国出版机构捐赠的100册图书将丰富馆藏，双方还可探索珍贵古籍修复保护方面的交流。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-04 21:23",
+        "url": "https://www.news.cn/world/20261004/e345142af8de494fa321151ec0afa747/c.html"
+      },
+      {
+        "id": "international-05",
+        "kind": "ms46-int-fashion",
+        "title": "中法时装周以非遗与当代设计促进交流",
+        "summary": "第四届中法时装周在巴黎举行，通过艺术展、论坛与时装秀开展设计交流。中新网记者记录苏绣、香云纱等工艺与法式服装结合的作品，并采访文化中心及法方合作机构代表。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05 17:28",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-05/10708184.shtml"
+      },
+      {
+        "id": "international-06",
+        "kind": "ms46-int-brics-interview",
+        "title": "埃塞俄比亚顾问谈金砖合作与知识共享",
+        "summary": "人民日报专访埃塞俄比亚政策研究所顾问德米西。他认为金砖合作可通过知识共享、能力建设与技术合作支持非洲发展，并期待加强数字基础设施与人才培养；文中观点归属于受访者。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05 11:03",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-05/10708051.shtml"
+      },
+      {
+        "id": "international-07",
+        "kind": "ms46-int-uzbek-chinese",
+        "title": "塔什干旧货市场出现民间中文课堂",
+        "summary": "新华社记者在塔什干扬吉阿巴德旧货市场采访商户与当地孩子，记录他们通过同中国游客交流学习中文的经历。受访者希望附近能有正规中文课程，民间往来由交易延伸至语言学习。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05 11:07",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-05/10708056.shtml"
+      },
+      {
+        "id": "international-08",
+        "kind": "ms46-int-washington-art",
+        "title": "中美艺术家在华盛顿开展人文交流",
+        "summary": "新华社记者记录“ShanghaiEye之夜”中美人文交流活动在华盛顿举行。中国国乐与黄梅戏艺术家、青年民乐演奏者及美国青少年合唱团参与演出，以不同艺术形式开展交流。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05 05:41",
+        "url": "https://www.news.cn/world/20261005/60f48e28def047ba802e3b37921a3574/c.html"
+      },
+      {
+        "id": "international-09",
+        "kind": "ms46-int-icig",
+        "title": "国际图像图形学术会议在新加坡举行",
+        "summary": "第十四届国际图像图形学术会议在新加坡举行，中国图像图形学会通过海外平台开展跨国学术交流。与会研究人员围绕图像处理、计算机视觉等方向讨论前沿进展；会议举办于10月1日至5日。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05 15:34",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-05/10708148.shtml"
+      },
+      {
+        "id": "international-10",
+        "kind": "ms46-int-uzbek-storage-training",
+        "title": "乌兹别克储能运维人员学习远程监控",
+        "summary": "人民日报记者走访乌兹别克斯坦奇尔储能项目发现，当地运维人员已学习电池、变压器和控制系统操作，并承担巡检和值班。控制室可远程监控设备，减少现场操作负担，也为当地居民提供技术岗位。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-06 05:56",
+        "url": "https://world.people.com.cn/n1/2026/1006/c1002-40809727.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "kind": "ms46-tech-ccus",
+        "title": "海上注碳增气平台主体建造完工",
+        "summary": "东方1-1气田新建中心平台主体建造完工，进入调试阶段。中新社采访项目负责人介绍，平台将捕集提纯二氧化碳并回注地层；完成调试后起运南海，投产后可兼顾封碳与天然气增产。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05 09:27",
+        "url": "https://tech.cnr.cn/gstj/20261005/t20261005_527834397.shtml"
+      },
+      {
+        "id": "tech-02",
+        "kind": "ms46-tech-deepseek-mods",
+        "title": "DeepSeek Harness试验插件兼容层",
+        "summary": "DeepSeek Harness发布v0.2.1-alpha.1预览版，新增实验性插件兼容层。官方明确尚未提供完整兼容，不能保证所有扩展无缝运行。",
+        "source": "科学网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05 22:52",
+        "url": "https://news.sciencenet.cn/htmlnews/2026/10/572516.shtm"
+      },
+      {
+        "id": "tech-03",
+        "kind": "ms46-tech-ormosia",
+        "title": "极危植物紫花红豆枝条繁殖取得进展",
+        "summary": "广东罗浮山保护区联合华南植物园等团队，成功实现紫花红豆枝条高压繁殖，为这一极危植物扩繁提供新方法。该技术有助于保护与种群更新，尚不能等同于野外种群已恢复。",
+        "source": "科学网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-01 19:40",
+        "url": "https://news.sciencenet.cn/htmlnews/2026/10/572432.shtm"
+      },
+      {
+        "id": "tech-04",
+        "kind": "ms46-tech-uv-laser",
+        "title": "理化所研制312瓦紫外脉冲激光样机",
+        "summary": "中国科学院理化所公布紫外脉冲固体激光器样机，平均输出功率312瓦、脉冲宽度28纳秒。团队接下来将研究镀膜、退火和精密加工应用，当前成果仍处于样机阶段。",
+        "source": "中国科学院理化技术研究所",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-30",
+        "url": "https://www.ipc.ac.cn/xwzx/kyjz/202609/t20260930_8288954.html"
+      },
+      {
+        "id": "tech-05",
+        "kind": "ms46-tech-battery-review",
+        "title": "动力电池精密测试项目通过指标评审",
+        "summary": "山东大学联合比亚迪等八家单位承担的动力电池智能精密测试项目，于9月30日通过考核指标评审。专家审阅第三方检测报告并实地考察，仪器已在企业应用；本次进展为项目评审通过。",
+        "source": "山东大学",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-10-02",
+        "url": "https://www.view.sdu.edu.cn/info/2077/214643.htm"
+      },
+      {
+        "id": "tech-06",
+        "kind": "ms46-tech-adiponitrile",
+        "title": "复旦团队探索碳电极合成尼龙关键原料",
+        "summary": "复旦大学等团队调控碳电极界面，提高尼龙66原料己二腈的电合成效率，成果发表于《科学》。团队在159平方厘米电解槽中验证性能，为减少铅镉电极依赖提供新思路；仍未大规模工业部署。",
+        "source": "复旦大学",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-10-02",
+        "url": "https://news.fudan.edu.cn/2026/1002/c4a150556/page.htm"
+      },
+      {
+        "id": "tech-07",
+        "kind": "ms46-tech-perovskite-framework",
+        "title": "东南大学团队提出钙钛矿光伏研究AI框架",
+        "summary": "东南大学团队在综述中提出钙钛矿光伏系统级AI研究框架，强调连接材料设计、工艺、表征与稳定性研究，改善数据割裂和跨体系泛化。论文提出研究路线，尚不是已建成的自主实验平台或量产成果。",
+        "source": "东南大学",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-10-02",
+        "url": "https://smse.seu.edu.cn/_t637/2026/1002/c2526a585032/page.htm"
+      },
+      {
+        "id": "tech-08",
+        "kind": "ms46-tech-zinc-iodine",
+        "title": "香港城大团队改善准固态锌碘电池稳定性",
+        "summary": "香港城市大学等团队以硫酸钙基质调控电极界面的水分子和离子传输，改善准固态锌碘电池稳定性。实验全电池在特定条件下循环2500次后保留93%容量，并有软包电池验证；仍属研究阶段。",
+        "source": "Science Advances",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-10-02",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13632760/"
+      },
+      {
+        "id": "tech-09",
+        "kind": "ms46-tech-wastewater-interface",
+        "title": "川大团队研究电化学废水处理界面调控",
+        "summary": "四川大学团队通过铁离子调控电极界面的氢键网络，促进氧化活性物种生成，改善新兴污染物去除。10月5日提前公开的已接收论文报告了连续流500小时测试，为电化学水处理提供研究方法。",
+        "source": "Nature Communications",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-10-05",
+        "url": "https://www.nature.com/articles/s41467-026-78208-2"
+      },
+      {
+        "id": "tech-10",
+        "kind": "ms46-tech-weyl-waveguide",
+        "title": "中国团队提出三维单向光子输运方案",
+        "summary": "浙大、中国计量大学等团队通过理论与数值模拟，研究用波导边界调控三维光子传播，提出可调带宽的单向拓扑滤波方案。论文指出可用单向工作受波导宽度限制；成果尚处于理论设计阶段。",
+        "source": "Communications Physics",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-10-02",
+        "url": "https://www.nature.com/articles/s42005-026-02897-w"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "kind": "ms46-ai-robot-kindergarten",
+        "title": "北京机器人训练探索自主试错学习",
+        "summary": "中新社实地探访首钢园机器人“幼儿园”：机器人借助电子皮肤感知受力，在环境交互和试错反馈中训练动作。研发团队表示，这种自主学习路径仍处探索阶段，将随技术进展调整。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05 14:07",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-05/10708108.shtml"
+      },
+      {
+        "id": "ai-02",
+        "kind": "ms46-ai-apple-harvest",
+        "title": "双臂采摘机器人进入天水苹果园",
+        "summary": "新华社记者在天水花牛苹果基地记录双臂机器人识别成熟果实并采收的过程。研究人员介绍设备面向丘陵山地果园，可自主采收、人机协同或遥控；监测数据也用于果园管理。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-04 16:26",
+        "url": "https://www.news.cn/local/20261004/a289aab80e1042fb8fce24a70a3d8fb8/c.html"
+      },
+      {
+        "id": "ai-03",
+        "kind": "ms46-ai-gemini-argon",
+        "title": "谷歌公布Gemini 4 Argon并分阶段测试",
+        "summary": "谷歌宣布Gemini 4 Argon模型，面向长流程编程、专业工作和网络防御，输出上限扩至百万令牌。目前先向受信任的网络防御团队提供测试，更广泛开放仍待安全评估。",
+        "source": "Google DeepMind",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-09-30",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+      },
+      {
+        "id": "ai-04",
+        "kind": "ms46-ai-textgrain",
+        "title": "OpenAI公布文本水印分阶段实施方案",
+        "summary": "OpenAI公布textGrain文本水印方案，拟在欧盟逐步用于符合条件的输出，并开放研究机构申请检测工具。官方强调短文本、编辑和翻译会削弱检测，水印也不能证明内容真实。",
+        "source": "OpenAI",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-10-05",
+        "url": "https://openai.com/index/eu-text-provenance/"
+      },
+      {
+        "id": "ai-05",
+        "kind": "ms46-ai-bootloops",
+        "title": "研究者介绍BootLoops开源科学计算工具",
+        "summary": "研究者介绍BootLoops开源工具，用模型协助移植算法、执行精确计算和复核结果，再由领域专家判断科学意义。项目由作者维护，文章强调模型仍需人类指导研究方向。",
+        "source": "Anthropic",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-10-01",
+        "url": "https://www.anthropic.com/research/claude-shaped-science"
+      }
+    ]
+  },
+  "topStoryIds": [
+    "domestic-01",
+    "international-02",
+    "domestic-10"
+  ],
+  "metrics": [
+    {
+      "id": "ms46-metric-gold",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.sge.com.cn/",
+      "kind": "gold",
+      "icon": "🪙",
+      "name": "上海金午盘基准价",
+      "value": "907.50 元/克",
+      "note": "9月30日最近交易日；10月1日至7日交易所休市",
+      "source": "上海黄金交易所"
+    },
+    {
+      "id": "ms46-metric-domestic-oil",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202609/t20260924_4879948.htm",
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "北京92号汽油",
+      "value": "8.61 元/升",
+      "note": "2026-09-24 24:00生效，北京最高零售价，非实际统一售价",
+      "source": "北京市发展和改革委员会"
+    },
+    {
+      "id": "ms46-metric-oil-snapshot",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.xinhuanet.com/fortune/20261006/899294f317684f6ba5ba5d8e2598c925/c.html",
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际原油期货",
+      "value": "WTI 89.43 / 布伦特 100.32美元/桶",
+      "note": "2026-10-05收盘；WTI11月、布伦特12月合约",
+      "source": "新华网"
+    },
+    {
+      "id": "ms46-metric-usd",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/safe/rmbhlzjj/index.html",
+      "kind": "usd_cny",
+      "icon": "💱",
+      "name": "美元兑人民币",
+      "value": "1美元兑人民币6.7351元",
+      "note": "9月30日最近公布的中间价，假期沿用；非10月6日成交价",
+      "source": "国家外汇管理局"
+    },
+    {
+      "id": "ms46-metric-eur",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/safe/rmbhlzjj/index.html",
+      "kind": "eur_cny",
+      "icon": "💱",
+      "name": "欧元兑人民币",
+      "value": "1欧元兑人民币7.6215元",
+      "note": "9月30日最近公布的中间价，假期沿用；非10月6日成交价",
+      "source": "国家外汇管理局"
+    },
+    {
+      "id": "ms46-metric-jpy",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.safe.gov.cn/safe/rmbhlzjj/index.html",
+      "kind": "jpy_cny",
+      "icon": "💱",
+      "name": "日元兑人民币",
+      "value": "100日元兑人民币4.2727元",
+      "note": "9月30日最近公布的中间价，假期沿用；非10月6日成交价",
+      "source": "国家外汇管理局"
+    }
+  ],
+  "observation": "返程安全、医学成果转化和家电换新服务，关系到假期里具体的生活需求。国际交流中的中文学习、艺术展演与技术培训，则呈现人与人之间的日常连接。科技与AI报道需要分清理论方案、实验验证、项目评审和实际部署，模型水印也不能证明内容真实。休市期间的金价、汇率应保留真实交易日期，国际油价时点报价与收盘价不能混用。"
+}
