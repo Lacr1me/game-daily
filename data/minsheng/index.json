@@ -4,6 +4,14 @@
   "publishAt": "11:00",
   "editions": [
     {
+      "date": "2026-10-07",
+      "issue": 47,
+      "publishAt": "2026-10-07T11:00:00+08:00",
+      "title": "民生日报 · 每日35条精选新闻",
+      "headline": "崇明赛事交通管制今日中午开始",
+      "file": "data/minsheng/2026-10-07.json"
+    },
+    {
       "date": "2026-10-06",
       "issue": 46,
       "publishAt": "2026-10-06T11:00:00+08:00",

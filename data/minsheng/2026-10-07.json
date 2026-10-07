@@ -1,0 +1,463 @@
+{
+  "date": "2026-10-07",
+  "issue": 47,
+  "sourcePolicyVersion": 2,
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "kind": "ms47-chongming-traffic",
+        "title": "崇明赛事交通管制今日中午开始",
+        "summary": "上海市政府10月5日发布崇明赛事交通措施：10月7日12时至11日24时，崇明大道江帆路至崇州路实施管制；9日至11日其他赛道分时管制。出行应提前规划绕行，现场管制时间可能调整。",
+        "source": "省级党媒／政府新闻发布平台",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05",
+        "url": "https://www.shanghai.gov.cn/nw17239/20261005/445e4cdcb10b464cb14f34bfc764c604.html"
+      },
+      {
+        "id": "domestic-02",
+        "kind": "ms47-shanghai-exit-service",
+        "title": "上海节后出入境办证增设周六夜场",
+        "summary": "上海10月3日发布出入境服务指南：国庆假期6个24小时港澳智能签注点开放；节后20个接待大厅连续两个周六开设夜间办证专场，无需预约。智能签注须本人操作并满足证件有效期条件。",
+        "source": "省级党媒／政府新闻发布平台",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-03",
+        "url": "https://www.shanghai.gov.cn/nw17239/20261004/5131d32c735e47bead4ebfbbf74497aa.html"
+      },
+      {
+        "id": "domestic-03",
+        "kind": "ms47-carbon-observation",
+        "title": "新华社观察碳市场如何带动绿色转型",
+        "summary": "新华社10月7日发布碳市场建设观察，实地记录钢铁、电力和建材企业通过节能改造、燃料调整与固废利用降低排放的实践。报道梳理碳交易机制如何连接企业生产与地方绿色发展。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 00:10",
+        "url": "https://www2.xinhuanet.com/politics/20261007/dbbf19394d8a4807819e6f87a611252d/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "kind": "ms47-service-tourism",
+        "title": "高速服务区拓展假期文旅消费场景",
+        "summary": "中新社现场报道，浙江桐庐服务区的水族馆吸引自驾旅客停留，福建永春达埔服务区引入非遗集市，山西清徐服务区展示醋文化。服务区正增加沿途体验与消费选择。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-06 20:27",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-06/10708521.shtml"
+      },
+      {
+        "id": "domestic-05",
+        "kind": "ms47-qilian-shelter",
+        "title": "祁连启用学校临时安置住宿遇阻游客",
+        "summary": "中国之声采访祁连县文旅部门负责人获悉，当地面对超预期客流，协调宾馆、乡村民宿并启用学校公益性临时安置点，为住宿遇阻游客提供兜底接待。当地也在检视假期接待承载能力。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-06 11:08",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-06/10708375.shtml"
+      },
+      {
+        "id": "domestic-06",
+        "kind": "ms47-nju-heritage",
+        "title": "南大图书馆以体验课程连接古籍保护与青年学习",
+        "summary": "中新社采访南京大学图书馆修复师和学生，记录古籍修复体验课中的实践与跨学科讨论。参与者从纸张材料、图像处理等角度理解保护工作，并强调最小干预与修复过程可逆。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-06 18:56",
+        "url": "https://www.chinanews.com.cn/cul/2026/10-06/10708493.shtml"
+      },
+      {
+        "id": "domestic-07",
+        "kind": "ms47-guangzhou-return",
+        "title": "广铁为返程客流增开列车并保留人工服务",
+        "summary": "国铁广州局介绍，10月6日计划加开702列列车，7日凌晨加开401列夜间高铁，覆盖长沙、潮汕、湛江等方向。客流集中车站加强引导，并保留窗口售票与人工检票。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-06 21:08",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-06/10708532.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "kind": "ms47-yinxu-learning",
+        "title": "殷墟小院以公益研学延续考古记忆",
+        "summary": "中新社记者走访安阳小屯村，记录张家小院收藏早期考古资料、联络两岸学者的经历。青年张栋梁接续传播甲骨文化，通过公益研学课堂带青少年了解殷墟；史馆于2023年开放。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-06 11:18",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-06/10708379.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "kind": "ms47-xiangshan-culture",
+        "title": "象山民俗演艺与宁海休闲渔船丰富假日体验",
+        "summary": "中新网记者在浙江象山记录鱼灯舞、英歌舞等假日活动，并采访海外游客与古城经营者。宁海的休闲渔船和赶海体验也吸引亲子家庭，传统渔业经验正转化为旅游服务。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-06 11:44",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-06/10708392.shtml"
+      },
+      {
+        "id": "domestic-10",
+        "kind": "ms47-service-area-charge-cap",
+        "title": "部分高速服务区高峰充电设动态上限，缓解排队",
+        "summary": "记者在湖北枣阳北服务区了解到，高峰时通过叫号和疏导，将部分车辆充电上限动态设为80%至85%，排队消失后恢复正常。江苏彭城服务区也在客流高峰鼓励充至70%至80%后驶离。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 06:49",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-07/10708570.shtml"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "kind": "ms47-carrier",
+        "title": "法国戴高乐号航母检修期间起火",
+        "summary": "停靠土伦港检修的戴高乐号航母10月5日起火后扑灭，未造成人员伤亡，核动力设施未受影响。新华社与中新社独立报道相互印证，起火原因仍在进一步调查。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-06 00:58",
+        "url": "https://www.news.cn/world/20261006/02b4d648c2a64492bcd11b19f5ae3395/c.html"
+      },
+      {
+        "id": "international-02",
+        "kind": "ms47-russia",
+        "title": "俄外交部称将反制日本追加制裁",
+        "summary": "俄外交部发言人扎哈罗娃10月5日表示，将对日本新的制裁举措采取反制。新华社与中新社报道均提及日本10月2日追加制裁，并首次将35艘船舶纳入制裁范围。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-06 01:32",
+        "url": "https://www.news.cn/world/20261006/c094b78e8707411cb06a439bae43097c/c.html"
+      },
+      {
+        "id": "international-03",
+        "kind": "ms47-nobel-physics",
+        "title": "2026年诺贝尔物理学奖授予弗朗西斯·哈尔岑",
+        "summary": "瑞典皇家科学院10月6日宣布，弗朗西斯·哈尔岑因对冰立方中微子天文台及天体起源高能中微子发现的决定性贡献获奖。冰立方利用南极冰层中的光传感器追踪中微子相互作用。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-06 19:29",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-06/10708500.shtml"
+      },
+      {
+        "id": "international-04",
+        "kind": "ms47-australia-training",
+        "title": "澳大利亚陆军训练事故造成1死5伤",
+        "summary": "澳大利亚国防部6日确认，5日在北领地芒特班迪训练区发生事故，造成1名士兵死亡、5名士兵受伤。中新社与SBS独立报道相互印证，事故原因仍在调查。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-06 17:30",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-06/10708453.shtml"
+      },
+      {
+        "id": "international-05",
+        "kind": "ms47-gaza",
+        "title": "古特雷斯呼吁加沙实现永久停火",
+        "summary": "联合国秘书长古特雷斯10月5日呼吁加沙实现永久停火。有关呼吁同时强调扩大人道援助，并要求遵守国际法。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-06 07:28",
+        "url": "https://www.news.cn/world/20261006/32724c7e2c014ee59167ac01776a526d/c.html"
+      },
+      {
+        "id": "international-06",
+        "kind": "ms47-brisbane-emblems",
+        "title": "布里斯班2032奥运会与残奥会会徽揭晓",
+        "summary": "布里斯班奥组委发布奥运会和残奥会会徽，以澳大利亚本土鸟类为主体，融入昆士兰、圣火和当地文化元素。两种鸟类设计分别用于两项赛事，会徽与稍后公布的吉祥物分开。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 00:34",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-07/10708562.shtml"
+      },
+      {
+        "id": "international-07",
+        "kind": "ms47-germany-lithuania",
+        "title": "德国与立陶宛加强防务合作，驻立旅计划2027年底组建",
+        "summary": "默茨与立陶宛总理在柏林会谈后表示，两国将加强网络防御、武装力量和国防工业合作，继续支持乌克兰。德国政府记者会全文确认，驻立陶宛旅计划于2027年底全面组建。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-06 04:29",
+        "url": "https://www.news.cn/world/20261006/e39fd1e72acd44b1a6eebfbf398b4e8b/c.html"
+      },
+      {
+        "id": "international-08",
+        "kind": "ms47-us-august-trade",
+        "title": "美国8月贸易逆差升至1056亿美元",
+        "summary": "美国商务部公布，8月商品和服务贸易逆差为1056亿美元，比7月增长13.7%。当月出口3152亿美元，进口4208亿美元；年初至8月的累计逆差较上年同期下降19.9%。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 06:41",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-07/10708563.shtml"
+      },
+      {
+        "id": "international-09",
+        "kind": "ms47-germany-august-orders",
+        "title": "德国8月工业新订单环比降10.6%，大额订单影响显著",
+        "summary": "德国联邦统计局10月6日公布，经季节和工作日调整，8月工业新订单环比下降10.6%，运输设备订单明显回落。剔除大额订单后降幅为0.1%，国内和国外订单分别下降17.3%和5.4%。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 06:55",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-07/10708565.shtml"
+      },
+      {
+        "id": "international-10",
+        "kind": "ms47-hrc-accessibility",
+        "title": "联合国人权理事会通过“人人享有无障碍”决议",
+        "summary": "联合国人权理事会10月5日协商一致通过中国代表47国提出的无障碍决议。决议聚焦适老化建设、新兴数字技术中的无障碍交流，并呼吁为发展中国家提供技术援助和加强国际合作。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-06 08:27",
+        "url": "https://www.news.cn/world/20261006/a35b4e4b773147b4af73e58df09bf6fc/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "kind": "ms47-luoping-fossil-digitization",
+        "title": "罗平生物群化石数字化推进，近2000件标本完成三维扫描",
+        "summary": "云南罗平生物群化石数据库项目完成实物标本库搭建及近2000件化石表面三维扫描，后续数据库建设仍在推进。项目拟为化石建立包含分类、产地、形态和地质年代信息的数字档案。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-06 13:10",
+        "url": "https://www.news.cn/tech/20261006/410b25ab787048778d3ba1258ed36582/c.html"
+      },
+      {
+        "id": "tech-02",
+        "kind": "ms47-meishan-5ga",
+        "title": "梅山港区5G-A协同定位与传输，单泊位可编组64辆无人集卡",
+        "summary": "央视记者在宁波舟山港梅山港区看到，5G-A将高精度定位与稳定传输纳入同一网络，非泊位定位精度由分米级提升至厘米级。单泊位可编组64辆无人集卡，报道为假期现场运行观察。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-06 08:24",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/06/content_591951.html"
+      },
+      {
+        "id": "tech-03",
+        "kind": "ms47-dural-metastasis",
+        "title": "复旦团队解析硬脑膜转移的淋巴免疫机制",
+        "summary": "复旦大学等团队发现，肿瘤相关破骨细胞分泌ANG2，损伤脑膜淋巴管并削弱抗肿瘤免疫。9月30日发表于《自然》的研究在小鼠模型中验证干预效果，尚不能据此认定患者治疗有效。",
+        "source": "科学网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-06 22:09",
+        "url": "https://news.sciencenet.cn/htmlnews/2026/10/572530.shtm"
+      },
+      {
+        "id": "tech-04",
+        "kind": "ms47-avian-r2",
+        "title": "鸟类逆转座子改造拓展全RNA基因写入工具",
+        "summary": "中科院动物所等团队筛查1139种鸟类基因组，识别159个R2逆转座子并开展改造。10月5日《自然·生物技术》论文报告人类原代细胞中的RNA介导定点基因整合，尚属细胞实验。",
+        "source": "中国科学院动物研究所",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-10-06",
+        "url": "https://ioz.cas.cn/gb2018/xwdt/kyjz/202610/t20261006_8289377.html"
+      },
+      {
+        "id": "tech-05",
+        "kind": "ms47-liquid-lined-filter",
+        "title": "厦大等团队开发电荷诱导液衬空气过滤膜",
+        "summary": "厦门大学与华侨大学等团队提出电荷诱导液衬过滤膜，借助电场吸引、界面捕获和液体吸收净化颗粒物。10月5日论文报告长时间连续运行与原型机测试，气态污染物治理仍需后续研究。",
+        "source": "厦门大学",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-10-05",
+        "url": "https://pcoss.xmu.edu.cn/info/1013/36014.htm"
+      },
+      {
+        "id": "tech-06",
+        "kind": "ms47-stomatin-microdomains",
+        "title": "北大等团队解析Stomatin膜微区组织机制",
+        "summary": "北京大学等团队利用冷冻电镜解析Stomatin复合体，发现其由16个亚基形成膜锚定结构，并研究其与定向细胞迁移的关联。10月5日公开的是已同行评议的接收稿，后续仍将更新为最终版本。",
+        "source": "Nature Communications",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-10-05",
+        "url": "https://www.nature.com/articles/s41467-026-78250-0"
+      },
+      {
+        "id": "tech-07",
+        "kind": "ms47-chiral",
+        "title": "南开等团队制备可弹性弯曲的手性晶体",
+        "summary": "南开大学等团队通过刚性与柔性结构协同设计，让手性铅卤晶体保持晶格完整并发生弹性弯曲。论文报告水下超声探测实验，属于材料与器件研究；当前公开版本为已同行评议的接收稿。",
+        "source": "Nature Communications",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-10-05",
+        "url": "https://www.nature.com/articles/s41467-026-77915-0?error=cookies_not_supported"
+      },
+      {
+        "id": "tech-08",
+        "kind": "ms47-hybrid-lattice",
+        "title": "中国高校参与提出异型点阵连接设计",
+        "summary": "华侨大学、重庆大学与代尔夫特理工大学等团队提出不同点阵结构之间的连接方法，并以三维打印原型开展力学测试。骨与肌腱的刚度过渡是设计参考，尚不能据此认定已获临床植入验证。",
+        "source": "Nature Communications",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-10-05",
+        "url": "https://www.nature.com/articles/s41467-026-77560-7?error=cookies_not_supported"
+      },
+      {
+        "id": "tech-09",
+        "kind": "ms47-gdf15",
+        "title": "江苏团队研究缓解化疗相关心脏损伤的新机制",
+        "summary": "南京医科大学附属医院等团队在细胞和小鼠实验中研究GDF15相关外泌体，分析其通过SUB1与TERT通路缓解阿霉素所致心脏损伤的机制。当前为已同行评议的接收稿，尚非临床治疗结论。",
+        "source": "Communications Biology",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-10-05",
+        "url": "https://www.nature.com/articles/s42003-026-11069-z?error=cookies_not_supported"
+      },
+      {
+        "id": "tech-10",
+        "kind": "ms47-urban-heat",
+        "title": "中科院团队追踪城市热暴露差距与绿化变化",
+        "summary": "中科院团队分析美国55个城市1986至2020年的热暴露，发现收入群体差距总体收窄但仍存在，与低收入社区较快绿化相关。结果是统计关联，干旱城市仍有持续或扩大的差距。",
+        "source": "Nature Communications",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-10-05",
+        "url": "https://www.nature.com/articles/s41467-026-78468-y?error=cookies_not_supported"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "kind": "ms47-ai-holiday-retail",
+        "title": "AI陪伴产品与眼镜进入上海假日消费场景",
+        "summary": "新华社记者走访上海体验空间和AI应用商店，观察到可进行语音、触觉互动的陪伴机器人，以及具备翻译和导航功能的AI眼镜。消费者现场试用，智能产品逐步从展示转向日常零售。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-06 18:28",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/06/content_592071.html"
+      },
+      {
+        "id": "ai-02",
+        "kind": "ms47-zhejiang-ai-tourism",
+        "title": "浙江假日文旅增加AI讲解与文物识别体验",
+        "summary": "中新网记者记录浙江假期AI文旅场景：杭州文旅智能体提供对话式路线建议，雷峰塔数字IP以专属知识库讲解，西湖博物馆推出拍照识文物活动。报道呈现应用体验，不把既有工具写成本日新发布。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-06 11:53",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-06/10708390.shtml"
+      },
+      {
+        "id": "ai-03",
+        "kind": "ms47-tianjin-agent-grid",
+        "title": "天津供电智能体自动派单，联动无人巡检设备",
+        "summary": "科技日报10月2日现场报道，国网天津城南公司自研智能体用于自动抓单、研判和远程派单，支持网格员处置报修。电缆巡护同时采用无人智巡车、固定摄像头和隧道机械狗，形成多场景协同。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-02 18:49",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/02/content_591421.html"
+      },
+      {
+        "id": "ai-04",
+        "kind": "ms47-inspire-photonic",
+        "title": "清华团队让光子电路在物理系统中原位学习",
+        "summary": "清华大学等团队提出INSPIRE训练方法，直接在光子芯片中测量双向光场、计算梯度并更新参数。10月5日发表的实验展示低误差矩阵训练和原位元学习，结果限于论文所测电路与任务。",
+        "source": "Nature Computational Science",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-10-05",
+        "url": "https://www.nature.com/articles/s43588-026-01057-y"
+      },
+      {
+        "id": "ai-05",
+        "kind": "ms47-glm-bedrock",
+        "title": "Amazon Bedrock新增GLM 5.3推理支持",
+        "summary": "AWS于10月5日宣布Bedrock支持GLM 5.3，提供百万令牌上下文与提示缓存。符合条件的企业客户可通过美国及全球跨区域推理配置访问；本次为云端接入，并非模型首次发布。",
+        "source": "AWS",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-10-05",
+        "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-bedrock-glm-5-3/"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "kind": "gold",
+      "id": "ms47-gold",
+      "icon": "🪙",
+      "name": "上海金交所Au99.99收盘",
+      "value": "907.32元/克",
+      "note": "2026-09-30收盘；国庆10月1—7日休市，10月8日开市",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://en.sge.com.cn/data/data_daily_international_new?end_date=2026-09-30&start_date=2026-09-30",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "domestic_oil",
+      "id": "ms47-domestic-oil",
+      "icon": "⛽",
+      "name": "北京92号汽油最高零售价",
+      "value": "8.61元/升",
+      "note": "2026-09-24 24:00起；地区最高限价，非全国统一价格",
+      "source": "北京市发展改革委",
+      "sourceUrl": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202609/t20260924_4879948.htm",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "usd_cny",
+      "id": "ms47-usd",
+      "icon": "$",
+      "name": "美元兑人民币中间价",
+      "value": "6.7351兑人民币",
+      "note": "2026-09-30；官方原表每100美元673.51元，换算每1美元",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "eur_cny",
+      "id": "ms47-eur",
+      "icon": "€",
+      "name": "欧元兑人民币中间价",
+      "value": "7.6215兑人民币",
+      "note": "2026-09-30；官方原表每100欧元762.15元，换算每1欧元",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "jpy_cny",
+      "id": "ms47-jpy",
+      "icon": "¥",
+      "name": "100日元兑人民币中间价",
+      "value": "4.2727兑人民币",
+      "note": "2026-09-30；保留每100日元口径",
+      "source": "国家外汇管理局",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "international_oil",
+      "id": "ms47-international-oil",
+      "icon": "🛢️",
+      "name": "国际原油期货最近收盘",
+      "value": "89.44 / 100.58美元/桶",
+      "note": "2026-10-06；10-06最近收盘；WTI11月/布伦特12月合约，美元/桶；涨幅0.01%/0.26%",
+      "source": "新华网",
+      "sourceUrl": "https://www.xinhuanet.com/world/20261007/cb31a7c9f1ee45d8b21edfb16471f7b4/c.html",
+      "sourceOrigin": "china"
+    }
+  ],
+  "weekday": "星期三",
+  "lunarDate": "农历丙午年八月廿七",
+  "cutoff": "2026-10-07 08:58（北京时间）",
+  "productionTime": "2026-10-07 08:58（北京时间）",
+  "metricsCutoff": "2026-10-07 08:58（北京时间）",
+  "topStoryIds": [
+    "domestic-01",
+    "domestic-10",
+    "international-03"
+  ],
+  "observation": "假期进入最后一天，日报中的返程交通、办证服务和充电收费提醒，更适合转化为出行前的具体检查：先看路况与列车时刻，再确认办事点和服务费用。国际数据与科研消息则需要区分报道时间、统计月份和实验阶段。黄金与汇率保留节前最近有效交易日，原油使用海外最近收盘；中国团队的新研究值得关注，但细胞、小鼠与原型测试距离日常可用仍有不同门槛。",
+  "sources": [
+    "省级党媒／政府新闻发布平台",
+    "新华网",
+    "中国新闻网",
+    "中国科技网",
+    "科学网",
+    "中国科学院动物研究所",
+    "厦门大学",
+    "Nature Communications",
+    "Communications Biology",
+    "Nature Computational Science",
+    "AWS"
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "北京市发展改革委",
+    "国家外汇管理局",
+    "新华网"
+  ]
+}
