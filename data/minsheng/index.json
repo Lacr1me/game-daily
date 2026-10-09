@@ -4,6 +4,15 @@
   "publishAt": "11:00",
   "editions": [
     {
+      "date": "2026-10-08",
+      "issue": 48,
+      "publishAt": "2026-10-08T11:00:00+08:00",
+      "backfilledAt": "2026-10-09T10:54:41Z",
+      "title": "民生日报 · 每日35条精选新闻",
+      "headline": "10月10日起国内航线燃油附加费上调",
+      "file": "data/minsheng/2026-10-08.json"
+    },
+    {
       "date": "2026-10-07",
       "issue": 47,
       "publishAt": "2026-10-07T11:00:00+08:00",

@@ -1,0 +1,456 @@
+{
+  "date": "2026-10-08",
+  "issue": 48,
+  "sourcePolicyVersion": 2,
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "kind": "ms08-dom-fuel",
+        "title": "10月10日起国内航线燃油附加费上调",
+        "summary": "多家航司公告，10月10日0时起销售的内地航线客票，每航段燃油附加费调整为800公里及以下50元、以上90元，分别增加10元、20元；婴儿免收，规定优惠旅客减半。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 11:41",
+        "url": "https://www.news.cn/fortune/20261007/4261439e9c8c4103bbdb67e516fc4142/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "kind": "ms08-dom-railfraud",
+        "title": "铁路提醒付费抢票加速包可能更慢",
+        "summary": "总台记者实测并采访铁科院人员：购买第三方抢票“加速包”仍须通过12306排队。异常访问可能进入慢速队列或被拒绝出票，旅客应使用官方渠道，警惕隐藏优惠和额外收费。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 13:43",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-07/10708677.shtml"
+      },
+      {
+        "id": "domestic-03",
+        "kind": "ms08-dom-sanya",
+        "title": "三亚整治保护区违规商业赶海行为",
+        "summary": "央视曝光红树林保护区违规商业旅游后，三亚多部门开展现场整治。截至7日18时，已关闭赶海点7个，收缴地笼网570个，并清理违规广告与停靠设施，维护保护区生态环境。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 20:56",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-07/10708816.shtml"
+      },
+      {
+        "id": "domestic-04",
+        "kind": "ms08-dom-parks",
+        "title": "北京国庆假期公园迎客超1381万人次",
+        "summary": "北京市公园管理中心介绍，国庆假期全市公园接待游客1381.36万人次，天坛、颐和园、朝阳公园最受欢迎。文化展演、体育健身和自然科普等活动丰富了市民游客的游园选择。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 20:54",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-07/10708806.shtml"
+      },
+      {
+        "id": "domestic-05",
+        "kind": "ms08-dom-qinghai",
+        "title": "青藏铁路格拉段完成57.8公里清筛整治",
+        "summary": "青藏铁路甘隆至玉珠峰段完成为期一个月的线路清筛集中修，整治线路57.8公里。施工投入近40台大型养路机械，改善高海拔线路道床状况，为秋冬季安全运营提供保障。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 20:48",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-07/10708797.shtml"
+      },
+      {
+        "id": "domestic-06",
+        "kind": "ms08-dom-wintergames",
+        "title": "长春大冬会火炬、奖牌和官方服装发布",
+        "summary": "长春2027世界大学生冬季运动会7日公布火炬“吉翔”、奖牌“吉梦”和官方服装。奖牌融入松花石与NFC芯片，赛事将于2027年1月15日至25日在长春、吉林举办。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 16:29",
+        "url": "https://www.news.cn/20261007/2d66092a50274c5e9f6d879697bd5b4c/c.html"
+      },
+      {
+        "id": "domestic-07",
+        "kind": "ms08-dom-fujian",
+        "title": "福建古厝街区上演戏曲惠民活动",
+        "summary": "国庆期间，福建多地将闽剧、莆仙戏等表演带到古厝、街头和公园。福州三坊七巷、泉州府文庙及莆田乡镇展开演出，居民在家门口看戏，游客在当地街区体验传统文化。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 21:00",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-07/10708813.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "kind": "ms08-dom-guifeng",
+        "title": "桂峰村古厝晒秋与非遗体验吸引游客",
+        "summary": "福建尤溪桂峰村国庆期间开展晒秋、黄酒酿造展示和农产品市集。记者现场采访村干部与经营者，古厝修缮、民宿和文创体验让游客从短暂停留转向住下来了解乡村文化。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 17:32",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-07/10708741.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "kind": "ms08-dom-candle",
+        "title": "银川蜡雕手作成为青年假日休闲选择",
+        "summary": "中新社记者探访银川蜡雕工作室，青年与亲子家庭体验刻蜡、卷雕等工艺。工作室介绍，简化后的基础作品约一至两小时完成；报道同时观察到拼豆、木作、陶艺等体验业态。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 13:27",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-07/10708663.shtml"
+      },
+      {
+        "id": "domestic-10",
+        "kind": "ms08-dom-taiwanfood",
+        "title": "台湾盐酥鸡品牌在重庆试营业",
+        "summary": "台湾盐酥鸡品牌大陆首店在重庆南岸区试营业。中新社记者探访并采访运营负责人和两岸食客，门店采用两岸合营模式，调味料来自台湾，鸡肉等食材使用大陆供应链。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 16:44",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-07/10708724.shtml"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "kind": "intl-fed-minutes-20261008",
+        "title": "美联储纪要显示年内或再加息",
+        "summary": "美联储7日公布9月15日至16日货币政策会议纪要。多数与会者认为年内再次加息可能合适，同时强调应根据后续经济信息和风险变化作出决定。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 12:59",
+        "url": "https://www.news.cn/20261008/d7aa27863b04435b958fbb7a15c079ca/c.html"
+      },
+      {
+        "id": "international-02",
+        "kind": "intl-japan-bankruptcies-20261008",
+        "title": "日本上半财年企业破产5373家",
+        "summary": "东京商工调查公布，2026财年4月至9月日本企业破产5373家，同比增长3.8%，连续第五年增加，数量为2013财年以来最多。劳动力短缺和物价上涨相关破产均增加。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 18:20",
+        "url": "https://www.news.cn/20261008/da69a98283dd43f089d9bdc341b29789/c.html"
+      },
+      {
+        "id": "international-03",
+        "kind": "intl-afcra-launch-20261008",
+        "title": "非洲信用评级机构在毛里求斯成立",
+        "summary": "非洲信用评级机构7日在毛里求斯首都路易港正式成立。机构依据非盟授权设立，由私营部门主导并自行筹资，将为主权、地方政府和企业等提供信用评级。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 12:59",
+        "url": "https://www.news.cn/20261008/7eaf829a16f949808adbd5f0eccdee00/c.html"
+      },
+      {
+        "id": "international-04",
+        "kind": "intl-navy-malaysia-20261008",
+        "title": "中国海军护航编队访问马来西亚",
+        "summary": "中国海军第48批护航编队8日抵达马来西亚哥打基纳巴卢，开始为期5天的友好访问。唐山舰、大庆舰、太湖舰参加访问，双方将开展专业交流和舰艇参观等活动。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 15:54",
+        "url": "https://www.news.cn/20261008/f0d41a7b05914815b4137ef1801f1843/c.html"
+      },
+      {
+        "id": "international-05",
+        "kind": "ms08-int-nobel",
+        "title": "两名科学家获2026年诺贝尔化学奖",
+        "summary": "瑞典皇家科学院宣布，将2026年诺贝尔化学奖授予亨利·B·卡甘和硖合宪三，表彰他们在不对称有机合成中发现非线性效应和自催化现象。两人将平分1200万瑞典克朗奖金。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 19:32",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-07/10708780.shtml"
+      },
+      {
+        "id": "international-06",
+        "kind": "ms08-int-worldbank",
+        "title": "世界银行上调东亚和太平洋地区增长预测",
+        "summary": "世界银行将东亚和太平洋地区2026年经济增速预测上调至4.5%，认为高技术产品制造和出口支撑增长。报告同时指出AI应用不均衡，基础设施、技能和政策改革仍是关键。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 12:14",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-07/10708644.shtml"
+      },
+      {
+        "id": "international-07",
+        "kind": "ms08-int-yoon",
+        "title": "尹锡悦免费舆论调查案二审改判无罪",
+        "summary": "据韩联社消息，韩国首尔高等法院7日就尹锡悦涉嫌接受免费舆论调查服务案作出无罪判决，推翻部分一审认定。法院认为相关政治利益难折算为财产性利益，该案不影响其其他诉讼。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 15:52",
+        "url": "https://www.news.cn/world/20261007/2bb81c34a409476b9f726592bd023c3d/c.html"
+      },
+      {
+        "id": "international-08",
+        "kind": "ms08-int-patrushev",
+        "title": "帕特鲁舍夫将于8日至13日访问中国",
+        "summary": "外交部发言人7日宣布，俄罗斯总统助理、海事委员会主席帕特鲁舍夫将于10月8日至13日访问中国。中共中央政治局委员、中央外办主任王毅将与其会谈交流，报道未披露其他议程。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 16:00",
+        "url": "https://www.news.cn/world/20261007/95a47c15987348739de6d5ed1fecd6df/c.html"
+      },
+      {
+        "id": "international-09",
+        "kind": "ms08-int-thailand",
+        "title": "泰国防灾部门报告洪灾已致60人死亡",
+        "summary": "据泰国防灾减灾厅7日公布的信息，自9月16日以来洪灾已造成60人死亡，曼谷及27个府受灾。有关部门持续开展排水、救援和灾后救助，并加强跨府水量调度与防洪安排。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 23:19",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-07/10708831.shtml"
+      },
+      {
+        "id": "international-10",
+        "kind": "ms08-int-indiarate",
+        "title": "印度央行3年多来首次加息",
+        "summary": "印度储备银行7日将基准回购利率上调25个基点至5.50%，为2023年2月以来首次加息。央行将本财年经济增长预期上调至7.1%，后续是否继续加息取决于经济形势。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 23:47",
+        "url": "https://www.news.cn/fortune/20261007/8ee941f871964de7b6aee7faffde3a12/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "kind": "ms08-tech-hailing",
+        "title": "海铃中微子望远镜原型串深海布放",
+        "summary": "海铃团队在国庆期间完成首个原型探测器串的深海布放，并接入南海海底观测网。项目负责人徐东莲介绍，原型已正常运行；完整阵列仍待后续建设，不能视为望远镜全部建成。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 15:39",
+        "url": "https://www.stdaily.com/web/gjxw/2026-10/08/content_592643.html"
+      },
+      {
+        "id": "tech-02",
+        "kind": "ms08-tech-carbonmembrane",
+        "title": "天大团队研制新型高效碳捕集膜",
+        "summary": "天津大学团队将单晶共价有机框架与聚合物复合，研发全有机混合基质膜。成果7日发表于《自然·能源》，在模拟烟气测试中提高二氧化碳渗透率；工业应用仍待推进。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 09:26",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/08/content_592394.html"
+      },
+      {
+        "id": "tech-03",
+        "kind": "ms08-tech-xiyin",
+        "title": "西阴遗址新发掘揭示双重环壕",
+        "summary": "山西省考古研究院介绍，西阴遗址第三次发掘发现双重环壕及赤铁矿石、研磨颜料的工具。考古人员据此推测存在制陶作坊区，丰富了仰韶聚落研究；作坊判断仍属研究推断。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 18:46",
+        "url": "https://www.chinanews.com.cn/cul/2026/10-08/10709266.shtml"
+      },
+      {
+        "id": "tech-04",
+        "kind": "ms08-tech-nuclearclock",
+        "title": "中国团队研制出稳定运行的核光钟",
+        "summary": "清华大学团队与合作者将148纳米连续波激光锁定至钍-229核跃迁，实现核光钟稳定运行。成果7日在线发表于《自然》，标志着闭环计时研究取得进展，实际应用仍待工程化。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 23:48",
+        "url": "https://www3.xinhuanet.com/tech/20261007/9633e5fd07134420a6a03426da6c95da/c.html"
+      },
+      {
+        "id": "tech-05",
+        "kind": "ms08-tech-rice",
+        "title": "我国团队绘制水稻全生命周期细胞图谱",
+        "summary": "我国科研团队绘制水稻全生命周期三维时空细胞图谱，覆盖10类组织器官，将细胞类型、空间分布与基因调控联系起来。相关研究发表于《细胞》，为理解水稻发育和分子育种提供基础资源。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 19:26",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/07/content_592292.html"
+      },
+      {
+        "id": "tech-06",
+        "kind": "ms08-tech-machinery",
+        "title": "高端智能农机加快投入秋收秋种",
+        "summary": "大型高端智能农机加快投入秋收秋种，大喂入量收获机、植保无人机和丘陵山地拖拉机加快应用。部分混动、纯电动拖拉机已投入生产，混动收获机等仍处于量产前阶段。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 16:06",
+        "url": "https://www.news.cn/politics/20261007/d7fd261c46ac469784c90b6926585e38/c.html"
+      },
+      {
+        "id": "tech-07",
+        "kind": "ms08-tech-transformer",
+        "title": "广州柔直工程770兆伏安变压器就位",
+        "summary": "广州天河棠下柔直背靠背工程的770兆伏安变压器近日就位，国庆期间继续安装。工程采用柔性直流和设备上楼设计，拟改善片区电力调节；仍处施工阶段，新增供电能力尚待建成。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 17:43",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-07/10708746.shtml"
+      },
+      {
+        "id": "tech-08",
+        "kind": "ms08-tech-soybean",
+        "title": "大豆新品系在东北试验田接受测产",
+        "summary": "崖州湾国家实验室等团队7日在阿城开展大豆观摩测产，多个新品系点测亩产超过350公斤。团队结合品种与栽培技术进行实收评价；结果为试验田表现，不等同全国平均亩产。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 20:45",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-07/10708793.shtml"
+      },
+      {
+        "id": "tech-09",
+        "kind": "ms08-tech-peanut",
+        "title": "南疆开展麦后复种花生试验",
+        "summary": "新疆农科院等团队在南疆盐碱沙地开展小麦收获后复种花生试验，配套早熟品种、覆膜和机械作业。试验田亩产约380公斤，探索两年三熟模式；结果不等同区域平均产量。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 14:11",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/07/content_592234.html"
+      },
+      {
+        "id": "tech-10",
+        "kind": "ms08-tech-urbanpredict",
+        "title": "港科大更新城市风险预测合作进展",
+        "summary": "港科大7日介绍城市预测合作进展，将高分辨率模型、观测数据和社区风险感知结合。内地与多国研究人员正在比对城市模型，成果仍处研究阶段，相关预警能力尚未全面部署。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 17:20",
+        "url": "https://www.chinanews.com.cn/dwq/2026/10-07/10708737.shtml"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "kind": "ms08-ai-retail",
+        "title": "零售物理智能方案支持机器人协作",
+        "summary": "正行创新8日在亚太零售商大会发布Physical AI方案，结合人形与轮臂机器人、管理平台，面向补货、巡检和搬运。平台支持任务分配及人工接管；门店部署效果仍须实际验证。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 21:47",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/08/content_592843.html"
+      },
+      {
+        "id": "ai-02",
+        "kind": "ms08-ai-xiamenrobots",
+        "title": "厦门异构机器人训练场开展实景任务训练",
+        "summary": "科技日报记者走访厦门异构机器人训练场，场内设置超市、家居、仓储等十个实景训练区。采集员拆解叠衣、分拣等任务，借助主从臂、VR和视频记录获取真机数据，验证机器人的动作能力。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 07:47",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/08/content_592364.html"
+      },
+      {
+        "id": "ai-03",
+        "kind": "ms08-ai-tidaltraffic",
+        "title": "河北高速交警用AI研判潮汐车道启用",
+        "summary": "科技日报记者走访河北高速交警情指中心，模型汇集十七条高速、二百一十五处卡口的五分钟车流数据，结合假期历史数据预判拥堵，辅助提前布设潮汐车道和分级管控。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 19:13",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/07/content_592285.html"
+      },
+      {
+        "id": "ai-04",
+        "kind": "ms08-ai-pen",
+        "title": "义乌制笔工厂将AI视觉用于笔芯检测",
+        "summary": "义乌卡游制笔工厂借助视觉拍照与AI计算线迹特征检测笔芯，将模具、注塑、装配和品控串联为数字化流程。报道为制造现场应用观察，月产3000万支笔是工厂整体产量。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 10:07",
+        "url": "https://www.news.cn/fortune/20261007/48912c19787c4233b607caa137491f57/c.html"
+      },
+      {
+        "id": "ai-05",
+        "kind": "ms08-ai-travelhlj",
+        "title": "黑龙江文旅智能体提供导览与多语服务",
+        "summary": "中新网记者在黑龙江采访文旅部门：伊春伴游智能体融合大语言模型与数字人，提供推理和互动；黑河跨境文旅平台支持五种语言转译和行程服务。报道展示实际服务场景，未宣称模型发布或性能突破。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 18:06",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-07/10708748.shtml"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "kind": "gold",
+      "icon": "🪙",
+      "name": "上海金早盘基准价",
+      "value": "894.48元/克",
+      "note": "2026-10-08早盘基准价；已留存早盘快照",
+      "source": "上海黄金交易所",
+      "id": "ms08-met-gold",
+      "sourceUrl": "https://www.sge.com.cn/",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "福建92号汽油最高零售价",
+      "value": "8.57元/升",
+      "note": "2026-09-24 24:00起执行；地区最高限价，非全国统一价格",
+      "source": "福建省发展和改革委员会",
+      "id": "ms08-met-domesticoil",
+      "sourceUrl": "https://fgw.fujian.gov.cn/zfxxgkzl/zfxxgkml/yzdgkdqtxx/202609/t20260924_7218113.htm",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "usd_cny",
+      "icon": "$",
+      "name": "美元兑人民币中间价",
+      "value": "6.7367兑人民币",
+      "note": "2026-10-08；每100美元673.67元，换算每1美元；非现汇成交价",
+      "source": "国家外汇管理局",
+      "id": "ms08-met-usd",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "eur_cny",
+      "icon": "€",
+      "name": "欧元兑人民币中间价",
+      "value": "7.5404兑人民币",
+      "note": "2026-10-08；每100欧元754.04元，换算每1欧元；非现汇成交价",
+      "source": "国家外汇管理局",
+      "id": "ms08-met-eur",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "jpy_cny",
+      "icon": "¥",
+      "name": "100日元兑人民币中间价",
+      "value": "4.2642兑人民币",
+      "note": "2026-10-08；保留每100日元口径；非现汇成交价",
+      "source": "国家外汇管理局",
+      "id": "ms08-met-jpy",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际原油期货最近收盘",
+      "value": "88.28 / 100.20美元/桶",
+      "note": "2026-10-07收盘；WTI11月／布伦特12月合约，美元/桶",
+      "source": "新华网",
+      "id": "ms08-met-internationaloil",
+      "sourceUrl": "https://www.news.cn/fortune/20261008/8622959e75bf446086df5ad2e55f973c/c.html",
+      "sourceOrigin": "china"
+    }
+  ],
+  "weekday": "星期四",
+  "lunarDate": "农历丙午年八月廿八",
+  "cutoff": "2026-10-08 23:59（北京时间）",
+  "backfilledAt": "2026-10-09T10:54:41Z",
+  "productionTime": "2026-10-09 18:54（北京时间）",
+  "metricsCutoff": "2026-10-08 11:26（北京时间）",
+  "topStoryIds": [
+    "domestic-01",
+    "international-05",
+    "tech-04"
+  ],
+  "observation": "本期为10月8日民生日报补刊，新闻按原报道时间整理，市场数据保留当时已存档的有效快照。节后出行要留意航线燃油附加费的生效时点，抢票应优先使用官方渠道；保护区整治与文化体验也体现公共服务的不同侧面。核光钟、水稻细胞图谱和深海探测原型带来新研究进展，但田间点测、模拟测试与工程应用仍须分开看。AI正进入交通、制造和零售场景，发布功能与实际部署效果之间，还需要持续验证。",
+  "sources": [
+    "新华网",
+    "中国新闻网",
+    "中国科技网"
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "福建省发展和改革委员会",
+    "国家外汇管理局",
+    "新华网"
+  ]
+}

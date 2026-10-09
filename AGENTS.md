@@ -2,6 +2,8 @@
 
 本文件作用于仓库根目录及全部子目录，保留任务路由、核心约束和验收入口。每日接力的详细流程只维护在 [运行手册](docs/daily-runbook.md)；若子目录有更具体的 `AGENTS.md`，同时遵守。
 
+入口命令若在启动前因 `setup refresh had errors`、`helper_unknown_error` 等宿主沙箱初始化错误失败，先按手册[宿主命令初始化失败恢复](docs/daily-runbook.md#宿主命令初始化失败恢复)核对是否实际执行；确认未执行的同一已授权命令应通过 `require_escalated` 环境审批重试，再继续状态流程。审批拒绝必须具体报告，不得绕过；不为此修改全局 ACL 或终止其他聊天的进程。宿主初始化失败不是日报制作或发布完成。
+
 ## 项目与任务路由
 
 这是部署于 `https://springhues.com` 的纯静态双频道日报网站。生产站使用 HTML、CSS、原生 JavaScript、JSON 和图片，不使用前端框架或包管理器；Node.js 脚本负责校验、归档、构建、健康检查和发布。
