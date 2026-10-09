@@ -1,0 +1,777 @@
+{
+  "date": "2026-10-09",
+  "issue": 48,
+  "cutoff": "2026-10-09 05:20（北京时间）",
+  "dataWindow": "2026-10-08 至 2026-10-09",
+  "sources": [
+    "游民星空",
+    "3DM游戏网",
+    "BBSMC",
+    "MC百科",
+    "Steam 国区"
+  ],
+  "news": [
+    {
+      "id": "mechanical-city-2",
+      "title": "机械迷城2公布双主角解谜",
+      "summary": "Josef 与 Berta 将共同探索能源不足的机器人山谷，玩家可切换两位主角协力解谜，Floex 回归作曲。",
+      "source": "游民星空",
+      "date": "2026-10-09",
+      "url": "https://www.gamersky.com/news/202610/2223931.shtml",
+      "image": "game-brief-assets/2026-10-09-news-mechanical-city-2.png"
+    },
+    {
+      "id": "new-god-chronicles",
+      "title": "新神纪公布联机生存建造玩法",
+      "summary": "Norsfell 公布融合轻度生存建造的俯视角动作 RPG，支持单人与合作探索，未来计划加入中国神话内容。",
+      "source": "游民星空",
+      "date": "2026-10-08",
+      "url": "https://www.gamersky.com/news/202610/2223956.shtml",
+      "image": "game-brief-assets/2026-10-09-news-new-god-chronicles.png"
+    },
+    {
+      "id": "dave-subnautica2",
+      "title": "潜水员戴夫联动深海迷航2",
+      "summary": "联动 DLC 计划2027年初上线；此次公告还披露《潜水员戴夫》全球销量突破1000万份。",
+      "source": "游民星空",
+      "date": "2026-10-09",
+      "url": "https://www.gamersky.com/news/202610/2223963.shtml",
+      "image": "game-brief-assets/2026-10-09-news-dave-subnautica2.png"
+    },
+    {
+      "id": "invokyr",
+      "title": "勇者的试炼开启抢先体验",
+      "summary": "10月8日进入抢先体验，支持最多6人联机；初期包含4块棋盘与多种怪物和事件。",
+      "source": "3DM游戏网",
+      "date": "2026-10-08",
+      "url": "https://www.3dmgame.com/news/202610/3955690.html",
+      "image": "game-brief-assets/2026-10-09-news-invokyr.png"
+    },
+    {
+      "id": "animal-city-cafe",
+      "title": "动物都市咖啡厅10月13日登陆Steam",
+      "summary": "计划10月13日发售，初始收录35首歌曲；关卡编辑器预计在发售后约一个月推出。",
+      "source": "3DM游戏网",
+      "date": "2026-10-08",
+      "url": "https://www.3dmgame.com/news/202610/3955686.html",
+      "image": "game-brief-assets/2026-10-09-news-animal-city-cafe.png"
+    },
+    {
+      "id": "taiwu-otherworld",
+      "title": "太吾绘卷异世界定档抢先体验",
+      "summary": "墨境团队开发的授权衍生作计划10月15日开启抢先体验，支持最多4人合作。",
+      "source": "3DM游戏网",
+      "date": "2026-10-08",
+      "url": "https://www.3dmgame.com/news/202610/3955684.html",
+      "image": "game-brief-assets/2026-10-09-news-taiwu-otherworld.png"
+    },
+    {
+      "id": "dd2-world-film",
+      "title": "龙之信条2黑暗觉者公开世界观影片",
+      "summary": "10月8日公开世界观影片，由津田健次郎讲述诺根地区；扩展内容计划10月9日推出。",
+      "source": "3DM游戏网",
+      "date": "2026-10-08",
+      "url": "https://www.3dmgame.com/news/202610/3955671.html",
+      "image": "game-brief-assets/2026-10-09-news-dd2-world-film.png"
+    },
+    {
+      "id": "varlet-demo",
+      "title": "异界揭踪公开三平台体验版",
+      "summary": "10月8日推出三平台体验版，正式版计划10月29日发售，Steam 版提供限时服装奖励。",
+      "source": "3DM游戏网",
+      "date": "2026-10-08",
+      "url": "https://www.3dmgame.com/news/202610/3955634.html",
+      "image": "game-brief-assets/2026-10-09-news-varlet-demo.png"
+    },
+    {
+      "id": "little-prince-tyger",
+      "title": "食子之虎开启限时测试",
+      "summary": "Team17 与 Saltitude 公布动作肉鸽 Little Prince Tyger，测试计划10月8日至18日进行。",
+      "source": "游民星空",
+      "date": "2026-10-08",
+      "url": "https://www.gamersky.com/news/202610/2223976.shtml",
+      "image": "game-brief-assets/2026-10-09-news-little-prince-tyger.png"
+    },
+    {
+      "id": "star-order-review",
+      "title": "沉星之序媒体评测解禁",
+      "summary": "游民转述 Noisy Pixel 的10分评价，肯定多世界谜题交织设计；这是该媒体评分，不代表玩家共识。",
+      "source": "游民星空",
+      "date": "2026-10-08",
+      "url": "https://www.gamersky.com/news/202610/2222983.shtml",
+      "image": "game-brief-assets/2026-10-09-news-star-order-review.png"
+    }
+  ],
+  "packs": [
+    {
+      "id": "the-fool",
+      "name": "愚者",
+      "summary": "伪装、欺骗与屠龙的冒险。",
+      "category": "冒险",
+      "source": "BBSMC",
+      "url": "https://bbsmc.net/modpack/the-fool",
+      "image": "game-brief-assets/2026-10-09-pack-the-fool.png",
+      "heat": 95,
+      "heatEvidenceAt": "2026-10-09",
+      "heatSignals": "当日热门列表累计下载 1778000 次；当日热门列表关注 1755 人。热度为编辑排序分，不代表日增量。"
+    },
+    {
+      "id": "vefc",
+      "name": "香草纪元：食旅纪行",
+      "summary": "以农夫乐事扩展与异世界探索串联食旅。",
+      "category": "厨房水槽",
+      "source": "BBSMC",
+      "url": "https://bbsmc.net/modpack/vefc",
+      "image": "game-brief-assets/2026-10-09-pack-vefc.png",
+      "heat": 93,
+      "heatEvidenceAt": "2026-10-09",
+      "heatSignals": "当日热门列表累计下载 1244000 次；当日热门列表关注 1475 人。热度为编辑排序分，不代表日增量。"
+    },
+    {
+      "id": "dcnw",
+      "name": "终焉决斗 NW",
+      "summary": "围绕战魂不熄展开的战斗整合包。",
+      "category": "战斗",
+      "source": "BBSMC",
+      "url": "https://bbsmc.net/modpack/dcnw",
+      "image": "game-brief-assets/2026-10-09-pack-dcnw.png",
+      "heat": 91,
+      "heatEvidenceAt": "2026-10-09",
+      "heatSignals": "当日热门列表累计下载 35000 次；当日热门列表关注 47 人。热度为编辑排序分，不代表日增量。"
+    },
+    {
+      "id": "immersive-fight",
+      "name": "沉浸战斗",
+      "summary": "以史诗战斗为核心的多人冒险。",
+      "category": "战斗",
+      "source": "BBSMC",
+      "url": "https://bbsmc.net/modpack/immersive-fight",
+      "image": "game-brief-assets/2026-10-09-pack-immersive-fight.png",
+      "heat": 89,
+      "heatEvidenceAt": "2026-10-09",
+      "heatSignals": "当日热门列表累计下载 1098000 次；当日热门列表关注 915 人。热度为编辑排序分，不代表日增量。"
+    },
+    {
+      "id": "wss",
+      "name": "奇妙商店物语",
+      "summary": "以原创内容构建的商店经营体验。",
+      "category": "经营",
+      "source": "BBSMC",
+      "url": "https://bbsmc.net/modpack/wss",
+      "image": "game-brief-assets/2026-10-09-pack-wss.png",
+      "heat": 87,
+      "heatEvidenceAt": "2026-10-09",
+      "heatSignals": "当日热门列表累计下载 12000 次；当日热门列表关注 51 人。热度为编辑排序分，不代表日增量。"
+    },
+    {
+      "id": "luomuqu",
+      "name": "落幕曲",
+      "summary": "拔刀剑、TaCZ 与 YSM 组合的冒险体验。",
+      "category": "冒险",
+      "source": "BBSMC",
+      "url": "https://bbsmc.net/modpack/luomuqu",
+      "image": "game-brief-assets/2026-10-09-pack-luomuqu.png",
+      "heat": 85,
+      "heatEvidenceAt": "2026-10-09",
+      "heatSignals": "当日热门列表累计下载 668000 次；当日热门列表关注 1330 人。热度为编辑排序分，不代表日增量。"
+    },
+    {
+      "id": "deceasedcraft",
+      "name": "亡者世界",
+      "summary": "在感染都市搜集物资并研发疫苗。",
+      "category": "生存",
+      "source": "BBSMC",
+      "url": "https://bbsmc.net/modpack/deceasedcraft",
+      "image": "game-brief-assets/2026-10-09-pack-deceasedcraft.png",
+      "heat": 83,
+      "heatEvidenceAt": "2026-10-09",
+      "heatSignals": "当日热门列表累计下载 345000 次；当日热门列表关注 661 人。热度为编辑排序分，不代表日增量。"
+    },
+    {
+      "id": "incandescent-verity",
+      "name": "方可梦：炽白真形",
+      "summary": "深度改造的宝可梦 RPG 与图鉴收集。",
+      "category": "冒险",
+      "source": "BBSMC",
+      "url": "https://bbsmc.net/modpack/incandescent-verity",
+      "image": "game-brief-assets/2026-10-09-pack-incandescent-verity.png",
+      "heat": 81,
+      "heatEvidenceAt": "2026-10-09",
+      "heatSignals": "当日热门列表累计下载 46000 次；当日热门列表关注 148 人。热度为编辑排序分，不代表日增量。"
+    },
+    {
+      "id": "nsuk",
+      "name": "新：模拟大都市",
+      "summary": "城市生活、农夫乐事与摄影的休闲体验。",
+      "category": "休闲",
+      "source": "BBSMC",
+      "url": "https://bbsmc.net/modpack/nsuk",
+      "image": "game-brief-assets/2026-10-09-pack-nsuk.png",
+      "heat": 79,
+      "heatEvidenceAt": "2026-10-09",
+      "heatSignals": "当日热门列表累计下载 88000 次；当日热门列表关注 342 人。热度为编辑排序分，不代表日增量。"
+    },
+    {
+      "id": "chapter-of-yuusha-3",
+      "name": "勇者之章Ⅲ",
+      "summary": "挑战、战斗与任务串联勇者冒险。",
+      "category": "挑战",
+      "source": "BBSMC",
+      "url": "https://bbsmc.net/modpack/chapter-of-yuusha-3",
+      "image": "game-brief-assets/2026-10-09-pack-chapter-of-yuusha-3.png",
+      "heat": 77,
+      "heatEvidenceAt": "2026-10-09",
+      "heatSignals": "当日热门列表累计下载 181000 次；当日热门列表关注 386 人。热度为编辑排序分，不代表日增量。"
+    }
+  ],
+  "mods": [
+    {
+      "id": "touhou-maid-personality",
+      "name": "车万女仆：性格",
+      "summary": "档案迁移与 patpat 交互更新；1.20.1 分支已停止更新。",
+      "version": "1.4.1",
+      "loader": "NeoForge / Minecraft 1.21.1",
+      "date": "2026-10-06",
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/class/version/30580.html?jump=51016"
+    },
+    {
+      "id": "farmers-delight-refabricated",
+      "name": "农夫乐事 Fabric 重制",
+      "summary": "修复小刀额外耐久消耗、煎锅音效及肥沃土壤上的野花。",
+      "version": "3.6.28",
+      "loader": "Fabric / Minecraft 26.3",
+      "date": "2026-10-07",
+      "source": "BBSMC",
+      "url": "https://bbsmc.net/mod/farmers-delight-refabricated/version/26.3-3.6.28"
+    },
+    {
+      "id": "sophisticated-backpacks",
+      "name": "精妙背包",
+      "summary": "修复 NeoForge 26.3.0.47-beta 及后续版本的兼容性。",
+      "version": "26.3-3.26.10.2196",
+      "loader": "NeoForge / Minecraft 26.3",
+      "date": "2026-10-07",
+      "source": "BBSMC",
+      "url": "https://bbsmc.net/mod/sophisticated-backpacks/version/26.3-3.26.10.2196"
+    },
+    {
+      "id": "travelersbackpack",
+      "name": "旅行者背包",
+      "summary": "适配 NeoForge 配置变动，调整铁傀儡背包说明。",
+      "version": "26.3-11.4.2",
+      "loader": "NeoForge / Minecraft 26.3",
+      "date": "2026-10-05",
+      "source": "BBSMC",
+      "url": "https://bbsmc.net/mod/travelersbackpack/version/26.3-11.4.2"
+    },
+    {
+      "id": "creativecore",
+      "name": "CreativeCore",
+      "summary": "更新 NeoForge 26.3.0.48-beta 适配；为依赖它的模组提供核心组件。",
+      "version": "2.14.20",
+      "loader": "NeoForge / Minecraft 26.3",
+      "date": "2026-10-05",
+      "source": "BBSMC",
+      "url": "https://bbsmc.net/mod/creativecore/version/2.14.20"
+    },
+    {
+      "id": "puzzles-lib",
+      "name": "Puzzles Lib",
+      "summary": "新增附魔修改回调，恢复燃料与堆肥钩子并修复模型烘焙。",
+      "version": "26.3.10",
+      "loader": "NeoForge / Minecraft 26.3",
+      "date": "2026-10-05",
+      "source": "BBSMC",
+      "url": "https://bbsmc.net/mod/puzzles-lib/version/GkHuIc9a"
+    }
+  ],
+  "trends": [
+    "双主角配合成为解谜新作的玩法切入点。",
+    "轻生存、建造与多人合作继续交汇。",
+    "战斗冒险与经营休闲在整合包榜单并行。",
+    "冻结发现面的优惠横跨冒险、模拟与合作游戏。"
+  ],
+  "features": [
+    {
+      "id": "mechanical-city-2",
+      "title": "机械迷城2公布双主角解谜",
+      "summary": "Josef 与 Berta 将共同探索能源不足的机器人山谷，玩家可切换两位主角协力解谜，Floex 回归作曲。",
+      "source": "游民星空",
+      "date": "2026-10-09",
+      "url": "https://www.gamersky.com/news/202610/2223931.shtml",
+      "image": "game-brief-assets/2026-10-09-news-mechanical-city-2.png"
+    },
+    {
+      "id": "feature-dcnw-heat",
+      "title": "终焉决斗 NW 进入中文社区热门列表",
+      "summary": "今日 BBSMC 热门列表显示约3.5万次累计下载、47名关注者，以战魂不熄组织战斗体验；这是当天社区曝光快照，不是当天首发公告。",
+      "source": "BBSMC",
+      "date": "2026-10-09",
+      "url": "https://bbsmc.net/modpack/dcnw",
+      "image": "game-brief-assets/2026-10-09-pack-dcnw.png"
+    }
+  ],
+  "deals": [
+    {
+      "name": "Red Dead Redemption 2",
+      "discount": "-75%",
+      "original": "¥279.00",
+      "price": "¥69.75",
+      "label": "今日特惠",
+      "ends": "截至 10-23",
+      "image": "game-brief-assets/2026-10-09-deal-1174180.png",
+      "url": "https://store.steampowered.com/app/1174180/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Grand Theft Auto V 增强版",
+      "discount": "-56%",
+      "original": "¥224.00",
+      "price": "¥98.56",
+      "label": "今日特惠",
+      "ends": "截至 10-23",
+      "image": "game-brief-assets/2026-10-09-deal-3240220.png",
+      "url": "https://store.steampowered.com/app/3240220/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Big Walk",
+      "discount": "-20%",
+      "original": "¥78.00",
+      "price": "¥62.40",
+      "label": "今日特惠",
+      "ends": "截至 10-16",
+      "image": "game-brief-assets/2026-10-09-deal-1478500.png",
+      "url": "https://store.steampowered.com/app/1478500/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Street Fighter 6",
+      "discount": "-60%",
+      "original": "¥198.00",
+      "price": "¥79.20",
+      "label": "今日特惠",
+      "ends": "截至 10-22",
+      "image": "game-brief-assets/2026-10-09-deal-1364780.png",
+      "url": "https://store.steampowered.com/app/1364780/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Escape from Tarkov",
+      "discount": "-25%",
+      "original": "¥199.99",
+      "price": "¥149.99",
+      "label": "今日特惠",
+      "ends": "截至 10-13",
+      "image": "game-brief-assets/2026-10-09-deal-3932890.png",
+      "url": "https://store.steampowered.com/app/3932890/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Terraria",
+      "discount": "-50%",
+      "original": "¥42.00",
+      "price": "¥21.00",
+      "label": "今日特惠",
+      "ends": "截至 10-16",
+      "image": "game-brief-assets/2026-10-09-deal-105600.png",
+      "url": "https://store.steampowered.com/app/105600/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Palworld / 幻兽帕鲁",
+      "discount": "-30%",
+      "original": "¥108.00",
+      "price": "¥75.60",
+      "label": "今日特惠",
+      "ends": "截至 10-23",
+      "image": "game-brief-assets/2026-10-09-deal-1623730.png",
+      "url": "https://store.steampowered.com/app/1623730/?cc=cn&l=schinese"
+    },
+    {
+      "name": "全面战争：战锤3",
+      "discount": "-85%",
+      "original": "¥298.00",
+      "price": "¥44.70",
+      "label": "今日特惠",
+      "ends": "截至 10-16",
+      "image": "game-brief-assets/2026-10-09-deal-1142710.png",
+      "url": "https://store.steampowered.com/app/1142710/?cc=cn&l=schinese"
+    },
+    {
+      "name": "雨中冒险 2",
+      "discount": "-67%",
+      "original": "¥80.00",
+      "price": "¥26.40",
+      "label": "今日特惠",
+      "ends": "截至 10-23",
+      "image": "game-brief-assets/2026-10-09-deal-632360.png",
+      "url": "https://store.steampowered.com/app/632360/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Sekiro™: Shadows Die Twice - GOTY Edition",
+      "discount": "-50%",
+      "original": "¥268.00",
+      "price": "¥134.00",
+      "label": "今日特惠",
+      "ends": "截至 10-16",
+      "image": "game-brief-assets/2026-10-09-deal-814380.png",
+      "url": "https://store.steampowered.com/app/814380/?cc=cn&l=schinese"
+    },
+    {
+      "name": "王国：两位君主",
+      "discount": "-90%",
+      "original": "¥76.00",
+      "price": "¥7.60",
+      "label": "今日特惠",
+      "ends": "截至 10-23",
+      "image": "game-brief-assets/2026-10-09-deal-701160.png",
+      "url": "https://store.steampowered.com/app/701160/?cc=cn&l=schinese"
+    },
+    {
+      "name": "双点博物馆",
+      "discount": "-33%",
+      "original": "¥158.00",
+      "price": "¥105.86",
+      "label": "今日特惠",
+      "ends": "截至 10-16",
+      "image": "game-brief-assets/2026-10-09-deal-2185060.png",
+      "url": "https://store.steampowered.com/app/2185060/?cc=cn&l=schinese"
+    },
+    {
+      "name": "潜水员戴夫 DAVE THE DIVER",
+      "discount": "-50%",
+      "original": "¥80.00",
+      "price": "¥40.00",
+      "label": "今日特惠",
+      "ends": "截至 10-16",
+      "image": "game-brief-assets/2026-10-09-deal-1868140.png",
+      "url": "https://store.steampowered.com/app/1868140/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Crusader Kings III",
+      "discount": "-70%",
+      "original": "¥198.00",
+      "price": "¥59.40",
+      "label": "今日特惠",
+      "ends": "截至 10-16",
+      "image": "game-brief-assets/2026-10-09-deal-1158310.png",
+      "url": "https://store.steampowered.com/app/1158310/?cc=cn&l=schinese"
+    },
+    {
+      "name": "勇敢者之试炼 : Invokyr",
+      "discount": "-25%",
+      "original": "¥42.00",
+      "price": "¥31.50",
+      "label": "今日特惠",
+      "ends": "截至 10-23",
+      "image": "game-brief-assets/2026-10-09-deal-3883570.png",
+      "url": "https://store.steampowered.com/app/3883570/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Outer Wilds",
+      "discount": "-50%",
+      "original": "¥95.00",
+      "price": "¥47.50",
+      "label": "今日特惠",
+      "ends": "截至 10-23",
+      "image": "game-brief-assets/2026-10-09-deal-753640.png",
+      "url": "https://store.steampowered.com/app/753640/?cc=cn&l=schinese"
+    },
+    {
+      "name": "光与影：33号远征队",
+      "discount": "-20%",
+      "original": "¥258.00",
+      "price": "¥206.40",
+      "label": "今日特惠",
+      "ends": "截至 10-23",
+      "image": "game-brief-assets/2026-10-09-deal-1903340.png",
+      "url": "https://store.steampowered.com/app/1903340/?cc=cn&l=schinese"
+    },
+    {
+      "name": "缺氧",
+      "discount": "-70%",
+      "original": "¥58.00",
+      "price": "¥17.40",
+      "label": "今日特惠",
+      "ends": "截至 10-16",
+      "image": "game-brief-assets/2026-10-09-deal-457140.png",
+      "url": "https://store.steampowered.com/app/457140/?cc=cn&l=schinese"
+    },
+    {
+      "name": "塔罗斯的法则2",
+      "discount": "-90%",
+      "original": "¥108.00",
+      "price": "¥10.80",
+      "label": "今日特惠",
+      "ends": "截至 10-16",
+      "image": "game-brief-assets/2026-10-09-deal-835960.png",
+      "url": "https://store.steampowered.com/app/835960/?cc=cn&l=schinese"
+    },
+    {
+      "name": "SOS OPS!",
+      "discount": "-90%",
+      "original": "¥34.99",
+      "price": "¥3.49",
+      "label": "今日特惠",
+      "ends": "截至 10-09",
+      "image": "game-brief-assets/2026-10-09-deal-2475460.png",
+      "url": "https://store.steampowered.com/app/2475460/?cc=cn&l=schinese"
+    },
+    {
+      "name": "霓虹深渊2",
+      "discount": "-20%",
+      "original": "¥58.00",
+      "price": "¥46.40",
+      "label": "今日特惠",
+      "ends": "截至 10-23",
+      "image": "game-brief-assets/2026-10-09-deal-2235200.png",
+      "url": "https://store.steampowered.com/app/2235200/?cc=cn&l=schinese"
+    },
+    {
+      "name": "速速上菜！",
+      "discount": "-90%",
+      "original": "¥68.00",
+      "price": "¥6.80",
+      "label": "今日特惠",
+      "ends": "截至 10-23",
+      "image": "game-brief-assets/2026-10-09-deal-1599600.png",
+      "url": "https://store.steampowered.com/app/1599600/?cc=cn&l=schinese"
+    },
+    {
+      "name": "战锤40K：暗潮",
+      "discount": "-75%",
+      "original": "¥188.00",
+      "price": "¥47.00",
+      "label": "今日特惠",
+      "ends": "截至 10-23",
+      "image": "game-brief-assets/2026-10-09-deal-1361210.png",
+      "url": "https://store.steampowered.com/app/1361210/?cc=cn&l=schinese"
+    },
+    {
+      "name": "胡闹厨房 全都好吃",
+      "discount": "-70%",
+      "original": "¥170.00",
+      "price": "¥51.00",
+      "label": "今日特惠",
+      "ends": "截至 10-23",
+      "image": "game-brief-assets/2026-10-09-deal-1243830.png",
+      "url": "https://store.steampowered.com/app/1243830/?cc=cn&l=schinese"
+    },
+    {
+      "name": "兰斯7 战国兰斯",
+      "discount": "-20%",
+      "original": "¥69.00",
+      "price": "¥55.20",
+      "label": "今日特惠",
+      "ends": "截至 10-16",
+      "image": "game-brief-assets/2026-10-09-deal-3867170.png",
+      "url": "https://store.steampowered.com/app/3867170/?cc=cn&l=schinese"
+    },
+    {
+      "name": "超级兔子人",
+      "discount": "-50%",
+      "original": "¥58.00",
+      "price": "¥29.00",
+      "label": "今日特惠",
+      "ends": "截至 10-23",
+      "image": "game-brief-assets/2026-10-09-deal-673750.png",
+      "url": "https://store.steampowered.com/app/673750/?cc=cn&l=schinese"
+    },
+    {
+      "name": "全面战争：战锤2",
+      "discount": "-75%",
+      "original": "¥268.00",
+      "price": "¥67.00",
+      "label": "今日特惠",
+      "ends": "截至 10-16",
+      "image": "game-brief-assets/2026-10-09-deal-594570.png",
+      "url": "https://store.steampowered.com/app/594570/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Devil May Cry 5",
+      "discount": "-75%",
+      "original": "¥148.00",
+      "price": "¥37.00",
+      "label": "今日特惠",
+      "ends": "截至 10-22",
+      "image": "game-brief-assets/2026-10-09-deal-601150.png",
+      "url": "https://store.steampowered.com/app/601150/?cc=cn&l=schinese"
+    },
+    {
+      "name": "人渣",
+      "discount": "-60%",
+      "original": "¥175.00",
+      "price": "¥70.00",
+      "label": "今日特惠",
+      "ends": "截至 10-23",
+      "image": "game-brief-assets/2026-10-09-deal-513710.png",
+      "url": "https://store.steampowered.com/app/513710/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Sifu",
+      "discount": "-75%",
+      "original": "¥139.00",
+      "price": "¥34.75",
+      "label": "今日特惠",
+      "ends": "截至 10-16",
+      "image": "game-brief-assets/2026-10-09-deal-2138710.png",
+      "url": "https://store.steampowered.com/app/2138710/?cc=cn&l=schinese"
+    },
+    {
+      "name": "暗黑地牢 Darkest Dungeon",
+      "discount": "-85%",
+      "original": "¥88.00",
+      "price": "¥13.20",
+      "label": "今日特惠",
+      "ends": "截至 10-23",
+      "image": "game-brief-assets/2026-10-09-deal-262060.png",
+      "url": "https://store.steampowered.com/app/262060/?cc=cn&l=schinese"
+    },
+    {
+      "name": "双点校园 ",
+      "discount": "-90%",
+      "original": "¥198.00",
+      "price": "¥19.80",
+      "label": "今日特惠",
+      "ends": "截至 10-16",
+      "image": "game-brief-assets/2026-10-09-deal-1649080.png",
+      "url": "https://store.steampowered.com/app/1649080/?cc=cn&l=schinese"
+    },
+    {
+      "name": "基石 Foundation",
+      "discount": "-40%",
+      "original": "¥128.00",
+      "price": "¥76.80",
+      "label": "今日特惠",
+      "ends": "截至 10-20",
+      "image": "game-brief-assets/2026-10-09-deal-690830.png",
+      "url": "https://store.steampowered.com/app/690830/?cc=cn&l=schinese"
+    },
+    {
+      "name": "全面战争：三国",
+      "discount": "-70%",
+      "original": "¥198.00",
+      "price": "¥59.40",
+      "label": "今日特惠",
+      "ends": "截至 10-16",
+      "image": "game-brief-assets/2026-10-09-deal-779340.png",
+      "url": "https://store.steampowered.com/app/779340/?cc=cn&l=schinese"
+    },
+    {
+      "name": "房产达人 2",
+      "discount": "-40%",
+      "original": "¥135.99",
+      "price": "¥81.59",
+      "label": "今日特惠",
+      "ends": "截至 10-23",
+      "image": "game-brief-assets/2026-10-09-deal-1190970.png",
+      "url": "https://store.steampowered.com/app/1190970/?cc=cn&l=schinese"
+    },
+    {
+      "name": "《恶意不息》",
+      "discount": "-30%",
+      "original": "¥139.00",
+      "price": "¥97.30",
+      "label": "今日特惠",
+      "ends": "截至 10-23",
+      "image": "game-brief-assets/2026-10-09-deal-1371980.png",
+      "url": "https://store.steampowered.com/app/1371980/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Stray",
+      "discount": "-50%",
+      "original": "¥98.00",
+      "price": "¥49.00",
+      "label": "今日特惠",
+      "ends": "截至 10-23",
+      "image": "game-brief-assets/2026-10-09-deal-1332010.png",
+      "url": "https://store.steampowered.com/app/1332010/?cc=cn&l=schinese"
+    },
+    {
+      "name": "逃离鸭科夫",
+      "discount": "-30%",
+      "original": "¥58.00",
+      "price": "¥40.60",
+      "label": "今日特惠",
+      "ends": "截至 10-23",
+      "image": "game-brief-assets/2026-10-09-deal-3167020.png",
+      "url": "https://store.steampowered.com/app/3167020/?cc=cn&l=schinese"
+    },
+    {
+      "name": "全面战争：战锤",
+      "discount": "-75%",
+      "original": "¥268.00",
+      "price": "¥67.00",
+      "label": "今日特惠",
+      "ends": "截至 10-16",
+      "image": "game-brief-assets/2026-10-09-deal-364360.png",
+      "url": "https://store.steampowered.com/app/364360/?cc=cn&l=schinese"
+    },
+    {
+      "name": "Crime Scene Cleaner",
+      "discount": "-27%",
+      "original": "¥99.00",
+      "price": "¥72.27",
+      "label": "今日特惠",
+      "ends": "截至 10-23",
+      "image": "game-brief-assets/2026-10-09-deal-1040200.png",
+      "url": "https://store.steampowered.com/app/1040200/?cc=cn&l=schinese"
+    },
+    {
+      "name": "桌面破坏神：挂机ARPG",
+      "discount": "-30%",
+      "original": "¥28.00",
+      "price": "¥19.60",
+      "label": "今日特惠",
+      "ends": "截至 10-13",
+      "image": "game-brief-assets/2026-10-09-deal-4623570.png",
+      "url": "https://store.steampowered.com/app/4623570/?cc=cn&l=schinese"
+    },
+    {
+      "name": "ASTRONEER",
+      "discount": "-75%",
+      "original": "¥108.00",
+      "price": "¥27.00",
+      "label": "今日特惠",
+      "ends": "截至 10-16",
+      "image": "game-brief-assets/2026-10-09-deal-361420.png",
+      "url": "https://store.steampowered.com/app/361420/?cc=cn&l=schinese"
+    },
+    {
+      "name": "护核纪元",
+      "discount": "-40%",
+      "original": "¥76.00",
+      "price": "¥45.60",
+      "label": "今日特惠",
+      "ends": "截至 10-23",
+      "image": "game-brief-assets/2026-10-09-deal-1621690.png",
+      "url": "https://store.steampowered.com/app/1621690/?cc=cn&l=schinese"
+    },
+    {
+      "name": "双点医院",
+      "discount": "-75%",
+      "original": "¥198.00",
+      "price": "¥49.50",
+      "label": "今日特惠",
+      "ends": "截至 10-16",
+      "image": "game-brief-assets/2026-10-09-deal-535930.png",
+      "url": "https://store.steampowered.com/app/535930/?cc=cn&l=schinese"
+    },
+    {
+      "name": "风暴崛起 Tempest Rising",
+      "discount": "-36%",
+      "original": "¥229.00",
+      "price": "¥146.56",
+      "label": "今日特惠",
+      "ends": "截至 10-13",
+      "image": "game-brief-assets/2026-10-09-deal-1486920.png",
+      "url": "https://store.steampowered.com/app/1486920/?cc=cn&l=schinese"
+    },
+    {
+      "name": "银松镇",
+      "discount": "-10%",
+      "original": "¥90.00",
+      "price": "¥81.00",
+      "label": "今日特惠",
+      "ends": "截至 10-23",
+      "image": "game-brief-assets/2026-10-09-deal-2333000.png",
+      "url": "https://store.steampowered.com/app/2333000/?cc=cn&l=schinese"
+    }
+  ]
+}
