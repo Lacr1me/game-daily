@@ -1,0 +1,464 @@
+{
+  "date": "2026-10-09",
+  "issue": 49,
+  "sourcePolicyVersion": 2,
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "kind": "ms1009-silver-teachers",
+        "title": "教育部、财政部部署实施2026年银龄讲学计划",
+        "summary": "计划招募义务教育阶段退休教师6000名，重点支持欠发达地区；服务期间退休待遇不变，工作经费按年人均2万元标准由中央和地方财政共同分担。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 11:13",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-08/10708969.shtml"
+      },
+      {
+        "id": "domestic-02",
+        "kind": "ms1009-accessible-service",
+        "title": "公共服务领域将提供国家通用手语、盲文服务",
+        "summary": "七部门公布第三期规范化行动计划，提出在教育考试、医疗、政务、司法和交通等公共服务领域提供国家通用手语及盲文服务，并加强资源与人才供给。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09 09:45",
+        "url": "https://www.news.cn/20261009/2ee5765d9e944c628dcb342c08f9bedf/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "kind": "ms1009-beijing-parking",
+        "title": "北京中心城区计划每年新增停车设施超2万个",
+        "summary": "北京市基础设施规划提出，中心城区每年新增停车设施2万个以上，推动错时共享及单位停车场开放；同时优化轨道交通、公交和慢行出行环境。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 23:37",
+        "url": "https://www.news.cn/20261008/a83eaced6e5b4112a235d20267c614b7/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "kind": "ms1009-holiday-consumption",
+        "title": "国庆假期服务消费日均销售收入同比增长19.5%",
+        "summary": "国家税务总局利用增值税发票数据分析，国庆假期相关服务行业日均销售收入同比增长19.5%，旅游游览和娱乐服务增长23.6%，部分家电消费增长较快。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 20:00",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-08/10709295.shtml"
+      },
+      {
+        "id": "domestic-05",
+        "kind": "ms1009-holiday-travel",
+        "title": "国庆假期跨区域人员流动量达21.42亿人次",
+        "summary": "交通运输部公布，10月1日至7日全社会跨区域人员流动量21.42亿人次，日均3.06亿人次、同比增长0.6%，反映假期出行规模；统计不等同于游客人数。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 12:32",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-08/10709006.shtml"
+      },
+      {
+        "id": "domestic-06",
+        "kind": "ms1009-food-marketing",
+        "title": "市场监管总局整治网络食品销售虚假宣传",
+        "summary": "市场监管部门围绕网络销售食品虚假宣传等问题开展专项整治，聚焦节令食品、网红食品和保健食品，清理违规链接，并加强针对老年消费者的科普提示。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 19:30",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-08/10709293.shtml"
+      },
+      {
+        "id": "domestic-07",
+        "kind": "ms1009-charging",
+        "title": "高速公路新能源汽车日均充电量增长51.42%",
+        "summary": "国家能源局统计纳入监测平台的6.27万个高速公路充电设施，国庆假期充电量达1.63亿千瓦时，日均同比增长51.42%，并加强监测和应急调度。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 15:49",
+        "url": "https://www.news.cn/energy/20261008/1109ba71e8324214941b0af7398e1a26/c.html"
+      },
+      {
+        "id": "domestic-08",
+        "kind": "ms1009-grad-exam",
+        "title": "2027年研考网上预报名今日启动",
+        "summary": "研考预报名于10月9日至12日进行，正式报名为15日至24日；本次报名和确认流程一体化，照片改为通过学信网App在线采集，考生须及时查看材料审核提示。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09 09:42",
+        "url": "https://app.xinhuanet.com/news/article.html?articleId=20261009bc3a14c8b140409b9117ae7795ed41f7"
+      },
+      {
+        "id": "domestic-09",
+        "kind": "ms1009-rehab",
+        "title": "医疗康复护理扩容提升工程明确2030年目标",
+        "summary": "国家卫生健康委、国家发展改革委部署康复护理扩容提升工程，提出6部分13项举措，以基层为重点增加服务供给，推动形成上下联动、中西医结合的康复护理体系。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 10:22",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-08/10708882.shtml"
+      },
+      {
+        "id": "domestic-10",
+        "kind": "ms1009-platform-labour",
+        "title": "新就业形态劳动者权益保障办法公开征求意见",
+        "summary": "人社部就新就业形态劳动者权益保障办法征求意见至11月8日，拟规范用工协议、报酬结算和休息保障，涉及封禁账号等重大权益决定须经人工审核；目前仍为草案。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 20:06",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-08/10709310.shtml"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "kind": "ms1009-wto-outlook",
+        "title": "世贸组织上调全球货物贸易增长预期",
+        "summary": "世贸组织最新展望预计2026年全球货物贸易增长3.9%，高于此前预测的1.9%；服务贸易增长预期则下调至3.3%，报告同时指出人工智能相关需求强劲。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 21:01",
+        "url": "https://www.news.cn/world/20261008/2e26c28dbf1f4fbdb6af10aaf252afde/c.html"
+      },
+      {
+        "id": "international-02",
+        "kind": "ms1009-literature-prize",
+        "title": "加拿大作家安妮·卡森获诺贝尔文学奖",
+        "summary": "瑞典文学院宣布将2026年诺贝尔文学奖授予加拿大作家安妮·卡森，肯定其作品的形式创新与古典传统对话；她主要以英语写作，代表作包括红的自传。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 22:20",
+        "url": "https://www.news.cn/world/20261008/20866e385e1d4605850ce463e15fb98e/c.html"
+      },
+      {
+        "id": "international-03",
+        "kind": "ms1009-indonesia-industry",
+        "title": "印尼启动11个中资矿业下游化项目",
+        "summary": "印尼总统在纬达贝工业园主持11个中资矿业下游化项目启动仪式，项目总投资约102亿美元，涉及电池材料、电解铝和新能源车辆等领域。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 23:13",
+        "url": "https://www.news.cn/20261008/67ed12b86fa44f7b93fc9ec40d766e78/c.html"
+      },
+      {
+        "id": "international-04",
+        "kind": "ms1009-madagascar-food",
+        "title": "马达加斯加企业发生食物中毒事件",
+        "summary": "马达加斯加新闻和文化部长表示，首都一家企业至少183名员工因食物中毒送医，目前暂无死亡报告；初步推测与食堂餐食有关，样本分析结果尚待公布。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09 06:30",
+        "url": "https://www.news.cn/20261009/f87f6bd56e754bf28144aebb69dcb4ae/c.html"
+      },
+      {
+        "id": "international-05",
+        "kind": "ms1009-dragon-return",
+        "title": "龙飞船载四名宇航员返回地球",
+        "summary": "美国龙飞船在洛杉矶附近海域溅落，搭载的4名宇航员结束近8个月空间站任务返回地球；团队在轨开展多项科研实验和技术演示。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09 01:31",
+        "url": "https://www.news.cn/20261009/5b2f271c88ff4e45bf0f645868b04d7d/c.html"
+      },
+      {
+        "id": "international-06",
+        "kind": "ms1009-duterte-trial",
+        "title": "国际刑事法院认定杜特尔特适合接受审判",
+        "summary": "国际刑事法院表示，第三审判分庭综合独立专家调查及各方意见，认定杜特尔特可理解指控与诉讼程序，并能指导律师准备辩护，适合接受审判。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09 00:02",
+        "url": "https://www.news.cn/world/20261009/ca5736359c46417dbd986cecf9fa64e2/c.html"
+      },
+      {
+        "id": "international-07",
+        "kind": "ms1009-ukraine-korea",
+        "title": "乌克兰表示愿与韩国恢复建设性对话",
+        "summary": "韩国召回驻乌大使后，乌克兰外交部表示愿寻求建设性解决方案；双方争议涉及移交朝鲜战俘信息的保密安排，韩国期待通过磋商妥善处理问题。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09 07:32",
+        "url": "https://www.news.cn/20261009/87080e6034754101bebea42969c27b1a/c.html"
+      },
+      {
+        "id": "international-08",
+        "kind": "ms1009-russia-health",
+        "title": "俄罗斯官方称伊尔库茨克市正解除防疫措施",
+        "summary": "俄监管部门表示，伊尔库茨克市正解除预防性措施，超过九成接触者已结束医学观察，近五千份检测未发现危险病原体。世卫组织仍要求补充资料，尚未完成全面风险评估。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09 03:41",
+        "url": "https://www.news.cn/world/20261009/fd1c41518d1644fe85eedd75fc4126fb/c.html"
+      },
+      {
+        "id": "international-09",
+        "kind": "ms1009-us-perm",
+        "title": "美国暂停多家科技企业永久劳工认证申请",
+        "summary": "美国政府宣布暂停微软等多家科技企业参与永久劳工认证计划，并调查9所大学的J-1签证问题；相关指控属于政府说法，不能写成企业或学校已被裁定违法。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09 05:56",
+        "url": "https://www.news.cn/world/20261009/ef68db3c617c4b4284c156af615ac7de/c.html"
+      },
+      {
+        "id": "international-10",
+        "kind": "ms1009-uk-israel",
+        "title": "英国以色列围绕耶路撒冷外交机构产生争端",
+        "summary": "英国外交大臣表示，驻耶路撒冷外交人员暂时撤离，但将继续履行服务巴勒斯坦的外交使命；英方正就以色列相关决定交涉，外交代表安排仍待后续协商。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 22:04",
+        "url": "https://www.news.cn/world/20261008/70cd6260cb934dc2bc53e75a80cc0c62/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "kind": "ms1009-critical-topology",
+        "title": "科学家首次实验观测临界拓扑现象",
+        "summary": "国内科研团队与合作方在可控实验平台观测临界拓扑现象，相关研究于10月7日发表于《自然》；这一结果为探索拓扑体系的非常规临界行为提供实验依据。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 20:27",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/08/content_592784.html"
+      },
+      {
+        "id": "tech-02",
+        "kind": "ms1009-fossil-swimmer",
+        "title": "中国团队发现侏罗纪半水生孙氏巨尾兽",
+        "summary": "沈阳师范大学牵头团队在内蒙古宁城发现孙氏巨尾兽，化石结构为早期哺乳型动物的吞咽方式与半水生习性提供证据；研究于10月7日发表于《自然》。",
+        "source": "科学网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 21:02",
+        "url": "https://news.sciencenet.cn/htmlnews/2026/10/572600.shtm"
+      },
+      {
+        "id": "tech-03",
+        "kind": "ms1009-little-red-dots",
+        "title": "科研团队揭示宇宙早期小红点数量变化线索",
+        "summary": "华中科技大学等团队分析98个光谱确认的小红点天体，发现其环境和暗物质晕随宇宙演化改变，为解释低红移阶段数量减少提供线索；成果于10月8日发表于《自然·天文学》。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09 15:24",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/09/content_593209.html"
+      },
+      {
+        "id": "tech-04",
+        "kind": "ms1009-pulsar-triple",
+        "title": "FAST观测证实仍在演化的脉冲星原生三体系统",
+        "summary": "国家天文台联合团队结合FAST与多波段观测，证实脉冲星J0435+3233属于仍在演化的原生三体系统，第三伴星为类太阳恒星；成果于10月9日发表于《天体物理学杂志快报》。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09 11:53",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/09/content_593150.html"
+      },
+      {
+        "id": "tech-05",
+        "kind": "ms1009-gut-fatty-acid",
+        "title": "肠道细菌代谢物在小鼠实验中减轻动脉粥样硬化",
+        "summary": "深圳湾实验室与中山大学团队发现，肠道共生菌产生的十五烷酸可调节胆固醇代谢，并在小鼠实验中减轻动脉粥样硬化；研究10月7日发表于《自然》，人体干预效果仍待研究。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 07:50",
+        "url": "https://health.people.com.cn/n1/2026/1008/c14739-40810378.html"
+      },
+      {
+        "id": "tech-06",
+        "kind": "ms1009-tianwan7-grid",
+        "title": "田湾核电7号机组首次并网",
+        "summary": "田湾核电7号机组10月8日首次并网，采用三代核电技术，设计寿命60年。首次并网是建设阶段重要节点，机组后续仍须完成相关试验，达到条件后才能投入商业运行。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 19:25",
+        "url": "https://tv.cctv.com/2026/10/08/VIDENzyILC48QTfn9ausX55K261008.shtml"
+      },
+      {
+        "id": "tech-07",
+        "kind": "ms1009-graphene-quantum-rectifier",
+        "title": "中国团队实现晶圆级石墨烯量子整流器",
+        "summary": "上海微系统所等团队通过衬底调控石墨烯对称性，在室温零磁场下实现非线性霍尔响应，并制备四英寸晶圆整流器和天线阵列，演示无线能量收集；效率与工程应用仍待优化。",
+        "source": "中国科学院",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-10-09",
+        "url": "https://www.cas.cn/syky/202610/t20261008_5121513.shtml"
+      },
+      {
+        "id": "tech-08",
+        "kind": "ms1009-alveolar-airway-repair",
+        "title": "中国团队揭示肺泡细胞跨区域修复气道机制",
+        "summary": "中科院与上海胸科医院等团队在小鼠研究中发现，肺泡二型细胞可迁入受损细支气管并参与修复，相关迁移和分化受免疫信号调节；机制在人体中的适用性尚未证实。",
+        "source": "Nature",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-10-07",
+        "url": "https://www.nature.com/articles/s41586-026-11127-w?error=cookies_not_supported"
+      },
+      {
+        "id": "tech-09",
+        "kind": "ms1009-deepsea-tiered-adaptation",
+        "title": "中国团队揭示深海共生生物分级适应机制",
+        "summary": "港科大与广州海洋实验室等团队通过南海海马冷泉原位实验发现，白瓜贝及共生菌会随硫化氢短缺程度调整代谢和菌群周转。这为理解深海冷泉生态系统的适应机制提供了证据。",
+        "source": "香港科技大学",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-10-07",
+        "url": "https://hkust.edu.hk/news/hkust-researchers-reveal-tiered-adaptation-strategy-deep-sea-chemosynthetic-symbiosis"
+      },
+      {
+        "id": "tech-10",
+        "kind": "ms1009-ncbe-ion-transport",
+        "title": "复旦团队揭示脑部酸碱调控转运体结构",
+        "summary": "复旦大学8日介绍NCBE离子转运机制研究，团队利用冷冻电镜和细胞功能实验解析其离子识别及抑制方式，为理解脑脊液酸碱调控提供结构依据；尚不等同于疾病治疗方案。",
+        "source": "复旦大学",
+        "sourceOrigin": "external",
+        "publishedAt": "2026-10-08",
+        "url": "https://itbr.fudan.edu.cn/info/5277/24703.htm"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "kind": "ms1009-rail-inspection",
+        "title": "沈阳铁路智能检修车间以AI初筛辅助人工复核",
+        "summary": "新华社10月7日现场采访苏家屯车辆段，数智化检修线每天可检修330对轮对；动态检车由AI初筛图像、员工复核疑似故障，预警信息帮助提前识别风险。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 09:15",
+        "url": "https://www.news.cn/tech/20261008/23abbd75e05441bebd426a05224ca47d/c.html"
+      },
+      {
+        "id": "ai-02",
+        "kind": "ms1009-steel-annealing",
+        "title": "太钢应用AI退火主操模型辅助冷轧生产",
+        "summary": "太钢不锈冷轧厂引入AI退火主操模型，通过历史数据预测带钢所需炉温并提前设置切换参数，辅助质量预警与自动调控；科技日报10月8日采访呈现了当前应用进展。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 11:34",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/08/content_592513.html"
+      },
+      {
+        "id": "ai-03",
+        "kind": "ms1009-chengdu-power-ai",
+        "title": "成都供电AI客服协同人工响应社区需求",
+        "summary": "国网成都供电公司介绍，AI客服蓉电小宝已覆盖2.4万余个社区微信群，普通咨询自动答复、复杂诉求交由专属经理处理，紧急需求升级联动；累计响应用户超590万人次。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 20:51",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/08/content_592765.html"
+      },
+      {
+        "id": "ai-04",
+        "kind": "ms1009-workbuddy-browser",
+        "title": "WorkBuddy上线独立文件浏览器",
+        "summary": "腾讯WorkBuddy于10月8日上线独立文件浏览器，可在同一窗口查看本地文档并调用AI总结、分析及改写，支持多标签与可编辑文件协作；办公文件修改后可保存回本地。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 18:04",
+        "url": "https://tech.cnr.cn/techgd/20261008/t20261008_527836480.shtml"
+      },
+      {
+        "id": "ai-05",
+        "kind": "ms1009-lenovo-localai",
+        "title": "联想端侧AI电脑在国内开启预售",
+        "summary": "联想8日开启YOGA Pro15 RTX Spark国内预售，拟16日开售。新品结合天禧AI超能模式支持本地模型开发与任务执行；相关能力为厂商介绍，实际效果待验证。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09 13:10",
+        "url": "https://tech.cnr.cn/techgd/20261009/t20261009_527837065.shtml"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "kind": "gold",
+      "icon": "🪙",
+      "name": "上海黄金交易所Au99.99收盘价",
+      "value": "892.00元/克",
+      "note": "2026-10-08收盘；非当日即时行情",
+      "source": "上海黄金交易所",
+      "id": "ms1009-gold",
+      "sourceUrl": "https://en.sge.com.cn/data/data_daily_international_new?end_date=2026-10-08&start_date=2026-10-08",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "福建92号汽油最高零售价",
+      "value": "8.57元/升",
+      "note": "2026-09-24 24:00起执行；地区最高限价，非全国统一价格",
+      "source": "福建省发展和改革委员会",
+      "id": "ms1009-domestic-oil",
+      "sourceUrl": "https://fgw.fujian.gov.cn/zfxxgkzl/zfxxgkml/yzdgkdqtxx/202609/t20260924_7218113.htm",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "usd_cny",
+      "icon": "$",
+      "name": "美元兑人民币中间价",
+      "value": "6.7330兑人民币",
+      "note": "2026-10-09；每1美元口径，非现汇成交价",
+      "source": "国家外汇管理局",
+      "id": "ms1009-usd",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "eur_cny",
+      "icon": "€",
+      "name": "欧元兑人民币中间价",
+      "value": "7.5323兑人民币",
+      "note": "2026-10-09；每1欧元口径，非现汇成交价",
+      "source": "国家外汇管理局",
+      "id": "ms1009-eur",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "jpy_cny",
+      "icon": "¥",
+      "name": "100日元兑人民币中间价",
+      "value": "4.2571兑人民币",
+      "note": "2026-10-09；保留每100日元口径，非现汇成交价",
+      "source": "国家外汇管理局",
+      "id": "ms1009-jpy",
+      "sourceUrl": "https://www.safe.gov.cn/AppStructured/hlw/RMBQuery.do?COLLCC=546877760",
+      "sourceOrigin": "china"
+    },
+    {
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际原油期货最近收盘",
+      "value": "91.49 / 104.28美元/桶",
+      "note": "2026-10-08收盘；WTI11月／布伦特12月合约，美元/桶",
+      "source": "新华财经",
+      "id": "ms1009-international-oil",
+      "sourceUrl": "https://www.cnfin.com/yw-lb/detail/20261009/4478362_1.html",
+      "sourceOrigin": "china"
+    }
+  ],
+  "weekday": "星期五",
+  "lunarDate": "农历丙午年八月廿九",
+  "cutoff": "2026-10-09 19:56（北京时间）",
+  "backfilledAt": "2026-10-09T11:56:32.408Z",
+  "productionTime": "2026-10-09 19:56（北京时间）",
+  "metricsCutoff": "2026-10-09 11:00（北京时间）",
+  "topStoryIds": [
+    "domestic-02",
+    "international-01",
+    "tech-06"
+  ],
+  "observation": "本期为10月9日民生日报补刊，按实际核验时点整理当天及近期报道。公共服务的变化既体现在无障碍交流、退休教师支持，也体现在平台劳动规则的征求意见；草案尚未生效，不能当作现行权利承诺。假期出行统计与消费数据需要分清口径。科研报道则要区分论文发表、实验验证和工程进展：小鼠修复机制不等于人体疗法，核电首次并网也不等于商业运行。市场数据标明各自日期，避免把上一交易日价格当成即时行情。",
+  "sources": [
+    "中国新闻网",
+    "新华网",
+    "中国科技网",
+    "科学网",
+    "人民网",
+    "央视网",
+    "中国科学院",
+    "Nature",
+    "香港科技大学",
+    "复旦大学",
+    "央广网"
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "福建省发展和改革委员会",
+    "国家外汇管理局",
+    "新华财经"
+  ]
+}
