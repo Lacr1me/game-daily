@@ -1,0 +1,462 @@
+{
+  "date": "2026-10-10",
+  "issue": 50,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期六",
+  "lunarDate": "农历九月初一",
+  "cutoff": "2026-10-10 07:43（北京时间）",
+  "productionTime": "2026-10-10 07:43（北京时间）",
+  "metricsCutoff": "2026-10-10 07:43（北京时间）",
+  "topStoryIds": [
+    "domestic-06",
+    "international-06",
+    "tech-04"
+  ],
+  "observation": "今天的民生信息，可以沿着“服务是否可达、计划如何落地”两条线阅读。冬春救助、无障碍出行与康复护理，直接关系到困难家庭和特殊群体获得服务的机会；财政政策与银龄讲学则需要继续观察资金拨付和人员落实。科技与AI报道呈现了多种推进阶段：核电首次并网仍需后续调试，育种机器人仍是原型，铁路识别保留人工复核。关注具体场景与证据，比把目标、试验和启动仪式一概看作成熟成果更有帮助。",
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "kind": "ms-20261010-d01",
+        "title": "我国公共服务领域将提供国家通用手语、盲文服务",
+        "summary": "七部门公布第三期规范化行动计划，提出在教育、医疗、政务等公共服务领域提供国家通用手语和盲文服务，并加强相应资源与服务能力建设。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09 09:45",
+        "url": "https://www.news.cn/politics/20261009/0e0c314c0b5d4a19a5356ae5aa829090/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "kind": "ms-20261010-d03",
+        "title": "四条高铁新线完成首个国庆运输大考",
+        "summary": "雄商、西康、宜兴、哈伊四条高铁新线迎来开通后的首个国庆假日运输。新华社采访旅客和铁路工作人员，记录新线为沿线居民出行带来的变化。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 19:43",
+        "url": "https://www.news.cn/politics/20261008/915a13d054b24bbc9325556ed7858c8c/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "kind": "ms-20261010-d04",
+        "title": "医疗康复护理扩容提升工程实施方案公布",
+        "summary": "医疗康复护理扩容提升工程实施方案公布，提出到2030年每千人口康复护理床位约0.48张。相关指标属于建设目标，后续仍需推进服务供给与资源配置。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 09:04",
+        "url": "https://www.news.cn/politics/20261008/fea3a6c9bb2b46339d94509b172923bb/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "kind": "ms-20261010-d05",
+        "title": "国庆高速新能源车日均充电量增长51.42%",
+        "summary": "国家能源局统计显示，国庆假期高速公路新能源车充电量达1.63亿千瓦时，日均同比增长51.42%。统计覆盖6.27万个充电枪，反映假期补能需求。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 14:57",
+        "url": "https://www.news.cn/politics/20261008/55e24408675141af8a628422d14e1699/c.html"
+      },
+      {
+        "id": "domestic-05",
+        "kind": "ms-20261010-d07",
+        "title": "山东平度农村托育中心提供弹性托育",
+        "summary": "山东平度农村托育中心提供弹性托育服务。人民日报现场采访显示，四个园区服务160多个孩子，其中40多个寄宿，为农村家庭提供照护支持。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09",
+        "url": "https://paper.people.com.cn/rmrb/pc/content/202610/09/content_30184725.html"
+      },
+      {
+        "id": "domestic-06",
+        "kind": "ms-20261010-d09",
+        "title": "全国受灾群众冬春救助工作启动",
+        "summary": "全国受灾群众冬春救助工作启动，因灾出现临时生活困难的群众纳入救助范围。有关安排要求救助资金在春节前发放，地方需做好对象核定与资金落实。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09 14:50",
+        "url": "https://news.cctv.com/2026/10/09/ARTIQB6uEfAovtSRy9JsgZjC261009.shtml"
+      },
+      {
+        "id": "domestic-07",
+        "kind": "ms-20261010-d10",
+        "title": "2026年银龄讲学计划拟招募6000名教师",
+        "summary": "2026年银龄讲学计划拟招募义务教育阶段退休教师6000名，工作经费按年人均2万元安排。相关部署支持基层教育，招募人数属于计划规模。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 11:06",
+        "url": "https://news.cctv.com/2026/10/08/ARTIBrrx9AFNWOQMhJQpE021261008.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "kind": "ms-20261010-d11",
+        "title": "国庆假期国内出游8.26亿人次",
+        "summary": "文化和旅游部测算，国庆假期国内出游8.26亿人次，国内游客出游花费7383.75亿元。两项数据分别反映出游人次和花费，不能理解为独立游客人数。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09 15:03",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-09/10709628.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "kind": "ms-20261010-d12",
+        "title": "出租汽车无障碍运营服务国家标准发布",
+        "summary": "出租汽车无障碍运营服务国家标准发布，涉及预约渠道、司机培训、轮椅及导盲犬服务和设施要求。标准将于2027年1月1日实施，面向残疾人、老年人等群体。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09 17:27",
+        "url": "https://legal.gmw.cn/2026-10/09/content_39037476.htm"
+      },
+      {
+        "id": "domestic-10",
+        "kind": "ms-20261010-d13",
+        "title": "财政报告明确扩大内需与民生保障后续重点",
+        "summary": "财政部发布上半年财政政策执行情况报告，后续重点包括加快资金拨付、扩大内需、保障就业和基本公共服务。报告所列政策安排仍需落实，不能视为资金全部到位。",
+        "source": "中国网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09 18:05",
+        "url": "https://news.china.com.cn/2026-10/09/content_118727147.shtml"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "kind": "ms-20261010-i01",
+        "title": "世贸组织上调2026年货物贸易增长预期",
+        "summary": "世贸组织最新报告预计，2026年全球货物贸易量增长3.9%，服务贸易量增长3.3%。报告于10月8日发布，相关数字属于增长预测，实际结果仍待后续统计。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 21:01",
+        "url": "https://www.news.cn/world/20261008/2e26c28dbf1f4fbdb6af10aaf252afde/c.html"
+      },
+      {
+        "id": "international-02",
+        "kind": "ms-20261010-i02",
+        "title": "印尼启动11个中资矿业下游化项目",
+        "summary": "印度尼西亚启动11个中资矿业下游化项目，投资约102亿美元，涉及动力电池等领域。新华社记者在现场报道启动活动，项目启动与建成投产仍是不同阶段。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 23:13",
+        "url": "https://www.news.cn/world/20261008/0d4dd885f8ce4bc1835e18d69b4c9dd4/c.html"
+      },
+      {
+        "id": "international-03",
+        "kind": "ms-20261010-i03",
+        "title": "博茨瓦纳总统将于10月12日至17日访华",
+        "summary": "外交部发言人10月9日宣布，博茨瓦纳总统将于10月12日至17日访华。此次报道确认的是未来访问安排，实际访问活动及成果有待行程展开。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09 15:57",
+        "url": "https://www.news.cn/world/20261009/c89754df485f4b229219687ddbff1d2c/c.html"
+      },
+      {
+        "id": "international-04",
+        "kind": "ms-20261010-i05",
+        "title": "英国新版纸币选定四种动物图案",
+        "summary": "英国下一版纸币选定海鹦、仓鸮、熊蜂和刺猬四种动物图案。英格兰银行尚未确定各动物对应的纸币面额，图案选择不代表新版纸币已经发行。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09 11:43",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-09/10709497.shtml"
+      },
+      {
+        "id": "international-05",
+        "kind": "ms-20261010-i06",
+        "title": "巴黎摄影与视频展开幕",
+        "summary": "巴黎摄影与视频展10月8日开幕，将持续至11日。展会设置器材展示、摄影作品和相机发展史展览，并安排讲座与体验活动，面向摄影及视频爱好者。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09 05:27",
+        "url": "https://www.news.cn/world/20261009/4a4fa2e8deb04f9792eda2c4b6ef5a3c/c.html"
+      },
+      {
+        "id": "international-06",
+        "kind": "ms-20261010-i07",
+        "title": "中欧贸易投资磋商机制发布联合声明",
+        "summary": "中欧贸易投资磋商机制第二次例会于10月8日至9日在北京举行。双方发布联合声明，重申在世贸组织规则下处理分歧，并商定2027年3月举行第三次例会。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09 19:17",
+        "url": "https://www.news.cn/world/20261009/c45fa108db5b4ee7a0aff41c3f6e96c8/c.html"
+      },
+      {
+        "id": "international-07",
+        "kind": "ms-20261010-i09",
+        "title": "美国10月消费者信心初值降至46.3",
+        "summary": "密歇根大学公布，美国10月消费者信心指数初值为46.3，低于9月的48.1；一年通胀预期为4.7%。当前结果为月度初值，后续正式值可能调整。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-10 01:21",
+        "url": "https://cn.chinadaily.com.cn/a/202610/10/WS6ac922a2e4b09a165c78e834.html"
+      },
+      {
+        "id": "international-08",
+        "kind": "ms-20261010-i10",
+        "title": "澳大利亚赴华旅游需求增长",
+        "summary": "新华社记者在墨尔本机场采访赴华游客与旅游业人士，记录澳大利亚赴华旅游需求变化。受访者认为，出行便利与文化体验增加了中国旅行的吸引力。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09 21:14",
+        "url": "https://cn.chinadaily.com.cn/a/202610/09/WS6ac8e9cfe4b09a165c78e826.html"
+      },
+      {
+        "id": "international-09",
+        "kind": "ms-20261010-i11",
+        "title": "非洲信用评级机构在毛里求斯成立",
+        "summary": "非洲信用评级机构10月7日在毛里求斯首都路易港举行启动仪式。该机构获非盟授权设立，目标是改善非洲信用风险数据与评估，后续业务仍需逐步开展。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 12:59",
+        "url": "https://www.xinhuanet.com/20261008/7eaf829a16f949808adbd5f0eccdee00/c.html"
+      },
+      {
+        "id": "international-10",
+        "kind": "ms-20261010-i12",
+        "title": "安妮·卡森获2026年诺贝尔文学奖",
+        "summary": "瑞典文学院10月8日在斯德哥尔摩宣布，加拿大作家安妮·卡森获得2026年诺贝尔文学奖。新华社记者现场报道颁奖决定，介绍其创新的文学形式。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 22:25",
+        "url": "https://ent.people.com.cn/n1/2026/1008/c1012-40810911.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "kind": "ms-20261010-t01",
+        "title": "FAST发现仍在演化的脉冲星三体系统",
+        "summary": "国家天文台团队利用FAST发现脉冲星三体系统J0435+3233，脉冲周期约3.2毫秒，外侧恒星轨道周期约73.5年，为研究复杂恒星系统演化提供观测材料。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09 11:53",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/09/content_593150.html"
+      },
+      {
+        "id": "tech-02",
+        "kind": "ms-20261010-t02",
+        "title": "声学超材料实验观测到临界拓扑现象",
+        "summary": "中国科研团队与合作方在声学超材料实验中观测到临界拓扑现象，相关成果10月7日发表于《自然》。研究提供实验验证，尚不能直接等同于成熟应用器件。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 20:27",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/08/content_592784.html"
+      },
+      {
+        "id": "tech-03",
+        "kind": "ms-20261010-t04",
+        "title": "科研团队研究早期宇宙小红点消失机制",
+        "summary": "华中科技大学等团队分析98个光谱确认样本，研究早期宇宙“小红点”减少的机制。环境及暗物质晕变化提供可能解释，但小尺度物理机制仍未确定。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09 15:24",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/09/content_593209.html"
+      },
+      {
+        "id": "tech-04",
+        "kind": "ms-20261010-t05",
+        "title": "水稻全生命周期三维时空细胞图谱构建完成",
+        "summary": "科研团队构建水稻全生命周期三维时空细胞图谱，覆盖10类组织器官和61个发育阶段。图谱结合单细胞测序与空间转录组，为基因查询和育种研究提供资源。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09 14:53",
+        "url": "https://www.cnr.cn/hn/hnny/20261009/t20261009_527837152.shtml"
+      },
+      {
+        "id": "tech-05",
+        "kind": "ms-20261010-t06",
+        "title": "孙氏巨尾兽化石揭示哺乳型动物演化",
+        "summary": "沈阳师范大学牵头团队发现约1.6亿年前的孙氏巨尾兽，体长约52厘米。其咽喉与骨骼结构为哺乳型动物半水生生活和取食方式的演化提供化石证据。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 20:30",
+        "url": "https://www.chinanews.com.cn/cul/2026/10-08/10709328.shtml"
+      },
+      {
+        "id": "tech-06",
+        "kind": "ms-20261010-t07",
+        "title": "肠道菌源十五烷酸在小鼠中改善胆固醇代谢",
+        "summary": "深圳湾实验室与中山大学团队发现，肠道菌源十五烷酸可改善小鼠胆固醇代谢。人群样本目前仅显示关联，研究尚未证实其在人体中的治疗效果。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 07:47",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/08/content_592365.html"
+      },
+      {
+        "id": "tech-07",
+        "kind": "ms-20261010-t08",
+        "title": "中国团队实现钍-229核光钟稳定运行",
+        "summary": "清华大学与中科院合作团队将148纳米连续波激光锁定到钍-229核跃迁，实现核光钟闭环运行。成果10月7日发表于《自然》，为精密计时研究提供进展。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 23:48",
+        "url": "https://www.xinhuanet.com/tech/20261007/9633e5fd07134420a6a03426da6c95da/c.html"
+      },
+      {
+        "id": "tech-08",
+        "kind": "ms-20261010-t09",
+        "title": "国产4500米级深海机器人开展海况验证",
+        "summary": "哈工大威海团队与合作企业研制4500米级深海作业机器人，搭载七轴液压机械臂，赴南海开展真实海况检验。本次报道涉及海试推进，长期验证尚未完成。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-05 21:01",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/05/content_591929.html"
+      },
+      {
+        "id": "tech-09",
+        "kind": "ms-20261010-t10",
+        "title": "小麦育种机器人原型机实现筛选与标记",
+        "summary": "山东农业大学团队展示小麦育种机器人原型机，结合视觉与育种经验模型完成初筛、精细成像和原位标记。抓取精度仍在改良，商业化合作尚属意向。",
+        "source": "科学网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09 13:55",
+        "url": "https://news.sciencenet.cn/htmlnews/2026/10/572633.shtm"
+      },
+      {
+        "id": "tech-10",
+        "kind": "ms-20261010-t11",
+        "title": "田湾核电7号机组首次并网发电",
+        "summary": "田湾核电7号机组10月8日首次并网，开始向电网送电。并网属于机组调试进展，后续仍需完成商业运行前的相关工作，不能将首次并网等同于正式商运。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09 08:08",
+        "url": "https://kpzg.people.com.cn/n1/2026/1009/c404214-40811060.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "kind": "ms-20261010-a02",
+        "title": "民航AI应用覆盖危险品智审与机轮维修",
+        "summary": "民航大会现场展示AI应用：东航物流将大模型、文字识别和多模态技术用于危险品收运智审；Ameco机轮自动装配线覆盖11种型号，服务具体业务流程。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09 09:12",
+        "url": "https://www.news.cn/tech/20261009/7920d00f327f4e3991f73adc16b40f24/c.html"
+      },
+      {
+        "id": "ai-02",
+        "kind": "ms-20261010-a03",
+        "title": "具身智能训练基地交付近3万小时数据",
+        "summary": "北京人形机器人创新中心训练基地设置多种实景和40种构型机器人。负责人介绍，基地已交付近3万小时数据，贯通采集、训练及评测，为具身智能研发提供支持。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09 09:11",
+        "url": "https://www.news.cn/tech/20261009/505ddd1209b34d428aa0b81c34f737bd/c.html"
+      },
+      {
+        "id": "ai-03",
+        "kind": "ms-20261010-a04",
+        "title": "铁路车辆检修引入AI初筛与人工复核",
+        "summary": "沈阳局苏家屯车辆段用AI图像初筛减少逐帧检查，员工继续复核疑似故障。数智轮轴产线每天可检修330对轮对，体现自动识别与人工确认配合的检修流程。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-08 09:15",
+        "url": "https://www.news.cn/tech/20261008/23abbd75e05441bebd426a05224ca47d/c.html"
+      },
+      {
+        "id": "ai-04",
+        "kind": "ms-20261010-a05",
+        "title": "上海海纳智算Token平台启动",
+        "summary": "上海普陀海纳数创中心10月9日举行海纳智算Token平台启动仪式，Token超市提供按实际用量计费的标准化AI能力。跨厂商迁移与结算机制仍在完善。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-09 22:16",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-09/10709951.shtml"
+      },
+      {
+        "id": "ai-05",
+        "kind": "ms-20261010-a06",
+        "title": "河北高速借助AI预警部署潮汐车道",
+        "summary": "河北高速流量预警模型汇集17条高速公路数据，辅助人员提前布设潮汐车道。科技日报现场采访显示，AI承担预警支持，实际交通管控仍由交警执行。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-07 19:13",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/07/content_592285.html"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "id": "ms-20261010-m-gold",
+      "kind": "gold",
+      "icon": "◎",
+      "name": "国内金价",
+      "value": "905.68元/克",
+      "note": "2026-10-09 上海金午盘基准价；非零售金饰价",
+      "source": "上海黄金交易所",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.sge.com.cn/h5_index"
+    },
+    {
+      "id": "ms-20261010-m-domesticoil",
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "中国油价",
+      "value": "8.57元/升",
+      "note": "福建92号最高零售限价；2026-09-24 24时起执行",
+      "source": "福建省发展和改革委员会",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://fgw.fujian.gov.cn/zfxxgkzl/zfxxgkml/yzdgkdqtxx/202609/t20260924_7218113.htm"
+    },
+    {
+      "id": "ms-20261010-m-oil",
+      "kind": "international_oil",
+      "icon": "◈",
+      "name": "国际油价",
+      "value": "WTI 91.85 / 布伦特104.72美元/桶",
+      "note": "2026-10-09 近月期货结算价",
+      "source": "第一财经",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www.yicai.com/news/103388389.html"
+    },
+    {
+      "id": "ms-20261010-m-usd",
+      "kind": "usd_cny",
+      "icon": "$",
+      "name": "美元兑人民币",
+      "value": "1美元兑6.7330人民币元",
+      "note": "2026-10-09 中间价；非银行现钞价",
+      "source": "新华网",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www2.xinhuanet.com/fortune/20261009/48072474f1a14902b1a04772d75b2bf9/c.html"
+    },
+    {
+      "id": "ms-20261010-m-eur",
+      "kind": "eur_cny",
+      "icon": "€",
+      "name": "欧元兑人民币",
+      "value": "1欧元兑7.5323人民币元",
+      "note": "2026-10-09 中间价；非银行现钞价",
+      "source": "新华网",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www2.xinhuanet.com/fortune/20261009/48072474f1a14902b1a04772d75b2bf9/c.html"
+    },
+    {
+      "id": "ms-20261010-m-jpy",
+      "kind": "jpy_cny",
+      "icon": "¥",
+      "name": "日元兑人民币",
+      "value": "100日元兑4.2571人民币元",
+      "note": "2026-10-09 中间价；按100日元计",
+      "source": "新华网",
+      "sourceOrigin": "china",
+      "sourceUrl": "https://www2.xinhuanet.com/fortune/20261009/48072474f1a14902b1a04772d75b2bf9/c.html"
+    }
+  ],
+  "sources": [
+    "新华网",
+    "人民网",
+    "央视网",
+    "中国新闻网",
+    "光明网",
+    "中国网",
+    "中国日报中文网",
+    "中国科技网",
+    "央广网",
+    "科学网"
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "福建省发展和改革委员会",
+    "第一财经",
+    "新华网"
+  ]
+}
