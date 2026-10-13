@@ -61,5 +61,11 @@ const recovery=await fixture({date:recoveryDate,now:new Date(recoveryDate+'T18:2
 await freezeSteamDiscovery(recovery.root,recovery.options);await inspectSteamDiscovery(recovery.root,recoveryDate);
 await rejects({date:recoveryDate,now:new Date(recoveryDate+'T18:26:00+08:00'),authorization:{...recoveryAuthorization,approvalText:'允许'}},'FREEZE_AUTH_INVALID');
 await rejects({date:'2026-10-06',now:new Date('2026-10-06T18:26:00+08:00'),authorization:{...recoveryAuthorization,approvalRecordedAt:'2026-10-06T18:24:00+08:00',collectedAt:'2026-10-06T18:25:00+08:00'}},'FREEZE_AUTH_INVALID');
+const october13='2026-10-13';
+const october13Approval={approvalText:'你来执行吧',approvalReference:'01a118cb-cb6b-7752-9933-87f7058870cc / Sentinel_3d3eaa5c8aec8191bce70d3043575605',approvalRecordedAt:october13+'T12:39:31+08:00',collectedAt:october13+'T12:45:00+08:00'};
+const october13Fixture=await fixture({date:october13,now:new Date(october13+'T12:46:00+08:00'),authorization:october13Approval});
+await freezeSteamDiscovery(october13Fixture.root,october13Fixture.options);await inspectSteamDiscovery(october13Fixture.root,october13);
+await rejects({date:october13,now:new Date(october13+'T12:46:00+08:00'),authorization:{...october13Approval,approvalText:'允许'}},'FREEZE_AUTH_INVALID');
+await rejects({date:'2026-10-14',now:new Date('2026-10-14T12:46:00+08:00'),authorization:{...october13Approval,approvalRecordedAt:'2026-10-14T12:39:31+08:00',collectedAt:'2026-10-14T12:45:00+08:00'}},'FREEZE_AUTH_INVALID');
 console.log('Steam一次性晚采授权回归通过：默认门禁、授权与时间/日期/身份/哈希、只读复用和禁止替换。');
 console.log(`隔离夹具：${parent}`);
