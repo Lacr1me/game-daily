@@ -3,10 +3,11 @@ import path from "node:path";
 import { assertGameArchiveConsistency, assertManifestEdition, assertMinshengArchiveConsistency } from "./archive-consistency.mjs";
 import { validateGame } from "./game-lib.mjs";
 import { validateMinsheng } from "./minsheng-lib.mjs";
+await import("../portal-data.js");
 
 const root = process.cwd();
 const output = path.join(root, "dist");
-for (const file of ["index.html", "portal.js", "message-config.js", "message-client.js", "messages/index.html", "messages/messages.css", "messages/app.js", "admin/messages/index.html", "admin/messages/admin.css", "admin/messages/client.js", "admin/messages/app.js", "privacy/index.html", "privacy/privacy.css", "app.js", "game/index.html", "minsheng/index.html", "minsheng/message-link.css", "minsheng/aligned-layout.css", "brand-assets/springhues-logo.png", "data/index.json", "data/minsheng/index.json", ".nojekyll"]) {
+for (const file of ["index.html", "home.css", "portal-data.js", "portal.js", "THIRD-PARTY-NOTICES.txt", "data/resources.json", "message-config.js", "message-client.js", "messages/index.html", "messages/messages.css", "messages/app.js", "admin/messages/index.html", "admin/messages/admin.css", "admin/messages/client.js", "admin/messages/app.js", "privacy/index.html", "privacy/privacy.css", "app.js", "game/index.html", "minsheng/index.html", "minsheng/message-link.css", "minsheng/aligned-layout.css", "brand-assets/springhues-logo.png", "data/index.json", "data/minsheng/index.json", ".nojekyll"]) {
   await access(path.join(output, file));
 }
 await access(path.join(output, "data", ".pending")).then(
@@ -45,7 +46,11 @@ const adminHtml = await readFile(path.join(output, "admin", "messages", "index.h
 const gameHtml = await readFile(path.join(output, "game", "index.html"), "utf8");
 const minshengHtml = await readFile(path.join(output, "minsheng", "index.html"), "utf8");
 const privacyHtml = await readFile(path.join(output, "privacy", "index.html"), "utf8");
-if (!portalHtml.includes('class="quick-message-link"') || portalHtml.includes("data-message-form")) throw new Error("首页必须只保留左对齐留言入口，不得包含快捷留言表单");
+if (!portalHtml.includes('class="quick-message-link"') || portalHtml.includes("data-message-form") || /href=["'](?:\.\/)?admin\//.test(portalHtml)) throw new Error("首页须保留独立留言入口，不得内嵌表单或公开后台导航");
+for (const id of ["libraryView", "detailView", "journalView", "aboutView", "civicLink", "gameLink"]) {
+  if (!portalHtml.includes(`id="${id}"`)) throw new Error(`首页缺少入口 ${id}`);
+}
+globalThis.SpringhuesPortalData.parseCatalog(await readJson(path.join(output, "data", "resources.json")), { includeUnpublished: true });
 if (!messageHtml.includes('id="messageList"') || !messageHtml.includes("data-message-form")) throw new Error("构建产物缺少完整留言页");
 if (!adminHtml.includes('name="robots" content="noindex,nofollow,noarchive"') || !adminHtml.includes('http-equiv="Cache-Control" content="no-store') || !adminHtml.includes('id="loginForm"')) throw new Error("构建产物缺少受保护且禁缓存的留言后台登录页");
 if (!adminHtml.includes('role="tablist"') || !adminHtml.includes('id="websiteChangesPanel"') || !adminHtml.includes('id="maintenancePanel"') || !adminHtml.includes('id="websiteChangesTab" class="active"')) throw new Error("构建产物缺少默认日志页的管理员三标签页");

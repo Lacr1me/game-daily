@@ -2,73 +2,89 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f5f1e8">
-  <meta name="description" content="每天北京时间 11:00 更新的民生日报与游戏方块日报。">
-  <title>每日简报 · 首页</title>
-  <link rel="icon" type="image/png" href="brand-assets/springhues-logo.png">
-  <link rel="stylesheet" href="portal.css?v=20260825-hero-grid-align">
-  <link rel="stylesheet" href="brand.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#25272d">
+  <meta name="description" content="Springhues 的个人作品、资源整理与每日简报">
+  <title>Springhues · 作品与日常</title>
+  <link rel="icon" href="brand-assets/springhues-logo.png" type="image/png">
+  <link rel="stylesheet" href="home.css?v=20261016-shelf-v1">
+  <link rel="canonical" href="https://springhues.com/">
 </head>
 <body>
-  <div class="paper-grain" aria-hidden="true"></div>
-  <header class="portal-header shell">
-    <a class="portal-brand" href="./" aria-label="每日简报首页">
-        <span class="brand-logo" aria-hidden="true"><img src="brand-assets/springhues-logo.png" alt=""></span>
-      <span><b>每日简报</b><small>DAILY BRIEFING · 11:00</small></span>
-    </a>
-    <div class="header-actions">
-      <p class="header-update"><span class="live-dot"></span>北京时间每日更新</p>
-    </div>
-  </header>
-
-  <main class="shell">
-    <section class="hero">
-      <p class="eyebrow">ONE PLACE · TWO PERSPECTIVES</p>
-      <div class="hero-primary">
-        <h1>简单人生</h1>
-        <div class="quick-message-cta">
-          <p class="form-eyebrow">MESSAGE BOARD</p>
-          <h2>留下一句话</h2>
-          <a class="quick-message-link" href="messages/">提交留言 <span aria-hidden="true">→</span></a>
-        </div>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+  <svg class="icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.4"/><rect x="14" y="3" width="7" height="7" rx="1.4"/><rect x="3" y="14" width="7" height="7" rx="1.4"/><rect x="14" y="14" width="7" height="7" rx="1.4"/></symbol>
+    <symbol id="i-bookmark" viewBox="0 0 24 24"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 7v14M3 3h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6v16h-6a3 3 0 0 0-3 2 3 3 0 0 0-3-2H3z"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="m18 6-12 12M6 6l12 12"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 7h10v10M7 17 17 7"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5m7-7-7 7 7 7"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6v20h12V6l-4-4zM14 2v5h4M9 12h6m-6 4h6"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="14" height="14" rx="2"/><path d="M4 16H3V2h13v2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m20 6-11 11-5-5"/></symbol>
+    <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 15a3 3 0 0 1-3 3H8l-5 4V5a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3zM7 8h10M7 12h7"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M5.6 18.4 18.4 5.6"/></symbol>
+    <symbol id="i-blocks" viewBox="0 0 24 24"><path d="m12 3 9 5v8l-9 5-9-5V8l9-5zM3 8l9 5 9-5M12 13v8"/></symbol>
+  </svg>
+  <aside class="site-sidebar" aria-label="网站导航">
+    <div class="sidebar-top"><a class="brand" href="./index.html" data-view="library"><span class="brand-logo"><img src="brand-assets/springhues-logo.png" alt="" width="35" height="43"></span><span><strong>Springhues</strong><small>作品与日常</small></span></a><a class="mobile-message" href="messages/" aria-label="前往留言页"><svg class="icon"><use href="#i-message"/></svg></a></div>
+    <p class="nav-label">我的空间</p>
+    <nav class="main-nav" aria-label="主要页面">
+      <a class="nav-item active" data-view="library" href="?view=library" aria-current="page"><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg><span>资源库</span><b id="libraryCount">—</b></a>
+      <a class="nav-item" data-view="saved" href="?view=saved"><svg class="icon" aria-hidden="true"><use href="#i-bookmark"/></svg><span>我的收藏</span><b id="favoriteCount">0</b></a>
+      <a class="nav-item" data-view="journal" href="?view=journal"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><span>每日简报</span></a>
+      <a class="nav-item" data-view="about" href="?view=about"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg><span>关于这里</span></a>
+    </nav>
+    <div id="categorySection" class="category-section"><p class="nav-label">按分类浏览</p><nav class="category-nav" aria-label="作品分类"><button class="filter active" data-category="all" aria-pressed="true" type="button"><span>全部资源</span><b data-count="all">—</b></button><button class="filter" data-category="tools" aria-pressed="false" type="button"><span>软件工具</span><b data-count="tools">—</b></button><button class="filter" data-category="design" aria-pressed="false" type="button"><span>网页设计</span><b data-count="design">—</b></button><button class="filter" data-category="game" aria-pressed="false" type="button"><span>游戏资源</span><b data-count="game">—</b></button></nav></div>
+    <div class="sidebar-bottom"><svg class="icon sidebar-mark" aria-hidden="true"><use href="#i-spark"/></svg><p>自己做的<br>也有认真整理的</p><a class="quick-message-link" href="messages/">有想法 可以留句话<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><div class="sidebar-owner"><span class="owner-logo"><img src="brand-assets/springhues-logo.png" alt="" width="24" height="29"></span><span><strong>Springhues</strong><small>个人制作与分享</small></span></div></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><div class="breadcrumb"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg><span>Springhues</span><i>/</i><span id="breadcrumbView">资源库</span></div><div class="search-box"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><label class="sr-only" for="workSearch">搜索作品、功能或标签</label><input id="workSearch" name="q" type="search" autocomplete="off" placeholder="搜索作品、功能或标签…" maxlength="100"><button id="clearSearch" class="clear-search" aria-label="清空搜索" type="button" hidden><svg class="icon"><use href="#i-x"/></svg></button><kbd id="searchShortcut" aria-hidden="true">/</kbd></div></header>
+    <main id="main-content" tabindex="-1">
+      <div id="viewContent">
+        <section id="libraryView" aria-labelledby="libraryTitle">
+          <div class="intro-banner" id="introBanner"><div class="intro-copy"><p>Springhues 的个人空间</p><h1>作品与资源<br>都放在这里</h1><span>软件工具、网页设计、游戏资源<br class="mobile-break">和每天值得读到的消息</span></div><div class="intro-emblem" aria-hidden="true"><div class="emblem-line"></div><img src="brand-assets/springhues-logo.png" alt="" width="112" height="137"><svg class="icon emblem-spark"><use href="#i-spark"/></svg></div></div>
+          <div class="section-heading"><div><span class="heading-line" aria-hidden="true"></span><h2 id="libraryTitle" tabindex="-1">资源库</h2><p id="resultCount" role="status" aria-live="polite"></p></div><span id="catalogNote" class="sample-note"></span></div>
+          <div id="projectGrid" class="resource-list" aria-busy="true"></div>
+          <div id="catalogLoading" class="catalog-loading" role="status"><span class="loading-dot" aria-hidden="true"></span>正在读取资源…</div>
+          <div id="emptyState" class="empty-state" hidden><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><h3 id="emptyTitle">没有找到匹配的资源</h3><p id="emptyDescription">试试其他关键词或分类</p><button id="clearFilters" type="button" class="button secondary">清除筛选</button><button id="retryCatalog" type="button" class="button secondary" hidden>重新读取</button></div>
+          <div class="library-foot"><span>由 Springhues 制作或整理</span><span>喜欢的内容 可以先收藏</span></div>
+        </section>
+        <section id="detailView" hidden aria-labelledby="detailTitle"></section>
+        <section id="journalView" hidden aria-labelledby="journalTitle">
+          <div class="page-heading"><span class="page-kicker">每天读一点</span><h1 id="journalTitle" tabindex="-1">每日简报</h1><p>民生、科技与游戏资讯，在两个频道里继续更新</p></div>
+          <div class="brief-grid channels" aria-label="日报频道">
+            <article class="brief-card" id="civicCard" aria-busy="true">
+              <div class="brief-art brief-life" aria-hidden="true"><span>民生<br>科技</span><svg class="icon"><use href="#i-book"/></svg></div>
+              <div class="brief-body"><span>民生频道</span><h2>民生与科技日报</h2><p>国内与国际消息、中国科技和 AI 进展</p>
+                <div class="brief-latest" aria-live="polite"><time id="civicDate">正在读取…</time><h3 id="civicHeadline">正在查找最新一期</h3><p id="civicMeta">北京时间 11:00 发布</p></div>
+                <div class="brief-actions"><a id="civicLink" class="button primary" href="minsheng/">阅读最新一期<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><button type="button" class="button secondary" data-retry-channel="civic" hidden>重新读取</button></div>
+              </div>
+            </article>
+            <article class="brief-card" id="gameCard" aria-busy="true">
+              <div class="brief-art brief-game" aria-hidden="true"><span>游戏<br>方块</span><svg class="icon"><use href="#i-blocks"/></svg></div>
+              <div class="brief-body"><span>游戏频道</span><h2>游戏与 Minecraft 日报</h2><p>游戏资讯、整合包、模组与社区发现</p>
+                <div class="brief-latest" aria-live="polite"><time id="gameDate">正在读取…</time><h3 id="gameHeadline">正在查找最新一期</h3><p id="gameMeta">北京时间 11:00 发布</p></div>
+                <div class="brief-actions"><a id="gameLink" class="button primary" href="game/">阅读最新一期<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><button type="button" class="button secondary" data-retry-channel="game" hidden>重新读取</button></div>
+              </div>
+            </article>
+          </div>
+          <p class="page-note">显示已到发布时间的最新归档，进入频道后可以按日期回看与下载图片</p>
+        </section>
+        <section id="aboutView" hidden aria-labelledby="aboutTitle">
+          <div class="page-heading"><span class="page-kicker">关于这里</span><h1 id="aboutTitle" tabindex="-1">你好 我是 Springhues</h1><p>这个小站用来整理自己的作品，也分享一些实用的东西</p></div>
+          <div class="about-panel"><div class="about-brand"><img src="brand-assets/springhues-logo.png" alt="Springhues 个人 Logo" width="124" height="152"><strong>Springhues</strong><span>个人制作与分享</span></div><div class="about-content"><h2>作品、资源和日常</h2><p>这里记录自己做过的东西，也收集值得留下的资源。每个条目会说明用途、适用条件和文件来源，方便查找，也方便再次回来。</p><p>每天的简报会继续保留。你可以通过「每日简报」进入民生和游戏频道。</p><div class="about-actions"><a class="button primary" href="./" data-view="library">浏览资源</a><a class="button secondary" href="messages/">留句话<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div><div class="local-note"><svg class="icon" aria-hidden="true"><use href="#i-bookmark"/></svg><p>收藏保存在当前浏览器中<br><span>收藏不会上传；换浏览器或清除本地数据后不会同步保留</span></p></div></div></div>
+        </section>
       </div>
-      <div class="hero-secondary">
-        <div class="hero-personal-logo"><img src="brand-assets/springhues-logo.png" alt="Springhues"></div>
-        <p class="hero-copy">一份关注公共生活与科技进展，一份记录游戏与方块世界。所有历史期次都可按日期回看。</p>
-      </div>
-    </section>
-
-    <section class="channels" aria-label="日报频道">
-      <article class="channel-card civic" id="civicCard" aria-busy="true">
-        <div class="card-top"><span class="status">最新一期</span></div>
-        <div class="channel-title"><h2 class="channel-mark civic-mark">民生日报</h2><small>PUBLIC LIFE & TECHNOLOGY</small></div>
-        <p class="channel-description">中国时政与民生、全球国际、中国科技、AI科技与每日关键数据。</p>
-        <div class="latest">
-          <time id="civicDate">正在读取…</time>
-          <h3 id="civicHeadline">每日35条精选新闻</h3>
-          <p id="civicMeta">北京时间 11:00 发布</p>
-        </div>
-        <a class="enter-link" id="civicLink" href="minsheng/">阅读最新民生日报 <span>↗</span></a>
-      </article>
-
-      <article class="channel-card game" id="gameCard" aria-busy="true">
-        <div class="card-top"><span class="status">最新一期</span></div>
-        <div class="channel-title"><h2 class="channel-mark game-mark">游戏日报</h2><small>GAMES & MINECRAFT</small></div>
-        <p class="channel-description">中国游戏资讯、Minecraft 社区热度、Mod 更新与值得看的 Steam 特惠。</p>
-        <div class="latest">
-          <time id="gameDate">正在读取…</time>
-          <h3 id="gameHeadline">今日游戏与方块世界</h3>
-          <p id="gameMeta">北京时间 11:00 发布</p>
-        </div>
-        <a class="enter-link" id="gameLink" href="game/">阅读最新游戏日报 <span>↗</span></a>
-      </article>
-    </section>
-
-  </main>
-
-  <footer class="shell"><span>每日简报</span><p><a class="footer-link" href="privacy/">隐私说明</a> · Asia/Shanghai · 静态归档 · GitHub Pages</p></footer>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script defer src="portal.js?v=20260824-messages-v1"></script>
+      <footer class="site-footer"><span>Springhues · 作品与日常</span><a href="privacy/">隐私说明<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></footer>
+      <noscript><style>.catalog-loading{display:none}</style><p class="page-note">启用 JavaScript 后可以使用资源库、筛选和收藏。也可以直接访问 <a href="minsheng/">民生日报</a>、<a href="game/">游戏日报</a> 或 <a href="messages/">留言页</a>。</p></noscript>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span></span></div>
+  <script defer src="portal-data.js?v=20261016-shelf-v1"></script>
+  <script defer src="portal.js?v=20261016-shelf-v1"></script>
 </body>
 </html>

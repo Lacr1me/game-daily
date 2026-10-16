@@ -99,8 +99,9 @@ const sharedHttp = await read("supabase/functions/_shared/http.js");
 const gameHtml = await read("game/index.html");
 const minshengHtml = await read("minsheng/index.html");
 
-assert(portalHtml.includes("<h1>简单人生</h1>"), "首页必须使用已确认的简单人生标题");
-assert(portalHtml.includes('class="quick-message-link"') && !portalHtml.includes("data-message-form") && !portalHtml.includes('class="message-nav"'), "首页必须仅保留左对齐留言 CTA");
+assert(portalHtml.includes('id="libraryView"') && portalHtml.includes('id="journalView"'), "首页采用已确认的个人资源库布局并保留日报入口");
+assert(portalHtml.includes('class="quick-message-link"') && portalHtml.includes('href="messages/"') && !portalHtml.includes("data-message-form"), "首页保留独立留言入口，不内嵌留言表单");
+assert(!/href=["'](?:\.\/)?admin\//.test(portalHtml), "首页不得公开管理员入口");
 assert(messageHtml.includes('id="messageList"') && messageHtml.includes("data-message-counter"), "独立留言页必须包含完整表单与公开列表");
 assert(gameHtml.includes('class="header-message-link" href="messages/"') && minshengHtml.includes('class="header-message-link" href="../messages/"'), "两个日报页头必须包含留言入口");
 assert(adminHtml.includes('name="robots" content="noindex,nofollow,noarchive"') && adminHtml.includes("Content-Security-Policy"), "管理后台必须禁止索引并设置 CSP");
@@ -110,6 +111,7 @@ assert(messageCss.includes(".owner-reply"), "留言样式必须包含站长回�
 assert(!/SERVICE_ROLE|SECRET_KEY|RATE_LIMIT_SECRET/u.test(config), "公开配置不得包含服务端秘密字段");
 assert(config.includes("supabasePublishableKey") && config.includes("etkjbxfdwmhqmuyzpttq.supabase.co/functions/v1"), "公开配置必须包含项目地址与 publishable key 槽位");
 assert(privacyHtml.includes("Turnstile Privacy Addendum") && privacyHtml.includes("来源哈希"), "Invisible Turnstile 必须配套公开隐私说明");
+assert(privacyHtml.includes("资源收藏") && privacyHtml.includes("不会上传"), "资源收藏须说明浏览器本地存储边界");
 assert(firstMigration.includes("enable row level security") && firstMigration.includes("revoke all on table public.messages from anon, authenticated"), "留言表必须默认拒绝匿名直连");
 assert(replyMigration.includes("owner_reply") && replyMigration.includes("list_messages_for_admin_internal") && replyMigration.includes("update_message_for_admin_internal"), "回复迁移必须包含公开回复与管理员 RPC");
 assert(replyMigration.includes("revoke all on function public.list_messages_for_admin_internal") && replyMigration.includes("grant execute on function public.update_message_for_admin_internal"), "管理员 RPC 必须仅授权 service role");

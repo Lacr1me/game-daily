@@ -190,17 +190,15 @@ assert(alignedCivicApp.includes("function alignStoryRows()") && alignedCivicApp.
 
 const gameHtml = await readFile(path.join(root, "game", "index.html"), "utf8");
 const portalHtml = await readFile(path.join(root, "index.html"), "utf8");
-assert(!portalHtml.includes('class="promise"'), "首页不得显示仅概括民生日报的底部统计说明区");
-assert(!portalHtml.includes('class="channel-number"'), "首页频道卡不得显示 01 / 02 编号");
-assert(portalHtml.includes('<h2 class="channel-mark civic-mark">民生日报</h2>'), "民生日报名称必须位于红色标识内");
-assert(portalHtml.includes('<h2 class="channel-mark game-mark">游戏日报</h2>'), "游戏日报名称必须位于蓝色标识内");
-assert(!portalHtml.includes('<span class="game-mark"><i>'), "游戏频道不得恢复四色方格旧标识");
-const portalCss = await readFile(path.join(root, "portal.css"), "utf8");
-assert(portalCss.includes(".channel-card.game{--accent:var(--blue)}"), "游戏频道卡必须统一使用蓝色强调色");
-assert(!portalCss.includes("--green:"), "首页模板不得保留游戏频道绿色主题变量");
-assert(!portalHtml.includes('class="update-chip"') && !portalCss.includes(".update-chip"), "首页不得保留发布时间轴及其样式");
-assert(portalCss.includes("grid-template-columns: repeat(2, minmax(0, 1fr));") && portalCss.includes("column-gap: 24px;"), "首页首屏双栏必须与日报卡片网格对齐");
-assert(/\.hero-primary,\s*\.hero-secondary\s*\{\s*display:\s*contents;\s*\}/.test(portalCss) && portalCss.includes("grid-row: 2;"), "首页标题与 Logo 必须位于可精确对齐的独立网格行");
+for (const id of ["libraryView", "detailView", "journalView", "aboutView", "workSearch", "civicCard", "civicLink", "gameCard", "gameLink"]) {
+  assert(portalHtml.includes(`id="${id}"`), `个人首页缺少资源或日报入口 ${id}`);
+}
+assert(portalHtml.includes('href="minsheng/"') && portalHtml.includes('href="game/"'), "首页须保留可直接访问的双频道链接");
+assert(portalHtml.includes('src="brand-assets/springhues-logo.png"') && !portalHtml.includes("character-hero"), "个人首页使用指定 Logo，不展示 OC 图片");
+assert(portalHtml.includes('home.css?v=') && !portalHtml.includes('href="portal.css'), "个人首页样式须与留言及后台共用的旧样式分离");
+await import("../portal-data.js");
+globalThis.SpringhuesPortalData.parseCatalog(await readJson("data/resources.json"), { includeUnpublished: true });
+await import("./test-portal-data.mjs");
 assert(gameHtml.includes('<a href="./">首页</a>') && civicHtml.includes('<a href="../">首页</a>'), "双频道导航入口必须统一命名为首页");
 assert(!gameHtml.includes("双频道首页") && !civicHtml.includes("双频道首页"), "频道导航不得继续显示双频道首页旧名称");
 for (const sharedHeaderClass of ["site-bar", "mini-brand", "archive-trigger"]) {
