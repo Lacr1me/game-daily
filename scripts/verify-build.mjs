@@ -7,6 +7,7 @@ await import("../portal-data.js");
 
 const root = process.cwd();
 const output = path.join(root, "dist");
+for (const file of ["brand.css", "portal.css", "site-shell.js"]) await access(path.join(output, file));
 for (const file of ["index.html", "home.css", "portal-data.js", "portal.js", "THIRD-PARTY-NOTICES.txt", "data/resources.json", "message-config.js", "message-client.js", "messages/index.html", "messages/messages.css", "messages/app.js", "admin/messages/index.html", "admin/messages/admin.css", "admin/messages/client.js", "admin/messages/app.js", "privacy/index.html", "privacy/privacy.css", "app.js", "game/index.html", "minsheng/index.html", "minsheng/message-link.css", "minsheng/aligned-layout.css", "brand-assets/springhues-logo.png", "data/index.json", "data/minsheng/index.json", ".nojekyll"]) {
   await access(path.join(output, file));
 }
@@ -46,6 +47,9 @@ const adminHtml = await readFile(path.join(output, "admin", "messages", "index.h
 const gameHtml = await readFile(path.join(output, "game", "index.html"), "utf8");
 const minshengHtml = await readFile(path.join(output, "minsheng", "index.html"), "utf8");
 const privacyHtml = await readFile(path.join(output, "privacy", "index.html"), "utf8");
+for (const html of [gameHtml, minshengHtml, messageHtml, privacyHtml, adminHtml]) {
+  if (!html.includes("data-site-page=") || !html.includes("site-shell.js?v=20261017-unified") || !html.includes("brand.css?v=20261017-unified")) throw new Error("构建页面缺少统一主题或导航");
+}
 if (!portalHtml.includes('class="quick-message-link"') || portalHtml.includes("data-message-form") || /href=["'](?:\.\/)?admin\//.test(portalHtml)) throw new Error("首页须保留独立留言入口，不得内嵌表单或公开后台导航");
 for (const id of ["libraryView", "detailView", "journalView", "aboutView", "civicLink", "gameLink"]) {
   if (!portalHtml.includes(`id="${id}"`)) throw new Error(`首页缺少入口 ${id}`);

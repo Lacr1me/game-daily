@@ -8,7 +8,7 @@ const categoryConfig = {
 };
 
 const $ = (selector) => document.querySelector(selector);
-const desktopColumns = window.matchMedia("(min-width: 1181px)");
+const desktopColumns = window.matchMedia("(min-width: 1501px)");
 let alignmentFrame;
 const publishedEditions = () => [...state.manifest.editions]
   .filter((edition) => new Date(edition.publishAt).getTime() <= Date.now())
@@ -50,10 +50,11 @@ async function loadEdition(edition, scroll = true) {
     if (brief.date !== edition.date) throw new Error("日报日期与归档索引不一致");
     state.edition = brief;
     state.activeDate = edition.date;
-    render(brief);
+    if (scroll && window.SpringhuesUI) await window.SpringhuesUI.update(() => render(brief));
+    else render(brief);
     history.replaceState({}, "", `?date=${encodeURIComponent(edition.date)}`);
     $("#archiveDialog").close();
-    if (scroll) window.scrollTo({ top: 0, behavior: "smooth" });
+    if (scroll) window.scrollTo({ top: 0, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
   } finally {
     $("#loading").classList.add("hidden");
     $("#top").setAttribute("aria-busy", "false");
@@ -99,7 +100,8 @@ function render(brief) {
     item.className = "metric";
     const icon = document.createElement("div");
     icon.className = "metric-icon";
-    icon.textContent = metric.icon;
+    icon.setAttribute("aria-hidden", "true");
+    if (window.SpringhuesUI) icon.append(window.SpringhuesUI.icon("chart"));
     const body = document.createElement("div");
     const metricNote = metric.source
       ? `${metric.note}；${formatSource(metric.source, metric.sourceOrigin)}`

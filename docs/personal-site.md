@@ -6,7 +6,9 @@
 
 - 网站首页：资源库、我的收藏、每日简报、关于这里。
 - index.html：首页结构、图标与静态内容。
-- home.css：新版首页专用样式；portal.css 保留供留言、隐私和后台使用。
+- home.css：首页专用样式；portal.css 提供留言、隐私和后台的基础布局与表单隐藏规则。
+- brand.css：日报、留言、隐私和后台共用的银灰色主题、响应式布局、对话框及减少动态效果规则；两个日报渲染器也会内嵌此文件。
+- site-shell.js：共用导航、原始 Logo、SVG 图标和归档切换过渡；不读取个人数据，不提供公开后台入口。
 - portal.js：导航、搜索、收藏、详情、资源加载和双频道归档入口。
 - portal-data.js：资源格式、链接、发布时间及最新日报选择规则。
 - data/resources.json：作品清单；与两频道日报索引分开维护。
@@ -76,6 +78,8 @@
 
 首页仅提供留言页链接，不内嵌提交表单，也不提供管理员导航。昵称、回复、审核与鉴权流程保持原有实现。
 
+所有在线历史期次复用当前频道页面，随共用主题更新。既有下载 PNG 保留原始归档，不因页面换肤重写；后续新期次使用统一渲染器生成当前样式。
+
 收藏键为 springhues.resources.favorites.v1，仅在当前浏览器保存资源 ID。存储被拒绝时显示失败，界面不会提前变成已收藏。搜索、分类、收藏页及详情状态保存在 URL；返回列表会恢复筛选、位置与焦点。隐私说明已增加收藏与地址参数的范围。
 
 ## 本地运行与验证
@@ -94,6 +98,7 @@ node scripts/serve.mjs
 node scripts/test-portal-data.mjs
 node scripts/test-messages.mjs
 node scripts/verify-personal-site.mjs --base=http://127.0.0.1:4173/ --out=output/playwright/personal-site
+node scripts/verify-site-theme.mjs --base=http://127.0.0.1:4173/ --out=output/playwright/site-theme
 ```
 
 test-site.mjs 已包含资源数据测试。浏览器验证先检查真实清单和日报，再在浏览器内拦截清单请求注入测试资源；不会向正式清单写入示例或下载文件。测试覆盖桌面/手机、筛选、收藏、历史、复制失败、网络失败、中文输入、链接安全、未来期次和正常/减少动态效果。浏览器窄视口检查不等同于实体手机验收。

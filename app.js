@@ -55,15 +55,17 @@ async function loadBrief(edition) {
     if (!data) throw error;
   }
   if (data.date !== edition.date) throw new Error("日报日期与归档索引不一致");
+  const changingEdition = Boolean(state.activeDate);
   state.brief = data;
   state.activeDate = edition.date;
-  render(data);
+  if (changingEdition && window.SpringhuesUI) await window.SpringhuesUI.update(() => render(data));
+  else render(data);
   const url = new URL(location.href);
   url.searchParams.set("date", edition.date);
   history.replaceState({}, "", url);
   updateArchiveActiveState();
   $("#archiveDialog").close();
-  scrollTo({ top: 0, behavior: "smooth" });
+  scrollTo({ top: 0, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
 }
 
 function render(brief) {

@@ -127,6 +127,7 @@ try {
       await resize(page, { width, height: 1000 });
       const measured = await page.evaluate(() => ({ viewport: innerWidth, content: document.documentElement.scrollWidth, client: document.documentElement.clientWidth }));
       report.widths.push({ view: 'detail', ...measured });
+      if (measured.content > measured.client) measured.offenders = await page.evaluate(() => [...document.querySelectorAll('body *')].filter(e => { const rect=e.getBoundingClientRect(); return rect.width>0 && rect.right>innerWidth+1; }).map(e=>({tag:e.tagName,id:e.id,class:String(e.className),x:e.getBoundingClientRect().x,width:e.getBoundingClientRect().width})));
       assert(measured.content <= measured.client, JSON.stringify(measured));
     }
     await page.locator('[data-back]').first().click();

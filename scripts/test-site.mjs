@@ -195,7 +195,7 @@ for (const id of ["libraryView", "detailView", "journalView", "aboutView", "work
 }
 assert(portalHtml.includes('href="minsheng/"') && portalHtml.includes('href="game/"'), "首页须保留可直接访问的双频道链接");
 assert(portalHtml.includes('src="brand-assets/springhues-logo.png"') && !portalHtml.includes("character-hero"), "个人首页使用指定 Logo，不展示 OC 图片");
-assert(portalHtml.includes('home.css?v=') && !portalHtml.includes('href="portal.css'), "个人首页样式须与留言及后台共用的旧样式分离");
+assert(portalHtml.includes('home.css?v=') && !portalHtml.includes('href="portal.css'), "个人首页样式须与留言及后台的基础样式分离");
 await import("../portal-data.js");
 globalThis.SpringhuesPortalData.parseCatalog(await readJson("data/resources.json"), { includeUnpublished: true });
 await import("./test-portal-data.mjs");
@@ -246,8 +246,8 @@ assert(gameApp.includes('$("#archiveDate").min') && gameApp.includes('$("#archiv
 assert(gameApp.includes('addEventListener("change", (event) => navigateToDate(event.target.value))'), "游戏日报日期选择器必须支持按日期跳转");
 assert(civicApp.includes("downloads/minsheng/${encodeURIComponent(brief.date)}.png"), "民生日报下载按钮必须跟随所选归档日期");
 assert(civicApp.includes("（来自于外网）") && civicApp.includes("formatSource"), "民生日报必须统一渲染外网来源标记");
-assert(gameHtml.includes("app.js?v=20260825-steam-25"), "游戏日报脚本必须使用当天25款Steam优惠修正缓存版本");
-assert(civicHtml.includes("app.js?v=20260825-source-policy-v2-aligned-layout"), "民生日报脚本必须使用来源策略v2与对齐布局缓存版本");
+assert(gameHtml.includes("app.js?v=20261017-unified"), "游戏日报脚本必须使用统一主题缓存版本");
+assert(civicHtml.includes("app.js?v=20261017-unified"), "民生日报脚本必须使用统一主题缓存版本");
 const gameCss = await readFile(path.join(root, "styles.css"), "utf8");
 assert(gameCss.includes(".deal-list") && gameCss.includes("overflow-y:auto"), "Steam 优惠必须在固定板块内纵向滚动");
 assert(gameCss.includes(".png-capture .deal-row:nth-child(n+7)"), "PNG 截图必须只展示前 6 款 Steam 优惠");
@@ -338,3 +338,7 @@ function assertThrows(callback, message) {
   assert(rejected, message);
 }
 function isSorted(editions) { return editions.every((edition, index) => index === 0 || editions[index - 1].date >= edition.date); }
+for (const [entry,page] of [["game/index.html","game"],["minsheng/index.html","minsheng"],["messages/index.html","messages"],["privacy/index.html","privacy"],["admin/messages/index.html","admin"]]) {
+  const html = await readFile(path.join(root,entry),"utf8");
+  assert(html.includes('data-site-page="'+page+'"') && html.includes('site-shell.js?v=20261017-unified'), entry+" 缺少统一导航与主题入口");
+}
