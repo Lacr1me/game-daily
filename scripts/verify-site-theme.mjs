@@ -50,7 +50,7 @@ try {
       assert.equal(await page.locator('.site-rail').count(),1);
       assert.equal(await page.locator('.site-rail a[href*="admin"]').count(),0);
       assert.equal(await page.locator('.rail-logo img').evaluate(img=>img.complete&&img.naturalWidth>0),true);
-      assert.equal(await page.locator('body').evaluate(e=>getComputedStyle(e).backgroundColor),'rgb(244, 245, 247)');
+      assert.equal(await page.locator('body').evaluate(e=>getComputedStyle(e).backgroundColor),'rgb(245, 242, 239)');
       for(const width of [320,390,768,1024,1440,1920]) await overflow(route,width);
       const header=await page.locator('body > header').boundingBox();
       assert.equal(Math.round(header.x),234);

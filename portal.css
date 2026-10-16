@@ -1,4 +1,4 @@
-:root { --paper:#f4f5f7; --ink:#272b32; --muted:#747b86; --red:#526b86; --blue:#526b86; --line:#e5e8ed; --white:#fff; }
+:root { --paper:#f5f2ef; --ink:#29252b; --muted:#746b74; --red:#783b49; --blue:#783b49; --line:#e4dcde; --white:#fffdfb; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; scroll-padding-top:95px; }
 body { margin:0; background:var(--paper); color:var(--ink); font-family:"Segoe UI","Microsoft YaHei UI","Microsoft YaHei",sans-serif; }
@@ -10,8 +10,8 @@ a { color:inherit; }
 .honeypot { position:absolute!important; left:-10000px!important; width:1px!important; height:1px!important; overflow:hidden!important; }
 .turnstile-slot { width:1px; height:1px; overflow:hidden; }
 .form-status { min-height:18px; margin:9px 0 0; color:var(--muted); font-size:12px; }
-.form-status[data-state="success"] { color:#34715a; }
-.form-status[data-state="error"] { color:#ad4654; }
+.form-status[data-state="success"] { color:#386a52; }
+.form-status[data-state="error"] { color:#aa354a; }
 .portal-header { min-height:78px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); }
 .portal-brand { display:flex; gap:13px; align-items:center; color:inherit; text-decoration:none; }
 .portal-brand b { font-size:18px; }
