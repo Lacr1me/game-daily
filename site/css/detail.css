@@ -57,7 +57,9 @@
 .detail-close:hover { transform: rotate(90deg) scale(1.06); background: var(--sh-burgundy); }
 .detail-close:focus-visible { outline: 0; background: var(--sh-burgundy); }
 .detail-flying { position: fixed; z-index: 75; margin: 0; }
-html.detail-open { overflow: hidden; scrollbar-gutter: stable; }
+/* 详情弹层锁定滚动时不再改变内容宽度：桌面端始终预留滚动条槽位。 */
+@media (pointer: fine) { html { scrollbar-gutter: stable; } }
+html.detail-open { overflow: hidden; }
 
 /* 简易详情（render-basic.js） */
 dialog.basic-detail { width: min(560px, 92vw); padding: 28px; border: 0; background: var(--sh-white); color: var(--sh-klein-950); clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px); border-top: 6px solid var(--sh-klein-500); }
