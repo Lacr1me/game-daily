@@ -111,6 +111,9 @@ function normalizeWork(raw, cats, slugs) {
     category: raw.category,
     name: clip(raw.name, 60),
     intro: clip(raw.intro, 120),
+    details: (Array.isArray(raw.details) ? raw.details : []).slice(0, 14)
+      .filter(d => d && typeof d === 'object' && isStr(d.p) && d.p)
+      .map(d => ({ h: isStr(d.h) ? clip(d.h, 28) : '', p: clip(d.p, 600) })),
     tags: (Array.isArray(raw.tags) ? raw.tags : []).filter(isStr).slice(0, 8).map(t => clip(t, 16)),
     isNew: raw.isNew === true,
     links,

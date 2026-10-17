@@ -42,6 +42,9 @@ function buildBody(card, skipLinks) {
   if (work.version) meta.push(h('div', {}, h('dt', {}, '版本'), h('dd', {}, work.version)));
   if (work.updatedAt) meta.push(h('div', {}, h('dt', {}, '更新'), h('dd', {}, h('time', { datetime: work.updatedAt }, work.updatedAt))));
   kids.push(h('dl', { class: 'meta' }, ...meta));
+  if (work.details && work.details.length) {
+    kids.push(h('div', { class: 'detail-notes' }, ...work.details.map(d => h('section', {}, d.h ? h('h3', {}, d.h) : null, h('p', {}, d.p)))));
+  }
   if (work.shots.length) {
     kids.push(h('div', { class: 'shots', 'aria-label': '截图' }, ...work.shots.map(s => h('figure', { style: '--r:' + s.ratio },
       s.src ? h('img', { src: s.src, alt: s.label, loading: 'lazy' }) : h('span', {}, s.label)))));
@@ -51,6 +54,8 @@ function buildBody(card, skipLinks) {
     if (work.source) acts.push(h('a', { href: work.source.base, 'data-latest': work.source.base === 'minsheng/' ? 'minsheng' : 'game' }, '阅读最新一期'));
     work.links.forEach(l => acts.push(linkEl(l, work)));
     kids.push(h('div', { class: 'actions' }, ...acts));
+  } else if (!skipLinks && !work.links.length && !work.source) {
+    kids.push(h('p', { class: 'soon' }, '下载即将开放'));
   }
   return { nodes: kids, title };
 }

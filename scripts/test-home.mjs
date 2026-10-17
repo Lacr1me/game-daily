@@ -41,33 +41,44 @@ const { scanCss, SHARD_VERSION } = shardStyle;
 
 const worksJson = JSON.parse(await readFile(rel('site/works.json'), 'utf8'));
 
-await check('works.json 通过校验且无丢弃', () => {
+await check('works.json 通过校验且无丢弃', async () => {
   const warns = [];
   const w = console.warn; console.warn = (...a) => warns.push(a.join(' '));
   let parsed;
   try { parsed = parseWorks(worksJson); } finally { console.warn = w; }
   assert.equal(warns.length, 0, '真实 works.json 不应触发丢弃：' + warns.join('|'));
   assert.equal(parsed.works.length, worksJson.works.length);
-  assert.equal(parsed.works.length, 14);
+  assert.ok(parsed.works.length >= 3, '至少有已填入的真实作品与两条日报');
   assert.equal(parsed.categories.length, 4);
   const carriers = Object.fromEntries(parsed.categories.map(c => [c.id, c.carrier]));
   assert.deepEqual(carriers, { software: 'window', web: 'shard', game: 'shard', daily: 'page' });
   assert.deepEqual(parsed.categories.map(c => c.id), ['software', 'web', 'game', 'daily']);
   const counts = {};
   parsed.works.forEach(x => { counts[x.category] = (counts[x.category] || 0) + 1; });
-  assert.deepEqual(counts, { software: 6, web: 2, game: 4, daily: 2 });
+  assert.equal(counts.daily, 2, '日报分类固定两条频道卡');
+  assert.ok(Object.keys(counts).every(id => id in carriers), '作品都落在已登记分类');
   assert.ok(parsed.works.every(x => x.category in carriers), '作品分类都属于四个新 id');
   assert.ok(parsed.works.every(x => x.platform === undefined || (typeof x.platform === 'string' && x.platform.length > 0 && x.platform.length <= 16)));
   const byCat = new Map(parsed.categories.map(c => [c.id, c]));
   const typeOf = x => carrierFor(x, byCat.get(x.category)).type;
   assert.deepEqual([...new Set(parsed.works.map(typeOf))].sort(), ['page', 'phone', 'shard', 'window'], '四种载体都应出现');
-  // 与第一阶段 slug → 载体映射一致：android→phone、windows→window、daily→page、其余→shard
+  // 载体：日报固定 page；作品显式写了 carrier 就按它；其余走分类默认
   for (const x of parsed.works) {
-    const want = x.slug.startsWith('android-') ? 'phone' : x.slug.startsWith('windows-') ? 'window' : x.slug.startsWith('daily-') ? 'page' : 'shard';
-    assert.equal(typeOf(x), want, x.slug);
+    if (x.slug.startsWith('daily-')) assert.equal(typeOf(x), 'page', x.slug);
+    else if (x.carrier) assert.equal(typeOf(x), x.carrier, x.slug);
   }
-  const real = parsed.works.flatMap(x => x.links).filter(l => l.href !== '#').map(l => l.href).sort();
-  assert.deepEqual(real, ['game/', 'minsheng/'], '只有日报两条真实链接');
+  // 链接：站内只允许两个日报频道入口，其余必须是 https（下载地址未就绪时 links 为空）
+  const hrefs = parsed.works.flatMap(x => x.links).map(l => l.href).filter(h => h !== '#');
+  assert.ok(hrefs.every(h => h === 'game/' || h === 'minsheng/' || h.startsWith('https://')), '真实链接只能是日报入口或 https：' + hrefs.join(','));
+  assert.ok(hrefs.includes('game/') && hrefs.includes('minsheng/'), '日报两条入口都在');
+  // 图片：cover / shots 引用的文件必须真实存在，且在 assets/works 下
+  for (const x of parsed.works) {
+    const srcs = [x.cover && x.cover.kind === 'image' ? x.cover.src : null, ...x.shots.map(s => s.src)].filter(Boolean);
+    for (const s of srcs) {
+      assert.ok(s.startsWith('assets/works/'), `${x.slug} 的图片应放在 assets/works：${s}`);
+      assert.ok((await stat(rel(s))).size > 0, `${x.slug} 的图片文件缺失：${s}`);
+    }
+  }
 });
 
 await check('safeHref 拒绝危险与后台链接', () => {

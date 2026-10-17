@@ -67,3 +67,12 @@ dialog.basic-detail .actions { margin-top: 18px; }
 
 ::view-transition-group(work-face) { animation-duration: .6s; animation-timing-function: cubic-bezier(.7, 0, .2, 1); }
 ::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+
+/* 详情：长介绍分段、真实截图、下载未开放提示 */
+.detail-notes { display: grid; gap: 14px; font-size: 15px; line-height: 1.75; }
+.detail-notes h3 { font: 800 16px/1.4 var(--font-cn); letter-spacing: .02em; padding-left: 10px; border-left: 4px solid var(--sh-klein-500); }
+.detail-notes p { font-weight: 500; }
+.shots figure:has(img) { width: auto; height: 220px; background: none; }
+.shots figure img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.soon { display: inline-block; justify-self: start; padding: 6px 16px 6px 14px; font-weight: 800; color: var(--sh-klein-500); border: 2px solid var(--sh-klein-500); clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%); }
+:root[data-theme="night"] .soon { color: var(--sh-white); border-color: var(--sh-white); }

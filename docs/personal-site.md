@@ -23,7 +23,7 @@
 
 ## 作品与分类
 
-首页分类共 4 个（软件工具、网页设计、游戏资源、每日简报），加上代码提供的“全部”共 5 个筛选项；载体外形 4 种（`phone / window / page / shard`）。新增作品、分类和载体的步骤见 `docs/shard-style.md` 第 10 节。作品链接只允许站内相对路径或 HTTPS，不得指向后台。清单里现有的“示例·某某”条目是占位内容，替换为真实作品后再对外宣传。
+首页分类共 4 个（软件工具、网页设计、游戏资源、每日简报），加上代码提供的“全部”共 5 个筛选项；载体外形 4 种（`phone / window / page / shard`）。新增作品、分类和载体的步骤见 `docs/shard-style.md` 第 10 节。作品链接只允许站内相对路径或 HTTPS，不得指向后台。清单里已是真实作品（简单下载 Windows / Android、N1ten）和两条日报卡；软件安装包放在独立仓库的 Releases，发布与提交流程见 [docs/HANDOFF.md](HANDOFF.md)。
 
 路由：`#work=<slug>` 打开作品详情，`#cat=<id>` 切换分类，`#works / #about / #top` 滚动到对应区块（子页面菜单使用 `./#works`、`./#cat=daily`、`./#about`）。旧链接 `?view=journal / about / saved / library` 与 `?work=<slug>` 仍会被映射到新位置。
 

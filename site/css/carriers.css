@@ -141,3 +141,12 @@
 @media (max-width: 699px) {
   .face { translate: calc(var(--dx, 0px) * .3) calc(var(--dy, 0px) * .3); }
 }
+
+/* 带真实截图的手机 / 窗口载体：截图默认略暗，悬停或聚焦时点亮 */
+.ph-screen.has-shot::before { display: none; }
+.ph-shot { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; opacity: .72; transition: opacity .35s var(--ease-out), transform .6s var(--ease-out); }
+.face[data-carrier="phone"]:hover .ph-shot, .face[data-carrier="phone"]:has(.card-hit:focus-visible) .ph-shot { opacity: 1; transform: scale(1.03); }
+.win-body.has-shot { grid-template-columns: 1fr; background: #eef1ff; overflow: hidden; }
+.win-shot { width: 100%; height: 100%; object-fit: cover; object-position: left top; opacity: .9; transition: opacity .3s, transform .5s var(--ease-out); }
+.face[data-carrier="window"]:hover .win-shot, .face[data-carrier="window"]:has(.card-hit:focus-visible) .win-shot { opacity: 1; transform: scale(1.02); }
+.win-ver-float { position: absolute; right: 10px; bottom: 8px; padding: 3px 10px 3px 8px; background: var(--sh-klein-500); color: var(--sh-white); clip-path: polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%); }
