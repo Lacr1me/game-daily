@@ -341,7 +341,15 @@ $env:PORT = 4173; node scripts/serve.mjs      # 打开 http://127.0.0.1:4173 ；
 
 ## 12. 已知问题与待办（按紧急程度）
 
-1. **仓库体积接近上限（需要作者决策）**：GitHub 显示本仓库约 945 MB，`downloads/`（日报 PNG）约 585 MB 且每天增加，`game-brief-assets/` 本地约 453 MB。GitHub 建议仓库 <1 GB，Pages 发布的站点体积上限同为 1 GB（以 GitHub 官方文档为准）。`build-site.mjs` 会把 `downloads/` 和 `game-brief-assets/` 整体复制进 `dist/`，再涨下去部署可能失败。处理方向：把历史 PNG 迁出（例如 Releases 或对象存储）、精简历史图片或重写历史。这和日报系统耦合，**需要作者与日报负责人决定，网站维护者不要擅自动 `downloads/`**。
+1. **仓库体积接近上限，作者已决定「只保留近 7 天的照片」，但还没有实施（需要专门做一次，见下）**。
+   - 现状（2026-10-17 实测）：GitHub 显示本仓库约 945 MB。受 git 跟踪的日报图片：`downloads/game/` 55 张 PNG 约 474 MB、`downloads/minsheng/` 57 张约 111 MB、`game-brief-assets/` 3426 个文件约 418 MB。早于 2026-10-11 的旧期次：游戏 49 张、民生 50 张 PNG，加上对应的配图。GitHub 建议仓库 <1 GB，Pages 发布的站点体积上限同为 1 GB（以官方文档为准）。`build-site.mjs` 会把 `downloads/` 和 `game-brief-assets/` 整体复制进 `dist/`，再涨下去部署可能失败。
+   - **不能只删文件**，否则会出事：
+     - `scripts/test-site.mjs`（约 47–50、64–67 行）和 `scripts/verify-build.mjs`（约 32–47 行）会对 `data/index.json`、`data/minsheng/index.json` 里**每一期**检查 `downloads/<频道>/<日期>.png` 是否是有效 PNG。只删图会让 CI 失败，**部署被阻断，线上停在旧版**。
+     - 日报页的下载按钮和日期选择器按全部归档期次工作（`app.js`、`minsheng/app.js` 属于导出消费文件，**不能改**）。保留旧期次文字却删掉图，会出现下载 404 和裂图。
+     - `data/index.json`、`data/minsheng/index.json` 只能由发布脚本更新，`data/embedded.js` 由 `scripts/build-embedded.mjs` 生成，都禁止手改（`AGENTS.md`）。
+     - 只在新提交里删除文件**不会**缩小 `.git` 的历史体积（GitHub 显示的 945 MB 基本不变），只会缩小发布出去的站点。真要缩仓库需要重写历史并强推，风险很大，除非作者明确要求，不要做。被删除的文件仍可从 git 历史恢复。
+   - 推荐做法（需要先征得作者对三点的确认：窗口按「最近 7 期」还是「最近 7 个日历日」；旧期次的文字归档是否一起移除；是否接受历史仍留在 git 里）：把归档窗口定为 7 期，旧期次的索引条目、正文 JSON、PNG、配图**一起**移除，让站点与测试保持一致；然后在每日发布流程里加一步自动滚动清理，否则明天又会多出一期。这是日报系统改动，必须严格按 `docs/daily-runbook.md` 与 `AGENTS.md` 的验证映射做，使用发布脚本提供的接口，不要手改索引；改完要跑第 6 节全套测试，并确认两个频道页的 `?date=` 回退、下载按钮、历史选择在 7 期内都正常。去重规则本身只读最近 7 期，不受影响。
+   - 在此之前，**不要手工删除 `downloads/` 或 `game-brief-assets/` 里的文件**。
 2. `scripts/verify-home-redesign.mjs` 里的旧占位 slug 需要更新（见第 7 节）。
 3. 国内镜像、自动更新：未做（第 10、11 节）。
 4. 卡片没有配图；Mod / 网页 / 游戏还在用通用「碎片卡」，专属载体（Mod 补丁碎片或卡带、网页浏览器标签页、游戏光盘或卡带）未做。
