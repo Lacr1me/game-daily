@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 await import('../portal-data.js');
-const { parseCatalog, latestEdition, resourceUrl, matchesResource, validId } = globalThis.SpringhuesPortalData;
+const { parseCatalog, latestEdition, publishedEditions, resourceUrl, matchesResource, validId } = globalThis.SpringhuesPortalData;
 const fixture = JSON.parse(await readFile(new URL('./portal-resources.fixture.json', import.meta.url), 'utf8'));
 let checks = 0;
 function check(name, fn) {
@@ -59,6 +59,20 @@ check('archive selection uses canonical dates, actual time and latest date', () 
   assert.equal(latestEdition(data, Date.parse('2026-10-17T11:00:00+08:00')).date, '2026-10-17');
   assert.equal(latestEdition({ editions: [] }), null);
   assert.throws(() => latestEdition({ editions: 'invalid' }));
+});
+check('publishedEditions counts only editions already past 11:00 publishAt', () => {
+  const data = { editions: [
+    { date: '2026-10-17', publishAt: '2026-10-17T11:00:00+08:00' },
+    { date: '2026-10-16', publishAt: '2026-10-16T11:00:00+08:00' },
+    { date: '2026-10-15', publishAt: '2026-10-15T10:00:00+08:00' },
+    { date: '2026-10-14', publishAt: '2026-10-14T11:00:00' },
+    { date: '2026-10-13', publishAt: '2026-10-12T11:00:00+08:00' },
+    { date: '2026-10-12', publishAt: '2026-10-12T11:00:00+08:00' }
+  ] };
+  assert.deepEqual(publishedEditions(data, Date.parse('2026-10-17T10:59:59+08:00')).map(e => e.date), ['2026-10-16', '2026-10-12']);
+  assert.deepEqual(publishedEditions(data, Date.parse('2026-10-17T11:00:00+08:00')).map(e => e.date), ['2026-10-17', '2026-10-16', '2026-10-12']);
+  assert.throws(() => publishedEditions({ editions: 'invalid' }));
+  assert.equal(latestEdition(data, Date.parse('2026-10-17T11:00:00+08:00')).date, publishedEditions(data, Date.parse('2026-10-17T11:00:00+08:00'))[0].date);
 });
 check('search covers features and requires every keyword', () => {
   const item = parseCatalog(fixture)[0];

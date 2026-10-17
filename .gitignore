@@ -13,3 +13,6 @@ supabase/.cli.env
 *-游戏简报-工作版.html
 ????-??-??-游戏简报.html
 ????-??-??-游戏简报.png
+# Source hero art stays local; only generated assets/hero/web/ ships
+/assets/hero/*.jpeg
+/assets/hero/*.jpg

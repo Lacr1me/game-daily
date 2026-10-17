@@ -190,12 +190,12 @@ assert(alignedCivicApp.includes("function alignStoryRows()") && alignedCivicApp.
 
 const gameHtml = await readFile(path.join(root, "game", "index.html"), "utf8");
 const portalHtml = await readFile(path.join(root, "index.html"), "utf8");
-for (const id of ["libraryView", "detailView", "journalView", "aboutView", "workSearch", "civicCard", "civicLink", "gameCard", "gameLink"]) {
+for (const id of ["worksWall", "civicLink", "gameLink"]) {
   assert(portalHtml.includes(`id="${id}"`), `个人首页缺少资源或日报入口 ${id}`);
 }
 assert(portalHtml.includes('href="minsheng/"') && portalHtml.includes('href="game/"'), "首页须保留可直接访问的双频道链接");
 assert(portalHtml.includes('src="brand-assets/springhues-logo.png"') && !portalHtml.includes("character-hero"), "个人首页使用指定 Logo，不展示 OC 图片");
-assert(portalHtml.includes('home.css?v=') && !portalHtml.includes('href="portal.css'), "个人首页样式须与留言及后台的基础样式分离");
+assert(portalHtml.includes('site/css/tokens.css') && portalHtml.includes('portal-data.js') && !/href=["'](?:\.\/)?admin\//.test(portalHtml), "新首页须引用 SHARD 样式与日报索引脚本，且不公开后台入口");
 await import("../portal-data.js");
 globalThis.SpringhuesPortalData.parseCatalog(await readJson("data/resources.json"), { includeUnpublished: true });
 await import("./test-portal-data.mjs");
@@ -255,6 +255,7 @@ assert(gameCss.includes(".png-capture .deal-row:nth-child(n+7)"), "PNG 截图必
 for (const file of ["index.html", "game/index.html", "minsheng/index.html", "portal.js", "minsheng/app.js", "scripts/game-lib.mjs"]) {
   await access(path.join(root, file));
 }
+await import("./test-home.mjs");
 console.log(`站点测试通过：动态校验 ${latestCivic.date} 民生日报与 ${latestGame.date} 游戏日报，发布时间、完整结构和安全渲染均有效。`);
 
 async function readJson(file) { return JSON.parse(await readFile(path.join(root, file), "utf8")); }
@@ -338,7 +339,30 @@ function assertThrows(callback, message) {
   assert(rejected, message);
 }
 function isSorted(editions) { return editions.every((edition, index) => index === 0 || editions[index - 1].date >= edition.date); }
-for (const [entry,page] of [["game/index.html","game"],["minsheng/index.html","minsheng"],["messages/index.html","messages"],["privacy/index.html","privacy"],["admin/messages/index.html","admin"]]) {
+// 日报页与后台仍用旧外壳（日报导出器消费它们），留言/隐私页换成 SHARD 外壳。
+for (const [entry,page] of [["game/index.html","game"],["minsheng/index.html","minsheng"],["admin/messages/index.html","admin"]]) {
   const html = await readFile(path.join(root,entry),"utf8");
   assert(html.includes('data-site-page="'+page+'"') && html.includes('site-shell.js?v=20261017-unified'), entry+" 缺少统一导航与主题入口");
 }
+const { SHARD_VERSION } = await import("./check-shard-style.mjs");
+for (const [entry,page] of [["messages/index.html","messages"],["privacy/index.html","privacy"]]) {
+  const html = await readFile(path.join(root,entry),"utf8");
+  assert(html.includes('data-site-page="'+page+'"') && html.includes(`site/js/shell/shell.js?v=${SHARD_VERSION}`) && html.includes(`site/css/shard-theme.css?v=${SHARD_VERSION}`) && html.includes(`site/boot.js?v=${SHARD_VERSION}`), entry+" 缺少 SHARD 外壳入口");
+  assert(!/site-shell\.js|brand\.css|portal\.css|site-rail/.test(html), entry+" 不得再引用旧外壳（侧栏 / 月影主题）");
+  assert(!/href=["'](?:\.\.?\/)?admin\//.test(html), entry+" 不得链接后台");
+}
+for (const part of ["site/boot.js", "shard-theme.css", "wipe.css", "pages-daily.css", "site/js/shell/shell.js"]) {
+  assert(gameHtml.includes(`${part}`) && civicHtml.includes(`${part}`), `日报页须引用 SHARD 外壳：${part}`);
+}
+assert(gameHtml.includes(`site/boot.js?v=${SHARD_VERSION}`) && civicHtml.includes(`../site/boot.js?v=${SHARD_VERSION}`), "日报页外壳引用须带 SHARD_VERSION 戳");
+assert(gameHtml.includes('class="header-message-link" href="messages/"') && civicHtml.includes('class="header-message-link" href="../messages/"'), "日报页头留言入口保持不变");
+assert(civicHtml.includes('aligned-layout.css?v=20260825-aligned-layout') && civicHtml.includes('mobile-fix.css?v=20260824-download-png'), "民生日报须保留 aligned-layout.css 与 mobile-fix.css 引用");
+assert(!(await readFile(path.join(root,"admin/messages/index.html"),"utf8")).includes("shard"), "后台页不得引入 SHARD 外壳");
+// 日报页隔离：被导出器消费的文件里不得出现 SHARD 外壳（导出视觉不变）。
+for (const f of ["brand.css", "styles.css", "site-shell.js", "app.js", "minsheng/styles.css", "minsheng/mobile-fix.css", "minsheng/aligned-layout.css", "minsheng/message-link.css", "minsheng/app.js"]) {
+  const text = await readFile(path.join(root,f),"utf8");
+  assert(!/shard-|\.sd-|shard-live/.test(text), `${f} 被日报导出器消费，不得含 SHARD 外壳样式或类名`);
+}
+// 日报线上层只能走 html.shard-live 门控（导出运行时不带该类）。
+const dailyLayer = await readFile(path.join(root,"site/css/pages-daily.css"),"utf8");
+assert(!/\.story\b|\.metric\b/.test(dailyLayer.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\.story-(?:number|summary|meta)/g, "").replace(/\.metric-icon|\.metrics-cutoff/g, "")), "pages-daily 不得触碰 .story / .metric 的盒模型（保证桌面逐行对齐与移动端高度重置）");

@@ -12,6 +12,7 @@
 - 发布与补跑：先区分已归档、已就绪、研究缺口和部署故障，再按频道推进；不默认重读两个模板或重做两个频道。
 - 只读审计、规则文档修改：读取相关文档、脚本接口和配置即可，不初始化当天运行、不获取生产租约、不检索新闻、不生成或发布日报。
 - 代码或视觉任务：按实际影响范围读取源码与相关模板，使用手册的“验证映射”。视觉任务另遵守用户的全局 UI 学习要求。
+- 视觉/页面样式任务：先读 `docs/shard-style.md` 与 `site/css/shard-theme.css`，新页面按其模板，完成后运行 `scripts/check-shard-style.mjs`。日报页导出消费 `styles.css`、`minsheng/*.css`、`brand.css`、`site-shell.js`、两个 `app.js` 与两个频道 HTML，这些不得修改，线上外壳只能走 `site/boot.js` 门控的新外壳，改完另运行 `scripts/check-export-parity.mjs`。
 - 自动化提示词只保留频道、入口、阶段目标和必要限制；详细流程不得复制到提示词或模板技能中。
 
 ## 事实来源与职责
@@ -33,7 +34,7 @@
 
 | 路径 | 作用与约束 |
 | --- | --- |
-| `index.html`、`portal.css`、`portal.js` | 双频道门户，只展示已到 publishAt 的最新归档 |
+| `index.html`、`site/`（css、js、works.json、boot.js）、`assets/`、`vendor/lenis/`、`scripts/build-hero-assets.mjs` | SHARD 单页首页：作品清单在 `site/works.json`，日报入口只展示已到 publishAt 的最新归档；`site/` 也含子页面共享的外壳（`shard-theme.css`、`pages-*.css`、`js/shell/`）。旧 `portal.css`（后台基础布局，勿删）、`home.css`、`portal.js` 为旧门户遗留，仅后台、构建与测试引用 |
 | `game/index.html`、根级 `app.js`、`styles.css` | 游戏日报 |
 | `minsheng/` | 民生日报；保留 aligned-layout.css 引用及 mobile-fix.css 导出关键规则 |
 | `brand.css`、`brand-assets/` | 共用品牌；图片控制宽高，保留 Logo 比例与透明度 |

@@ -1,4 +1,4 @@
-import { cp, mkdir, rm, writeFile } from "node:fs/promises";
+import { cp, mkdir, readdir, rm, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const root = process.cwd();
@@ -22,6 +22,22 @@ await cp(path.join(root, "game-brief-assets"), path.join(output, "game-brief-ass
 await cp(path.join(root, "brand-assets"), path.join(output, "brand-assets"), { recursive: true });
 await cp(path.join(root, "data"), path.join(output, "data"), { recursive: true });
 await cp(path.join(root, "downloads"), path.join(output, "downloads"), { recursive: true });
+for (const dir of ["site", "vendor", "assets/hero/web", "assets/fonts"]) {
+  await cp(path.join(root, dir), path.join(output, dir), { recursive: true });
+}
+// 防止把 5MB 原图或其他大文件带进 dist
+const oversize = await findOver(path.join(output, "assets"), 1024 * 1024);
+if (oversize.length) throw new Error("dist/assets 含过大文件：" + oversize.join(", "));
 await rm(path.join(output, "data", ".pending"), { recursive: true, force: true });
 await writeFile(path.join(output, ".nojekyll"), "", "utf8");
 console.log(`Built static site at ${output}`);
+
+async function findOver(dir, limit) {
+  const found = [];
+  for (const entry of await readdir(dir, { withFileTypes: true })) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) found.push(...await findOver(full, limit));
+    else if ((await stat(full)).size > limit) found.push(full);
+  }
+  return found;
+}

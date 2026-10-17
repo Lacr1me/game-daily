@@ -1,0 +1,73 @@
+// 作品墙降级渲染：静态卡片 + 简易 <dialog> 详情，无共享元素转场 / 倾斜 / 视差。
+// 载体模块也失败时，渲染最朴素的链接列表。预算 ≤ 5KB gzip。
+import { app } from '../core/app.js';
+import { h } from '../core/dom.js';
+import { toast } from '../ui/toast.js';
+
+function linkNode(l) {
+  if (l.href === '#') return h('a', { href: '#', 'data-placeholder': '' }, l.label);
+  const ext = /^https:/i.test(l.href);
+  return h('a', { href: l.href, target: ext ? '_blank' : null, rel: ext ? 'noopener noreferrer' : null }, l.label);
+}
+
+export async function renderBasic({ data, archive }) {
+  const wallEl = document.getElementById('worksWall');
+  const byId = new Map(data.categories.map(c => [c.id, c]));
+  let cards = null;
+  try {
+    const mod = await import('./cards.js');
+    cards = mod.buildCards(data.works, data.categories);
+    mod.applyShapes(cards, mod.currentColumns());
+    matchMedia('(max-width: 1099px)').addEventListener('change', () => mod.applyShapes(cards, mod.currentColumns()));
+    wallEl.replaceChildren(...cards.map(c => c.root));
+  } catch (e) {
+    console.error('[render-basic] 载体模块不可用，渲染朴素链接列表', e);
+    wallEl.replaceChildren(...data.works.map(w => h('li', { class: 'slot', style: 'grid-column:1/-1' },
+      h('a', { href: w.links.find(l => l.href !== '#')?.href || '#work=' + w.slug }, w.name + '：' + w.intro))));
+  }
+  wallEl.dataset.mode = 'basic';
+  const staticLinks = document.querySelector('ul.static-links');
+  if (staticLinks) staticLinks.hidden = true;
+
+  const dlg = h('dialog', { class: 'basic-detail', 'aria-labelledby': 'basicTitle' });
+  const close = h('button', { type: 'button' }, '关闭');
+  close.addEventListener('click', () => dlg.close());
+  dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+  dlg.addEventListener('click', e => {
+    if (e.target.closest && e.target.closest('a[data-placeholder]')) { e.preventDefault(); toast('占位链接，暂未提供'); }
+  });
+  document.body.appendChild(dlg);
+  const open = slug => {
+    const w = data.works.find(x => x.slug === slug);
+    if (!w) { toast('没有找到这个作品'); return; }
+    const links = w.links.map(linkNode);
+    if (w.source) links.unshift(h('a', { href: w.source.base, 'data-latest': w.source.base === 'minsheng/' ? 'minsheng' : 'game' }, '阅读最新一期'));
+    dlg.replaceChildren(h('h2', { id: 'basicTitle' }, w.name), h('p', {}, w.intro), h('p', {}, (byId.get(w.category)?.name || '') + (w.version ? ' · ' + w.version : '')),
+      h('div', { class: 'actions' }, ...links), h('form', { method: 'dialog' }, close));
+    if (!dlg.open) dlg.showModal();
+    archive && archive.applyLinks(document);
+  };
+  app.openWork = open;
+  wallEl.addEventListener('click', e => {
+    const hit = e.target.closest && e.target.closest('a.card-hit');
+    if (!hit) return;
+    e.preventDefault();
+    open(hit.dataset.slug);
+  });
+  if (cards) {
+    const chips = document.getElementById('filters');
+    const cats = [{ id: 'all', name: '全部资源' }, ...data.categories.filter(c => data.works.some(w => w.category === c.id))];
+    chips.replaceChildren(...cats.map(c => {
+      const b = h('button', { type: 'button', 'aria-pressed': String(c.id === 'all') }, c.name);
+      b.addEventListener('click', () => {
+        app.category = c.id;
+        chips.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+        cards.forEach(card => { card.root.hidden = !(c.id === 'all' || card.work.category === c.id); });
+      });
+      return b;
+    }));
+    app.setCategory = id => { const b = [...chips.children].find((x, i) => cats[i].id === id); if (b) b.click(); };
+  }
+  archive && archive.applyLinks(document);
+  return cards;
+}

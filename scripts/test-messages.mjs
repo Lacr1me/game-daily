@@ -85,7 +85,7 @@ assert.equal(logCall.options.cache, "no-store");
 const portalHtml = await read("index.html");
 const messageHtml = await read("messages/index.html");
 const messagesApp = await read("messages/app.js");
-const messageCss = await read("messages/messages.css");
+const messageCss = await read("site/css/pages-messages.css");
 const adminHtml = await read("admin/messages/index.html");
 const adminApp = await read("admin/messages/app.js");
 const config = await read("message-config.js");
@@ -99,7 +99,7 @@ const sharedHttp = await read("supabase/functions/_shared/http.js");
 const gameHtml = await read("game/index.html");
 const minshengHtml = await read("minsheng/index.html");
 
-assert(portalHtml.includes('id="libraryView"') && portalHtml.includes('id="journalView"'), "首页采用已确认的个人资源库布局并保留日报入口");
+assert(portalHtml.includes('id="worksWall"'), "首页采用 SHARD 作品墙布局并保留日报入口");
 assert(portalHtml.includes('class="quick-message-link"') && portalHtml.includes('href="messages/"') && !portalHtml.includes("data-message-form"), "首页保留独立留言入口，不内嵌留言表单");
 assert(!/href=["'](?:\.\/)?admin\//.test(portalHtml), "首页不得公开管理员入口");
 assert(messageHtml.includes('id="messageList"') && messageHtml.includes("data-message-counter"), "独立留言页必须包含完整表单与公开列表");
@@ -108,10 +108,20 @@ assert(adminHtml.includes('name="robots" content="noindex,nofollow,noarchive"') 
 assert(!/\.innerHTML\s*=/.test(messagesApp + adminApp), "访客与管理员页面不得使用 innerHTML 渲染用户内容");
 assert(messagesApp.includes('textContent = item.reply.content') && messagesApp.includes("30_000"), "留言页必须安全渲染回复并每 30 秒同步");
 assert(messageCss.includes(".owner-reply"), "留言样式必须包含站长回复区块");
+assert(messageHtml.includes("data-turnstile") && messageHtml.includes('class="honeypot"') && messageHtml.includes('name="website"') && messageHtml.includes('maxlength="300"') && messageHtml.includes('maxlength="20"') && messageHtml.includes('id="beijingDate"') && messageHtml.includes("data-message-status"), "留言页必须保留 Turnstile 挂载点、蜜罐、字数上限、日期节点与状态区");
+assert(!/href=["'](?:\.\.?\/)?admin\//.test(messageHtml), "留言页不得公开管理员入口");
+assert(/\.honeypot\s*\{[^}]*left:\s*-10000px/.test(messageCss) && messageCss.includes(".turnstile-slot") && messageCss.includes('.form-status[data-state="error"]') && /\[hidden\]\s*\{\s*display:\s*none/.test(messageCss), "留言样式必须保留蜜罐离屏、Turnstile 挂载点、状态色与 hidden 规则");
+{
+  // Turnstile 挂载点不得被样式裁切：含它的容器（表单、留言卡片）不得设置 clip-path / overflow:hidden
+  const css = messageCss.replace(/\/\*[\s\S]*?\*\//g, "");
+  for (const m of css.matchAll(/([^{}]+)\{([^{}]*)\}/g)) {
+    if (/\.message-compose(?!\s*[:\w-])|\.message-form|\.form-submit-row/.test(m[1]) && !/::before|::after/.test(m[1])) assert(!/clip-path|overflow\s*:\s*hidden/.test(m[2]), "含 Turnstile 的容器不得裁切：" + m[1].trim());
+  }
+}
 assert(!/SERVICE_ROLE|SECRET_KEY|RATE_LIMIT_SECRET/u.test(config), "公开配置不得包含服务端秘密字段");
 assert(config.includes("supabasePublishableKey") && config.includes("etkjbxfdwmhqmuyzpttq.supabase.co/functions/v1"), "公开配置必须包含项目地址与 publishable key 槽位");
 assert(privacyHtml.includes("Turnstile Privacy Addendum") && privacyHtml.includes("来源哈希"), "Invisible Turnstile 必须配套公开隐私说明");
-assert(privacyHtml.includes("资源收藏") && privacyHtml.includes("不会上传"), "资源收藏须说明浏览器本地存储边界");
+assert(privacyHtml.includes("springhues.home.theme") && privacyHtml.includes("springhues.home.introAt") && privacyHtml.includes("springhues.home.introSeen") && privacyHtml.includes("不会上传") && !privacyHtml.includes("资源收藏"), "隐私说明须列出首页本地偏好键并说明浏览器本地存储边界");
 assert(firstMigration.includes("enable row level security") && firstMigration.includes("revoke all on table public.messages from anon, authenticated"), "留言表必须默认拒绝匿名直连");
 assert(replyMigration.includes("owner_reply") && replyMigration.includes("list_messages_for_admin_internal") && replyMigration.includes("update_message_for_admin_internal"), "回复迁移必须包含公开回复与管理员 RPC");
 assert(replyMigration.includes("revoke all on function public.list_messages_for_admin_internal") && replyMigration.includes("grant execute on function public.update_message_for_admin_internal"), "管理员 RPC 必须仅授权 service role");

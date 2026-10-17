@@ -74,13 +74,16 @@
     });
     return includeUnpublished ? resources : resources.filter(item => item.status !== 'draft' && (!item.publishAt || Date.parse(item.publishAt) <= now));
   }
-  function latestEdition(manifest, now = Date.now()) {
+  function publishedEditions(manifest, now = Date.now()) {
     if (!manifest || !Array.isArray(manifest.editions)) throw new Error('日报索引格式不正确');
     return manifest.editions.filter(edition =>
       edition && validDate(edition.date) &&
       edition.publishAt === edition.date + 'T11:00:00+08:00' &&
       Date.parse(edition.publishAt) <= now
-    ).sort((a, b) => b.date.localeCompare(a.date))[0] || null;
+    ).sort((a, b) => b.date.localeCompare(a.date));
+  }
+  function latestEdition(manifest, now = Date.now()) {
+    return publishedEditions(manifest, now)[0] || null;
   }
   function matchesResource(item, query) {
     const terms = query.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
@@ -88,5 +91,5 @@
       ...item.platforms, ...item.tags, ...item.features].join(' ').toLocaleLowerCase();
     return terms.every(term => haystack.includes(term));
   }
-  globalThis.SpringhuesPortalData = Object.freeze({ categoryLabels, validId, resourceUrl, parseCatalog, latestEdition, matchesResource });
+  globalThis.SpringhuesPortalData = Object.freeze({ categoryLabels, validId, resourceUrl, parseCatalog, latestEdition, publishedEditions, matchesResource });
 })();
