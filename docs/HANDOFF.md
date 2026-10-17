@@ -227,6 +227,9 @@ git log --oneline HEAD..origin/main      # 远端有新提交（日报发布）�
 5. 推送（**这一步就是上线**；只有用户明确同意才推送，直接推 `main` 也要用户明确说了才行）：
    ```powershell
    git push origin main
+   # 如果报 "Failed to connect to github.com:443" 或 "Connection was reset"：见第 15 节“git 连不上 GitHub”，
+   # 作者电脑开着本地代理 127.0.0.1:7897，git 默认不走它，临时指定即可（不改任何 git 配置）：
+   git -c http.proxy=http://127.0.0.1:7897 push origin main
    ```
 6. 看部署结果：
    ```powershell
@@ -351,6 +354,12 @@ $env:PORT = 4173; node scripts/serve.mjs      # 打开 http://127.0.0.1:4173 ；
    - 注意：`test-site.mjs`、`verify-build.mjs` 对索引里每一期检查 PNG 是有效 PNG，所以**仍然不能只删图或只改索引**；一律用上面的脚本。`data/embedded.js` 仍由 `build-embedded.mjs` 生成，禁止手改。
 2. `scripts/verify-home-redesign.mjs` 里的旧占位 slug 需要更新（见第 7 节）。
 3. 国内镜像、自动更新：未做（第 10、11 节）。
+3a. **网站本体在国内访问卡（作者已提出，尚未选方案）**：站点在 GitHub Pages，GitHub 没有中国大陆节点，国内访问不稳定。下面是评估，不是事实，动手前先用国内测速站（如 boce、17ce、itdog）实测现状和候选方案：
+   - 公开的对比测评（2024 年，较旧，需复测）认为：GitHub Pages 国内不稳定；Cloudflare Pages 国内延迟高（回源海外）；Vercel 国内较好但平台默认域名常被墙、必须绑自有域名，免费档有体积等限制；腾讯云 EdgeOne Pages 国内最好，其「国内站」需要 ICP 备案，「国际站」免备案但国内只能算「还行」。
+   - 候选：① 国内对象存储 + CDN（阿里云 OSS、腾讯云 COS、七牛等），最稳，但域名在国内服务必须 ICP 备案（周期约数天到数周，未核实），需要账号和费用；② EdgeOne Pages 国际站，免备案、改动小，速度中等；③ 海外或香港轻量服务器自己跑 Nginx，国内访问取决于线路，要运维；④ 在 GitHub Pages 前面加 Cloudflare 免费 CDN，国内收益有限，不推荐作为主方案。
+   - 通用接法：GitHub 仍是源码仓库和备份；`pages.yml` 里构建出 `dist/` 后，再多一步把同一份 `dist/` 同步到新平台（密钥放 GitHub Secrets，**绝不写进仓库**）；DNS 用支持「分线路解析」的服务（DNSPod、阿里云解析等），国内线路指向国内托管，海外线路仍指 GitHub Pages。改 `.github/workflows/` 属于高风险改动，必须先征得作者同意。
+   - 需要作者先回答：域名 `springhues.com` 在哪里注册、DNS 在哪里托管；是否已备案、是否愿意备案；预算；用户主要在哪些地区。
+   - 站点本体并不重：首页脚本约 120 KB、首屏图几百 KB；真正的大文件是 3840px 的日报 PNG（单张约 8 MB，只在点下载时才加载）。
 4. 卡片没有配图；Mod / 网页 / 游戏还在用通用「碎片卡」，专属载体（Mod 补丁碎片或卡带、网页浏览器标签页、游戏光盘或卡带）未做。
 5. `docs/personal-site.md` 与 `AGENTS.md` 的目录表已按新结构更新，但 `README.md` 仍是旧描述，仅供追溯。
 6. 隐私页（`privacy/index.html`）开头写「最后更新：2026 年 10 月 17 日」。以后只要改动涉及留言或浏览器本地存储的行为，必须同步改隐私页内容和这个日期，并跑 `node scripts/test-messages.mjs`。首页现在写入三个本地键：`springhues.home.theme`、`springhues.home.introAt`、`springhues.home.introSeen`（隐私页已列出）。
@@ -399,6 +408,7 @@ $env:PORT = 4173; node scripts/serve.mjs      # 打开 http://127.0.0.1:4173 ；
 
 ## 15. 常见坑（这台机器上踩过的）
 
+- **git 连不上 GitHub（`push` / `fetch` 报 `Failed to connect to github.com:443` 或 `Connection was reset`）**：作者的电脑在 Windows 系统里开了本地代理 `127.0.0.1:7897`（可用 `Get-ItemProperty 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings'` 查看 `ProxyServer`），浏览器、PowerShell 的 `Invoke-WebRequest`、`gh` 会走它，但 **git 默认不走**，直连不稳定。解决：每条 git 联网命令临时加 `-c http.proxy=http://127.0.0.1:7897`，例如 `git -c http.proxy=http://127.0.0.1:7897 push origin main`、`git -c http.proxy=http://127.0.0.1:7897 fetch origin`。**不要用 `git config` 写入全局配置**（那会悄悄改变作者的环境）。代理端口以注册表里的实际值为准，可能变化；代理软件没开时这条也会失败，先让作者打开代理。
 - **PowerShell 工具有时会吞掉后续输出**（尤其是 `Start-Process -NoNewWindow` 启动浏览器或长任务之后）。做法：把输出重定向到文件再读取；或单独再发一条命令查看结果。
 - 不要把自定义函数命名为 `R`：它是 `Invoke-History` 的别名，会报「找不到接受自变量的位置参数」。
 - 不要用 `-F -` 加 here-string 当提交信息；用 `$msg = @'...'@; git commit -m $msg`。
