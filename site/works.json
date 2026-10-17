@@ -97,6 +97,7 @@
       ],
       "tags": ["网页", "三维", "体素", "交互"],
       "platform": "Web",
+      "model": "GPT-6 Astra MAX",
       "version": "1.0.0",
       "updatedAt": "2026-10-17",
       "isNew": true,

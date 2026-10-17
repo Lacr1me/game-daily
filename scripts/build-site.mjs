@@ -1,4 +1,4 @@
-import { cp, mkdir, readdir, rm, stat, writeFile } from "node:fs/promises";
+import { cp, mkdir, readdir, readFile, rm, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const root = process.cwd();
@@ -25,12 +25,33 @@ await cp(path.join(root, "downloads"), path.join(output, "downloads"), { recursi
 for (const dir of ["site", "vendor", "works", "assets/hero/web", "assets/fonts"]) {
   await cp(path.join(root, dir), path.join(output, dir), { recursive: true });
 }
+// 模块地址带构建版本：每次部署都换 URL，避免浏览器沿用旧脚本。
+const stamp = (process.env.GITHUB_SHA || "").slice(0, 8) || String(Date.now());
+await versionImports(path.join(output, "site"));
 // 防止把 5MB 原图或其他大文件带进 dist
 const oversize = await findOver(path.join(output, "assets"), 1024 * 1024);
 if (oversize.length) throw new Error("dist/assets 含过大文件：" + oversize.join(", "));
 await rm(path.join(output, "data", ".pending"), { recursive: true, force: true });
 await writeFile(path.join(output, ".nojekyll"), "", "utf8");
 console.log(`Built static site at ${output}`);
+
+// 给 JS 模块的相对 import 追加 ?v=<构建版本>；已带查询串的不重复追加。
+async function versionImports(dir) {
+  for (const entry of await readdir(dir, { withFileTypes: true })) {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) { await versionImports(full); continue; }
+    if (!entry.name.endsWith(".js")) continue;
+    const src = await readFile(full, "utf8");
+    const out = src
+      .replace(/(\bfrom\s*["'])(\.{1,2}\/[^"']+\.js)(["'])/g, (m, a, spec, b) => a + withStamp(spec) + b)
+      .replace(/(\bimport\s*\(\s*["'])(\.{1,2}\/[^"']+\.js)(["']\s*\))/g, (m, a, spec, b) => a + withStamp(spec) + b);
+    if (out !== src) await writeFile(full, out, "utf8");
+  }
+}
+
+function withStamp(spec) {
+  return spec.includes("?") ? spec : spec + "?v=" + stamp;
+}
 
 async function findOver(dir, limit) {
   const found = [];
