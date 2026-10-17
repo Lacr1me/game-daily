@@ -268,6 +268,13 @@ git push origin main
 - `site/js/` 下除 `main.js` 外的模块在源码里没有版本戳，**导出签名只增不改**；`build-site.mjs` 会在构建产物里给所有相对 `import` 自动追加 `?v=<提交 SHA>`，所以每次部署都会让浏览器重新下载模块，不需要手改导入。
 - `works.json` 属于数据文件，仍受 GitHub Pages 的 10 分钟缓存约束；改了作品后老访客最多等 10 分钟。
 
+### 公开前端镜像
+
+- 仓库：https://github.com/Lacr1me/springhues-site ，分支 `site`。MIT 只覆盖前端代码，内容与作品保留权利（见仓库里的 `NOTICE.md`）。
+- 同步：`node scripts/sync-public-mirror.mjs`。首次会自动 clone 到 `.mirror/springhues-site`；需要代理时用 `SYNC_PROXY=http://127.0.0.1:7897`。
+- 只同步前端、内容与构建脚本。后台 `admin/`、`supabase/`、自动化与日报脚本、内部文档、`config/daily-execution-policy.json` 都不会进入镜像。
+- 线上部署仍由本仓库负责，镜像仓库不参与部署。
+
 ---
 
 ## 7. 本地预览与验证
