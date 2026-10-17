@@ -130,6 +130,7 @@ function normalizeWork(raw, cats, slugs) {
   else if (raw.prompt) warn('丢弃提示词路径', raw.slug);
   if (isStr(raw.carrier) && SLUG.test(raw.carrier)) work.carrier = raw.carrier;
   if (isStr(raw.platform) && raw.platform) work.platform = clip(raw.platform, 16);
+  if (isStr(raw.model) && raw.model) work.model = clip(raw.model, 40);
   slugs.add(raw.slug);
   return work;
 }

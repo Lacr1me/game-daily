@@ -63,7 +63,7 @@ export async function renderBasic({ data, archive }) {
       });
       links.push(btn);
     }
-    dlg.replaceChildren(h('h2', { id: 'basicTitle' }, w.name), h('p', {}, w.intro), h('p', {}, (byId.get(w.category)?.name || '') + (w.version ? ' · ' + w.version : '')),
+    dlg.replaceChildren(h('h2', { id: 'basicTitle' }, w.name), h('p', {}, w.intro), h('p', {}, (byId.get(w.category)?.name || '') + (w.version ? ' · ' + w.version : '') + (w.model ? ' · ' + w.model : '')),
       h('div', { class: 'actions' }, ...links), h('form', { method: 'dialog' }, close));
     if (!dlg.open) dlg.showModal();
     archive && archive.applyLinks(document);

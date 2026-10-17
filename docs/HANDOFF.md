@@ -130,6 +130,7 @@ dist/                    构建产物，被 git 忽略，禁止手改
 | `layout.size` | `s` / `m` / `l`，决定卡片大小；不写则按 slug 稳定随机 |
 | `source` | 仅日报卡使用：`{type:"daily-archive", manifest, base, fallbackTitle}`，**manifest 与 base 必须成对**（`data/index.json`+`game/` 或 `data/minsheng/index.json`+`minsheng/`），不要改 |
 | `prompt` | 可选，提示词文本文件路径，只允许 `works/<slug>/<文件名>.txt`。详情面板会出现「复制提示词」按钮，正文不展示 |
+| `model` | 可选，≤40 字，制作时使用的模型名，显示在详情面板的「模型」一栏 |
 
 接入真实配图的步骤（作者以后有了风格化图再做）：
 1. 图片放进 `assets/works/`，文件名只用 ASCII（`[A-Za-z0-9._/-]`），单张 <1MB。
@@ -264,7 +265,8 @@ git push origin main
 
 - `index.html` 里样式和入口脚本带 `?v=20261018-shard-v4`，子页面和 `scripts/check-shard-style.mjs` 里的 `SHARD_VERSION` 是同一个值，**四处必须一致**（`test-site` / `check-shard-style` 会查）。
 - 想让老访客立刻拿到新样式，就统一递增这个值（`index.html`、4 个子页面、`SHARD_VERSION`）。不递增的话，GitHub Pages 的 10 分钟缓存过后自然更新，通常够用。
-- `site/js/` 下除 `main.js` 外的模块没有版本戳，**导出签名只增不改**；要做破坏性改动请改文件名。
+- `site/js/` 下除 `main.js` 外的模块在源码里没有版本戳，**导出签名只增不改**；`build-site.mjs` 会在构建产物里给所有相对 `import` 自动追加 `?v=<提交 SHA>`，所以每次部署都会让浏览器重新下载模块，不需要手改导入。
+- `works.json` 属于数据文件，仍受 GitHub Pages 的 10 分钟缓存约束；改了作品后老访客最多等 10 分钟。
 
 ---
 

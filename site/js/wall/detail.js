@@ -65,6 +65,7 @@ function buildBody(card, skipLinks) {
   const meta = [];
   meta.push(h('div', {}, h('dt', {}, '分类'), h('dd', {}, category.name)));
   if (work.platform) meta.push(h('div', {}, h('dt', {}, '平台'), h('dd', {}, work.platform)));
+  if (work.model) meta.push(h('div', {}, h('dt', {}, '模型'), h('dd', {}, work.model)));
   if (work.version) meta.push(h('div', {}, h('dt', {}, '版本'), h('dd', {}, work.version)));
   if (work.updatedAt) meta.push(h('div', {}, h('dt', {}, '更新'), h('dd', {}, h('time', { datetime: work.updatedAt }, work.updatedAt))));
   kids.push(h('dl', { class: 'meta' }, ...meta));
