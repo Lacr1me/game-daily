@@ -22,7 +22,7 @@ await cp(path.join(root, "game-brief-assets"), path.join(output, "game-brief-ass
 await cp(path.join(root, "brand-assets"), path.join(output, "brand-assets"), { recursive: true });
 await cp(path.join(root, "data"), path.join(output, "data"), { recursive: true });
 await cp(path.join(root, "downloads"), path.join(output, "downloads"), { recursive: true });
-for (const dir of ["site", "vendor", "assets/hero/web", "assets/fonts"]) {
+for (const dir of ["site", "vendor", "works", "assets/hero/web", "assets/fonts"]) {
   await cp(path.join(root, dir), path.join(output, dir), { recursive: true });
 }
 // 防止把 5MB 原图或其他大文件带进 dist

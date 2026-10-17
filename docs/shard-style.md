@@ -354,14 +354,14 @@
 
 | 分类 id | 名称 | 默认载体 | 作品数 |
 | --- | --- | --- | --- |
-| `software` | 软件工具 | `window` | 6 |
-| `web` | 网页设计 | `shard` | 2 |
-| `game` | 游戏资源 | `shard` | 4 |
+| `software` | 软件工具 | `window` | 2 |
+| `game` | 游戏资源 | `shard` | 1 |
+| `web` | 网页设计 | `browser` | 1 |
 | `daily` | 每日简报 | `page` | 2 |
 
-载体共 4 种：`phone`（手机屏）、`window`（桌面窗口）、`page`（日报纸页）、`shard`（切角碎片）。Android 作品属于 `software` 分类，但要显式写 `"carrier": "phone"` 才会用手机外形；Windows 软件用分类默认的 `window`；日报用 `page`；网页与游戏用 `shard`。载体名称未知时回退 `shard`（旧版里出现过的 `cartridge`、`tab`、`disc` 现在都回退为 `shard`，不是独立载体）。旧站的 `android / windows / mod` 分类链接由 `site/js/core/category.js` 的别名表映射到现分类。
+载体共 5 种：`phone`（手机屏）、`window`（桌面窗口）、`page`（日报纸页）、`shard`（切角碎片）、`browser`（带地址栏的浏览器窗口）。Android 作品属于 `software` 分类，但要显式写 `"carrier": "phone"` 才会用手机外形；Windows 软件用分类默认的 `window`；日报用 `page`；网页设计用 `browser`；游戏用 `shard`。载体名称未知时回退 `shard`（旧版里出现过的 `cartridge`、`tab`、`disc` 现在都回退为 `shard`，不是独立载体）。旧站的 `android / windows / mod` 分类链接由 `site/js/core/category.js` 的别名表映射到现分类。
 
-**新增作品**：在 `works` 数组追加一项。必填 `slug`（小写字母数字加连字符）、`category`、`name`、`intro`、`links`；常用可选 `platform`（≤16 字）、`carrier`、`tags`、`version`、`updatedAt`、`isNew`、`cover`、`shots`、`layout.size`（`s/m/l`）。链接只允许站内相对路径或 HTTPS，且不得指向 `admin/`；暂时没有的链接写 `"#"`。示例：
+**新增作品**：在 `works` 数组追加一项。必填 `slug`（小写字母数字加连字符）、`category`、`name`、`intro`、`links`；常用可选 `platform`（≤16 字）、`carrier`、`tags`、`version`、`updatedAt`、`isNew`、`cover`、`shots`、`layout.size`（`s/m/l`）、`prompt`（`works/<slug>/xxx.txt`，详情面板显示「复制提示词」按钮）。链接只允许站内相对路径或 HTTPS，且不得指向 `admin/`；暂时没有的链接写 `"#"`。示例：
 
 ```json
 {

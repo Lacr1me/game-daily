@@ -6,6 +6,7 @@ import { getTier } from '../core/tier.js';
 import { canAnimateRects, playRectMorph, rectOf } from '../core/flip.js';
 import { openLayer } from '../core/focus.js';
 import { parseHash } from '../core/url.js';
+import { copyText } from '../core/copy.js';
 import { toast } from '../ui/toast.js';
 
 let cards = [];
@@ -20,12 +21,37 @@ function cleanHash(prevCat) {
   history.replaceState(null, '', url);
 }
 
+async function copyPrompt(path, btn) {
+  const label = btn.textContent;
+  btn.disabled = true;
+  try {
+    const res = await fetch(path, { cache: 'no-store' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    await copyText(await res.text());
+    toast('提示词已复制');
+    btn.textContent = '已复制';
+    setTimeout(() => { btn.textContent = label; }, 1600);
+  } catch (e) {
+    console.error('[detail] 复制提示词失败', e);
+    toast('复制失败，请稍后再试');
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+function promptEl(work) {
+  const btn = h('button', { type: 'button', class: 'copy-prompt', 'data-cursor': 'copy' }, '复制提示词');
+  btn.addEventListener('click', () => copyPrompt(work.prompt, btn));
+  return btn;
+}
+
 function linkEl(link, work) {
+  const cursor = link.kind === 'download' ? 'download' : 'open';
   if (link.href === '#') {
-    return h('a', { href: '#', 'aria-disabled': 'true', 'data-kind': link.kind, 'data-placeholder': '' }, link.label);
+    return h('a', { href: '#', 'aria-disabled': 'true', 'data-kind': link.kind, 'data-cursor': cursor, 'data-placeholder': '' }, link.label);
   }
   const external = /^https:/i.test(link.href);
-  return h('a', { href: link.href, 'data-kind': link.kind, target: external ? '_blank' : null, rel: external ? 'noopener noreferrer' : null }, link.label);
+  return h('a', { href: link.href, 'data-kind': link.kind, 'data-cursor': cursor, target: external ? '_blank' : null, rel: external ? 'noopener noreferrer' : null }, link.label);
 }
 
 function buildBody(card, skipLinks) {
@@ -49,13 +75,18 @@ function buildBody(card, skipLinks) {
     kids.push(h('div', { class: 'shots', 'aria-label': '截图' }, ...work.shots.map(s => h('figure', { style: '--r:' + s.ratio },
       s.src ? h('img', { src: s.src, alt: s.label, loading: 'lazy' }) : h('span', {}, s.label)))));
   }
-  if (!skipLinks && work.links.length) {
+  if (!skipLinks) {
     const acts = [];
-    if (work.source) acts.push(h('a', { href: work.source.base, 'data-latest': work.source.base === 'minsheng/' ? 'minsheng' : 'game' }, '阅读最新一期'));
-    work.links.forEach(l => acts.push(linkEl(l, work)));
-    kids.push(h('div', { class: 'actions' }, ...acts));
-  } else if (!skipLinks && !work.links.length && !work.source) {
-    kids.push(h('p', { class: 'soon' }, '下载即将开放'));
+    if (work.source) acts.push(h('a', { href: work.source.base, 'data-latest': work.source.base === 'minsheng/' ? 'minsheng' : 'game', 'data-cursor': 'open' }, '阅读最新一期'));
+    // 带提示词的作品：主操作（打开）用红刃，复制用主蓝，与其它详情页的主次关系一致。
+    const primary = !!work.prompt;
+    work.links.forEach((l, i) => {
+      const a = linkEl(l, work);
+      if (primary && i === 0) a.classList.add('is-primary');
+      acts.push(a);
+    });
+    if (work.prompt) acts.push(promptEl(work));
+    kids.push(acts.length ? h('div', { class: 'actions' }, ...acts) : h('p', { class: 'soon' }, '下载即将开放'));
   }
   return { nodes: kids, title };
 }

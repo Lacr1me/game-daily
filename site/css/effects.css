@@ -11,10 +11,11 @@
 /* 自定义光标：仅 full 档 + 精细指针。创建失败时不会加 html.has-cursor，原生光标保留。 */
 .cursor { position: fixed; z-index: 999; left: 0; top: 0; width: 0; height: 0; pointer-events: none; display: none; }
 html.has-cursor .cursor { display: block; }
+.cursor.is-native { display: none !important; }
 html.has-cursor, html.has-cursor a, html.has-cursor button { cursor: none; }
 html.has-cursor input, html.has-cursor textarea, html.has-cursor [contenteditable] { cursor: text; }
 html.native-cursor, html.native-cursor a, html.native-cursor button { cursor: auto; }
-.cursor i { position: absolute; display: block; left: -9px; top: -9px; width: 18px; height: 18px; will-change: transform; }
+.cursor i { position: absolute; display: block; left: -9px; top: -9px; width: 18px; height: 18px; will-change: transform; transition: transform .18s var(--ease-out); }
 .cursor .c-blue { background: var(--sh-klein-500); clip-path: polygon(0 0, 100% 30%, 40% 100%); box-shadow: none; }
 .cursor .c-white { background: var(--sh-white); clip-path: polygon(8% 0, 100% 36%, 42% 100%); transform: translate(2px, 2px) scale(1.28); z-index: -1; }
 .cursor .c-red { background: var(--sh-burgundy); clip-path: polygon(0 0, 46% 20%, 14% 52%); transform: translate(-3px, -3px); }

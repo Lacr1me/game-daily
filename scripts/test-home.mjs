@@ -51,8 +51,8 @@ await check('works.json 通过校验且无丢弃', async () => {
   assert.ok(parsed.works.length >= 3, '至少有已填入的真实作品与两条日报');
   assert.equal(parsed.categories.length, 4);
   const carriers = Object.fromEntries(parsed.categories.map(c => [c.id, c.carrier]));
-  assert.deepEqual(carriers, { software: 'window', web: 'shard', game: 'shard', daily: 'page' });
-  assert.deepEqual(parsed.categories.map(c => c.id), ['software', 'web', 'game', 'daily']);
+  assert.deepEqual(carriers, { software: 'window', web: 'browser', game: 'shard', daily: 'page' });
+  assert.deepEqual(parsed.categories.map(c => c.id), ['software', 'game', 'web', 'daily']);
   const counts = {};
   parsed.works.forEach(x => { counts[x.category] = (counts[x.category] || 0) + 1; });
   assert.equal(counts.daily, 2, '日报分类固定两条频道卡');
@@ -61,15 +61,16 @@ await check('works.json 通过校验且无丢弃', async () => {
   assert.ok(parsed.works.every(x => x.platform === undefined || (typeof x.platform === 'string' && x.platform.length > 0 && x.platform.length <= 16)));
   const byCat = new Map(parsed.categories.map(c => [c.id, c]));
   const typeOf = x => carrierFor(x, byCat.get(x.category)).type;
-  assert.deepEqual([...new Set(parsed.works.map(typeOf))].sort(), ['page', 'phone', 'shard', 'window'], '四种载体都应出现');
+  assert.deepEqual([...new Set(parsed.works.map(typeOf))].sort(), ['browser', 'page', 'phone', 'shard', 'window'], '五种载体都应出现');
   // 载体：日报固定 page；作品显式写了 carrier 就按它；其余走分类默认
   for (const x of parsed.works) {
     if (x.slug.startsWith('daily-')) assert.equal(typeOf(x), 'page', x.slug);
     else if (x.carrier) assert.equal(typeOf(x), x.carrier, x.slug);
   }
-  // 链接：站内只允许两个日报频道入口，其余必须是 https（下载地址未就绪时 links 为空）
+  // 链接：站内只允许两个日报频道入口和 works/<slug>/ 作品目录，其余必须是 https（下载地址未就绪时 links 为空）
   const hrefs = parsed.works.flatMap(x => x.links).map(l => l.href).filter(h => h !== '#');
-  assert.ok(hrefs.every(h => h === 'game/' || h === 'minsheng/' || h.startsWith('https://')), '真实链接只能是日报入口或 https：' + hrefs.join(','));
+  const siteLocal = h => h === 'game/' || h === 'minsheng/' || /^works\/[a-z0-9-]+\/$/.test(h);
+  assert.ok(hrefs.every(h => siteLocal(h) || h.startsWith('https://')), '真实链接只能是站内作品入口或 https：' + hrefs.join(','));
   assert.ok(hrefs.includes('game/') && hrefs.includes('minsheng/'), '日报两条入口都在');
   // 图片：cover / shots 引用的文件必须真实存在，且在 assets/works 下
   for (const x of parsed.works) {
@@ -146,7 +147,7 @@ await check('shouldDegrade', () => {
 });
 
 await check('fitShape：整数、<=G、>=minCols；phone 在窄网格宽高比 >=0.4', () => {
-  const carriers = ['phone', 'window', 'page', 'shard'].map(getCarrier);
+  const carriers = ['phone', 'window', 'page', 'shard', 'browser'].map(getCarrier);
   for (const c of carriers) for (const size of ['s', 'm', 'l']) for (const G of [12, 8, 6]) {
     const [cc, rr] = c.shapes[size];
     const { cols, rows } = fitShape([cc, rr], G, c.minCols);
@@ -279,7 +280,7 @@ await check('载体结构（假 h）：.card-hit 无嵌套交互元素', async (
     }
     if (carrier.type === 'page') assert.equal(find(root, n => cls(n, 'card-link')).length, 2, '日报卡两个 .card-link');
   }
-  assert.deepEqual([...seen].sort(), ['page', 'phone', 'shard', 'window']);
+  assert.deepEqual([...seen].sort(), ['browser', 'page', 'phone', 'shard', 'window']);
   const stub = { type: 'cartridge', shapes: { s: [3, 3], m: [3, 3], l: [3, 3] }, create() {} };
   assert.equal(getCarrier('cartridge').type, 'shard', '未注册时回退 shard');
   registerCarrier('cartridge', stub);

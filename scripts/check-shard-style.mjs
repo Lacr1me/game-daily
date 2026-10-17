@@ -36,7 +36,7 @@ export const EXEMPT_SHARD_REF = ['index.html'];
 export const FROZEN_LEGACY = ['brand.css', 'styles.css', 'portal.css', 'home.css', 'site-shell.js', 'minsheng/', 'admin/'];
 // 由脚本写入的变量（element.style.setProperty / 内联 style），CSS 里只读不定义。
 export const JS_VARS = ['--cols', '--rows', '--tilt', '--dx', '--dy', '--press', '--p', '--r', '--ar', '--k', '--ki', '--shape', '--shape-in', '--face-bg', '--face-fg', '--edge-c', '--glare-x', '--glare-y', '--tilt-x', '--tilt-y', '--py', '--G', '--accent', '--shot-ratio'];
-const SKIP_DIRS = new Set(['admin', 'dist', '.agents', '.worktrees', '.git', 'node_modules', 'output', 'offline-homepage-editor', 'downloads', 'data', 'artifacts', 'vendor', 'assets', 'brand-assets', 'game-brief-assets', 'daily-brief-template-package', '.codex', '.tools', '.github', 'docs', 'supabase', 'scripts']);
+const SKIP_DIRS = new Set(['admin', 'works', 'dist', '.agents', '.worktrees', '.git', 'node_modules', 'output', 'offline-homepage-editor', 'downloads', 'data', 'artifacts', 'vendor', 'assets', 'brand-assets', 'game-brief-assets', 'daily-brief-template-package', '.codex', '.tools', '.github', 'docs', 'supabase', 'scripts']);
 
 // ---------------------------------------------------------------- CSS 解析（够用的小解析器）
 export function stripComments(css) { return css.replace(/\/\*[\s\S]*?\*\//g, ''); }

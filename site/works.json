@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "categories": [
     { "id": "software", "name": "软件工具", "en": "SOFTWARE", "carrier": "window", "accent": { "surface": "klein-700", "blade": ["tag", "outline", "sweep", "button"] }, "parallax": 1, "order": 10 },
-    { "id": "web", "name": "网页设计", "en": "WEB", "carrier": "shard", "accent": { "surface": "klein-500", "blade": ["tag", "outline", "sweep"] }, "parallax": 0.9, "order": 20 },
     { "id": "game", "name": "游戏资源", "en": "GAME", "carrier": "shard", "accent": { "surface": "klein-900", "blade": ["tag", "outline", "sweep"] }, "parallax": 1.25, "order": 30 },
+    { "id": "web", "name": "网页设计", "en": "WEB", "carrier": "browser", "accent": { "surface": "klein-900", "blade": ["tag", "outline", "sweep"] }, "parallax": 0.9, "order": 35 },
     { "id": "daily", "name": "每日简报", "en": "DAILY", "carrier": "page", "accent": { "surface": "white", "blade": ["tag", "outline", "sweep", "button"] }, "parallax": 1, "order": 40 }
   ],
   "works": [
@@ -82,6 +82,29 @@
         { "kind": "visit", "label": "发布页与校验值", "href": "https://github.com/Lacr1me/springhues-games/releases/tag/n1ten-v1.5.2" }
       ],
       "cover": { "kind": "placeholder", "label": "N1TEN" },
+      "shots": [],
+      "layout": { "size": "l" },
+      "source": null
+    },
+    {
+      "slug": "asterion",
+      "category": "web",
+      "name": "ASTERION · 阿斯忒里昂星港",
+      "intro": "纯体素构建的轨道工业巨构，可旋转、缩放并逐模块查看的三维观测网页。",
+      "details": [
+        { "h": "", "p": "一个真实三维、纯体素的轨道工业巨构观测网页。全部建筑、舰船、发光实体和星光由轴对齐盒体批量绘制，离线打开即可运行。" },
+        { "h": "操作", "p": "左键拖动旋转，滚轮缩放，右键拖动平移；点击三维实体或使用模块下拉框聚焦。数字键 1–5 切换总览、主核、泊位、舰队和下层镜头，空格开始巡航。" }
+      ],
+      "tags": ["网页", "三维", "体素", "交互"],
+      "platform": "Web",
+      "version": "1.0.0",
+      "updatedAt": "2026-10-17",
+      "isNew": true,
+      "links": [
+        { "kind": "visit", "label": "打开作品", "href": "works/asterion/" }
+      ],
+      "prompt": "works/asterion/prompt.txt",
+      "cover": { "kind": "placeholder", "label": "ASTERION" },
       "shots": [],
       "layout": { "size": "l" },
       "source": null

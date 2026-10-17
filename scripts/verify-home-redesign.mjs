@@ -463,8 +463,8 @@ async function wall(browser) {
     let st = await go(await openPage(browser));
     await st.page.waitForSelector('#worksWall .slot');
     const chips = await st.page.evaluate(() => [...document.querySelectorAll('#filters button')].map(b => ({ cat: b.dataset.cat, label: b.firstChild.textContent.trim(), n: +(b.querySelector('small').textContent.match(/\d+/) || [-1])[0], text: b.textContent })));
-    eq(chips.map(c => c.cat), ['all', 'software', 'web', 'game', 'daily']);
-    eq(chips.map(c => c.label), ['全部资源', '软件工具', '网页设计', '游戏资源', '每日简报']);
+    eq(chips.map(c => c.cat), ['all', 'software', 'game', 'web', 'daily']);
+    eq(chips.map(c => c.label), ['全部资源', '软件工具', '游戏资源', '网页设计', '每日简报']);
     eq(chips.map(c => c.n), [14, 6, 2, 4, 2]);
     const filtersText = await st.page.evaluate(() => document.getElementById('filters').textContent);
     ok(!/安卓软件|Windows 软件|模组/.test(filtersText), '筛选条不应再出现旧分类文案：' + filtersText);

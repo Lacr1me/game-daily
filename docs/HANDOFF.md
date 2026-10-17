@@ -87,7 +87,7 @@ dist/                    构建产物，被 git 忽略，禁止手改
 |---|---|
 | 新增 / 修改一个作品 | 改 `site/works.json` 的 `works`，见第 4 节；跑第 6 节的测试 |
 | 发布软件新版本 | 第 5 节：传 Release → 改 `works.json` 里的版本、日期、链接 |
-| 新增一个分类 | 在 `categories` 里加一项（`id` 用小写字母加连字符，设 `carrier` / `accent` / `parallax` / `order`）；有作品使用它时筛选标签自动出现，没有作品会自动隐藏 |
+| 新增一个分类 | 在 `categories` 里加一项（`id` 用小写字母加连字符，设 `carrier` / `accent` / `parallax` / `order`）；筛选标签始终显示，没有作品时计数为 `00` 并显示空栏位提示 |
 | 给卡片配图 | 目前**故意没有放图**（作者要等做出风格化的图再放）。接入方法见第 4 节末尾 |
 | 做新的卡片外形（载体） | 在 `site/js/carriers/` 新增模块，在 `carriers/index.js` 注册，作品用 `"carrier": "名字"`；参考 `phone.js` / `shard.js`。详见 `docs/shard-style.md` 第 10 节 |
 | 改首页 / 关于区文案 | 直接改 `index.html` 对应段落（作品区导语、关于三段、页脚） |
@@ -107,8 +107,8 @@ dist/                    构建产物，被 git 忽略，禁止手改
 | id | 名称 | 默认载体 |
 |---|---|---|
 | `software` | 软件工具 | window |
-| `web` | 网页设计 | shard |
 | `game` | 游戏资源 | shard |
+| `web` | 网页设计 | browser |
 | `daily` | 每日简报 | page |
 
 作品字段：
@@ -124,11 +124,12 @@ dist/                    构建产物，被 git 忽略，禁止手改
 | `platform` | 可选，≤16 字（如 `Windows`、`Android`、`Forge 1.20.1`） |
 | `version` / `updatedAt` | 版本号字符串 / `YYYY-MM-DD` 真实日期 |
 | `isNew` | `true` 时卡片出现红色 NEW 角标（红色只当「刃」，别滥用） |
-| `carrier` | 可选，`phone` / `window` / `page` / `shard`；缺省取分类默认。**同一分类里不同作品可以用不同载体**（软件工具里安卓用 phone、Windows 用 window） |
+| `carrier` | 可选，`phone` / `window` / `page` / `shard` / `browser`；缺省取分类默认。**同一分类里不同作品可以用不同载体**（软件工具里安卓用 phone、Windows 用 window） |
 | `links` | ≤6 条，每条 `{ "kind": "download"|"visit"|"source"|"channel", "label": ≤24 字, "href": ... }`。**href 只允许** `#`、站内相对路径、`https://…`；`javascript:`、`data:`、`http:`、含账号密码的地址、指向 `admin` 的地址一律被拒。`links` 为空时详情页显示「下载即将开放」 |
 | `cover` / `shots` | 见下 |
 | `layout.size` | `s` / `m` / `l`，决定卡片大小；不写则按 slug 稳定随机 |
 | `source` | 仅日报卡使用：`{type:"daily-archive", manifest, base, fallbackTitle}`，**manifest 与 base 必须成对**（`data/index.json`+`game/` 或 `data/minsheng/index.json`+`minsheng/`），不要改 |
+| `prompt` | 可选，提示词文本文件路径，只允许 `works/<slug>/<文件名>.txt`。详情面板会出现「复制提示词」按钮，正文不展示 |
 
 接入真实配图的步骤（作者以后有了风格化图再做）：
 1. 图片放进 `assets/works/`，文件名只用 ASCII（`[A-Za-z0-9._/-]`），单张 <1MB。
@@ -364,7 +365,7 @@ $env:PORT = 4173; node scripts/serve.mjs      # 打开 http://127.0.0.1:4173 ；
    - 这条路径要验证的风险：GitHub Pages 作为源站时要带正确的 Host 头；主域名不再直接指向 GitHub 后，GitHub 自动续期 HTTPS 证书是否受影响（先在测试子域名上观察）；EdgeOne 缓存让新版延迟生效，HTML 要设短缓存或在部署后刷新。
    - 备选：Vercel + 自有域名（国内通常可用，但平台默认域名常被墙，访问质量会波动，免费档有限制）；以后改主意愿意备案，则走大陆对象存储 + CDN，是最稳的。
    - 站点本体并不重：首页脚本约 120 KB、首屏图几百 KB；真正的大文件是 3840px 的日报 PNG（单张约 8 MB，只在点下载时才加载）。
-4. 卡片没有配图；Mod / 网页 / 游戏还在用通用「碎片卡」，专属载体（Mod 补丁碎片或卡带、网页浏览器标签页、游戏光盘或卡带）未做。
+4. 卡片没有配图；网页设计已有专属「浏览器」载体（`site/js/carriers/browser.js`），Mod / 游戏仍在用通用「碎片卡」，专属载体（Mod 补丁碎片或卡带、游戏光盘或卡带）未做。
 5. `docs/personal-site.md` 与 `AGENTS.md` 的目录表已按新结构更新，但 `README.md` 仍是旧描述，仅供追溯。
 6. 隐私页（`privacy/index.html`）开头写「最后更新：2026 年 10 月 17 日」。以后只要改动涉及留言或浏览器本地存储的行为，必须同步改隐私页内容和这个日期，并跑 `node scripts/test-messages.mjs`。首页现在写入三个本地键：`springhues.home.theme`、`springhues.home.introAt`、`springhues.home.introSeen`（隐私页已列出）。
 7. 首页文案（作品区导语、关于区三段、页脚）是 AI 按作者的作品介绍代写的。第二段「目前的软件都以本地处理为先……」是依据两个软件的介绍概括的，作者尚未逐字确认。
