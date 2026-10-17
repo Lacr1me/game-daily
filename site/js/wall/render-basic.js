@@ -2,12 +2,14 @@
 // 载体模块也失败时，渲染最朴素的链接列表。预算 ≤ 5KB gzip。
 import { app } from '../core/app.js';
 import { h } from '../core/dom.js';
+import { copyText } from '../core/copy.js';
 import { toast } from '../ui/toast.js';
 
 function linkNode(l) {
-  if (l.href === '#') return h('a', { href: '#', 'data-placeholder': '' }, l.label);
+  const cursor = l.kind === 'download' ? 'download' : 'open';
+  if (l.href === '#') return h('a', { href: '#', 'data-cursor': cursor, 'data-placeholder': '' }, l.label);
   const ext = /^https:/i.test(l.href);
-  return h('a', { href: l.href, target: ext ? '_blank' : null, rel: ext ? 'noopener noreferrer' : null }, l.label);
+  return h('a', { href: l.href, 'data-cursor': cursor, target: ext ? '_blank' : null, rel: ext ? 'noopener noreferrer' : null }, l.label);
 }
 
 export async function renderBasic({ data, archive }) {
@@ -42,6 +44,25 @@ export async function renderBasic({ data, archive }) {
     if (!w) { toast('没有找到这个作品'); return; }
     const links = w.links.map(linkNode);
     if (w.source) links.unshift(h('a', { href: w.source.base, 'data-latest': w.source.base === 'minsheng/' ? 'minsheng' : 'game' }, '阅读最新一期'));
+    if (w.prompt && links.length) links[0].classList.add('is-primary');
+    if (w.prompt) {
+      const btn = h('button', { type: 'button', class: 'copy-prompt', 'data-cursor': 'copy' }, '复制提示词');
+      btn.addEventListener('click', async () => {
+        btn.disabled = true;
+        try {
+          const res = await fetch(w.prompt, { cache: 'no-store' });
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          await copyText(await res.text());
+          toast('提示词已复制');
+        } catch (e) {
+          console.error('[render-basic] 复制提示词失败', e);
+          toast('复制失败，请稍后再试');
+        } finally {
+          btn.disabled = false;
+        }
+      });
+      links.push(btn);
+    }
     dlg.replaceChildren(h('h2', { id: 'basicTitle' }, w.name), h('p', {}, w.intro), h('p', {}, (byId.get(w.category)?.name || '') + (w.version ? ' · ' + w.version : '')),
       h('div', { class: 'actions' }, ...links), h('form', { method: 'dialog' }, close));
     if (!dlg.open) dlg.showModal();
@@ -56,13 +77,20 @@ export async function renderBasic({ data, archive }) {
   });
   if (cards) {
     const chips = document.getElementById('filters');
-    const cats = [{ id: 'all', name: '全部资源' }, ...data.categories.filter(c => data.works.some(w => w.category === c.id))];
+    const cats = [{ id: 'all', name: '全部资源' }, ...data.categories];
+    const empty = h('li', { class: 'wall-empty', hidden: true }, '这个分类还没有作品，之后会补上。');
+    wallEl.append(empty);
+    const syncEmpty = id => {
+      const has = id === 'all' ? cards.length > 0 : data.works.some(w => w.category === id);
+      empty.hidden = has;
+    };
     chips.replaceChildren(...cats.map(c => {
       const b = h('button', { type: 'button', 'aria-pressed': String(c.id === 'all') }, c.name);
       b.addEventListener('click', () => {
         app.category = c.id;
         chips.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
         cards.forEach(card => { card.root.hidden = !(c.id === 'all' || card.work.category === c.id); });
+        syncEmpty(c.id);
       });
       return b;
     }));

@@ -1,5 +1,5 @@
-// 通用碎片卡：切角多边形 + 半色调点阵 + 大号编号 + 胶带分类标签。未注册载体的兜底。
-import { shell, pad2 } from './common.js';
+// 通用碎片卡：切角多边形 + 半色调点阵 + 胶带分类标签。未注册载体的兜底。
+import { shell } from './common.js';
 
 export default {
   type: 'shard',
@@ -8,7 +8,6 @@ export default {
     const { h } = ctx;
     return shell(h, 'shard', work, category, ctx, [
       h('i', { class: 'dots', 'aria-hidden': 'true' }),
-      h('span', { class: 'sd-no', 'aria-hidden': 'true' }, pad2(ctx.index || 0)),
       h('span', { class: 'sd-cat', 'aria-hidden': 'true' }, category.en + (work.platform && work.platform.toUpperCase() !== category.en ? ' · ' + work.platform.toUpperCase() : '')),
       h('div', { class: 'sd-meta' },
         h('h3', {}, work.name),

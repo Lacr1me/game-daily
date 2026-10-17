@@ -10,6 +10,8 @@ const BLADES = ['tag', 'outline', 'sweep', 'button'];
 const KINDS = ['download', 'visit', 'source', 'channel'];
 const SIZES = ['s', 'm', 'l'];
 const SOURCES = [['data/index.json', 'game/'], ['data/minsheng/index.json', 'minsheng/']];
+// 提示词只允许放在作品自己的目录里，避免读到任意本地文件。
+const PROMPT_SRC = /^works\/[a-z0-9-]+\/[A-Za-z0-9._-]+\.txt$/;
 const warn = (...args) => { try { console.warn('[works]', ...args); } catch { /* 无控制台时忽略 */ } };
 
 const isStr = v => typeof v === 'string';
@@ -124,6 +126,8 @@ function normalizeWork(raw, cats, slugs) {
   };
   if (isStr(raw.version)) work.version = clip(raw.version, 40);
   if (isRealDate(raw.updatedAt)) work.updatedAt = raw.updatedAt;
+  if (isStr(raw.prompt) && PROMPT_SRC.test(raw.prompt)) work.prompt = raw.prompt;
+  else if (raw.prompt) warn('丢弃提示词路径', raw.slug);
   if (isStr(raw.carrier) && SLUG.test(raw.carrier)) work.carrier = raw.carrier;
   if (isStr(raw.platform) && raw.platform) work.platform = clip(raw.platform, 16);
   slugs.add(raw.slug);

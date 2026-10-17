@@ -11,6 +11,7 @@ let chips = new Map();
 let wallEl = null;
 let filtersBar = null;
 let morph = null;
+let emptyEl = null;
 
 function syncHash(id) {
   const base = location.pathname + location.search;
@@ -31,6 +32,12 @@ function paintChips(id) {
   for (const [key, btn] of chips) btn.setAttribute('aria-pressed', String(key === id));
   revealChip(chips.get(id));
 }
+// 已登记但暂时没有作品的分类：显示空栏位提示，而不是整面墙塌成空白。
+function syncEmpty(id) {
+  if (!emptyEl) return;
+  const has = id === 'all' ? cards.length > 0 : cards.some(c => c.work.category === id);
+  emptyEl.hidden = has;
+}
 
 export async function setCategory(raw, { silent = false, immediate = false } = {}) {
   const id = resolveCategory(raw, app.byCategory);
@@ -40,6 +47,7 @@ export async function setCategory(raw, { silent = false, immediate = false } = {
   const changed = id !== app.category;
   app.category = id;
   paintChips(id);
+  syncEmpty(id);
   if (!silent || rewritten) syncHash(id);
   if (!changed) return;
   const visible = card => id === 'all' || card.work.category === id;
@@ -63,6 +71,9 @@ export function initFilters({ cardList, categories, filtersEl, wall }) {
     return b;
   };
   filtersEl.replaceChildren(make('all', '全部资源', 'ALL', cards.length),
-    ...categories.filter(c => counts.has(c.id)).map(c => make(c.id, c.name, c.en, counts.get(c.id))));
+    ...categories.map(c => make(c.id, c.name, c.en, counts.get(c.id) || 0)));
+  emptyEl = h('li', { class: 'wall-empty', hidden: true }, '这个分类还没有作品，之后会补上。');
+  wallEl.append(emptyEl);
+  syncEmpty(app.category);
   app.setCategory = setCategory;
 }

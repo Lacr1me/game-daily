@@ -62,6 +62,8 @@
   position: relative; grid-column: span var(--cols, 4); grid-row: span var(--rows, 4); perspective: 900px;
   filter: drop-shadow(7px 9px 0 rgba(13, 24, 80, .32));
 }
+/* 卡片在格子里留 6px 内边距：倾斜后卡角不会压到相邻卡片。 */
+.slot > .face { inset: 6px; }
 /* 视差：wall/parallax.js 按滚动写 --py；位移走 transform，FLIP 用独立的 translate / scale 属性叠加，互不覆盖。 */
 html.has-parallax .slot { transform: translate3d(0, var(--py, 0px), 0); will-change: transform; }
 :root[data-theme="night"] .slot { filter: drop-shadow(7px 9px 0 rgba(0, 0, 0, .38)); }
@@ -70,6 +72,17 @@ html.has-parallax .slot { transform: translate3d(0, var(--py, 0px), 0); will-cha
 .slot.is-leaving { position: absolute; margin: 0; transform: none; transform-origin: 50% 50%; z-index: 2; pointer-events: none; }
 html.has-parallax .slot.is-leaving { transform: none; }
 .slot.is-entering { transform-origin: 50% 50%; }
+/* 空分类占位：切角蓝色块，和卡片的切角语言一致。 */
+.wall-empty {
+  grid-column: 1 / -1; grid-row: span 2; display: grid; place-items: center start;
+  justify-self: start; width: min(560px, 100%); margin: 0;
+  padding: clamp(18px, 2.4vw, 30px) clamp(20px, 3vw, 44px);
+  font-weight: 800; letter-spacing: .08em; color: var(--sh-klein-500); background: var(--sh-white);
+  clip-path: polygon(18px 0, 100% 0, calc(100% - 18px) 100%, 0 100%);
+  box-shadow: inset 0 0 0 4px var(--sh-klein-500), inset 0 -8px 0 var(--sh-burgundy);
+}
+:root[data-theme="night"] .wall-empty { color: var(--sh-white); background: var(--sh-klein-900); box-shadow: inset 0 0 0 2px rgba(244, 246, 255, .6), inset 0 -6px 0 var(--sh-burgundy); }
+.wall-empty[hidden] { display: none !important; }
 .static-links { display: flex; flex-wrap: wrap; gap: 12px; padding: 0 clamp(14px, 4vw, 64px); margin-top: 40px; }
 .static-links a {
   display: inline-flex; align-items: center; min-height: 48px; padding: 0 28px; font-weight: 800; letter-spacing: .1em; text-decoration: none; background: var(--sh-klein-500); color: var(--sh-white);
