@@ -64,7 +64,7 @@ export function createArchive({ fetchImpl, now = () => Date.now(), data, timeout
     return results;
   }
 
-  // 日报总期数：两个索引各自已发布期数之和；任一失败返回 null（页面显示“—”）
+  // 近期简报数：两个索引（各只保留最近 7 期）当前已发布期数之和，不是历史累计；任一失败返回 null（页面显示“—”）
   async function totalEditions() {
     const rs = await Promise.all(Object.values(CHANNELS).map(ch => readManifest(ch.manifest)));
     return rs.every(r => r.ok) ? rs.reduce((n, r) => n + r.editions.length, 0) : null;

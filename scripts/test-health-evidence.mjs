@@ -1,8 +1,11 @@
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
+import { mkdtemp, readFile } from 'node:fs/promises';
+import os from 'node:os';
 import path from 'node:path';
 import { runDailyHealth } from './check-daily-health.mjs';
-const root = process.cwd();
+import { materializeArchiveSeed } from './state-evidence-fixtures.mjs';
+// 归档只保留最近 7 期：用固定夹具期次（含 2026-09-10）作为被检查的站点根目录。
+const root = await materializeArchiveSeed(await mkdtemp(path.join(os.tmpdir(), 'health-evidence-')));
 const date = '2026-09-10';
 const checkedAt = '2026-09-11T01:00:00.000Z';
 const targetCommit = 'a'.repeat(40);

@@ -1,11 +1,13 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
+import path from 'node:path';
 import { validateMinsheng } from './minsheng-lib.mjs';
+import { archiveSeedRoot } from './state-evidence-fixtures.mjs';
 import { assertMinshengPublishCandidate } from './archive-consistency.mjs';
 
-const brief = JSON.parse(await readFile(new URL('../data/minsheng/2026-09-25.json', import.meta.url), 'utf8'));
+const brief = JSON.parse(await readFile(path.join(archiveSeedRoot, 'data/minsheng/2026-09-25.json'), 'utf8'));
 const original = structuredClone(brief);
-const legacy = JSON.parse(await readFile(new URL('../data/minsheng/2026-08-23.json', import.meta.url), 'utf8'));
+const legacy = JSON.parse(await readFile(path.join(archiveSeedRoot, 'data/minsheng/2026-08-23.json'), 'utf8'));
 validateMinsheng(legacy);
 const now = new Date();
 const fields = Object.fromEntries(new Intl.DateTimeFormat('en-CA', {

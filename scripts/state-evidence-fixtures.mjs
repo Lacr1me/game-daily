@@ -1,12 +1,28 @@
 // Synthetic, isolated evidence only. Never use these records as production verification.
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { cp, mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import * as ops from './daily-operations.mjs';
 import { channelSections, requiredSourceIds, requiredSourceLabels } from './source-registry.mjs';
 export const hash = buffer => createHash('sha256').update(buffer).digest('hex');
 export const fixtureDate = '2026-09-10';
 export const fixtureNow = new Date(fixtureDate + 'T11:01:00+08:00');
+// 归档只保留最近 7 期，测试所需的历史期次改读这份固定夹具（真实期次的副本），不再依赖 data/ 里的旧文件。
+export const archiveSeedRoot = fileURLToPath(new URL('./fixtures/archive-seed/', import.meta.url));
+// 把夹具复制到 base/seed，并为每个索引期次补一个仅含 PNG 头的假文件（宽 3840），供健康检查类测试当作站点根目录。
+export async function materializeArchiveSeed(base) {
+  const root = path.join(base, 'seed');
+  await cp(archiveSeedRoot, root, { recursive: true });
+  const png = Buffer.alloc(25); Buffer.from([137,80,78,71,13,10,26,10]).copy(png); png.writeUInt32BE(3840,16);
+  for (const [channel, index] of [['game','data/index.json'],['minsheng','data/minsheng/index.json']]) {
+    for (const edition of JSON.parse(await readFile(path.join(root, index), 'utf8')).editions) {
+      await mkdir(path.join(root,'downloads',channel), { recursive: true });
+      await writeFile(path.join(root,'downloads',channel,edition.date+'.png'), png);
+    }
+  }
+  return root;
+}
 export async function writeJson(file, data) { await mkdir(path.dirname(file), { recursive: true }); await writeFile(file, JSON.stringify(data,null,2)+'\n'); }
 export function evidenceFor(id, date, item = {}) {
   return { id, decision: 'accepted', url: item.url || 'https://example.test/source/' + encodeURIComponent(id), checkedAt: date+'T07:00:00+08:00', basis: 'synthetic isolated fixture; not source verification', facts: { fixture: true, ...item } };
@@ -14,7 +30,7 @@ export function evidenceFor(id, date, item = {}) {
 export async function makeReadyFixture(base, channel = 'minsheng', projectRoot = process.cwd(), options = {}) {
   const root = options.root || path.join(base, channel);
   const date = fixtureDate, now = fixtureNow, runId = 'fixture';
-  const brief = JSON.parse(await readFile(ops.archiveContentPath(projectRoot,date,channel),'utf8'));
+  const brief = JSON.parse(await readFile(ops.archiveContentPath(archiveSeedRoot,date,channel),'utf8')); // projectRoot 仅为兼容旧调用保留
   brief.issue = 1;
   const candidate = path.join(root,'data','.pending',...(channel === 'minsheng' ? ['minsheng'] : []),date+'.json');
   const paths = ops.operationPaths(root,date);

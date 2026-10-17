@@ -38,6 +38,7 @@ export async function checkDailyBacklog({ root = process.cwd(), through, channel
   });
   const stateDates = files.filter(file => /^\d{4}-\d{2}-\d{2}-run-state\.json$/.test(file)).map(file => validDate(file.slice(0, 10)));
   const retainedDates = [...Object.values(manifests).flatMap(manifest => manifest.editions.map(edition => edition.date)), ...stateDates].filter(date => date <= through).sort();
+  const floors = Object.fromEntries(selected.map(name => [name, manifests[name].editions.map(edition => edition.date).sort()[0] || null]));
   const entries = [];
   const unclosedRuns = [];
   if (retainedDates.length) for (let day = new Date(retainedDates[0] + 'T00:00:00Z'); day.toISOString().slice(0, 10) <= through; day.setUTCDate(day.getUTCDate() + 1)) {
@@ -51,6 +52,8 @@ export async function checkDailyBacklog({ root = process.cwd(), through, channel
       for (const run of state.runs || []) if (run.status === 'running') unclosedRuns.push({ date, runId: run.id, startedAt: run.startedAt, activeLease });
     }
     for (const name of selected) {
+      // 归档只保留最近 7 期（scripts/prune-archive.mjs）：早于本频道最早在档期次的日期是被有意移除的，不算缺口。
+      if (floors[name] && date < floors[name]) continue;
       const indexed = manifests[name].editions.some(edition => edition.date === date);
       const body = path.join(root, 'data', ...(name === 'minsheng' ? [name] : []), date + '.json');
       const png = path.join(root, 'downloads', name, date + '.png');

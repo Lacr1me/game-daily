@@ -341,15 +341,14 @@ $env:PORT = 4173; node scripts/serve.mjs      # 打开 http://127.0.0.1:4173 ；
 
 ## 12. 已知问题与待办（按紧急程度）
 
-1. **仓库体积接近上限，作者已决定「只保留近 7 天的照片」，但还没有实施（需要专门做一次，见下）**。
-   - 现状（2026-10-17 实测）：GitHub 显示本仓库约 945 MB。受 git 跟踪的日报图片：`downloads/game/` 55 张 PNG 约 474 MB、`downloads/minsheng/` 57 张约 111 MB、`game-brief-assets/` 3426 个文件约 418 MB。早于 2026-10-11 的旧期次：游戏 49 张、民生 50 张 PNG，加上对应的配图。GitHub 建议仓库 <1 GB，Pages 发布的站点体积上限同为 1 GB（以官方文档为准）。`build-site.mjs` 会把 `downloads/` 和 `game-brief-assets/` 整体复制进 `dist/`，再涨下去部署可能失败。
-   - **不能只删文件**，否则会出事：
-     - `scripts/test-site.mjs`（约 47–50、64–67 行）和 `scripts/verify-build.mjs`（约 32–47 行）会对 `data/index.json`、`data/minsheng/index.json` 里**每一期**检查 `downloads/<频道>/<日期>.png` 是否是有效 PNG。只删图会让 CI 失败，**部署被阻断，线上停在旧版**。
-     - 日报页的下载按钮和日期选择器按全部归档期次工作（`app.js`、`minsheng/app.js` 属于导出消费文件，**不能改**）。保留旧期次文字却删掉图，会出现下载 404 和裂图。
-     - `data/index.json`、`data/minsheng/index.json` 只能由发布脚本更新，`data/embedded.js` 由 `scripts/build-embedded.mjs` 生成，都禁止手改（`AGENTS.md`）。
-     - 只在新提交里删除文件**不会**缩小 `.git` 的历史体积（GitHub 显示的 945 MB 基本不变），只会缩小发布出去的站点。真要缩仓库需要重写历史并强推，风险很大，除非作者明确要求，不要做。被删除的文件仍可从 git 历史恢复。
-   - 推荐做法（需要先征得作者对三点的确认：窗口按「最近 7 期」还是「最近 7 个日历日」；旧期次的文字归档是否一起移除；是否接受历史仍留在 git 里）：把归档窗口定为 7 期，旧期次的索引条目、正文 JSON、PNG、配图**一起**移除，让站点与测试保持一致；然后在每日发布流程里加一步自动滚动清理，否则明天又会多出一期。这是日报系统改动，必须严格按 `docs/daily-runbook.md` 与 `AGENTS.md` 的验证映射做，使用发布脚本提供的接口，不要手改索引；改完要跑第 6 节全套测试，并确认两个频道页的 `?date=` 回退、下载按钮、历史选择在 7 期内都正常。去重规则本身只读最近 7 期，不受影响。
-   - 在此之前，**不要手工删除 `downloads/` 或 `game-brief-assets/` 里的文件**。
+1. **归档保留窗口「每个频道只保留最近 7 期」——已实施（2026-10-17）**。
+   - 规则：游戏日报、民生日报各自取索引里按日期倒序的前 7 个日期（不假设日期连续）。更早期次的索引条目、正文 JSON、公开 PNG（`downloads/<频道>/<日期>.png`）以及只被这些旧期次引用的 `game-brief-assets/` 配图一起移除；被保留期次、其它页面或 `data/.pending` 草稿引用的配图一律保留。旧内容只留在 git 历史里（需要时用 `git show <提交>:<路径>` 或 `git checkout <提交> -- <路径>` 取回），**没有重写历史**，GitHub 上显示的仓库体积不会因此变小，缩小的是发布出去的站点（Pages 上限 1 GB）。
+   - 命令：`node scripts/prune-archive.mjs`（默认 dry-run，只打印将移除的内容、数量和体积）；确认后加 `--apply`（用 `git rm` 删除受跟踪文件、只过滤索引条目、并自动重跑 `scripts/build-embedded.mjs`）。可选 `--keep=7`、`--channel=game|minsheng|both`。重复运行无副作用；索引与文件不一致（如索引有条目但 PNG 缺失）会逐条提示。脚本**只处理受 git 跟踪的文件，绝不删除未跟踪文件**。
+   - 结果（2026-10-17 实施前后）：游戏日报索引 55 期 → 7 期（2026-10-10～2026-10-17；10-16 本就没有期次），民生日报 57 期 → 7 期（2026-10-11～2026-10-17）。`downloads/game` 55 张 473.9 MB → 7 张 64.6 MB；`downloads/minsheng` 57 张 111.5 MB → 7 张 16.0 MB；`game-brief-assets` 受跟踪文件 3426 个 418.4 MB → 483 个 91.3 MB；共 `git rm` 3139 个文件（约 834 MB）。本地 `dist/` 由 758.8 MB 降到 210.8 MB（本地构建会把未跟踪配图一并复制，CI 上更小）。
+   - 未跟踪旧图：`game-brief-assets/` 里有 184 个未跟踪的旧日期图片（约 14.4 MB）不在 git 里，删了无法恢复，脚本一律不动，只在 dry-run 里提示数量。作者确认不再需要后可手动删除；同时 `offline-homepage-editor/`、`output/` 等其它未跟踪内容也未触碰。
+   - 每日衔接：**每次发布成功后运行 `node scripts/prune-archive.mjs --apply` 并随该期提交**（顺序见 `docs/daily-runbook.md`「归档保留窗口」）。没有自动接进发布脚本：发布事务的日志按索引前后哈希判断能否恢复，事务外改索引会让同日重跑报 `PUBLISH_CONFLICT`。
+   - 连带改动：① 首页计数器的标签由「简报期数」改为「近期简报」（它统计两个索引当前的期数之和，归档只剩 7 期后不再是历史累计）；② `scripts/check-daily-backlog.mjs` 把早于频道最早在档期次的日期视为已按窗口移除，不再当作历史缺口；③ 原先直接读 `data/` 里 2026-08～09 旧期次的测试，改读固定夹具 `scripts/fixtures/archive-seed/`（真实期次的副本，另由 `scripts/state-evidence-fixtures.mjs` 的 `archiveSeedRoot` / `materializeArchiveSeed` 提供），以后清理不会再弄坏这些测试；`scripts/test-health-browser.mjs` 改为取各频道索引里最新两期。新增 `scripts/test-prune-archive.mjs`，已挂进 `test-daily-operations.mjs`，CI 会跑。
+   - 注意：`test-site.mjs`、`verify-build.mjs` 对索引里每一期检查 PNG 是有效 PNG，所以**仍然不能只删图或只改索引**；一律用上面的脚本。`data/embedded.js` 仍由 `build-embedded.mjs` 生成，禁止手改。
 2. `scripts/verify-home-redesign.mjs` 里的旧占位 slug 需要更新（见第 7 节）。
 3. 国内镜像、自动更新：未做（第 10、11 节）。
 4. 卡片没有配图；Mod / 网页 / 游戏还在用通用「碎片卡」，专属载体（Mod 补丁碎片或卡带、网页浏览器标签页、游戏光盘或卡带）未做。
@@ -394,6 +393,8 @@ $env:PORT = 4173; node scripts/serve.mjs      # 打开 http://127.0.0.1:4173 ；
 **E. 排查「线上和本地不一样」**
 > 先读 `docs/HANDOFF.md` 第 6、12 节。用 `gh run list` 看最近一次部署是否成功；检查 `scripts/build-site.mjs` 的白名单是否包含新文件；再看是否是 10 分钟缓存或 `?v=` 版本戳不一致造成。
 
+**F. 清理旧归档（每次日报发布成功后）**
+> 先读 `docs/HANDOFF.md` 第 12 节第 1 条和 `docs/daily-runbook.md` 的「归档保留窗口」。先运行 `node scripts/prune-archive.mjs` 看 dry-run 报告（每频道应只剩最近 7 期，不得出现未跟踪文件被删），确认后加 `--apply`；再跑 `node scripts/test-site.mjs`、`node scripts/build-site.mjs`、`node scripts/verify-build.mjs`；用 `git status --short` 确认暂存区只含本次发布文件和清理产生的删除，只按路径暂存并提交，推送前问我。不要手工删 `downloads/`、`game-brief-assets/`，也不要动未跟踪文件。
 ---
 
 ## 15. 常见坑（这台机器上踩过的）

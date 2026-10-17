@@ -29,6 +29,11 @@ try {
   assert.deepEqual(await readFile(state), original, 'a backlog check must leave shared state untouched');
   const scoped = await checkDailyBacklog({ root, now, channel: 'minsheng' });
   assert.equal(scoped.missingCount, 1);
+  // 归档只保留最近 7 期：早于最早在档期次、已被清理的日期（只剩旧运行状态）不得被当作缺口。
+  await json(path.join(root, 'artifacts', 'operations', '2026-09-20-run-state.json'), { date: '2026-09-20', runs: [] });
+  const pruned = await checkDailyBacklog({ root, now });
+  assert.equal(pruned.missingCount, 2);
+  assert.deepEqual(pruned.entries.map(item => [item.date, item.channel]), [['2026-09-29', 'game'], ['2026-09-29', 'minsheng']]);
   await assert.rejects(checkDailyBacklog({ root, now, through: '2026-10-01' }), /PRECEDE_TODAY/);
   await assert.rejects(checkDailyBacklog({ root, now, through: '2026-09-31' }), /INVALID_DATE/);
   await assert.rejects(checkDailyBacklog({ root, now, channel: 'other' }), /INVALID_CHANNEL/);

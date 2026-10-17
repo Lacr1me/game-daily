@@ -2,7 +2,7 @@ import { mkdtemp, mkdir, readFile, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { CONTENT_CANDIDATE_TARGETS, acquireRunLease, appendResearchLedger as recordRaw, assertGameDealCoverage, assertReadyProof, createReadyProof, freezeSteamDiscovery as freezeRaw, initializeRunState as initRaw, mergeSourceAudits as mergeRaw, reconcileRunState as reconcileRaw, releaseRunLease, researchCompleteness } from "./daily-operations.mjs";
-import { evidenceFor, makeReadyFixture } from './state-evidence-fixtures.mjs';
+import { archiveSeedRoot, evidenceFor, makeReadyFixture, materializeArchiveSeed } from './state-evidence-fixtures.mjs';
 import { runDailyHealth } from "./check-daily-health.mjs";
 import { validateGame } from "./game-lib.mjs";
 import { validateMinshengSourceAudit } from "./minsheng-lib.mjs";
@@ -45,6 +45,7 @@ try {
   await testSteamAllVerifiedCoverage();
   await testHealthKeepsChecking();
   await testTlsDegradedSuccess();
+  await import("./test-prune-archive.mjs");
   console.log("日报运行状态、来源门禁、游戏规则和健康检查测试通过。");
 } finally {
   console.log(`保留隔离测试夹具：${tempRoot}`);
@@ -252,7 +253,7 @@ async function testReadyProof() {
 }
 
 async function testGameRules() {
-  const original = JSON.parse(await readFile(path.join(projectRoot, "data", "2026-08-24.json"), "utf8"));
+  const original = JSON.parse(await readFile(path.join(archiveSeedRoot, "data", "2026-08-24.json"), "utf8"));
   const candidate = structuredClone(original);
   candidate.date = "2026-08-25";
   candidate.issue = 4;
@@ -285,7 +286,7 @@ async function testGameRules() {
 async function testSteamAllVerifiedCoverage() {
   const root = path.join(tempRoot, "steam-coverage");
   const date = "2026-08-27";
-  const brief = JSON.parse(await readFile(path.join(projectRoot, "data", "2026-08-25.json"), "utf8"));
+  const brief = JSON.parse(await readFile(path.join(archiveSeedRoot, "data", "2026-08-25.json"), "utf8"));
   brief.date = date;
   const appIds = brief.deals.map((deal) => /\/app\/(\d+)/.exec(deal.url)[1]);
   const lowIds = brief.deals.filter((deal) => deal.label.includes("史低")).map((deal) => /\/app\/(\d+)/.exec(deal.url)[1]);
@@ -342,6 +343,7 @@ async function testHealthKeepsChecking() {
 }
 
 async function testTlsDegradedSuccess() {
+  const seedRoot = await materializeArchiveSeed(path.join(tempRoot, 'tls-seed'));
   const pngPaths = {
     "/downloads/game/2026-08-24.png": "downloads/game/2026-08-24.png",
     "/downloads/minsheng/2026-08-24.png": "downloads/minsheng/2026-08-24.png"
@@ -354,13 +356,13 @@ async function testTlsDegradedSuccess() {
     if (url.pathname === "/" || url.pathname === "/game/" || url.pathname === "/minsheng/") return new Response("ok", { status: 200 });
     const relative = url.pathname.replace(/^\//, "");
     if (pngPaths[url.pathname]) {
-      const buffer = await readFile(path.join(projectRoot, pngPaths[url.pathname]));
+      const buffer = await readFile(path.join(seedRoot, pngPaths[url.pathname]));
       return new Response(buffer, { status: 200, headers: { "content-type": "image/png" } });
     }
-    const buffer = await readFile(path.join(projectRoot, relative));
+    const buffer = await readFile(path.join(seedRoot, relative));
     return new Response(buffer, { status: 200, headers: { "content-type": "application/json" } });
   };
-  const result = await runDailyHealth({ root: projectRoot, date: "2026-08-24", liveBase: "https://example.test", fetchImpl: fakeFetch,
+  const result = await runDailyHealth({ root: seedRoot, date: "2026-08-24", liveBase: "https://example.test", fetchImpl: fakeFetch,
     targetCommit: 'a'.repeat(40),
     deploymentProof: { source: 'github-pages-api', checkedAt: new Date().toISOString(), headSha: 'a'.repeat(40), conclusion: 'success', siteUrl: 'https://example.test', evidenceUrl: 'https://api.github.com/repos/test/fixture/pages/builds/1' },
     pageProbe: async ({ url, date, channel, checkedAt }) => ({ method: 'browser', url, checkedAt, displayedDate: date, selectedDate: date, downloadUrl: `http://example.test/downloads/${channel}/${date}.png` })

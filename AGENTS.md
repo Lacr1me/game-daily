@@ -39,11 +39,11 @@
 | `game/index.html`、根级 `app.js`、`styles.css` | 游戏日报 |
 | `minsheng/` | 民生日报；保留 aligned-layout.css 引用及 mobile-fix.css 导出关键规则 |
 | `brand.css`、`brand-assets/` | 共用品牌；图片控制宽高，保留 Logo 比例与透明度 |
-| `data/index.json`、`data/minsheng/index.json` | 游戏、民生正式索引，只由发布脚本更新 |
-| `data/YYYY-MM-DD.json`、`data/minsheng/YYYY-MM-DD.json` | 正式正文，不以新候选覆盖已发布期次 |
+| `data/index.json`、`data/minsheng/index.json` | 游戏、民生正式索引，只由发布脚本更新；只保留最近 7 期，旧期次由 `scripts/prune-archive.mjs` 移除 |
+| `data/YYYY-MM-DD.json`、`data/minsheng/YYYY-MM-DD.json` | 正式正文，不以新候选覆盖已发布期次；只保留最近 7 期 |
 | `data/.pending/` | 游戏候选；民生位于其 minsheng 子目录；Git 忽略 |
-| `downloads/game/`、`downloads/minsheng/` | 正式公开 3840px PNG，发布时提交 Git |
-| `game-brief-assets/` | 每期游戏图片，新图必须使用当天日期文件名前缀 |
+| `downloads/game/`、`downloads/minsheng/` | 正式公开 3840px PNG，发布时提交 Git；只保留最近 7 期 |
+| `game-brief-assets/` | 每期游戏图片，新图必须使用当天日期文件名前缀；只保留最近 7 期引用的图片 |
 | `artifacts/operations/` | 当天状态、账本、审计、冻结清单、readiness、渲染和健康证据；不得清理未完成运行 |
 | `scripts/` | 运行状态、内容/归档校验、渲染前后验证、发布、构建、健康与维护入口；详细命令见手册 |
 | `data/embedded.js`、`dist/` | 分别由 build-embedded.mjs、build-site.mjs 生成，禁止手改 |
