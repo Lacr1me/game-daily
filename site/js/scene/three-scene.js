@@ -481,7 +481,15 @@ export function createExperience({ canvas, stage }) {
 
   // ── 行人：数量等于独立访客 ──────────────────────────────────
   const people = [];
-  const pathRadius = 3.1;
+  // 只走观察者看得见的两条人行道（L 形），人数一眼可数。
+  const PATH_A = 6.7;
+  const PATH_TOTAL = 13.4;
+  const PATH_OFFSET = 3.32;
+  function pathPoint(t) {
+    const s = ((t % PATH_TOTAL) + PATH_TOTAL) % PATH_TOTAL;
+    if (s < PATH_A) return { x: -PATH_A / 2 + s, z: PATH_OFFSET };
+    return { x: PATH_OFFSET, z: PATH_A / 2 - (s - PATH_A) };
+  }
   function makePerson(i) {
     const g = new THREE.Group();
     const coatColors = [C.blue, C.burgundy, C.blueDeep, '#3F6B4E'];
@@ -502,7 +510,7 @@ export function createExperience({ canvas, stage }) {
       leg.castShadow = true;
       g.add(leg);
     }
-    g.userData = { angle: (i / Math.max(1, people.length)) * Math.PI * 2, speed: 0.12 + (i % 4) * 0.018, phase: i * 1.3 };
+    g.userData = { t: 0, speed: 0.45 + (i % 4) * 0.06, phase: i * 1.3 };
     root.add(g);
     return g;
   }
@@ -510,16 +518,14 @@ export function createExperience({ canvas, stage }) {
   function setPeople(count) {
     const target = Math.max(0, Math.min(30, Math.round(count)));
     while (people.length < target) {
-      const person = makePerson(people.length);
-      person.userData.angle = (people.length / Math.max(1, target)) * Math.PI * 2;
-      people.push(person);
+      people.push(makePerson(people.length));
     }
     while (people.length > target) {
       const person = people.pop();
       root.remove(person);
     }
     people.forEach((person, index) => {
-      person.userData.angle = (index / Math.max(1, people.length)) * Math.PI * 2;
+      person.userData.t = (index / Math.max(1, people.length)) * PATH_TOTAL;
     });
   }
   setPeople(1);
@@ -643,10 +649,9 @@ export function createExperience({ canvas, stage }) {
     view.azimuth += (azimuthTarget - view.azimuth) * Math.min(1, dt * 6);
 
     for (const person of people) {
-      person.userData.angle += person.userData.speed * dt * 0.35;
-      const a = person.userData.angle;
-      person.position.set(Math.cos(a) * pathRadius, Math.abs(Math.sin(time * 4 + person.userData.phase)) * 0.02, Math.sin(a) * pathRadius);
-      person.rotation.y = -a + Math.PI / 2;
+      person.userData.t += person.userData.speed * dt;
+      const at = pathPoint(person.userData.t);
+      person.position.set(at.x, Math.abs(Math.sin(time * 4 + person.userData.phase)) * 0.02, at.z);
     }
 
     if (petals.visible) {
