@@ -34,7 +34,7 @@
 
 | slug | 分类 | 载体 | 版本 | 下载位置 |
 |---|---|---|---|---|
-| `simple-download-windows` | 软件工具 | window | 0.2.0 | springhues-releases，tag `simple-download-windows-v0.2.0` |
+| `simple-download-windows` | 软件工具 | window | 0.2.1 | springhues-releases，tag `simple-download-windows-v0.2.1-20261018T152358Z-ede0cc5e` |
 | `simple-download-android` | 软件工具 | phone | 2.3.4 | springhues-releases，tag `simple-download-android-v2.3.4` |
 | `n1ten` | 游戏资源 | shard（通用） | 1.5.2 | springhues-games，tag `n1ten-v1.5.2` |
 | `daily-game` / `daily-minsheng` | 每日简报 | page | — | 站内 `game/`、`minsheng/` |
@@ -337,9 +337,9 @@ $env:PORT = 4173; node scripts/serve.mjs      # 打开 http://127.0.0.1:4173 ；
 
 ## 11. 简单下载 Windows 网站更新清单（0.2.1 接入）
 
-2026-10-18 用户已授权 Windows 更新客户端与网站契约；旧“暂不做”决定已被覆盖。当前本地实现不表示附件已上传或清单已部署。Android 发布流程不变。
+2026-10-18 用户明确授权正式发布最新 Windows 0.2.1 安装包、更新清单与网站下载入口，覆盖此前“仅交付本地安装包”的范围。当前分发标识为 `20261018T152358Z-ede0cc5e`，MCP 组件随包；Android 发布流程不变。提交与附件上传不替代部署后的线上核对。
 
-- 固定入口：`https://springhues.com/updates/simple-download-windows/latest.json`。首次发布前不放占位清单，客户端应显示检查失败并允许重试。
+- 固定入口：`https://springhues.com/updates/simple-download-windows/latest.json`。只发布已验证的真实安装包清单，不放占位清单；客户端在缺少清单时显示“更新服务尚未上线”。
 - 清单 schemaVersion=1，appId=`simple-download-windows`，channel=`stable`，platform=`windows`，architecture=`x64`。软件 version 由用户指定，目前为 `0.2.1`。
 - 每次打包前生成独立 `releaseId` 和 UTC `releaseCreatedAtUtc`，随安装载荷保存 `release-info.json`。同版新分发也可更新，软件版本不加后缀；旧版本、旧分发不降级。
 - tag 使用 `simple-download-windows-v<version>-<releaseId>`；附件仍用 ASCII `SimpleDownload-<version>-Windows-Setup.exe`。不同分发使用不同 tag，不覆盖旧附件，不使用共用仓库的 `latest`。
