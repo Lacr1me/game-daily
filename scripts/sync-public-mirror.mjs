@@ -12,7 +12,7 @@ const mirrorDir = path.resolve(arg("--mirror", path.join(root, ".mirror", "sprin
 const remote = "https://github.com/Lacr1me/springhues-site.git";
 const branch = "site";
 const proxy = process.env.SYNC_PROXY || "";
-const git = (cwd, list) => execFileSync("git", list, { cwd, stdio: "pipe", encoding: "utf8" });
+const git = (cwd, list) => execFileSync("git", [...(proxy ? ["-c", `http.proxy=${proxy}`] : []), ...list], { cwd, stdio: "pipe", encoding: "utf8" });
 
 const KEEP_SCRIPTS = new Set([
   "build-embedded.mjs", "build-hero-assets.mjs", "build-site.mjs", "check-shard-style.mjs",
