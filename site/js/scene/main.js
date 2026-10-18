@@ -227,7 +227,11 @@ if (canvas && stage) {
   loadStats().then((result) => {
     if (!fallbackNote) return;
     if (result.counter) {
-      fallbackNote.textContent = '访问数据来自 GoatCounter，匿名统计，不使用 Cookie。';
+      const at = result.snapshotAt ? new Date(result.snapshotAt) : null;
+      const stamp = at && !Number.isNaN(at.getTime())
+        ? ' 统计更新于 ' + at.toLocaleString('zh-CN', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' }) + '。'
+        : '';
+      fallbackNote.textContent = '访问数据来自 GoatCounter，匿名统计，不使用 Cookie。' + stamp;
     } else {
       fallbackNote.textContent = '访问统计暂未接通，数字暂不显示。';
     }

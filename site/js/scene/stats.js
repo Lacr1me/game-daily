@@ -1,10 +1,11 @@
-// 面板数字全部来自真实来源：GoatCounter 计数与仓库里的归档清单。
-const COUNTER_URL = 'https://springhues.goatcounter.com/counter/TOTAL.json';
+// 面板数字全部来自真实来源：GoatCounter 的每日快照与仓库里的归档清单。
+// 快照由 .github/workflows/scene-stats.yml 定时写入，避免浏览器跨域取数。
+const COUNTER_URL = 'data/scene-stats.json';
 
 function withTimeout(url, ms) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), ms);
-  return fetch(url, { signal: controller.signal, credentials: 'omit' })
+  return fetch(url, { signal: controller.signal, credentials: 'omit', cache: 'no-store' })
     .then((response) => {
       if (!response.ok) throw new Error('http ' + response.status);
       return response.json();
@@ -38,14 +39,17 @@ export async function loadStats() {
   ]);
 
   let hasCounter = false;
+  let snapshotAt = '';
   if (counter.status === 'fulfilled' && counter.value) {
-    const visits = counter.value.count;
-    const visitors = counter.value.count_unique;
+    const data = counter.value;
+    const visits = data.visits !== undefined ? data.visits : data.count;
+    const visitors = data.visitors !== undefined ? data.visitors : data.count_unique;
     if (visits !== undefined) {
       set('visits', count(visits));
       hasCounter = true;
     }
     if (visitors !== undefined) set('visitors', count(visitors));
+    if (data.updated) snapshotAt = String(data.updated);
   }
 
   const gameList = game.status === 'fulfilled' ? editions(game.value) : [];
@@ -63,5 +67,5 @@ export async function loadStats() {
     set('works', count(works.value.works.length));
   }
 
-  return { counter: hasCounter };
+  return { counter: hasCounter, snapshotAt };
 }
