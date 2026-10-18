@@ -1,0 +1,123 @@
+/* 场景页：等轴测小店的舞台与真实数据面板。规则全部以 html.shard-live 开头。 */
+
+html.shard-live .scene-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 28px;
+  align-items: start;
+  padding-bottom: 80px;
+}
+
+html.shard-live .scene-stage-wrap {
+  min-width: 0;
+}
+
+html.shard-live .scene-stage {
+  position: relative;
+  height: clamp(320px, 54vh, 620px);
+  border: 1px solid var(--sd-line);
+  background: var(--bg);
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--sd-cut)), calc(100% - var(--sd-cut)) 100%, 0 100%);
+}
+
+html.shard-live .scene-stage canvas {
+  display: block;
+  touch-action: pan-y;
+  cursor: grab;
+}
+
+html.shard-live .scene-stage canvas:active {
+  cursor: grabbing;
+}
+
+html.shard-live .scene-hint {
+  position: absolute;
+  left: 16px;
+  bottom: 12px;
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: .08em;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+html.shard-live .scene-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+html.shard-live .scene-panel {
+  min-width: 0;
+}
+
+html.shard-live .scene-panel .sd-plate {
+  margin: 0;
+}
+
+html.shard-live .scene-metrics {
+  display: grid;
+  margin: 4px 0 0;
+}
+
+html.shard-live .scene-metrics > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--sd-line);
+}
+
+html.shard-live .scene-metrics > div:last-child {
+  border-bottom: 0;
+}
+
+html.shard-live .scene-metrics dt {
+  font-size: 13px;
+  letter-spacing: .1em;
+  color: var(--muted);
+}
+
+html.shard-live .scene-metrics dd {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(26px, 3vw, 38px);
+  line-height: 1;
+  color: var(--fg);
+  font-variant-numeric: tabular-nums;
+}
+
+html.shard-live .scene-metrics dd[data-stat="updated"] {
+  font-family: var(--font-cn);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+@media (max-width: 1099px) {
+  html.shard-live .scene-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  html.shard-live .scene-stage {
+    height: clamp(300px, 50vh, 520px);
+  }
+}
+
+@media (max-width: 699px) {
+  html.shard-live .scene-layout {
+    padding-bottom: 56px;
+  }
+
+  html.shard-live .scene-stage {
+    height: clamp(280px, 46vh, 420px);
+  }
+
+  html.shard-live .scene-metrics dd {
+    font-size: 30px;
+  }
+}
