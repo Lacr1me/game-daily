@@ -49,7 +49,7 @@
 | `data/embedded.js`、`dist/` | 分别由 build-embedded.mjs、build-site.mjs 生成，禁止手改 |
 | `messages/`、`admin/messages/`、`privacy/`、`supabase/` | 公开留言、无公开入口的后台、隐私说明和服务端 |
 | `offline-homepage-editor/` | 独立离线编辑器，仅浏览器本地保存，不自动修改正式首页 |
-| `.github/workflows/` | Pages 和日志工作流；推送 publish 可触发生产部署（main 用于前端开发，合并后同步到 publish） |
+| `.github/workflows/` | Pages 和日志工作流；推送 main 可触发生产部署 |
 | `.codex/`、`.tools/`、历史 HTML/PNG、`daily-brief-template-package/` | 本机配置、缓存或历史材料，不是每日生产入口 |
 
 ## 核心内容与产物约束
@@ -89,4 +89,4 @@
 - 先查 `git status --short`；只修改、暂存和提交授权范围内文件，保留无关未提交文件，尤其 .codex、历史文档、离线编辑器和维护脚本。
 - 使用 `apply_patch` 编辑文本；生成与复制正式产物使用对应脚本或安全复制命令。
 - 禁止手改 dist、embedded.js、归档索引绕过流程；禁止 `git reset --hard`、`git checkout --` 等丢弃改动的操作。
-- 提交前运行 `git diff --check` 和适用验证；正常日报发布目标为 origin/publish，但文档、审计或本地修改不自动授权推送。已提交不等于已部署。
+- 提交前运行 `git diff --check` 和适用验证；正常日报发布目标为 origin/main，但文档、审计或本地修改不自动授权推送。已提交不等于已部署。

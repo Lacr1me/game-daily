@@ -7,7 +7,7 @@
 ## 1 项目与现有计划
 
 - 工作目录：`F:\Codex-App\日报设计`。
-- 源码远端：[Lacr1me/game-daily](https://github.com/Lacr1me/game-daily)。`main` 用于前端开发，`publish` 用于每日发布并触发 Pages。
+- 源码远端：[Lacr1me/game-daily](https://github.com/Lacr1me/game-daily)。分支 `main`。
 - 生产站：[springhues.com](https://springhues.com/)，频道入口为 `/game/` 和 `/minsheng/`。
 - 技术栈：静态 HTML、CSS、原生 JavaScript、JSON 和图片；Node.js 执行校验、渲染辅助、归档、构建和发布。不引入前端框架或包管理器。
 - 每期 `publishAt` 固定为北京时间当天 11:00，11:00 前禁止发布。05:00 起分轮制作，11:01 首次发布，11:31 复查补跑。
@@ -115,7 +115,7 @@ node scripts/check-daily-backlog.mjs
 
 ## 5 发布权限和保留窗口
 
-原发布计划保存了用户持续授权：通过当日内容、readiness、构建和时间门禁的日报产物，可提交并非强制推送到指定仓库 `publish`（发布分支），触发现有 Pages 部署及同日 `website_change` 幂等同步。来源和范围见手册[每日发布持续授权与验收](daily-runbook.md#每日发布持续授权与验收)。这项授权没有因为日期变化而失效，但本文也不触发任何发布。
+原发布计划保存了用户持续授权：通过当日内容、readiness、构建和时间门禁的日报产物，可提交并非强制推送到指定仓库 `main`，触发现有 Pages 部署及同日 `website_change` 幂等同步。来源和范围见手册[每日发布持续授权与验收](daily-runbook.md#每日发布持续授权与验收)。这项授权没有因为日期变化而失效，但本文也不触发任何发布。
 
 接手时必须保留授权的确切范围和当前宿主审批，逐次核对远端、目标 SHA 和文件集合。不得夹带用户无关改动、软件安装包、任意代码或云配置修改、强制推送、全局权限修改和其他外发载荷；被环境审批拒绝时按实际动作和理由报告，不绕过拒绝。不要复制或输出令牌、密钥、密码、`.env` 等秘密。
 

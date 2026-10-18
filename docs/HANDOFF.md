@@ -12,7 +12,7 @@
 
 - 这是 **springhues.com**：作者 Lacr1me 的个人作品站，展示软件、网页、游戏资源，以及一个每天 11:00 自动更新的「每日简报」（游戏日报 + 民生日报）。
 - 技术：**纯静态**（HTML、CSS、原生 JavaScript ES 模块、JSON、图片）。**不使用前端框架，不使用 npm / package.json**。Node.js 脚本只用来测试、构建、发布。
-- 部署：推送到 GitHub `publish` → GitHub Actions（`.github/workflows/pages.yml`）跑测试 → `scripts/build-site.mjs` 生成 `dist/` → 发布到 GitHub Pages。**推送 publish 就是上线**。`main` 用于前端开发与 PR，合并后需要同步到 `publish` 才会发布。
+- 部署：推送到 GitHub `main` → GitHub Actions（`.github/workflows/pages.yml`）跑测试 → `scripts/build-site.mjs` 生成 `dist/` → 发布到 GitHub Pages。**推送 main 就是上线**。
 - 风格：SHARD（碎片）。克莱因蓝为主、冷白为辅、勃艮第红只当「刃」，所有容器是切角多边形，不用圆角矩形。详见 `docs/shard-style.md`。
 - 作者在中国，**用户主要在国内**。这影响下载分发（见第 10 节）。
 - 作者的额度有限，已经把后续维护交给你。能用最少的步骤把事做对，比做得花哨更重要。
