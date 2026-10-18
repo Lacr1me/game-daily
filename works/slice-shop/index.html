@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <base href="../../">
   <meta name="theme-color" content="#F4F6FF">
-  <meta name="description" content="一间随四季与昼夜变化的等轴测小店，记录 Springhues 的真实访问量。">
+  <meta name="description" content="一块悬浮的切口地块，一间会随四季与昼夜变化的微缩小店，记录 Springhues 的真实访问。">
   <title>切片小店 · Springhues</title>
   <link rel="icon" type="image/png" href="brand-assets/springhues-logo.png">
   <script src="site/boot.js?v=20261018-shard-v4"></script>
@@ -15,44 +15,40 @@
   <script type="module" src="site/js/shell/shell.js?v=20261018-shard-v4"></script>
   <script data-goatcounter="https://springhues.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
-<body data-site-page="scene" data-sd-title="切片小店" data-sd-title-en="SCENE">
-  <main id="main" class="sd-page" tabindex="-1">
-    <header class="sd-hero">
-      <div class="sd-wrap">
-        <p class="sd-eyebrow" data-sd-reveal="0">SCENE</p>
-        <h1 class="sd-h1" data-sd-reveal="1"><span class="en" aria-hidden="true">Scene</span><span class="cn">切片小店</span></h1>
-        <p class="sd-lead" data-sd-reveal="2">一间跟着四季和昼夜变化的小店。它记下本站的真实访问。</p>
-      </div>
-    </header>
+<body data-site-page="slice-shop" data-sd-title="切片小店" data-sd-title-en="SCENE">
+  <main id="main" class="sd-page scene-main" tabindex="-1">
+    <section class="scene-stage" data-scene-stage>
+      <canvas data-scene-canvas role="img" aria-label="等轴测的悬浮地块：一间小店、街道、树木与走动的人，会随季节和昼夜变化"></canvas>
+      <div class="scene-frame" aria-hidden="true"></div>
 
-    <div class="sd-wrap scene-layout">
-      <section class="scene-stage-wrap">
-        <div class="scene-stage" data-scene-stage>
-          <canvas data-scene-canvas role="img" aria-label="等轴测小店，会随季节和昼夜改变外观"></canvas>
-          <p class="scene-hint" aria-hidden="true">拖动画面可微调视角</p>
-        </div>
-        <div class="scene-chips" role="group" aria-label="切换季节">
+      <header class="scene-head">
+        <p class="scene-kicker"><span class="scene-pulse" aria-hidden="true"></span><span>LIVE SCENE</span></p>
+        <dl class="scene-stats" aria-label="站点数据">
+          <div><dt>总访问</dt><dd data-stat="visits">—</dd></div>
+          <div><dt>独立访客</dt><dd data-stat="visitors">—</dd></div>
+          <div><dt>日报期数</dt><dd data-stat="issues">—</dd></div>
+          <div><dt>作品</dt><dd data-stat="works">—</dd></div>
+        </dl>
+      </header>
+
+      <div class="scene-foot">
+        <h1 class="scene-title"><span class="scene-title-en" aria-hidden="true">Scene</span><span class="scene-title-cn">切片小店</span></h1>
+        <p class="scene-sub">四季 · 昼夜 · 实时访问</p>
+      </div>
+
+      <div class="scene-controls">
+        <div class="scene-seasons" role="group" aria-label="切换季节">
           <button class="sd-chip" type="button" data-season="spring" aria-pressed="true">春</button>
           <button class="sd-chip" type="button" data-season="summer" aria-pressed="false">夏</button>
           <button class="sd-chip" type="button" data-season="autumn" aria-pressed="false">秋</button>
           <button class="sd-chip" type="button" data-season="winter" aria-pressed="false">冬</button>
         </div>
-      </section>
+        <button class="sd-btn sd-btn--blade scene-cut" type="button" data-cut-toggle aria-pressed="false"><span data-cut-label>剖开小店</span></button>
+      </div>
 
-      <aside class="scene-panel">
-        <section class="sd-plate sd-plate--blade" data-sd-reveal="0">
-          <h2 class="sd-h2">真实记录</h2>
-          <dl class="scene-metrics">
-            <div><dt>总访问</dt><dd data-stat="visits">—</dd></div>
-            <div><dt>独立访客</dt><dd data-stat="visitors">—</dd></div>
-            <div><dt>日报期数</dt><dd data-stat="issues">—</dd></div>
-            <div><dt>作品</dt><dd data-stat="works">—</dd></div>
-            <div><dt>最近更新</dt><dd data-stat="updated">—</dd></div>
-          </dl>
-          <p class="sd-note" data-scene-note>正在读取访问数据。</p>
-        </section>
-      </aside>
-    </div>
+      <p class="scene-note" data-scene-note>正在读取数据。</p>
+      <p class="scene-hint" aria-hidden="true">拖动转视角 · 轻点剖开</p>
+    </section>
 
     <noscript><p class="sd-note">当前浏览器未启用 JavaScript，场景与统计无法显示。<a href="../../">返回首页</a></p></noscript>
   </main>

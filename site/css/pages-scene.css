@@ -1,27 +1,22 @@
-/* 场景页：等轴测小店的舞台与真实数据面板。规则全部以 html.shard-live 开头。 */
+/* 场景页：整屏悬浮岛与浮层信息。规则全部以 html.shard-live 开头，颜色只用 token。 */
 
-html.shard-live .scene-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 320px;
-  gap: 28px;
-  align-items: start;
-  padding-bottom: 80px;
-}
-
-html.shard-live .scene-stage-wrap {
-  min-width: 0;
+html.shard-live .scene-main {
+  padding: var(--sd-top-h) 0 0;
 }
 
 html.shard-live .scene-stage {
   position: relative;
-  height: clamp(320px, 54vh, 620px);
-  border: 1px solid var(--sd-line);
-  background: var(--bg);
+  height: calc(100vh - var(--sd-top-h));
+  min-height: 540px;
+  max-height: 1040px;
   overflow: hidden;
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--sd-cut)), calc(100% - var(--sd-cut)) 100%, 0 100%);
+  background: var(--bg);
+  isolation: isolate;
 }
 
 html.shard-live .scene-stage canvas {
+  position: absolute;
+  inset: 0;
   display: block;
   touch-action: pan-y;
   cursor: grab;
@@ -31,93 +26,240 @@ html.shard-live .scene-stage canvas:active {
   cursor: grabbing;
 }
 
-html.shard-live .scene-hint {
+html.shard-live .scene-frame {
   position: absolute;
-  left: 16px;
-  bottom: 12px;
+  inset: 20px;
+  border: 1px solid var(--sd-line);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--sd-cut)), calc(100% - var(--sd-cut)) 100%, 0 100%);
+  pointer-events: none;
+}
+
+html.shard-live .scene-frame::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  width: 64px;
+  height: 4px;
+  background: var(--blade);
+}
+
+html.shard-live .scene-head {
+  position: absolute;
+  top: 44px;
+  right: 48px;
+  text-align: right;
+  pointer-events: none;
+}
+
+html.shard-live .scene-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 18px;
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: .3em;
+  color: var(--muted);
+}
+
+html.shard-live .scene-pulse {
+  width: 7px;
+  height: 7px;
+  background: var(--blade);
+  animation: scene-pulse 2.4s var(--ease-out) infinite;
+}
+
+@keyframes scene-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .35; transform: scale(.7); }
+}
+
+html.shard-live .scene-stats {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  min-width: 148px;
+}
+
+html.shard-live .scene-stats > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+html.shard-live .scene-stats dt {
+  font-size: 12px;
+  letter-spacing: .12em;
+  color: var(--muted);
+  order: 1;
+}
+
+html.shard-live .scene-stats dd {
+  order: 2;
+  margin: 0;
+  min-width: 2ch;
+  font-family: var(--font-display);
+  font-size: clamp(24px, 2.6vw, 36px);
+  line-height: 1;
+  color: var(--fg);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+html.shard-live .scene-foot {
+  position: absolute;
+  left: 48px;
+  bottom: 108px;
+  pointer-events: none;
+}
+
+html.shard-live .scene-title {
+  margin: 0;
+  line-height: .86;
+}
+
+html.shard-live .scene-title-en {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(52px, 9vw, 132px);
+  letter-spacing: .01em;
+  text-transform: uppercase;
+  color: var(--fg);
+}
+
+html.shard-live .scene-title-cn {
+  display: block;
+  margin-top: 10px;
+  font-size: clamp(18px, 2.4vw, 30px);
+  font-weight: 900;
+  letter-spacing: .18em;
+  color: var(--fg);
+}
+
+html.shard-live .scene-sub {
+  margin: 14px 0 0;
+  font-size: 12px;
+  letter-spacing: .24em;
+  color: var(--muted);
+}
+
+html.shard-live .scene-controls {
+  position: absolute;
+  left: 48px;
+  bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+html.shard-live .scene-seasons {
+  display: flex;
+  gap: 6px;
+}
+
+html.shard-live .scene-cut {
+  height: 44px;
+  white-space: nowrap;
+  flex: none;
+}
+
+html.shard-live .scene-note {
+  position: absolute;
+  right: 48px;
+  bottom: 44px;
+  max-width: 250px;
   margin: 0;
   font-size: 12px;
-  letter-spacing: .08em;
+  line-height: 1.6;
+  text-align: right;
+  color: var(--muted);
+}
+
+html.shard-live .scene-hint {
+  position: absolute;
+  left: 48px;
+  top: 44px;
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: .1em;
   color: var(--muted);
   pointer-events: none;
 }
 
-html.shard-live .scene-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 16px;
-}
-
-html.shard-live .scene-panel {
-  min-width: 0;
-}
-
-html.shard-live .scene-panel .sd-plate {
-  margin: 0;
-}
-
-html.shard-live .scene-metrics {
-  display: grid;
-  margin: 4px 0 0;
-}
-
-html.shard-live .scene-metrics > div {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--sd-line);
-}
-
-html.shard-live .scene-metrics > div:last-child {
-  border-bottom: 0;
-}
-
-html.shard-live .scene-metrics dt {
-  font-size: 13px;
-  letter-spacing: .1em;
-  color: var(--muted);
-}
-
-html.shard-live .scene-metrics dd {
-  margin: 0;
-  font-family: var(--font-display);
-  font-size: clamp(26px, 3vw, 38px);
-  line-height: 1;
-  color: var(--fg);
-  font-variant-numeric: tabular-nums;
-}
-
-html.shard-live .scene-metrics dd[data-stat="updated"] {
-  font-family: var(--font-cn);
-  font-size: 17px;
-  font-weight: 700;
-  letter-spacing: .04em;
-}
-
 @media (max-width: 1099px) {
-  html.shard-live .scene-layout {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 24px;
-  }
-
-  html.shard-live .scene-stage {
-    height: clamp(300px, 50vh, 520px);
-  }
+  html.shard-live .scene-head { top: 36px; right: 36px; }
+  html.shard-live .scene-foot { left: 36px; bottom: 96px; }
+  html.shard-live .scene-controls { left: 36px; bottom: 32px; }
+  html.shard-live .scene-note { right: 36px; bottom: 36px; }
+  html.shard-live .scene-hint { left: 36px; top: 36px; }
+  html.shard-live .scene-frame { inset: 14px; }
 }
 
 @media (max-width: 699px) {
-  html.shard-live .scene-layout {
-    padding-bottom: 56px;
-  }
-
   html.shard-live .scene-stage {
-    height: clamp(280px, 46vh, 420px);
+    height: calc(100vh - var(--sd-top-h));
+    min-height: 520px;
   }
 
-  html.shard-live .scene-metrics dd {
-    font-size: 30px;
+  html.shard-live .scene-head {
+    top: 30px;
+    right: 24px;
+    left: 24px;
+    text-align: left;
   }
+
+  html.shard-live .scene-kicker { margin-bottom: 10px; }
+
+  html.shard-live .scene-stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+    min-width: 0;
+  }
+
+  html.shard-live .scene-stats > div {
+    display: block;
+    text-align: left;
+  }
+
+  html.shard-live .scene-stats dt {
+    display: block;
+    font-size: 10px;
+    letter-spacing: .06em;
+  }
+
+  html.shard-live .scene-stats dd {
+    display: block;
+    text-align: left;
+    font-size: 22px;
+    margin-top: 2px;
+  }
+
+  html.shard-live .scene-hint { display: none; }
+
+  html.shard-live .scene-foot {
+    left: 24px;
+    right: 24px;
+    bottom: 128px;
+  }
+
+  html.shard-live .scene-title-en { font-size: clamp(46px, 17vw, 76px); }
+
+  html.shard-live .scene-controls {
+    left: 24px;
+    right: 24px;
+    bottom: 56px;
+    justify-content: space-between;
+  }
+
+  html.shard-live .scene-note {
+    left: 24px;
+    right: 24px;
+    bottom: 22px;
+    max-width: none;
+    text-align: left;
+  }
+
+  html.shard-live .scene-frame { inset: 10px; }
 }
