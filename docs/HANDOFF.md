@@ -12,7 +12,7 @@
 
 - 这是 **springhues.com**：作者 Lacr1me 的个人作品站，展示软件、网页、游戏资源，以及一个每天 11:00 自动更新的「每日简报」（游戏日报 + 民生日报）。
 - 技术：**纯静态**（HTML、CSS、原生 JavaScript ES 模块、JSON、图片）。**不使用前端框架，不使用 npm / package.json**。Node.js 脚本只用来测试、构建、发布。
-- 部署：推送到 GitHub `main` → GitHub Actions（`.github/workflows/pages.yml`）跑测试 → `scripts/build-site.mjs` 生成 `dist/` → 发布到 GitHub Pages。**推送 main 就是上线**。
+- 部署：推送到 GitHub `publish` → GitHub Actions（`.github/workflows/pages.yml`）跑测试 → `scripts/build-site.mjs` 生成 `dist/` → 发布到 GitHub Pages。**推送 publish 就是上线**。`main` 用于前端开发与 PR，合并后需要同步到 `publish` 才会发布。
 - 风格：SHARD（碎片）。克莱因蓝为主、冷白为辅、勃艮第红只当「刃」，所有容器是切角多边形，不用圆角矩形。详见 `docs/shard-style.md`。
 - 作者在中国，**用户主要在国内**。这影响下载分发（见第 10 节）。
 - 作者的额度有限，已经把后续维护交给你。能用最少的步骤把事做对，比做得花哨更重要。
@@ -298,7 +298,7 @@ $env:PORT = 4173; node scripts/serve.mjs      # 打开 http://127.0.0.1:4173 ；
 - 形状：容器用切角 / 斜切 `clip-path`（用工具类，不要写死），**禁止圆角矩形**。唯一允许圆的是状态点、头像等白名单元素。
 - 红字不放蓝底，小字不放红底；正文对比度 ≥4.5:1；所有交互可用键盘，焦点可见。
 - 动效：只用浏览器原生 WAAPI + `site/js/core/tween.js`；**不要再引入第三方动画库**；必须尊重 `prefers-reduced-motion`。
-- 子页面外壳只在 `html.shard-live` 下生效，由 `site/boot.js` 门控；导出器冻结了 `Date`，据此不启用外壳，所以日报导出图不受影响。
+- 子页面外壳只在 `html.shard-live` 下生效，由 `site/boot.js` 门控。导出器冻结 `Date` 后仍会注入 `__SHARD_FORCE__`，并把 `tokens.css`、`shard-theme.css`、`pages-daily.css` 一并内联，所以日报导出图使用与线上一致的 SHARD 外观；字体以 data URI 内嵌，避免本地静态页的 CORS 拦截。
 - 命名：组件类前缀 `sd-`；页面专属样式文件命名 `site/css/pages-<名字>.css`。
 
 ---
@@ -306,7 +306,7 @@ $env:PORT = 4173; node scripts/serve.mjs      # 打开 http://127.0.0.1:4173 ；
 ## 9. 日报系统：不可破坏的约束（摘要，完整见 `AGENTS.md`）
 
 - 每天 11:00（Asia/Shanghai）由自动化制作并发布两个频道；11:00 前禁止发布。**任何网站改动都不要初始化日报运行、不要获取租约、不要手改 `data/`、`downloads/`、`artifacts/`**。
-- 日报 HTML / PNG 同源：导出器打开**真实线上页** `game/?date=…`、`minsheng/?date=…` 并截图。所以线上日报页的样式一改，导出图就可能变。当前做法是：被导出消费的文件（`styles.css`、`brand.css`、`site-shell.js`、两个 `app.js`、`minsheng/*.css`、两个频道 HTML 的结构）一律不改，线上外壳只通过 `site/boot.js` 的门控额外叠加。
+- 日报 HTML / PNG 同源：导出器用本地服务打开 `game/?date=…`、`minsheng/?date=…` 并截图。所以线上日报页的样式一改，导出图就可能变。当前做法是：被导出消费的文件（`styles.css`、`brand.css`、`site-shell.js`、两个 `app.js`、`minsheng/*.css`、两个频道 HTML 的结构）一律不改，线上外壳只通过 `site/boot.js` 的门控额外叠加。
 - 改了日报页或其外壳后，必须运行 `node scripts/check-export-parity.mjs --channel=both`，要求 HTML 快照和 PNG 字节完全一致。
 - 保留 `?date=YYYY-MM-DD`（无效或未到发布时刻的日期回退到最新已发布期）、下载按钮指向当期 PNG、外链 `rel="noopener noreferrer"`、民生页桌面逐行对齐与移动端高度重置规则。
 - 首页的日报卡读 `data/index.json` 与 `data/minsheng/index.json`，只显示已到发布时刻的最新期；`#gameLink` / `#civicLink` 必须留在 DOM 里（线上健康采集会读它们的 `href`）。
@@ -335,23 +335,27 @@ $env:PORT = 4173; node scripts/serve.mjs      # 打开 http://127.0.0.1:4173 ；
 
 ---
 
-## 11. 软件自动更新（作者决定暂不做，保留设计）
+## 11. 简单下载 Windows 网站更新清单（0.2.1 接入）
 
-思路：安装包仍放 Releases；网站（或对象存储）为每个软件放一个很小的更新说明文件，例如 `https://springhues.com/updates/<app>/latest.json`：
+2026-10-18 用户已授权 Windows 更新客户端与网站契约；旧“暂不做”决定已被覆盖。当前本地实现不表示附件已上传或清单已部署。Android 发布流程不变。
 
-```json
-{ "version": "0.3.0", "releaseDate": "2026-11-01", "notes": "…", "url": "https://…/文件", "sha256": "…", "size": 123456789 }
-```
+- 固定入口：`https://springhues.com/updates/simple-download-windows/latest.json`。首次发布前不放占位清单，客户端应显示检查失败并允许重试。
+- 清单 schemaVersion=1，appId=`simple-download-windows`，channel=`stable`，platform=`windows`，architecture=`x64`。软件 version 由用户指定，目前为 `0.2.1`。
+- 每次打包前生成独立 `releaseId` 和 UTC `releaseCreatedAtUtc`，随安装载荷保存 `release-info.json`。同版新分发也可更新，软件版本不加后缀；旧版本、旧分发不降级。
+- tag 使用 `simple-download-windows-v<version>-<releaseId>`；附件仍用 ASCII `SimpleDownload-<version>-Windows-Setup.exe`。不同分发使用不同 tag，不覆盖旧附件，不使用共用仓库的 `latest`。
+- `installerUrl` 指向本人 `Lacr1me/springhues-releases` 的固定 tag 附件；`fileName` 为 `简单下载.exe`；`size` 和 `sha256` 来自最终安装包。`releasePageUrl` 必须是相同 tag，`publishedAtUtc` 是实际公开时间，`notes` 为简短更新说明。
+- 软件只在主动检查／下载时重新获取清单；下载固定单一快照并校验大小与 SHA-256。用户点击“安装更新”才安全暂停并写入恢复状态，退出后由现有安装器升级。
 
-软件启动时读它，版本更高就下载、校验 SHA-256（最好再加签名）、安装。注意：
-- Windows 软件可以自己下载并替换，常见更新框架大多支持「静态文件加更新说明」。具体选哪个取决于软件技术栈（作者还没说明，需要先问）。
-- Android 在应用商店之外**无法静默更新**：软件只能下载 APK，再弹出系统安装确认；并且**每次发布必须用同一个签名密钥**，密钥丢了老用户就无法覆盖升级——务必备份，不要提交进仓库。
-- 更新地址必须 HTTPS；国内用户要把 `url` 指向国内可达的镜像。
-- 站点侧可以顺便让作品墙读这个文件，自动显示版本号和更新日期（当前是手动写在 `works.json` 里）。
-- 软件端的更新代码在软件自己的项目里（`F:\Codex-App\简单下载\`），不在本仓库。
+每次发布顺序：
+1. 在简单下载项目中完成打包，运行 `desktop/tools/write-update-manifest.ps1 -InstallerPath <包> -ReleaseInfoPath <载荷身份> -OutputPath <release-plan.json> -PrepareOnly`，生成带真实字节数和校验值的未发布准备文件。该文件不部署。
+2. 作为独立发布动作上传不可变 tag 附件与校验文件；确认匿名可下载、实际大小和 SHA-256 与本地一致，保留旧附件。
+3. 使用真实 `-PublishedAtUtc` 生成正式清单，放到 `updates/simple-download-windows/latest.json`；同次更新 `site/works.json` 的 Windows version、updatedAt、下载链接与发布页，二者必须指向同一包。上传失败不得修改正式清单。
+4. 运行 `node scripts/test-software-updates.mjs --require-manifest`，随后沿第 6 节完整验证、提交和部署；构建白名单包含 `updates`，禁止手改 dist。此测试自带小型隔离构建验证，不读写日报状态。
+5. 部署后重新读取线上清单，核对匿名附件链、大小、校验值；只有两者均可用才记为网站更新链路已交付。
+
+有活动日报 lease 时保留网站工作树与 dist，只在软件项目隔离目录准备 patch；不得获取或释放别人的租约、启动日报制作、修改日报正文或一并提交其他未提交内容。
 
 ---
-
 ## 12. 已知问题与待办（按紧急程度）
 
 1. **归档保留窗口「每个频道只保留最近 7 期」——已实施（2026-10-17）**。
@@ -363,7 +367,7 @@ $env:PORT = 4173; node scripts/serve.mjs      # 打开 http://127.0.0.1:4173 ；
    - 连带改动：① 首页计数器的标签由「简报期数」改为「近期简报」（它统计两个索引当前的期数之和，归档只剩 7 期后不再是历史累计）；② `scripts/check-daily-backlog.mjs` 把早于频道最早在档期次的日期视为已按窗口移除，不再当作历史缺口；③ 原先直接读 `data/` 里 2026-08～09 旧期次的测试，改读固定夹具 `scripts/fixtures/archive-seed/`（真实期次的副本，另由 `scripts/state-evidence-fixtures.mjs` 的 `archiveSeedRoot` / `materializeArchiveSeed` 提供），以后清理不会再弄坏这些测试；`scripts/test-health-browser.mjs` 改为取各频道索引里最新两期。新增 `scripts/test-prune-archive.mjs`，已挂进 `test-daily-operations.mjs`，CI 会跑。
    - 注意：`test-site.mjs`、`verify-build.mjs` 对索引里每一期检查 PNG 是有效 PNG，所以**仍然不能只删图或只改索引**；一律用上面的脚本。`data/embedded.js` 仍由 `build-embedded.mjs` 生成，禁止手改。
 2. `scripts/verify-home-redesign.mjs` 里的旧占位 slug 需要更新（见第 7 节）。
-3. 国内镜像、自动更新：未做（第 10、11 节）。
+3. 国内镜像未做（第 10 节）；Windows 更新客户端与清单契约已纳入 0.2.1，本地准备与线上发布状态按第 11 节分别核验。
 3a. **网站本体在国内访问卡（作者已提出，尚未选方案）**：站点在 GitHub Pages，GitHub 没有中国大陆节点，国内访问不稳定。下面是评估，不是事实，动手前先用国内测速站（如 boce、17ce、itdog）实测现状和候选方案：
    - 公开的对比测评（2024 年，较旧，需复测）认为：GitHub Pages 国内不稳定；Cloudflare Pages 国内延迟高（回源海外）；Vercel 国内较好但平台默认域名常被墙、必须绑自有域名，免费档有体积等限制；腾讯云 EdgeOne Pages 国内最好，其「国内站」需要 ICP 备案，「国际站」免备案但国内只能算「还行」。
    - 候选：① 国内对象存储 + CDN（阿里云 OSS、腾讯云 COS、七牛等），最稳，但域名在国内服务必须 ICP 备案（周期约数天到数周，未核实），需要账号和费用；② EdgeOne Pages 国际站，免备案、改动小，速度中等；③ 海外或香港轻量服务器自己跑 Nginx，国内访问取决于线路，要运维；④ 在 GitHub Pages 前面加 Cloudflare 免费 CDN，国内收益有限，不推荐作为主方案。
