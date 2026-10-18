@@ -17,7 +17,8 @@ const STEAM_LATE_AUTHORIZATIONS = Object.freeze({
   '2026-09-21': '允许',
   '2026-10-01': '允许今天一次晚采（推荐）',
   '2026-10-05': '我让你补齐',
-  '2026-10-13': '你来执行吧'
+  '2026-10-13': '你来执行吧',
+  '2026-10-18': '补发，所有的都对齐'
 });
 
 export function operationPaths(root, date) {
