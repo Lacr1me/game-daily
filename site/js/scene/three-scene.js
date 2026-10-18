@@ -1,37 +1,34 @@
-// 写实微缩街角书店：程序纹理、环境反射、可透过玻璃看到的店内、软阴影。
-// three.js 已内置在 vendor/three；不加载任何外部图片或字体文件。
+// 街角书店：按参考图重做的两层小店，蓝色窗框、酒红饰带、SPRINGHUES 招牌。
+// 天气随季节变化；街上的人数等于真实独立访客数。three.js 内置在 vendor/three。
 import * as THREE from '../../../vendor/three/three.module.min.js';
 
-const SHOP = {
-  x0: -2.8, x1: 1.2,
-  z0: -3.4, z1: 0.6,
-  h1: 2.8, h2: 2.5,
-  wall: 0.22
+const B = {
+  x0: -2.6, x1: 2.6,
+  z0: -2.6, z1: 2.6,
+  ground: 2.5,
+  band: 0.55,
+  upper: 2.1,
+  wall: 0.24
 };
 
-const DAY = {
-  sky: '#F4F6FF', skyLow: '#C9D3F0',
-  sun: '#FFFFFF', sunI: 3.4,
-  hemiSky: '#FFFFFF', hemiGround: '#8E9CCB', hemiI: 0.9,
-  exposure: 0.94,
-  interior: '#FFE7C2', interiorI: 1.6,
-  lamp: '#FFE7C2', lampI: 0,
-  window: '#C6D2F2',
-  glassOpacity: 0.1
+const C = {
+  white: '#F7F6F2',
+  whiteShade: '#E8E7E2',
+  blue: '#2B4CA0',
+  blueDeep: '#16306E',
+  burgundy: '#7C1B33',
+  burgundyDeep: '#5E1426',
+  roof: '#A9AEBA',
+  roofDark: '#8E939E',
+  base: '#B9BEC7',
+  baseTop: '#C7CBD3',
+  glass: '#CFDCF4',
+  warm: '#EFCB9A',
+  lamp: '#FFD79A',
+  metal: '#23262E'
 };
 
-const NIGHT = {
-  sky: '#070B22', skyLow: '#12204F',
-  sun: '#8FA2E8', sunI: 0.5,
-  hemiSky: '#5D6FB5', hemiGround: '#05081A', hemiI: 0.55,
-  exposure: 1.25,
-  interior: '#FFCE85', interiorI: 5.5,
-  lamp: '#FFD9A0', lampI: 14,
-  window: '#FFD9A0',
-  glassOpacity: 0.06
-};
-
-function canvasTexture(width, height, paint, { repeat = 1, repeatY = repeat } = {}) {
+function canvasTexture(width, height, paint, repeat = 1) {
   const canvas = document.createElement('canvas');
   canvas.width = width;
   canvas.height = height;
@@ -40,108 +37,104 @@ function canvasTexture(width, height, paint, { repeat = 1, repeatY = repeat } = 
   texture.colorSpace = THREE.SRGBColorSpace;
   texture.wrapS = THREE.RepeatWrapping;
   texture.wrapT = THREE.RepeatWrapping;
-  texture.repeat.set(repeat, repeatY);
+  texture.repeat.set(repeat, repeat);
   texture.anisotropy = 4;
   return texture;
 }
 
-function noise(ctx, width, height, amount, alpha) {
-  for (let i = 0; i < amount; i += 1) {
-    const v = Math.random();
-    ctx.fillStyle = v > 0.5 ? `rgba(255,255,255,${alpha})` : `rgba(0,0,0,${alpha})`;
-    const size = 1 + Math.random() * 2;
-    ctx.fillRect(Math.random() * width, Math.random() * height, size, size);
-  }
-}
-
-function makeAsphalt() {
-  return canvasTexture(512, 512, (ctx, w, h) => {
-    ctx.fillStyle = '#20264A';
+// 磨砂暖色室内：参考图里橱窗后是虚化的暖光
+function interiorBlur() {
+  return canvasTexture(256, 256, (ctx, w, h) => {
+    ctx.fillStyle = '#E7C9A2';
     ctx.fillRect(0, 0, w, h);
-    noise(ctx, w, h, 9000, 0.07);
-    ctx.strokeStyle = 'rgba(10,14,34,0.5)';
-    ctx.lineWidth = 1;
     for (let i = 0; i < 26; i += 1) {
-      ctx.beginPath();
-      let x = Math.random() * w;
-      let y = Math.random() * h;
-      ctx.moveTo(x, y);
-      for (let k = 0; k < 4; k += 1) {
-        x += (Math.random() - 0.5) * 80;
-        y += (Math.random() - 0.5) * 80;
-        ctx.lineTo(x, y);
-      }
-      ctx.stroke();
+      const g = ctx.createRadialGradient(
+        Math.random() * w, Math.random() * h, 4,
+        Math.random() * w, Math.random() * h, 40 + Math.random() * 60
+      );
+      g.addColorStop(0, i % 3 === 0 ? 'rgba(120,70,40,0.35)' : 'rgba(255,236,200,0.45)');
+      g.addColorStop(1, 'rgba(255,236,200,0)');
+      ctx.fillStyle = g;
+      ctx.fillRect(0, 0, w, h);
     }
-  }, { repeat: 6 });
-}
-
-function makeSidewalk() {
-  return canvasTexture(512, 512, (ctx, w, h) => {
-    ctx.fillStyle = '#E3E8F7';
-    ctx.fillRect(0, 0, w, h);
-    noise(ctx, w, h, 4000, 0.05);
-    ctx.strokeStyle = 'rgba(120,134,180,0.35)';
-    ctx.lineWidth = 3;
-    const step = w / 4;
-    for (let i = 0; i <= 4; i += 1) {
-      ctx.beginPath(); ctx.moveTo(i * step, 0); ctx.lineTo(i * step, h); ctx.stroke();
-      ctx.beginPath(); ctx.moveTo(0, i * step); ctx.lineTo(w, i * step); ctx.stroke();
-    }
-  }, { repeat: 3 });
-}
-
-function makeStucco() {
-  return canvasTexture(512, 512, (ctx, w, h) => {
-    ctx.fillStyle = '#F2F4FE';
-    ctx.fillRect(0, 0, w, h);
-    noise(ctx, w, h, 7000, 0.045);
-  }, { repeat: 2 });
-}
-
-function makeWood() {
-  return canvasTexture(256, 512, (ctx, w, h) => {
-    ctx.fillStyle = '#7A1226';
-    ctx.fillRect(0, 0, w, h);
-    for (let i = 0; i < 40; i += 1) {
-      ctx.fillStyle = `rgba(0,0,0,${0.03 + Math.random() * 0.05})`;
-      ctx.fillRect(Math.random() * w, 0, 1 + Math.random() * 3, h);
-    }
-  }, { repeat: 2 });
-}
-
-function makeAwning() {
-  return canvasTexture(512, 128, (ctx, w, h) => {
-    const stripes = 10;
-    const step = w / stripes;
-    for (let i = 0; i < stripes; i += 1) {
-      ctx.fillStyle = i % 2 === 0 ? '#F4F6FF' : '#90072A';
-      ctx.fillRect(i * step, 0, step + 1, h);
-    }
-    noise(ctx, w, h, 1200, 0.05);
-  }, { repeat: 1 });
-}
-
-function makeSignTexture(font) {
-  return canvasTexture(1024, 256, (ctx, w, h) => {
-    ctx.fillStyle = '#F4F6FF';
-    ctx.fillRect(0, 0, w, h);
-    ctx.fillStyle = '#90072A';
-    ctx.fillRect(0, 0, 26, h);
-    ctx.fillStyle = '#0D1850';
-    ctx.font = `700 112px ${font}`;
-    ctx.textBaseline = 'middle';
-    ctx.letterSpacing = '10px';
-    ctx.fillText('SLICE SHOP', 70, h / 2 + 4);
   });
 }
 
-function makeShadowTexture() {
-  return canvasTexture(256, 256, (ctx, w, h) => {
+// 彩色书脊
+function bookSpines() {
+  return canvasTexture(512, 256, (ctx, w, h) => {
+    ctx.fillStyle = '#3B2A20';
+    ctx.fillRect(0, 0, w, h);
+    const palette = ['#B6483F', '#2F5AA8', '#D8A23C', '#4E7A4A', '#8C3B63', '#E0D6C3', '#2B4CA0', '#7C1B33'];
+    let x = 0;
+    while (x < w) {
+      const bw = 8 + Math.random() * 14;
+      const bh = h * (0.62 + Math.random() * 0.36);
+      ctx.fillStyle = palette[Math.floor(Math.random() * palette.length)];
+      ctx.fillRect(x, h - bh, bw - 2, bh);
+      ctx.fillStyle = 'rgba(0,0,0,0.18)';
+      ctx.fillRect(x + bw - 3, h - bh, 2, bh);
+      x += bw;
+    }
+    // 书架横板
+    ctx.fillStyle = '#6B4B33';
+    for (const y of [0.32, 0.66]) {
+      ctx.fillRect(0, h * y, w, 9);
+    }
+  });
+}
+
+function signTexture() {
+  return canvasTexture(1024, 256, (ctx, w, h) => {
+    ctx.fillStyle = C.white;
+    ctx.fillRect(0, 0, w, h);
+    ctx.fillStyle = C.burgundy;
+    ctx.font = '800 122px "Arial Narrow", Impact, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('SPRINGHUES', w / 2, h / 2 + 6);
+  });
+}
+
+function posterTexture(kind) {
+  return canvasTexture(128, 160, (ctx, w, h) => {
+    ctx.fillStyle = '#F3F1EA';
+    ctx.fillRect(0, 0, w, h);
+    ctx.strokeStyle = '#8B8B86';
+    ctx.lineWidth = 5;
+    ctx.strokeRect(4, 4, w - 8, h - 8);
+    ctx.fillStyle = kind === 'leaf' ? '#4E7A4A' : kind === 'heart' ? '#7C1B33' : '#2B4CA0';
+    if (kind === 'leaf') {
+      ctx.beginPath();
+      ctx.ellipse(w / 2, h / 2 - 6, 20, 34, 0.5, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = '#4E7A4A';
+      ctx.lineWidth = 4;
+      ctx.beginPath();
+      ctx.moveTo(w / 2 - 14, h / 2 + 34);
+      ctx.lineTo(w / 2 + 10, h / 2 - 34);
+      ctx.stroke();
+    } else if (kind === 'heart') {
+      ctx.beginPath();
+      ctx.moveTo(w / 2, h / 2 + 22);
+      ctx.bezierCurveTo(w / 2 - 34, h / 2 - 10, w / 2 - 10, h / 2 - 40, w / 2, h / 2 - 14);
+      ctx.bezierCurveTo(w / 2 + 10, h / 2 - 40, w / 2 + 34, h / 2 - 10, w / 2, h / 2 + 22);
+      ctx.fill();
+    } else {
+      ctx.font = '800 74px "Arial Narrow", Impact, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(kind, w / 2, h / 2);
+    }
+  });
+}
+
+function circleTexture() {
+  return canvasTexture(64, 64, (ctx, w, h) => {
     const g = ctx.createRadialGradient(w / 2, h / 2, 0, w / 2, h / 2, w / 2);
-    g.addColorStop(0, 'rgba(0,0,0,0.55)');
-    g.addColorStop(0.55, 'rgba(0,0,0,0.22)');
-    g.addColorStop(1, 'rgba(0,0,0,0)');
+    g.addColorStop(0, 'rgba(255,255,255,1)');
+    g.addColorStop(0.5, 'rgba(255,255,255,0.85)');
+    g.addColorStop(1, 'rgba(255,255,255,0)');
     ctx.fillStyle = g;
     ctx.fillRect(0, 0, w, h);
   });
@@ -153,459 +146,421 @@ export function createExperience({ canvas, stage }) {
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = DAY.exposure;
+  renderer.toneMappingExposure = 1.12;
   renderer.outputColorSpace = THREE.SRGBColorSpace;
 
   const scene = new THREE.Scene();
   const camera = new THREE.OrthographicCamera(-6, 6, 6, -6, 0.1, 160);
-  const target = new THREE.Vector3(0, 2.15, 0.4);
-  const view = { azimuth: 0.58, polar: 1.16, radius: 32, zoom: 1 };
+  const target = new THREE.Vector3(0, 2.55, 0);
+  const view = { azimuth: 0.78, polar: 1.13, radius: 34, zoom: 1 };
 
-  function environment(top, mid) {
-    const c = document.createElement('canvas');
-    c.width = 256;
-    c.height = 128;
-    const ctx = c.getContext('2d');
-    const g = ctx.createLinearGradient(0, 0, 0, 128);
-    g.addColorStop(0, top);
-    g.addColorStop(0.52, mid);
-    g.addColorStop(1, '#05070F');
-    ctx.fillStyle = g;
-    ctx.fillRect(0, 0, 256, 128);
-    const tex = new THREE.CanvasTexture(c);
-    tex.mapping = THREE.EquirectangularReflectionMapping;
-    tex.colorSpace = THREE.SRGBColorSpace;
-    const pmrem = new THREE.PMREMGenerator(renderer);
-    const env = pmrem.fromEquirectangular(tex).texture;
-    pmrem.dispose();
-    tex.dispose();
-    return env;
-  }
-
-  const envDay = environment('#FFFFFF', '#C9D3F0');
-  const envNight = environment('#16224F', '#070B22');
-  scene.environment = envDay;
-
-  const hemi = new THREE.HemisphereLight(DAY.hemiSky, DAY.hemiGround, DAY.hemiI);
+  const hemi = new THREE.HemisphereLight('#FFFFFF', '#B9BEC7', 1.5);
   scene.add(hemi);
 
-  const sun = new THREE.DirectionalLight(DAY.sun, DAY.sunI);
-  sun.position.set(9, 14, 8);
+  const sun = new THREE.DirectionalLight('#FFFFFF', 2.4);
+  sun.position.set(8, 13, 9);
   sun.castShadow = true;
   sun.shadow.mapSize.set(2048, 2048);
-  sun.shadow.camera.left = -10;
-  sun.shadow.camera.right = 10;
-  sun.shadow.camera.top = 10;
-  sun.shadow.camera.bottom = -10;
+  sun.shadow.camera.left = -9;
+  sun.shadow.camera.right = 9;
+  sun.shadow.camera.top = 9;
+  sun.shadow.camera.bottom = -9;
   sun.shadow.camera.near = 1;
-  sun.shadow.camera.far = 55;
-  sun.shadow.bias = -0.0004;
+  sun.shadow.camera.far = 50;
+  sun.shadow.bias = -0.0005;
   sun.shadow.normalBias = 0.03;
-  sun.shadow.radius = 2.5;
+  sun.shadow.radius = 3;
   scene.add(sun);
 
-  const rim = new THREE.DirectionalLight('#9FB6FF', 0.55);
-  rim.position.set(-9, 6, -8);
-  scene.add(rim);
-
-  const textures = {
-    asphalt: makeAsphalt(),
-    sidewalk: makeSidewalk(),
-    stucco: makeStucco(),
-    wood: makeWood(),
-    awning: makeAwning(),
-    shadow: makeShadowTexture()
-  };
+  const fill = new THREE.DirectionalLight('#C6D2F2', 0.5);
+  fill.position.set(-8, 7, -7);
+  scene.add(fill);
 
   const materials = [];
-  function standard(options) {
+  function mat(options) {
     const m = new THREE.MeshStandardMaterial(options);
     materials.push(m);
     return m;
   }
 
-  const wallMat = standard({ color: '#FFFFFF', map: textures.stucco, roughness: 0.86, metalness: 0, envMapIntensity: 0.6 });
-  const trimMat = standard({ color: '#0D1850', roughness: 0.42, metalness: 0.25, envMapIntensity: 0.9 });
-  const bladeMat = standard({ color: '#90072A', roughness: 0.5, metalness: 0.1 });
-  const kleinMat = standard({ color: '#0C2B92', roughness: 0.55, metalness: 0.15 });
-  const woodMat = standard({ color: '#FFFFFF', map: textures.wood, roughness: 0.62, metalness: 0.05 });
-  const sidewalkMat = standard({ color: '#FFFFFF', map: textures.sidewalk, roughness: 0.9, metalness: 0 });
-  const asphaltMat = standard({ color: '#FFFFFF', map: textures.asphalt, roughness: 0.62, metalness: 0.05, envMapIntensity: 0.9 });
-  const awningMat = standard({ color: '#FFFFFF', map: textures.awning, roughness: 0.85, metalness: 0 });
-  const metalMat = standard({ color: '#1B2350', roughness: 0.35, metalness: 0.75, envMapIntensity: 1.1 });
-  const interiorMat = standard({ color: '#C9BCA6', roughness: 0.95, metalness: 0, envMapIntensity: 0.25 });
-  const shelfMat = standard({ color: '#8A6A50', roughness: 0.8, metalness: 0 });
+  const whiteMat = mat({ color: C.white, roughness: 0.95, metalness: 0 });
+  const shadeMat = mat({ color: C.whiteShade, roughness: 0.95, metalness: 0 });
+  const blueMat = mat({ color: C.blue, roughness: 0.72, metalness: 0.05 });
+  const blueDeepMat = mat({ color: C.blueDeep, roughness: 0.72, metalness: 0.05 });
+  const burgundyMat = mat({ color: C.burgundy, roughness: 0.78, metalness: 0 });
+  const roofMat = mat({ color: C.roof, roughness: 0.95, metalness: 0 });
+  const roofDarkMat = mat({ color: C.roofDark, roughness: 0.95, metalness: 0 });
+  const baseMat = mat({ color: C.base, roughness: 0.95, metalness: 0 });
+  const baseTopMat = mat({ color: C.baseTop, roughness: 0.95, metalness: 0 });
+  const metalMat = mat({ color: C.metal, roughness: 0.5, metalness: 0.4 });
   const glassMat = new THREE.MeshPhysicalMaterial({
-    color: '#DCE6FF',
-    roughness: 0.05,
+    color: C.glass,
+    roughness: 0.18,
     metalness: 0,
     transparent: true,
-    opacity: DAY.glassOpacity,
+    opacity: 0.28,
     depthWrite: false,
-    envMapIntensity: 0.45,
+    envMapIntensity: 0.5,
     side: THREE.DoubleSide
   });
   materials.push(glassMat);
 
-  const shadowMat = new THREE.MeshBasicMaterial({ map: textures.shadow, transparent: true, depthWrite: false, opacity: 0.85 });
-  materials.push(shadowMat);
+  const blurTex = interiorBlur();
+  const blurMat = mat({ color: '#FFFFFF', map: blurTex, roughness: 0.9, emissive: new THREE.Color(C.warm), emissiveIntensity: 0.12, emissiveMap: blurTex });
+  const spineTex = bookSpines();
+  const spineMat = mat({ color: '#FFFFFF', map: spineTex, roughness: 0.9 });
 
-  const block = new THREE.Group();
-  scene.add(block);
+  const root = new THREE.Group();
+  scene.add(root);
 
-  function box(parent, w, h, d, material, x, y, z, { cast = true, receive = true } = {}) {
+  function box(parent, w, h, d, material, x, y, z, opts = {}) {
     const mesh = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), material);
     mesh.position.set(x, y, z);
-    mesh.castShadow = cast;
-    mesh.receiveShadow = receive;
+    mesh.castShadow = opts.cast !== false;
+    mesh.receiveShadow = opts.receive !== false;
     parent.add(mesh);
     return mesh;
   }
 
-  function cyl(parent, rt, rb, h, seg, material, x, y, z) {
-    const mesh = new THREE.Mesh(new THREE.CylinderGeometry(rt, rb, h, seg), material);
+  function plane(parent, w, h, material, x, y, z, rotY = 0) {
+    const mesh = new THREE.Mesh(new THREE.PlaneGeometry(w, h), material);
     mesh.position.set(x, y, z);
-    mesh.castShadow = true;
-    mesh.receiveShadow = true;
+    mesh.rotation.y = rotY;
+    mesh.receiveShadow = false;
+    mesh.castShadow = false;
     parent.add(mesh);
     return mesh;
   }
 
-  function contact(parent, x, z, size, opacity = 0.85) {
-    const mesh = new THREE.Mesh(new THREE.PlaneGeometry(size, size), shadowMat.clone());
-    mesh.material.opacity = opacity;
-    mesh.rotation.x = -Math.PI / 2;
-    mesh.position.set(x, 0.012, z);
-    mesh.renderOrder = 1;
-    parent.add(mesh);
-    return mesh;
-  }
+  // ── 底座 ────────────────────────────────────────────────────
+  box(root, 7.9, 0.52, 7.9, baseMat, 0, -0.26, 0, { receive: true });
+  box(root, 7.8, 0.04, 7.8, baseTopMat, 0, 0.02, 0, { receive: true });
 
-  // ── 地块、马路、人行道 ───────────────────────────────────────
-  const S = 5.2;
-  const C = 0.75;
-  const shape = new THREE.Shape();
-  shape.moveTo(-S + C, -S);
-  shape.lineTo(S, -S);
-  shape.lineTo(S, S - C);
-  shape.lineTo(S - C, S);
-  shape.lineTo(-S, S);
-  shape.lineTo(-S, -S + C);
-  shape.closePath();
-  const slabGeo = new THREE.ExtrudeGeometry(shape, { depth: 0.85, bevelEnabled: false });
-  slabGeo.rotateX(-Math.PI / 2);
-  const slab = new THREE.Mesh(slabGeo, standard({ color: '#EDF1FC', roughness: 0.92, metalness: 0 }));
-  slab.position.y = -0.85;
-  slab.receiveShadow = true;
-  slab.castShadow = true;
-  block.add(slab);
+  const building = new THREE.Group();
+  root.add(building);
 
-  const road = box(block, 9.6, 0.04, 3.0, asphaltMat, 0, 0.02, 3.9, { cast: false });
-  road.material.map.repeat.set(7, 2);
-  box(block, 9.6, 0.18, 0.22, standard({ color: '#C9D1EA', roughness: 0.85, metalness: 0 }), 0, 0.09, 2.28, { cast: false });
-  const walk = box(block, 9.6, 0.1, 1.5, sidewalkMat, 0, 0.05, 1.5, { cast: false });
-  walk.material.map.repeat.set(6, 1);
+  const W = B.x1 - B.x0;
+  const D = B.z1 - B.z0;
+  const T = B.wall;
+  const H1 = B.ground;
+  const H2 = B.upper;
+  const BAND = B.band;
 
-  // 路面标线：略微抬高并禁用深度偏移冲突
-  const lineMat = new THREE.MeshBasicMaterial({ color: '#F4F6FF' });
-  materials.push(lineMat);
-  for (let i = 0; i < 8; i += 1) {
-    const stripe = new THREE.Mesh(new THREE.PlaneGeometry(0.42, 1.5), lineMat);
-    stripe.rotation.x = -Math.PI / 2;
-    stripe.position.set(-2.4 + i * 0.72, 0.052, 3.35);
-    block.add(stripe);
-  }
-  const centre = new THREE.Mesh(new THREE.PlaneGeometry(9.4, 0.1), new THREE.MeshBasicMaterial({ color: '#90072A' }));
-  centre.rotation.x = -Math.PI / 2;
-  centre.position.set(0, 0.05, 4.6);
-  block.add(centre);
+  // 一层墙体
+  box(building, W, H1, T, whiteMat, 0, H1 / 2, B.z1 - T / 2);
+  box(building, W, H1, T, whiteMat, 0, H1 / 2, B.z0 + T / 2);
+  box(building, T, H1, D, whiteMat, B.x0 + T / 2, H1 / 2, 0);
+  box(building, T, H1, D, whiteMat, B.x1 - T / 2, H1 / 2, 0);
 
-  // ── 小店主体 ────────────────────────────────────────────────
-  const shop = new THREE.Group();
-  block.add(shop);
+  // 招牌带（两层之间的一圈白带）
+  box(building, W + 0.08, BAND, D + 0.08, whiteMat, 0, H1 + BAND / 2, 0);
+  box(building, W + 0.1, 0.09, D + 0.1, burgundyMat, 0, H1 + 0.02, 0);
+  box(building, W + 0.1, 0.09, D + 0.1, burgundyMat, 0, H1 + BAND - 0.02, 0);
 
-  const W = SHOP.x1 - SHOP.x0;
-  const D = SHOP.z1 - SHOP.z0;
-  const cx = (SHOP.x0 + SHOP.x1) / 2;
-  const T = SHOP.wall;
+  // 二层墙体
+  box(building, W, H2, D, whiteMat, 0, H1 + BAND + H2 / 2, 0);
+  const topY = H1 + BAND + H2;
 
-  // 后墙、左墙
-  box(shop, W, SHOP.h1, T, wallMat, cx, SHOP.h1 / 2, SHOP.z0 + T / 2);
-  box(shop, T, SHOP.h1, D, wallMat, SHOP.x0 + T / 2, SHOP.h1 / 2, SHOP.z0 + D / 2);
-  // 室内地坪
-  box(shop, W - T, 0.06, D - T, interiorMat, cx, 0.03, SHOP.z0 + D / 2, { cast: false });
-  // 室内后墙板
-  box(shop, W - T * 2, SHOP.h1 - 0.1, 0.04, interiorMat, cx, SHOP.h1 / 2, SHOP.z0 + T + 0.05, { cast: false });
+  // 屋顶
+  box(building, W + 0.16, 0.16, D + 0.16, blueMat, 0, topY + 0.08, 0);
+  box(building, W - 0.1, 0.06, D - 0.1, roofMat, 0, topY + 0.17, 0);
+  box(building, W - 0.5, 0.12, D - 0.5, roofDarkMat, 0, topY + 0.22, 0, { cast: false });
 
-  // 一层正面墙：开窗与门的真实洞口
-  const fz = SHOP.z1 - T / 2;
-  const openX0 = -2.35, openX1 = -0.05;
-  const doorX0 = 0.35, doorX1 = 1.05;
-  const openY0 = 0.42, openY1 = 2.18;
-  // 左垛
-  box(shop, openX0 - SHOP.x0, SHOP.h1, T, wallMat, (SHOP.x0 + openX0) / 2, SHOP.h1 / 2, fz);
-  // 中垛
-  box(shop, doorX0 - openX1, SHOP.h1, T, wallMat, (openX1 + doorX0) / 2, SHOP.h1 / 2, fz);
-  // 右垛
-  box(shop, SHOP.x1 - doorX1, SHOP.h1, T, wallMat, (doorX1 + SHOP.x1) / 2, SHOP.h1 / 2, fz);
-  // 窗下墙
-  box(shop, openX1 - openX0, openY0, T, wallMat, (openX0 + openX1) / 2, openY0 / 2, fz);
-  // 窗上墙
-  box(shop, openX1 - openX0, SHOP.h1 - openY1, T, wallMat, (openX0 + openX1) / 2, (openY1 + SHOP.h1) / 2, fz);
-  // 门上墙
-  box(shop, doorX1 - doorX0, SHOP.h1 - 2.2, T, wallMat, (doorX0 + doorX1) / 2, (2.2 + SHOP.h1) / 2, fz);
+  // 一层基座酒红饰带
+  box(building, W + 0.06, 0.34, D + 0.06, burgundyMat, 0, 0.17, 0);
 
-  // 二楼
-  const y2 = SHOP.h1;
-  box(shop, W - 0.1, SHOP.h2, D - 0.1, wallMat, cx, y2 + SHOP.h2 / 2, SHOP.z0 + (D - 0.1) / 2);
-  // 楼层分隔线
-  box(shop, W + 0.04, 0.14, D + 0.04, trimMat, cx, y2 + 0.02, SHOP.z0 + D / 2);
-  // 屋顶沿口
-  box(shop, W + 0.2, 0.16, D + 0.2, trimMat, cx, y2 + SHOP.h2 + 0.08, SHOP.z0 + D / 2);
+  // ── 橱窗与门 ────────────────────────────────────────────────
+  // 窗面分层：贴墙的内景 0.008 → 玻璃 0.03 → 蓝框 0.05，永不同面。
+  const FACE = 0.008;
+  const GLASS = 0.03;
+  const FRAME = 0.05;
 
-  // 二楼窗（凹入的深色玻璃 + 白框）
-  const upperGlass = standard({ color: '#2A3670', roughness: 0.12, metalness: 0.5, envMapIntensity: 1.4 });
-  for (const wx of [-1.75, -0.35, 0.85]) {
-    box(shop, 0.92, 1.3, 0.06, upperGlass, wx, y2 + 1.35, SHOP.z1 - 0.02, { cast: false });
-    box(shop, 1.06, 0.08, 0.1, standard({ color: '#F4F6FF', roughness: 0.7 }), wx, y2 + 2.03, SHOP.z1 - 0.01);
-    box(shop, 1.06, 0.08, 0.1, standard({ color: '#F4F6FF', roughness: 0.7 }), wx, y2 + 0.67, SHOP.z1 - 0.01);
-    box(shop, 0.08, 1.3, 0.1, standard({ color: '#F4F6FF', roughness: 0.7 }), wx - 0.5, y2 + 1.35, SHOP.z1 - 0.01);
-    box(shop, 0.08, 1.3, 0.1, standard({ color: '#F4F6FF', roughness: 0.7 }), wx + 0.5, y2 + 1.35, SHOP.z1 - 0.01);
-  }
+  function shopWindow(face, a0, a1, y0, y1) {
+    const centre = (a0 + a1) / 2;
+    const len = a1 - a0;
+    const my = (y0 + y1) / 2;
+    const mh = y1 - y0;
 
-  // 右墙：同样留出真实洞口
-  const rx = SHOP.x1 - T / 2;
-  const sideZ0 = -2.05, sideZ1 = -0.15;
-  box(shop, T, SHOP.h1, sideZ0 - SHOP.z0, wallMat, rx, SHOP.h1 / 2, (SHOP.z0 + sideZ0) / 2);
-  box(shop, T, SHOP.h1, SHOP.z1 - sideZ1, wallMat, rx, SHOP.h1 / 2, (sideZ1 + SHOP.z1) / 2);
-  box(shop, T, 0.72, sideZ1 - sideZ0, wallMat, rx, 0.36, (sideZ0 + sideZ1) / 2);
-  box(shop, T, SHOP.h1 - 2.18, sideZ1 - sideZ0, wallMat, rx, (2.18 + SHOP.h1) / 2, (sideZ0 + sideZ1) / 2);
-
-  const sideGlass = new THREE.Mesh(new THREE.PlaneGeometry(sideZ1 - sideZ0, 1.46), glassMat);
-  sideGlass.rotation.y = Math.PI / 2;
-  sideGlass.position.set(SHOP.x1 - 0.06, 1.45, (sideZ0 + sideZ1) / 2);
-  shop.add(sideGlass);
-  box(shop, 0.1, 0.09, sideZ1 - sideZ0 + 0.1, trimMat, SHOP.x1 - 0.05, 0.72, (sideZ0 + sideZ1) / 2);
-  box(shop, 0.1, 0.09, sideZ1 - sideZ0 + 0.1, trimMat, SHOP.x1 - 0.05, 2.18, (sideZ0 + sideZ1) / 2);
-
-  // 店内：书架、书、柜台、吊灯、店员
-  const shelfX0 = SHOP.x0 + 0.5;
-  const shelfX1 = SHOP.x1 - 1.5;
-  for (let row = 0; row < 3; row += 1) {
-    const y = 0.55 + row * 0.62;
-    box(shop, shelfX1 - shelfX0, 0.05, 0.34, shelfMat, (shelfX0 + shelfX1) / 2, y, SHOP.z0 + 0.45, { cast: false });
-    for (let i = 0; i < 10; i += 1) {
-      const bw = 0.07 + Math.random() * 0.03;
-      const bh = 0.26 + Math.random() * 0.08;
-      const tone = i % 5 === 0 ? '#90072A' : i % 4 === 0 ? '#0537B4' : i % 3 === 0 ? '#F4F6FF' : '#0D1850';
-      const book = new THREE.Mesh(
-        new THREE.BoxGeometry(bw, bh, 0.24),
-        standard({ color: tone, roughness: 0.75 })
-      );
-      book.position.set(shelfX0 + 0.12 + i * 0.17, y + 0.03 + bh / 2, SHOP.z0 + 0.45);
-      book.castShadow = false;
-      shop.add(book);
+    if (face === 'z') {
+      const f = B.z1;
+      plane(building, len - 0.08, mh - 0.08, blurMat, centre, my, f + FACE);
+      plane(building, len - 0.14, mh - 0.14, glassMat, centre, my, f + GLASS);
+      box(building, len, 0.1, 0.12, blueMat, centre, y1, f + FRAME);
+      box(building, len, 0.1, 0.12, blueMat, centre, y0, f + FRAME);
+      box(building, 0.1, mh, 0.12, blueMat, a0, my, f + FRAME);
+      box(building, 0.1, mh, 0.12, blueMat, a1, my, f + FRAME);
+      box(building, 0.07, mh, 0.1, blueMat, centre - len / 6, my, f + FRAME);
+      box(building, 0.07, mh, 0.1, blueMat, centre + len / 6, my, f + FRAME);
+      box(building, len, 0.07, 0.1, blueMat, centre, my + mh / 5, f + FRAME);
+    } else {
+      const f = B.x1;
+      plane(building, len - 0.08, mh - 0.08, blurMat, f + FACE, my, centre, Math.PI / 2);
+      plane(building, len - 0.14, mh - 0.14, glassMat, f + GLASS, my, centre, Math.PI / 2);
+      box(building, 0.12, 0.1, len, blueMat, f + FRAME, y1, centre);
+      box(building, 0.12, 0.1, len, blueMat, f + FRAME, y0, centre);
+      box(building, 0.12, mh, 0.1, blueMat, f + FRAME, my, a0);
+      box(building, 0.12, mh, 0.1, blueMat, f + FRAME, my, a1);
+      box(building, 0.1, mh, 0.07, blueMat, f + FRAME, my, centre - len / 6);
+      box(building, 0.1, mh, 0.07, blueMat, f + FRAME, my, centre + len / 6);
+      box(building, 0.1, 0.07, len, blueMat, f + FRAME, my + mh / 5, centre);
     }
   }
-  // 橱窗前陈列台：给室内前景一点层次
-  box(shop, 1.7, 0.52, 0.46, shelfMat, -1.25, 0.26, -0.1, { cast: false });
-  box(shop, 1.76, 0.05, 0.52, standard({ color: '#F4F6FF', roughness: 0.6 }), -1.25, 0.545, -0.1, { cast: false });
-  for (let i = 0; i < 6; i += 1) {
-    const tone = ['#90072A', '#0537B4', '#0D1850', '#F4F6FF'][i % 4];
-    box(shop, 0.26, 0.06, 0.32, standard({ color: tone, roughness: 0.72 }), -1.95 + i * 0.28, 0.6, -0.1, { cast: false });
+
+  // 正面（+z）：左边大窗，右边双开门
+  shopWindow('z', -2.2, -0.2, 0.62, 2.18);
+  shopWindow('x', -2.2, 0.2, 0.62, 2.18);
+
+  // 双开门（+z）
+  const doorX = 1.15;
+  box(building, 1.5, 2.2, 0.14, blueMat, doorX, 1.1, B.z1 + 0.02);
+  plane(building, 0.6, 1.8, glassMat, doorX - 0.36, 1.15, B.z1 + 0.11);
+  plane(building, 0.6, 1.8, glassMat, doorX + 0.36, 1.15, B.z1 + 0.11);
+  box(building, 0.07, 1.9, 0.08, blueDeepMat, doorX, 1.15, B.z1 + 0.12);
+  box(building, 0.06, 0.06, 0.06, mat({ color: '#D9B45A', roughness: 0.35, metalness: 0.8 }), doorX - 0.14, 1.15, B.z1 + 0.14);
+  box(building, 0.06, 0.06, 0.06, mat({ color: '#D9B45A', roughness: 0.35, metalness: 0.8 }), doorX + 0.14, 1.15, B.z1 + 0.14);
+
+  // 门上方酒红横板
+  box(building, 1.6, 0.34, 0.12, burgundyMat, doorX, 2.32, B.z1 + 0.04);
+
+  // ── 二楼窗 ──────────────────────────────────────────────────
+  const upY0 = H1 + BAND + 0.28;
+  const upY1 = topY - 0.3;
+  const upMid = (upY0 + upY1) / 2;
+  const upH = upY1 - upY0;
+
+  function upperWindow(face, a0, a1, shelves) {
+    const centre = (a0 + a1) / 2;
+    const len = a1 - a0;
+    if (face === 'z') {
+      const f = B.z1;
+      plane(building, len - 0.1, upH - 0.1, shelves ? spineMat : blurMat, centre, upMid, f + FACE);
+      plane(building, len - 0.2, upH - 0.2, glassMat, centre, upMid, f + GLASS);
+      box(building, len, 0.12, 0.14, blueMat, centre, upY1, f + FRAME);
+      box(building, len, 0.12, 0.14, blueMat, centre, upY0, f + FRAME);
+      box(building, 0.12, upH, 0.14, blueMat, a0, upMid, f + FRAME);
+      box(building, 0.12, upH, 0.14, blueMat, a1, upMid, f + FRAME);
+      for (let i = 1; i < 3; i += 1) {
+        box(building, 0.08, upH, 0.12, blueMat, a0 + (len / 3) * i, upMid, f + FRAME);
+      }
+      box(building, len, 0.08, 0.12, blueMat, centre, upMid, f + FRAME);
+    } else {
+      const f = B.x1;
+      plane(building, len - 0.1, upH - 0.1, shelves ? spineMat : blurMat, f + FACE, upMid, centre, Math.PI / 2);
+      plane(building, len - 0.2, upH - 0.2, glassMat, f + GLASS, upMid, centre, Math.PI / 2);
+      box(building, 0.14, 0.12, len, blueMat, f + FRAME, upY1, centre);
+      box(building, 0.14, 0.12, len, blueMat, f + FRAME, upY0, centre);
+      box(building, 0.14, upH, 0.12, blueMat, f + FRAME, upMid, a0);
+      box(building, 0.14, upH, 0.12, blueMat, f + FRAME, upMid, a1);
+      for (let i = 1; i < 3; i += 1) {
+        box(building, 0.12, upH, 0.08, blueMat, f + FRAME, upMid, a0 + (len / 3) * i);
+      }
+      box(building, 0.12, 0.08, len, blueMat, f + FRAME, upMid, centre);
+    }
   }
 
-  box(shop, 1.5, 0.95, 0.6, shelfMat, 0.05, 0.475, -0.35, { cast: false });
-  box(shop, 1.56, 0.06, 0.66, standard({ color: '#F4F6FF', roughness: 0.6 }), 0.05, 0.98, -0.35);
-  // 店员
-  const clerk = new THREE.Group();
-  clerk.position.set(0.05, 0, -0.75);
-  const clerkBody = new THREE.Mesh(new THREE.CapsuleGeometry(0.14, 0.5, 4, 12), standard({ color: '#0D1850', roughness: 0.85 }));
-  clerkBody.position.y = 0.55;
-  clerkBody.castShadow = true;
-  clerk.add(clerkBody);
-  const clerkHead = new THREE.Mesh(new THREE.SphereGeometry(0.13, 16, 12), standard({ color: '#F1E3D4', roughness: 0.7 }));
-  clerkHead.position.y = 1.0;
-  clerkHead.castShadow = true;
-  clerk.add(clerkHead);
-  shop.add(clerk);
+  upperWindow('z', -2.25, 0.35, false);
+  upperWindow('x', -2.25, 0.6, true);
 
-  // 吊灯
-  const bulbMat = new THREE.MeshStandardMaterial({ color: '#FFE7C2', emissive: new THREE.Color('#FFCB88'), emissiveIntensity: 0.6 });
-  materials.push(bulbMat);
-  const bulb = new THREE.Mesh(new THREE.SphereGeometry(0.11, 16, 12), bulbMat);
-  bulb.position.set(0.1, 2.05, -1.1);
-  shop.add(bulb);
-  cyl(shop, 0.012, 0.012, 0.5, 6, trimMat, 0.1, 2.35, -1.1);
-
-  const interiorLight = new THREE.PointLight('#FFCB88', DAY.interiorI, 7, 2);
-  interiorLight.position.set(0.1, 2.0, -1.0);
-  shop.add(interiorLight);
-
-  // 玻璃：橱窗、门
-  const frontGlass = new THREE.Mesh(new THREE.PlaneGeometry(openX1 - openX0, openY1 - openY0), glassMat);
-  frontGlass.position.set((openX0 + openX1) / 2, (openY0 + openY1) / 2, SHOP.z1 - 0.05);
-  shop.add(frontGlass);
-
-  // 窗框与门框（略微嵌入墙体，避免共面）
-  box(shop, openX1 - openX0 + 0.1, 0.09, 0.16, trimMat, (openX0 + openX1) / 2, openY0, SHOP.z1 - 0.04);
-  box(shop, openX1 - openX0 + 0.1, 0.09, 0.16, trimMat, (openX0 + openX1) / 2, openY1, SHOP.z1 - 0.04);
-  box(shop, 0.08, openY1 - openY0, 0.16, trimMat, openX0, (openY0 + openY1) / 2, SHOP.z1 - 0.04);
-  box(shop, 0.08, openY1 - openY0, 0.16, trimMat, openX1, (openY0 + openY1) / 2, SHOP.z1 - 0.04);
-
-  box(shop, 0.76, 2.26, 0.18, woodMat, (doorX0 + doorX1) / 2, 1.13, SHOP.z1 - 0.05);
-  box(shop, 0.62, 0.06, 0.02, metalMat, (doorX0 + doorX1) / 2 + 0.1, 1.05, SHOP.z1 + 0.045);
-
-  // 遮阳篷（斜面 + 条纹贴图）
-  const awning = new THREE.Mesh(new THREE.BoxGeometry(2.7, 0.06, 1.05), awningMat);
-  awning.position.set(-1.2, 2.32, SHOP.z1 + 0.5);
-  awning.rotation.x = -0.32;
-  awning.castShadow = true;
-  awning.receiveShadow = true;
-  shop.add(awning);
-  box(shop, 2.72, 0.1, 0.1, trimMat, -1.2, 2.44, SHOP.z1 + 0.02);
-
-  // 招牌：Anton 字体贴图 + 自发光
-  const signCanvas = makeSignTexture('Anton, "Arial Narrow", sans-serif');
+  // 招牌：两面同字
+  const signTex = signTexture();
   const signMat = new THREE.MeshStandardMaterial({
-    map: signCanvas,
+    map: signTex,
     emissive: new THREE.Color('#FFFFFF'),
-    emissiveMap: signCanvas,
-    emissiveIntensity: 0.12,
-    roughness: 0.7
+    emissiveMap: signTex,
+    emissiveIntensity: 0.08,
+    roughness: 0.85
   });
   materials.push(signMat);
-  const sign = new THREE.Mesh(new THREE.BoxGeometry(2.9, 0.62, 0.1), signMat);
-  sign.position.set(-1.2, 2.86, SHOP.z1 + 0.06);
-  sign.castShadow = true;
-  shop.add(sign);
+  const signZ = new THREE.Mesh(new THREE.PlaneGeometry(3.4, 0.42), signMat);
+  signZ.position.set(-0.8, H1 + BAND / 2, B.z1 + 0.055);
+  building.add(signZ);
+  const signX = new THREE.Mesh(new THREE.PlaneGeometry(3.4, 0.42), signMat);
+  signX.position.set(B.x1 + 0.055, H1 + BAND / 2, -0.6);
+  signX.rotation.y = Math.PI / 2;
+  building.add(signX);
 
-  // 屋顶设备
-  box(shop, 0.7, 0.5, 0.55, metalMat, 0.6, y2 + SHOP.h2 + 0.42, -2.2);
-  box(shop, 0.2, 0.36, 0.2, metalMat, -1.5, y2 + SHOP.h2 + 0.36, -2.9);
-  cyl(shop, 0.06, 0.06, 1.2, 8, metalMat, -2.1, y2 + SHOP.h2 + 0.75, -3.0);
-
-  // ── 街道物件 ────────────────────────────────────────────────
-  const props = new THREE.Group();
-  block.add(props);
-
-  function streetLamp(x, z) {
+  // ── 壁灯 ────────────────────────────────────────────────────
+  const lampMeshes = [];
+  function wallLamp(x, y, z, face) {
     const g = new THREE.Group();
-    g.position.set(x, 0, z);
-    cyl(g, 0.055, 0.08, 3.4, 12, metalMat, 0, 1.7, 0);
-    const arm = cyl(g, 0.03, 0.03, 0.8, 8, metalMat, 0.34, 3.32, 0);
-    arm.rotation.z = Math.PI / 2;
-    const headMat = new THREE.MeshStandardMaterial({ color: '#F4F6FF', emissive: new THREE.Color('#FFD9A0'), emissiveIntensity: 0 });
-    materials.push(headMat);
-    const head = new THREE.Mesh(new THREE.BoxGeometry(0.4, 0.1, 0.24), headMat);
-    head.position.set(0.68, 3.3, 0);
-    g.add(head);
-    const light = new THREE.PointLight('#FFD9A0', 0, 7, 2);
-    light.position.set(0.68, 3.1, 0);
-    g.add(light);
-    props.add(g);
-    return { head: headMat, light };
-  }
-  const lamps = [streetLamp(-4.0, 1.55), streetLamp(4.1, 1.55), streetLamp(1.9, 4.9)];
-
-  function tree(x, z, s) {
-    const g = new THREE.Group();
-    g.position.set(x, 0, z);
-    g.scale.setScalar(s);
-    cyl(g, 0.1, 0.15, 1.3, 10, standard({ color: '#3B2A1E', roughness: 0.95 }), 0, 0.65, 0);
-    const foliageMat = standard({ color: '#0C2B92', roughness: 0.9, flatShading: true });
-    for (const [dx, dy, dz, r] of [[0, 1.75, 0, 0.72], [-0.45, 1.4, 0.15, 0.5], [0.42, 1.48, -0.12, 0.46], [0.05, 2.2, -0.05, 0.42]]) {
-      const blob = new THREE.Mesh(new THREE.IcosahedronGeometry(r, 1), foliageMat);
-      blob.position.set(dx, dy, dz);
-      blob.castShadow = true;
-      blob.receiveShadow = true;
-      g.add(blob);
-    }
-    props.add(g);
-    contact(props, x, z, 1.8 * s, 0.5);
-    return foliageMat;
-  }
-  const trees = [tree(-3.7, 0.9, 0.9), tree(3.5, 0.7, 1.0), tree(3.0, -3.6, 1.1)];
-
-  // 花箱
-  for (const [x, z] of [[-2.9, 2.05], [1.9, 2.05]]) {
-    box(props, 1.1, 0.36, 0.42, standard({ color: '#0D1850', roughness: 0.8 }), x, 0.18, z);
-    const bush = new THREE.Mesh(new THREE.IcosahedronGeometry(0.3, 1), standard({ color: '#0537B4', roughness: 0.9, flatShading: true }));
-    bush.position.set(x, 0.55, z);
-    bush.castShadow = true;
-    props.add(bush);
-  }
-
-  // 长椅
-  const benchWood = standard({ color: '#6B4A32', roughness: 0.85, metalness: 0 });
-  box(props, 1.4, 0.07, 0.42, benchWood, -3.3, 0.45, 2.05);
-  box(props, 1.4, 0.36, 0.06, benchWood, -3.3, 0.66, 2.24);
-  for (const dx of [-0.58, 0.58]) box(props, 0.06, 0.42, 0.06, metalMat, -3.3 + dx, 0.21, 2.05);
-
-  // 自行车
-  const bike = new THREE.Group();
-  bike.position.set(2.5, 0, 1.6);
-  bike.rotation.y = -0.35;
-  for (const dx of [-0.42, 0.42]) {
-    const wheel = new THREE.Mesh(new THREE.TorusGeometry(0.25, 0.035, 10, 24), metalMat);
-    wheel.position.set(dx, 0.25, 0);
-    wheel.rotation.y = Math.PI / 2;
-    wheel.castShadow = true;
-    bike.add(wheel);
-  }
-  box(bike, 0.8, 0.04, 0.04, bladeMat, 0, 0.48, 0);
-  box(bike, 0.04, 0.36, 0.04, bladeMat, -0.28, 0.31, 0);
-  box(bike, 0.04, 0.52, 0.04, bladeMat, 0.3, 0.33, 0);
-  props.add(bike);
-  contact(props, 2.5, 1.6, 1.5, 0.45);
-
-  // 邮筒与垃圾桶
-  cyl(props, 0.15, 0.17, 0.62, 14, bladeMat, 2.95, 0.31, 2.1);
-  cyl(props, 0.16, 0.16, 0.05, 14, metalMat, 2.95, 0.65, 2.1);
-  cyl(props, 0.19, 0.17, 0.66, 14, standard({ color: '#1B2350', roughness: 0.7 }), -1.9, 0.33, 2.15);
-
-  // 路牌
-  cyl(props, 0.025, 0.025, 1.6, 8, metalMat, -0.6, 0.8, 2.35);
-  box(props, 0.56, 0.24, 0.03, standard({ color: '#F4F6FF', roughness: 0.6 }), -0.6, 1.5, 2.35);
-  box(props, 0.56, 0.24, 0.03, kleinMat, -0.6, 1.24, 2.35);
-
-  // ── 行人 ────────────────────────────────────────────────────
-  const people = [];
-  const skinMat = standard({ color: '#E8D6C4', roughness: 0.75 });
-  for (let i = 0; i < 5; i += 1) {
-    const g = new THREE.Group();
-    const coat = standard({ color: i % 3 === 0 ? '#0D1850' : i % 3 === 1 ? '#0C2B92' : '#90072A', roughness: 0.85 });
-    const body = new THREE.Mesh(new THREE.CapsuleGeometry(0.16, 0.62, 6, 14), coat);
-    body.position.y = 0.52;
+    g.position.set(x, y, z);
+    if (face === 'x') g.rotation.y = Math.PI / 2;
+    const arm = new THREE.Mesh(new THREE.BoxGeometry(0.05, 0.05, 0.34), metalMat);
+    arm.position.set(0, 0, 0.17);
+    arm.castShadow = true;
+    g.add(arm);
+    const body = new THREE.Mesh(new THREE.CylinderGeometry(0.09, 0.11, 0.2, 10), metalMat);
+    body.position.set(0, -0.16, 0.34);
     body.castShadow = true;
     g.add(body);
-    const head = new THREE.Mesh(new THREE.SphereGeometry(0.135, 18, 14), skinMat);
-    head.position.y = 1.02;
+    const glowMat = new THREE.MeshStandardMaterial({
+      color: '#FFF3D6', emissive: new THREE.Color(C.lamp), emissiveIntensity: 0
+    });
+    materials.push(glowMat);
+    const glow = new THREE.Mesh(new THREE.CylinderGeometry(0.075, 0.085, 0.16, 10), glowMat);
+    glow.position.set(0, -0.17, 0.34);
+    g.add(glow);
+    building.add(g);
+    lampMeshes.push(glowMat);
+    return g;
+  }
+  wallLamp(-2.75, 2.05, B.z1 + 0.02, 'z');
+  wallLamp(2.1, 1.55, B.z1 + 0.02, 'z');
+  wallLamp(B.x1 + 0.02, 2.05, -2.35, 'x');
+  wallLamp(B.x1 + 0.02, 1.55, 1.9, 'x');
+
+  // ── 海报卡 ──────────────────────────────────────────────────
+  function poster(kind, x, y, z, rotY) {
+    const tex = posterTexture(kind);
+    const m = new THREE.MeshStandardMaterial({ map: tex, roughness: 0.9 });
+    materials.push(m);
+    const mesh = new THREE.Mesh(new THREE.PlaneGeometry(0.34, 0.42), m);
+    mesh.position.set(x, y, z);
+    mesh.rotation.y = rotY;
+    building.add(mesh);
+  }
+  poster('P', -0.75, 2.05, B.z1 + 0.02, 0);
+  poster('N', -0.75, 1.55, B.z1 + 0.02, 0);
+  poster('leaf', -0.75, 1.05, B.z1 + 0.02, 0);
+  poster('A', B.x1 + 0.02, 2.05, 1.55, Math.PI / 2);
+  poster('N', B.x1 + 0.02, 1.55, 1.55, Math.PI / 2);
+  poster('heart', B.x1 + 0.02, 1.05, 1.55, Math.PI / 2);
+  poster('heart', -2.75, 1.55, B.z1 + 0.02, 0);
+  poster('leaf', B.x1 + 0.02, 1.55, -1.75, Math.PI / 2);
+
+  // ── 门口立牌 ────────────────────────────────────────────────
+  const board = new THREE.Group();
+  board.position.set(1.15, 0, B.z1 + 0.85);
+  board.rotation.y = -0.25;
+  const boardMat = mat({ color: '#9A6B44', roughness: 0.9 });
+  const boardTex = posterTexture('leaf');
+  const boardFaceMat = new THREE.MeshStandardMaterial({ map: boardTex, roughness: 0.9 });
+  materials.push(boardFaceMat);
+  for (const side of [-1, 1]) {
+    const panel = new THREE.Mesh(new THREE.BoxGeometry(0.62, 0.86, 0.04), boardMat);
+    panel.position.set(0, 0.5, side * 0.12);
+    panel.rotation.x = side * 0.22;
+    panel.castShadow = true;
+    board.add(panel);
+    const face = new THREE.Mesh(new THREE.PlaneGeometry(0.52, 0.72), boardFaceMat);
+    face.position.set(0, 0.5, side * 0.15);
+    face.rotation.x = side * 0.22;
+    face.rotation.y = side > 0 ? 0 : Math.PI;
+    board.add(face);
+  }
+  root.add(board);
+
+  // ── 盆栽小树 ────────────────────────────────────────────────
+  const trees = [];
+  function potTree(x, z) {
+    const g = new THREE.Group();
+    g.position.set(x, 0, z);
+    const pot = new THREE.Mesh(new THREE.CylinderGeometry(0.24, 0.19, 0.34, 12), burgundyMat);
+    pot.position.y = 0.17;
+    pot.castShadow = true;
+    pot.receiveShadow = true;
+    g.add(pot);
+    const trunk = new THREE.Mesh(new THREE.CylinderGeometry(0.05, 0.07, 0.8, 8), mat({ color: '#6B4B33', roughness: 0.9 }));
+    trunk.position.y = 0.7;
+    trunk.castShadow = true;
+    g.add(trunk);
+    const foliageMat = mat({ color: '#2F6B4F', roughness: 0.9, flatShading: true });
+    for (const [dx, dy, dz, r] of [[0, 1.25, 0, 0.3], [-0.18, 1.05, 0.08, 0.22], [0.16, 1.1, -0.06, 0.2]]) {
+      const blob = new THREE.Mesh(new THREE.IcosahedronGeometry(r, 0), foliageMat);
+      blob.position.set(dx, dy, dz);
+      blob.castShadow = true;
+      g.add(blob);
+    }
+    root.add(g);
+    trees.push(foliageMat);
+    return g;
+  }
+  potTree(-3.7, 3.3);
+  potTree(3.7, 3.3);
+  potTree(-3.7, -3.2);
+
+  // ── 行人：数量等于独立访客 ──────────────────────────────────
+  const people = [];
+  const pathRadius = 3.1;
+  function makePerson(i) {
+    const g = new THREE.Group();
+    const coatColors = [C.blue, C.burgundy, C.blueDeep, '#3F6B4E'];
+    const coat = mat({ color: coatColors[i % coatColors.length], roughness: 0.9 });
+    const skin = mat({ color: '#E8D3BC', roughness: 0.85 });
+    const body = new THREE.Mesh(new THREE.CapsuleGeometry(0.13, 0.42, 4, 12), coat);
+    body.position.y = 0.42;
+    body.castShadow = true;
+    g.add(body);
+    const head = new THREE.Mesh(new THREE.SphereGeometry(0.115, 16, 12), skin);
+    head.position.y = 0.79;
     head.castShadow = true;
     g.add(head);
-    g.position.set(-3.6 + i * 1.6, 0, 1.35 + (i % 2) * 0.5);
-    g.userData = { dir: i % 2 === 0 ? 1 : -1, speed: 0.34 + (i % 3) * 0.1, phase: i * 1.6 };
-    block.add(g);
-    contact(block, g.position.x, g.position.z, 0.7, 0.35);
-    people.push(g);
+    const legMat = mat({ color: '#2A2E38', roughness: 0.9 });
+    for (const dx of [-0.06, 0.06]) {
+      const leg = new THREE.Mesh(new THREE.CapsuleGeometry(0.045, 0.24, 4, 8), legMat);
+      leg.position.set(dx, 0.16, 0);
+      leg.castShadow = true;
+      g.add(leg);
+    }
+    g.userData = { angle: (i / Math.max(1, people.length)) * Math.PI * 2, speed: 0.12 + (i % 4) * 0.018, phase: i * 1.3 };
+    root.add(g);
+    return g;
   }
 
-  // ── 季节粒子 ────────────────────────────────────────────────
-  const COUNT = 260;
-  const positions = new Float32Array(COUNT * 3);
-  for (let i = 0; i < COUNT; i += 1) {
-    positions[i * 3] = (Math.random() - 0.5) * 15;
-    positions[i * 3 + 1] = Math.random() * 8;
-    positions[i * 3 + 2] = (Math.random() - 0.5) * 15;
+  function setPeople(count) {
+    const target = Math.max(0, Math.min(30, Math.round(count)));
+    while (people.length < target) {
+      const person = makePerson(people.length);
+      person.userData.angle = (people.length / Math.max(1, target)) * Math.PI * 2;
+      people.push(person);
+    }
+    while (people.length > target) {
+      const person = people.pop();
+      root.remove(person);
+    }
+    people.forEach((person, index) => {
+      person.userData.angle = (index / Math.max(1, people.length)) * Math.PI * 2;
+    });
   }
-  const particleGeo = new THREE.BufferGeometry();
-  particleGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-  const particleMat = new THREE.PointsMaterial({
-    color: new THREE.Color('#F4F6FF'), size: 0.07, transparent: true, opacity: 0.9, depthWrite: false
+  setPeople(1);
+
+  // ── 天气 ────────────────────────────────────────────────────
+  const PETAL_COUNT = 260;
+  const petalGeo = new THREE.BufferGeometry();
+  const petalPos = new Float32Array(PETAL_COUNT * 3);
+  for (let i = 0; i < PETAL_COUNT; i += 1) {
+    const r = 4.8 + Math.random() * 2.4;
+    const a = Math.random() * Math.PI * 2;
+    petalPos[i * 3] = Math.cos(a) * r;
+    petalPos[i * 3 + 1] = Math.random() * 6;
+    petalPos[i * 3 + 2] = Math.sin(a) * r;
+  }
+  petalGeo.setAttribute('position', new THREE.BufferAttribute(petalPos, 3));
+  const petalMat = new THREE.PointsMaterial({
+    color: new THREE.Color('#F4F6FF'), size: 0.09, transparent: true, opacity: 0.9, depthWrite: false,
+    map: circleTexture(), alphaTest: 0.15
   });
-  materials.push(particleMat);
-  const particles = new THREE.Points(particleGeo, particleMat);
-  block.add(particles);
+  materials.push(petalMat);
+  const petals = new THREE.Points(petalGeo, petalMat);
+  root.add(petals);
+
+  // 雨：线段
+  const RAIN_COUNT = 240;
+  const rainGeo = new THREE.BufferGeometry();
+  const rainPos = new Float32Array(RAIN_COUNT * 6);
+  for (let i = 0; i < RAIN_COUNT; i += 1) {
+    const x = (Math.random() - 0.5) * 13;
+    const y = Math.random() * 8;
+    const z = (Math.random() - 0.5) * 13;
+    rainPos[i * 6] = x; rainPos[i * 6 + 1] = y; rainPos[i * 6 + 2] = z;
+    rainPos[i * 6 + 3] = x + 0.04; rainPos[i * 6 + 4] = y - 0.42; rainPos[i * 6 + 5] = z;
+  }
+  rainGeo.setAttribute('position', new THREE.BufferAttribute(rainPos, 3));
+  const rainMat = new THREE.LineBasicMaterial({ color: new THREE.Color('#9FB8E8'), transparent: true, opacity: 0.55 });
+  materials.push(rainMat);
+  const rain = new THREE.LineSegments(rainGeo, rainMat);
+  rain.visible = false;
+  root.add(rain);
 
   // ── 状态 ────────────────────────────────────────────────────
   let theme = 'day';
@@ -620,42 +575,39 @@ export function createExperience({ canvas, stage }) {
 
   function applyTheme(next) {
     theme = next;
-    const c = next === 'night' ? NIGHT : DAY;
-    scene.environment = next === 'night' ? envNight : envDay;
-    renderer.toneMappingExposure = c.exposure;
-    hemi.color = new THREE.Color(c.hemiSky);
-    hemi.groundColor = new THREE.Color(c.hemiGround);
-    hemi.intensity = c.hemiI;
-    sun.color = new THREE.Color(c.sun);
-    sun.intensity = c.sunI;
-    rim.intensity = next === 'night' ? 0.22 : 0.55;
-    interiorLight.color = new THREE.Color(c.interior);
-    interiorLight.intensity = c.interiorI;
-    bulbMat.emissiveIntensity = next === 'night' ? 2.2 : 0.5;
-    glassMat.opacity = c.glassOpacity;
-    glassMat.color = new THREE.Color(c.window);
-    for (const lamp of lamps) {
-      lamp.head.emissiveIntensity = next === 'night' ? 2.4 : 0;
-      lamp.light.intensity = c.lampI;
-    }
-    signMat.emissiveIntensity = next === 'night' ? 1.1 : 0.12;
-    upperGlass.emissive = new THREE.Color(next === 'night' ? '#FFD9A0' : '#000000');
-    upperGlass.emissiveIntensity = next === 'night' ? 1.6 : 0;
-    upperGlass.color = new THREE.Color(next === 'night' ? '#7A5B3A' : '#2A3670');
+    const night = next === 'night';
+    renderer.toneMappingExposure = night ? 1.15 : 1.0;
+    hemi.color = new THREE.Color(night ? '#6E7FC0' : '#FFFFFF');
+    hemi.groundColor = new THREE.Color(night ? '#1A2140' : '#B9BEC7');
+    hemi.intensity = night ? 0.7 : 1.5;
+    sun.color = new THREE.Color(night ? '#8FA2E8' : '#FFFFFF');
+    sun.intensity = night ? 0.55 : 2.4;
+    fill.intensity = night ? 0.2 : 0.5;
+    for (const m of lampMeshes) m.emissiveIntensity = night ? 2.6 : 0;
+    signMat.emissiveIntensity = night ? 0.9 : 0.08;
+    blurMat.emissiveIntensity = night ? 0.85 : 0.12;
+    glassMat.opacity = night ? 0.18 : 0.28;
     applySeason(season);
   }
 
   function applySeason(next) {
     season = next;
-    const day = theme === 'day';
-    const foliage = day
-      ? (next === 'spring' ? '#0C2B92' : next === 'summer' ? '#0537B4' : next === 'autumn' ? '#90072A' : '#EDF1FC')
-      : (next === 'winter' ? '#C9D4F2' : '#0B1A52');
-    for (const mat of trees) mat.color = new THREE.Color(foliage);
-    particleMat.color = new THREE.Color(next === 'autumn' ? '#90072A' : day ? '#F4F6FF' : '#9FB3E8');
-    particleMat.size = next === 'winter' ? 0.1 : next === 'autumn' ? 0.1 : 0.06;
-    particleMat.opacity = next === 'spring' ? 0.75 : 0.9;
-    asphaltMat.envMapIntensity = next === 'winter' ? 1.3 : 0.9;
+    const night = theme === 'night';
+    const foliage = night
+      ? (next === 'winter' ? '#DDE6F8' : '#1B3E63')
+      : (next === 'spring' ? '#3E8E63' : next === 'summer' ? '#2F7A52' : next === 'autumn' ? '#B05A2A' : '#E3E9F3');
+    for (const m of trees) m.color = new THREE.Color(foliage);
+
+    rain.visible = next === 'spring';
+    petals.visible = next !== 'spring';
+
+    const color = next === 'autumn' ? '#B05A2A' : next === 'winter' ? '#FFFFFF' : '#F7EDF0';
+    petalMat.color = new THREE.Color(color);
+    petalMat.size = next === 'winter' ? 0.11 : next === 'autumn' ? 0.12 : 0.08;
+    petalMat.opacity = next === 'summer' ? 0.5 : 0.9;
+    if (next === 'summer') petalMat.color = new THREE.Color('#BFE0FF');
+    roofMat.color = new THREE.Color(next === 'winter' ? '#E8EDF7' : C.roof);
+    baseTopMat.color = new THREE.Color(next === 'winter' ? '#DDE4F0' : C.baseTop);
   }
 
   function resize() {
@@ -664,7 +616,7 @@ export function createExperience({ canvas, stage }) {
     const h = Math.max(320, rect.height);
     renderer.setSize(w, h, false);
     const aspect = w / h;
-    const size = 4.15;
+    const size = 4.05;
     camera.left = -size * aspect;
     camera.right = size * aspect;
     camera.top = size;
@@ -673,44 +625,62 @@ export function createExperience({ canvas, stage }) {
   }
 
   function updateCamera() {
-    const azimuth = view.azimuth + Math.sin(time * 0.16) * 0.025 + parallax * 0.045;
-    const polar = view.polar;
-    const radius = view.radius;
+    const azimuth = view.azimuth + Math.sin(time * 0.15) * 0.02 + parallax * 0.05;
     camera.position.set(
-      target.x + radius * Math.sin(polar) * Math.sin(azimuth),
-      target.y + radius * Math.cos(polar),
-      target.z + radius * Math.sin(polar) * Math.cos(azimuth)
+      target.x + view.radius * Math.sin(view.polar) * Math.sin(azimuth),
+      target.y + view.radius * Math.cos(view.polar),
+      target.z + view.radius * Math.sin(view.polar) * Math.cos(azimuth)
     );
     camera.lookAt(target);
-    camera.zoom = (0.88 + 0.12 * (1 - Math.pow(1 - Math.min(1, intro), 3))) * view.zoom;
+    camera.zoom = (0.9 + 0.1 * (1 - Math.pow(1 - Math.min(1, intro), 3))) * view.zoom;
     camera.updateProjectionMatrix();
   }
 
   function step(dt) {
     time += dt;
-    intro = Math.min(1, intro + dt / 1.7);
+    intro = Math.min(1, intro + dt / 1.5);
     parallax += (parallaxTarget - parallax) * Math.min(1, dt * 3);
     view.azimuth += (azimuthTarget - view.azimuth) * Math.min(1, dt * 6);
 
     for (const person of people) {
-      const data = person.userData;
-      person.position.x += data.dir * data.speed * dt;
-      if (person.position.x > 4.3) person.position.x = -4.3;
-      if (person.position.x < -4.3) person.position.x = 4.3;
-      person.position.y = Math.abs(Math.sin(time * 5 + data.phase)) * 0.025;
+      person.userData.angle += person.userData.speed * dt * 0.35;
+      const a = person.userData.angle;
+      person.position.set(Math.cos(a) * pathRadius, Math.abs(Math.sin(time * 4 + person.userData.phase)) * 0.02, Math.sin(a) * pathRadius);
+      person.rotation.y = -a + Math.PI / 2;
     }
 
-    const pos = particleGeo.attributes.position.array;
-    for (let i = 0; i < COUNT; i += 1) {
-      pos[i * 3 + 1] -= dt * (0.6 + (i % 5) * 0.22) * (season === 'summer' ? 0.3 : 1);
-      pos[i * 3] += Math.sin(time * 1.2 + i) * dt * 0.16;
-      if (pos[i * 3 + 1] < 0) {
-        pos[i * 3 + 1] = 8;
-        pos[i * 3] = (Math.random() - 0.5) * 15;
-        pos[i * 3 + 2] = (Math.random() - 0.5) * 15;
+    if (petals.visible) {
+      const pos = petalGeo.attributes.position.array;
+      for (let i = 0; i < PETAL_COUNT; i += 1) {
+        pos[i * 3 + 1] -= dt * (0.35 + (i % 5) * 0.14);
+        pos[i * 3] += Math.sin(time * 0.9 + i) * dt * 0.22;
+        if (pos[i * 3 + 1] < 0) {
+          pos[i * 3 + 1] = 5.5;
+          const a = Math.random() * Math.PI * 2;
+          const r = 4.4 + Math.random() * 2.6;
+          pos[i * 3] = Math.cos(a) * r;
+          pos[i * 3 + 2] = Math.sin(a) * r;
+        }
       }
+      petalGeo.attributes.position.needsUpdate = true;
     }
-    particleGeo.attributes.position.needsUpdate = true;
+
+    if (rain.visible) {
+      const pos = rainGeo.attributes.position.array;
+      for (let i = 0; i < RAIN_COUNT; i += 1) {
+        const fall = dt * 7;
+        pos[i * 6 + 1] -= fall;
+        pos[i * 6 + 4] -= fall;
+        if (pos[i * 6 + 1] < 0) {
+          const x = (Math.random() - 0.5) * 13;
+          const z = (Math.random() - 0.5) * 13;
+          pos[i * 6] = x; pos[i * 6 + 1] = 6.5; pos[i * 6 + 2] = z;
+          pos[i * 6 + 3] = x + 0.04; pos[i * 6 + 4] = 6.05; pos[i * 6 + 5] = z;
+        }
+      }
+      rainGeo.attributes.position.needsUpdate = true;
+    }
+
     updateCamera();
   }
 
@@ -726,7 +696,7 @@ export function createExperience({ canvas, stage }) {
       if (!dragging) return;
       const dx = (event.clientX - lastX) / rect.width;
       lastX = event.clientX;
-      azimuthTarget = Math.max(-0.85, Math.min(0.85, azimuthTarget - dx * 1.5));
+      azimuthTarget = Math.max(-0.55, Math.min(0.55, azimuthTarget - dx * 1.1));
     });
     const end = () => { dragging = false; };
     canvas.addEventListener('pointerup', end);
@@ -747,6 +717,7 @@ export function createExperience({ canvas, stage }) {
     step,
     resize,
     setTheme: applyTheme,
-    setSeason: applySeason
+    setSeason: applySeason,
+    setPeople
   };
 }

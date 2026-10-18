@@ -44,6 +44,7 @@ export async function loadStats() {
   let hasCounter = false;
   let snapshotAt = '';
   let isLive = false;
+  let visitorCount = null;
   const sources = [live, snapshot];
   for (const result of sources) {
     if (result.status !== 'fulfilled' || !result.value) continue;
@@ -52,7 +53,11 @@ export async function loadStats() {
     const visitors = data.visitors !== undefined ? data.visitors : data.count_unique;
     if (visits === undefined) continue;
     set('visits', count(visits));
-    if (visitors !== undefined) set('visitors', count(visitors));
+    if (visitors !== undefined) {
+      set('visitors', count(visitors));
+      const parsed = Number(visitors);
+      if (Number.isFinite(parsed)) visitorCount = parsed;
+    }
     if (data.updated) snapshotAt = String(data.updated);
     hasCounter = true;
     isLive = result === live;
@@ -74,5 +79,5 @@ export async function loadStats() {
     set('works', count(works.value.works.length));
   }
 
-  return { counter: hasCounter, snapshotAt, live: isLive };
+  return { counter: hasCounter, snapshotAt, live: isLive, visitors: visitorCount };
 }

@@ -131,6 +131,11 @@ if (stage && canvas && canvas.getContext) {
   }
 
   loadStats().then((result) => {
+    // 街上的人数 = 独立访客数（上限 30，至少 1）
+    if (experience && typeof experience.setPeople === 'function') {
+      const visitors = Number.isFinite(result.visitors) ? result.visitors : 1;
+      experience.setPeople(Math.max(1, visitors));
+    }
     if (!note) return;
     if (result.counter && result.live) {
       note.textContent = '数据实时读取，匿名统计，不使用 Cookie。';
