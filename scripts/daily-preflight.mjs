@@ -34,6 +34,56 @@ function issueEvidenceTime(value, brief, now) {
     backfilledAt > Date.parse(`${brief.date}T11:00:00+08:00`) &&
     time >= backfilledAt && time <= now.getTime();
 }
+
+// Completed publication journals retain the exact comparison manifest. Rebuild
+// its saved hash after pruning; retained bodies and metadata must still match.
+async function verifyPrunedArchive(root, { date, channel, proof, manifest }) {
+  const paths = operationPaths(root, date);
+  const state = await readJson(paths.state);
+  const publication = state.channels?.[channel]?.publication;
+  const journal = await readJson(path.join(paths.directory, `${date}-${channel}-publish-transaction.json`));
+  if (publication?.step !== 'complete' || journal.step !== 'complete' || journal.id !== publication.transactionId ||
+      journal.identity?.date !== date || journal.identity.channel !== channel ||
+      journal.identity.candidateSha256 !== proof.candidateSha256 || journal.identity.pngSha256 !== proof.pngSha256 ||
+      publication.candidateSha256 !== proof.candidateSha256 || publication.pngSha256 !== proof.pngSha256) {
+    fail('PROOF_CHANGED', '归档保留复核需要匹配当前产物的已完成发布事务');
+  }
+  const before = journal.manifestBefore;
+  const after = journal.manifestAfter;
+  if (!Array.isArray(before?.editions) || !Array.isArray(after?.editions) || manifest?.editions?.length !== 7 ||
+      new Set(manifest.editions.map(item => item.date)).size !== 7 ||
+      JSON.stringify(after.editions.filter(item => item.date !== date)) !== JSON.stringify(before.editions) ||
+      after.editions.filter(item => item.date === date).length !== 1 ||
+      JSON.stringify(after.editions.find(item => item.date === date)) !== JSON.stringify(manifest.editions.find(item => item.date === date))) {
+    fail('PROOF_CHANGED', '归档变化不符合已完成事务及七期保留窗口');
+  }
+  const cutoff = [...manifest.editions].sort((a, b) => a.date.localeCompare(b.date))[0].date;
+  const removed = before.editions.filter(item => item.date < cutoff);
+  const retained = before.editions.filter(item => item.date >= cutoff);
+  const currentPrior = manifest.editions.filter(item => item.issue < proof.issue);
+  if (!removed.length || JSON.stringify(currentPrior) !== JSON.stringify(retained)) {
+    fail('PROOF_CHANGED', '仅允许移除窗口以前的期次，保留期元数据不得变化');
+  }
+  const identities = [];
+  for (const edition of selectArchiveComparisonEditions(before, date, channel)) {
+    const file = exact(root, edition.file, archiveContentPath(root, edition.date, channel));
+    let sha256;
+    try { sha256 = digest(await readFile(file)); }
+    catch (error) {
+      if (error.code !== 'ENOENT' || !removed.some(item => item.date === edition.date)) throw error;
+      const historical = await readJson(operationPaths(root, edition.date).readiness);
+      const identity = historical.channels?.[channel];
+      if (historical.date !== edition.date || identity?.issue !== edition.issue || !/^[a-f0-9]{64}$/.test(identity?.candidateSha256 || '')) fail('PROOF_CHANGED', '已移除归档缺少原正文身份');
+      sha256 = identity.candidateSha256;
+    }
+    identities.push({ edition, sha256 });
+  }
+  const recent = proof.preflight.archiveComparisonVersion ? identities : identities.filter(item => item.edition.date < date);
+  const original = digest(JSON.stringify({ editions: before.editions, recent }));
+  if (original !== proof.preflight.dependencyHashes?.archive) fail('PROOF_CHANGED', '保留正文或历史依赖身份与原就绪证明不符');
+  return { journalId: journal.id, removedDates: removed.map(item => item.date), originalDependencySha256: original };
+}
+
 export async function preflightChannel(root, options = {}) {
   const { date, channel } = options;
   const now = new Date(options.now ?? Date.now());
@@ -53,6 +103,7 @@ export async function preflightChannel(root, options = {}) {
   if (options.requireReady) proof = await gate('readiness', () => inspectReadyArtifacts(root, date, channel, options));
   result.proof = proof;
   const artifactOptions = { candidate: options.candidate || (options.recovery ? archiveContentPath(root, date, channel) : proof?.candidate), html: options.html || proof?.html, png: options.png || proof?.renderPng, publicPng: options.publicPng || proof?.publicPng, renderEvidence: options.renderEvidence || proof?.preflight?.evidencePaths?.renderEvidence, visualEvidence: options.visualEvidence || proof?.preflight?.evidencePaths?.visualEvidence };
+  let archiveManifest;
   const brief = await gate('content', async () => {
     const candidate = exact(root, artifactOptions.candidate, options.recovery ? archiveContentPath(root, date, channel) : canonical);
     const buffer = await readFile(candidate);
@@ -98,6 +149,7 @@ export async function preflightChannel(root, options = {}) {
   await gate('archive', async () => {
     if (!brief) fail('CONTENT_REQUIRED', '归档门禁依赖有效正文');
     const manifest = await readJson(path.join(root, 'data', ...(channel === 'minsheng' ? ['minsheng'] : []), 'index.json'));
+    archiveManifest = manifest;
     if (!Array.isArray(manifest.editions)) fail('ARCHIVE_INVALID','归档索引无效');
     const current = manifest.editions.filter(item => item.date === date);
     if (current.length && !options.recovery) fail('ARCHIVE_CONFLICT','目标期已在正式索引');
@@ -151,7 +203,12 @@ export async function preflightChannel(root, options = {}) {
     result.evidencePaths = { ...result.evidencePaths, visualEvidence: path.relative(root, evidenceFile).replaceAll('\\','/') };
   });
   if (proof) await gate('proofFreshness', async () => {
-    for (const [key, value] of Object.entries(result.dependencyHashes)) if (proof.preflight.dependencyHashes?.[key] !== value) fail('PROOF_CHANGED', `就绪后依赖发生变化：${key}`);
+    for (const [key, value] of Object.entries(result.dependencyHashes)) {
+      if (proof.preflight.dependencyHashes?.[key] === value) continue;
+      if (key === 'archive' && options.recovery && result.gates.archive?.ok) {
+        result.archiveRetention = await verifyPrunedArchive(root, { date, channel, proof, manifest: archiveManifest });
+      } else fail('PROOF_CHANGED', `就绪后依赖发生变化：${key}`);
+    }
     if (Object.keys(proof.preflight.dependencyHashes || {}).some(key => !result.dependencyHashes[key])) fail('PROOF_CHANGED', '旧证明依赖无法重新核验');
   });
   result.ok = Object.values(result.gates).every(item => item.ok) && result.reasons.length === 0;
