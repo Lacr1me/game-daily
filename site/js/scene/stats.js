@@ -1,5 +1,5 @@
 // 面板数字全部来自真实来源：GoatCounter 的每日快照与仓库里的归档清单。
-// 快照由 .github/workflows/scene-stats.yml 定时写入，避免浏览器跨域取数。
+// 快照由 scripts/build-site.mjs 在构建时刷新，避免浏览器跨域取数。
 const COUNTER_URL = 'data/scene-stats.json';
 
 function withTimeout(url, ms) {
