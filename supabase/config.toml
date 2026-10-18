@@ -11,3 +11,6 @@ verify_jwt = false
 
 [functions.manage-admin-logs]
 verify_jwt = false
+
+[functions.scene-stats]
+verify_jwt = false

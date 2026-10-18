@@ -226,7 +226,9 @@ if (canvas && stage) {
 
   loadStats().then((result) => {
     if (!fallbackNote) return;
-    if (result.counter) {
+    if (result.counter && result.live) {
+      fallbackNote.textContent = '访问数据来自 GoatCounter，实时读取，匿名统计，不使用 Cookie。';
+    } else if (result.counter) {
       const at = result.snapshotAt ? new Date(result.snapshotAt) : null;
       const stamp = at && !Number.isNaN(at.getTime())
         ? ' 统计更新于 ' + at.toLocaleString('zh-CN', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' }) + '。'
