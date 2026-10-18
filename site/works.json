@@ -148,12 +148,14 @@
       ],
       "tags": ["网页", "等轴测", "四季", "数据"],
       "platform": "Web",
+      "model": "DeepSeek Flash 1017",
       "version": "1.0.0",
       "updatedAt": "2026-10-19",
       "isNew": true,
       "links": [
         { "kind": "visit", "label": "打开作品", "href": "works/slice-shop/" }
       ],
+      "prompt": "works/slice-shop/prompt.txt",
       "cover": { "kind": "placeholder", "label": "SLICE SHOP" },
       "shots": [],
       "layout": { "size": "m" },
