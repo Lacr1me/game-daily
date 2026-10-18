@@ -45,7 +45,9 @@ export function parseDocument(html) {
     const ids = (row.getAttribute('data-ds-appid') || '').split(',').filter(Boolean);
     if (!ids.length || ids.some(id => !/^\d+$/.test(id))) throw new Error('CARD_APPID_MISSING');
     const price = text(row, '.discount_final_price') || text(row, '.search_price');
-    if (!price || !/[¥￥]/.test(price)) throw new Error('CARD_CNY_PRICE_MISSING');
+    // Discovery preserves every identity, including unpriced expansion cards.
+    // A missing price is unresolved and never proves a qualifying offer.
+    if (price && !/[¥￥]/.test(price)) throw new Error('CARD_CNY_PRICE_MISSING');
     return { index, appIds: ids, title: text(row, '.title'), url: url.href, originalPrice: text(row, '.discount_original_price'), currentPrice: price, discount: text(row, '.discount_pct') || text(row, '.search_discount'), priceFinalMinor: row.getAttribute('data-price-final') };
   });
   if (cards.some(card => !card.title)) throw new Error('CARD_TITLE_MISSING');

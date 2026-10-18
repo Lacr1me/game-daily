@@ -44,6 +44,9 @@ test('saved official response parsing includes every card and fails closed', asy
     const parsed = await page.evaluate(parseDocument, html);
     assert.equal(parsed.appIds.length, 50);
     assert.equal(parsed.cards[49].currentPrice, '¥20');
+    const unpriced = await page.evaluate(parseDocument, html.replace('<div class="discount_final_price">¥20</div>', ''));
+    assert.equal(unpriced.appIds.length, 50);
+    assert.equal(unpriced.cards[0].currentPrice, null);
     await assert.rejects(page.evaluate(parseDocument, '<html></html>'), /CARDS_MISSING/);
     await assert.rejects(page.evaluate(parseDocument, html.replace('store.steampowered.com', 'example.org')), /CARD_DOMAIN_REJECTED/);
     await assert.rejects(page.evaluate(parseDocument, html.replace('¥20', '$20')), /CARD_CNY_PRICE_MISSING/);
