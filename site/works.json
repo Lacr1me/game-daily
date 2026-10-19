@@ -162,6 +162,31 @@
       "layout": { "size": "m" },
       "source": null
     },
+    {
+      "slug": "springhues-bookstore",
+      "category": "web",
+      "name": "四季书屋 · 访客风景",
+      "intro": "从参考图重新搭建的街角书屋，在四季与昼夜之间，把本站真实匿名访问计数变成门前的访客风景。",
+      "details": [
+        { "h": "一间新书屋", "p": "独立搭建的双层街角书店：米白墙面、蓝色窗框、酒红饰带，玻璃后有书架与暖灯。旋转视角看看两面橱窗，也可以推开蓝色的门。" },
+        { "h": "四季与昼夜", "p": "春日花瓣、夏日绿荫、秋日落叶与冬日积雪随季节切换；夜幕降临时，壁灯与书店亮起。支持鼠标拖动、滚轮缩放、触屏双指缩放和键盘操作。" },
+        { "h": "访客风景", "p": "场景中的人物由本站 GoatCounter 匿名汇总计数驱动，最多展示 24 位代表人物。人物不是具体访客，不表示当前在线人数，也不能用来识别或追踪个人。" },
+        { "h": "真实统计", "p": "展示已有统计服务返回的真实计数，公开计数缓存最长约 4 小时。读取失败时显示标注时间的保存快照或不可用状态，不用演示数字替代；作品页不新增本地存储。" }
+      ],
+      "tags": ["网页", "三维", "四季", "访客"],
+      "platform": "Web",
+      "version": "1.0.0",
+      "updatedAt": "2026-10-19",
+      "isNew": true,
+      "links": [
+        { "kind": "visit", "label": "打开书屋", "href": "works/springhues-bookstore/" }
+      ],
+      "prompt": "works/springhues-bookstore/prompt.txt",
+      "cover": { "kind": "placeholder", "label": "BOOKSTORE" },
+      "shots": [],
+      "layout": { "size": "l" },
+      "source": null
+    },
     {"slug":"daily-game","category":"daily","name":"游戏日报","intro":"每天 11:00 更新的游戏资讯、整合包、Mod 与 Steam 优惠。","tags":["日报","游戏"],"isNew":false,"links":[{"kind":"channel","label":"进入频道","href":"game/"}],"cover":{"kind":"placeholder","label":"DAILY NO."},"layout":{"size":"m"},"source":{"type":"daily-archive","manifest":"data/index.json","base":"game/","fallbackTitle":"游戏日报"}},
     {"slug":"daily-minsheng","category":"daily","name":"民生日报","intro":"每天 11:00 更新的国内外要闻、科技、AI 与行情。","tags":["日报","民生"],"isNew":false,"links":[{"kind":"channel","label":"进入频道","href":"minsheng/"}],"cover":{"kind":"placeholder","label":"DAILY NO."},"layout":{"size":"m"},"source":{"type":"daily-archive","manifest":"data/minsheng/index.json","base":"minsheng/","fallbackTitle":"民生日报"}}
   ]

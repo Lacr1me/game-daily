@@ -15,7 +15,7 @@ await verifySoftwareUpdates(output, { sourceRoot: root });
 for (const file of ["brand.css", "portal.css", "site-shell.js"]) await access(path.join(output, file));
 const adminIndex = path.join(output, "admin", "messages", "index.html");
 const hasAdmin = await access(adminIndex).then(() => true, () => false);
-const required = ["index.html", "home.css", "portal-data.js", "portal.js", "THIRD-PARTY-NOTICES.txt", "data/resources.json", "message-config.js", "message-client.js", "messages/index.html", "messages/app.js", "privacy/index.html", "works/slice-shop/index.html", "app.js", "game/index.html", "minsheng/index.html", "minsheng/message-link.css", "minsheng/aligned-layout.css", "brand-assets/springhues-logo.png", "data/index.json", "data/minsheng/index.json", ".nojekyll"];
+const required = ["index.html", "home.css", "portal-data.js", "portal.js", "THIRD-PARTY-NOTICES.txt", "data/resources.json", "message-config.js", "message-client.js", "messages/index.html", "messages/app.js", "privacy/index.html", "works/slice-shop/index.html", "works/springhues-bookstore/index.html", "app.js", "game/index.html", "minsheng/index.html", "minsheng/message-link.css", "minsheng/aligned-layout.css", "brand-assets/springhues-logo.png", "data/index.json", "data/minsheng/index.json", ".nojekyll"];
 if (hasAdmin) required.push("admin/messages/index.html", "admin/messages/admin.css", "admin/messages/client.js", "admin/messages/app.js");
 for (const file of required) {
   await access(path.join(output, file));
