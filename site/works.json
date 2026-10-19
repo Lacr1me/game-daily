@@ -175,6 +175,7 @@
       ],
       "tags": ["网页", "三维", "四季", "访客"],
       "platform": "Web",
+      "model": "GPT-6 Astra ULTRA",
       "version": "1.0.0",
       "updatedAt": "2026-10-19",
       "isNew": true,
