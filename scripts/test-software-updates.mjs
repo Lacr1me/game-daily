@@ -24,12 +24,36 @@ export function validateSoftwareUpdate(value, works) {
   const base = 'https://github.com/Lacr1me/springhues-releases/releases/';
   const installer = new URL(value.installerUrl);
   assert.equal(installer.protocol, 'https:'); assert.equal(installer.username, ''); assert.equal(installer.password, ''); assert.equal(installer.port, ''); assert.equal(installer.search, ''); assert.equal(installer.hash, '');
-  assert.ok(value.installerUrl.startsWith(`${base}download/${tag}/`));
-  assert.match(value.installerUrl.slice(`${base}download/${tag}/`.length), /^[A-Za-z0-9._-]+\.exe$/);
+  assert.equal(value.installerUrl, `${base}download/${tag}/SimpleDownload-${value.version}-Windows-Setup.exe`, 'legacy client requires the exact ASCII compatibility asset');
   assert.equal(value.releasePageUrl, `${base}tag/${tag}`);
   const work = works.works.find(item => item.slug === 'simple-download-windows');
   assert.ok(work, 'Windows work entry required'); assert.equal(work.version, value.version);
-  assert.ok(work.links.some(link => link.kind === 'download' && link.href === value.installerUrl), 'download button must match immutable manifest package');
+  if (work.releaseAssets !== undefined) {
+    const assets = work.releaseAssets;
+    assert.deepEqual(Object.keys(assets).sort(), ['releaseId','installer','legacyInstaller','archive'].sort(), 'explicit release asset mapping');
+    assert.equal(assets.releaseId, value.releaseId, 'all assets belong to the same release');
+    const validateAsset = (asset, name, displayName) => {
+      assert.deepEqual(Object.keys(asset).sort(), ['fileName','displayName','url','size','sha256'].sort(), 'release asset fields');
+      assert.equal(asset.fileName, name);
+      assert.equal(asset.displayName, displayName, 'Chinese versioned display name');
+      assert.equal(asset.url, `${base}download/${tag}/${encodeURIComponent(name)}`, 'asset must use this release and exact filename');
+      assert.ok(Number.isSafeInteger(asset.size) && asset.size >= 2 && asset.size <= 2147483648, 'asset size');
+      assert.match(asset.sha256, /^[a-f0-9]{64}$/);
+    };
+    validateAsset(assets.installer, `SimpleDownload-${value.version}-Windows-Setup.exe`, `简单下载-${value.version}.exe`);
+    validateAsset(assets.legacyInstaller, `SimpleDownload-${value.version}-Windows-Setup.exe`, `简单下载-${value.version}.exe`);
+    validateAsset(assets.archive, `SimpleDownload-${value.version}.zip`, `简单下载-${value.version}.zip`);
+    assert.deepEqual(assets.installer, assets.legacyInstaller, 'website and legacy client share one installer asset');
+    for (const asset of [assets.installer, assets.legacyInstaller]) {
+      assert.equal(asset.size, value.size, 'primary and compatibility installers have identical bytes');
+      assert.equal(asset.sha256, value.sha256, 'primary and compatibility installers have identical digest');
+    }
+    assert.equal(assets.legacyInstaller.url, value.installerUrl);
+    assert.ok(work.links.some(link => link.kind === 'download' && link.href === assets.installer.url && link.label === assets.installer.displayName), 'primary download shows the Chinese installer name and uses its actual remote URL');
+    assert.ok(work.links.some(link => link.kind === 'download' && link.href === assets.archive.url && link.label === assets.archive.displayName), 'archive download shows the Chinese ZIP name and uses its actual remote URL');
+  } else {
+    assert.ok(work.links.some(link => link.kind === 'download' && link.href === value.installerUrl), 'legacy entry download must match immutable manifest package');
+  }
   assert.ok(work.links.some(link => link.href === value.releasePageUrl), 'release page must match');
   return value;
 }
@@ -53,6 +77,38 @@ async function selfTest() {
   let checks = 1;
   for (const mutation of [{platform:'android'},{architecture:'arm64'},{schemaVersion:2},{version:'0.2.1-beta'},{releaseId:'../invalid'},{size:0},{sha256:'bad'},{fileName:'run.cmd'},{installerUrl:value.installerUrl.replace('Lacr1me','someone')},{releasePageUrl:value.releasePageUrl+'-other'},{publishedAtUtc:'bad'},{unexpected:true}]) { assert.throws(() => validateSoftwareUpdate({...value,...mutation}, works)); checks++; }
   assert.throws(() => validateSoftwareUpdate(value, {works:[]})); checks++;
+  // Keep the legacy schema consumed by published 0.2.1 clients. Only website metadata
+  // carries Chinese display names and exact ASCII remote names; no new manifest fields.
+  const assetBase = value.installerUrl.slice(0, value.installerUrl.lastIndexOf('/') + 1);
+  const releaseAssets = {
+    releaseId:value.releaseId,
+    installer:{fileName:'SimpleDownload-0.2.1-Windows-Setup.exe',displayName:'简单下载-0.2.1.exe',url:value.installerUrl,size:value.size,sha256:value.sha256},
+    legacyInstaller:{fileName:'SimpleDownload-0.2.1-Windows-Setup.exe',displayName:'简单下载-0.2.1.exe',url:value.installerUrl,size:value.size,sha256:value.sha256},
+    archive:{fileName:'SimpleDownload-0.2.1.zip',displayName:'简单下载-0.2.1.zip',url:assetBase+'SimpleDownload-0.2.1.zip',size:4,sha256:'2'.repeat(64)}
+  };
+  const mappedWorks = {works:[{slug:'simple-download-windows',version:value.version,releaseAssets,links:[
+    {kind:'download',label:releaseAssets.installer.displayName,href:releaseAssets.installer.url},{kind:'download',label:releaseAssets.archive.displayName,href:releaseAssets.archive.url},{kind:'visit',href:value.releasePageUrl}
+  ]}]};
+  validateSoftwareUpdate(value,mappedWorks); checks++;
+  for (const mutation of [
+    work => { work.releaseAssets.releaseId = 'different-0001'; },
+    work => { work.releaseAssets.installer.sha256 = '3'.repeat(64); },
+    work => { work.releaseAssets.legacyInstaller.size++; },
+    work => { work.releaseAssets.installer.url = work.releaseAssets.installer.url.replace('Lacr1me','someone'); },
+    work => { work.releaseAssets.archive.fileName = 'SimpleDownload-0.2.0.zip'; },
+    work => { work.releaseAssets.installer.displayName = '简单下载-0.2.0.exe'; },
+    work => { work.releaseAssets.installer.url = assetBase + encodeURIComponent('简单下载-0.2.1.exe'); },
+    work => { work.links[0].label = work.releaseAssets.installer.fileName; },
+    work => { work.releaseAssets.installer.url += '?download=1'; },
+    work => { work.links = work.links.filter(link => link.href !== work.releaseAssets.installer.url); },
+    work => { work.links = work.links.filter(link => link.href !== work.releaseAssets.archive.url); },
+    work => { work.releaseAssets.installer.fileName = 'SimpleDownload-0.2.1.exe'; work.releaseAssets.installer.url = assetBase + 'SimpleDownload-0.2.1.exe'; }
+  ]) {
+    const changed = structuredClone(mappedWorks); mutation(changed.works[0]);
+    assert.throws(() => validateSoftwareUpdate(value,changed)); checks++;
+  }
+  assert.throws(() => validateSoftwareUpdate({...value,fileName:'简单下载-0.2.1.exe'},mappedWorks)); checks++;
+  assert.throws(() => validateSoftwareUpdate({...value,installerUrl:assetBase+encodeURIComponent('简单下载-0.2.1.exe')},mappedWorks)); checks++;
   const directory = await mkdtemp(path.join(tmpdir(), 'simple-download-update-'));
   try {
     // Execute the real build script in a small isolated source tree, never alter production dist.

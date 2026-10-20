@@ -339,6 +339,12 @@ $env:PORT = 4173; node scripts/serve.mjs      # 打开 http://127.0.0.1:4173 ；
 
 2026-10-18 用户明确授权正式发布最新 Windows 0.2.1 安装包、更新清单与网站下载入口，覆盖此前“仅交付本地安装包”的范围。当前分发标识为 `20261018T152358Z-ede0cc5e`，MCP 组件随包；Android 发布流程不变。提交与附件上传不替代部署后的线上核对。
 
+2026-10-20 的 Windows **0.2.11** 发布沿用本节流程，新增下述已实测兼容映射；上段及下方 0.2.1 值保留为初次接入记录。GitHub 将本次中文安装包资产名规范化为 `-0.2.11.exe`，随后通过 API PATCH 中文 `name` 仍无法保留，中文 `label` 可以保留。因此本次本地安装包、ZIP 及 ZIP 内安装程序仍为 `简单下载-0.2.11` 对应后缀；远程安装资产使用 `SimpleDownload-0.2.11-Windows-Setup.exe`，ZIP 使用 `SimpleDownload-0.2.11.zip`，配中文 label。网站 `releaseAssets` 显式记录实际远程 `fileName`、中文 `displayName`、固定 URL、大小及摘要，下载按钮显示中文名称并链接真实 ASCII 地址，不能构造不存在的中文 URL。
+
+已发布 0.2.1 客户端拒绝带版本中文 `fileName` 或新增清单字段，故正式 `latest.json` 仍保留原 15 字段与 `fileName=简单下载.exe`，指向同一 tag 的 `SimpleDownload-0.2.11-Windows-Setup.exe`。网站 `installer` 与 `legacyInstaller` 共用该安装资产，无需重复上传相同文件。生成清单使用产品脚本的 `-LegacyClientCompatibility`；网站测试要求两个角色的 URL、fileName、displayName、size、sha256 完全一致且同 releaseId，资产核验按实际远程文件去重，ZIP 单独核验。最终仍需真实旧／新客户端与匿名下载验证；文件映射通过不替代发布或部署成功。
+
+本次实际 releaseId 为 `20261020T083459Z-4689b1da`，GitHub Release `418168496` 于 `2026-10-20T09:09:14Z` 公开；固定 tag 为 `simple-download-windows-v0.2.11-20261020T083459Z-4689b1da`。安装资产 `658746018` 为 201574269 字节，ZIP 资产 `658799148` 为 195397509 字节，两个资产 label 均为对应中文版本名，附有 `SHA256SUMS.txt`。这些 API 事实不替代匿名完整下载、网站部署或本机安装验收。
+
 - 固定入口：`https://springhues.com/updates/simple-download-windows/latest.json`。只发布已验证的真实安装包清单，不放占位清单；客户端在缺少清单时显示“更新服务尚未上线”。
 - 清单 schemaVersion=1，appId=`simple-download-windows`，channel=`stable`，platform=`windows`，architecture=`x64`。软件 version 由用户指定，目前为 `0.2.1`。
 - 每次打包前生成独立 `releaseId` 和 UTC `releaseCreatedAtUtc`，随安装载荷保存 `release-info.json`。同版新分发也可更新，软件版本不加后缀；旧版本、旧分发不降级。

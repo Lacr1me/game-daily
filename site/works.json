@@ -15,22 +15,78 @@
       "platform": "Windows",
       "intro": "集链接解析、网页资源嗅探、批量下载和作品管理于一体的桌面下载工具，支持抖音、哔哩哔哩、小红书等平台公开内容。",
       "details": [
-        { "h": "", "p": "集链接解析、网页资源嗅探、批量下载和作品管理于一体的桌面下载工具。支持抖音、哔哩哔哩、小红书等平台公开内容解析，可保存视频、音频、图片、图集及网页中的文档、压缩包等资源。" },
-        { "h": "", "p": "内置多标签浏览器，支持浏览时嗅探资源、多选及批量加入下载队列；提供可配置的多线程分段下载、暂停续传和真实阶段进度展示，下载成品按类型与日期自动整理。" },
-        { "h": "", "p": "界面采用可自由拖拽、缩放和排列的卡片布局，配有微型浏览器卡片、悬浮窗及多套全局主题，兼顾下载管理与桌面个性化。" }
+        {
+          "h": "",
+          "p": "集链接解析、网页资源嗅探、批量下载和作品管理于一体的桌面下载工具。支持抖音、哔哩哔哩、小红书等平台公开内容解析，可保存视频、音频、图片、图集及网页中的文档、压缩包等资源。"
+        },
+        {
+          "h": "",
+          "p": "内置多标签浏览器，支持浏览时嗅探资源、多选及批量加入下载队列；提供可配置的多线程分段下载、暂停续传和真实阶段进度展示，下载成品按类型与日期自动整理。"
+        },
+        {
+          "h": "",
+          "p": "界面采用可自由拖拽、缩放和排列的卡片布局，配有微型浏览器卡片、悬浮窗及多套全局主题，兼顾下载管理与桌面个性化。"
+        }
       ],
-      "tags": ["Windows", "下载工具", "资源嗅探", "批量下载"],
-      "version": "0.2.1",
-      "updatedAt": "2026-10-19",
+      "tags": [
+        "Windows",
+        "下载工具",
+        "资源嗅探",
+        "批量下载"
+      ],
+      "version": "0.2.11",
+      "updatedAt": "2026-10-20",
       "isNew": true,
       "links": [
-        { "kind": "download", "label": "下载安装包（201 MB）", "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.1-20261018T152358Z-ede0cc5e/SimpleDownload-0.2.1-Windows-Setup.exe" },
-        { "kind": "visit", "label": "发布页与校验值", "href": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-windows-v0.2.1-20261018T152358Z-ede0cc5e" }
+        {
+          "kind": "download",
+          "label": "简单下载-0.2.11.exe",
+          "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261020T083459Z-4689b1da/SimpleDownload-0.2.11-Windows-Setup.exe"
+        },
+        {
+          "kind": "download",
+          "label": "简单下载-0.2.11.zip",
+          "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261020T083459Z-4689b1da/SimpleDownload-0.2.11.zip"
+        },
+        {
+          "kind": "visit",
+          "label": "发布页与校验值",
+          "href": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-windows-v0.2.11-20261020T083459Z-4689b1da"
+        }
       ],
-      "cover": { "kind": "placeholder", "label": "WINDOWS" },
+      "cover": {
+        "kind": "placeholder",
+        "label": "WINDOWS"
+      },
       "shots": [],
-      "layout": { "size": "l" },
-      "source": null
+      "layout": {
+        "size": "l"
+      },
+      "source": null,
+      "releaseAssets": {
+        "releaseId": "20261020T083459Z-4689b1da",
+        "installer": {
+          "fileName": "SimpleDownload-0.2.11-Windows-Setup.exe",
+          "displayName": "简单下载-0.2.11.exe",
+          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261020T083459Z-4689b1da/SimpleDownload-0.2.11-Windows-Setup.exe",
+          "size": 201574269,
+          "sha256": "60d20821df1a11ac68de8dddab18a11f19f3b118e9968c5b6a2a69722c5ec779"
+        },
+        "legacyInstaller": {
+          "fileName": "SimpleDownload-0.2.11-Windows-Setup.exe",
+          "displayName": "简单下载-0.2.11.exe",
+          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261020T083459Z-4689b1da/SimpleDownload-0.2.11-Windows-Setup.exe",
+          "size": 201574269,
+          "sha256": "60d20821df1a11ac68de8dddab18a11f19f3b118e9968c5b6a2a69722c5ec779"
+        },
+        "archive": {
+          "fileName": "SimpleDownload-0.2.11.zip",
+          "displayName": "简单下载-0.2.11.zip",
+          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261020T083459Z-4689b1da/SimpleDownload-0.2.11.zip",
+          "size": 195397509,
+          "sha256": "28cac151f8fb5794a52db4fa03ef3df5c1fccc4091d8e374f791425367393749"
+        }
+      }
     },
     {
       "slug": "simple-download-android",
