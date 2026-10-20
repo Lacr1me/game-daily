@@ -41,17 +41,17 @@
         {
           "kind": "download",
           "label": "简单下载-0.2.11.exe",
-          "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261020T083459Z-4689b1da/SimpleDownload-0.2.11-Windows-Setup.exe"
+          "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261020T145455Z-2c32aa44/SimpleDownload-0.2.11-Windows-Setup.exe"
         },
         {
           "kind": "download",
           "label": "简单下载-0.2.11.zip",
-          "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261020T083459Z-4689b1da/SimpleDownload-0.2.11.zip"
+          "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261020T145455Z-2c32aa44/SimpleDownload-0.2.11.zip"
         },
         {
           "kind": "visit",
           "label": "发布页与校验值",
-          "href": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-windows-v0.2.11-20261020T083459Z-4689b1da"
+          "href": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-windows-v0.2.11-20261020T145455Z-2c32aa44"
         }
       ],
       "cover": {
@@ -64,27 +64,27 @@
       },
       "source": null,
       "releaseAssets": {
-        "releaseId": "20261020T083459Z-4689b1da",
+        "releaseId": "20261020T145455Z-2c32aa44",
         "installer": {
           "fileName": "SimpleDownload-0.2.11-Windows-Setup.exe",
           "displayName": "简单下载-0.2.11.exe",
-          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261020T083459Z-4689b1da/SimpleDownload-0.2.11-Windows-Setup.exe",
-          "size": 201574269,
-          "sha256": "60d20821df1a11ac68de8dddab18a11f19f3b118e9968c5b6a2a69722c5ec779"
+          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261020T145455Z-2c32aa44/SimpleDownload-0.2.11-Windows-Setup.exe",
+          "size": 201579858,
+          "sha256": "195b177b25c78bf717c4da5cde5976b6368e1731415d13eb6f3add922fe01e8e"
         },
         "legacyInstaller": {
           "fileName": "SimpleDownload-0.2.11-Windows-Setup.exe",
           "displayName": "简单下载-0.2.11.exe",
-          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261020T083459Z-4689b1da/SimpleDownload-0.2.11-Windows-Setup.exe",
-          "size": 201574269,
-          "sha256": "60d20821df1a11ac68de8dddab18a11f19f3b118e9968c5b6a2a69722c5ec779"
+          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261020T145455Z-2c32aa44/SimpleDownload-0.2.11-Windows-Setup.exe",
+          "size": 201579858,
+          "sha256": "195b177b25c78bf717c4da5cde5976b6368e1731415d13eb6f3add922fe01e8e"
         },
         "archive": {
           "fileName": "SimpleDownload-0.2.11.zip",
           "displayName": "简单下载-0.2.11.zip",
-          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261020T083459Z-4689b1da/SimpleDownload-0.2.11.zip",
-          "size": 195397509,
-          "sha256": "28cac151f8fb5794a52db4fa03ef3df5c1fccc4091d8e374f791425367393749"
+          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261020T145455Z-2c32aa44/SimpleDownload-0.2.11.zip",
+          "size": 195403750,
+          "sha256": "1e3c1bb86851de392b0b81a065ea7523509c5139c5d2f3a1514077c40b23eaa9"
         }
       }
     },
@@ -101,12 +101,20 @@
         { "h": "", "p": "作品库支持图片与视频预览、分类筛选、日期分组、多选、全选和批量删除，并提供日期快速滚动、GIF 动态预览及实况配对展示。解析、下载与媒体处理均在本地完成，无需提交平台账号密码。" }
       ],
       "tags": ["Android", "下载工具", "实况照片", "本地处理"],
-      "version": "2.3.4",
-      "updatedAt": "2026-10-03",
+      "version": "2.3.5",
+      "updatedAt": "2026-10-20",
       "isNew": true,
       "links": [
-        { "kind": "download", "label": "下载 APK（28 MB）", "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-android-v2.3.4/SimpleDownload-2.3.4-Android.apk" },
-        { "kind": "visit", "label": "发布页与校验值", "href": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-android-v2.3.4" }
+        {
+          "kind": "download",
+          "label": "简单下载-2.3.5.apk",
+          "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-android-v2.3.5/SimpleDownload-2.3.5-Android.apk"
+        },
+        {
+          "kind": "visit",
+          "label": "发布页与校验值",
+          "href": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-android-v2.3.5"
+        }
       ],
       "cover": { "kind": "placeholder", "label": "ANDROID" },
       "shots": [],

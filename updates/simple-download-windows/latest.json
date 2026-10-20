@@ -5,13 +5,13 @@
   "platform": "windows",
   "architecture": "x64",
   "version": "0.2.11",
-  "releaseId": "20261020T083459Z-4689b1da",
-  "releaseCreatedAtUtc": "2026-10-20T08:34:59.665Z",
-  "publishedAtUtc": "2026-10-20T09:09:14.000Z",
-  "installerUrl": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261020T083459Z-4689b1da/SimpleDownload-0.2.11-Windows-Setup.exe",
-  "releasePageUrl": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-windows-v0.2.11-20261020T083459Z-4689b1da",
-  "notes": "Windows 0.2.11\n\n- 原下载任务可重新选择来源后继续处理，并保留原保存目录\n- 解析记录改为有序异步保存，退出时等待写入完成\n- 批量提交前可预览文件和输出选项，支持命名预设\n- 作品库删除使用系统回收站，增加搜索、目录重新关联及媒体详情\n- 增加共享下载限速、同站连接限制和服务端等待处理\n- 完善随包 MCP 的工具语义、共享运行组件和升级退出处理\n- 增加安装包签名核验能力，兼容历史客户端的更新入口\n\n本地安装程序和压缩包命名为“简单下载-0.2.11”，ZIP 内的安装程序也是 `简单下载-0.2.11.exe`。更新时保留原安装选项、个人设置与下载记录。\n\nGitHub 会改写中文附件名，因此在线存储为 `SimpleDownload-0.2.11-Windows-Setup.exe` 和 `SimpleDownload-0.2.11.zip`，发布页保留中文显示名称。网站和旧版更新器共用同一个安装附件。完整性校验值见 `SHA256SUMS.txt`。当前安装包未使用受信任的产品代码签名。\n",
+  "releaseId": "20261020T145455Z-2c32aa44",
+  "releaseCreatedAtUtc": "2026-10-20T14:54:55.119Z",
+  "publishedAtUtc": "2026-10-20T15:25:37.000Z",
+  "installerUrl": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261020T145455Z-2c32aa44/SimpleDownload-0.2.11-Windows-Setup.exe",
+  "releasePageUrl": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-windows-v0.2.11-20261020T145455Z-2c32aa44",
+  "notes": "改善 B 站高清解析与高帧率选档，刷新地址时保留已选画质与帧率。",
   "fileName": "简单下载.exe",
-  "size": 201574269,
-  "sha256": "60d20821df1a11ac68de8dddab18a11f19f3b118e9968c5b6a2a69722c5ec779"
+  "size": 201579858,
+  "sha256": "195b177b25c78bf717c4da5cde5976b6368e1731415d13eb6f3add922fe01e8e"
 }
