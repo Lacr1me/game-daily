@@ -4,6 +4,14 @@
   "publishAt": "11:00",
   "editions": [
     {
+      "date": "2026-10-20",
+      "issue": 60,
+      "publishAt": "2026-10-20T11:00:00+08:00",
+      "title": "游戏与 Minecraft 每日简报",
+      "headline": "《影之刃零》PS5 下载容量约 134.857GB，10 月 27 日开放预载",
+      "file": "data/2026-10-20.json"
+    },
+    {
       "date": "2026-10-19",
       "issue": 59,
       "publishAt": "2026-10-19T11:00:00+08:00",
@@ -52,22 +60,6 @@
       "title": "游戏与 Minecraft 每日简报",
       "headline": "《影之刃零》新实机展示Boss战与机械魔躯",
       "file": "data/2026-10-14.json"
-    },
-    {
-      "date": "2026-10-13",
-      "issue": 53,
-      "publishAt": "2026-10-13T11:00:00+08:00",
-      "title": "游戏与 Minecraft 每日简报",
-      "headline": "《全境封锁2》国服公布12月停运安排",
-      "file": "data/2026-10-13.json"
-    },
-    {
-      "date": "2026-10-12",
-      "issue": 52,
-      "publishAt": "2026-10-12T11:00:00+08:00",
-      "title": "游戏与 Minecraft 每日简报",
-      "headline": "艾希续众筹热度与开发预期管理",
-      "file": "data/2026-10-12.json"
     }
   ]
 }

@@ -1,0 +1,407 @@
+{
+  "date": "2026-10-20",
+  "issue": 60,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期二",
+  "lunarDate": "九月十一",
+  "cutoff": "2026-10-20 05:42（北京时间）",
+  "productionTime": "2026-10-20 05:43（北京时间）",
+  "metricsCutoff": "2026-10-20 05:42（北京时间）",
+  "topStoryIds": ["domestic-01", "international-01", "tech-01"],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "医保钱包升级2.0版 个人账户跨省共济全国落地",
+        "summary": "国家医保局表示，医保钱包升级到2.0版并自10月16日起全国上线，职工医保个人账户资金可跨省共济给近亲属，还能用于参保缴费。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-19 19:58",
+        "url": "https://www.news.cn/politics/20261019/13d1459e234147dea4812ba8b66e5dde/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "前三季度全国居民人均可支配收入34230元",
+        "summary": "国家统计局数据显示，前三季度全国居民人均可支配收入34230元，同比名义增长5.3%、实际增长4.4%，农村居民收入增速快于城镇。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-19 10:31",
+        "url": "https://finance.cnr.cn/cjtt/yw/20261019/t20261019_527846470.shtml"
+      },
+      {
+        "id": "domestic-03",
+        "title": "全国社保平台已开通104项跨地区服务",
+        "summary": "国家社保公共服务平台已开通104项全国性、跨地区服务，累计服务113.53亿人次；京津冀今年新增9项通办事项，养老关系转移最快当天办结。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-19 10:37",
+        "url": "https://m.gmw.cn/toutiao/2026-10/19/content_39053145.htm"
+      },
+      {
+        "id": "domestic-04",
+        "title": "16部门部署2026年全国优化消费环境月",
+        "summary": "市场监管总局等16个部门部署2026年全国“优化消费环境月”，活动11月开展，主题为“放心消费 你我共享”，将推出30余项主题活动。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-19 15:27",
+        "url": "https://www.xinhuanet.com/20261019/8688424ca4a54ab0beaa1af92cfa6e22/c.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "5个专业学位类别试点以实践成果申请学位",
+        "summary": "国务院学位委员会办公室印发意见，专业学位研究生可凭实践成果申请学位，首批在翻译、农业、临床医学、会计、艺术5个类别试点。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-19 13:53",
+        "url": "https://www.ce.cn/xwzx/gnsz/gdxw/202610/t20261019_3263358.shtml"
+      },
+      {
+        "id": "domestic-06",
+        "title": "多家银行重启大额存单 5年期利率最高约1.79%",
+        "summary": "多家银行重启大额存单发行，5年期利率多在1.55%至1.60%，部分中小银行更高；产品受存款保险保障，50万元以内本息全额赔付。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-19 08:55",
+        "url": "https://politics.gmw.cn/2026-10/19/content_39052561.htm"
+      },
+      {
+        "id": "domestic-07",
+        "title": "多地探索农村互助养老 降低留守老人照护成本",
+        "summary": "山东济宁、山西中阳等地探索农村互助养老：小程楼村建互助养老院，老人每月缴300元；中阳县设助老小院，给予建设补贴和助餐补贴。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-19 04:25",
+        "url": "https://news.gmw.cn/2026-10/19/content_39052407.htm"
+      },
+      {
+        "id": "domestic-08",
+        "title": "世界传统医药大会发布“北京成果”",
+        "summary": "2026世界传统医药大会发布“北京成果”：全市累计发布8批272个中药配方颗粒标准，31个儿童中药制剂实现全市调剂，已征集168项数智应用场景。",
+        "source": "北京市人民政府",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-19 08:31",
+        "url": "https://www.beijing.gov.cn/fuwu/lqfw/gggs/202610/t20261019_4908210.html"
+      },
+      {
+        "id": "domestic-09",
+        "title": "北京长阳站口改造完成 新增非机动车位6000个",
+        "summary": "北京地铁房山线长阳站完成改造，桥下新增机动车位800个、非机动车位6000个，打通断头路并新建林下公园，站前通行秩序改善。",
+        "source": "北京市人民政府",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-19 08:26",
+        "url": "https://www.beijing.gov.cn/fuwu/bmfw/sy/jrts/202610/t20261019_4908209.html"
+      },
+      {
+        "id": "domestic-10",
+        "title": "北京2027年高考报名10月25日启动",
+        "summary": "北京2027年高考报名10月25日启动，分网上提交申请、填报缴费、现场确认三阶段；艺术类统考、体育考试等四项考试同期报名。",
+        "source": "北京市人民政府",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-19 17:28",
+        "url": "https://www.beijing.gov.cn/ywdt/yaowen/202610/t20261019_4910356.html"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "也门一军事基地遭导弹袭击致53人死亡",
+        "summary": "也门东南部舍卜沃省政府称，该省一处军事基地遭胡塞武装导弹袭击，已造成53人死亡、200余人受伤。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-19",
+        "url": "https://cn.chinadaily.com.cn/a/202610/19/WS6ad62a68e4b09a165c79036e.html"
+      },
+      {
+        "id": "international-02",
+        "title": "苏丹西南部无人机袭击致至少80人死亡",
+        "summary": "苏丹西南部西科尔多凡州达巴卜地区18日晚发生无人机袭击，造成至少80人死亡，另有数十人受伤。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-19",
+        "url": "https://cn.chinadaily.com.cn/a/202610/19/WS6ad63bc9e4b09a165c790373.html"
+      },
+      {
+        "id": "international-03",
+        "title": "胡塞武装称48小时内6次袭击沙特境内目标",
+        "summary": "胡塞武装称过去48小时内使用弹道导弹、巡航导弹和无人机，对沙特境内石油设施、航空设施和军事目标发动6次打击。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-20 03:41",
+        "url": "https://www.xinhuanet.com/world/20261020/09b5439bc8ea4d22926c1b9190fad256/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "以色列公布新“国家安全构想”强调先发制人",
+        "summary": "以色列总理内塔尼亚胡公布新“国家安全构想”，称将优先考虑预防和进攻而非遏制防御，包括预警打击，并要求武器生产自主。",
+        "source": "中国经济网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-19 07:20",
+        "url": "https://intl.ce.cn/qqss/202610/t20261019_3262252.shtml"
+      },
+      {
+        "id": "international-05",
+        "title": "安理会就秘书长遴选举行第六轮意向性投票",
+        "summary": "联合国安理会16日就下一任联合国秘书长遴选举行第六轮意向性投票，结果由候选人推举国通知候选人，目前共有7名候选人。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-17 06:39",
+        "url": "https://www.news.cn/world/20261017/a707eea78a074dfb9999b83a296256f7/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "保加利亚总理拉德夫会见王毅",
+        "summary": "保加利亚总理拉德夫19日在索非亚会见王毅，表示保方坚定恪守一个中国原则，愿提升双边关系定位，欢迎中国企业赴保投资。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-20 04:46",
+        "url": "https://www.news.cn/politics/leaders/20261020/20174e47e2ef4445a85c85c81597ce90/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "韩国监狱收容不足 600多名囚犯提前获假释",
+        "summary": "韩国政府数据显示，今年1至8月有600多名囚犯在服刑不到60%的情况下获假释，较往年大幅增加，原因是监狱收容能力不足。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-18 21:38",
+        "url": "https://www.news.cn/world/20261018/272ef253c5e8463099ed68d57bbb9eb7/c.html"
+      },
+      {
+        "id": "international-08",
+        "title": "美国今年麻疹病例数接近去年两倍",
+        "summary": "美国疾控中心数据显示，截至10月15日，美国今年累计报告4410例麻疹确诊病例，接近去年全年2289例的两倍，为1991年以来最高。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-18 13:57",
+        "url": "https://www.news.cn/world/20261018/dbcc6f36de614f089302babdb9c969c4/c.html"
+      },
+      {
+        "id": "international-09",
+        "title": "日本猪瘟疫情扩散 今年累计处置约2万头猪",
+        "summary": "据日本媒体18日报道，日本猪瘟疫情持续扩散，今年已出现8起疫情，涉及茨城、群马和爱媛等县，约2万头涉疫猪被处置。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-18 21:38",
+        "url": "https://www.news.cn/world/20261018/9aa70c963f6b4dbcabd238b5e8335ee4/c.html"
+      },
+      {
+        "id": "international-10",
+        "title": "阿根廷将获德法33.55亿美元融资购买潜艇",
+        "summary": "阿根廷武装部队参谋长联席会议主席证实，德国和法国将为阿根廷海军购买潜艇提供约33.55亿美元共同融资。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-18 11:38",
+        "url": "https://www.news.cn/world/20261018/3b0a7bd01f82428f8d154e4a2924e4ed/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "国产200kV透射电镜实现量产交付",
+        "summary": "国仪量子自主研发的200kV场发射透射电镜发布，信息分辨率0.1纳米、点分辨率0.25纳米，已具备量产交付能力。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-19 11:09",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/19/content_598613.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "我国发布9套全球可持续发展数据产品",
+        "summary": "可持续发展大数据国际研究中心发布《全球可持续发展数据产品（2025）》，集中推出9套数据产品并向全球开放共享。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-19 18:44",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/19/content_598903.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "哀牢山迎来首位“机器人科考队员”",
+        "summary": "云深处科技山猫M20S轮足机器人以哀牢山首位“机器人科考队员”身份，随科考队进入原始森林，承担探路、生物观测和物资运输。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-19 08:06",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/19/content_598423.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "朱雀二号改进型遥四运载火箭一箭十星",
+        "summary": "10月14日19时40分，朱雀二号改进型遥四运载火箭在东风商业航天创新试验区发射，将10颗卫星送入预定轨道。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-15 09:15",
+        "url": "https://www.news.cn/tech/20261015/d91b38f1d43140d4a20ae2bef59f5554/c.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "“羲和号”升空五周年 太阳探测成果持续产出",
+        "summary": "“羲和号”太阳探测卫星升空五周年，已实现国际首次空间太阳Hα波段光谱扫描成像，数据被16个国家科研团队采用。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-15 09:18",
+        "url": "https://www.news.cn/tech/20261015/a8c82834711d48e88d5a39baaa6793da/c.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "“微光一号”火箭一级燃箱成型模具研制成功",
+        "summary": "微光启航宣布“微光一号”16米中型液体可重复使用运载火箭一级燃箱成型模具下线，攻克大尺寸薄壁加筋结构一体成型技术。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-19 17:55",
+        "url": "https://tech.gmw.cn/2026-10/19/content_39054094.htm"
+      },
+      {
+        "id": "tech-07",
+        "title": "疆电入渝工程累计入渝电量突破400亿千瓦时",
+        "summary": "疆电入渝工程渝北换流站累计接收电量突破400亿千瓦时，新疆清洁电能跨越2260公里输送至重庆，支撑当地电力保供。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-18 12:31",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/18/content_598184.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "CCF全国高性能计算学术大会在深圳举行",
+        "summary": "第二十二届CCF全国高性能计算学术大会在深圳开幕，聚焦国产算力自主创新与超智融合，国家超算深圳中心“灵晟”位列TOP500榜首。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-19 17:55",
+        "url": "https://tech.gmw.cn/2026-10/19/content_39054096.htm"
+      },
+      {
+        "id": "tech-09",
+        "title": "电动摩托车锂电池强制性国标发布",
+        "summary": "电动摩托车和电动轻便摩托车用锂离子电池安全要求强制性国家标准发布，将自2027年7月1日起实施。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-16 18:35",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/16/content_597605.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "首届全球具身智能应用创新挑战赛在杭州闭幕",
+        "summary": "首届全球具身智能应用创新挑战赛暨2026中国机器人大赛在杭州闭幕，168支队伍获各赛项前三名，赛事覆盖分拣、医疗等场景。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-18 19:37",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/18/content_598349.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "养老机器人加速迭代 落地场景向社区家庭下沉",
+        "summary": "养老机器人加速迭代，落地场景从养老机构向社区和家庭下沉；第140届广交会上多家企业展出智能康养陪伴机器人。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-19 10:19",
+        "url": "https://www.news.cn/tech/20261019/7eb7aa158dcf445bb70b4af94a811f14/c.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "香港首个具身智能国际应用训练场开幕",
+        "summary": "香港首个具身智能国际应用训练场开幕，由香港生产力促进局旗下FLAIR设立，首阶段汇聚7家技术伙伴和8家国际场景伙伴。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-16 08:39",
+        "url": "https://tech.gmw.cn/2026-10/16/content_39049208.htm"
+      },
+      {
+        "id": "ai-03",
+        "title": "北京发布十条措施加快智能体引领发展",
+        "summary": "北京四部门印发《关于加快智能体引领发展的若干措施》，共十条，从底层技术、平台赋能、应用牵引和安全治理等方面布局。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-15 08:52",
+        "url": "https://www.news.cn/tech/20261015/85fa980638564c15a746cd5a7b704373/c.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "国内首个高通道矩阵式脑机接口系统助偏瘫患者抓握",
+        "summary": "华中科技大学同济医学院附属协和医院团队研发国内首个高通道矩阵式脑机接口精细运动重建系统，帮助偏瘫患者恢复手部动作。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-14 09:25",
+        "url": "https://tech.gmw.cn/2026-10/14/content_39044961.htm"
+      },
+      {
+        "id": "ai-05",
+        "title": "学界讨论人工智能可信问题",
+        "summary": "光明日报学术笔谈讨论人工智能可信问题，指出不能只问人工智能是否更聪明高效，还要追问它是否真正可信。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-19 04:40",
+        "url": "https://news.gmw.cn/2026-10/19/content_39052375.htm"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "id": "metric-gold",
+      "kind": "gold",
+      "icon": "◎",
+      "name": "国内金价",
+      "value": "900.89元/克",
+      "note": "10月19日收盘 Au99.99 最近交易日",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/graph/Dailyhq?instid=Au99.99",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-oil-cn",
+      "kind": "domestic_oil",
+      "icon": "油",
+      "name": "中国油价",
+      "value": "92号8.57元/升",
+      "note": "福建最高零售价 9月24日24时起执行 最近有效价格",
+      "source": "福建省发展和改革委员会",
+      "sourceUrl": "https://fgw.fujian.gov.cn/zfxxgkzl/zfxxgkml/yzdgkdqtxx/202609/t20260924_7218113.htm",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-usd",
+      "kind": "usd_cny",
+      "icon": "$",
+      "name": "美元兑人民币",
+      "value": "1美元=6.7208人民币",
+      "note": "10月19日人民币汇率中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/r/cms/www/chinamoney/data/fx/ccpr.json",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-eur",
+      "kind": "eur_cny",
+      "icon": "€",
+      "name": "欧元兑人民币",
+      "value": "1欧元=7.5237人民币",
+      "note": "10月19日人民币汇率中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/r/cms/www/chinamoney/data/fx/ccpr.json",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-jpy",
+      "kind": "jpy_cny",
+      "icon": "¥",
+      "name": "日元兑人民币",
+      "value": "100日元=4.2480人民币",
+      "note": "10月19日人民币汇率中间价",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/r/cms/www/chinamoney/data/fx/ccpr.json",
+      "sourceOrigin": "china"
+    },
+    {
+      "id": "metric-oil-int",
+      "kind": "international_oil",
+      "icon": "◈",
+      "name": "国际油价",
+      "value": "WTI 103.66美元/桶",
+      "note": "10月19日收盘 WTI11月合约 布伦特12月合约109.55美元/桶",
+      "source": "新华网",
+      "sourceUrl": "https://www.news.cn/world/20261020/e51a4c1249f84e348e077308753fde24/c.html",
+      "sourceOrigin": "china"
+    }
+  ],
+  "observation": "前三季度居民收入实际增长4.4%，医保钱包实现跨省共济，社保跨省通办扩围，消费环境月与学位评价改革同步推进，民生政策继续向可感可及用力。国际上，也门与苏丹袭击造成大量伤亡，胡塞武装再袭沙特目标，地区风险抬升；美国麻疹与日本猪瘟提醒公共卫生防线不能松。国内科技在电镜、航天和地球大数据上取得实质进展，具身智能加速落地。",
+  "sources": ["新华网", "央广网", "光明网", "中国科技网", "央视网", "中国经济网", "中国日报中文网", "北京市人民政府", "上海黄金交易所", "中国外汇交易中心", "福建省发展和改革委员会"],
+  "metricSources": ["上海黄金交易所", "福建省发展和改革委员会", "中国外汇交易中心", "新华网"]
+}
