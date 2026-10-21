@@ -111,6 +111,12 @@ for (const rel of ["brand.css", "styles.css", "site-shell.js", "app.js", "minshe
 }
 const builtWorks = parseWorks(await readJson(path.join(output, "site", "works.json")));
 if (!builtWorks.works.length) throw new Error("作品清单不能为空");
+const principles = await readFile(path.join(output, "works/simple-download/index.html"), "utf8");
+if (!principles.includes("site/js/shell/shell.js") || !principles.includes("site/css/shard-theme.css")) throw new Error("简单下载原理页缺少共享外壳");
+for (const platform of ["windows", "android"]) {
+  const work = builtWorks.works.find(item => item.slug === `simple-download-${platform}`);
+  if (!work?.links.some(link => link.href === `works/simple-download/?platform=${platform}` && link.label === "工作原理")) throw new Error(`${platform} 原理入口缺失`);
+}
 console.log("构建产物验证通过：公开文件完整，草稿已排除，双频道入口与留言回复有效" + (hasAdmin ? "，管理后台有效。" : "。"));
 
 async function readJson(file) { return JSON.parse(await readFile(file, "utf8")); }

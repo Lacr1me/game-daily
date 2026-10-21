@@ -69,9 +69,17 @@ await check('works.json 通过校验且无丢弃', async () => {
   }
   // 链接：站内只允许两个日报频道入口和 works/<slug>/ 作品目录，其余必须是 https（下载地址未就绪时 links 为空）
   const hrefs = parsed.works.flatMap(x => x.links).map(l => l.href).filter(h => h !== '#');
-  const siteLocal = h => h === 'game/' || h === 'minsheng/' || /^works\/[a-z0-9-]+\/$/.test(h);
+  const siteLocal = h => h === 'game/' || h === 'minsheng/' || /^works\/[a-z0-9-]+\/$/.test(h) || /^works\/simple-download\/\?platform=(?:windows|android)$/.test(h);
   assert.ok(hrefs.every(h => siteLocal(h) || h.startsWith('https://')), '真实链接只能是站内作品入口或 https：' + hrefs.join(','));
   assert.ok(hrefs.includes('game/') && hrefs.includes('minsheng/'), '日报两条入口都在');
+  for (const platform of ['windows', 'android']) {
+    const work = parsed.works.find(x => x.slug === `simple-download-${platform}`);
+    const entry = work.links.filter(link => link.href === `works/simple-download/?platform=${platform}`);
+    assert.equal(entry.length, 1, `${platform} 详情必须有对应平台的原理入口`);
+    assert.equal(entry[0].label, '工作原理');
+    assert.equal(entry[0].kind, 'visit');
+  }
+  assert.ok((await stat(rel('works/simple-download/index.html'))).size > 0, '原理入口须有真实页面');
   // 图片：cover / shots 引用的文件必须真实存在，且在 assets/works 下
   for (const x of parsed.works) {
     const srcs = [x.cover && x.cover.kind === 'image' ? x.cover.src : null, ...x.shots.map(s => s.src)].filter(Boolean);
