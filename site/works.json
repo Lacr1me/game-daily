@@ -26,6 +26,10 @@
         {
           "h": "",
           "p": "界面采用可自由拖拽、缩放和排列的卡片布局，配有微型浏览器卡片、悬浮窗及多套全局主题，兼顾下载管理与桌面个性化。"
+        },
+        {
+          "h": "安装与卸载更新",
+          "p": "选择磁盘根目录或浏览父文件夹时，安装器会补全简单下载专属目录；已安装版本继续使用原目录。卸载界面采用统一默认风格，默认保留本地数据与图库，可按需分别选择清理并确认范围；符合归属校验的图库文件送入系统回收站。"
         }
       ],
       "tags": [
@@ -35,23 +39,23 @@
         "批量下载"
       ],
       "version": "0.2.11",
-      "updatedAt": "2026-10-20",
+      "updatedAt": "2026-10-21",
       "isNew": true,
       "links": [
         {
           "kind": "download",
           "label": "简单下载-0.2.11.exe",
-          "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261020T145455Z-2c32aa44/SimpleDownload-0.2.11-Windows-Setup.exe"
+          "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261021T143712Z-efe5898b/SimpleDownload-0.2.11-Windows-Setup.exe"
         },
         {
           "kind": "download",
           "label": "简单下载-0.2.11.zip",
-          "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261020T145455Z-2c32aa44/SimpleDownload-0.2.11.zip"
+          "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261021T143712Z-efe5898b/SimpleDownload-0.2.11.zip"
         },
         {
           "kind": "visit",
           "label": "发布页与校验值",
-          "href": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-windows-v0.2.11-20261020T145455Z-2c32aa44"
+          "href": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-windows-v0.2.11-20261021T143712Z-efe5898b"
         }
       ],
       "cover": {
@@ -64,27 +68,27 @@
       },
       "source": null,
       "releaseAssets": {
-        "releaseId": "20261020T145455Z-2c32aa44",
+        "releaseId": "20261021T143712Z-efe5898b",
         "installer": {
           "fileName": "SimpleDownload-0.2.11-Windows-Setup.exe",
           "displayName": "简单下载-0.2.11.exe",
-          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261020T145455Z-2c32aa44/SimpleDownload-0.2.11-Windows-Setup.exe",
-          "size": 201579858,
-          "sha256": "195b177b25c78bf717c4da5cde5976b6368e1731415d13eb6f3add922fe01e8e"
+          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261021T143712Z-efe5898b/SimpleDownload-0.2.11-Windows-Setup.exe",
+          "size": 201735478,
+          "sha256": "65c819a37a1937f4fb3bbe23da7a9ab6618b87eb45fb6ff1fd964f3c409ab934"
         },
         "legacyInstaller": {
           "fileName": "SimpleDownload-0.2.11-Windows-Setup.exe",
           "displayName": "简单下载-0.2.11.exe",
-          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261020T145455Z-2c32aa44/SimpleDownload-0.2.11-Windows-Setup.exe",
-          "size": 201579858,
-          "sha256": "195b177b25c78bf717c4da5cde5976b6368e1731415d13eb6f3add922fe01e8e"
+          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261021T143712Z-efe5898b/SimpleDownload-0.2.11-Windows-Setup.exe",
+          "size": 201735478,
+          "sha256": "65c819a37a1937f4fb3bbe23da7a9ab6618b87eb45fb6ff1fd964f3c409ab934"
         },
         "archive": {
           "fileName": "SimpleDownload-0.2.11.zip",
           "displayName": "简单下载-0.2.11.zip",
-          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261020T145455Z-2c32aa44/SimpleDownload-0.2.11.zip",
-          "size": 195403750,
-          "sha256": "1e3c1bb86851de392b0b81a065ea7523509c5139c5d2f3a1514077c40b23eaa9"
+          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261021T143712Z-efe5898b/SimpleDownload-0.2.11.zip",
+          "size": 195496589,
+          "sha256": "935e7164ca7fd44ae63737aa446d9ee5aa453e88e6834e088bdbf3939b7bc497"
         }
       }
     },

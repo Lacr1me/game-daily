@@ -5,13 +5,13 @@
   "platform": "windows",
   "architecture": "x64",
   "version": "0.2.11",
-  "releaseId": "20261020T145455Z-2c32aa44",
-  "releaseCreatedAtUtc": "2026-10-20T14:54:55.119Z",
-  "publishedAtUtc": "2026-10-20T15:25:37.000Z",
-  "installerUrl": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261020T145455Z-2c32aa44/SimpleDownload-0.2.11-Windows-Setup.exe",
-  "releasePageUrl": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-windows-v0.2.11-20261020T145455Z-2c32aa44",
-  "notes": "改善 B 站高清解析与高帧率选档，刷新地址时保留已选画质与帧率。",
+  "releaseId": "20261021T143712Z-efe5898b",
+  "releaseCreatedAtUtc": "2026-10-21T14:37:12.790Z",
+  "publishedAtUtc": "2026-10-21T15:02:25.000Z",
+  "installerUrl": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261021T143712Z-efe5898b/SimpleDownload-0.2.11-Windows-Setup.exe",
+  "releasePageUrl": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-windows-v0.2.11-20261021T143712Z-efe5898b",
+  "notes": "选择磁盘或父目录后自动创建简单下载文件夹；统一简洁卸载页面，可分别清理本地数据和确认归属的图库文件，支持实际结果与失败项重试。",
   "fileName": "简单下载.exe",
-  "size": 201579858,
-  "sha256": "195b177b25c78bf717c4da5cde5976b6368e1731415d13eb6f3add922fe01e8e"
+  "size": 201735478,
+  "sha256": "65c819a37a1937f4fb3bbe23da7a9ab6618b87eb45fb6ff1fd964f3c409ab934"
 }
