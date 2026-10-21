@@ -43,7 +43,7 @@ let html=`<!doctype html>
 <script>${modelCode}\nconst MACHINE_META=${JSON.stringify(MACHINE_META)};\n${read('app.js')}</script></body></html>`;
 // Publish the reviewed standalone work with the site's return link and credit.
 html=html.replace('<span class="preview-badge">本地预览 · 未上线</span>', '<a class="preview-badge" href="../../#work=deepinfer-anatomy">返回作品集</a>')
-  .replace('DEEPINFER / ANATOMY NOTES</span>', 'DEEPINFER / ANATOMY NOTES</span><small>制作模型 GPT-6 · Codex</small>')
+  .replace('DEEPINFER / ANATOMY NOTES</span>', 'DEEPINFER / ANATOMY NOTES</span><small>制作模型 GPT-6 Astra ULTRA</small>')
   .replace('</head>', '<link rel="canonical" href="https://springhues.com/works/deepinfer-anatomy/"></head>');
 writeFileSync(join(root,'index.html'),html);
 console.log(JSON.stringify({file:join(root,'index.html'),bytes:Buffer.byteLength(html),chapters:data.chapters.length,sources:data.sources.length,standalone:true},null,2));

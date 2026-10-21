@@ -10,7 +10,7 @@ node works/deepinfer-anatomy/build.mjs
 
 `machine.mjs` 生成 79 个实体零件的等距工作台；`model.mjs` 提供流程和教学实验模型；`content-data.json` 保存 14 章正文、18 个术语和官方来源；`style.css`、`app.js` 实现响应式与交互。
 
-制作模型：GPT-6 · Codex。机械结构及实验参数均为教学设计。本作品不实际运行 DeepInfer，不测量真实推理性能，与 DeepSeek 官方无隶属关系。
+制作模型：GPT-6 Astra ULTRA（具体型号 gpt-6-astra，推理档位 ultra）。机械结构及实验参数均为教学设计。本作品不实际运行 DeepInfer，不测量真实推理性能，与 DeepSeek 官方无隶属关系。
 
 ## 资产与许可
 
