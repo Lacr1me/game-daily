@@ -4,6 +4,14 @@
   "publishAt": "11:00",
   "editions": [
     {
+      "date": "2026-10-21",
+      "issue": 61,
+      "publishAt": "2026-10-21T11:00:00+08:00",
+      "title": "游戏与 Minecraft 每日简报",
+      "headline": "《赛博朋克 2077》公布 2.5 版更新，10 月 22 日上线",
+      "file": "data/2026-10-21.json"
+    },
+    {
       "date": "2026-10-20",
       "issue": 60,
       "publishAt": "2026-10-20T11:00:00+08:00",
@@ -52,14 +60,6 @@
       "title": "游戏与 Minecraft 每日简报",
       "headline": "《时之笛 重制版》媒体试玩披露改动",
       "file": "data/2026-10-15.json"
-    },
-    {
-      "date": "2026-10-14",
-      "issue": 54,
-      "publishAt": "2026-10-14T11:00:00+08:00",
-      "title": "游戏与 Minecraft 每日简报",
-      "headline": "《影之刃零》新实机展示Boss战与机械魔躯",
-      "file": "data/2026-10-14.json"
     }
   ]
 }
