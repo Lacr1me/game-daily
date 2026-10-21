@@ -155,6 +155,31 @@
       "source": null
     },
     {
+      "slug": "deepinfer-anatomy",
+      "category": "web",
+      "name": "DeepInfer 解剖室",
+      "intro": "把 DeepSeek 的推理引擎变成一台能动的印刷工作台，用生活中的例子讲清一句回答背后的计算与协作。",
+      "details": [
+        { "h": "从一张工单出发", "p": "跟随纸票走过六个流程节点，查看阅读头、记忆抽屉、专家模块和校对机构如何配合。机械结构是帮助理解的教学比喻，不代表真实硬件配置。" },
+        { "h": "14 章详细拆解", "p": "用大白话和生活类比讲解 Token、Prefill、KV 缓存、Decode、MoE、异步调度与 DSpark，并附官方代码和文档。逐章展开真实机制，也可以翻阅随手词典。" },
+        { "h": "动手试与逐步看", "p": "切换串行和重叠排程，调整草稿验证预算，观察机制变化。使用流程按钮或左右方向键切换步骤，空格播放或暂停；支持减少动态效果。实验数值均为教学设定，不是实际性能测量。" }
+      ],
+      "tags": ["网页", "AI", "原理", "交互"],
+      "platform": "Web",
+      "model": "GPT-6 · Codex",
+      "version": "1.0.0",
+      "updatedAt": "2026-10-22",
+      "isNew": true,
+      "links": [
+        { "kind": "visit", "label": "打开解剖室", "href": "works/deepinfer-anatomy/" }
+      ],
+      "prompt": "works/deepinfer-anatomy/prompt.txt",
+      "cover": { "kind": "placeholder", "label": "DEEPINFER" },
+      "shots": [],
+      "layout": { "size": "l" },
+      "source": null
+    },
+    {
       "slug": "asterion",
       "category": "web",
       "name": "ASTERION · 阿斯忒里昂星港",
