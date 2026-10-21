@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "appId": "simple-download-android",
+  "channel": "stable",
+  "version": "2.3.5",
+  "versionCode": 51,
+  "downloadUrl": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-android-v2.3.5/SimpleDownload-2.3.5-Android.apk",
+  "releasePageUrl": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-android-v2.3.5",
+  "size": 14963605,
+  "sha256": "06cd1fbea5b0af074a1889d45cd8a6c47f194cbaaa84bc9cb3eff3713ec0c3e5",
+  "publishedAtUtc": "2026-10-20T15:23:49Z",
+  "notes": "B站高清与帧率修订，保留原有功能和数据。"
+}
