@@ -101,19 +101,19 @@
         { "h": "", "p": "作品库支持图片与视频预览、分类筛选、日期分组、多选、全选和批量删除，并提供日期快速滚动、GIF 动态预览及实况配对展示。解析、下载与媒体处理均在本地完成，无需提交平台账号密码。" }
       ],
       "tags": ["Android", "下载工具", "实况照片", "本地处理"],
-      "version": "2.3.5",
-      "updatedAt": "2026-10-20",
+      "version": "2.3.51",
+      "updatedAt": "2026-10-21",
       "isNew": true,
       "links": [
         {
           "kind": "download",
-          "label": "简单下载-2.3.5.apk",
-          "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-android-v2.3.5/SimpleDownload-2.3.5-Android.apk"
+          "label": "简单下载-2.3.51.apk",
+          "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-android-v2.3.51/SimpleDownload-2.3.51-Android.apk"
         },
         {
           "kind": "visit",
           "label": "发布页与校验值",
-          "href": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-android-v2.3.5"
+          "href": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-android-v2.3.51"
         }
       ],
       "cover": { "kind": "placeholder", "label": "ANDROID" },

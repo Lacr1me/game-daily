@@ -13,7 +13,7 @@ export function validateAndroidUpdate(value, works) {
   assert.equal(value.schemaVersion, 1);
   assert.equal(value.appId, 'simple-download-android');
   assert.equal(value.channel, 'stable');
-  assert.match(value.version, /^(0|[1-9][0-9]{0,5})\.(0|[1-9][0-9]{0,5})\.(0|[1-9][0-9]{0,5})$/);
+  assert.match(value.version, /^(0|[1-9][0-9]{0,5})\.(0|[1-9][0-9]{0,5})\.([0-9]{2}|0|[1-9][0-9]{0,5})$/);
   assert.ok(Number.isSafeInteger(value.versionCode) && value.versionCode > 0 && value.versionCode <= 2147483647, 'Android versionCode');
   assert.ok(Number.isSafeInteger(value.size) && value.size >= 2 && value.size <= 268435456, 'APK size must match the client 256 MiB limit');
   assert.match(value.sha256, /^[a-f0-9]{64}$/);
@@ -47,6 +47,24 @@ async function selfTest() {
   const works = { works:[{slug:'simple-download-android',version:value.version,links:[{kind:'download',href:value.downloadUrl},{kind:'visit',href:value.releasePageUrl}]}] };
   validateAndroidUpdate(value, works);
   let checks = 1;
+  // Android now uses a two-digit patch, while published one-digit versions remain valid.
+  for (const version of ['2.3.00', '2.3.01', '2.3.50', '2.3.51', '2.3.001', '02.3.51', '2.03.51']) {
+    const fixture = {
+      ...value, version,
+      downloadUrl: value.downloadUrl.replaceAll(value.version, version),
+      releasePageUrl: value.releasePageUrl.replaceAll(value.version, version)
+    };
+    const fixtureWorks = { works: [{
+      ...works.works[0], version,
+      links: [{kind:'download',href:fixture.downloadUrl},{kind:'visit',href:fixture.releasePageUrl}]
+    }] };
+    if (['2.3.001', '02.3.51', '2.03.51'].includes(version)) {
+      assert.throws(() => validateAndroidUpdate(fixture, fixtureWorks), /regular expression/);
+    } else {
+      validateAndroidUpdate(fixture, fixtureWorks);
+    }
+    checks++;
+  }
   for (const mutation of [
     {schemaVersion:2}, {appId:'simple-download-windows'}, {channel:'beta'}, {version:'2.3.5-beta'},
     {versionCode:0}, {versionCode:51.5}, {versionCode:2147483648}, {versionCode:'51'},
