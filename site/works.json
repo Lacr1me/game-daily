@@ -30,6 +30,10 @@
         {
           "h": "安装与卸载更新",
           "p": "选择磁盘根目录或浏览父文件夹时，安装器会补全简单下载专属目录；已安装版本继续使用原目录。卸载界面采用统一默认风格，默认保留本地数据与图库，可按需分别选择清理并确认范围；符合归属校验的图库文件送入系统回收站。"
+        },
+        {
+          "h": "新拟物与位图主题",
+          "p": "新增可切换的新拟物和位图主题，保留既有布局与品牌配色。主题风格与浅色、深色、跟随系统分别保存；位图数字采用实际像素字体，配合矩阵图标、分档网点反馈和20格任务进度，并支持减少动画。浮窗同步主题字体和明暗菜单。"
         }
       ],
       "tags": [
@@ -39,23 +43,23 @@
         "批量下载"
       ],
       "version": "0.2.11",
-      "updatedAt": "2026-10-21",
+      "updatedAt": "2026-10-22",
       "isNew": true,
       "links": [
         {
           "kind": "download",
           "label": "简单下载-0.2.11.exe",
-          "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261021T143712Z-efe5898b/SimpleDownload-0.2.11-Windows-Setup.exe"
+          "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261022T144006Z-cf5fee2c/SimpleDownload-0.2.11-Windows-Setup.exe"
         },
         {
           "kind": "download",
           "label": "简单下载-0.2.11.zip",
-          "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261021T143712Z-efe5898b/SimpleDownload-0.2.11.zip"
+          "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261022T144006Z-cf5fee2c/SimpleDownload-0.2.11.zip"
         },
         {
           "kind": "visit",
           "label": "发布页与校验值",
-          "href": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-windows-v0.2.11-20261021T143712Z-efe5898b"
+          "href": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-windows-v0.2.11-20261022T144006Z-cf5fee2c"
         },
         {
           "kind": "visit",
@@ -73,27 +77,27 @@
       },
       "source": null,
       "releaseAssets": {
-        "releaseId": "20261021T143712Z-efe5898b",
+        "releaseId": "20261022T144006Z-cf5fee2c",
         "installer": {
           "fileName": "SimpleDownload-0.2.11-Windows-Setup.exe",
           "displayName": "简单下载-0.2.11.exe",
-          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261021T143712Z-efe5898b/SimpleDownload-0.2.11-Windows-Setup.exe",
-          "size": 201735478,
-          "sha256": "65c819a37a1937f4fb3bbe23da7a9ab6618b87eb45fb6ff1fd964f3c409ab934"
+          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261022T144006Z-cf5fee2c/SimpleDownload-0.2.11-Windows-Setup.exe",
+          "size": 201830699,
+          "sha256": "afe449bf13f83a21c3a04f89944d60d7d9210885b696038f58c5ac20a4eab3b8"
         },
         "legacyInstaller": {
           "fileName": "SimpleDownload-0.2.11-Windows-Setup.exe",
           "displayName": "简单下载-0.2.11.exe",
-          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261021T143712Z-efe5898b/SimpleDownload-0.2.11-Windows-Setup.exe",
-          "size": 201735478,
-          "sha256": "65c819a37a1937f4fb3bbe23da7a9ab6618b87eb45fb6ff1fd964f3c409ab934"
+          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261022T144006Z-cf5fee2c/SimpleDownload-0.2.11-Windows-Setup.exe",
+          "size": 201830699,
+          "sha256": "afe449bf13f83a21c3a04f89944d60d7d9210885b696038f58c5ac20a4eab3b8"
         },
         "archive": {
           "fileName": "SimpleDownload-0.2.11.zip",
           "displayName": "简单下载-0.2.11.zip",
-          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261021T143712Z-efe5898b/SimpleDownload-0.2.11.zip",
-          "size": 195496589,
-          "sha256": "935e7164ca7fd44ae63737aa446d9ee5aa453e88e6834e088bdbf3939b7bc497"
+          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261022T144006Z-cf5fee2c/SimpleDownload-0.2.11.zip",
+          "size": 195594639,
+          "sha256": "ae5d4026ea81c9b9bede3a77a299d5139ad02c0bc216fd88efda1cbdebf65917"
         }
       }
     },

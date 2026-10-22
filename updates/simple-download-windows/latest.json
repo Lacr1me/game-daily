@@ -5,13 +5,13 @@
   "platform": "windows",
   "architecture": "x64",
   "version": "0.2.11",
-  "releaseId": "20261021T143712Z-efe5898b",
-  "releaseCreatedAtUtc": "2026-10-21T14:37:12.790Z",
-  "publishedAtUtc": "2026-10-21T15:02:25.000Z",
-  "installerUrl": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261021T143712Z-efe5898b/SimpleDownload-0.2.11-Windows-Setup.exe",
-  "releasePageUrl": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-windows-v0.2.11-20261021T143712Z-efe5898b",
-  "notes": "选择磁盘或父目录后自动创建简单下载文件夹；统一简洁卸载页面，可分别清理本地数据和确认归属的图库文件，支持实际结果与失败项重试。",
+  "releaseId": "20261022T144006Z-cf5fee2c",
+  "releaseCreatedAtUtc": "2026-10-22T14:40:06.085Z",
+  "publishedAtUtc": "2026-10-22T15:04:17.000Z",
+  "installerUrl": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261022T144006Z-cf5fee2c/SimpleDownload-0.2.11-Windows-Setup.exe",
+  "releasePageUrl": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-windows-v0.2.11-20261022T144006Z-cf5fee2c",
+  "notes": "新增新拟物与位图主题；主题风格和明暗模式独立保存，位图数字字体、矩阵图标、网点反馈、20格进度及浮窗同步，支持减少动画。",
   "fileName": "简单下载.exe",
-  "size": 201735478,
-  "sha256": "65c819a37a1937f4fb3bbe23da7a9ab6618b87eb45fb6ff1fd964f3c409ab934"
+  "size": 201830699,
+  "sha256": "afe449bf13f83a21c3a04f89944d60d7d9210885b696038f58c5ac20a4eab3b8"
 }
