@@ -165,6 +165,31 @@
       "source": null
     },
     {
+      "slug": "agent-anatomy",
+      "category": "web",
+      "name": "Agent 解剖室",
+      "intro": "把 AI Agent 拆成一台能动的任务调度台，用一场 600 元的野餐，讲清它怎样用工具、读反馈、改计划并完成任务。",
+      "details": [
+        { "h": "跟着任务卡走一圈", "p": "从接收目标到校验交付，观察模型如何提出下一步，程序如何执行工具并带回结果。机械结构是帮助理解的教学比喻，天气、地点与报价均为预设演示数据。" },
+        { "h": "15 章大白话拆解", "p": "用生活类比讲解 Agent 循环、上下文与记忆、RAG、规划与反馈、工具调用、权限、错误恢复、成本和停止条件。附 24 个术语、10 个常见误解与可点击的一手资料。" },
+        { "h": "五种情境亲手运行", "p": "切换顺利完成、雨天调整、工具超时、网页夹带指令与越权下单被拦截，逐步查看任务状态、工具请求与回执、执行轨迹。支持播放暂停、速度调节、键盘操作与减少动态效果；不进行真实联网查询或下单。" }
+      ],
+      "tags": ["网页", "AI", "原理", "交互"],
+      "platform": "Web",
+      "model": "GPT-6 Astra ULTRA",
+      "version": "1.0.0",
+      "updatedAt": "2026-10-22",
+      "isNew": true,
+      "links": [
+        { "kind": "visit", "label": "打开解剖室", "href": "works/agent-anatomy/" }
+      ],
+      "prompt": "works/agent-anatomy/prompt.txt",
+      "cover": { "kind": "placeholder", "label": "AGENT" },
+      "shots": [],
+      "layout": { "size": "l" },
+      "source": null
+    },
+    {
       "slug": "deepinfer-anatomy",
       "category": "web",
       "name": "DeepInfer 解剖室",
