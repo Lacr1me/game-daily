@@ -165,6 +165,31 @@
       "source": null
     },
     {
+      "slug": "vllm-anatomy",
+      "category": "web",
+      "name": "vLLM 解剖室",
+      "intro": "把 vLLM 变成一台可操作的活页档案调度台，用图书馆里的例子讲清同一块 GPU 怎样接住更多问题。",
+      "details": [
+        { "h": "跟着请求走一遍", "p": "观察请求从接收、分词、缓存分配、调度到 Prefill、Decode 和回收的完整过程。切换单请求、连续批处理、公共前缀、长短任务和容量紧张五种情境，逐步查看请求、逻辑页表、物理页和计算记录。" },
+        { "h": "20 章详细拆解", "p": "用大白话和生活类比解释模型与引擎、KV 缓存、PagedAttention、连续批处理、分块 Prefill、前缀复用、抢占重算、编译、并行和量化。附 32 个术语、12 个常见误区及可点击的一手资料入口。" },
+        { "h": "四个动手实验", "p": "调整页块大小、任务长度、调度方式、共同前缀和 KV 精度，观察空间与工作量怎样变化。支持键盘、播放暂停、减少动态效果和手机阅读。模型中的容量、轮数与输出均为教学设定，不代表真实 GPU 性能。" }
+      ],
+      "tags": ["网页", "AI", "原理", "交互"],
+      "platform": "Web",
+      "model": "GPT-6 Astra ULTRA",
+      "version": "1.0.0",
+      "updatedAt": "2026-10-22",
+      "isNew": true,
+      "links": [
+        { "kind": "visit", "label": "打开解剖室", "href": "works/vllm-anatomy/" }
+      ],
+      "prompt": "works/vllm-anatomy/prompt.txt",
+      "cover": { "kind": "placeholder", "label": "VLLM" },
+      "shots": [],
+      "layout": { "size": "l" },
+      "source": null
+    },
+    {
       "slug": "agent-anatomy",
       "category": "web",
       "name": "Agent 解剖室",
