@@ -8,6 +8,28 @@
   ],
   "works": [
     {
+      "slug": "ai-desktop-starter",
+      "category": "web",
+      "name": "AI 桌面入门 · 离线教程合集",
+      "intro": "从安装登录到第一次动手，学习 DeepSeek、WorkBuddy、ChatGPT 与通用 CLI，四份交互教程汇成一个可离线阅读的页面。",
+      "details": [
+        { "h": "四个入门入口", "p": "分别了解 DeepSeek、WorkBuddy、ChatGPT 桌面端与通用命令行，涵盖安装登录、首次界面、常用模式、终端命令及常见问题。" },
+        { "h": "边看边练", "p": "内置界面导览、步骤演示与离线模拟练习，支持明暗主题、大字阅读和学习完成标记。演示在浏览器内运行，不连接真实 AI 服务，也不执行本机命令。" },
+        { "h": "单文件离线阅读", "p": "四份教程及图片均嵌入同一个 HTML 文件。保存完整页面后可离线阅读；官方资料与下载链接需要联网访问。主题与学习偏好仅保存在当前浏览器。" }
+      ],
+      "tags": ["AI", "入门", "教程", "离线"],
+      "platform": "Web",
+      "updatedAt": "2026-10-24",
+      "isNew": true,
+      "links": [
+        { "kind": "visit", "label": "打开教程合集", "href": "works/ai-desktop-starter/" }
+      ],
+      "cover": { "kind": "placeholder", "label": "AI STARTER" },
+      "shots": [],
+      "layout": { "size": "l" },
+      "source": null
+    },
+    {
       "slug": "simple-download-windows",
       "category": "software",
       "name": "简单下载 Windows 版",
