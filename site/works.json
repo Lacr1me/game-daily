@@ -38,6 +38,10 @@
         {
           "h": "0.2.12 收藏夹与视频下载",
           "p": "新增 B站公开收藏夹、YouTube/X 视频下载与标准点播 DASH 支持。浏览器保留登录并采用原生网页呈现，修复当前页解析、视频预览和缩略图显示问题。未公开收藏夹明确显示：该收藏夹未公开。"
+        },
+        {
+          "h": "0.2.12 启动更新提醒",
+          "p": "打开软件自动检查更新，有新版时弹出跟随当前主题的提醒。中间的更新详情可展开日志，可跳过此版本或立即更新。跳过记录重启后保留，同版本后续修订仍会提醒；立即更新复用下载、校验和安全退出安装流程。"
         }
       ],
       "tags": [
@@ -53,17 +57,17 @@
         {
           "kind": "download",
           "label": "简单下载-0.2.12.exe",
-          "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.12-20261023T212030Z-9fef9cef/SimpleDownload-0.2.12-Windows-Setup.exe"
+          "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.12-20261023T222555Z-7f4c149c/SimpleDownload-0.2.12-Windows-Setup.exe"
         },
         {
           "kind": "download",
           "label": "简单下载-0.2.12.zip",
-          "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.12-20261023T212030Z-9fef9cef/SimpleDownload-0.2.12.zip"
+          "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.12-20261023T222555Z-7f4c149c/SimpleDownload-0.2.12.zip"
         },
         {
           "kind": "visit",
           "label": "发布页与校验值",
-          "href": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-windows-v0.2.12-20261023T212030Z-9fef9cef"
+          "href": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-windows-v0.2.12-20261023T222555Z-7f4c149c"
         },
         {
           "kind": "visit",
@@ -81,27 +85,27 @@
       },
       "source": null,
       "releaseAssets": {
-        "releaseId": "20261023T212030Z-9fef9cef",
+        "releaseId": "20261023T222555Z-7f4c149c",
         "installer": {
           "fileName": "SimpleDownload-0.2.12-Windows-Setup.exe",
           "displayName": "简单下载-0.2.12.exe",
-          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.12-20261023T212030Z-9fef9cef/SimpleDownload-0.2.12-Windows-Setup.exe",
-          "size": 268760434,
-          "sha256": "a1e90f47f853e692858384cc212494b7a10030f2191231cd87a6eb2fc52e0fbc"
+          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.12-20261023T222555Z-7f4c149c/SimpleDownload-0.2.12-Windows-Setup.exe",
+          "size": 268770897,
+          "sha256": "7671d18f05b1c23867f1c380a232806d621b021749b97aba79ba1b144aea8507"
         },
         "legacyInstaller": {
           "fileName": "SimpleDownload-0.2.12-Windows-Setup.exe",
           "displayName": "简单下载-0.2.12.exe",
-          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.12-20261023T212030Z-9fef9cef/SimpleDownload-0.2.12-Windows-Setup.exe",
-          "size": 268760434,
-          "sha256": "a1e90f47f853e692858384cc212494b7a10030f2191231cd87a6eb2fc52e0fbc"
+          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.12-20261023T222555Z-7f4c149c/SimpleDownload-0.2.12-Windows-Setup.exe",
+          "size": 268770897,
+          "sha256": "7671d18f05b1c23867f1c380a232806d621b021749b97aba79ba1b144aea8507"
         },
         "archive": {
           "fileName": "SimpleDownload-0.2.12.zip",
           "displayName": "简单下载-0.2.12.zip",
-          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.12-20261023T212030Z-9fef9cef/SimpleDownload-0.2.12.zip",
-          "size": 262480698,
-          "sha256": "e0b01aaec023d21a6593e0a873e8fbb80214a37b78289d5a69475a22d6e23784"
+          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.12-20261023T222555Z-7f4c149c/SimpleDownload-0.2.12.zip",
+          "size": 262492611,
+          "sha256": "8beeaf22cea211395117dd6f2740e8d529d0f0ffb88c2bbb9e251fe0bbd12c2d"
         }
       }
     },
