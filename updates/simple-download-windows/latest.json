@@ -4,14 +4,14 @@
   "channel": "stable",
   "platform": "windows",
   "architecture": "x64",
-  "version": "0.2.11",
-  "releaseId": "20261022T144006Z-cf5fee2c",
-  "releaseCreatedAtUtc": "2026-10-22T14:40:06.085Z",
-  "publishedAtUtc": "2026-10-22T15:04:17.000Z",
-  "installerUrl": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.11-20261022T144006Z-cf5fee2c/SimpleDownload-0.2.11-Windows-Setup.exe",
-  "releasePageUrl": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-windows-v0.2.11-20261022T144006Z-cf5fee2c",
-  "notes": "新增新拟物与位图主题；主题风格和明暗模式独立保存，位图数字字体、矩阵图标、网点反馈、20格进度及浮窗同步，支持减少动画。",
+  "version": "0.2.12",
+  "releaseId": "20261023T212030Z-9fef9cef",
+  "releaseCreatedAtUtc": "2026-10-23T21:20:30.167Z",
+  "publishedAtUtc": "2026-10-23T21:48:08.000Z",
+  "installerUrl": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.12-20261023T212030Z-9fef9cef/SimpleDownload-0.2.12-Windows-Setup.exe",
+  "releasePageUrl": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-windows-v0.2.12-20261023T212030Z-9fef9cef",
+  "notes": "新增 B站公开收藏夹、YouTube/X 视频下载与标准点播 DASH 支持；浏览器保留登录并采用原生网页呈现，修复当前页解析、视频预览、缩略图显示及临时目录权限问题，完善繁体中文与交互适配。",
   "fileName": "简单下载.exe",
-  "size": 201830699,
-  "sha256": "afe449bf13f83a21c3a04f89944d60d7d9210885b696038f58c5ac20a4eab3b8"
+  "size": 268760434,
+  "sha256": "a1e90f47f853e692858384cc212494b7a10030f2191231cd87a6eb2fc52e0fbc"
 }
