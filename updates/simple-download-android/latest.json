@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "appId": "simple-download-android",
   "channel": "stable",
-  "version": "2.3.52",
-  "versionCode": 52,
-  "downloadUrl": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-android-v2.3.52/SimpleDownload-2.3.52-Android.apk",
-  "releasePageUrl": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-android-v2.3.52",
-  "size": 14968211,
-  "sha256": "8eb17f1076e693279d91faa3526bb7eed2d7ab4a0a4b1a19fb19b92ecfeb48d7",
-  "publishedAtUtc": "2026-10-22T14:40:56Z",
-  "notes": "修复续传、保存恢复、删除授权和设置同步，优化作品库与界面"
+  "version": "2.3.53",
+  "versionCode": 53,
+  "downloadUrl": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-android-v2.3.53/SimpleDownload-2.3.53-Android.apk",
+  "releasePageUrl": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-android-v2.3.53",
+  "size": 27687865,
+  "sha256": "4a2ec5be4e67a47cf3a54678ba7bbb6dacacd12efcc9ccfa759de46c7d2e6d58",
+  "publishedAtUtc": "2026-10-24T21:05:19Z",
+  "notes": "仅支持64位ARM。新增B站收藏夹与分P选择、DASH合并、启动更新提醒，优化浏览器与安装包体积。"
 }
