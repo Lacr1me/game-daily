@@ -6,8 +6,8 @@
   "versionCode": 53,
   "downloadUrl": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-android-v2.3.53/SimpleDownload-2.3.53-Android.apk",
   "releasePageUrl": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-android-v2.3.53",
-  "size": 27687865,
-  "sha256": "4a2ec5be4e67a47cf3a54678ba7bbb6dacacd12efcc9ccfa759de46c7d2e6d58",
+  "size": 27692261,
+  "sha256": "f6cd782b9056d0c7a3c731786549f5e009b8c7b09dbb8202361828e68450816e",
   "publishedAtUtc": "2026-10-24T21:05:19Z",
-  "notes": "仅支持64位ARM。新增B站收藏夹与分P选择、DASH合并、启动更新提醒，优化浏览器与安装包体积。"
+  "notes": "仅支持64位ARM。修复X链接解析、多视频下载及浏览器重试。"
 }
