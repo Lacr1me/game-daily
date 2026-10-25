@@ -4,6 +4,14 @@
   "publishAt": "11:00",
   "editions": [
     {
+      "date": "2026-10-25",
+      "issue": 65,
+      "publishAt": "2026-10-25T11:00:00+08:00",
+      "title": "游戏与 Minecraft 每日简报",
+      "headline": "《使命召唤：现代战争4》Steam 在线破 22 万，简中好评率 63%",
+      "file": "data/2026-10-25.json"
+    },
+    {
       "date": "2026-10-24",
       "issue": 64,
       "publishAt": "2026-10-24T11:00:00+08:00",
@@ -50,15 +58,6 @@
       "title": "游戏与 Minecraft 每日简报",
       "headline": "《使命召唤23：现代战争4》登顶Steam全球畅销榜",
       "file": "data/2026-10-19.json"
-    },
-    {
-      "date": "2026-10-18",
-      "issue": 58,
-      "publishAt": "2026-10-18T11:00:00+08:00",
-      "backfilledAt": "2026-10-18T10:00:13.593Z",
-      "title": "游戏与 Minecraft 每日简报",
-      "headline": "《影之刃零》PS5版10月27日开启预载",
-      "file": "data/2026-10-18.json"
     }
   ]
 }
