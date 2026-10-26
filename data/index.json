@@ -4,6 +4,14 @@
   "publishAt": "11:00",
   "editions": [
     {
+      "date": "2026-10-26",
+      "issue": 66,
+      "publishAt": "2026-10-26T11:00:00+08:00",
+      "title": "游戏与 Minecraft 每日简报",
+      "headline": "《影之刃零》10月27日开启PC预下载，本体约145G",
+      "file": "data/2026-10-26.json"
+    },
+    {
       "date": "2026-10-25",
       "issue": 65,
       "publishAt": "2026-10-25T11:00:00+08:00",
@@ -50,14 +58,6 @@
       "title": "游戏与 Minecraft 每日简报",
       "headline": "《影之刃零》PS5 下载容量约 134.857GB，10 月 27 日开放预载",
       "file": "data/2026-10-20.json"
-    },
-    {
-      "date": "2026-10-19",
-      "issue": 59,
-      "publishAt": "2026-10-19T11:00:00+08:00",
-      "title": "游戏与 Minecraft 每日简报",
-      "headline": "《使命召唤23：现代战争4》登顶Steam全球畅销榜",
-      "file": "data/2026-10-19.json"
     }
   ]
 }
