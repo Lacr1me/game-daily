@@ -4,6 +4,14 @@
   "publishAt": "11:00",
   "editions": [
     {
+      "date": "2026-10-27",
+      "issue": 67,
+      "publishAt": "2026-10-27T11:00:00+08:00",
+      "title": "游戏与 Minecraft 每日简报",
+      "headline": "LiteChunk 手机端基岩/Java 存档转化工具",
+      "file": "data/2026-10-27.json"
+    },
+    {
       "date": "2026-10-26",
       "issue": 66,
       "publishAt": "2026-10-26T11:00:00+08:00",
@@ -50,14 +58,6 @@
       "title": "游戏与 Minecraft 每日简报",
       "headline": "《赛博朋克 2077》公布 2.5 版更新，10 月 22 日上线",
       "file": "data/2026-10-21.json"
-    },
-    {
-      "date": "2026-10-20",
-      "issue": 60,
-      "publishAt": "2026-10-20T11:00:00+08:00",
-      "title": "游戏与 Minecraft 每日简报",
-      "headline": "《影之刃零》PS5 下载容量约 134.857GB，10 月 27 日开放预载",
-      "file": "data/2026-10-20.json"
     }
   ]
 }
