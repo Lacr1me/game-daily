@@ -1,0 +1,420 @@
+{
+  "date": "2026-10-29",
+  "issue": 69,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期四",
+  "lunarDate": "九月二十",
+  "cutoff": "2026-10-29 11:50（北京时间）",
+  "productionTime": "2026-10-29 11:36（北京时间）",
+  "metricsCutoff": "2026-10-28 18:00（北京时间）",
+  "backfilledAt": "2026-10-29T03:36:42.779Z",
+  "topStoryIds": [
+    "domestic-01",
+    "international-01",
+    "tech-01"
+  ],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "武汉地铁12号线开通 为国内最长地铁环线",
+        "summary": "10月29日武汉地铁12号线全线开通，全长59.9公里，经中国城市轨道交通协会确认，是目前国内最长的地铁环线。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 09:30",
+        "url": "https://www.news.cn/20261029/2ab82eb0458b4c5c96d51516b845c209/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "中消协首例公益诉讼全面胜诉 判赔200余万元",
+        "summary": "山东高院终审认定“北方清晨空气消毒卡”虚假宣传构成欺诈，判赔商品价款3倍、200余万元，系中消协首例全面胜诉的消费公益诉讼。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 07:41",
+        "url": "https://www.news.cn/fortune/20261029/6470eb3acce249e9b8535d8515547153/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "多地推行“车票+门票”一站式出行",
+        "summary": "多地拓展“车票+门票”一站式出行，青岛票根经济联盟覆盖400余家商户近700项权益；全国高铁营业里程突破5万公里。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 07:32",
+        "url": "https://www.news.cn/20261029/1ce7157f58ad4282885a3752afccad35/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "2026年新型政策性金融工具8000亿元投放完成",
+        "summary": "截至10月28日，2026年新型政策性金融工具全部完成投放共8000亿元，其中国开行3650亿元、进出口银行1200亿元、农发行3150亿元。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-28 18:57",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-28/10722352.shtml"
+      },
+      {
+        "id": "domestic-05",
+        "title": "西藏巴青7.0级地震首次获取地表破裂高清影像",
+        "summary": "西藏那曲市巴青县10月22日夜间发生7.0级地震，科研人员首次获取地表破裂无人机高清影像，已锁定发震构造。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-28 18:08",
+        "url": "https://www.chinanews.com.cn/sh/2026/10-28/10722258.shtml"
+      },
+      {
+        "id": "domestic-06",
+        "title": "11月1日起四项儿童健康相关新规实施",
+        "summary": "11月1日起四项与孩子健康相关新规实施，教室照明要求课桌面平均照度不低于300勒克斯、书写板不低于500勒克斯。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-28 16:33",
+        "url": "https://www.chinanews.com.cn/edu/2026/10-28/10722228.shtml"
+      },
+      {
+        "id": "domestic-07",
+        "title": "全国秋粮收获过八成 冬小麦播种过三成",
+        "summary": "农业农村部通报，全国秋粮收获进度已过八成、同比快于上年，冬小麦播种已过三成；新疆伊犁玉米亩产达1211.14公斤。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-28 14:16",
+        "url": "https://www.cnr.cn/newscenter/native/gd/20261028/t20261028_527855206.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "title": "冷空气影响北方 多地陆续启动供暖",
+        "summary": "冷空气持续影响北方，多地陆续启动供暖；呼和浩特智慧供热平台提前48小时调整参数，装6万余套室温采集器，低于18℃自动派单。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-28 10:13",
+        "url": "https://www.cnr.cn/china/news/20261028/t20261028_527855032.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "title": "北京核心区老旧供热管网改造达100公里",
+        "summary": "首都功能核心区最大规模老旧供热一次管网换新工程进入收尾，今年改造达100公里，新管线将在本供热季投用。",
+        "source": "北京市人民政府",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-28 08:29",
+        "url": "https://www.beijing.gov.cn/fuwu/bmfw/sy/jrts/202610/t20261028_4921333.html"
+      },
+      {
+        "id": "domestic-10",
+        "title": "京津冀营业执照实现全域异地办发领",
+        "summary": "京津冀三地市场监管部门联合推出营业执照全域异地“办、发、领”服务，企业在线提交、属地审批，纸质执照和公章可寄递。",
+        "source": "北京市人民政府",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-28 08:14",
+        "url": "https://www.beijing.gov.cn/fuwu/lqfw/gggs/202610/t20261028_4921329.html"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "联大通过决议 要求终止美国对古巴封锁",
+        "summary": "当地时间10月28日，第81届联合国大会以130票赞成、17票反对、25票弃权通过“必须终止美国对古巴经济、商业和金融封锁”决议。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 05:07",
+        "url": "https://news.cctv.com/2026/10/29/ARTIsGOe0wuokBpkb9X3aKwv261028.shtml"
+      },
+      {
+        "id": "international-02",
+        "title": "西班牙托莱多附近高铁相撞 至少46人死亡",
+        "summary": "据西班牙媒体报道，28日托莱多附近高速铁路发生列车相撞事故，已造成至少46人死亡。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-28 20:58",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-28/10722303.shtml"
+      },
+      {
+        "id": "international-03",
+        "title": "荷兰宣布向乌克兰提供5亿欧元军援",
+        "summary": "荷兰首相耶滕28日在海牙宣布，将向乌克兰提供5亿欧元军事援助，包括防空系统和无人机，另在未来三年提供12亿欧元非军事援助。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29",
+        "url": "https://www.news.cn/20261029/ec9468e61fc24f5dabf606436c0253fa/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "美联储维持联邦基金利率3.75%至4%不变",
+        "summary": "美联储28日结束货币政策会议，宣布将联邦基金利率目标区间维持在3.75%至4%不变，投票结果为10比2。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29",
+        "url": "https://www.news.cn/20261029/aa7574016c664a468c3ad399d56c2b8e/c.html"
+      },
+      {
+        "id": "international-05",
+        "title": "加拿大央行加息25个基点至2.5%",
+        "summary": "加拿大银行28日宣布将基准利率上调25个基点至2.5%，为2023年7月以来首次加息。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29",
+        "url": "https://www.news.cn/20261029/a6e456e63e3c49b1a661a68d1c171e39/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "以色列议会选举初步计票 双方均未过半",
+        "summary": "以色列中央选举委员会28日公布议会选举初步计票结果，内塔尼亚胡右翼阵营预计53席，反对派48席，均未达61席多数。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29",
+        "url": "https://www.news.cn/20261029/c686330874934637857be3e8d207ac4a/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "英国新政府首份预算案 追加对乌援助100亿英镑",
+        "summary": "英国财政大臣希利28日公布新政府首份财政预算案，宣布向乌克兰追加100亿英镑经济和军事援助，累计承诺350亿英镑。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29",
+        "url": "https://www.news.cn/20261029/a51e754e812b49ee931eb7c7092e7d20/c.html"
+      },
+      {
+        "id": "international-08",
+        "title": "欧洲天然气价格突破每兆瓦时100欧元",
+        "summary": "荷兰TTF天然气11月期货盘中突破每兆瓦时100欧元，为2022年12月以来首次，一度升至100.75欧元，本月累计上涨约40%。",
+        "source": "国际在线",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29",
+        "url": "https://news.cri.cn/20261029/66be56ec-5ca7-4d46-ad6a-15415f6589cb.html"
+      },
+      {
+        "id": "international-09",
+        "title": "乌拉圭两架小型飞机空中相撞 一人死亡",
+        "summary": "乌拉圭空军28日声明，两架小型飞机在该国南部卡内洛内斯省空中相撞，造成一人死亡，事发时正进行特技飞行表演训练。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29",
+        "url": "https://www.news.cn/20261029/178a4238fe9147ba8bac964aafcaf129/c.html"
+      },
+      {
+        "id": "international-10",
+        "title": "俄方就日本影视作品历史表述表态",
+        "summary": "俄外交部发言人扎哈罗娃28日表示，俄方注意到日本影视作品多次歪曲历史，若日方继续将采取相应行动。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29",
+        "url": "https://www.news.cn/20261029/b179b97dba7b40fda2c3f5c8fad0adfd/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "我国制备五七环金属性碳纳米带",
+        "summary": "中国科学技术大学单分子团队通过分步表面合成制备五七环金属性碳纳米带，实现亚纳米宽度高效电子输运，成果29日在线发表于《自然》。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 09:20",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/29/content_604427.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "我国牵头制定脑机接口国际标准发布",
+        "summary": "ISO/IEC发布由我国牵头制定的《信息技术 脑机接口 参考架构》国际标准，我国专家任项目负责人，联合十余国专家完成。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 09:17",
+        "url": "https://tech.gmw.cn/2026-10/29/content_39072109.htm"
+      },
+      {
+        "id": "tech-03",
+        "title": "全国产化干式直流电容器完成批量示范应用",
+        "summary": "中国电力科学研究院牵头研制的全国产化2.8千伏、8毫法干式直流电容器，在张北柔直工程完成批量示范应用，实现百分之百国产化。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 07:42",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/29/content_604384.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "青藏高原土壤碳源海拔阈值转换机制揭示",
+        "summary": "中国科学院西北生态环境资源研究院团队揭示青藏高原土壤碳源海拔阈值转换新机制，成果刊发于《全球和行星变化》。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-28 17:08",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/28/content_604231.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "西湖大学DREAMS巡天首批数据全球开放",
+        "summary": "西湖大学DREAMS巡天团队联合国家天文科学数据中心发布首批巡天数据并全球免费开放，以1至2分钟间隔监测近6000万颗恒星。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-28 15:01",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/28/content_604105.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "蛟龙号完成7000米级海试 最大深度7056.9米",
+        "summary": "完成第二次迭代升级的蛟龙号载人潜水器在菲律宾海盆完成7000米级海试，3个潜次中2次超7000米，最大深度7056.9米。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-28 11:01",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/28/content_604002.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "国产钎料让单晶高温合金持久性能超国标25倍",
+        "summary": "中科院金属研究所团队研制专用钎料适配第三代单晶高温合金，在980℃、100兆帕工况下稳定服役3000小时，持久性能超国标25倍。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-28",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/28/content_604102.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "500千伏交流海缆试验实现全链条国产化",
+        "summary": "国网舟山供电公司海洋输电技术研究中心开展500千伏交流海缆试验，从绝缘材料到附件全部自主生产，突破屏蔽层制造，造价预计降两成。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-28",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/28/content_604274.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "长征八号甲成功发射卫星互联网低轨28组卫星",
+        "summary": "10月25日10时03分，我国在海南商业航天发射场用长征八号甲运载火箭成功发射卫星互联网低轨28组卫星，为长征系列第674次发射。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-26 09:49",
+        "url": "https://www.cnr.cn/tech/techds/20261026/t20261026_527853091.shtml"
+      },
+      {
+        "id": "tech-10",
+        "title": "长征四号乙一箭六星发射成功",
+        "summary": "10月24日3时25分，我国在酒泉卫星发射中心用长征四号乙运载火箭成功发射六颗卫星，用于科学试验、国土资源普查和防灾减灾。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-24 03:25",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/24/content_601926.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "万亿级投资下算力网建设提速",
+        "summary": "央视报道称，万亿级投资下算力网建设加速，核心硬件实现全链路国产化；截至2026年6月，我国日均词元调用量突破500万亿。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 00:30",
+        "url": "https://jingji.cctv.com/2026/10/29/ARTIMTGecL1AiI9q55TlOElF261028.shtml"
+      },
+      {
+        "id": "ai-02",
+        "title": "信通院测试发现前沿模型行为越界风险",
+        "summary": "多家人工智能企业及研究机构披露，部分前沿模型在测试中突破任务边界、进入真实系统；中国信通院发现模型受阻后可能自主扩大操作范围。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-28 10:07",
+        "url": "https://www.news.cn/tech/20261028/3278fb1ab3824af2955f9c75383492bb/c.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "宁夏出台八项措施保障算力用电",
+        "summary": "国网宁夏电力10月23日发布服务算力发展八项措施，中卫地区已投入最大算力负荷42.8万千瓦，并设立全国首个算力枢纽园区供电服务中心。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 09:42",
+        "url": "https://www.cnr.cn/tech/techds/20261027/t20261027_527854071.shtml"
+      },
+      {
+        "id": "ai-04",
+        "title": "全球首个生物活性肽大模型免费开放",
+        "summary": "沈阳农业大学乌日娜团队研发的生物活性肽人工智能大语言模型发布，依托RAG技术与百亿级大模型实现领域知识增强，面向全球免费开放。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-25",
+        "url": "https://www.ln.chinanews.com.cn/news/2026/1028/357894.html"
+      },
+      {
+        "id": "ai-05",
+        "title": "3万亿参数大模型公布 权重将于11月4日前发布",
+        "summary": "该模型为3万亿级参数，支持100万词元上下文，价格约为GPT 6 Astra的五分之一，完整权重将于11月4日前发布。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-24",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/24/content_602239.html"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "kind": "gold",
+      "icon": "◎",
+      "name": "国内金价",
+      "value": "868.99元/克",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/graph/Dailyhq?instid=Au99.99",
+      "sourceOrigin": "china",
+      "note": "10月28日收盘 Au99.99"
+    },
+    {
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "中国油价",
+      "value": "92号8.57元/升",
+      "source": "厦门市发展和改革委员会",
+      "sourceUrl": "https://dpc.xm.gov.cn/xwdt/tzgg/202609/t20260924_3019058.htm",
+      "sourceOrigin": "china",
+      "note": "福建最高零售价 2026年9月24日24时起执行"
+    },
+    {
+      "kind": "international_oil",
+      "icon": "🛢",
+      "name": "国际油价",
+      "value": "WTI 102.78美元/桶",
+      "source": "新华网",
+      "sourceUrl": "https://www.news.cn/fortune/20261029/59d3e54886b643989a09175c89a8fa05/c.html",
+      "sourceOrigin": "china",
+      "note": "10月28日收盘 布伦特115.32美元/桶"
+    },
+    {
+      "kind": "usd_cny",
+      "icon": "＄",
+      "name": "美元兑人民币",
+      "value": "1美元=6.7165人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/ags/ms/cm-u-bk-ccpr/CcprHisNew?startDate=2026-10-28&endDate=2026-10-28&currency=USD/CNY",
+      "sourceOrigin": "china",
+      "note": "10月28日人民币汇率中间价"
+    },
+    {
+      "kind": "eur_cny",
+      "icon": "€",
+      "name": "欧元兑人民币",
+      "value": "1欧元=7.4499人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/ags/ms/cm-u-bk-ccpr/CcprHisNew?startDate=2026-10-28&endDate=2026-10-28&currency=EUR/CNY",
+      "sourceOrigin": "china",
+      "note": "10月28日人民币汇率中间价"
+    },
+    {
+      "kind": "jpy_cny",
+      "icon": "¥",
+      "name": "日元兑人民币",
+      "value": "100日元=4.2434人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/ags/ms/cm-u-bk-ccpr/CcprHisNew?startDate=2026-10-28&endDate=2026-10-28&currency=100JPY/CNY",
+      "sourceOrigin": "china",
+      "note": "10月28日人民币汇率中间价"
+    }
+  ],
+  "observation": "今天最实在的变化在出行和钱袋子：武汉地铁12号线把国内最长地铁环线跑通，京津冀营业执照可异地办领，高铁里程突破5万公里。民生侧，秋粮收获过八成、北方多地提前供暖，儿童健康新规11月1日落地。国际上，联大以130票要求终止对古巴封锁，美联储按兵不动、加拿大却加息；欧洲气价重回100欧元。科技面，蛟龙号再下7000米，碳纳米带与脑机接口标准接连出新。",
+  "sources": [
+    "新华网",
+    "中国新闻网",
+    "央广网",
+    "北京市人民政府",
+    "央视网",
+    "国际在线",
+    "中国科技网",
+    "光明网"
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "厦门市发展和改革委员会",
+    "新华网",
+    "中国外汇交易中心"
+  ]
+}
