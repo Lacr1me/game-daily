@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "appId": "simple-download-android",
   "channel": "stable",
-  "version": "2.3.53",
-  "versionCode": 53,
-  "downloadUrl": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-android-v2.3.53/SimpleDownload-2.3.53-Android.apk",
-  "releasePageUrl": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-android-v2.3.53",
-  "size": 27695848,
-  "sha256": "ea3f13bc7993a3a974faa5afab580fd1f0da80f39fb5550918479cc69566674d",
-  "publishedAtUtc": "2026-10-24T21:05:19Z",
-  "notes": "仅支持64位ARM。修复部分X链接备用解析，保留此前修复。已装2.3.53请手动覆盖。"
+  "version": "2.3.60",
+  "versionCode": 60,
+  "downloadUrl": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-android-v2.3.60/SimpleDownload-2.3.60-Android.apk",
+  "releasePageUrl": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-android-v2.3.60",
+  "size": 43179057,
+  "sha256": "02a02a1f0326619a53a16d079406a7db12144944b2c6947c437d723a8d670081",
+  "publishedAtUtc": "2026-10-29T08:45:25Z",
+  "notes": "全新原生新拟物界面；输入法粘贴自动分隔链接，批量上限50条；音频开关新增提示；完整字体无损压缩与运行时精简。仅支持64位ARM，已装本地2.3.60请手动覆盖。"
 }
