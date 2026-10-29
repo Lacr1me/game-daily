@@ -1,5 +1,7 @@
 import { cp, mkdir, readdir, readFile, rm, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { androidDownloadUrl, stageAndroidDownload } from "./android-download.mjs";
+import { validateAndroidUpdate } from "./test-android-updates.mjs";
 
 const root = process.cwd();
 const output = path.join(root, "dist");
@@ -42,6 +44,14 @@ try {
 await cp(path.join(root, "downloads"), path.join(output, "downloads"), { recursive: true });
 for (const dir of ["site", "vendor", "works", "updates", "assets/hero/web", "assets/fonts"]) {
   await cp(path.join(root, dir), path.join(output, dir), { recursive: true });
+}
+// 官网副本使用中文文件名；App 更新仍读取原 GitHub 下载地址。
+const siteWorks = JSON.parse(await readFile(path.join(output, "site/works.json"), "utf8"));
+const androidWork = siteWorks.works.find(work => work.slug === "simple-download-android");
+if (androidWork?.links.some(link => link.kind === "download" && link.href === androidDownloadUrl(androidWork.version))) {
+  const androidManifest = JSON.parse(await readFile(path.join(output, "updates/simple-download-android/latest.json"), "utf8"));
+  validateAndroidUpdate(androidManifest, siteWorks);
+  await stageAndroidDownload(output, androidManifest);
 }
 // 模块地址带构建版本：每次部署都换 URL，避免浏览器沿用旧脚本。
 const stamp = (process.env.GITHUB_SHA || "").slice(0, 8) || String(Date.now());
