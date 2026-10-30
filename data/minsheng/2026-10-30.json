@@ -1,0 +1,401 @@
+{
+  "date": "2026-10-30",
+  "issue": 70,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期五",
+  "lunarDate": "九月廿一",
+  "cutoff": "2026-10-30 05:40（北京时间）",
+  "productionTime": "2026-10-30 08:35（北京时间）",
+  "metricsCutoff": "2026-10-30 05:40（北京时间）",
+  "topStoryIds": ["domestic-01", "domestic-02", "international-01"],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "二十届五中全会公报发布 部署全面从严治党",
+        "summary": "全会于10月26日至29日在北京举行，审议通过关于持之以恒推进全面从严治党若干重大问题的决定，习近平作重要讲话。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 17:42",
+        "url": "https://www.news.cn/politics/leaders/20261029/3dc769be3bff40aeafcbf957eb4e47bb/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "国家再次调控成品油价格 汽柴油每吨分别上调345元、335元",
+        "summary": "国家发改委29日发布，自10月29日24时起，国内汽、柴油（标准品）价格每吨分别上调345元、335元，少涨95元、85元。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 16:52",
+        "url": "https://www.news.cn/fortune/20261029/c4a31e3c50384648a5758831c6e2530d/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "中欧班列东通道口岸段最长桥梁铺轨完成",
+        "summary": "10月29日，佳同铁路扩能改造工程同江特大桥铺轨完成，桥长10435.14米，是目前中欧班列三大通道口岸段最长新建桥梁。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 14:50",
+        "url": "https://www.news.cn/local/20261029/ae3ac6a9f6c648dc98f5d7bea12ce8fd/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "我国最北高铁开行满月 运送旅客45.3万人次",
+        "summary": "截至10月28日，我国最北高铁哈伊高铁开通运营满月，累计运送旅客45.3万人次，日均开行35列动车组列车。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-28 19:04",
+        "url": "https://www.news.cn/fortune/20261028/d9787d7f13be4e00966ff421c7d002cd/c.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "四部门发文提高海南自贸港贸易自由化便利化水平",
+        "summary": "商务部等四部门发布通知，从保税仓储、汽车研发测试零部件进口、外籍医师执业等方面推出海南自贸港贸易便利化举措。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 11:47",
+        "url": "https://www.cnr.cn/newscenter/native/gd/kx/20261029/t20261029_527856139.shtml"
+      },
+      {
+        "id": "domestic-06",
+        "title": "北京印发“十五五”新型能源体系规划",
+        "summary": "规划提出到2030年累计建成充电桩超65万个，外调绿电量力争达710亿千瓦时，非化石能源消费占比提升至27.6%。",
+        "source": "北京市人民政府",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 09:01",
+        "url": "https://www.beijing.gov.cn/zhengce/zcjd/202610/t20261029_4922766.html"
+      },
+      {
+        "id": "domestic-07",
+        "title": "东海放流16.8万尾标志鱼 助力“海上粮仓”修复",
+        "summary": "10月28日至29日，相关机构在浙江宁波、舟山附近海域投放带编码标签的大黄鱼、黄姑鱼、黑鲷苗种16.8万尾。",
+        "source": "中国经济网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 17:24",
+        "url": "https://www.ce.cn/xwzx/gnsz/gdxw/202610/t20261029_3275994.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "title": "前三季度我国海洋生产总值8.5万亿元 同比增长4.9%",
+        "summary": "自然资源部28日发布，前三季度我国海洋生产总值8.5万亿元，同比增长4.9%，高于国内生产总值增速0.3个百分点。",
+        "source": "央视网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 04:06",
+        "url": "https://jingji.cctv.com/2026/10/29/ARTIhLTtfclY6dKOyumy4xwu261028.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "title": "31个省份三季报出炉 地区经济总体平稳动能向优",
+        "summary": "31个省份前三季度经济数据均已发布，6个经济大省增速持平或高于全国，16个省份增速持平或跑赢全国水平。",
+        "source": "中国经济网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 06:08",
+        "url": "https://www.ce.cn/xwzx/gnsz/gdxw/202610/t20261029_3274757.shtml"
+      },
+      {
+        "id": "domestic-10",
+        "title": "前9个月规上工业企业利润同比增长15.5%",
+        "summary": "国家统计局27日公布，1至9月全国规模以上工业企业实现利润总额60337.4亿元，同比增长15.5%。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-28 09:07",
+        "url": "https://www.news.cn/tech/20261028/7974d9c7a2014b938df2897805398325/c.html"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "韩国前总统尹锡悦涉“内乱案”二审被求死刑",
+        "summary": "韩国特别检察组29日以涉嫌带头发动内乱为由，请求二审法庭判处前总统尹锡悦死刑；法院将于11月5日听取最后陈述。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 12:54",
+        "url": "https://www.news.cn/world/20261029/bb5f682b723e4f2e9547d9c23b708ea1/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "委内瑞拉要求英格兰银行归还黄金储备",
+        "summary": "委内瑞拉代总统罗德里格斯28日要求英格兰银行归还委黄金储备，称英方冻结是“闹剧”；委在英央行存有31吨黄金。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 11:18",
+        "url": "https://www.news.cn/world/20261029/65693cfda0dd4f13ab2d20d17db86568/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "伊朗称在霍尔木兹海峡上空击落美军无人机",
+        "summary": "伊朗伊斯兰革命卫队29日称，在霍尔木兹海峡上空拦截并击落一架美军MQ-1无人机，称这是其击落的第14架。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 13:21",
+        "url": "https://www.news.cn/world/20261029/e7b02c2ec423484faf3fc5d4a2a70891/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "美国萨凡纳河国家实验室发生火灾",
+        "summary": "位于美国南卡罗来纳州的萨凡纳河国家实验室28日发生火灾，火势已被扑灭，官方称未接到厂区外围放射性污染报告。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 13:54",
+        "url": "https://www.news.cn/world/20261029/26c808ec4ec641bf94a576af5335a693/c.html"
+      },
+      {
+        "id": "international-05",
+        "title": "海地总统选举推迟至明年7月举行",
+        "summary": "海地临时选举委员会28日宣布，将原定今年12月的总统选举首轮投票推迟至2027年7月18日，第二轮定于同年10月4日。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 13:11",
+        "url": "https://www.news.cn/world/20261029/fabb6d9095364ac7ba3db4455a81119f/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "巴基斯坦一救护车氧气瓶爆炸致10人死亡",
+        "summary": "巴基斯坦警方29日说，南部信德省一辆救护车内的氧气瓶28日夜间在安装过程中爆炸并引发火灾，造成至少10人死亡。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 14:06",
+        "url": "https://www.news.cn/world/20261029/37151dccadea41ed8e7c06902cec2680/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "印尼马鲁古省附近海域发生6.4级地震",
+        "summary": "印尼气象、气候和地球物理局称，当地时间29日5时06分，马鲁古省塔宁巴尔群岛西北201公里处发生6.4级地震，无海啸风险。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 07:36",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-29/10722509.shtml"
+      },
+      {
+        "id": "international-08",
+        "title": "欧盟放弃加拿大“联席成员”提法",
+        "summary": "欧盟-加拿大峰会29日在蒙特利尔举行，峰会声明草案删去“联席成员”表述，改为承诺建立“更加紧密的联系”。",
+        "source": "国际在线",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 19:15",
+        "url": "https://news.cri.cn/20261029/29d3a58f-3197-97b5-275e-abc8f5527cc2.html"
+      },
+      {
+        "id": "international-09",
+        "title": "日本自民党副总裁麻生太郎被曝政治资金丑闻",
+        "summary": "日本媒体28日报道，自民党副总裁麻生太郎领导的派阀18年间收入约30亿日元，其中约20亿通过政治资金派对筹得。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-28 21:27",
+        "url": "https://www.news.cn/world/20261028/4d408073f0444f90b8a1f694bd09b2f1/c.html"
+      },
+      {
+        "id": "international-10",
+        "title": "印尼与新加坡将设联合工作组治理跨境烟霾",
+        "summary": "印度尼西亚与新加坡外长27日会谈后宣布成立联合工作小组，在信息共享、跨境证据搜集和追讨火灾损失等方面合作。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 07:34",
+        "url": "https://www.news.cn/world/20261029/1b3e41073890437c9acf2d736ebbf142/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "国内首条穿太湖超大直径盾构隧道开始掘进",
+        "summary": "10月29日，国内首条穿太湖超大直径盾构隧道锡宜S2线穿太湖隧道在无锡开始掘进，隧道段总长21.6公里。",
+        "source": "中国经济网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 17:23",
+        "url": "https://www.ce.cn/xwzx/gnsz/gdxw/202610/t20261029_3275992.shtml"
+      },
+      {
+        "id": "tech-02",
+        "title": "我国首个智慧货运枢纽领域国家标准发布",
+        "summary": "市场监管总局批准发布《智慧货运枢纽基本要求》国家标准，这是我国首个智慧货运枢纽领域国标，2027年4月1日起实施。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-28 09:07",
+        "url": "https://www.news.cn/tech/20261028/264b3f5d775a4ebba82b83cf2c33eb96/c.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "数字人民币升级 可当“工资卡”",
+        "summary": "多所高校通知工资将通过数字人民币钱包发放；数字人民币由现金型1.0升级为存款货币型2.0，钱包余额开始计息。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 07:45",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/29/content_604377.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "长三角381项科技成果拍卖成交7.02亿元",
+        "summary": "第八届长三角G60科创走廊科技成果拍卖会29日举行，现场381项科技成果成交7.02亿元，前八届累计成交突破700亿元。",
+        "source": "中国经济网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 20:19",
+        "url": "https://www.ce.cn/xwzx/gnsz/gdxw/202610/t20261029_3276059.shtml"
+      },
+      {
+        "id": "tech-05",
+        "title": "杨凌农高会集中发布1000多项农业科技成果",
+        "summary": "第33届中国杨凌农高会正在陕西杨凌举行，1000多项国内最新农业科技成果集中发布，2000多家企业参展。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 10:31",
+        "url": "https://www.cnr.cn/china/news/20261029/t20261029_527856059.shtml"
+      },
+      {
+        "id": "tech-06",
+        "title": "“深海一号”科考船开展大洋100航次作业",
+        "summary": "执行中国大洋100航次第二航段的“深海一号”在太平洋公海开展表层海水微塑料调查、温盐深剖面观测和海水采集等作业。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 09:18",
+        "url": "https://politics.gmw.cn/2026-10/29/content_39072119.htm"
+      },
+      {
+        "id": "tech-07",
+        "title": "上海浦东“新三样”产业提质扩量",
+        "summary": "前三季度上海浦东新区新能源汽车产量同比增长50.3%，占整车产量88%；储能用锂离子电池产量同比增长1.6倍。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 08:43",
+        "url": "https://www.news.cn/tech/20261029/5d8fc335fb0b4feea07a40c5ba77f51b/c.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "首届“飞阅中国”低空经济应用场景大赛决赛举行",
+        "summary": "决赛10月26日至27日在重庆梁平举行，全国70支团队围绕低空农业、物流、应急救援、城市治理4大场景实战比拼。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 08:42",
+        "url": "https://www.news.cn/tech/20261029/3835c555882f49c58f721d2ed88b7b41/c.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "2026国际（武汉）智能建造产业博览会开幕",
+        "summary": "博览会27日在武汉开幕，设“设计之都”“好房子”等8大展区，200余家单位携1400余项创新成果参展。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-28 08:52",
+        "url": "https://www.news.cn/tech/20261028/d99ff6b8db9c4b3788ebeec7fefdc008/c.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "我国民用遥感卫星保持年均新增百颗以上",
+        "summary": "报告显示，截至2025年底我国累计发射民用遥感卫星694颗，在轨约660颗，2025年新增在轨126颗，商业卫星占近八成。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-28 09:07",
+        "url": "https://www.news.cn/tech/20261028/83ef9c402a1e4d9c83cf70fd72619c9f/c.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "生成式AI用户规模突破7亿 普及率超50%",
+        "summary": "中国互联网络信息中心报告显示，截至2026年上半年我国生成式人工智能用户规模突破7亿户，普及率超过50%。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 08:50",
+        "url": "https://www.news.cn/tech/20261029/dc2ff22c3c5e444497f3fcd605d79780/c.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "首批风云气象卫星极端天气AI模型发布",
+        "summary": "10月29日，首批风云气象卫星极端天气AI模型在长沙发布，其中强对流短临预警模型可将预警时间提前至4小时。",
+        "source": "中国经济网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 18:35",
+        "url": "https://www.ce.cn/xwzx/gnsz/gdxw/202610/t20261029_3276045.shtml"
+      },
+      {
+        "id": "ai-03",
+        "title": "研究：与AI互动或加重初发精神病患者症状",
+        "summary": "美国范德比尔特大学研究审查约21.6万份健康记录，73名患者中28人因聊天机器人使用症状加重，约61%为首次发作。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 08:51",
+        "url": "https://www.news.cn/tech/20261029/89b7392d46074b88a42b05bcc9224049/c.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "AI“克隆”游戏角色声音被判侵权",
+        "summary": "上海浦东法院审结一起AI变声软件案，被告未经授权“克隆”《原神》63款角色声音销售，被判著作权侵权及不正当竞争。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 11:12",
+        "url": "https://www.cnr.cn/china/gdgg/20261029/t20261029_527856105.shtml"
+      },
+      {
+        "id": "ai-05",
+        "title": "贵安新区搭建真实场景训练机器人",
+        "summary": "贵州贵安新区人工智能数据工厂搭建商超、康养、工业制造等真实场景，通过真机遥操采集数据，持续优化机器人算法。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 08:48",
+        "url": "https://www.news.cn/tech/20261029/6a4fc01f9f4b4780b8cdd63b0bdefdd4/c.html"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "kind": "gold",
+      "icon": "◎",
+      "name": "国内金价",
+      "value": "865.26元/克",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/graph/Dailyhq?instid=Au99.99",
+      "sourceOrigin": "china",
+      "note": "10月29日收盘 Au99.99"
+    },
+    {
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "中国油价",
+      "value": "92号8.85元/升",
+      "source": "上海市发展和改革委员会",
+      "sourceUrl": "https://fgw.sh.gov.cn/fgw_jggl/20261029/c4173f8c7fb84f8486130488d93f1751.html",
+      "sourceOrigin": "china",
+      "note": "上海最高零售价 2026年10月29日24时起执行"
+    },
+    {
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际油价",
+      "value": "WTI 102.00美元/桶",
+      "source": "新华网",
+      "sourceUrl": "https://www.news.cn/fortune/20261030/311569d7ad664d06a001ad86ee261735/c.html",
+      "sourceOrigin": "china",
+      "note": "10月29日收盘 布伦特114.88美元/桶"
+    },
+    {
+      "kind": "usd_cny",
+      "icon": "＄",
+      "name": "美元兑人民币",
+      "value": "1美元=6.7147人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/",
+      "sourceOrigin": "china",
+      "note": "10月29日人民币汇率中间价"
+    },
+    {
+      "kind": "eur_cny",
+      "icon": "€",
+      "name": "欧元兑人民币",
+      "value": "1欧元=7.4570人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/",
+      "sourceOrigin": "china",
+      "note": "10月29日人民币汇率中间价"
+    },
+    {
+      "kind": "jpy_cny",
+      "icon": "¥",
+      "name": "日元兑人民币",
+      "value": "100日元=4.2453人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/",
+      "sourceOrigin": "china",
+      "note": "10月29日人民币汇率中间价"
+    }
+  ],
+  "observation": "今日公报为“十五五”开局定调，宏观政策强调发展与安全并重。油价调控后仍小幅上调，居民出行成本值得留意；海洋经济、工业利润与31省份数据延续向好，新能源和数字人民币加快落地。国际上韩国政局、伊朗无人机与核实验室火灾增添不确定性，海地选举再度推迟。",
+  "sources": ["新华网", "央广网", "北京市人民政府", "中国经济网", "央视网", "中国新闻网", "国际在线", "中国科技网", "光明网"],
+  "metricSources": ["上海黄金交易所", "上海市发展和改革委员会", "新华网", "中国外汇交易中心"]
+}
