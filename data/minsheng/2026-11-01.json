@@ -1,0 +1,423 @@
+{
+  "date": "2026-11-01",
+  "issue": 72,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期日",
+  "lunarDate": "九月廿三",
+  "cutoff": "2026-11-01 05:41（北京时间）",
+  "productionTime": "2026-11-01 05:41（北京时间）",
+  "metricsCutoff": "2026-11-01 05:41（北京时间）",
+  "topStoryIds": [
+    "domestic-03",
+    "domestic-02",
+    "international-01"
+  ],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "11月1日起一批国家标准开始实施",
+        "summary": "11月1日起，54项强制性国家标准、465项推荐性标准和1项指导性技术文件实施，涉及机械噪声、教室照明、冬季供暖供气与适老化服务。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-31 18:02",
+        "url": "https://www.news.cn/politics/20261031/c7f856742f2f46b29f1e160ce498d6ba/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "陪诊服务首个“国标”11月1日实施",
+        "summary": "我国陪诊领域首项国家标准11月1日实施，明确陪诊服务由机构提供，陪诊员须培训考核持健康证，不得判读检查结果或代选治疗方案。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-31 11:42",
+        "url": "https://www.cnr.cn/2014jkpd/yg/20261031/t20261031_527858427.shtml"
+      },
+      {
+        "id": "domestic-03",
+        "title": "购房贴息政策满月 刚需群体负担减轻",
+        "summary": "居民购房贷款贴息政策满月，首套住房贷款按本金给1个百分点、最长5年贴息，单户上限100万元，多地低总价房源成交升温。",
+        "source": "中国经济网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-31 07:57",
+        "url": "https://www.ce.cn/xwzx/gnsz/gdxw/202610/t20261031_3277571.shtml"
+      },
+      {
+        "id": "domestic-04",
+        "title": "反跨境腐败法草案将二审 拟加强个人信息保护",
+        "summary": "反跨境腐败法草案二次审议稿将提请全国人大常委会审议，拟增加规定加强对国家秘密、商业秘密、个人信息和个人隐私的保护。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-31 09:55",
+        "url": "https://www.cnr.cn/newscenter/native/gd/20261031/t20261031_527858320.shtml"
+      },
+      {
+        "id": "domestic-05",
+        "title": "我国开展水资源调度跨省江河达89条",
+        "summary": "水利部表示，我国开展水资源调度的跨省江河已达89条，剩余5条今年底前启动，永定河、西辽河等断流河流重现生机。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-31 09:09",
+        "url": "https://news.cnr.cn/native/gd/20261031/t20261031_527858265.shtml"
+      },
+      {
+        "id": "domestic-06",
+        "title": "多地拓展“车票+门票”等一站式出行服务",
+        "summary": "交通票根正变成消费凭证：青岛凭7日内车票可享400余家商户近700项权益，黄山、中山等地推出车票门票一站式服务。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-31 09:37",
+        "url": "https://travel.cnr.cn/dsywzl/20261031/t20261031_527858287.shtml"
+      },
+      {
+        "id": "domestic-07",
+        "title": "未来五年，如何助力中小企业发展量质齐升？",
+        "summary": "工信部等十部门9月发布《促进中小企业发展“十五五”规划》，提出到2030年专精特新“小巨人”企业达2.2万家、特色产业集群达600个。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-31 15:45",
+        "url": "https://www.news.cn/fortune/20261031/b126932a2e3241d0bf72cd1e8a6db66a/c.html"
+      },
+      {
+        "id": "domestic-08",
+        "title": "四川华蓥大摆荡项目事故调查报告公布",
+        "summary": "四川华蓥溪口玛琉岩大摆荡项目“5·3”高处坠落事故调查报告公布，认定为一般生产安全责任事故，2名直接责任人已移送司法。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-31 20:57",
+        "url": "https://www.news.cn/politics/20261031/2dca9d8d34144461829f21bc076836d5/c.html"
+      },
+      {
+        "id": "domestic-09",
+        "title": "公安网安部门公布多起不履行数据安全保护义务案",
+        "summary": "公安网安部门公布3起不履行数据安全保护义务案，福建漳州一医疗机构因权限混乱、1800余条工作数据导出无防护被行政处罚。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-31 08:55",
+        "url": "https://www.news.cn/legal/20261031/1d688fa336e4456b92b59d978a28437f/c.html"
+      },
+      {
+        "id": "domestic-10",
+        "title": "第140届广交会第三期开幕",
+        "summary": "10月31日，第140届广交会第三期在广州开幕，主题为“美好生活”，涵盖玩具、时尚、家纺等5大板块，展至11月4日。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-31 16:25",
+        "url": "https://www.news.cn/photo/20261031/72fa81d7996b4ab7964fbec61ce36096/c.html"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "鲁比奥称特朗普尚未就对伊朗军事行动作出决定",
+        "summary": "美国国务卿鲁比奥当地时间31日称，尚未就针对伊朗的军事行动作出决定；伊朗最高领袖下令对任何威胁作即时有力回应。",
+        "source": "国际在线",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-01 02:26",
+        "url": "https://news.cri.cn/20261101/9a4b16af-6686-d2f9-c70e-df265277fa70.html"
+      },
+      {
+        "id": "international-02",
+        "title": "南苏丹瓦拉卜州一社区遭武装袭击致72死38伤",
+        "summary": "南苏丹瓦拉卜州政府说，该州一社区遭武装袭击，造成至少72人死亡、38人受伤，两处市场和多处民居被焚毁。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-27 13:47",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-27/10721577.shtml"
+      },
+      {
+        "id": "international-03",
+        "title": "美国加州一购物中心发生枪击 至少7人受伤",
+        "summary": "据美国哥伦比亚广播公司报道，当地时间30日晚，加州费尔菲尔德市一处购物中心发生枪击事件，至少7人受伤。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-31 13:57",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-31/10723875.shtml"
+      },
+      {
+        "id": "international-04",
+        "title": "俄美已开始磋商俄美乌三方会谈具体日期",
+        "summary": "俄罗斯总统助理乌沙科夫表示，俄美已开始磋商俄美乌三方会谈具体日期，会谈预计在阿联酋阿布扎比举行。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-31 10:47",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-31/10723807.shtml"
+      },
+      {
+        "id": "international-05",
+        "title": "拉加德提前卸任 欧洲央行行长继任者受关注",
+        "summary": "欧洲央行行长拉加德将于2027年2月7日卸任，比八年任期原定结束提前数月；欧元区21个成员国将决定继任者人选。",
+        "source": "国际在线",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-30 09:06",
+        "url": "https://news.cri.cn/20261030/8d3fde3e-5ad8-42f3-a482-05887245ac09.html"
+      },
+      {
+        "id": "international-06",
+        "title": "英首相称愿考虑就奴隶贸易道歉但拒绝赔偿",
+        "summary": "英国首相伯纳姆表示，愿考虑就英国参与奴隶贸易正式道歉，但拒绝向受害者后裔支付经济赔偿，提出可重组部分国家债务。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-31 21:20",
+        "url": "https://www.news.cn/world/20261031/fe1b28c16b3442e9b75472f232e74b40/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "乌称阿列什基撤离人员已进入境",
+        "summary": "乌克兰方面称，从赫尔松州阿列什基撤离的居民已越过边境进入乌境内，人道主义行动完成，停火持续至11月1日22时59分。",
+        "source": "国际在线",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-31 23:02",
+        "url": "https://news.cri.cn/20261031/6eb88684-5228-9442-bdd3-50a31d69bb7a.html"
+      },
+      {
+        "id": "international-08",
+        "title": "美国中期选举提前投票观察：三个问题成焦点",
+        "summary": "距11月3日美国中期选举仅剩数日，已有超4000万选民提前投票，通胀、移民与腐败是多数选民关注的焦点。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-31 18:25",
+        "url": "https://www.news.cn/world/20261031/fe9b796a17924f94bd27713cc855c6fb/c.html"
+      },
+      {
+        "id": "international-09",
+        "title": "强气旋“阿尔纳布”登陆印度东部沿海 超18万人撤离",
+        "summary": "强气旋“阿尔纳布”28日在印度东部沿海登陆，安得拉邦和奥里萨邦提前撤离超18万人，当地三座机场暂停运营。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-28 16:37",
+        "url": "https://www.chinanews.com.cn/gj/2026/10-28/10722263.shtml"
+      },
+      {
+        "id": "international-10",
+        "title": "俄政府延长柴油出口禁令有效期",
+        "summary": "俄罗斯政府31日宣布，把针对燃油生产商的柴油出口禁令有效期延长至2027年1月31日，以稳定国内燃油市场。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-31 20:51",
+        "url": "https://www.news.cn/world/20261031/af7bac2bb765441d84475d0c1c775729/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "梦舟载人飞船和揽月着陆器将首次飞行",
+        "summary": "第七届载人航天学术大会31日开幕，我国月球探测工程登月阶段任务扎实推进，计划2030年前实现中国人首次登月。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-31 19:10",
+        "url": "https://www.chinanews.com.cn/gn/2026/10-31/10723897.shtml"
+      },
+      {
+        "id": "tech-02",
+        "title": "国产卫星互联网打通全球通信“最后的盲区”",
+        "summary": "“极地”号完成国产卫星互联网北极航线准业务化应用测试，首次实现北极、南极、青藏高原联网通信验证。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-31 09:42",
+        "url": "https://www.news.cn/tech/20261031/9653766a51e6459fa99040486c14293b/c.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "算力网建设为中国西部撑起数字未来",
+        "summary": "我国部署水网、新型电网、算力网等“六张网”，贵州与内蒙古、甘肃、宁夏等地纳入国家算力枢纽，一批新项目加快推进。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-31 07:59",
+        "url": "https://www.news.cn/20261031/8cdc6a6740a9494d97b76ad21df38cdd/c.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "我国首架正向设计研制吨级商用无人运输机转入批量生产",
+        "summary": "我国首架正向设计研制的吨级商用无人运输机HE-1A首架量产机下线，最大起飞重量4吨、有效载重2吨，转入批量生产。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-31 10:47",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/31/content_605985.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "我国镓、锗、铟等13种矿产保有资源量显著增加",
+        "summary": "自然资源部31日介绍，共伴生低品位战略性矿产再评价后，我国镓、锗、铟等13种矿产保有资源量显著增加。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-31 14:05",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/31/content_606041.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "我国首架综合航测飞机完成全科目示范飞行",
+        "summary": "我国首架综合航测飞机运12F完成全科目示范飞行，累计飞行12架次近30小时，获取大气污染物三维立体分布数据。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-30 20:02",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/30/content_605689.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "国内首个百万千瓦级“两个联营”示范项目首台机组投运",
+        "summary": "10月30日，国家能源集团宁夏六盘山电厂1号机组投运，成为国内首个百万千瓦级“两个联营”示范项目首台机组。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-30 13:32",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/30/content_605399.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "超导量子比特上实现6.8纳秒量子操作",
+        "summary": "德国于利希研究中心等机构在超导量子比特上实现6.8纳秒量子操作，保真度超99.98%，论文发表于《自然·通讯》。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 02:02",
+        "url": "https://www.stdaily.com/web/gjxw/2026-10/29/content_604223.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "施一公团队新发现：水稻蛋白能“凭空”造出RNA",
+        "summary": "西湖大学施一公团队在体外实验中发现，水稻蛋白OsNTP4不用模板和引物即可合成RNA，成果发表于《Vita》。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-29 18:05",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/29/content_604895.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "我国团队研制出核光钟",
+        "summary": "我国团队在国际上率先研制出核光钟，把计时“节拍器”从原子能级搬到原子核，有望提升时间基准稳定性。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-30 22:25",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/30/content_605775.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "国家文物局：支持研制考古专用人工智能大模型",
+        "summary": "国家文物局印发《考古工作“十五五”规划》，提出强化科技支撑，建设国家级考古科学实验室，支持研制考古专用人工智能大模型。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-31 20:03",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/31/content_606182.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "乌镇发出“开源开放 共建共享”之声",
+        "summary": "2026年世界互联网大会乌镇峰会11月2日至5日举行，专设“人工智能乌镇对话”；此前一周全球模型调用量前五均为中国模型。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-31 17:57",
+        "url": "https://www.chinanews.com.cn/cj/2026/10-31/10723896.shtml"
+      },
+      {
+        "id": "ai-03",
+        "title": "“模特”长着三条腿 AI卖家秀能否让消费者放心选择",
+        "summary": "双十一临近，电商平台出现手部结构异常、长着三条腿的AI模特图，实测多款商品主图被检出AI生成痕迹，消费者难辨真伪。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-31 12:04",
+        "url": "https://www.cnr.cn/newscenter/native/gd/20261031/t20261031_527858451.shtml"
+      },
+      {
+        "id": "ai-04",
+        "title": "2026中国自动化大会共探自动化与智能科技前沿",
+        "summary": "10月31日，2026中国自动化大会在北京开幕，65场平行会议覆盖具身智能、世界模型、大模型多智能体、AI赋能等方向。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-31 22:26",
+        "url": "https://www.news.cn/tech/20261031/0c0a943449674c09a51d26773e987c3e/c.html"
+      },
+      {
+        "id": "ai-05",
+        "title": "田有智机 仓有AI 塘有模型——江苏绘就“藏粮于技”新图景",
+        "summary": "江苏秋收秋播用上AI全自动质检、北斗导航农机和无人机算法，粮库用AI管粮，鱼塘用水下监测和模型养鱼。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-30 15:57",
+        "url": "https://www.stdaily.com/web/gdxw/2026-10/30/content_605511.html"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "id": "metric-gold",
+      "kind": "gold",
+      "icon": "◎",
+      "name": "国内金价",
+      "value": "854.76元/克",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/graph/Dailyhq?instid=Au99.99",
+      "sourceOrigin": "china",
+      "note": "10月30日收盘 Au99.99"
+    },
+    {
+      "id": "metric-domestic-oil",
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "中国油价",
+      "value": "92号8.85元/升",
+      "source": "上海市发展和改革委员会",
+      "sourceUrl": "https://fgw.sh.gov.cn/fgw_jggl/20261029/c4173f8c7fb84f8486130488d93f1751.html",
+      "sourceOrigin": "china",
+      "note": "上海最高零售价 2026年10月29日24时起执行"
+    },
+    {
+      "id": "metric-international-oil",
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际油价",
+      "value": "WTI 104.12美元/桶",
+      "source": "新华网",
+      "sourceUrl": "https://www.news.cn/20261031/a9d981131dc74bb0b8e243ea0b0741d2/c.html",
+      "sourceOrigin": "china",
+      "note": "10月30日收盘 布伦特117.64美元/桶"
+    },
+    {
+      "id": "metric-usd",
+      "kind": "usd_cny",
+      "icon": "＄",
+      "name": "美元兑人民币",
+      "value": "1美元=6.7138人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/",
+      "sourceOrigin": "china",
+      "note": "10月30日人民币汇率中间价"
+    },
+    {
+      "id": "metric-eur",
+      "kind": "eur_cny",
+      "icon": "€",
+      "name": "欧元兑人民币",
+      "value": "1欧元=7.4792人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/",
+      "sourceOrigin": "china",
+      "note": "10月30日人民币汇率中间价"
+    },
+    {
+      "id": "metric-jpy",
+      "kind": "jpy_cny",
+      "icon": "¥",
+      "name": "日元兑人民币",
+      "value": "100日元=4.2419人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/",
+      "sourceOrigin": "china",
+      "note": "10月30日人民币汇率中间价"
+    }
+  ],
+  "observation": "今日民生看点集中在政策落地：11月1日起一批国家标准实施，覆盖适老化服务、教室照明和冬季供暖供气；陪诊服务首个国标同日生效，为3亿多老年人就医立规矩；购房贴息满月，刚需减负初显。科技方面，载人登月研制推进，国产卫星互联网打通极地通信盲区。国际上，美方对伊朗军事行动仍待决定，中东局势牵动油价。",
+  "sources": [
+    "新华网",
+    "央广网",
+    "中国经济网",
+    "中国科技网",
+    "国际在线",
+    "中国新闻网"
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "上海市发展和改革委员会",
+    "新华网",
+    "中国外汇交易中心"
+  ]
+}
