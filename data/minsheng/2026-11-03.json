@@ -1,0 +1,422 @@
+{
+  "date": "2026-11-03",
+  "issue": 73,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期二",
+  "lunarDate": "九月廿五",
+  "cutoff": "2026-11-03 05:42（北京时间）",
+  "productionTime": "2026-11-03 06:40（北京时间）",
+  "metricsCutoff": "2026-11-03 05:42（北京时间）",
+  "topStoryIds": [
+    "domestic-01",
+    "domestic-03",
+    "international-01"
+  ],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "全面推进黄河保护治理工作会议在郑州召开",
+        "summary": "11月2日，全面推进黄河保护治理工作会议在郑州召开，传达习近平总书记重要指示，要求持续完善大保护大协同格局，筑牢国家生态安全屏障。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-02 17:27",
+        "url": "https://www.chinanews.com.cn/gn/2026/11-02/10724832.shtml"
+      },
+      {
+        "id": "domestic-02",
+        "title": "重庆涪陵管道迸裂事故调查报告公布",
+        "summary": "重庆涪陵兴涪电力管道迸裂事故调查报告公布，4人遇难、直接经济损失约698.7万元，认定为较大生产安全责任事故，4人建议追究刑责。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-02 22:42",
+        "url": "https://www.news.cn/politics/20261102/46bb2a6cadf44de6916ac9e6a7f239e4/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "刑事诉讼法修正草案提请初次审议",
+        "summary": "刑事诉讼法修正草案提请十四届全国人大常委会第二十五次会议初次审议，新增禁止有罪推定、完善人身强制措施和辩护权保障等规定。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-02 18:42",
+        "url": "https://www.news.cn/legal/20261102/fe0cadb0132047d9b4bb977063267b1d/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "冷空气继续南下 南北方气温走势分化",
+        "summary": "冷空气继续南下，湖南、江西、广西北部局地降温超过10℃，桂林、郴州最高气温降11至12℃；11月4日至7日还有冷空气影响我国。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-02 19:00",
+        "url": "https://cnews.chinadaily.com.cn/a/202611/02/WS6ae873eee4b09a165c793183.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "三部门优化支持资本市场两项工具",
+        "summary": "人民银行等三部门召开座谈会，优化证券基金保险互换便利和股票回购增持再贷款，互换便利余额1050亿元，再贷款利率降至1%。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-02 21:00",
+        "url": "https://www.news.cn/fortune/20261102/94ebd5fc6c1644d5a7f4844503f2abbb/c.html"
+      },
+      {
+        "id": "domestic-06",
+        "title": "证监会拟修订上市公司股份回购规则",
+        "summary": "证监会拟修订上市公司股份回购规则，新增股价破发可开展护盘式回购，护盘式回购不适用上市满六个月限制，回购资金纳入回购专项基金。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-02 21:13",
+        "url": "https://www.news.cn/fortune/20261102/fa008df480d741e79a9edde6fa3a27f5/c.html"
+      },
+      {
+        "id": "domestic-07",
+        "title": "消费品以旧换新带动销售额超2万亿元",
+        "summary": "商务部数据显示，今年以来消费品以旧换新政策带动相关品类销售额超过2万亿元，覆盖人群超过2.5亿人次。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-30 09:30",
+        "url": "https://www.news.cn/tech/20261030/13822a6a42fe44cc844aa2d27173058e/c.html"
+      },
+      {
+        "id": "domestic-08",
+        "title": "七部门推进新就业形态人员参加基本医保",
+        "summary": "国家医保局等七部门部署新就业形态人员参加基本医疗保险提质专项行动，探索个人缴费加平台补贴，七家平台企业签署倡议。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-02 09:54",
+        "url": "https://economy.gmw.cn/2026-11/02/content_39080358.htm"
+      },
+      {
+        "id": "domestic-09",
+        "title": "多种毒株同时活跃 今年流感季提前",
+        "summary": "国家流感中心表示，今年甲型H3N2、甲型H1N1与乙型Victoria系共同流行，流感季开始早于往年，儿童、老人和慢性病患者重症风险较高。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-02 10:54",
+        "url": "https://health.gmw.cn/2026-11/02/content_39080626.htm"
+      },
+      {
+        "id": "domestic-10",
+        "title": "专属保险为农户兜牢意外保障",
+        "summary": "多地推出农村小额意外险、务工保等产品，保费每年20至100元，为农户和灵活务工人员提供意外伤害与医疗保障。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-02 09:50",
+        "url": "https://economy.gmw.cn/2026-11/02/content_39080345.htm"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "伊朗提出有条件恢复霍尔木兹海峡通航",
+        "summary": "伊朗提出有条件恢复霍尔木兹海峡通航，要求美方先解除港口封锁、放松石油制裁并解冻资产，执行期限已缩短至两天。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-02 20:33",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-02/10724894.shtml"
+      },
+      {
+        "id": "international-02",
+        "title": "伊朗外交部：伊美谈判由议长卡利巴夫负责",
+        "summary": "伊朗外交部表示伊美对话仍在进行，谈判由议长卡利巴夫负责，副外长赴多哈与美方交换信息，伊方暂不谈判核问题。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-02 18:23",
+        "url": "https://www.news.cn/world/20261102/b94497ddf46943d980f83413cf3e1ed7/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "加美领导人称贸易协议磋商取得进展",
+        "summary": "加拿大总理卡尼称与特朗普就贸易协议进行富有成效的对话，双方团队将在数周内磋商；特朗普仍强调美国对加贸易亏损。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-02 15:48",
+        "url": "https://www.news.cn/world/20261102/a687abc896c2448f956b668c6485334f/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "俄方称奥列什基人道主义停火结束",
+        "summary": "俄方称奥列什基人道主义行动区静默制度11月1日结束，停火期间双方履行义务，居民经安全通道撤离，后续援助仍将继续。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-02 13:10",
+        "url": "https://www.news.cn/world/20261102/ff94f0d17f444ceabd27cafddd0b45e8/c.html"
+      },
+      {
+        "id": "international-05",
+        "title": "阿根廷媒体称情报机构协助博索纳罗出逃",
+        "summary": "阿根廷媒体称阿情报机构人员协助弗拉维奥·博索纳罗离境，美方称未直接参与；巴西最高法院此前已禁止其离境。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-02 10:04",
+        "url": "https://www.news.cn/world/20261102/d46e621295fd4a0f8a7c1158c6bcd67e/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "日本错误史观渗入流行文化产品",
+        "summary": "人民日报发文指出日本错误史观渗入影视、漫画和游戏等流行文化产品，淡化侵略历史，呼吁高度警惕。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-02 08:08",
+        "url": "https://www.news.cn/world/20261102/911e9d0251a446b6bed5233a64afb1f1/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "外媒称特朗普与内塔尼亚胡就美伊谈判通话",
+        "summary": "外媒称特朗普与内塔尼亚胡就美伊谈判通话，以方希望中期选举后立即对伊朗动武，特朗普倾向先谈，双方评价不一。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-02 07:04",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-02/10724530.shtml"
+      },
+      {
+        "id": "international-08",
+        "title": "美军侦察机沿俄边境巡逻五个半小时",
+        "summary": "俄媒报道一架美军侦察机从罗马尼亚起飞，沿俄边境巡逻五个半小时，俄方称北约在西部边境活动空前活跃。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-02 02:01",
+        "url": "https://www.news.cn/world/20261102/26ae24e1f86d414e87f214f61c085332/c.html"
+      },
+      {
+        "id": "international-09",
+        "title": "沙特主导联军称对胡塞武装实施精准打击",
+        "summary": "沙特主导联军称11月1日对也门胡塞武装关键军事资源实施精准打击，称其袭击危及平民和红海航运安全，未公布伤亡。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-02 00:13",
+        "url": "https://www.news.cn/world/20261102/2908788fb9c440dfafe60c523b9b2844/c.html"
+      },
+      {
+        "id": "international-10",
+        "title": "中国—秘鲁自贸协定升级议定书生效",
+        "summary": "中国—秘鲁自贸协定升级议定书11月1日生效，完善原产地、服务贸易等七个章节，新增电子商务、供应链等五个章节。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-01 14:02",
+        "url": "https://www.news.cn/silkroad/20261102/43e691170d564658a864076da7937057/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "新疆阜康熔盐塔式光热项目并网",
+        "summary": "新疆阜康10万千瓦熔盐塔式光热项目并网，配套90万千瓦光伏，光热部分年均发电约1.2亿千瓦时，年减排二氧化碳约14万吨。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-02 08:03",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/02/content_606563.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "宁夏完成首笔小时级绿电交易结算",
+        "summary": "宁夏完成首笔省内小时级绿电交易结算，成交电量3900万千瓦时，按小时核算并发放绿电消费凭证，服务碳关税溯源。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-02 13:10",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/02/content_606786.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "国产3D科学计算机“天穹”实现百万原子级模拟",
+        "summary": "国产3D科学计算机“天穹”采用MaPU内核和三维环网架构，可在百万原子级体系做微秒级分子动力学模拟。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-02 07:58",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/02/content_606556.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "国产新一代医用重离子加速器亮相",
+        "summary": "中科院近代物理研究所展示国产新一代超紧凑旋转束重离子治疗系统，为精准放疗提供国产装置。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-30 09:28",
+        "url": "https://www.news.cn/tech/20261030/54b4915bc24546a8871aea818d7a5048/c.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "苹果采摘机器人助力果园降本增效",
+        "summary": "苹果采摘机器人在陕西白水示范作业，可完成采摘、分拣、转运等关键工序，助力果园降本增效。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-02 08:59",
+        "url": "https://www.news.cn/tech/20261102/99495db617a0417aa73cd10f9c90285c/c.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "信息通信业五年跑出“加速度”",
+        "summary": "2020年至2025年，我国5G用户从3.5亿户增至12亿户，5G基站从77.1万个增至483.8万个，互联网普及率升至80.1%。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-30 09:01",
+        "url": "https://www.news.cn/tech/20261030/d0455f23d0224a70828ffb2265329608/c.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "“妈祖”海洋预报升级至2.0版本",
+        "summary": "国家海洋环境预报中心推出“妈祖”海洋预报数值模式2.0，实现全球可变分辨率模拟，海温盐度流速预报达国际先进水平。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-02 09:58",
+        "url": "https://tech.gmw.cn/2026-11/02/content_39080386.htm"
+      },
+      {
+        "id": "tech-08",
+        "title": "中国雪豹种群数量增至约5000只",
+        "summary": "国家林草局数据显示，中国雪豹数量从约2500只增至约5000只，栖息地约208万平方公里，占全球六成以上。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-28 10:09",
+        "url": "https://tech.gmw.cn/2026-10/28/content_39070282.htm"
+      },
+      {
+        "id": "tech-09",
+        "title": "智能消费新品加快落地",
+        "summary": "无人咖啡店、扫地机器人、AI眼镜等新品加快落地，商务部等七部门提出培育智能消费等多个十万亿级市场。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-30 08:57",
+        "url": "https://www.news.cn/tech/20261030/50d7c94be63e41a6acb6130efd132db8/c.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "2026世界物联网博览会在无锡开幕",
+        "summary": "2026世界物联网博览会在无锡开幕，AI与物联网融合覆盖工业控制、数据加密、商业航天等场景，无锡物联网产业年营收达3184亿元。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-02 09:57",
+        "url": "https://tech.gmw.cn/2026-11/02/content_39080408.htm"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "一体化800V高压直流系统服务AI数据中心",
+        "summary": "远景一体化800V高压直流供电系统在大型AI数据中心投入商业运行，固态变压器将10千伏交流直接转为800伏直流。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-02 14:28",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/02/content_606839.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "宁德时代用AI加速化合物筛选",
+        "summary": "宁德时代曾毓群表示，公司积累超600TB研究数据和1万亿条测试记录，用AI从千种化合物中快速锁定7种潜力材料。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-02 13:29",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/02/content_606805.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "呼和浩特万卡智算集群部署约2万张AI加速卡",
+        "summary": "中国移动呼和浩特智算中心部署约2万张AI加速卡，线性加速比超90%，冷板液冷使PUE降至1.15。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-30 09:06",
+        "url": "https://www.news.cn/tech/20261030/2eb04699a75c448e8eeb098e89ac6cb3/c.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "中美两场AI蛋白质设计挑战赛同期举行",
+        "summary": "中美两场AI蛋白质设计挑战赛同期举行，均提供至少5000次免费湿实验，长江杯报名团队已超过1200支。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-10-28 08:33",
+        "url": "https://tech.gmw.cn/2026-10/28/content_39069461.htm"
+      },
+      {
+        "id": "ai-05",
+        "title": "中国AI应用与治理国际合作白皮书发布",
+        "summary": "《中国人工智能应用与治理国际合作白皮书》在北京发布，24家机构联合编制，提出共享模型、算力和语料的技术底座。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-02 16:22",
+        "url": "https://www.stdaily.com/web/English/2026-11/02/content_606875.html"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "id": "metric-gold",
+      "kind": "gold",
+      "icon": "◎",
+      "name": "国内金价",
+      "value": "836.08元/克",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/graph/Dailyhq?instid=Au99.99",
+      "sourceOrigin": "china",
+      "note": "11月2日收盘 Au99.99"
+    },
+    {
+      "id": "metric-domestic-oil",
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "中国油价",
+      "value": "92号8.85元/升",
+      "source": "上海市发展和改革委员会",
+      "sourceUrl": "https://fgw.sh.gov.cn/fgw_jggl/20261029/c4173f8c7fb84f8486130488d93f1751.html",
+      "sourceOrigin": "china",
+      "note": "上海最高零售价 2026年10月29日24时起执行"
+    },
+    {
+      "id": "metric-international-oil",
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际油价",
+      "value": "WTI 96.46美元/桶",
+      "source": "新华网",
+      "sourceUrl": "https://www.news.cn/world/20261103/10f559e601b7487dbf95a1284f5b0738/c.html",
+      "sourceOrigin": "china",
+      "note": "11月2日收盘 布伦特104.77美元/桶"
+    },
+    {
+      "id": "metric-usd",
+      "kind": "usd_cny",
+      "icon": "＄",
+      "name": "美元兑人民币",
+      "value": "1美元=6.7146人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://xining.pbc.gov.cn/zhengcehuobisi/125207/125217/125925/2026110209024025091/index.html",
+      "sourceOrigin": "china",
+      "note": "11月2日人民币汇率中间价"
+    },
+    {
+      "id": "metric-eur",
+      "kind": "eur_cny",
+      "icon": "€",
+      "name": "欧元兑人民币",
+      "value": "1欧元=7.4650人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://xining.pbc.gov.cn/zhengcehuobisi/125207/125217/125925/2026110209024025091/index.html",
+      "sourceOrigin": "china",
+      "note": "11月2日人民币汇率中间价"
+    },
+    {
+      "id": "metric-jpy",
+      "kind": "jpy_cny",
+      "icon": "¥",
+      "name": "日元兑人民币",
+      "value": "100日元=4.2424人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://xining.pbc.gov.cn/zhengcehuobisi/125207/125217/125925/2026110209024025091/index.html",
+      "sourceOrigin": "china",
+      "note": "11月2日人民币汇率中间价"
+    }
+  ],
+  "observation": "今日民生政策密度较高：刑事诉讼法修正草案提请初次审议，拟完善人身强制措施与辩护权保障；国家医保局等七部门部署新就业形态人员参加基本医保，七家平台企业签署倡议；多毒株共同流行，今年流感季提前。经济面，三部门优化支持资本市场两项工具，证监会拟修订上市公司股份回购规则，以旧换新今年带动销售额超2万亿元。国际上，伊朗提出有条件恢复霍尔木兹海峡通航，美伊谈判仍在进行，国际油价2日大幅回落，布伦特收于104.77美元。",
+  "sources": [
+    "新华网",
+    "中国新闻网",
+    "中国科技网",
+    "光明网",
+    "中国日报中文网"
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "上海市发展和改革委员会",
+    "新华网",
+    "中国外汇交易中心"
+  ]
+}
