@@ -1,0 +1,407 @@
+{
+  "date": "2026-11-04",
+  "issue": 74,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期三",
+  "lunarDate": "九月廿六",
+  "cutoff": "2026-11-04 12:10（北京时间）",
+  "productionTime": "2026-11-04 12:10（北京时间）",
+  "metricsCutoff": "2026-11-04 12:10（北京时间）",
+  "topStoryIds": ["domestic-02", "domestic-05", "international-01"],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "全国放心消费平台正式上线",
+        "summary": "市场监管总局建设的全国放心消费平台11月3日上线，首批入驻超过1万个放心消费单元和100个集聚区，消费者可查证照、看评价并一键投诉。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 07:54",
+        "url": "https://www.news.cn/fortune/20261104/6e456f66846049f1ae1f67ccf1ac1ae4/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "央行下调股票回购增持再贷款利率至1%",
+        "summary": "自11月4日起，股票回购增持再贷款利率下调0.25个百分点至1%，支持21家全国性银行和5家系统重要性城商行，近期额度申请已超2000亿元。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 10:09",
+        "url": "https://www.news.cn/fortune/20261104/b8eeda3bdfdd4540871cf217c7014112/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "重点城市二手房“银十”成交活跃",
+        "summary": "10月重点15城二手住宅成交同比升约20%，北京成交1.3万套增8.2%，上海2.5万套增34.7%，苏州、宁波增幅均超30%，市场回稳仍需巩固。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 10:04",
+        "url": "https://www.news.cn/fortune/20261104/b9ffc0969f3746f7b2ae31794f2073e3/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "市场监管总局出台行政处罚裁量规定",
+        "summary": "规定将裁量规则由规范性文件升为部门规章，划分不予、减轻、从轻、一般、从重五个阶次，并统一“初次违法”“危害后果轻微”等认定口径。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 09:13",
+        "url": "https://www.chinanews.com.cn/cj/2026/11-04/10725745.shtml"
+      },
+      {
+        "id": "domestic-05",
+        "title": "养老服务消费补贴惠及243万失能老年人",
+        "summary": "民政部发布会通报，截至9月底养老服务消费补贴累计核销93.3亿元，带动养老服务消费404.7亿元，243万中度以上失能老年人受益。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 08:06",
+        "url": "https://m.gmw.cn/2026-11/04/content_1304582419.htm"
+      },
+      {
+        "id": "domestic-06",
+        "title": "我国推出设施农业使用土地正面清单",
+        "summary": "自然资源部等三部门发文，按是否破坏耕作层分类管理设施农业用地，不破坏耕作层的无需办理用地手续，备案层级提高到县级。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 04:20",
+        "url": "https://tech.gmw.cn/2026-11/04/content_39084396.htm"
+      },
+      {
+        "id": "domestic-07",
+        "title": "南京大学：智慧教室已不再统计抬头率",
+        "summary": "南京大学说明，智慧教室系统当前不再统计抬头率，网传画面是今年5月在线督导的个人截屏，系统未获授权不采集人脸等生物信息。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 10:54",
+        "url": "https://www.chinanews.com.cn/sh/2026/11-04/10725832.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "title": "10月下旬28种生产资料价格下降",
+        "summary": "国家统计局监测显示，10月下旬与中旬相比，50种重要生产资料中17种价格上涨、28种下降、5种持平。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 10:11",
+        "url": "https://www.chinanews.com.cn/cj/2026/11-04/10725788.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "title": "两股冷空气接连影响我国 南方阴雨持续",
+        "summary": "11月4日至6日东北、华北、黄淮降温4至8℃、局地超10℃；7日至9日第二股冷空气来袭，大部地区气温将创下半年来新低。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 09:14",
+        "url": "https://cn.chinadaily.com.cn/a/202611/04/WS6aea86efe4b0e14252fc8f8b.html"
+      },
+      {
+        "id": "domestic-10",
+        "title": "公安部公布8起涉农非法集资典型案例",
+        "summary": "案例涉及“云养羊”、合作社吸存、林权转让等手法，单个案件吸收资金最高超1亿元，警方提示警惕保本高息、熟人牵线等话术。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 09:24",
+        "url": "https://www.chinanews.com.cn/gn/2026/11-04/10725753.shtml"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "美国举行中期选举投票",
+        "summary": "美国中期选举投票开始，众议院435席和参议院35席改选，民主党需在众院增3席，约5000万选民提前投票，计票可能持续数天。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-03 19:09",
+        "url": "https://www.news.cn/world/20261103/5d3ab3bb267249bd8b4bf9fb803b23e5/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "俄乌代表将于5日在白宫会谈",
+        "summary": "白宫3日宣布，美国第一夫人梅拉尼娅将于5日邀请俄乌双方代表在白宫会面，会谈议程、出席人员级别和具体安排尚未公布。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-03 20:48",
+        "url": "https://www.news.cn/world/20261103/81251fe39fd54a9fb1e3fa5b60ac9934/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "伊朗要求美明确回应7项条件",
+        "summary": "伊朗最高国家安全委员会秘书雷扎伊称美方答复不能令人信服，要求完整明确回应并落实7项条件，否则不开放霍尔木兹海峡。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-03 23:46",
+        "url": "https://www.news.cn/world/20261103/664b20a6f8084f46b6719320afacfb39/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "特朗普称年底结束每年约40亿美元对以援助",
+        "summary": "特朗普称美国每年约40亿美元对以色列援助将在年底停止，称设想由内塔尼亚胡提出；现行美以协议每年约38亿美元，有效期至2028年。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-03 23:52",
+        "url": "https://www.news.cn/world/20261103/2792c16353c649f8b8bdfdbe7264ec93/c.html"
+      },
+      {
+        "id": "international-05",
+        "title": "欧洲多架客机收到炸弹威胁",
+        "summary": "11月3日波兰、西班牙、保加利亚和意大利共7架客机接到炸弹威胁，部分航班改降、机场短时关闭，检查均未发现爆炸物。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 00:32",
+        "url": "https://www.news.cn/world/20261104/2f774c7159d04ab8b266bd4bfb31a348/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "保加利亚现任总统约托娃赢得总统选举",
+        "summary": "保加利亚中央选举委员会公布第二轮最终结果，现任总统约托娃及其搭档获约109.4万票，击败前看守政府总理古罗夫组合。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-03 21:50",
+        "url": "https://www.news.cn/world/20261103/e001e13ada3c4aa1b6bd6ece9684abd9/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "西班牙交通大臣因高铁事故辞职",
+        "summary": "西班牙交通大臣普恩特因10月28日乌尔达列车相撞事故辞职，事故造成69人死亡；政府宣布向死伤者及家属提供3000万欧元援助。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 07:01",
+        "url": "https://www.news.cn/world/20261104/0f40abd95ffa4cefa85e0c9b9be8badb/c.html"
+      },
+      {
+        "id": "international-08",
+        "title": "日本宪法公布80周年 国会前响起和平呼声",
+        "summary": "日本宪法公布80周年当天，约1.4万民众聚集国会前呼吁守护和平宪法，反对修宪和以增税支撑军费扩张。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-03 22:22",
+        "url": "https://www.news.cn/world/20261103/585b4e8369ff4d82b19897da69658735/c.html"
+      },
+      {
+        "id": "international-09",
+        "title": "金正恩视察南浦造船厂",
+        "summary": "朝中社4日报道，金正恩2日视察南浦造船厂，称新军舰建造进展顺利，强调要建设先进的高技术造船基地和强大海军。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 07:03",
+        "url": "https://www.news.cn/world/20261104/a1414581f37f41938b09e5f2f17cbec4/c.html"
+      },
+      {
+        "id": "international-10",
+        "title": "第四届明斯克欧亚安全国际会议开幕",
+        "summary": "会议3日在白俄罗斯明斯克开幕，约50个国家和地区600余名代表参加，主题为用合作精神克服国际失序，讨论军控与集体安全。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 01:57",
+        "url": "https://www.news.cn/world/20261104/cc01cef97c6a4991881f2581d6c54eaa/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "力箭二号遥二运载火箭发射成功",
+        "summary": "11月3日8时15分，力箭二号遥二运载火箭在东风商业航天创新试验区发射，将千帆极轨21组卫星送入预定轨道，试验任务圆满成功。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 09:06",
+        "url": "https://www.news.cn/tech/20261104/c5695721e4c74bc3af6bb729ae75b84b/c.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "力箭二号星箭分离采用“甩链球”新方法",
+        "summary": "中科宇航首次将多星星箭星间分离机构解锁装置用于力箭二号，18颗卫星一次解锁、彼此甩出，简化流程并降低多次解锁的失效风险。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 04:20",
+        "url": "https://tech.gmw.cn/2026-11/04/content_39084644.htm"
+      },
+      {
+        "id": "tech-03",
+        "title": "11名院士发布自主结构分析CAE软件",
+        "summary": "第九届中国航空强度技术发展高峰论坛发布SABRE系统2026版，支持亿级自由度求解、AI加速静力分析和国产软硬件适配。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 10:00",
+        "url": "https://tech.gmw.cn/2026-11/04/content_39084528.htm"
+      },
+      {
+        "id": "tech-04",
+        "title": "上海发布三项公共数据开发利用成果",
+        "summary": "上海上线企业需求征集平台，推出覆盖民生、金融、交通等14个领域的首批公共数据产品，并展示“稳岗就业贷”等创新应用。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-03 20:56",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/03/content_607754.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "浙江战略性新兴产业高价值发明专利达13.2万件",
+        "summary": "浙江省通报，战略性新兴产业高价值发明专利累计13.2万件，数据知识产权登记3.41万件，集成电路布图设计发证6036件。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-03 19:53",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/03/content_607706.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "2026年世界互联网大会乌镇峰会开幕",
+        "summary": "2026年世界互联网大会乌镇峰会3日在浙江乌镇开幕，开幕式上举行“世界互联网大会杰出贡献奖”颁奖仪式。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 09:02",
+        "url": "https://www.news.cn/tech/20261104/4d6391425bb24d3e946d2922cbb6b0e6/c.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "2026年世界互联网大会领先科技奖揭晓",
+        "summary": "领先科技奖收到43个国家和地区430余项成果，20项获奖，包括“九章四号”光量子计算原型机和面向物理AI的整车智能体技术平台。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-03 08:47",
+        "url": "https://www.news.cn/tech/20261103/d3e4ab74a135450c9a0913387ff33bf3/c.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "株洲“北斗之城”产业链加速成形",
+        "summary": "株洲北斗产业园聚集188家企业，赛德雷特年产中小卫星可达150颗；全市规划135个北斗应用场景，其中49个已建成投用。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 09:49",
+        "url": "https://tech.gmw.cn/2026-11/04/content_39084435.htm"
+      },
+      {
+        "id": "tech-09",
+        "title": "湖南农业生物合成研究院在长沙揭牌",
+        "summary": "研究院3日揭牌，由湖南农业大学牵头，聚焦农业特色生物制造、农业药用资源创制和生物医药绿色合成三条赛道。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-03 22:16",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/03/content_607783.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "泉州首批市级创新联合体出炉",
+        "summary": "泉州备案首批3家市级创新联合体，涵盖具身智能、智能纺织装备和大健康功能食品，其中具身智能项目研发投入4000万元。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-03 11:32",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/03/content_607438.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "Token首次摆上“双十一”货架",
+        "summary": "天猫9月推出Token充值中心，10月20日“双十一”开售当天Token品类成交额环比增长450%，DeepSeek、阿里云、智谱、Kimi等已接入。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 09:07",
+        "url": "https://www.news.cn/tech/20261104/f80e52fad366431392829a800b8d5f8f/c.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "“人工智能乌镇对话”共话开源开放",
+        "summary": "对话3日在世界互联网大会乌镇峰会主论坛举行，领先科技企业与开源大模型企业负责人讨论全球人工智能开源生态构建。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 08:55",
+        "url": "https://www.news.cn/tech/20261104/e464eb9f079542e09020fe366d7df491/c.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "推动人工智能在先进制造业应用",
+        "summary": "文章指出AI在制造业面临验证环境不足、适配周期长等问题，广州黄埔、浙江、重庆通过场景清单和“一场景一专班”推进落地。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-03 09:08",
+        "url": "https://www.news.cn/tech/20261103/a4adc7f570a74320bae0b18e23ff32f3/c.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "具身机器人演出有了“入场凭证”",
+        "summary": "北京经开区发放具身机器人演出“沙盒审批”准入证明，每场演出须报备并实时共享运行状态；亦庄已集聚机器人企业300余家。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 09:48",
+        "url": "https://tech.gmw.cn/2026-11/04/content_39084424.htm"
+      },
+      {
+        "id": "ai-05",
+        "title": "北京全链条扶持智能眼镜消费",
+        "summary": "北京出台促进智能眼镜消费政策指南，购买产品按成交价补贴15%、每件上限500元，开设首店和举办首发最高奖励100万元。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 09:06",
+        "url": "https://www.news.cn/tech/20261104/43f15858d3d14f9fb7aa4057ea077acb/c.html"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "id": "metric-gold",
+      "kind": "gold",
+      "icon": "◎",
+      "name": "国内金价",
+      "value": "845.25元/克",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/graph/Dailyhq?instid=Au99.99",
+      "sourceOrigin": "china",
+      "note": "2026年11月4日最新价 Au99.99"
+    },
+    {
+      "id": "metric-domestic-oil",
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "中国油价",
+      "value": "92号汽油8.85元/升",
+      "source": "上海市发展和改革委员会",
+      "sourceUrl": "https://fgw.sh.gov.cn/fgw_jggl/20261029/c4173f8c7fb84f8486130488d93f1751.html",
+      "sourceOrigin": "china",
+      "note": "最高零售价，2026年10月29日24时起执行"
+    },
+    {
+      "id": "metric-international-oil",
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际油价",
+      "value": "布伦特103.60美元/桶，WTI 96.09美元/桶",
+      "source": "新华财经",
+      "sourceUrl": "https://www.cnfin.com/hs-lb/detail/20261104/4490577_1.html",
+      "sourceOrigin": "china",
+      "note": "2026年11月3日收盘"
+    },
+    {
+      "id": "metric-usd",
+      "kind": "usd_cny",
+      "icon": "＄",
+      "name": "美元兑人民币",
+      "value": "1美元=6.7180人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/",
+      "sourceOrigin": "china",
+      "note": "11月4日人民币汇率中间价"
+    },
+    {
+      "id": "metric-eur",
+      "kind": "eur_cny",
+      "icon": "€",
+      "name": "欧元兑人民币",
+      "value": "1欧元=7.5043人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/",
+      "sourceOrigin": "china",
+      "note": "11月4日人民币汇率中间价"
+    },
+    {
+      "id": "metric-jpy",
+      "kind": "jpy_cny",
+      "icon": "¥",
+      "name": "日元兑人民币",
+      "value": "100日元=4.2277人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/bkccpr/",
+      "sourceOrigin": "china",
+      "note": "11月4日人民币汇率中间价"
+    }
+  ],
+  "observation": "今日民生看点集中在制度与资金落地：全国放心消费平台上线，首批超万个消费单元可查证照、一键投诉；养老服务消费补贴已核销93.3亿元，惠及243万失能老人；央行把股票回购增持再贷款利率降至1%，继续托底资本市场。10月二手房成交回暖，但回稳基础仍需巩固。国际上，美国中期选举开票，俄乌将在白宫会面，伊朗以7项条件施压霍尔木兹海峡，地缘风险仍是油价与汇率的主要变量。",
+  "sources": ["新华网", "中国新闻网", "光明网", "中国日报中文网", "中国科技网", "新华财经", "上海黄金交易所", "中国外汇交易中心"],
+  "metricSources": ["上海黄金交易所", "上海市发展和改革委员会", "新华财经", "中国外汇交易中心"]
+}
