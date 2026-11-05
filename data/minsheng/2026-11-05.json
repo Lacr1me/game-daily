@@ -1,0 +1,428 @@
+{
+  "date": "2026-11-05",
+  "issue": 75,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期四",
+  "lunarDate": "九月廿七",
+  "cutoff": "2026-11-05 05:44（北京时间）",
+  "productionTime": "2026-11-05 08:33（北京时间）",
+  "metricsCutoff": "2026-11-05 02:30（北京时间）",
+  "topStoryIds": [
+    "domestic-01",
+    "domestic-02",
+    "international-01"
+  ],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "第九届中国国际进口博览会在上海开幕",
+        "summary": "第九届进博会11月5日在上海国家会展中心开幕，162个国家和地区及国际组织参展，展示面积首次超过44万平方米，4142家境外企业为历届最多。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-05 00:26",
+        "url": "https://www.news.cn/fortune/20261105/602d0af8b0ee41059f11cc95206ef284/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "时隔8年我国罕见病目录工作程序迎来修订",
+        "summary": "国家卫生健康委、国家中医药局修订发布《罕见病目录制订工作程序（2026年版）》，扩大病种覆盖范围，新增申请主体，并优化目录制订周期。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 18:46",
+        "url": "https://www.news.cn/politics/20261104/27e2f15e734f44a9a0ee0bcc212f27b4/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "央行上调外汇存款准备金率2个百分点",
+        "summary": "中国人民银行宣布自11月15日起将金融机构外汇存款准备金率由4%提高到6%，以加强外汇流动性管理，缓解人民币升值压力。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 08:32",
+        "url": "https://politics.gmw.cn/2026-11/04/content_39084077.htm"
+      },
+      {
+        "id": "domestic-04",
+        "title": "北京普惠健康保累计理赔超74万人次",
+        "summary": "北京市唯一政府指导的普惠型补充医疗保险上线五年累计参保1980万人次，累计赔付超74万人次，保费每人每年195元，特药扩至165种。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 21:42",
+        "url": "https://www.news.cn/20261104/f4f587dc8ee64733b9c74c412f69c6e8/c.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "前三季度服务零售额同比增长5.0%",
+        "summary": "前三季度服务零售额同比增长5.0%，比商品零售快4个百分点；旅游咨询租赁、文体休闲服务分别增长10.7%和9.7%，消费结构加快向服务倾斜。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 07:27",
+        "url": "https://www.news.cn/fortune/20261104/0ddbf1cabd594defa7fb2b0c615ba7d7/c.html"
+      },
+      {
+        "id": "domestic-06",
+        "title": "农业农村部：秋粮丰收已成定局",
+        "summary": "农业农村部11月4日表示，秋粮收获已过九成，面积预计稳中略增；夏粮3014.9亿斤首次突破3000亿斤，全年粮食产量有望连续3年超1.4万亿斤。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 17:04",
+        "url": "https://www.news.cn/20261104/c99d410efe5449228581ba0a1a6a92e1/c.html"
+      },
+      {
+        "id": "domestic-07",
+        "title": "教育部发布2027年高考报名防骗预警",
+        "summary": "全国教育辟谣平台发布预警，提醒警惕虚假补报名、短信钓鱼链接、向私人账户转账和代办资格四类骗局，报名只能通过省级考试院官方入口。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 15:55",
+        "url": "https://www.chinanews.com.cn/edu/2026/11-04/10726007.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "title": "下半年中小学教师资格考试笔试成绩6日可查",
+        "summary": "2026年下半年中小学教师资格考试笔试成绩将于11月6日10时公布，考生可通过中国教育考试网及其微信、支付宝、百度小程序查询，面试报名同日启动。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 15:38",
+        "url": "https://www.chinanews.com.cn/edu/2026/11-04/10725997.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "title": "10月份中国仓储指数为49.8%",
+        "summary": "中国物流与采购联合会11月4日发布，10月中国仓储指数为49.8%，环比升0.1个百分点，连续三个月处于收缩区间；新订单指数50.9%连续两个月扩张。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 09:07",
+        "url": "https://politics.gmw.cn/2026-11/04/content_39084266.htm"
+      },
+      {
+        "id": "domestic-10",
+        "title": "十四届全国人大常委会举行第七十五次委员长会议",
+        "summary": "会议11月4日下午在北京举行，听取检察公益诉讼法、南极活动与环境保护法、水法修订、反跨境腐败法等草案审议情况汇报，决定提请常委会会议审议。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 19:33",
+        "url": "https://www.news.cn/politics/leaders/20261104/ac92fd35bdf14fd4be4c2d58f380914d/c.html"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "美媒预测民主党重新掌控国会",
+        "summary": "多家美国媒体11月4日预测，民主党在中期选举中同时赢得众议院和参议院控制权，前总统奥巴马发文祝贺，称美国人民发出了明确信息。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 15:26",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-04/10725991.shtml"
+      },
+      {
+        "id": "international-02",
+        "title": "特朗普：不会立即打击伊朗但随时严阵以待",
+        "summary": "特朗普3日接受采访时称，美国目前不打算马上对伊朗动武，但部队保持戒备，并称美伊正就浓缩铀问题间接磋商，结果尚不确定。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 10:34",
+        "url": "https://www.news.cn/world/20261104/ea9ef5ebaa8644a4abf9bddfcdc6a696/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "美方称对伊朗小规模攻击并非战事",
+        "summary": "国际在线报道，特朗普称美军对伊朗发动的小规模攻击并非战事，美方完全控制霍尔木兹海峡；伊朗坚持美方落实7项条件后才开放海峡。",
+        "source": "国际在线",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 19:33",
+        "url": "https://news.cri.cn/20261104/fdc3db21-ead9-6a91-9510-313ebb5cde90.html"
+      },
+      {
+        "id": "international-04",
+        "title": "朝鲜：美国持续发出对朝敌对信号",
+        "summary": "朝鲜劳动党中央委员会部长金与正11月4日发表谈话，称美国持续发出敌对信号，朝方需从多方面重新考虑美国，并称反射性应对也应创下新纪录。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 14:02",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-04/10725860.shtml"
+      },
+      {
+        "id": "international-05",
+        "title": "逾万日本民众集会抗议高市政权推动修宪",
+        "summary": "11月3日日本宪法公布80周年之际，东京国会议事堂前约1.4万人集会，全国逾万人参与，反对修宪、要求维护宪法第九条与和平主义。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 16:09",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-04/10726028.shtml"
+      },
+      {
+        "id": "international-06",
+        "title": "巴基斯坦成功试射首枚国产空对空导弹",
+        "summary": "巴基斯坦军方11月3日宣布成功试射首枚国产空对空导弹，称其配备先进末端制导系统，可增强空军作战灵活性并降低对进口装备依赖。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 11:10",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-04/10725852.shtml"
+      },
+      {
+        "id": "international-07",
+        "title": "苏丹一加油站遭无人机袭击至少7死36伤",
+        "summary": "当地时间11月3日，苏丹南科尔多凡州一处加油站遭快速支援部队无人机袭击，至少7人死亡、36人受伤，多辆民用车辆被烧毁。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 10:30",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-04/10725778.shtml"
+      },
+      {
+        "id": "international-08",
+        "title": "印度海军在索马里海域解救被劫伊朗渔船",
+        "summary": "印度国防部11月3日称，海军在索马里东北部近海解救被海盗劫持的伊朗渔船，20名船员全部安全获救，行动持续超过48小时。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 14:04",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-04/10725902.shtml"
+      },
+      {
+        "id": "international-09",
+        "title": "以色列中央选举委员会否认存在选举舞弊",
+        "summary": "以色列中央选举委员会11月4日表示，10月27日议会选举不存在舞弊行为，没有任何证据表明选举公正性受损，此前利库德集团提出指控。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 15:44",
+        "url": "https://www.news.cn/world/20261104/5fcd64176c5b49a8ae6e54c986f8fba0/c.html"
+      },
+      {
+        "id": "international-10",
+        "title": "亚洲杯延期一年中东紧张局势搅动体育赛历",
+        "summary": "亚足联宣布原定2027年1至2月在沙特举办的亚洲杯改期至2027年12月23日至2028年1月，利雅得机场爆炸等安全风险成为直接触发因素。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-05 00:28",
+        "url": "https://cn.chinadaily.com.cn/a/202611/05/WS6aeb5d22e4b0e14252fc93a2.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "我国实现世界首次舱外激光“微创”实验",
+        "summary": "华中科技大学团队与上海空间电源研究所研制的舱外激光维修装置，在我国空间站完成全球首次数百公里高空遥操作激光精密切割试验。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 20:28",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/04/content_608466.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "AIMS望远镜发现耀斑期间太阳磁场明显减弱",
+        "summary": "中科院国家天文台团队利用自主研制的AIMS望远镜，首次记录X1.5级耀斑期间太阳低层大气磁场显著下降，成果发表于《自然-天文》。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 16:57",
+        "url": "https://www.chinanews.com.cn/gn/2026/11-04/10726085.shtml"
+      },
+      {
+        "id": "tech-03",
+        "title": "地下“CT”拍到板片双撕裂关键证据",
+        "summary": "中科院地质与地球物理研究所团队利用地震波成像，在扎格罗斯—莫克兰俯冲带识别出两处板片撕裂，成果11月4日发表于《自然-地球科学》。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 20:28",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/04/content_608465.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "全球首艘液氨双燃料动力阿芙拉型油船开工",
+        "summary": "11月4日，中船大连造船为马来西亚AET公司建造的11.3万吨液氨双燃料阿芙拉型油船开工，总长249.8米，排放满足IMO TierⅢ要求。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 15:57",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/04/content_608297.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "我国深远海抢险打捞领域再添大国重器",
+        "summary": "中船七〇八所研发设计的深远海半潜式抢险打捞工程船11月4日签约建造，总长175米，两台起重机联合起吊能力达1万吨，续航1万海里。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 18:00",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/04/content_608386.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "“光箭”激光反无人机系统完成实战化测试",
+        "summary": "中国航空制造技术研究院“光箭”系列激光反无人机系统，突破光纤拉制、相变控温和精准打击技术，实战测试可拦截多方向多批次无人机集群。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 09:55",
+        "url": "https://tech.gmw.cn/2026-11/04/content_39084486.htm"
+      },
+      {
+        "id": "tech-07",
+        "title": "金刚石散热片加快进入AI芯片封装",
+        "summary": "国机金刚石功能金刚石研究院布局单晶、多晶、金刚石铜三条路线，已形成年产4万余片3英寸散热片产能，用于AI芯片与高端GPU封装散热。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 07:46",
+        "url": "https://www.chinanews.com.cn/cj/2026/11-04/10725718.shtml"
+      },
+      {
+        "id": "tech-08",
+        "title": "国家发展改革委：稳步推进时速400公里高铁商业化运营",
+        "summary": "国家发展改革委11月4日表示，时速400公里高铁正处于构建成套技术方案和标准体系阶段，“十五五”期间将稳步推进商业化运营。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 18:35",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/04/content_608405.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "研究揭示AIM2凝聚促进多元免疫应答",
+        "summary": "中科院生物物理所与清华大学团队发现，DNA刺激后AIM2形成具液液相分离特征的凝聚体，为炎症小体与泛凋亡小体组装提供平台。",
+        "source": "科学网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 12:58",
+        "url": "https://news.sciencenet.cn/htmlnews/2026/11/574174.shtm"
+      },
+      {
+        "id": "tech-10",
+        "title": "2026数据要素赋能新型工业化大赛在乌镇颁奖",
+        "summary": "大赛设五个专业赛道和钢铁、有色金属两个行业赛道，约600支团队参赛，251个项目获奖，现场挑选50余个项目开展产业洽谈。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 14:38",
+        "url": "https://www.chinanews.com.cn/cj/2026/11-04/10725955.shtml"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "高校免费发Token教育公平面临新考题",
+        "summary": "中国科大、北邮、同济等高校向师生免费发放大模型Token或算力额度，专家提醒防止教学空转和新的数字鸿沟，建议建设公共教育算力平台。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 22:35",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/04/content_608526.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "“算力金属”需求大增解码AI热潮背后的关键材料",
+        "summary": "前三季度23类主要金属中16种涨价，铜均价涨32.6%、钴涨69.9%；协会预计“十五五”末我国铟产量超2500吨，消费约2000吨。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 20:09",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/04/content_608454.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "乌镇照见AI走进生活",
+        "summary": "2026年世界互联网大会乌镇峰会上，100余款机器人展示炒菜、陪护、送件等场景，机器人交警“桐桐”上岗，20余款新品首发。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 16:38",
+        "url": "https://www.chinanews.com.cn/cj/2026/11-04/10726063.shtml"
+      },
+      {
+        "id": "ai-04",
+        "title": "近300个科创项目广州同台竞技",
+        "summary": "2026中国创交会、中国海交会第四届创新创业大赛广州城市赛11月2日开赛，近300个科创项目参赛，覆盖人工智能、机器人、商业航天等方向。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 10:24",
+        "url": "https://www.chinanews.com.cn/cj/2026/11-04/10725807.shtml"
+      },
+      {
+        "id": "ai-05",
+        "title": "欧洲多国冷柜遭网络攻击肇事者尚未查明",
+        "summary": "比利时、瑞典、荷兰等七国超市联网冷藏柜11月2日凌晨遭远程攻击，柜温升至约50摄氏度，大量食品报废；肇事者身份尚未查明。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-04 14:50",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/04/content_608209.html"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "id": "metric-gold",
+      "kind": "gold",
+      "icon": "◎",
+      "name": "国内金价",
+      "value": "861.79元/克",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/graph/quotations?instid=Au99.99",
+      "sourceOrigin": "china",
+      "note": "2026年11月5日02:29最新价 Au99.99"
+    },
+    {
+      "id": "metric-domestic-oil",
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "中国油价",
+      "value": "92号汽油8.85元/升",
+      "source": "上海市发展和改革委员会",
+      "sourceUrl": "https://fgw.sh.gov.cn/fgw_jggl/20261029/c4173f8c7fb84f8486130488d93f1751.html",
+      "sourceOrigin": "china",
+      "note": "最高零售价，2026年10月29日24时起执行"
+    },
+    {
+      "id": "metric-international-oil",
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际油价",
+      "value": "布伦特94.62美元/桶，WTI 88.12美元/桶",
+      "source": "财联社",
+      "sourceUrl": "https://www.cls.cn/detail/2525633",
+      "sourceOrigin": "china",
+      "note": "2026年11月4日收盘"
+    },
+    {
+      "id": "metric-usd",
+      "kind": "usd_cny",
+      "icon": "＄",
+      "name": "美元兑人民币",
+      "value": "1美元=6.7180人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/r/cms/www/chinamoney/data/fx/ccpr.json",
+      "sourceOrigin": "china",
+      "note": "11月4日人民币汇率中间价"
+    },
+    {
+      "id": "metric-eur",
+      "kind": "eur_cny",
+      "icon": "€",
+      "name": "欧元兑人民币",
+      "value": "1欧元=7.5043人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/r/cms/www/chinamoney/data/fx/ccpr.json",
+      "sourceOrigin": "china",
+      "note": "11月4日人民币汇率中间价"
+    },
+    {
+      "id": "metric-jpy",
+      "kind": "jpy_cny",
+      "icon": "¥",
+      "name": "日元兑人民币",
+      "value": "100日元=4.2277人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/r/cms/www/chinamoney/data/fx/ccpr.json",
+      "sourceOrigin": "china",
+      "note": "11月4日人民币汇率中间价"
+    }
+  ],
+  "observation": "今日看点集中在制度与市场两端。进博会开幕，162个国家和地区及国际组织参展，开放信号明确；罕见病目录程序修订、普惠健康保扩围，民生保障继续加密。美媒预测民主党重新掌控国会，国际油价单日跌超8%，布伦特回落至94.62美元。国内服务消费和秋粮生产保持稳势，舱外激光维修、液氨双燃料船等科技突破密集落地。",
+  "sources": [
+    "新华网",
+    "光明网",
+    "中国新闻网",
+    "国际在线",
+    "中国日报中文网",
+    "中国科技网",
+    "科学网",
+    "财联社",
+    "上海黄金交易所",
+    "上海市发展和改革委员会",
+    "中国外汇交易中心"
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "上海市发展和改革委员会",
+    "财联社",
+    "中国外汇交易中心"
+  ]
+}
