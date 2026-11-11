@@ -1,0 +1,427 @@
+{
+  "date": "2026-11-11",
+  "issue": 76,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期三",
+  "lunarDate": "十月初三",
+  "cutoff": "2026-11-11 05:40（北京时间）",
+  "productionTime": "2026-11-11 05:39（北京时间）",
+  "metricsCutoff": "2026-11-11 02:30（北京时间）",
+  "topStoryIds": [
+    "domestic-01",
+    "domestic-03",
+    "international-05"
+  ],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "国家发改委：多渠道增加普通高中和高等教育学位供给",
+        "summary": "国家发改委11月10日表示，将通过新建改扩建、盘活存量等方式扩容普通高中学位，稳步扩大优质本科招生，并推动教育公共服务随人口流动。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 17:22",
+        "url": "https://www.chinanews.com.cn/edu/2026/11-10/10729572.shtml"
+      },
+      {
+        "id": "domestic-02",
+        "title": "工信部批复10家企业开展号码保护服务试点",
+        "summary": "工信部批复10家企业开展号码保护服务试点，分配700号段，优先用于外卖、网约车等场景，通话双方真实号码将被隐藏，以治理诈骗和营销骚扰。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 16:12",
+        "url": "https://www.chinanews.com.cn/cj/2026/11-10/10729485.shtml"
+      },
+      {
+        "id": "domestic-03",
+        "title": "四部门发文：创新药进院不受品规数量限制",
+        "summary": "国家卫健委等四部门发文，要求二级以上医院及时将医保和商保目录内1类新药纳入用药目录，不限制药品品规数量，相关病例可申报特例单议。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 13:59",
+        "url": "https://www.chinanews.com.cn/gn/2026/11-10/10729375.shtml"
+      },
+      {
+        "id": "domestic-04",
+        "title": "铁路电子发票新增代开功能 12月1日起实施",
+        "summary": "铁路部门优化电子发票服务：12月1日起，购票人可在12306为乘车人代开，新增白底样式，并保留车站窗口和自助机线下渠道，方便老年人报销。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 10:31",
+        "url": "https://cn.chinadaily.com.cn/a/202611/10/WS6af28d1be4b0e14252fca24a.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "养老服务师正式成为新职业",
+        "summary": "民政部、人社部出台养老服务师职业资格制度，明确其负责评估、照护方案制定与质量评价。我国60岁以上人口达3.23亿，养老从业人员仅139.5万。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 10:28",
+        "url": "https://health.gmw.cn/2026-11/10/content_39094141.htm"
+      },
+      {
+        "id": "domestic-06",
+        "title": "10月CPI同比上涨0.7% 核心CPI涨0.8%",
+        "summary": "国家统计局数据显示，10月CPI同比上涨0.7%，涨幅比上月收窄0.2个百分点；核心CPI上涨0.8%，PPI同比上涨5.7%，物价总体温和。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 09:43",
+        "url": "https://economy.gmw.cn/2026-11/10/content_39093825.htm"
+      },
+      {
+        "id": "domestic-07",
+        "title": "公安部5项交管便民举措12月1日起实施",
+        "summary": "公安部推出5项交管便民利企措施，包括进口小客车新车上牌全程网办、企业电子营业执照免提交、试点智能客服“交管小安”，12月1日起推行。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 09:35",
+        "url": "https://legal.gmw.cn/2026-11/10/content_39093785.htm"
+      },
+      {
+        "id": "domestic-08",
+        "title": "八部门发文支持实体书店服务全民阅读",
+        "summary": "中宣部等八部门联合印发通知，从供给质量、特色阅读空间、公共文化服务、书香校园、财政扶持、降本增效六方面支持实体书店发展。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 08:29",
+        "url": "https://politics.gmw.cn/2026-11/10/content_39093387.htm"
+      },
+      {
+        "id": "domestic-09",
+        "title": "全总向150家爱心托育用人单位补助750万元",
+        "summary": "全国总工会下拨750万元，为150家2026年爱心托育用人单位提供补助。2022年以来两部门已累计公布450家单位，本级补助资金达3000万元。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 01:40",
+        "url": "https://news.gmw.cn/2026-11/10/content_39093321.htm"
+      },
+      {
+        "id": "domestic-10",
+        "title": "前10个月我国货物贸易进出口增长20%",
+        "summary": "海关总署数据显示，前10个月货物贸易进出口44.81万亿元，同比增长20%；机电产品出口增长25.2%，集成电路出口增长101.9%。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 14:12",
+        "url": "https://www.news.cn/fortune/20261110/9afec94b24df4805b3d8797a5d884bf3/c.html"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "外交部：大熊猫“平平”“福双”拉近中美人民心灵距离",
+        "summary": "外交部发言人郭嘉昆11月10日表示，旅居美国亚特兰大动物园的大熊猫“平平”“福双”近日正式与公众见面，拉近了中美两国人民的心灵距离。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 20:32",
+        "url": "https://world.people.com.cn/n1/2026/1110/c1002-40831501.html"
+      },
+      {
+        "id": "international-02",
+        "title": "王毅同法国外长巴罗通电话",
+        "summary": "王毅11月10日应约同法国外长巴罗通话，强调中法应履行安理会常任理事国责任，要求法方以实际行动恪守一个中国原则，巴罗重申恪守一中政策。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 20:31",
+        "url": "https://www.news.cn/politics/leaders/20261110/707a93e79e094bf693a0ec595f606344/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "布伦特油价跌破每桶90美元",
+        "summary": "受中东紧张局势趋于缓和等因素影响，伦敦布伦特原油期货价格11月10日盘中跌破每桶90美元，为今年8月以来首次。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 18:21",
+        "url": "https://world.people.com.cn/n1/2026/1110/c1002-40831474.html"
+      },
+      {
+        "id": "international-04",
+        "title": "古巴国家主席：古巴的未来绝不会由美国决定",
+        "summary": "古巴国家主席迪亚斯-卡内尔11月9日表示，美国切断古巴燃料来源并打压民生项目，但古巴前途不会由美国决定，将继续为真相与正义斗争。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 17:33",
+        "url": "https://cn.chinadaily.com.cn/a/202611/10/WS6af3014ae4b0e14252fca536.html"
+      },
+      {
+        "id": "international-05",
+        "title": "新一轮俄美乌三方会谈在阿布扎比开始举行",
+        "summary": "俄美乌三方11月10日在阿联酋阿布扎比恢复线下磋商，这是今年2月谈判停滞九个月后首次复谈，各方将讨论安全保障、局势降温和人道事务。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 16:22",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-10/10729497.shtml"
+      },
+      {
+        "id": "international-06",
+        "title": "世界气象组织：超强厄尔尼诺将加剧全球极端天气",
+        "summary": "世界气象组织警告，8月以来持续增强的超强厄尔尼诺预计12月达到历史最强，将推高全球高温和极端天气频率，影响延续到2027年。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 13:37",
+        "url": "https://cn.chinadaily.com.cn/a/202611/10/WS6af2ae08e4b0e14252fca2f4.html"
+      },
+      {
+        "id": "international-07",
+        "title": "特朗普称伊朗战事已“事实上结束”",
+        "summary": "特朗普11月9日在白宫表示，伊朗战事在军事上已“事实上结束”，美国现阶段只需维持现状，美伊保持联络并出现“积极势头”。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 10:20",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-10/10729249.shtml"
+      },
+      {
+        "id": "international-08",
+        "title": "生活成本上升 欧洲多国抗议罢工持续",
+        "summary": "法国、德国、意大利等国因生活成本上升和财政紧缩持续出现抗议。法国11月5日全国性罢工示威近60万人参加，多国工会计划11月20日前再行动。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 09:21",
+        "url": "https://world.people.com.cn/n1/2026/1110/c1002-40831220.html"
+      },
+      {
+        "id": "international-09",
+        "title": "土耳其钢铁厂爆炸已致17人死亡",
+        "summary": "土耳其西部伊兹密尔省一家钢铁厂当地时间11月9日发生爆炸并引发火灾，已造成17人死亡、12人受伤，总统埃尔多安称将彻查原因和责任方。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 08:05",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-10/10729186.shtml"
+      },
+      {
+        "id": "international-10",
+        "title": "埃及列车相撞致7死125伤 调查认定多方失职",
+        "summary": "埃及两列火车当地时间11月8日相撞，造成7人死亡、125人受伤。总检察院调查发现司机关闭自动控制系统，站务和信号人员存在玩忽职守。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 05:48",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-10/10729162.shtml"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "中广核三澳核电4号机组主体工程开工",
+        "summary": "11月10日，中广核浙江三澳核电4号机组核岛开始浇筑首罐混凝土，项目二期进入全面建设。6台机组建成后年发电量预计超540亿千瓦时。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 20:09",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/10/content_611413.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "西北地区海拔最高抽水蓄能电站开工",
+        "summary": "青海德令哈抽水蓄能电站11月10日开工，上水库正常蓄水位海拔4008米，总装机60万千瓦，投资52.27亿元，预计年发电量12亿千瓦时。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 20:09",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/10/content_611412.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "红土镍矿高效利用形成“中国方案”",
+        "summary": "中科院过程工程所联合中国恩菲研发高压酸浸技术，并在印尼建成全球最大同类工程，年处理红土镍矿580万吨，镍、钴回收率均超92%。",
+        "source": "科学网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 17:15",
+        "url": "https://news.sciencenet.cn/htmlnews/2026/11/574519.shtm"
+      },
+      {
+        "id": "tech-04",
+        "title": "国际首台无液氦铌三锡射频超导电子加速器研制成功",
+        "summary": "中科院近代物理所与广东先进能源实验室联合团队攻关近十年，研制出国际首台无液氦铌三锡薄膜射频超导电子加速器，实现稳定载束。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 15:38",
+        "url": "https://www.chinanews.com.cn/gn/2026/11-10/10729459.shtml"
+      },
+      {
+        "id": "tech-05",
+        "title": "长征十二号成功发射卫星互联网低轨29组卫星",
+        "summary": "11月9日4时24分，长征十二号运载火箭在海南商业航天发射场发射卫星互联网低轨29组卫星，这是长征系列运载火箭第676次发射。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 09:13",
+        "url": "https://www.news.cn/tech/20261110/7c817c2d785d49769c55aa20ec38c355/c.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "全球最大液态空气储能项目在格尔木并网发电",
+        "summary": "中国绿发投资建设的60兆瓦液态空气储能国家示范项目在青海格尔木并网发电，储能功率和容量均居世界第一，设备全部国产化。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-09 09:02",
+        "url": "https://www.news.cn/tech/20261109/b54e3e50a1af472ab3501ddf7974638a/c.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "中国空间站制备出9.7皮开尔文的已知最冷物质",
+        "summary": "中国空间站微重力实验将铷原子云冷却到9.7皮开尔文，比室温低14个数量级，创人类最低温度纪录，可为原子钟和量子传感提供支撑。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-09 09:01",
+        "url": "https://www.news.cn/tech/20261109/fd4efaf3191649b883e1c6e2ec5b0551/c.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "我国首款可互联中性原子量子计算机原型机发布",
+        "summary": "山西大学成果转化企业乾原量子发布“乾阵”中性原子量子计算机原型机，架构支持多机互联，计划以集群模式突破单机算力上限。",
+        "source": "科学网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-08 23:04",
+        "url": "https://news.sciencenet.cn/htmlnews/2026/11/574419.shtm"
+      },
+      {
+        "id": "tech-09",
+        "title": "我国科学家实现单原子层金属氧化物可控制备",
+        "summary": "中科院大学周武团队以层状金属卤氧化物为前驱体，用聚焦电子束去除卤素原子，实现单原子层氧化物可控制备，成果发表于《自然·材料》。",
+        "source": "科学网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-07 13:34",
+        "url": "https://news.sciencenet.cn/htmlnews/2026/11/574360.shtm"
+      },
+      {
+        "id": "tech-10",
+        "title": "世界首台35千伏高压直挂分布式调相机投运",
+        "summary": "哈电电机研制的世界首台35千伏高压直挂分布式调相机在黑龙江孙吴风电场并网，惯量达老机型6倍，风电场发电能力由10万千瓦增至20万千瓦。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 07:41",
+        "url": "https://www.stdaily.com/web/2026-11/10/content_611072.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "“双11”开卖AI词元：算力额度成新商品",
+        "summary": "今年“双11”，词元被电商平台设为独立商品品类，智谱、阿里云、MiniMax等入驻。3月我国日均词元调用量已突破140万亿，两年增长超千倍。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 20:32",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/10/content_611446.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "进博手记：AI算力需求带动传统工业忙起来",
+        "summary": "进博会上，AI算力需求带动电力设备、压缩机、散热和涂料等传统产业。ABB直流母线系统能效提升超5%，西门子用AI优化奶粉产线参数。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 17:13",
+        "url": "https://digital.gmw.cn/2026-11/10/content_39094893.htm"
+      },
+      {
+        "id": "ai-03",
+        "title": "院士何积丰：可信能力将成AI下一个“决胜点”",
+        "summary": "在2026世界顶尖科学家论坛上，何积丰等专家提出，AI治理须贯穿研发全流程，未来竞争不再只看模型参数和算力，可信能力成为关键。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 16:49",
+        "url": "https://digital.gmw.cn/2026-11/10/content_39094858.htm"
+      },
+      {
+        "id": "ai-04",
+        "title": "进博会观察：人工智能加速融入产业现场",
+        "summary": "本届进博会AI应用明显增多，具身智能机器人进入真实场景作业，外企从“国际研发、中国制造”转向“中国研发、全球共享”。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 09:12",
+        "url": "https://www.news.cn/tech/20261110/b1ef49b3d48d471a821d8dd51596bda2/c.html"
+      },
+      {
+        "id": "ai-05",
+        "title": "赵继宗院士：脑机接口稳定性需过五年大考",
+        "summary": "中科院院士赵继宗表示，脑机接口属代偿手段，不能修复神经通路。国内“北脑一号”已完成40例多中心观察，力争2027年初申报注册证。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-06 08:03",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/06/content_609286.html"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "id": "metric-gold",
+      "kind": "gold",
+      "icon": "◎",
+      "name": "国内金价",
+      "value": "860.05元/克",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/graph/quotations?instid=Au99.99",
+      "sourceOrigin": "china",
+      "note": "2026年11月11日02:29最新价 Au99.99"
+    },
+    {
+      "id": "metric-domestic-oil",
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "中国油价",
+      "value": "92号汽油8.85元/升",
+      "source": "上海市发展和改革委员会",
+      "sourceUrl": "https://fgw.sh.gov.cn/fgw_jggl/20261029/c4173f8c7fb84f8486130488d93f1751.html",
+      "sourceOrigin": "china",
+      "note": "最高零售价，2026年10月29日24时起执行"
+    },
+    {
+      "id": "metric-international-oil",
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际油价",
+      "value": "布伦特跌破90美元/桶",
+      "source": "人民网",
+      "sourceUrl": "https://world.people.com.cn/n1/2026/1110/c1002-40831474.html",
+      "sourceOrigin": "china",
+      "note": "2026年11月10日盘中，今年8月底以来首次"
+    },
+    {
+      "id": "metric-usd",
+      "kind": "usd_cny",
+      "icon": "＄",
+      "name": "美元兑人民币",
+      "value": "1美元=6.7167人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/r/cms/www/chinamoney/data/fx/ccpr.json",
+      "sourceOrigin": "china",
+      "note": "11月10日人民币汇率中间价"
+    },
+    {
+      "id": "metric-eur",
+      "kind": "eur_cny",
+      "icon": "€",
+      "name": "欧元兑人民币",
+      "value": "1欧元=7.5071人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/r/cms/www/chinamoney/data/fx/ccpr.json",
+      "sourceOrigin": "china",
+      "note": "11月10日人民币汇率中间价"
+    },
+    {
+      "id": "metric-jpy",
+      "kind": "jpy_cny",
+      "icon": "¥",
+      "name": "日元兑人民币",
+      "value": "100日元=4.2355人民币",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/r/cms/www/chinamoney/data/fx/ccpr.json",
+      "sourceOrigin": "china",
+      "note": "11月10日人民币汇率中间价"
+    }
+  ],
+  "observation": "今日民生政策密集落地：高中学位扩容、创新药进院松绑、养老服务师设职业，教育与医疗供给同步加码；10月CPI同比涨0.7%，物价总体温和。国际上，俄美乌在阿布扎比恢复会谈，布伦特油价跌破90美元，欧洲生活成本抗议延续。科技端，无液氦超导加速器、中性原子量子机和空间站超冷原子集中突破，AI词元消费走上电商货架。",
+  "sources": [
+    "新华网",
+    "人民网",
+    "光明网",
+    "中国新闻网",
+    "中国日报中文网",
+    "中国科技网",
+    "科学网",
+    "上海黄金交易所",
+    "上海市发展和改革委员会",
+    "中国外汇交易中心"
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "上海市发展和改革委员会",
+    "人民网",
+    "中国外汇交易中心"
+  ]
+}
