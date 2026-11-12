@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "appId": "simple-download-android",
   "channel": "stable",
-  "version": "2.3.60",
-  "versionCode": 60,
-  "downloadUrl": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-android-v2.3.60/SimpleDownload-2.3.60-Android.apk",
-  "releasePageUrl": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-android-v2.3.60",
-  "size": 43179057,
-  "sha256": "02a02a1f0326619a53a16d079406a7db12144944b2c6947c437d723a8d670081",
-  "publishedAtUtc": "2026-10-29T08:45:25Z",
-  "notes": "全新原生新拟物界面；输入法粘贴自动分隔链接，批量上限50条；音频开关新增提示；完整字体无损压缩与运行时精简。仅支持64位ARM，已装本地2.3.60请手动覆盖。"
+  "version": "2.3.61",
+  "versionCode": 61,
+  "downloadUrl": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-android-v2.3.61/SimpleDownload-2.3.61-Android.apk",
+  "releasePageUrl": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-android-v2.3.61",
+  "size": 43180473,
+  "sha256": "1e3dd9e5dcc0752798ad89321b766e1d3940ae3247059275cc2c4d124a83af2f",
+  "publishedAtUtc": "2026-11-12T12:46:11Z",
+  "notes": "整个粘贴框均可点击编辑；优化新拟物阴影动画缓存，保留原有外观、动效和粘贴行为。"
 }
