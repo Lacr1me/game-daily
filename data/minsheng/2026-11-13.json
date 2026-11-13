@@ -1,0 +1,428 @@
+{
+  "date": "2026-11-13",
+  "issue": 77,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期五",
+  "lunarDate": "农历十月初五",
+  "cutoff": "2026-11-13 05:30（北京时间）",
+  "productionTime": "2026-11-13 08:40（北京时间）",
+  "metricsCutoff": "2026-11-12 24:00（北京时间）",
+  "topStoryIds": [
+    "domestic-01",
+    "tech-01",
+    "international-03"
+  ],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "李强主持国务院第二十二次专题学习",
+        "summary": "国务院11月12日就健全多层次社会保障体系开展第二十二次专题学习，要求完善灵活就业人员社保制度、扩大企业年金覆盖面、推进基本医疗保险省级统筹。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-12 19:40",
+        "url": "https://www3.xinhuanet.com/politics/20261112/5f95dbf91f37439d88bc41a997ab12b8/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "18起涉食品安全重大犯罪案件被挂牌督办",
+        "summary": "公安部、最高人民检察院、最高人民法院近日对18起涉食品安全重大犯罪案件集中挂牌督办，包括“甲醛白菜”案、“假洋保健品”案、“硫磺竹笋”案等。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-12 16:01",
+        "url": "https://www.news.cn/politics/20261112/fd8ec08bdcfb4c18b490f1d61e18727c/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "首部技能人才评价行政法规公开征求意见",
+        "summary": "人力资源社会保障部11月12日发布《技能人才评价条例（征求意见稿）》，至12月12日公开征求意见，重点治理评价机构良莠不齐、“山寨证书”等问题。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-12 18:16",
+        "url": "https://education.news.cn/20261112/fe001dea444d47acaffed12cbd3b548a/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "重庆城市轨道交通运营里程跨越600公里",
+        "summary": "重庆轨道交通15号线井口至两江影视城段11月12日开通运营，全长约48公里、设车站18座，全市城市轨道交通运营里程正式跨越600公里。",
+        "source": "中国网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-12 15:02",
+        "url": "https://www.china.com.cn/txt/2026-11/12/content_118771940.shtml"
+      },
+      {
+        "id": "domestic-05",
+        "title": "多地抢抓旺季窗口期发放消费券",
+        "summary": "广西、云南、上海虹口、天津西青、成都高新区等地密集发放消费券，发放逻辑转向分品类、分人群、分场景的定向投放，并与以旧换新政策衔接。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-12 10:04",
+        "url": "https://www.cnr.cn/food/gstj/20261112/t20261112_527869763.shtml"
+      },
+      {
+        "id": "domestic-06",
+        "title": "广西新增8.21万灵活就业人员缴存公积金",
+        "summary": "今年前三季度，广西新增灵活就业缴存人数8.21万人，同比增长162%；10月起实行灵活就业人员与单位职工住房公积金“同权同策”。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-12 08:33",
+        "url": "https://www.cnr.cn/gxfw/gstjgx/20261112/t20261112_527869584.shtml"
+      },
+      {
+        "id": "domestic-07",
+        "title": "10月CPI同比上涨0.7% 核心CPI涨0.8%",
+        "summary": "国家统计局数据显示，10月居民消费价格指数同比上涨0.7%，涨幅比上月回落0.2个百分点；核心CPI上涨0.8%，PPI同比上涨5.7%。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-12 09:36",
+        "url": "https://economy.gmw.cn/2026-11/12/content_39097661.htm"
+      },
+      {
+        "id": "domestic-08",
+        "title": "冬季招聘促就业 各地专场接连开场",
+        "summary": "11月以来，各地各校就业招聘专场接连开场：杭州举办总工会冬季专场招聘会，成渝地区数智行业双选会在重庆永川启幕，企业现场看简历、当场约面谈。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-12 09:19",
+        "url": "https://edu.gmw.cn/2026-11/12/content_39097568.htm"
+      },
+      {
+        "id": "domestic-09",
+        "title": "从“双十一”Token热销看智能消费新动能",
+        "summary": "京东数据显示，11月2日大模型Token包产品销量环比增长20倍；前三季度服务零售额增长5.0%，增速高于商品零售4个百分点，智能消费成为新动能。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-12 21:39",
+        "url": "https://china.chinadaily.com.cn/a/202611/12/WS6af5c2bae4b0e14252fcad16.html"
+      },
+      {
+        "id": "domestic-10",
+        "title": "八部门发文支持实体书店服务全民阅读",
+        "summary": "中央宣传部等八部门联合印发通知，提出实施“千名店长”成长培训计划、打造地标与特色书店、纳入城市一刻钟便民生活圈，并鼓励发放惠民购书券。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-12 08:20",
+        "url": "https://www.cnr.cn/jy/sygdjy/20261112/t20261112_527869644.shtml"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "拜登在爱尔兰遭抗议者扔掷物品 一男子被起诉",
+        "summary": "据美国全国广播公司报道，美国前总统拜登10日在都柏林出席活动时遭部分抗议者扔掷物品，警方逮捕3名男子，其中一名50多岁男子被起诉。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-12 08:21",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-12/10730600.shtml"
+      },
+      {
+        "id": "international-02",
+        "title": "英爱多地学校收到威胁邮件 当局认定系境外恶作剧",
+        "summary": "英国苏格兰、北爱尔兰及爱尔兰有关部门确认，大批学校收到同一封威胁邮件，经评估不具备可信度，属来自英国境外的恶作剧；北爱尔兰逾300所学校受影响。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-12 06:03",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-12/10730569.shtml"
+      },
+      {
+        "id": "international-03",
+        "title": "美国或失去“麻疹消除国”地位",
+        "summary": "路透社报道，美国自2000年以来保持的“麻疹消除国”地位受到威胁，泛美卫生组织已要求成员国提交报告供专家审议；2025年初以来美国报告近7500例病例、11例死亡。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-12 13:43",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-12/10730747.shtml"
+      },
+      {
+        "id": "international-04",
+        "title": "俄罗斯驻美国大使达尔奇耶夫去世 终年66岁",
+        "summary": "俄罗斯外交部发布消息，俄罗斯驻美国大使亚历山大·达尔奇耶夫11月11日去世，终年66岁。他自1992年起在俄外交部工作，2025年被任命为驻美大使。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-12 06:39",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-12/10730576.shtml"
+      },
+      {
+        "id": "international-05",
+        "title": "集安组织峰会通过宣言 取消亚美尼亚投票权",
+        "summary": "俄罗斯总统普京11日在克里姆林宫主持集安组织集体安全理事会会议，会议通过宣言等文件，并决定取消亚美尼亚在该组织的投票权。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-12 06:04",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-12/10730570.shtml"
+      },
+      {
+        "id": "international-06",
+        "title": "伊朗高官称目前波斯湾内没有美军存在",
+        "summary": "伊朗武装部队副总参谋长海达里表示，目前波斯湾内没有美军存在；他还称伊朗已为未来可能的战争建立目标库，并取消地理限制。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-12 08:07",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-12/10730595.shtml"
+      },
+      {
+        "id": "international-07",
+        "title": "COP31“长江十年行”影像展在土耳其举办",
+        "summary": "《联合国气候变化框架公约》第三十一次缔约方大会在土耳其安塔利亚举办期间，中国新闻网主办的“长江十年行”影像展亮相，展示长江大保护十年成效。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-12 14:40",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-12/10730729.shtml"
+      },
+      {
+        "id": "international-08",
+        "title": "印度一列客运火车脱轨 部分乘客受伤",
+        "summary": "印度阿萨姆邦11日发生客运火车脱轨事故，事发于当地时间6时54分左右，列车避让另一列火车时司机未能控制车速，部分乘客受轻伤。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-11 16:15",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-11/10730251.shtml"
+      },
+      {
+        "id": "international-09",
+        "title": "韩国一辆公交车冲撞32辆汽车 致48人伤",
+        "summary": "韩国京畿道城南市盆唐区11日发生公交车冲撞事故，车辆行驶约100至150米后撞上中央分隔带护栏，造成48人受伤，其中6人重伤，均无生命危险。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-11 15:22",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-11/10730174.shtml"
+      },
+      {
+        "id": "international-10",
+        "title": "俄圣彼得堡汽车爆炸致一名军官丧生",
+        "summary": "俄罗斯圣彼得堡市12日清晨发生汽车爆炸事件，导致一名俄罗斯军官丧生。俄联邦侦查委员会已刑事立案，涉嫌安放爆炸装置的人员尚未找到。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-12 14:49",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-12/10730799.shtml"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "我国成功发射探源计划探路者卫星",
+        "summary": "11月11日19时41分，长征二号丁运载火箭在酒泉卫星发射中心点火起飞，成功将探源计划探路者卫星送入预定轨道，这是长征系列运载火箭第677次发射。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-11 21:43",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/11/content_611990.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "我国首款商用级中小型纯太阳能无人机首飞成功",
+        "summary": "航天科技集团十一院自主研发的“轻骑兵”纯太阳能无人机11月11日在西北某机场首飞成功，翼展8米，最大设计续航30小时，升限7000米。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-11 14:42",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/11/content_611729.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "长十二火箭成功发射卫星互联网低轨29组卫星",
+        "summary": "11月9日4时24分，长征十二号运载火箭在海南商业航天发射场点火起飞，成功将卫星互联网低轨29组卫星送入预定轨道，这是长征系列第676次发射。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 09:43",
+        "url": "https://www.cnr.cn/tech/techyw/kan/20261110/t20261110_527867737.shtml"
+      },
+      {
+        "id": "tech-04",
+        "title": "我国汽车出口量连续5个月超100万辆",
+        "summary": "中汽协数据显示，10月我国汽车出口106.6万辆，环比增长1.3%，同比增长60.2%，月度出口量连续5个月保持在100万辆以上。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-12 09:17",
+        "url": "https://www.news.cn/tech/20261112/9de71237f09c436d9ab6ab86a06a9fed/c.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "“超级软件智能”为工业软件研发按下加速键",
+        "summary": "北京中关村学院与中关村人工智能研究院团队研发“超级软件智能”系统，用AI加速工业软件研发，两名工程师约一个月开发出性能比肩进口CAE的国产网格建模软件。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-12 09:27",
+        "url": "https://www.cnr.cn/tech/techds/20261112/t20261112_527869710.shtml"
+      },
+      {
+        "id": "tech-06",
+        "title": "6G终端原型机全球首展 AI与下一代通信双向赋能",
+        "summary": "第九届进博会上，首个符合3GPP最新定义的6G终端原型机首次公开亮相；高通已用该原型机与中国移动、中兴通讯等开展联合6G技术测试和互操作验证。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-06 20:32",
+        "url": "https://www.news.cn/tech/20261106/03e933c5011f4ea9b09c03b9c8c8bb32/c.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "前三季度钢铁行业转型升级步伐加快",
+        "summary": "中钢协数据显示，前三季度全国粗钢产量7.25亿吨，同比下降2.9%；出口钢材8564万吨，出口均价709美元/吨，同比上升1.8%，出口秩序改善。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-11 09:30",
+        "url": "https://www.cnr.cn/tech/techyw/kan/20261111/t20261111_527868699.shtml"
+      },
+      {
+        "id": "tech-08",
+        "title": "“科技兴商”18条举措激活市场潜能",
+        "summary": "商务部会同相关部门发布《关于加快推进科技兴商的意见》，提出18条举措，推动商贸全链条智能化、绿色化、融合化发展，这是首份以“科技兴商”为主题的综合性文件。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-12 09:26",
+        "url": "https://www.cnr.cn/tech/techyw/kan/20261112/t20261112_527869706.shtml"
+      },
+      {
+        "id": "tech-09",
+        "title": "黄河“地上悬河”治理呼唤新思路",
+        "summary": "科技日报报道，黄河下游“地上悬河”已长达800多公里，经20多年演变水沙关系变化、调水调沙效能趋缓，专家提出“以沙适水”思路，通过粗砂细化与粗细分离主动治理。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-12 07:41",
+        "url": "https://www.stdaily.com/web/2026-11/12/content_612055.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "中部崛起 科创作答：湖北创新版图加速成形",
+        "summary": "科技日报调研组报道，武汉光谷烽火通信研制出管壁嵌20根微管的中空光纤，东湖实验室试验车5.3秒加速至时速800公里，6.4T硅光单模NPO产品面向AI算力集群。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-12 08:30",
+        "url": "https://www.stdaily.com/web/2026-11/12/content_612037.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "智能体安全互联有了自律公约",
+        "summary": "《智能体发展自律公约》在世界互联网大会乌镇峰会期间发布，由中国信通院、华为、腾讯、蚂蚁、阿里、抖音等20家单位联合发起，提出八条自律措施。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-12 07:41",
+        "url": "https://www.stdaily.com/web/2026-11/12/content_612054.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "算力租金一年翻倍 AI时代基础研究有多贵",
+        "summary": "中国科学院自动化研究所研究员李国齐称，过去一年高端算力租赁价格上涨近100%，去年2万多一台，今年4万多一台；社会资本正以长周期方式投入基础研究。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-12 09:51",
+        "url": "https://www.cnr.cn/tech/techds/20261112/t20261112_527869745.shtml"
+      },
+      {
+        "id": "ai-03",
+        "title": "AI“织”网 为国产大邮轮抢出“小时级”窗口",
+        "summary": "第二艘国产大型邮轮“爱达·花城号”11月12日完成首个试运营航次；从船坞吊装到靠离泊，人工智能气象网为每个关键节点提供小时级窗口预报。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-12 22:05",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/12/content_612463.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "智能机器人加速融入现实场景",
+        "summary": "2025年我国人工智能核心产业规模超过1.2万亿元，企业数量超过6200家；截至2026年6月底人工智能企业超6600家，工业机器人应用向精密装配、质量检测延伸。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-12 09:26",
+        "url": "https://www.cnr.cn/tech/techds/20261112/t20261112_527869704.shtml"
+      },
+      {
+        "id": "ai-05",
+        "title": "AI比价算账能帮消费者省钱吗",
+        "summary": "调查显示66.7%的受访者会用AI辅助购物，比价、算满减、凑单；但记者调查发现，AI给出的低价与优惠方案仍受多重因素影响，只能作为参考。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-10 15:27",
+        "url": "https://www.chinanews.com.cn/cj/2026/11-10/10729449.shtml"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "id": "metric-gold",
+      "kind": "gold",
+      "icon": "◎",
+      "name": "国内金价",
+      "value": "851.33元/克",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/graph/quotations?instid=Au99.99",
+      "sourceOrigin": "china",
+      "note": "2026年11月12日收盘价 Au99.99"
+    },
+    {
+      "id": "metric-oil-cn",
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "国内油价",
+      "value": "92号汽油8.33元/升",
+      "source": "上海市发展和改革委员会",
+      "sourceUrl": "https://fgw.sh.gov.cn/fgw_jggl/20261112/0f5137f27eff456e9e9c2db749801342.html",
+      "sourceOrigin": "china",
+      "note": "2026年11月12日24时起执行，上海最高零售价"
+    },
+    {
+      "id": "metric-oil-intl",
+      "kind": "international_oil",
+      "icon": "🛢",
+      "name": "国际油价",
+      "value": "布伦特95.82美元/桶",
+      "source": "上海证券报",
+      "sourceUrl": "https://www.cnstock.com/commonDetail/827999",
+      "sourceOrigin": "china",
+      "note": "2026年11月12日收盘价，WTI报88.74美元/桶"
+    },
+    {
+      "id": "metric-usd",
+      "kind": "usd_cny",
+      "icon": "💱",
+      "name": "美元兑人民币",
+      "value": "1美元兑人民币6.7174",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/",
+      "sourceOrigin": "china",
+      "note": "2026年11月12日人民币汇率中间价，1美元兑人民币"
+    },
+    {
+      "id": "metric-eur",
+      "kind": "eur_cny",
+      "icon": "💶",
+      "name": "欧元兑人民币",
+      "value": "1欧元兑人民币7.4342",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/",
+      "sourceOrigin": "china",
+      "note": "2026年11月12日人民币汇率中间价，1欧元兑人民币"
+    },
+    {
+      "id": "metric-jpy",
+      "kind": "jpy_cny",
+      "icon": "💴",
+      "name": "日元兑人民币",
+      "value": "100日元兑人民币4.2024",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/chinese/",
+      "sourceOrigin": "china",
+      "note": "2026年11月12日人民币汇率中间价，100日元兑人民币"
+    }
+  ],
+  "observation": "今日民生政策密集：国务院专题学习部署多层次社保体系，技能人才评价首部行政法规征求意见；就业服务同步加码，冬季招聘与灵活就业公积金扩面并行。10月CPI同比涨0.7%，物价温和。科技端探源卫星、纯太阳能无人机相继突破，钢铁与商贸数字化提速，AI与实体经济融合进一步加深。",
+  "sources": [
+    "新华网",
+    "中国网",
+    "央广网",
+    "光明网",
+    "中国日报中文网",
+    "中国新闻网",
+    "中国科技网",
+    "上海黄金交易所",
+    "上海市发展和改革委员会",
+    "中国外汇交易中心",
+    "上海证券报"
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "上海市发展和改革委员会",
+    "上海证券报",
+    "中国外汇交易中心"
+  ]
+}

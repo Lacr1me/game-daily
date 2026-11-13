@@ -1,0 +1,828 @@
+{
+  "date": "2026-11-13",
+  "issue": 76,
+  "cutoff": "2026-11-13 07:10",
+  "dataWindow": "2026-11-12 至 2026-11-13；Steam 于 11-13 05:05（北京时间）冻结 50 个 appId，逐项核验后收录 46 项合格国区优惠；整合包与 Mod 为 MC百科当日可见热度",
+  "sources": [
+    "17173",
+    "游民星空",
+    "MC百科",
+    "Steam 国区"
+  ],
+  "features": [
+    {
+      "id": "17173-003255616",
+      "title": "《黑色沙漠》开发商公开2026年Q3财报，《多可比》计划2028年上线",
+      "summary": "Pearl Abyss 公开 2026 年第三季度财报，并确认《多可比》计划 2028 年上线。",
+      "date": "2026-11-13",
+      "source": "17173",
+      "url": "https://news.17173.com/content/11132026/003255616.shtml",
+      "image": "game-brief-assets/2026-11-13-news-17173-003255616.png"
+    },
+    {
+      "id": "mcpack-1314",
+      "title": "MC 社区热度：拔刀之旅登顶今日整合包榜",
+      "summary": "拔刀之旅以 MC百科昨日指数 772 位列今天入选整合包首位，1.12.2 拔刀剑任务线仍是社区热门。",
+      "date": "2026-11-13",
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/modpack/1314.html",
+      "image": "game-brief-assets/2026-11-13-pack-1314.jpg"
+    }
+  ],
+  "news": [
+    {
+      "id": "17173-004139265",
+      "title": "韩国新作MMORPG《无冕之烬》12月开启Steam全球测试",
+      "summary": "韩国新作 MMORPG《无冕之烬》宣布 12 月开启 Steam 全球测试。",
+      "date": "2026-11-13",
+      "source": "17173",
+      "url": "https://news.17173.com/content/11132026/004139265.shtml",
+      "image": "game-brief-assets/2026-11-13-news-17173-004139265.jpg"
+    },
+    {
+      "id": "17173-010821086",
+      "title": "《幻兽帕鲁》开发商Pocketpair给员工放5天假去玩《GTA6》",
+      "summary": "Pocketpair 宣布给员工放 5 天假，让大家去玩《GTA6》。",
+      "date": "2026-11-13",
+      "source": "17173",
+      "url": "https://news.17173.com/content/11132026/010821086.shtml",
+      "image": "game-brief-assets/2026-11-13-news-17173-010821086.jpg"
+    },
+    {
+      "id": "17173-030843022",
+      "title": "《Halo: Campaign Evolved》免费更新加入“枪林弹雨”模式",
+      "summary": "《Halo: Campaign Evolved》免费更新加入“枪林弹雨”模式。",
+      "date": "2026-11-13",
+      "source": "17173",
+      "url": "https://news.17173.com/content/11132026/030843022.shtml",
+      "image": "game-brief-assets/2026-11-13-news-17173-030843022.jpg"
+    },
+    {
+      "id": "17173-034115207",
+      "title": "《神鬼寓言4》Xbox 25周年纪念全新任务实机演示",
+      "summary": "《神鬼寓言4》在 Xbox 25 周年纪念活动公开全新任务实机演示。",
+      "date": "2026-11-13",
+      "source": "17173",
+      "url": "https://news.17173.com/content/11132026/034115207.shtml",
+      "image": "game-brief-assets/2026-11-13-news-17173-034115207.jpg"
+    },
+    {
+      "id": "17173-030923828",
+      "title": "《GTA6》最新实机画面再次展现画质",
+      "summary": "《GTA6》最新实机画面再次展示画质表现。",
+      "date": "2026-11-13",
+      "source": "17173",
+      "url": "https://news.17173.com/content/11132026/030923828.shtml",
+      "image": "game-brief-assets/2026-11-13-news-17173-030923828.jpg"
+    },
+    {
+      "id": "gamersky-2245662",
+      "title": "《怪物猎人：旅人》IGN 7分",
+      "summary": "《怪物猎人：旅人》获 IGN 7 分评价。",
+      "date": "2026-11-12",
+      "source": "游民星空",
+      "url": "https://www.gamersky.com/news/202611/2245662.shtml",
+      "image": "game-brief-assets/2026-11-13-news-gamersky-2245662.png"
+    },
+    {
+      "id": "17173-010931839",
+      "title": "《乐高星球大战：天行者传奇》达斯·维达壁画及更多内容",
+      "summary": "《乐高星球大战：天行者传奇》公开达斯·维达壁画及更多内容。",
+      "date": "2026-11-13",
+      "source": "17173",
+      "url": "https://news.17173.com/content/11132026/010931839.shtml",
+      "image": "game-brief-assets/2026-11-13-news-17173-010931839.jpg"
+    },
+    {
+      "id": "17173-030804598",
+      "title": "休·杰克曼与瑞安·雷诺兹被列为《Avengers: Doomsday》编剧，引发出演猜测",
+      "summary": "外媒称两人被列为《Avengers: Doomsday》编剧，外界猜测其可能出演死侍与金刚狼（传闻）。",
+      "date": "2026-11-13",
+      "source": "17173",
+      "url": "https://news.17173.com/content/11132026/030804598.shtml",
+      "image": "game-brief-assets/2026-11-13-news-17173-030804598.jpg"
+    },
+    {
+      "id": "17173-021220159",
+      "title": "《GTA 4》的“三叶草”抢劫案展示了错误的抢银行方式——关卡艺术",
+      "summary": "关卡设计解析指出《GTA 4》“三叶草”抢劫案展示了错误的抢银行方式。",
+      "date": "2026-11-13",
+      "source": "17173",
+      "url": "https://news.17173.com/content/11132026/021220159.shtml",
+      "image": "game-brief-assets/2026-11-13-news-17173-021220159.jpg"
+    },
+    {
+      "id": "17173-041024531",
+      "title": "《魔戒：咕噜》与《Rings of Power》第三季将揭开中土世界传说谜团",
+      "summary": "《魔戒：咕噜》与《Rings of Power》第三季将揭开中土世界传说谜团。",
+      "date": "2026-11-13",
+      "source": "17173",
+      "url": "https://news.17173.com/content/11132026/041024531.shtml",
+      "image": "game-brief-assets/2026-11-13-news-17173-041024531.jpg"
+    }
+  ],
+  "packs": [
+    {
+      "id": "mcpack-1314",
+      "name": "拔刀之旅 (Battou No Tabi)",
+      "summary": "以拔刀剑为核心的 1.12.2 整合包，配 160+ 附属刀与 8 章 FTB 主线任务。",
+      "category": "拔刀剑 · 任务 · 冒险",
+      "heat": 95,
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/modpack/1314.html",
+      "image": "game-brief-assets/2026-11-13-pack-1314.jpg",
+      "heatEvidenceAt": "2026-11-12",
+      "heatSignals": "MC百科昨日指数 772（站内均值 71.595）；总浏览 40.17万；Forge 1.12.2"
+    },
+    {
+      "id": "mcpack-989",
+      "name": "[CTI]工匠：技艺革新 (Construct：Technological Innovation)",
+      "summary": "以匠魂 3 为核心的中高度魔改科技＋冒险整合包，设计多样流程与场景。",
+      "category": "匠魂 · 科技 · 冒险",
+      "heat": 91,
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/modpack/989.html",
+      "image": "game-brief-assets/2026-11-13-pack-989.jpg",
+      "heatEvidenceAt": "2026-11-12",
+      "heatSignals": "MC百科昨日指数 604（站内均值 71.595）；总浏览 71.19万；Forge 1.19.2"
+    },
+    {
+      "id": "mcpack-1418",
+      "name": "[UPN]涅槃 (Nirvana)",
+      "summary": "以饰品构筑与咒镰双生为主的深度魔改大型冒险半剧情整合包。",
+      "category": "魔法战斗 · 原创饰品 · 类RPG",
+      "heat": 80,
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/modpack/1418.html",
+      "image": "game-brief-assets/2026-11-13-pack-1418.jpg",
+      "heatEvidenceAt": "2026-11-12",
+      "heatSignals": "MC百科昨日指数 285（站内均值 71.595）；总浏览 14.05万；Forge 1.20.1"
+    },
+    {
+      "id": "mcpack-611",
+      "name": "[RD]冥行之至 (Reaching Darkness)",
+      "summary": "以暮色与多维裂隙为背景的冒险魔法整合包，围绕地牢与黑暗降临展开。",
+      "category": "冒险 · 魔法 · 维度",
+      "heat": 80,
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/modpack/611.html",
+      "image": "game-brief-assets/2026-11-13-pack-611.jpg",
+      "heatEvidenceAt": "2026-11-12",
+      "heatSignals": "MC百科昨日指数 276（站内均值 71.595）；总浏览 10.73万；Forge 1.19.2"
+    },
+    {
+      "id": "mcpack-911",
+      "name": "[SoA3]Slow Start AoA3",
+      "summary": "以虚无世界 3.7+ 为主题的手工整合包，附详细任务书，冒险与 RPG 向。",
+      "category": "虚无世界3 · 冒险RPG",
+      "heat": 80,
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/modpack/911.html",
+      "image": "game-brief-assets/2026-11-13-pack-911.jpg",
+      "heatEvidenceAt": "2026-11-12",
+      "heatSignals": "MC百科昨日指数 270（站内均值 71.595）；总浏览 30.62万；NeoForge 1.21"
+    },
+    {
+      "id": "mcpack-627",
+      "name": "冰河物语",
+      "summary": "硬核生存向整合包，冻土环境与高强度决策，联动 Tacz 枪械拓展。",
+      "category": "硬核生存 · 冻土",
+      "heat": 75,
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/modpack/627.html",
+      "image": "game-brief-assets/2026-11-13-pack-627.jpg",
+      "heatEvidenceAt": "2026-11-12",
+      "heatSignals": "MC百科昨日指数 172（站内均值 71.595）；总浏览 47.73万；Forge 1.20.1"
+    },
+    {
+      "id": "mcpack-706",
+      "name": "[AD]交错维度3 (Among Dimensions 3)",
+      "summary": "以维度为核心的冒险探索包，改进原版三维度并新增多个维度。",
+      "category": "维度 · 冒险",
+      "heat": 72,
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/modpack/706.html",
+      "image": "game-brief-assets/2026-11-13-pack-706.jpg",
+      "heatEvidenceAt": "2026-11-12",
+      "heatSignals": "MC百科昨日指数 135（站内均值 71.595）；总浏览 15.00万；Forge 1.16.5"
+    },
+    {
+      "id": "mcpack-626",
+      "name": "织彩钓月 (Aruori)",
+      "summary": "中量级农业与建筑向整合包，面向多人长期游玩和中大型服务器。",
+      "category": "幻想风 · 农业 · 烹饪",
+      "heat": 70,
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/modpack/626.html",
+      "image": "game-brief-assets/2026-11-13-pack-626.jpg",
+      "heatEvidenceAt": "2026-11-12",
+      "heatSignals": "MC百科昨日指数 107（站内均值 71.595）；总浏览 36.17万；NeoForge 1.21.1"
+    },
+    {
+      "id": "mcpack-1045",
+      "name": "光陆冒险",
+      "summary": "冒险 RPG 向整合包，含可升级玩家、魂系加点与多维度内容。",
+      "category": "冒险 · 魔法 · 国创",
+      "heat": 70,
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/modpack/1045.html",
+      "image": "game-brief-assets/2026-11-13-pack-1045.jpg",
+      "heatEvidenceAt": "2026-11-12",
+      "heatSignals": "MC百科昨日指数 107（站内均值 71.595）；总浏览 4.47万；Forge 1.20.1"
+    },
+    {
+      "id": "mcpack-845",
+      "name": "[AnE]冒险与探索 (Adventure & Exploration)",
+      "summary": "大型冒险探索整合包，含贪婪、挖矿与任务线。",
+      "category": "冒险 · 探索 · 大型",
+      "heat": 69,
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/modpack/845.html",
+      "image": "game-brief-assets/2026-11-13-pack-845.jpg",
+      "heatEvidenceAt": "2026-11-12",
+      "heatSignals": "MC百科昨日指数 93（站内均值 71.595）；总浏览 38.53万；Forge 1.20.1"
+    }
+  ],
+  "mods": [
+    {
+      "id": "mcmod-17541",
+      "name": "[LTC2] 辣条工艺 2",
+      "summary": "国创食物模组，围绕辣条扩展物品与效果；1.5.0 更新于 11-12。",
+      "version": "1.20.1",
+      "loader": "Forge",
+      "date": "2026-11-12",
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/class/17541.html",
+      "image": "game-brief-assets/2026-11-13-mod-17541.jpg"
+    },
+    {
+      "id": "mcmod-32820",
+      "name": "航空学：万能连接器",
+      "summary": "为机械动力：航空学增加万能对接器，继承原版对接功能并增强 FE 与应力传输。",
+      "version": "1.21.1",
+      "loader": "NeoForge",
+      "date": "2026-11-12",
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/class/32820.html",
+      "image": "game-brief-assets/2026-11-13-mod-32820.jpg"
+    },
+    {
+      "id": "mcmod-32818",
+      "name": "Stardew's Fishes",
+      "summary": "把《星露谷物语》的鱼类加入 Minecraft，联动静谧四季与超多生物群系。",
+      "version": "1.21.1",
+      "loader": "NeoForge",
+      "date": "2026-11-12",
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/class/32818.html",
+      "image": "game-brief-assets/2026-11-13-mod-32818.jpg"
+    },
+    {
+      "id": "mcmod-32819",
+      "name": "旅行者背包：堆叠升级",
+      "summary": "为旅行者背包增加堆叠升级。",
+      "version": "26.3",
+      "loader": "Fabric",
+      "date": "2026-11-12",
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/class/32819.html",
+      "image": "game-brief-assets/2026-11-13-mod-32819.jpg"
+    },
+    {
+      "id": "mcmod-32817",
+      "name": "[LTE] LTY 的交通拓展",
+      "summary": "MTR 3.x 的 Fabric 交通拓展，延续列车、轨道与信号玩法。",
+      "version": "1.20.1",
+      "loader": "Fabric",
+      "date": "2026-11-12",
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/class/32817.html",
+      "image": "game-brief-assets/2026-11-13-mod-32817.jpg"
+    },
+    {
+      "id": "mcmod-31632",
+      "name": "AE2 Things: Reforged",
+      "summary": "修复原版 AE2 Things 停更与性能问题的 Fork，1.3.1 更新于 11-05。",
+      "version": "1.21.1",
+      "loader": "NeoForge",
+      "date": "2026-11-05",
+      "source": "MC百科",
+      "url": "https://www.mcmod.cn/class/31632.html",
+      "image": "game-brief-assets/2026-11-13-mod-31632.jpg"
+    }
+  ],
+  "trends": [
+    "韩系 MMO 继续押注全球测试：《无冕之烬》确认 12 月开启 Steam 全球测试。",
+    "Pearl Abyss 财报把《多可比》定在 2028 年，长周期项目节奏未变。",
+    "MC 整合包热度集中在冒险与魔改：今日入选 10 个整合包中 8 个为冒险或 RPG 向。",
+    "Steam 国区促销延续：冻结 50 个 appId 中 46 个仍有人民币折扣，最高 90%。"
+  ],
+  "deals": [
+    {
+      "id": "397540",
+      "name": "无主之地3",
+      "discount": "-90%",
+      "original": "¥199.00",
+      "price": "¥19.90",
+      "label": "今日特惠",
+      "ends": "截至 11-17",
+      "image": "game-brief-assets/2026-11-13-steam-397540.jpg",
+      "url": "https://store.steampowered.com/app/397540/?cc=cn&l=schinese"
+    },
+    {
+      "id": "312660",
+      "name": "Sniper Elite 4",
+      "discount": "-90%",
+      "original": "¥158.00",
+      "price": "¥15.80",
+      "label": "今日特惠",
+      "ends": "截至 11-18",
+      "image": "game-brief-assets/2026-11-13-steam-312660.jpg",
+      "url": "https://store.steampowered.com/app/312660/?cc=cn&l=schinese"
+    },
+    {
+      "id": "1029690",
+      "name": "狙击精英5",
+      "discount": "-90%",
+      "original": "¥138.00",
+      "price": "¥13.80",
+      "label": "今日特惠",
+      "ends": "截至 11-18",
+      "image": "game-brief-assets/2026-11-13-steam-1029690.jpg",
+      "url": "https://store.steampowered.com/app/1029690/?cc=cn&l=schinese"
+    },
+    {
+      "id": "323190",
+      "name": "冰汽时代",
+      "discount": "-90%",
+      "original": "¥108.00",
+      "price": "¥10.80",
+      "label": "今日特惠",
+      "ends": "截至 11-15",
+      "image": "game-brief-assets/2026-11-13-steam-323190.jpg",
+      "url": "https://store.steampowered.com/app/323190/?cc=cn&l=schinese"
+    },
+    {
+      "id": "460930",
+      "name": "幽灵行动：荒野",
+      "discount": "-80%",
+      "original": "¥208.00",
+      "price": "¥41.60",
+      "label": "今日特惠",
+      "ends": "截至 11-25",
+      "image": "game-brief-assets/2026-11-13-steam-460930.jpg",
+      "url": "https://store.steampowered.com/app/460930/?cc=cn&l=schinese"
+    },
+    {
+      "id": "2698940",
+      "name": "《飙酷车神：轰鸣盛典》",
+      "discount": "-80%",
+      "original": "¥198.00",
+      "price": "¥39.60",
+      "label": "今日特惠",
+      "ends": "截至 11-25",
+      "image": "game-brief-assets/2026-11-13-steam-2698940.jpg",
+      "url": "https://store.steampowered.com/app/2698940/?cc=cn&l=schinese"
+    },
+    {
+      "id": "227300",
+      "name": "Euro Truck Simulator 2",
+      "discount": "-75%",
+      "original": "¥92.99",
+      "price": "¥23.24",
+      "label": "今日特惠",
+      "ends": "截至 11-25",
+      "image": "game-brief-assets/2026-11-13-steam-227300.jpg",
+      "url": "https://store.steampowered.com/app/227300/?cc=cn&l=schinese"
+    },
+    {
+      "id": "270880",
+      "name": "American Truck Simulator",
+      "discount": "-75%",
+      "original": "¥92.99",
+      "price": "¥23.24",
+      "label": "今日特惠",
+      "ends": "截至 11-25",
+      "image": "game-brief-assets/2026-11-13-steam-270880.jpg",
+      "url": "https://store.steampowered.com/app/270880/?cc=cn&l=schinese"
+    },
+    {
+      "id": "1676840",
+      "name": "为了吾王II / For The King II",
+      "discount": "-70%",
+      "original": "¥88.00",
+      "price": "¥26.40",
+      "label": "今日特惠",
+      "ends": "截至 11-24",
+      "image": "game-brief-assets/2026-11-13-steam-1676840.jpg",
+      "url": "https://store.steampowered.com/app/1676840/?cc=cn&l=schinese"
+    },
+    {
+      "id": "1547000",
+      "name": "Grand Theft Auto: San Andreas – The Definitive Edition",
+      "discount": "-67%",
+      "original": "¥279.00",
+      "price": "¥92.07",
+      "label": "今日特惠",
+      "ends": "截至 11-20",
+      "image": "game-brief-assets/2026-11-13-steam-1547000.jpg",
+      "url": "https://store.steampowered.com/app/1547000/?cc=cn&l=schinese"
+    },
+    {
+      "id": "1677280",
+      "name": "Company of Heroes 3",
+      "discount": "-67%",
+      "original": "¥198.00",
+      "price": "¥65.34",
+      "label": "今日特惠",
+      "ends": "截至 11-20",
+      "image": "game-brief-assets/2026-11-13-steam-1677280.jpg",
+      "url": "https://store.steampowered.com/app/1677280/?cc=cn&l=schinese"
+    },
+    {
+      "id": "1611600",
+      "name": "WARNO",
+      "discount": "-66%",
+      "original": "¥188.00",
+      "price": "¥63.92",
+      "label": "今日特惠",
+      "ends": "截至 11-20",
+      "image": "game-brief-assets/2026-11-13-steam-1611600.jpg",
+      "url": "https://store.steampowered.com/app/1611600/?cc=cn&l=schinese"
+    },
+    {
+      "id": "728880",
+      "name": "Overcooked! 2",
+      "discount": "-66%",
+      "original": "¥98.00",
+      "price": "¥33.32",
+      "label": "今日特惠",
+      "ends": "截至 11-20",
+      "image": "game-brief-assets/2026-11-13-steam-728880.jpg",
+      "url": "https://store.steampowered.com/app/728880/?cc=cn&l=schinese"
+    },
+    {
+      "id": "1669000",
+      "name": "Age of Wonders 4",
+      "discount": "-60%",
+      "original": "¥198.00",
+      "price": "¥79.20",
+      "label": "今日特惠",
+      "ends": "截至 11-19",
+      "image": "game-brief-assets/2026-11-13-steam-1669000.jpg",
+      "url": "https://store.steampowered.com/app/1669000/?cc=cn&l=schinese"
+    },
+    {
+      "id": "1272320",
+      "name": "要战便战",
+      "discount": "-60%",
+      "original": "¥99.00",
+      "price": "¥39.60",
+      "label": "今日特惠",
+      "ends": "截至 11-18",
+      "image": "game-brief-assets/2026-11-13-steam-1272320.jpg",
+      "url": "https://store.steampowered.com/app/1272320/?cc=cn&l=schinese"
+    },
+    {
+      "id": "1285190",
+      "name": "无主之地®4",
+      "discount": "-50%",
+      "original": "¥298.00",
+      "price": "¥149.00",
+      "label": "今日特惠",
+      "ends": "截至 11-17",
+      "image": "game-brief-assets/2026-11-13-steam-1285190.jpg",
+      "url": "https://store.steampowered.com/app/1285190/?cc=cn&l=schinese"
+    },
+    {
+      "id": "2062430",
+      "name": "BALL x PIT — 球比伦战记",
+      "discount": "-50%",
+      "original": "¥58.00",
+      "price": "¥29.00",
+      "label": "今日特惠",
+      "ends": "截至 11-20",
+      "image": "game-brief-assets/2026-11-13-steam-2062430.jpg",
+      "url": "https://store.steampowered.com/app/2062430/?cc=cn&l=schinese"
+    },
+    {
+      "id": "2239150",
+      "name": "Thronefall《王权陨落》",
+      "discount": "-50%",
+      "original": "¥52.00",
+      "price": "¥26.00",
+      "label": "今日特惠",
+      "ends": "截至 11-26",
+      "image": "game-brief-assets/2026-11-13-steam-2239150.jpg",
+      "url": "https://store.steampowered.com/app/2239150/?cc=cn&l=schinese"
+    },
+    {
+      "id": "1942280",
+      "name": "土豆兄弟(Brotato)",
+      "discount": "-50%",
+      "original": "¥22.00",
+      "price": "¥11.00",
+      "label": "今日特惠",
+      "ends": "截至 11-17",
+      "image": "game-brief-assets/2026-11-13-steam-1942280.jpg",
+      "url": "https://store.steampowered.com/app/1942280/?cc=cn&l=schinese"
+    },
+    {
+      "id": "3274580",
+      "name": "纪元117：罗马和平",
+      "discount": "-40%",
+      "original": "¥198.00",
+      "price": "¥118.80",
+      "label": "今日特惠",
+      "ends": "截至 11-19",
+      "image": "game-brief-assets/2026-11-13-steam-3274580.jpg",
+      "url": "https://store.steampowered.com/app/3274580/?cc=cn&l=schinese"
+    },
+    {
+      "id": "1211600",
+      "name": "隔离区-丧尸末日生存",
+      "discount": "-40%",
+      "original": "¥48.00",
+      "price": "¥28.80",
+      "label": "今日特惠",
+      "ends": "截至 11-20",
+      "image": "game-brief-assets/2026-11-13-steam-1211600.jpg",
+      "url": "https://store.steampowered.com/app/1211600/?cc=cn&l=schinese"
+    },
+    {
+      "id": "3527290",
+      "name": "PEAK",
+      "discount": "-38%",
+      "original": "¥33.00",
+      "price": "¥20.46",
+      "label": "今日特惠",
+      "ends": "截至 11-15",
+      "image": "game-brief-assets/2026-11-13-steam-3527290.jpg",
+      "url": "https://store.steampowered.com/app/3527290/?cc=cn&l=schinese"
+    },
+    {
+      "id": "1324780",
+      "name": "Easy Red 2",
+      "discount": "-35%",
+      "original": "¥36.00",
+      "price": "¥23.40",
+      "label": "今日特惠",
+      "ends": "截至 11-15",
+      "image": "game-brief-assets/2026-11-13-steam-1324780.jpg",
+      "url": "https://store.steampowered.com/app/1324780/?cc=cn&l=schinese"
+    },
+    {
+      "id": "5175310",
+      "name": "我带过的最差一届",
+      "discount": "-35%",
+      "original": "¥28.00",
+      "price": "¥18.20",
+      "label": "今日特惠",
+      "ends": "截至 11-24",
+      "image": "game-brief-assets/2026-11-13-steam-5175310.jpg",
+      "url": "https://store.steampowered.com/app/5175310/?cc=cn&l=schinese"
+    },
+    {
+      "id": "4209920",
+      "name": "不问凡尘",
+      "discount": "-33%",
+      "original": "¥29.70",
+      "price": "¥19.89",
+      "label": "今日特惠",
+      "ends": "截至 11-25",
+      "image": "game-brief-assets/2026-11-13-steam-4209920.jpg",
+      "url": "https://store.steampowered.com/app/4209920/?cc=cn&l=schinese"
+    },
+    {
+      "id": "2384580",
+      "name": "真・三国无双 起源",
+      "discount": "-30%",
+      "original": "¥349.00",
+      "price": "¥244.30",
+      "label": "今日特惠",
+      "ends": "截至 11-18",
+      "image": "game-brief-assets/2026-11-13-steam-2384580.jpg",
+      "url": "https://store.steampowered.com/app/2384580/?cc=cn&l=schinese"
+    },
+    {
+      "id": "949230",
+      "name": "《都市：天际线2》",
+      "discount": "-30%",
+      "original": "¥198.00",
+      "price": "¥138.60",
+      "label": "今日特惠",
+      "ends": "截至 11-20",
+      "image": "game-brief-assets/2026-11-13-steam-949230.jpg",
+      "url": "https://store.steampowered.com/app/949230/?cc=cn&l=schinese"
+    },
+    {
+      "id": "1718570",
+      "name": "神之天平（ASTLIBRA Revision）",
+      "discount": "-30%",
+      "original": "¥80.00",
+      "price": "¥56.00",
+      "label": "今日特惠",
+      "ends": "截至 11-17",
+      "image": "game-brief-assets/2026-11-13-steam-1718570.jpg",
+      "url": "https://store.steampowered.com/app/1718570/?cc=cn&l=schinese"
+    },
+    {
+      "id": "4618570",
+      "name": "卡包英雄",
+      "discount": "-30%",
+      "original": "¥29.00",
+      "price": "¥20.30",
+      "label": "今日特惠",
+      "ends": "截至 11-25",
+      "image": "game-brief-assets/2026-11-13-steam-4618570.jpg",
+      "url": "https://store.steampowered.com/app/4618570/?cc=cn&l=schinese"
+    },
+    {
+      "id": "2584270",
+      "name": "《致命躯壳 II》",
+      "discount": "-25%",
+      "original": "¥198.00",
+      "price": "¥148.50",
+      "label": "今日特惠",
+      "ends": "截至 11-17",
+      "image": "game-brief-assets/2026-11-13-steam-2584270.jpg",
+      "url": "https://store.steampowered.com/app/2584270/?cc=cn&l=schinese"
+    },
+    {
+      "id": "1551980",
+      "name": "Clive Barker's Hellraiser: Revival",
+      "discount": "-20%",
+      "original": "¥219.00",
+      "price": "¥175.20",
+      "label": "今日特惠",
+      "ends": "截至 11-24",
+      "image": "game-brief-assets/2026-11-13-steam-1551980.jpg",
+      "url": "https://store.steampowered.com/app/1551980/?cc=cn&l=schinese"
+    },
+    {
+      "id": "1286220",
+      "name": "Sea Power : Naval Combat in the Missile Age",
+      "discount": "-20%",
+      "original": "¥168.00",
+      "price": "¥134.40",
+      "label": "今日特惠",
+      "ends": "截至 11-26",
+      "image": "game-brief-assets/2026-11-13-steam-1286220.jpg",
+      "url": "https://store.steampowered.com/app/1286220/?cc=cn&l=schinese"
+    },
+    {
+      "id": "2868840",
+      "name": "Slay the Spire 2",
+      "discount": "-20%",
+      "original": "¥88.00",
+      "price": "¥70.40",
+      "label": "今日特惠",
+      "ends": "截至 11-27",
+      "image": "game-brief-assets/2026-11-13-steam-2868840.jpg",
+      "url": "https://store.steampowered.com/app/2868840/?cc=cn&l=schinese"
+    },
+    {
+      "id": "4521650",
+      "name": "农场与盛宴 / Farm & Feast",
+      "discount": "-20%",
+      "original": "¥58.00",
+      "price": "¥46.40",
+      "label": "今日特惠",
+      "ends": "截至 11-26",
+      "image": "game-brief-assets/2026-11-13-steam-4521650.jpg",
+      "url": "https://store.steampowered.com/app/4521650/?cc=cn&l=schinese"
+    },
+    {
+      "id": "4876650",
+      "name": "永不按颜色分拣",
+      "discount": "-20%",
+      "original": "¥35.00",
+      "price": "¥28.00",
+      "label": "今日特惠",
+      "ends": "截至 11-18",
+      "image": "game-brief-assets/2026-11-13-steam-4876650.jpg",
+      "url": "https://store.steampowered.com/app/4876650/?cc=cn&l=schinese"
+    },
+    {
+      "id": "4767430",
+      "name": "盛夏的我们",
+      "discount": "-17%",
+      "original": "¥36.00",
+      "price": "¥29.88",
+      "label": "今日特惠",
+      "ends": "截至 11-26",
+      "image": "game-brief-assets/2026-11-13-steam-4767430.jpg",
+      "url": "https://store.steampowered.com/app/4767430/?cc=cn&l=schinese"
+    },
+    {
+      "id": "4576490",
+      "name": "未知伤亡",
+      "discount": "-15%",
+      "original": "¥78.00",
+      "price": "¥66.30",
+      "label": "今日特惠",
+      "ends": "截至 11-24",
+      "image": "game-brief-assets/2026-11-13-steam-4576490.jpg",
+      "url": "https://store.steampowered.com/app/4576490/?cc=cn&l=schinese"
+    },
+    {
+      "id": "2272360",
+      "name": "Warhammer 40,000: Dawn of War IV",
+      "discount": "-10%",
+      "original": "¥258.00",
+      "price": "¥232.20",
+      "label": "今日特惠",
+      "ends": "截至 12-04",
+      "image": "game-brief-assets/2026-11-13-steam-2272360.jpg",
+      "url": "https://store.steampowered.com/app/2272360/?cc=cn&l=schinese"
+    },
+    {
+      "id": "2860490",
+      "name": "笑拉了，我家旁边是魔王城666",
+      "discount": "-10%",
+      "original": "¥88.00",
+      "price": "¥79.20",
+      "label": "今日特惠",
+      "ends": "截至 11-20",
+      "image": "game-brief-assets/2026-11-13-steam-2860490.jpg",
+      "url": "https://store.steampowered.com/app/2860490/?cc=cn&l=schinese"
+    },
+    {
+      "id": "3629430",
+      "name": "渊舟蚀影 | DREADMOOR",
+      "discount": "-10%",
+      "original": "¥77.00",
+      "price": "¥69.30",
+      "label": "今日特惠",
+      "ends": "截至 11-24",
+      "image": "game-brief-assets/2026-11-13-steam-3629430.jpg",
+      "url": "https://store.steampowered.com/app/3629430/?cc=cn&l=schinese"
+    },
+    {
+      "id": "2638080",
+      "name": "勇者小队全灭了。",
+      "discount": "-10%",
+      "original": "¥68.00",
+      "price": "¥61.20",
+      "label": "今日特惠",
+      "ends": "截至 11-24",
+      "image": "game-brief-assets/2026-11-13-steam-2638080.jpg",
+      "url": "https://store.steampowered.com/app/2638080/?cc=cn&l=schinese"
+    },
+    {
+      "id": "3432860",
+      "name": "异病侦探",
+      "discount": "-10%",
+      "original": "¥65.00",
+      "price": "¥58.50",
+      "label": "今日特惠",
+      "ends": "截至 11-20",
+      "image": "game-brief-assets/2026-11-13-steam-3432860.jpg",
+      "url": "https://store.steampowered.com/app/3432860/?cc=cn&l=schinese"
+    },
+    {
+      "id": "3285880",
+      "name": "MONOMOON: 幻月迷踪",
+      "discount": "-10%",
+      "original": "¥42.00",
+      "price": "¥37.80",
+      "label": "今日特惠",
+      "ends": "截至 11-19",
+      "image": "game-brief-assets/2026-11-13-steam-3285880.jpg",
+      "url": "https://store.steampowered.com/app/3285880/?cc=cn&l=schinese"
+    },
+    {
+      "id": "3826290",
+      "name": "组长！怨念请查收！",
+      "discount": "-10%",
+      "original": "¥36.00",
+      "price": "¥32.40",
+      "label": "今日特惠",
+      "ends": "截至 11-14",
+      "image": "game-brief-assets/2026-11-13-steam-3826290.jpg",
+      "url": "https://store.steampowered.com/app/3826290/?cc=cn&l=schinese"
+    },
+    {
+      "id": "5266240",
+      "name": "Potato Please",
+      "discount": "-10%",
+      "original": "¥35.00",
+      "price": "¥31.50",
+      "label": "今日特惠",
+      "ends": "截至 11-16",
+      "image": "game-brief-assets/2026-11-13-steam-5266240.jpg",
+      "url": "https://store.steampowered.com/app/5266240/?cc=cn&l=schinese"
+    },
+    {
+      "id": "3669620",
+      "name": "戰鎚倖存者",
+      "discount": "-10%",
+      "original": "¥33.00",
+      "price": "¥29.70",
+      "label": "今日特惠",
+      "ends": "截至 11-18",
+      "image": "game-brief-assets/2026-11-13-steam-3669620.jpg",
+      "url": "https://store.steampowered.com/app/3669620/?cc=cn&l=schinese"
+    }
+  ]
+}
