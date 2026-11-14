@@ -4,6 +4,14 @@
   "publishAt": "11:00",
   "editions": [
     {
+      "date": "2026-11-14",
+      "issue": 77,
+      "publishAt": "2026-11-14T11:00:00+08:00",
+      "title": "游戏与 Minecraft 每日简报",
+      "headline": "《暗黑破坏神2》第十六赛季今日开启，30 周年活动同步上线",
+      "file": "data/2026-11-14.json"
+    },
+    {
       "date": "2026-11-13",
       "issue": 76,
       "publishAt": "2026-11-13T11:00:00+08:00",
@@ -50,14 +58,6 @@
       "title": "游戏与 Minecraft 每日简报",
       "headline": "《影之刃零》Steam 在线峰值突破 72 万",
       "file": "data/2026-10-31.json"
-    },
-    {
-      "date": "2026-10-30",
-      "issue": 70,
-      "publishAt": "2026-10-30T11:00:00+08:00",
-      "title": "游戏与 Minecraft 每日简报",
-      "headline": "《影之刃零》Steam 强势开局，在线人数居前",
-      "file": "data/2026-10-30.json"
     }
   ]
 }

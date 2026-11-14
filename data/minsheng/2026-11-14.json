@@ -1,0 +1,407 @@
+{
+  "date": "2026-11-14",
+  "issue": 78,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期六",
+  "lunarDate": "农历十月初六",
+  "cutoff": "2026-11-14 06:40（北京时间）",
+  "productionTime": "2026-11-14 06:47（北京时间）",
+  "metricsCutoff": "2026-11-13 24:00（北京时间）",
+  "topStoryIds": ["domestic-04", "international-01", "tech-08"],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "新疆阿克苏地区发生5.0级地震，暂无人员伤亡报告",
+        "summary": "11月14日0时17分，新疆阿克苏地区发生5.0级地震，震源深度20公里。当地消防救援部门已出动先遣队开展排查，暂未接到人员伤亡和财产损失报告。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 01:41",
+        "url": "https://www.news.cn/20261114/862e718c109b41949403939f5f2bb4b9/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "铁路12306上线国际机票业务",
+        "summary": "11月13日，铁路12306上线国际机票产品，支持航班动态查询、在线选座和机票电子发票申请。平台还规划国际空铁联运，未来火车票与机票可在同一订单办理。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 21:57",
+        "url": "https://www.cnr.cn/newscenter/native/gd/kx/20261113/t20261113_527871807.shtml"
+      },
+      {
+        "id": "domestic-03",
+        "title": "汽车改装管理办法公开征求意见",
+        "summary": "工信部11月13日就《汽车改装管理办法（征求意见稿）》公开征求意见，拟对汽车改装分类管理并建立一车一档。二类改装须获汽车企业授权，由企业承担质量安全主体责任。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 20:39",
+        "url": "https://finance.people.com.cn/n1/2026/1113/c1004-40833611.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "秋招已提供岗位551.5万个",
+        "summary": "人社部11月13日介绍，2026年全国城市联合招聘高校毕业生秋季专场已办招聘会1万余场，26.4万家用人单位提供岗位551.5万个，求职毕业生达529.1万人次。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 16:27",
+        "url": "https://society.people.com.cn/n1/2026/1113/c1008-40833547.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "国家卫健委提示重点人群优先接种流感疫苗",
+        "summary": "国家卫健委11月13日发布会提示，接种疫苗是预防流感最经济有效的措施。6月龄及以上无禁忌人群应积极接种，婴幼儿、老年人和慢性病患者等重点人群优先。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 16:18",
+        "url": "https://www.chinanews.com.cn/jk/2026/11-13/10731526.shtml"
+      },
+      {
+        "id": "domestic-06",
+        "title": "适老化设施配置国家标准发布",
+        "summary": "市场监管总局发布《社区嵌入式服务设施 适老化设施配置规范》国家标准。照料设施不得设在地下室，二层及以上须配电梯，照料设施建筑面积不小于350平方米。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 15:44",
+        "url": "https://www.cnr.cn/newscenter/native/gd/20261113/t20261113_527871096.shtml"
+      },
+      {
+        "id": "domestic-07",
+        "title": "三部门拓展四项企业事项一次办",
+        "summary": "市场监管总局、住建部、国家医保局联合拓展企业信息变更等四项一件事办理，实行一次申请、一窗受理、一网通办、一次办结，减少企业跑动和重复提交材料。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 12:21",
+        "url": "https://www.cnr.cn/newscenter/native/gd/20261113/t20261113_527870978.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "title": "10月多项先行指标持续改善",
+        "summary": "国家发改委国家信息中心数据显示，10月挖掘机开工率同比提高0.7个百分点，消费支付金额同比增长2.6%，新基建中标金额同比增长45.4%，多项先行指标改善。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 09:53",
+        "url": "https://www.cnr.cn/newscenter/native/gd/20261113/t20261113_527870862.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "title": "北京普惠健康保新增阿尔茨海默病早筛",
+        "summary": "2027年度北京普惠健康保新增癌症早筛、阿尔茨海默病早筛和AI健康管家三项服务，保费195元每人每年，累计保额350万元。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 09:06",
+        "url": "https://www.cnr.cn/2014jkpd/sygd/20261113/t20261113_527870778.shtml"
+      },
+      {
+        "id": "domestic-10",
+        "title": "供暖季能源供应总体能够满足需求",
+        "summary": "国家发改委介绍，今冬供暖季能源供应总体能够满足需求。全国统调电厂存煤超2.1亿吨可用36天，供暖季天然气资源已落实超2000亿立方米。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 02:20",
+        "url": "https://news.gmw.cn/2026-11/13/content_39099186.htm"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "欧盟机构及五国将参与乌克兰和平谈判",
+        "summary": "欧洲理事会主席科斯塔13日在都柏林表示，欧盟领导人同意由欧盟机构及英法德意波五国组成欧洲代表团参与乌克兰和平谈判，强调只有乌克兰有权决定领土和主权事项。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 06:01",
+        "url": "https://world.people.com.cn/n1/2026/1114/c1002-40833676.html"
+      },
+      {
+        "id": "international-02",
+        "title": "泽连斯基称乌军星盾再遭限速",
+        "summary": "泽连斯基称乌军星盾系统再次被限速，速度降至每小时161公里以下，拦截俄罗斯喷气式无人机难度大增，已有袭击突破防御。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 00:31",
+        "url": "https://www.cnr.cn/newscenter/sq/20261114/t20261114_527871965.shtml"
+      },
+      {
+        "id": "international-03",
+        "title": "日本考虑五年防卫预算增至60万亿日元",
+        "summary": "日本政府考虑在2027至2031财年将防卫预算增至60万亿日元，约合2.5万亿元人民币，高于2023至2027财年的43万亿日元。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 00:30",
+        "url": "https://www.cnr.cn/newscenter/sq/20261114/t20261114_527871964.shtml"
+      },
+      {
+        "id": "international-04",
+        "title": "美国10月生产者价格指数同比涨6.5%",
+        "summary": "美国劳工统计局数据显示，10月生产者价格指数环比上涨0.3%，同比上涨6.5%，为2022年11月以来最大年度涨幅。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 23:07",
+        "url": "https://www.cnr.cn/newscenter/sq/20261113/t20261113_527871882.shtml"
+      },
+      {
+        "id": "international-05",
+        "title": "俄方称尚未同意欧洲参与乌克兰谈判",
+        "summary": "俄罗斯总统新闻秘书佩斯科夫13日表示，俄方尚未同意让欧洲参与乌克兰问题谈判。此前泽连斯基称欧洲将派代表直接参与下一轮乌美俄三方会谈。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 21:58",
+        "url": "https://www.cnr.cn/newscenter/sq/20261113/t20261113_527871808.shtml"
+      },
+      {
+        "id": "international-06",
+        "title": "中国海警三都舰结束对马来西亚访问",
+        "summary": "中国海警三都舰结束对马来西亚槟城的访问。访问期间，中马双方开展海上搜救桌面推演、编队训练和联合通信演练。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 19:20",
+        "url": "https://www.news.cn/20261113/938bb8e93cf54c21988bd30543e0b002/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "以色列禁止法国政要入境",
+        "summary": "以色列禁止法国极左翼总统候选人让-吕克·梅朗雄入境。此前法国拒绝以色列定居点机构负责人入境，双方摩擦升级。",
+        "source": "国际在线",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13",
+        "url": "https://news.cri.cn/20261113/88213069-ddbb-b38e-5c76-59d8c636da3b.html"
+      },
+      {
+        "id": "international-08",
+        "title": "特朗普要求万斯转向国内事务",
+        "summary": "特朗普要求万斯转向国内事务，并称美国不需要与伊朗达成协议。伊朗专家会议则呼吁审议退出《不扩散核武器条约》，重新审视国家防御战略。",
+        "source": "国际在线",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13",
+        "url": "https://news.cri.cn/20261113/3b1056f7-3da4-9421-1369-b6bcc1e867cd.html"
+      },
+      {
+        "id": "international-09",
+        "title": "民主党拟调查特朗普政府多名高层",
+        "summary": "美国国会民主党高层表示，明年1月正式掌控国会后拟调查鲁比奥、卢特尼克、斯蒂芬·米勒和汤姆·霍曼等特朗普政府高层。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 10:11",
+        "url": "https://www.cnr.cn/newscenter/sq/20261113/t20261113_527870888.shtml"
+      },
+      {
+        "id": "international-10",
+        "title": "微软多项服务大面积宕机",
+        "summary": "微软Outlook、Teams等服务大面积宕机，Outlook问题报告一度达13.8万起，故障还波及OpenAI和Anthropic所用连接组件。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 09:53",
+        "url": "https://www.cnr.cn/newscenter/sq/20261113/t20261113_527870863.shtml"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "香港理大公布航空航天科研布局",
+        "summary": "香港理工大学公布航空航天科研布局，涵盖卫星与载荷、太空与极端环境健康、先进推进技术等方向，推动相关学科和产业协同发展。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 22:05",
+        "url": "https://www.news.cn/20261113/05bbaa5e84bb4cacab488d16a49546db/c.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "国内首款20公斤级氢能动力无人直升机研制成功",
+        "summary": "大连理工大学毛庆副教授团队研制成功国内首款20公斤级氢能动力无人直升机，氢锂混动机型续航1.5小时，氢燃料电池机型续航3小时。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 19:29",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/13/content_612980.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "武昌造船首艘OCV海工作业船下水",
+        "summary": "中船集团武昌造船建造的首艘OCV海工作业船下水，可用于海洋工程安装、维护和水下作业，提升我国高端海工装备建造能力。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 14:41",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/13/content_612742.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "京津冀国际科创中心研发投入强度4.48%",
+        "summary": "北京（京津冀）国际科技创新中心建设取得进展，研发投入强度达4.48%，基础研究占比12.85%，累计资助200余项基础研究合作项目。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 13:02",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/13/content_612715.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "颠覆性技术产业化指数报告发布",
+        "summary": "科技日报社与中国工程科技创新战略研究院发布《颠覆性技术产业化指数报告（2026）》，聚焦量子计算、脑机接口和可控核聚变等方向。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 11:10",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/13/content_612670.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "5G+工业互联网融合应用规模成势",
+        "summary": "武汉、青岛、广州、成都等10个城市开展5G工厂试点，名录项目共245个。港区应用每年降本超3500万元，融合应用规模逐步成势。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 10:02",
+        "url": "https://www.cnr.cn/tech/gstj/20261113/t20261113_527870878.shtml"
+      },
+      {
+        "id": "tech-07",
+        "title": "全球首发176吨纯电刚性矿卡下线",
+        "summary": "驰田汽车股份有限公司研制的176吨纯电刚性矿卡下线，配备2400度快充电池，20分钟补能，综合节能60%以上。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 09:49",
+        "url": "https://www.cnr.cn/tech/gstj/20261113/t20261113_527870849.shtml"
+      },
+      {
+        "id": "tech-08",
+        "title": "渤海超深层火山岩高产油气井",
+        "summary": "中国海油在渤海钻获超深层火山岩高产油气井，完钻井深5770米，日产天然气约80万立方米，展现深部勘探潜力。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 09:19",
+        "url": "https://www.news.cn/tech/20261113/088255b3789340ed9075902c206ecf92/c.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "中国医疗器械国际标准提案立项创新高",
+        "summary": "市场监管总局数据显示，我国7项医疗器械国际标准提案获ISO批准立项，已牵头制定25项国际标准，其中11项发布、14项推进。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 09:05",
+        "url": "https://www.cnr.cn/2014jkpd/jkgdxw/20261113/t20261113_527870776.shtml"
+      },
+      {
+        "id": "tech-10",
+        "title": "重庆印发词元驱动数据产业行动计划",
+        "summary": "重庆印发词元驱动的数据产业行动计划，提出2026至2028年推进数据要素与人工智能融合，到2028年可调度智算规模超10万P。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 08:53",
+        "url": "https://www.news.cn/tech/20261113/d83bac5ad3fe4bff996ff02070685420/c.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "国际中文教育垂直大模型发布",
+        "summary": "2026世界中文大会发布国际中文教育垂直大模型语飞，具备学习评测、个性化辅导、教学素材生成和标准化接口等能力。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 17:18",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/13/content_612936.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "第七届中国人工智能大赛成果发布",
+        "summary": "第七届中国人工智能大赛成果发布会在厦门举行，设大模型安全攻防、幻觉挑战等10个赛项，138支团队获奖，其中A级65支、B级73支。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 15:55",
+        "url": "https://tech.gmw.cn/2026-11/13/content_39100218.htm"
+      },
+      {
+        "id": "ai-03",
+        "title": "AI应用分层带动半导体需求分化",
+        "summary": "在第二十三届中国国际半导体博览会上，业界认为AI应用分层正带动半导体需求分化，服务器已占全球DRAM需求半数以上。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 09:48",
+        "url": "https://www.cnr.cn/jingji/gundong/20261113/t20261113_527870840.shtml"
+      },
+      {
+        "id": "ai-04",
+        "title": "物理AI走向产业拐点的讨论",
+        "summary": "业界讨论物理AI走向产业拐点，酒店送洗、便利店零售、汽车和消费电子产线成为试验场景，关键问题是机器人能否稳定工作并持续回报。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 09:21",
+        "url": "https://www.news.cn/tech/20261113/f283e5cd4e114eb5bba1eedb4d90200b/c.html"
+      },
+      {
+        "id": "ai-05",
+        "title": "AI黑灯实验室进入药物研发实践",
+        "summary": "南京灵枢铸药智能科技有限公司将AI黑灯实验室用于药物研发，ORBIT自动化实验平台可并行推进6至7条新药研发管线。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 07:39",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/13/content_612509.html"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "id": "metric-gold",
+      "kind": "gold",
+      "icon": "◎",
+      "name": "国内金价",
+      "value": "837.55元/克",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/graph/Dailyhq?instid=Au99.99",
+      "sourceOrigin": "china",
+      "note": "2026年11月13日收盘价 Au99.99"
+    },
+    {
+      "id": "metric-oil-cn",
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "国内油价",
+      "value": "92号汽油8.33元/升",
+      "source": "上海市发展和改革委员会",
+      "sourceUrl": "https://fgw.sh.gov.cn/fgw_jggl/20261112/0f5137f27eff456e9e9c2db749801342.html",
+      "sourceOrigin": "china",
+      "note": "2026年11月12日24时起执行，上海最高零售价"
+    },
+    {
+      "id": "metric-oil-intl",
+      "kind": "international_oil",
+      "icon": "🛢",
+      "name": "国际油价",
+      "value": "布伦特95.84美元/桶",
+      "source": "新华网",
+      "sourceUrl": "https://www2.xinhuanet.com/fortune/20261114/c8dab338524040999bbb8084cdd74047/c.html",
+      "sourceOrigin": "china",
+      "note": "2026年11月13日收盘价，WTI报88.56美元/桶"
+    },
+    {
+      "id": "metric-usd",
+      "kind": "usd_cny",
+      "icon": "💱",
+      "name": "美元兑人民币",
+      "value": "1美元兑人民币6.7152",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/ags/ms/cm-u-bk-ccpr/CcprHisNew?lang=CN&startDate=2026-11-13&endDate=2026-11-13&currency=USD/CNY",
+      "sourceOrigin": "china",
+      "note": "2026年11月13日人民币汇率中间价"
+    },
+    {
+      "id": "metric-eur",
+      "kind": "eur_cny",
+      "icon": "💶",
+      "name": "欧元兑人民币",
+      "value": "1欧元兑人民币7.4023",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/ags/ms/cm-u-bk-ccpr/CcprHisNew?lang=CN&startDate=2026-11-13&endDate=2026-11-13&currency=EUR/CNY",
+      "sourceOrigin": "china",
+      "note": "2026年11月13日人民币汇率中间价"
+    },
+    {
+      "id": "metric-jpy",
+      "kind": "jpy_cny",
+      "icon": "💴",
+      "name": "日元兑人民币",
+      "value": "100日元兑人民币4.1952",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/ags/ms/cm-u-bk-ccpr/CcprHisNew?lang=CN&startDate=2026-11-13&endDate=2026-11-13&currency=100JPY/CNY",
+      "sourceOrigin": "china",
+      "note": "2026年11月13日人民币汇率中间价"
+    }
+  ],
+  "observation": "今日民生聚焦就业与公共服务：秋招已提供岗位551.5万个，汽车改装管理办法公开征求意见，适老化设施国家标准发布，12306上线国际机票。供暖季能源保供总体有保障，10月先行指标继续改善。国际上，欧盟与五国将参与乌克兰和平谈判，日本拟大幅增加防卫预算。科技端，氢能无人直升机、渤海深层油气和香港航空航天布局推进，AI应用分层带动半导体需求分化。",
+  "sources": ["新华网", "央广网", "人民网", "中国新闻网", "光明网", "国际在线", "中国科技网"],
+  "metricSources": ["上海黄金交易所", "上海市发展和改革委员会", "新华网", "中国外汇交易中心"]
+}
