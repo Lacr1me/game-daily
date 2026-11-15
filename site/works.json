@@ -69,6 +69,18 @@
         {
           "h": "0.2.12 位图作品库预览修复",
           "p": "修复位图主题下首页作品库封面预览空白及标题底色显示异常。保留已有启动自动检查更新、主题提醒弹窗、详情展开、精确跳过和立即更新。"
+        },
+        {
+          "h": "0.2.13 一步下载与作品管理",
+          "p": "附加字幕、音频或封面失败时，保留已成功保存的视频或图集并提示缺失内容。具体视频链接可直接入队，集合仍可预览。作品库增加打开目录、排序、视频时长与空格预览；任务支持搜索、筛选和批量暂停、继续。"
+        },
+        {
+          "h": "0.2.13 Windows 操作与批量下载",
+          "p": "支持粘贴链接、拖入分享文本和将成品拖到其他应用。任务栏显示下载进度，活动下载可留在托盘继续。批量预览支持统一画质、Shift 连选和常驻操作按钮，完善右键菜单及双击打开。"
+        },
+        {
+          "h": "0.2.13 界面修复与升级",
+          "p": "修复卡片空白误跳转、设置滚动条及浮窗按钮遮挡、浏览器标签标题与布局，完善 12 种主题的控件和选中状态，清理冗余说明。可在原目录覆盖升级，保留设置、下载记录和下载文件，旧版本继续保留在发布页。"
         }
       ],
       "tags": [
@@ -77,24 +89,24 @@
         "资源嗅探",
         "批量下载"
       ],
-      "version": "0.2.12",
-      "updatedAt": "2026-10-24",
+      "version": "0.2.13",
+      "updatedAt": "2026-11-15",
       "isNew": true,
       "links": [
         {
           "kind": "download",
-          "label": "简单下载-0.2.12.exe",
-          "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.12-20261024T002929Z-3ecf1ac2/SimpleDownload-0.2.12-Windows-Setup.exe"
+          "label": "简单下载-0.2.13.exe",
+          "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.13-20261115T035659Z-ee1f6170/SimpleDownload-0.2.13-Windows-Setup.exe"
         },
         {
           "kind": "download",
-          "label": "简单下载-0.2.12.zip",
-          "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.12-20261024T002929Z-3ecf1ac2/SimpleDownload-0.2.12.zip"
+          "label": "简单下载-0.2.13.zip",
+          "href": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.13-20261115T035659Z-ee1f6170/SimpleDownload-0.2.13.zip"
         },
         {
           "kind": "visit",
           "label": "发布页与校验值",
-          "href": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-windows-v0.2.12-20261024T002929Z-3ecf1ac2"
+          "href": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-windows-v0.2.13-20261115T035659Z-ee1f6170"
         },
         {
           "kind": "visit",
@@ -112,27 +124,27 @@
       },
       "source": null,
       "releaseAssets": {
-        "releaseId": "20261024T002929Z-3ecf1ac2",
+        "releaseId": "20261115T035659Z-ee1f6170",
         "installer": {
-          "fileName": "SimpleDownload-0.2.12-Windows-Setup.exe",
-          "displayName": "简单下载-0.2.12.exe",
-          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.12-20261024T002929Z-3ecf1ac2/SimpleDownload-0.2.12-Windows-Setup.exe",
-          "size": 268771718,
-          "sha256": "1db442405e6755afd380acc62eb95c8ba767fee2cdd1e4bca14a58113acbd725"
+          "fileName": "SimpleDownload-0.2.13-Windows-Setup.exe",
+          "displayName": "简单下载-0.2.13.exe",
+          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.13-20261115T035659Z-ee1f6170/SimpleDownload-0.2.13-Windows-Setup.exe",
+          "size": 268815149,
+          "sha256": "784ac7381553a8f2c5c7fbd7d49cd15d0da83b5c201cd9626e96751741cf9ad8"
         },
         "legacyInstaller": {
-          "fileName": "SimpleDownload-0.2.12-Windows-Setup.exe",
-          "displayName": "简单下载-0.2.12.exe",
-          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.12-20261024T002929Z-3ecf1ac2/SimpleDownload-0.2.12-Windows-Setup.exe",
-          "size": 268771718,
-          "sha256": "1db442405e6755afd380acc62eb95c8ba767fee2cdd1e4bca14a58113acbd725"
+          "fileName": "SimpleDownload-0.2.13-Windows-Setup.exe",
+          "displayName": "简单下载-0.2.13.exe",
+          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.13-20261115T035659Z-ee1f6170/SimpleDownload-0.2.13-Windows-Setup.exe",
+          "size": 268815149,
+          "sha256": "784ac7381553a8f2c5c7fbd7d49cd15d0da83b5c201cd9626e96751741cf9ad8"
         },
         "archive": {
-          "fileName": "SimpleDownload-0.2.12.zip",
-          "displayName": "简单下载-0.2.12.zip",
-          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.12-20261024T002929Z-3ecf1ac2/SimpleDownload-0.2.12.zip",
-          "size": 262493464,
-          "sha256": "45f299d9ad8e47d54aa4d29ccacededef5bd870baa1f1f33dce59e2cef07f97b"
+          "fileName": "SimpleDownload-0.2.13.zip",
+          "displayName": "简单下载-0.2.13.zip",
+          "url": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.13-20261115T035659Z-ee1f6170/SimpleDownload-0.2.13.zip",
+          "size": 262534583,
+          "sha256": "da1771f7687c3801adafe9ddc9e8ccf0970affadf040cfc02e3b464f920bfec6"
         }
       }
     },

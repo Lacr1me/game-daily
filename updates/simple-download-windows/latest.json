@@ -4,14 +4,14 @@
   "channel": "stable",
   "platform": "windows",
   "architecture": "x64",
-  "version": "0.2.12",
-  "releaseId": "20261024T002929Z-3ecf1ac2",
-  "releaseCreatedAtUtc": "2026-10-24T00:29:29.568Z",
-  "publishedAtUtc": "2026-10-24T00:43:58.000Z",
-  "installerUrl": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.12-20261024T002929Z-3ecf1ac2/SimpleDownload-0.2.12-Windows-Setup.exe",
-  "releasePageUrl": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-windows-v0.2.12-20261024T002929Z-3ecf1ac2",
-  "notes": "修复位图主题下首页作品库封面预览空白及标题底色显示异常。保留启动自动检查更新、主题提醒弹窗、详情展开、精确跳过与立即更新，以及 0.2.12 的公开收藏夹、YouTube/X 视频下载、标准点播 DASH、浏览器登录保留、原生呈现和当前页解析等修复。更早版本可从设置手动检查更新。部分视频仍需登录或站点验证，X 多视频标题可能重复，实际文件分别保存。",
+  "version": "0.2.13",
+  "releaseId": "20261115T035659Z-ee1f6170",
+  "releaseCreatedAtUtc": "2026-11-15T03:56:59.636Z",
+  "publishedAtUtc": "2026-11-15T04:21:09.000Z",
+  "installerUrl": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-windows-v0.2.13-20261115T035659Z-ee1f6170/SimpleDownload-0.2.13-Windows-Setup.exe",
+  "releasePageUrl": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-windows-v0.2.13-20261115T035659Z-ee1f6170",
+  "notes": "一步下载更顺畅：附加字幕、音频或封面失败不再阻断成功保存的视频或图集，并提示缺失内容。修复首页空白误跳转、设置滚动条和浮窗按钮遮挡，作品库增加打开目录、排序和空格预览。支持任务筛选与批量控制、粘贴与拖拽、任务栏进度及托盘继续下载，完善批量预览、浏览器和 12 种主题。原目录覆盖升级保留设置、下载记录与下载文件。",
   "fileName": "简单下载.exe",
-  "size": 268771718,
-  "sha256": "1db442405e6755afd380acc62eb95c8ba767fee2cdd1e4bca14a58113acbd725"
+  "size": 268815149,
+  "sha256": "784ac7381553a8f2c5c7fbd7d49cd15d0da83b5c201cd9626e96751741cf9ad8"
 }
