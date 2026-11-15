@@ -1,0 +1,423 @@
+{
+  "date": "2026-11-15",
+  "issue": 79,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期日",
+  "lunarDate": "农历十月初七",
+  "cutoff": "2026-11-15 05:38（北京时间）",
+  "productionTime": "2026-11-15 07:37（北京时间）",
+  "metricsCutoff": "2026-11-13 24:00（北京时间）",
+  "topStoryIds": [
+    "domestic-01",
+    "international-01",
+    "tech-01"
+  ],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "51个一类新药进入新版国家医保药品目录",
+        "summary": "2026年国家医保药品目录新增107种药品，其中51个一类新药，再创历史新高；商保创新药目录新增12种、共28种。目录药品总数达3331个，2027年1月1日起执行。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 10:44",
+        "url": "https://www.chinanews.com.cn/gn/2026/11-14/10731912.shtml"
+      },
+      {
+        "id": "domestic-02",
+        "title": "北京市委书记尹力调研检查供暖保障工作",
+        "summary": "11月13日，北京市委书记尹力围绕保障和改善民生调研供暖保障，察看老楼加装电梯、社区便民服务综合体，并检查京西燃气热电供热准备情况。",
+        "source": "北京日报",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 09:14",
+        "url": "https://www.beijing.gov.cn/gongkai/ldhd/202611/t20261114_4945844.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "多地优化停车收费：短时免费、夜间降价",
+        "summary": "上海11月18日起道路停车单次15分钟内限次免费，工作日每日两次；广州政府定价停车场15分钟内免费；济南新规12月1日起施行，按停车场类型设置免费时长。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 09:49",
+        "url": "https://www.cnr.cn/newscenter/native/gd/20261114/t20261114_527872350.shtml"
+      },
+      {
+        "id": "domestic-04",
+        "title": "前10月全国铁路发送旅客41.3亿人次创新高",
+        "summary": "1至10月全国铁路累计发送旅客41.3亿人次，同比增长4.7%，创历史同期新高。日均安排开行旅客列车11670列，10月1日发送旅客2520.4万人次。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 08:53",
+        "url": "https://www.chinanews.com.cn/cj/2026/11-14/10731881.shtml"
+      },
+      {
+        "id": "domestic-05",
+        "title": "北京以旧换新补贴带动销售额超498亿元",
+        "summary": "截至10月底，北京以旧换新补贴政策带动家电、数码智能产品和汽车等销售额超498亿元，家电数码购新补贴惠及520余万人次、带动约197亿元。",
+        "source": "北京日报",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 09:38",
+        "url": "https://www.beijing.gov.cn/fuwu/lqfw/gggs/202611/t20261114_4945848.html"
+      },
+      {
+        "id": "domestic-06",
+        "title": "我国新增3处世界地质遗产地",
+        "summary": "国际地质科学联合会公布第三批地质遗产地，重庆云阳中侏罗世恐龙化石群、四川鲜水河断裂、安徽大别山三叠纪超高压变质带入选，我国共有13处。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 16:26",
+        "url": "https://www.news.cn/politics/20261114/e8a34f810f8a438bbdd78e2910878988/c.html"
+      },
+      {
+        "id": "domestic-07",
+        "title": "山西公安公布6起新型黑恶违法犯罪典型案例",
+        "summary": "山西省公安厅14日集中公布6起新型黑恶违法犯罪典型案例，涉及恶意索赔、劳务碰瓷、色情敲诈等类型，相关团伙已被打掉，案件正在侦办。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 16:48",
+        "url": "https://www.cnr.cn/newscenter/native/gd/20261114/t20261114_527872732.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "title": "雪假来了，多地已官宣放假安排",
+        "summary": "河北张家口今年起试行春假、雪假，雪假3天；吉林每年12月1日至20日安排3天；内蒙古呼伦贝尔12月5日至9日放假，可与周末连休。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 14:54",
+        "url": "https://www.cnr.cn/newscenter/native/gd/20261114/t20261114_527872535.shtml"
+      },
+      {
+        "id": "domestic-09",
+        "title": "5部门引导外卖平台和商户推广小份餐品",
+        "summary": "国家发展改革委等5部门印发《实施全面节约战略行动方案》，要求推广小份餐品、主动提示打包，并防止外卖“满减凑单”诱导过量点餐。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-12 10:19",
+        "url": "https://www.news.cn/food/20261112/93042261f81c439cacbe3b5be38f7e68/c.html"
+      },
+      {
+        "id": "domestic-10",
+        "title": "北京40处水利工程滨水空间陆续开放",
+        "summary": "北京今年有40处水利工程滨水空间陆续焕新开放，包括长河闸、尹各庄分洪枢纽等，目前已开放比例超九成，其余预计年底前全部开放。",
+        "source": "北京日报",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 05:41",
+        "url": "https://www.beijing.gov.cn/fuwu/bmfw/sy/jrts/202611/t20261114_4945849.html"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "美联邦航空局局长：全美航空运输预计15日晚恢复",
+        "summary": "美国联邦航空局局长贝德福德14日就全国航班停飞道歉，称全美航空运输预计15日晚恢复正常。此次停飞持续近五小时，已取消近1万架次航班。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-15 02:55",
+        "url": "https://www.news.cn/world/20261115/29a81e530e0c46ef8c6c7815af0d7d13/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "伊朗通报4艘油轮触雷起火",
+        "summary": "伊朗伊斯兰革命卫队14日通报，数小时内有至少4艘油轮在霍尔木兹海峡触雷起火。联合国13日通报，该海域已发生134起商船袭击、25名海员死亡。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 17:13",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-14/10732056.shtml"
+      },
+      {
+        "id": "international-03",
+        "title": "泽连斯基称美方曾建议乌割地换取加入北约",
+        "summary": "乌克兰总统泽连斯基14日说，美方曾询问乌克兰是否愿意放弃顿巴斯地区以换取北约成员国资格。他重申乌克兰不会撤退，也不会放弃领土。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 19:35",
+        "url": "https://www.news.cn/world/20261114/cd4771daabdc4e9dbdffaa414a22ee12/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "爱尔兰在多国领导人晚宴地点附近查获爆炸装置",
+        "summary": "爱尔兰警方13日在都柏林梅里恩广场一栋办公楼查获简易爆炸装置，军方拆弹专家安全处置，地点距多国领导人晚宴场所较近，调查仍在进行。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 12:17",
+        "url": "https://www.news.cn/world/20261114/76f27bbd6d514e569024a061afb0225e/c.html"
+      },
+      {
+        "id": "international-05",
+        "title": "哥伦比亚西南部一客车翻车致8人死亡",
+        "summary": "哥伦比亚乌伊拉省14日凌晨发生长途客车侧翻事故，造成至少8人死亡、20人受伤，伤者已送医。当地警方和消防部门正在调查事故原因。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-15 00:50",
+        "url": "https://www.news.cn/world/20261115/5bdc6b2dcfd646e292e37881e544b6eb/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "COP31进程近半 多方敦促加快气候行动",
+        "summary": "《联合国气候变化框架公约》第三十一次缔约方大会在土耳其安塔利亚进程近半，古特雷斯敦促各方遵循科学，发达国家须兑现气候融资承诺。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 14:43",
+        "url": "https://www.news.cn/20261114/7b981183cc1341c98bd40fcd9b0a60eb/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "欧盟今年截获的非法入境人数下降近三成",
+        "summary": "欧洲边境管理局13日数据显示，今年前10个月欧盟边境截获非法入境约11万人次，同比下降29%，中地中海路线降幅最大，达55%。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 21:25",
+        "url": "https://www.news.cn/world/20261114/b745c1c15beb42ed9fe49147044c1867/c.html"
+      },
+      {
+        "id": "international-08",
+        "title": "南非农业部长表示期待扩大对华农业合作",
+        "summary": "南非农业部长奥坎普表示，市场多元化对南非农业韧性至关重要，南非正寻求扩大对中国等市场的农产品出口，并称中国市场对南非非常重要。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 20:41",
+        "url": "https://www.news.cn/world/20261114/4fd904d20b094b9ea87158cf90c26e1b/c.html"
+      },
+      {
+        "id": "international-09",
+        "title": "巴西要求以色列解释一青少年羁押期间死亡",
+        "summary": "巴西外交部13日要求以色列解释一名17岁双国籍青少年2025年3月在以羁押期间死亡的原因。其遗体被扣留近20个月后，12日在约旦河西岸下葬。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 13:30",
+        "url": "https://www.news.cn/20261114/0a5e21b02d45478d959a99391c1a40c8/c.html"
+      },
+      {
+        "id": "international-10",
+        "title": "韩国连续第三年单独举办佐渡金山悼念仪式",
+        "summary": "韩国政府13日在日本新潟县佐渡市单独举办佐渡金山劳工受害者悼念仪式，为连续第三年。二战期间约1500名朝鲜半岛劳工被强征在该金矿劳役。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 10:36",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-14/10731894.shtml"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "我国10吨级电动商用飞机完成首次有人驾驶智能飞行",
+        "summary": "11月14日，我国自主研制的10吨级电动商用飞机CE-25A在山东滨州完成首次有人驾驶智能飞行，空中飞行16分38秒、60.4公里，可载19人、航程400公里。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 15:17",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/14/content_613218.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "全球最大业载无人货运飞机W5000完成验证试飞",
+        "summary": "11月14日，白鲸航线研发的W5000无人货运飞机在内蒙古鄂托克前旗完成技术验证试飞，有效载荷5吨、最远航程2600公里，意向订单已达835架。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 22:29",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/14/content_613282.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "深层页岩油钻井周期刷新国内纪录",
+        "summary": "胜利油田丰页B13HF井以11.68天钻井周期，刷新国内6000米井深陆相页岩油井最短纪录。民丰8号台首批12口井平均周期13.83天，日进尺突破2000米。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 08:50",
+        "url": "https://www.cnr.cn/newscenter/native/gd/20261114/t20261114_527872257.shtml"
+      },
+      {
+        "id": "tech-04",
+        "title": "“十五五”新型储能实施方案发布",
+        "summary": "国家发展改革委、国家能源局13日发布《“十五五”新型储能实施方案》，提出到2030年全国新型储能装机规模达3亿千瓦，平均储能时长3小时左右。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 03:05",
+        "url": "https://news.gmw.cn/2026-11/14/content_39100795.htm"
+      },
+      {
+        "id": "tech-05",
+        "title": "北京探索用再生水为城市供暖",
+        "summary": "北京在供热季用再生水水源热泵为城市供暖，东升科技园项目年减排二氧化碳约2.5万吨当量。目前已有30余家再生水厂使用该技术制冷供热。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 09:12",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/14/content_613129.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "瓦日铁路创年运量破亿吨最快纪录",
+        "summary": "截至11月13日，我国西煤东运大通道瓦日铁路2026年货运量达10026.299万吨，较去年提前35天破亿吨，刷新线路年运量破亿吨用时最短纪录。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 18:16",
+        "url": "https://www.news.cn/fortune/20261114/4f3f2644a0b646eb8c7fa24377c19000/c.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "人类基底神经节三维单细胞图谱发布",
+        "summary": "美国索尔克研究所与全球合作团队12日发表28篇论文，公布人类基底神经节三维单细胞图谱，整合后共261331个细胞，为脑疾病研究提供参考体系。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-13 01:45",
+        "url": "https://www.stdaily.com/web/gjxw/2026-11/13/content_612357.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "我科学家发现青藏高原西北部地下冰不减反增",
+        "summary": "北京大学李东锋团队重建1979年至2018年青藏高原0至3.2米深度地下冰变化过程，发现气候暖湿化背景下，西北部内陆西风控制区地下冰不减反增。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 03:05",
+        "url": "https://news.gmw.cn/2026-11/14/content_39100723.htm"
+      },
+      {
+        "id": "tech-09",
+        "title": "流程工业智能工厂管理国家标准发布",
+        "summary": "市场监管总局批准发布《智能制造 流程工业智能工厂业务管理规范》国家标准，覆盖研发设计、生产制造、运营支撑等五大模块，2027年5月1日起实施。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 15:21",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/14/content_613202.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "国内铁路首次应用格构墩结构完成桥墩施工",
+        "summary": "文山至蒙自铁路南溪河特大桥9#高墩完工，这是国内铁路工程首次应用格构墩结构进行桥墩施工，标志山区高墩桥梁建设取得技术突破。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 16:20",
+        "url": "https://www.news.cn/20261114/89b8be1671764a2b8327a98c2a86943d/c.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "脑机接口体验热 百亿级市场可期",
+        "summary": "深圳华强北全球脑机接口应用示范中心日均接待600至800人次。中国信通院测算，2030年中国脑机接口产业规模有望达100亿至140亿元。",
+        "source": "央广网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 15:47",
+        "url": "https://www.cnr.cn/jingji/ycbd/20261114/t20261114_527872562.shtml"
+      },
+      {
+        "id": "ai-02",
+        "title": "神经元编码新发现打开脑机接口研发新路径",
+        "summary": "中国科学院自动化研究所团队通过灵长类动物实验发现，大脑仅用少量神经元就能解码手部三维运动轨迹，为新一代脑机接口提供依据。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 08:49",
+        "url": "https://politics.gmw.cn/2026-11/14/content_39100904.htm"
+      },
+      {
+        "id": "ai-03",
+        "title": "人形机器人在天津开展场景化适配测试",
+        "summary": "11月14日，记者探访天津具身智能创新中心，多款人形机器人正围绕居家照料、医护辅助、消防作业等方向开展场景化适配测试，冲刺上岗。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 22:26",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/14/content_613311.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "警惕AI陪伴成为情绪刚需",
+        "summary": "《人工智能拟人化互动服务管理暂行办法》2026年7月施行。评论指出，AI情感陪伴产业规模快速扩大，需警惕其成为情绪刚需带来的风险。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 02:45",
+        "url": "https://news.gmw.cn/2026-11/14/content_39100725.htm"
+      },
+      {
+        "id": "ai-05",
+        "title": "别让AI成为求职者的“审判官”",
+        "summary": "评论指出，AI可辅助筛选简历，但不该简单筛掉求职者机会。算法在招聘中的角色错位，可能消解年轻人对公平与真诚的职业预期。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-14 09:13",
+        "url": "https://www.news.cn/fortune/20261114/9585d5a2430440e182757a7ed6095855/c.html"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "id": "metric-gold",
+      "kind": "gold",
+      "icon": "◎",
+      "name": "国内金价",
+      "value": "837.55元/克",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/graph/Dailyhq?instid=Au99.99",
+      "sourceOrigin": "china",
+      "note": "2026年11月13日收盘价 Au99.99（最近交易日）"
+    },
+    {
+      "id": "metric-oil-cn",
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "国内油价",
+      "value": "92号汽油8.33元/升",
+      "source": "上海市发展和改革委员会",
+      "sourceUrl": "https://fgw.sh.gov.cn/fgw_jggl/20261112/0f5137f27eff456e9e9c2db749801342.html",
+      "sourceOrigin": "china",
+      "note": "2026年11月12日24时起执行，上海最高零售价"
+    },
+    {
+      "id": "metric-oil-intl",
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际油价",
+      "value": "布伦特95.84美元/桶",
+      "source": "新华网",
+      "sourceUrl": "https://www2.xinhuanet.com/fortune/20261114/c8dab338524040999bbb8084cdd74047/c.html",
+      "sourceOrigin": "china",
+      "note": "2026年11月13日收盘价，WTI报88.56美元/桶（最近交易日）"
+    },
+    {
+      "id": "metric-usd",
+      "kind": "usd_cny",
+      "icon": "💱",
+      "name": "美元兑人民币",
+      "value": "1美元兑人民币6.7152",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/ags/ms/cm-u-bk-ccpr/CcprHisNew?lang=CN&startDate=2026-11-13&endDate=2026-11-13&currency=USD/CNY",
+      "sourceOrigin": "china",
+      "note": "2026年11月13日人民币汇率中间价（最近交易日）"
+    },
+    {
+      "id": "metric-eur",
+      "kind": "eur_cny",
+      "icon": "💶",
+      "name": "欧元兑人民币",
+      "value": "1欧元兑人民币7.4023",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/ags/ms/cm-u-bk-ccpr/CcprHisNew?lang=CN&startDate=2026-11-13&endDate=2026-11-13&currency=EUR/CNY",
+      "sourceOrigin": "china",
+      "note": "2026年11月13日人民币汇率中间价（最近交易日）"
+    },
+    {
+      "id": "metric-jpy",
+      "kind": "jpy_cny",
+      "icon": "💴",
+      "name": "日元兑人民币",
+      "value": "100日元兑人民币4.1952",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/ags/ms/cm-u-bk-ccpr/CcprHisNew?lang=CN&startDate=2026-11-13&endDate=2026-11-13&currency=100JPY/CNY",
+      "sourceOrigin": "china",
+      "note": "2026年11月13日人民币汇率中间价（最近交易日）"
+    }
+  ],
+  "observation": "今日民生聚焦医保与城市服务。新版国家医保药品目录新增107种药品，51个一类新药再创新高；多地优化停车收费，北京推进供暖保障与以旧换新。铁路前10月发送旅客41.3亿人次创新高，5部门引导外卖推广小份餐品。国际上，美国航班停飞后逐步恢复，霍尔木兹海峡油轮遇袭风险上升。科技端，电动商用飞机与大型无人货运机完成首飞试飞，新型储能明确2030年目标。人工智能方面，脑机接口加速落地，人形机器人进入场景适配测试。",
+  "sources": [
+    "新华网",
+    "中国新闻网",
+    "央广网",
+    "光明网",
+    "中国科技网",
+    "北京日报"
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "上海市发展和改革委员会",
+    "新华网",
+    "中国外汇交易中心"
+  ]
+}
