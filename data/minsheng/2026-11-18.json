@@ -1,0 +1,422 @@
+{
+  "date": "2026-11-18",
+  "issue": 80,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期三",
+  "lunarDate": "农历十月初十",
+  "cutoff": "2026-11-18 06:55（北京时间）",
+  "productionTime": "2026-11-18 06:58（北京时间）",
+  "metricsCutoff": "2026-11-17 24:00（北京时间）",
+  "topStoryIds": [
+    "domestic-01",
+    "international-09",
+    "tech-05"
+  ],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "广电总局、民政部：确保广电视听服务覆盖到全体老年人",
+        "summary": "国家广电总局、民政部发文推动广电视听服务向基层和农村下沉，支持为生活困难老年人提供有线电视免费或低收费服务，并普及一个遥控器“一键看电视”。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 19:42",
+        "url": "https://www.news.cn/politics/20261117/349c773a4d9f4135a65edf12b5868cd3/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "医疗服务价格“有升有降” 群众就医负担总体稳定",
+        "summary": "2018年至2025年全国医疗服务价格总水平累计上涨26.0%，医保基金支出年均增长7.8%；PET/CT局部显像价格下降约47.0%。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 15:32",
+        "url": "https://www.news.cn/politics/20261117/1515c58136254c4dadb63833a64a1958/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "国家卫生健康委解读基层卫生健康综合试验区样本",
+        "summary": "国家卫生健康委在海南东方市介绍基层卫生健康综合试验区成效，2021年启动建设，东方市坚持治理重心下移、系统治理，完善基层卫生治理体系。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 23:38",
+        "url": "https://www.news.cn/politics/20261117/9426b08dc1e140f380bc9cf9f1743ce8/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "促进回收行业高质量发展——多部门详解深入推进再生资源回收体系建设",
+        "summary": "商务部等9部门印发意见推进再生资源回收体系建设，国务院新闻办同日举行发布会解读，促进回收行业高质量发展。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 20:43",
+        "url": "https://www.news.cn/fortune/20261117/35f4efa1cf834c44a844b4bddde45318/c.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "生态环境部将推进智慧执法体系建设 强化非现场执法监管",
+        "summary": "生态环境部发文推进智慧执法体系建设，全国生态环境执法人员约7.2万名，面对400多万家固定污染源，将强化非现场执法监管。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 18:45",
+        "url": "https://www.news.cn/politics/20261117/73559e942d3b4a47a0bc07ab094dd9bf/c.html"
+      },
+      {
+        "id": "domestic-06",
+        "title": "兰州至合作铁路开始全线铺轨",
+        "summary": "兰合铁路11月17日全线铺轨启动，正线铺轨292.3公里、站线12.4公里，铺设道岔48组，线路连接兰州与甘南合作市。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 18:14",
+        "url": "https://www.news.cn/local/20261117/3323376bb8e0461dbea5324c2a7679ab/c.html"
+      },
+      {
+        "id": "domestic-07",
+        "title": "医保钱包代缴居民医保费统筹地区范围不断扩大",
+        "summary": "截至11月15日，全国380个统筹地区可用医保钱包代缴居民医保费，占96.45%，累计代缴141.09万人次、5.4亿元。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 08:04",
+        "url": "https://www.chinanews.com.cn/gn/2026/11-17/10733186.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "title": "四部门联合发文 健康副校（园）长由医疗卫生机构等派出",
+        "summary": "国家卫健委等四部门发文，由医疗卫生机构等派员兼任中小学校、幼儿园健康副校（园）长，不坐班、不占学校编制，须具备中级及以上职称。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 05:15",
+        "url": "https://news.gmw.cn/2026-11/17/content_39103996.htm"
+      },
+      {
+        "id": "domestic-09",
+        "title": "几十元就能破解电话手表 刷机服务暗藏哪些安全风险？",
+        "summary": "记者调查发现，视频网站流传电话手表刷机教程，几十元即可破解家长管控，带来隐私泄露、网络沉迷和信息安全风险。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 08:31",
+        "url": "https://www.chinanews.com.cn/sh/2026/11-17/10733190.shtml"
+      },
+      {
+        "id": "domestic-10",
+        "title": "前十月全国开行旅游列车超三千列",
+        "summary": "今年1至10月全国铁路发送旅客41.3亿人次，开行旅游列车3236列，计次票、定期票覆盖75条线路。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 09:40",
+        "url": "https://travel.gmw.cn/2026-11/17/content_39104485.htm"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "印尼马鲁古省发生6.6级地震",
+        "summary": "北京时间11月17日5时11分，印尼马鲁古省图阿尔市附近发生6.6级地震，震源深度35公里，报道未提及伤亡或损失。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 06:03",
+        "url": "https://www.news.cn/20261117/934ed0dc6cc8483c8df7867632a018a0/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "埃博拉疫情，仍处失控状态",
+        "summary": "非洲疾控中心主任卡塞亚15日说，刚果（金）埃博拉疫情宣布暴发六个月后仍处失控状态，截至12日累计确诊11254例、死亡5505例。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-16 15:15",
+        "url": "https://m.gmw.cn/2026-11/16/content_1304586659.htm"
+      },
+      {
+        "id": "international-03",
+        "title": "美军证实“罗斯福”号航母已抵达中东",
+        "summary": "美军中央司令部16日证实，“罗斯福”号航母已在中东责任区执行任务，成为美军在该地区部署的第三艘航母。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 09:45",
+        "url": "https://world.gmw.cn/2026-11/17/content_39104542.htm"
+      },
+      {
+        "id": "international-04",
+        "title": "中国成功连任国际电信联盟理事国",
+        "summary": "国际电信联盟2026年全权代表大会16日完成理事国选举，中国连任，任期2027—2030年；理事会共48个理事国。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 09:45",
+        "url": "https://world.gmw.cn/2026-11/17/content_39104555.htm"
+      },
+      {
+        "id": "international-05",
+        "title": "区域一体化激活东盟增长动能",
+        "summary": "东盟GDP由2015年约2.5万亿美元升至2025年约4.2万亿美元，域内贸易超6万亿美元；中国—东盟自贸区3.0版将于2026年12月生效。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 13:51",
+        "url": "https://world.gmw.cn/2026-11/17/content_39105267.htm"
+      },
+      {
+        "id": "international-06",
+        "title": "商务部：中加同意将初步联合安排的相关豁免措施延长2年",
+        "summary": "商务部17日表示，中加同意将初步联合安排的相关豁免措施延长2年，加方将进一步扩大对中国钢铝产品豁免范围。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 21:20",
+        "url": "https://www.news.cn/world/20261117/24ba2e6aaa7f4ed38a0cfba671506e5b/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "英国制裁8家参与以色列定居点建设的公司",
+        "summary": "英国外交部17日宣布制裁8家参与扩建约旦河西岸以色列定居点的建筑和房地产公司，以及一个阻止援助进入加沙的活动组织。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-18 02:40",
+        "url": "https://www.news.cn/world/20261118/fb3b75bb13ae4c25806092a4a2906c7f/c.html"
+      },
+      {
+        "id": "international-08",
+        "title": "中老铁路年度发送跨境旅客首次突破30万人次",
+        "summary": "截至11月16日，中老铁路今年发送跨境旅客30.06万人次，首次年度突破30万人次，昆明至万象列车增至每天4列。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 16:25",
+        "url": "https://www.chinanews.com.cn/aseaninfo/2026/11-17/10733482.shtml"
+      },
+      {
+        "id": "international-09",
+        "title": "伊朗：美军袭击格什姆岛 但未造成损失",
+        "summary": "据伊朗伊斯兰共和国通讯社17日报道，霍尔木兹甘省副省长称美军袭击格什姆岛但未造成损失，目前局势可控。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-18 00:34",
+        "url": "https://www.news.cn/world/20261118/469f1e16b20b4df8a0692d4faf172fc3/c.html"
+      },
+      {
+        "id": "international-10",
+        "title": "日本三季度GDP再现负增长",
+        "summary": "日本内阁府16日公布初步统计，受个人消费下滑影响，三季度实际GDP按年率萎缩0.1%，自2025年三季度以来再现负增长。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 09:39",
+        "url": "https://share.gmw.cn/world/2026-11/17/content_39104451.htm"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "8省（市）获批开展6G创新发展部省协同试点工作",
+        "summary": "工信部复函同意北京、河北、上海、江苏、浙江、安徽、湖北、广东8省市开展6G创新发展部省协同试点，重点培育6G应用产业、夯实基础产业并探索新型产品路线。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 19:30",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/17/content_614760.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "我国成功实现Q/V频段最高码速率无线通信",
+        "summary": "中科院空天信息创新研究院联合国内单位完成Q/V频段无线通信验证，512QAM单通道双向速率6.75Gbps，结合双载频与极化复用达27Gbps，刷新国内纪录。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 13:26",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/17/content_614469.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "最新报告显示：我国北斗产业综合指数达到1696点",
+        "summary": "《2026中国北斗产业发展指数报告》显示，截至2026年上半年北斗产业综合指数1696点，同比增长7.41%，非消费类终端应用约4200万台套。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 12:19",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/17/content_614298.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "清华大学团队首次高分辨率解析痘病毒复制“要害”",
+        "summary": "清华大学团队用冷冻电子断层成像首次高分辨率解析痘病毒门户复合物与中央孔道，分辨率6.7埃和4.4埃，成果发表于《自然》。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 09:16",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/17/content_614182.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "神舟二十四号计划近日择机实施发射",
+        "summary": "中国载人航天工程办公室消息，神舟二十四号载人飞船与长征二号F遥二十四运载火箭组合体11月17日转运至发射区，计划近日择机发射。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 19:24",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/17/content_614754.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "《半导体设备与零部件质量管理体系》行业标准发布",
+        "summary": "工信部批准《半导体设备与零部件质量管理体系》行业标准，覆盖超洁净监管、供应链韧性与全生命周期追溯，为该领域国内首个专属标准。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 17:16",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/17/content_614682.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "刷新水深纪录！“梦想”号大洋钻探船完成重大装备海试任务",
+        "summary": "“梦想”号大洋钻探船完成33天海试，验证我国自主研发首套2000米级深海无隔水管泥浆回收循环钻井系统，创同类系统国际最大作业水深纪录。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 13:28",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/17/content_614477.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "“无人空中重卡”完成运输投送试验",
+        "summary": "中国兵器工业集团消息，7吨级大型运投无人机“长鹰-8”完成运输投送试验，标志该机型由“自动运”向“智能投”推进。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 10:40",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/17/content_614236.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "全球超算500强新榜单发布 中国超算蝉联榜首",
+        "summary": "新一期全球超算500强榜单在SC2026公布，部署于深圳国家超算中心的“灵晟”以每秒219.8亿亿次蝉联第一，比第二名高约21%。",
+        "source": "人民网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 18:34",
+        "url": "https://world.people.com.cn/n1/2026/1117/c1002-40835721.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "我国深层页岩油最短钻井周期纪录刷新",
+        "summary": "中国石化胜利油田民丰8号台首批12口井平均钻井周期13.83天，其中一口井11.68天，刷新国内井深超6000米陆相页岩油最短周期纪录。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 09:15",
+        "url": "https://www.news.cn/tech/20261117/9dcb484d21be407aaea0b953dfea9a9b/c.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "“人工智能+自然资源”加速规模化应用",
+        "summary": "自然资源部、国家发展改革委印发实施意见，提出2028年实现人工智能示范应用、2030年全面融入自然资源管理各环节，并布局5个中试平台。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 09:16",
+        "url": "https://www.news.cn/tech/20261117/9e3b569586b54abd8c02483f294ca194/c.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "当AI有了身体，可靠性意味着什么？",
+        "summary": "光明网科普文章指出，AI进入物理世界后可靠性关乎安全；我国L2级辅助驾驶新车渗透率已达70.5%，超过60%的机器人相关工伤源于意外激活。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 14:14",
+        "url": "https://kepu.gmw.cn/2026-11/17/content_39105295.htm"
+      },
+      {
+        "id": "ai-03",
+        "title": "国内最大规模物流具身智能应用落地广东邮区网络",
+        "summary": "具身智能分拣机器人在中国邮政广东网络8座城市11个邮区节点批量部署，单机供件效率超1500件/小时，支持24小时连续运行。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 16:33",
+        "url": "https://tech.gmw.cn/2026-11/17/content_39105549.htm"
+      },
+      {
+        "id": "ai-04",
+        "title": "【深圳APEC】王兴兴：合作共赢是过去和未来最主要的主旋律",
+        "summary": "宇树科技董事长王兴兴在深圳APEC工商领导人峰会上表示，AI与机器人产业发展必须依靠合作共赢，只有共同合作才能把产业蛋糕做大。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 16:17",
+        "url": "https://www.chinanews.com.cn/cj/shipin/cns-d/2026/11-17/news1075215.shtml"
+      },
+      {
+        "id": "ai-05",
+        "title": "数智时代，“健康第一”面临新课题——青少年用AI，如何用对用好？",
+        "summary": "北京市教委发布教育领域人工智能应用指南，对幼儿和小学生使用AI作出限制；调查显示99.7%的学生用过AI工具，认知外包风险受关注。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-17 05:15",
+        "url": "https://tech.gmw.cn/2026-11/17/content_39104337.htm"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "id": "metric-gold",
+      "kind": "gold",
+      "icon": "◎",
+      "name": "国内金价",
+      "value": "832.50元/克",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/graph/Dailyhq?instid=Au99.99",
+      "sourceOrigin": "china",
+      "note": "2026年11月17日收盘价 Au99.99"
+    },
+    {
+      "id": "metric-oil-cn",
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "国内油价",
+      "value": "92号汽油8.33元/升",
+      "source": "上海市发展和改革委员会",
+      "sourceUrl": "https://fgw.sh.gov.cn/fgw_jggl/20261112/0f5137f27eff456e9e9c2db749801342.html",
+      "sourceOrigin": "china",
+      "note": "2026年11月12日24时起执行，上海最高零售价"
+    },
+    {
+      "id": "metric-oil-intl",
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际油价",
+      "value": "布伦特93.14美元/桶",
+      "source": "新华网",
+      "sourceUrl": "https://www.news.cn/20261118/dcdbf46e2aaa4c33bc27ef6246699b93/c.html",
+      "sourceOrigin": "china",
+      "note": "2026年11月17日收盘价，WTI报86.01美元/桶"
+    },
+    {
+      "id": "metric-usd",
+      "kind": "usd_cny",
+      "icon": "💱",
+      "name": "美元兑人民币",
+      "value": "1美元兑人民币6.7132",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/r/cms/www/chinamoney/data/fx/ccpr.json",
+      "sourceOrigin": "china",
+      "note": "2026年11月17日人民币汇率中间价"
+    },
+    {
+      "id": "metric-eur",
+      "kind": "eur_cny",
+      "icon": "💶",
+      "name": "欧元兑人民币",
+      "value": "1欧元兑人民币7.3599",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/r/cms/www/chinamoney/data/fx/ccpr.json",
+      "sourceOrigin": "china",
+      "note": "2026年11月17日人民币汇率中间价"
+    },
+    {
+      "id": "metric-jpy",
+      "kind": "jpy_cny",
+      "icon": "💴",
+      "name": "日元兑人民币",
+      "value": "100日元兑人民币4.1982",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/r/cms/www/chinamoney/data/fx/ccpr.json",
+      "sourceOrigin": "china",
+      "note": "2026年11月17日人民币汇率中间价"
+    }
+  ],
+  "observation": "今日民生政策密集落地：广电视听适老化改造与健康副校（园）长制度同步推进，医疗服务价格和医保钱包跨省共济持续优化，再生资源回收与生态环境智慧执法进入实施阶段。基建方面，兰合铁路全线铺轨，前十月旅游列车开行超三千列。国际上，中加延长豁免措施，中国连任国际电信联盟理事国，日本三季度经济再现负增长。科技端，6G部省协同试点启动，Q/V频段通信与北斗产业指数显示自主技术加速落地。人工智能向自然资源管理和物流分拣实体场景渗透，可靠性治理提上日程。",
+  "sources": [
+    "新华网",
+    "中国新闻网",
+    "光明网",
+    "中国科技网",
+    "人民网"
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "上海市发展和改革委员会",
+    "中国外汇交易中心",
+    "新华网"
+  ]
+}

@@ -4,6 +4,14 @@
   "publishAt": "11:00",
   "editions": [
     {
+      "date": "2026-11-18",
+      "issue": 79,
+      "publishAt": "2026-11-18T11:00:00+08:00",
+      "title": "游戏与 Minecraft 每日简报",
+      "headline": "TGA年度游戏提名正式公布！玩家：《GTA6》大战《塞尔达传说：时之笛 重制版》",
+      "file": "data/2026-11-18.json"
+    },
+    {
       "date": "2026-11-15",
       "issue": 78,
       "publishAt": "2026-11-15T11:00:00+08:00",
@@ -50,14 +58,6 @@
       "title": "游戏与 Minecraft 每日简报",
       "headline": "《影之刃零》发售 72 小时销量突破 400 万份",
       "file": "data/2026-11-03.json"
-    },
-    {
-      "date": "2026-11-01",
-      "issue": 72,
-      "publishAt": "2026-11-01T11:00:00+08:00",
-      "title": "游戏与 Minecraft 每日简报",
-      "headline": "《影之刃零》Steam 在线峰值再创新高 772,902 人",
-      "file": "data/2026-11-01.json"
     }
   ]
 }
