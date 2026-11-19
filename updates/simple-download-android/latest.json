@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "appId": "simple-download-android",
   "channel": "stable",
-  "version": "2.3.62",
-  "versionCode": 62,
-  "downloadUrl": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-android-v2.3.62/SimpleDownload-2.3.62-Android.apk",
-  "releasePageUrl": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-android-v2.3.62",
-  "size": 43235159,
-  "sha256": "9c52ac73a8a4e457974196104cdf16a333755d06f3c916de4d6310a042852610",
-  "publishedAtUtc": "2026-11-19T12:17:05Z",
-  "notes": "重复链接支持同批多选重下，无音轨素材可回退保存无声视频。新增批次回执和输出快照，解析并发可在 1–10 调节，默认 3。改进下载通知、优先下载及空间不足恢复，作品库支持搜索、定位和另存。"
+  "version": "2.3.63",
+  "versionCode": 63,
+  "downloadUrl": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-android-v2.3.63/SimpleDownload-2.3.63-Android.apk",
+  "releasePageUrl": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-android-v2.3.63",
+  "size": 43238009,
+  "sha256": "d58aa72fd03378e9e5efd428ac9bf1e3a7ff588299234f6b6b873eff333558b3",
+  "publishedAtUtc": "2026-11-19T17:36:58Z",
+  "notes": "设置新增「显示批次回执」，默认关闭。开启后回执显示在所有下载任务下方。统一作品打开时传给系统的文件类型，沿用系统默认应用。"
 }
