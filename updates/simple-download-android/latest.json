@@ -6,8 +6,8 @@
   "versionCode": 63,
   "downloadUrl": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-android-v2.3.63/SimpleDownload-2.3.63-Android.apk",
   "releasePageUrl": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-android-v2.3.63",
-  "size": 43238009,
-  "sha256": "d58aa72fd03378e9e5efd428ac9bf1e3a7ff588299234f6b6b873eff333558b3",
+  "size": 43237980,
+  "sha256": "5f644668dc777ae8787c053a526016353b986cfe1025428088bb8158a88a6f25",
   "publishedAtUtc": "2026-11-19T17:36:58Z",
   "notes": "设置新增「显示批次回执」，默认关闭。开启后回执显示在所有下载任务下方。统一作品打开时传给系统的文件类型，沿用系统默认应用。"
 }
