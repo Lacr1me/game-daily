@@ -1,0 +1,423 @@
+{
+  "date": "2026-11-20",
+  "issue": 81,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期四",
+  "lunarDate": "农历十月十二",
+  "cutoff": "2026-11-20 05:38（北京时间）",
+  "productionTime": "2026-11-20 05:39（北京时间）",
+  "metricsCutoff": "2026-11-19 24:00（北京时间）",
+  "topStoryIds": [
+    "domestic-01",
+    "international-01",
+    "tech-01"
+  ],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "习近平对老龄工作作出重要指示",
+        "summary": "全国老龄工作会议11月18日至19日在北京举行，会上传达习近平重要指示，要求深入实施积极应对人口老龄化国家战略，大力发展银发经济，建设老年友好社会。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 12:09",
+        "url": "https://www.news.cn/politics/leaders/20261119/eadb6a1409194b4794ac9c4ea852bc21/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "2027届全国普通高校毕业生规模预计1299万人",
+        "summary": "五部门11月19日联合召开2027届高校毕业生就业创业工作会议，预计毕业生规模1299万人，提出拓展岗位、提升就业服务、做好困难帮扶。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 17:08",
+        "url": "https://www.chinanews.com.cn/edu/2026/11-19/10734743.shtml"
+      },
+      {
+        "id": "domestic-03",
+        "title": "5年来国家公园生态保护与民生改善协同推进",
+        "summary": "东北虎豹国家公园野生东北虎增至72只、东北豹115只；三江源1.7万余名牧民持证上岗；5个国家公园累计接待群众超1400万人次。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 05:25",
+        "url": "https://news.gmw.cn/2026-11/19/content_39108691.htm"
+      },
+      {
+        "id": "domestic-04",
+        "title": "西部陆海新通道对外贸易指数连续六年上行",
+        "summary": "以2019年为基期，西部陆海新通道对外贸易指数2025年升至178.2点；当年经新通道进出口1.65万亿元，辐射160余个国内站点、通达700余个港口。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 05:10",
+        "url": "https://news.gmw.cn/2026-11/19/content_39108661.htm"
+      },
+      {
+        "id": "domestic-05",
+        "title": "光明网评论员：校园App“臃肿”，是不是奔着收割学生而来",
+        "summary": "跑操、点名、接水、饭卡充值等校园场景各自对应不同App或小程序，学生一个都不敢删，接水前需连关多个弹窗，负担与信息采集受关注。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 15:29",
+        "url": "https://guancha.gmw.cn/2026-11/19/content_39110204.htm"
+      },
+      {
+        "id": "domestic-06",
+        "title": "雪假来了：特色假期如何“放”到心坎里",
+        "summary": "张家口中小学11月18日迎来首个雪假，吉林、呼伦贝尔、阿勒泰公布安排；雪假多在12月与周末连休形成5天小长假，已有十余个省份试点。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 05:10",
+        "url": "https://news.gmw.cn/2026-11/19/content_39108663.htm"
+      },
+      {
+        "id": "domestic-07",
+        "title": "新一轮寒潮影响福建 福州马尾至马祖“小三通”航线持续停航",
+        "summary": "福州港客运站通报马尾至马祖航线19日起连续三天停航；福建气象台发布寒潮警报，21日至22日西部北部部分城区最低气温1至4摄氏度，有霜或霜冻。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 18:03",
+        "url": "https://www.chinanews.com.cn/gn/2026/11-19/10734783.shtml"
+      },
+      {
+        "id": "domestic-08",
+        "title": "南北方多地气温将陆续触底创新低 中东部进入降水间歇期",
+        "summary": "多地气温将大范围创立秋后新低，最低气温0摄氏度线南压至河南北部至苏皖北部；中东部降水减少减弱，天气转晴，空气湿度下降。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 09:23",
+        "url": "https://politics.gmw.cn/2026-11/19/content_39109015.htm"
+      },
+      {
+        "id": "domestic-09",
+        "title": "一增一稳，外商真金白银投下信任票",
+        "summary": "1至9月高技术产业实际使用外资2285.3亿元，同比增长33.8%；外资利润再投资939.9亿元，增长4.7%；外商直接投资权益存量连续6年增长。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 16:56",
+        "url": "https://cn.chinadaily.com.cn/a/202611/19/WS6afeba11e4b0e14252fcc3d4.html"
+      },
+      {
+        "id": "domestic-10",
+        "title": "北京构建暖冬文旅服务矩阵 多元演艺、精品展览集中亮相",
+        "summary": "今年11月至明年2月北京已开票营业性演出1100多台5600余场，大型文艺演出40多台80余场；大兴机场国际中转旅客可兑换景区门票和消费券。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 20:11",
+        "url": "https://www.chinanews.com.cn/sh/2026/11-19/10734831.shtml"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "商务部：中韩自贸协定第二阶段谈判实质性完成",
+        "summary": "中韩自贸协定第二阶段谈判历经8年多实质性完成，升级涉及投资、服务贸易、金融服务和经济合作四章，采用负面清单模式作出开放承诺。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 00:48",
+        "url": "https://www.news.cn/world/20261119/c6ab333d4f1245e9aefe7ad494272c80/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "委内瑞拉同美国签署协议恢复军事技术合作",
+        "summary": "委内瑞拉与美国签署军事合作协议，恢复包括军事训练和作战装备更新的合作；委领导人罗德里格斯在总统府会见美国国防部长赫格塞思。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 07:38",
+        "url": "https://www.news.cn/world/20261119/88f0b447c9524529afd2fefd08824186/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "COP31主席呼吁各方加快凝聚共识",
+        "summary": "COP31主席屈吕姆与谈判主席鲍恩18日召集会议，呼吁各方相互倾听、拓宽共识；目前各方在气候融资等议题上仍存较大分歧。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 16:23",
+        "url": "https://www.news.cn/world/20261119/ecdf0c4f51ad4a49b335e4e592cafefd/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "韩国前第一夫人金建希首案终审被判有期徒刑4年",
+        "summary": "韩国最高法院19日驳回双方抗诉和上诉，维持二审判决，判处金建希有期徒刑4年并处罚金5000万韩元，为该国首次有前总统夫人获实刑。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 21:54",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-19/10734932.shtml"
+      },
+      {
+        "id": "international-05",
+        "title": "蒙古国总统辞职申请获议会批准",
+        "summary": "蒙古国国家大呼拉尔19日表决批准呼日勒苏赫辞去总统职务，92.3%出席议员投赞成票；须在4个月内举行总统选举，议长代行总统职权。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 20:57",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-19/10734898.shtml"
+      },
+      {
+        "id": "international-06",
+        "title": "丹麦议会通过涉格陵兰岛安全防卫协议",
+        "summary": "丹麦议会19日表决通过涉格陵兰岛安全与防卫协议；协议由丹麦、格陵兰岛与美国签署，修订1951年防务协定，允许美国设立新防务区域。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 16:50",
+        "url": "https://world.chinadaily.com.cn/a/202611/19/WS6afee8ace4b0e14252fcc475.html"
+      },
+      {
+        "id": "international-07",
+        "title": "胡塞武装袭击致沙特主权基金大楼受损",
+        "summary": "多国联军19日拦截也门胡塞武装向利雅得发射的导弹，碎片坠落致沙特公共投资基金大厦受损，金融区入口封闭、人员疏散，损失仍在核实。",
+        "source": "国际在线",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 23:59",
+        "url": "https://news.cri.cn/20261119/67119507-05f6-4333-b32c-31d284920e30.html"
+      },
+      {
+        "id": "international-08",
+        "title": "乌克兰称袭击俄罗斯两座炼油厂",
+        "summary": "乌军17日至18日袭击俄罗斯克拉斯诺达尔边疆区两座炼油厂，击中储油罐和石油加工装置，两厂年加工能力合计约1300万吨。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 15:28",
+        "url": "https://www.chinanews.com.cn/gj/2026/11-19/10734629.shtml"
+      },
+      {
+        "id": "international-09",
+        "title": "以军越过加沙“黄线” 哈马斯发声谴责",
+        "summary": "以军军车和坦克18日越过停火协议划定的“黄线”，沿萨拉赫丁路推进；哈马斯谴责此举严重违反停火协议，以方称行动为拆除地道。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 15:30",
+        "url": "https://www.news.cn/world/20261119/8ee633fad6084253bf5256f60164ca8b/c.html"
+      },
+      {
+        "id": "international-10",
+        "title": "中方强调国际司法机制不应受政治因素干扰",
+        "summary": "中国常驻联合国副代表孙磊在安理会表示，国际司法机制不应受政治因素干扰，不应成为选择性施压的工具，应尊重利比亚司法主权。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 07:32",
+        "url": "https://www.news.cn/world/20261119/fa1d6312f4ee4bd6917f609851103ede/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "广西崇左发现我国已知最晚直立人化石",
+        "summary": "崇左岜仙洞、那线洞发现9枚古人类牙齿化石，其中8枚确认为直立人，年代距今32.4万至18.4万年，成果以姊妹篇在线发表于《自然》。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 13:28",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/19/content_615721.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "长二丁火箭成功发射实践二十四号卫星",
+        "summary": "11月19日06时51分，长征二号丁运载火箭在太原卫星发射中心成功发射实践二十四号卫星，卫星进入预定轨道，这是长征系列火箭第678次飞行。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 09:20",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/19/content_615622.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "全球最大无人货运飞机完成技术验证试飞",
+        "summary": "W5000无人货运飞机11月14日在鄂尔多斯完成技术验证试飞，自重5.8吨、有效载荷5吨、最远航程2600公里，意向订单已达835架。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 09:39",
+        "url": "https://www.news.cn/tech/20261119/5cef7e14e10a42e29ad05eb44313b6ee/c.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "高端农机驶向全链自主可控",
+        "summary": "东方红LW3204无级变速拖拉机60余种关键零部件全部国产化；我国规模以上农机企业2300余家，可生产5360种产品，满足90%以上市场需求。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 09:38",
+        "url": "https://www.news.cn/tech/20261119/8751a0ea9ba74bdd951f826225d1f3d6/c.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "江西发现植物新种华东堇菜",
+        "summary": "江西马头山国家级自然保护区与中山大学团队发现堇菜属新种华东堇菜，成果发表于《北欧植物学杂志》，目前仅分布于资溪县岩缝生境。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 20:31",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/19/content_616078.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "国内首创无人机给高压线绝缘子做“体检”",
+        "summary": "重庆永川220千伏茶邮线秋检中应用基于空间频谱分析和电场测量的无人机巡检装置，一次起飞扫描多座铁塔并实时定位缺陷绝缘子。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 15:49",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/19/content_615864.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "全国虚拟电厂最大调节能力超2000万千瓦",
+        "summary": "截至2026年6月底全国已建成投运虚拟电厂项目592个，同比增长78.9%；最大调节能力2042.8万千瓦，同比增长62.7%。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 21:05",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/19/content_616100.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "工信部：中国已建成工业5G专网2.7万个",
+        "summary": "工信部总经济师高东升在2026中国5G+工业互联网大会上介绍，中国已建成工业5G专网2.7万个，培育卓越级智能工厂750余家、领航级49家。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 16:52",
+        "url": "https://www.chinanews.com.cn/cj/2026/11-19/10734721.shtml"
+      },
+      {
+        "id": "tech-09",
+        "title": "国家数据局开展新一批可信数据空间创新发展试点",
+        "summary": "第二批可信数据空间创新发展试点启动，重点推进数据与人工智能相互促进，探索按词元调用、应用效果等计费和收益分配方式。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 12:04",
+        "url": "https://www.chinanews.com.cn/gn/2026/11-19/10734558.shtml"
+      },
+      {
+        "id": "tech-10",
+        "title": "地磁场里的“活罗盘”藏着一个新秘密",
+        "summary": "中科院地质与地球物理研究所团队研究趋磁细菌WYHV-1，发现起作用的不是单颗磁颗粒而是整条磁链，细胞可形成20至50微米以上细胞链。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 05:25",
+        "url": "https://tech.gmw.cn/2026-11/19/content_39108963.htm"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "“人工智能+”加速规模化落地",
+        "summary": "“十五五”“人工智能+”行动部署密集落地，我国人工智能从点上示范走向规模落地，已落地30余个国家应用中试基地为企业降门槛、降成本。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 08:57",
+        "url": "https://www.news.cn/tech/20261119/de1b76775e9d42f0b8f2cffdfab62f2b/c.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "2026世界智能制造大会南京开幕",
+        "summary": "大会11月19日在南京开幕，34家第二批领航级智能工厂发布培育行动，展会首设“AI+制造”和人才专区，汇集600余家企业。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 16:44",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/19/content_615910.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "欧美AI数据中心扩张陷入资源困局",
+        "summary": "欧盟计划5至7年将数据中心容量至少提高至3倍，但电力、水资源与公众接受度成为制约；得州超480个大型数据中心项目申请接入电网。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 01:45",
+        "url": "https://www.stdaily.com/web/gjxw/2026-11/19/content_615423.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "人工智能创新生态“聚光成炬”",
+        "summary": "人工智能竞争既是技术比拼更是生态较量；海螺集团联合华为打造水泥建材行业首个工业大模型，熟料强度预判准确率超85%。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-18 13:36",
+        "url": "https://digital.gmw.cn/2026-11/18/content_39107501.htm"
+      },
+      {
+        "id": "ai-05",
+        "title": "打通算力应用“最后一公里”",
+        "summary": "今年总体将有超过50万卡计算集群落地，其中3万卡集群同比增长2倍以上、10万卡集群实现从0到1突破；全国产10万卡超集群已落成。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-18 14:11",
+        "url": "https://digital.gmw.cn/2026-11/18/content_39107614.htm"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "id": "metric-gold",
+      "kind": "gold",
+      "icon": "◎",
+      "name": "国内金价",
+      "value": "801.93元/克",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/graph/Dailyhq?instid=Au99.99",
+      "sourceOrigin": "china",
+      "note": "2026年11月19日收盘价 Au99.99"
+    },
+    {
+      "id": "metric-oil-cn",
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "国内油价",
+      "value": "92号汽油8.33元/升",
+      "source": "上海市发展和改革委员会",
+      "sourceUrl": "https://fgw.sh.gov.cn/fgw_jggl/20261112/0f5137f27eff456e9e9c2db749801342.html",
+      "sourceOrigin": "china",
+      "note": "2026年11月12日24时起执行，上海最高零售价"
+    },
+    {
+      "id": "metric-oil-intl",
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际油价",
+      "value": "布伦特91.95美元/桶",
+      "source": "中国证券报",
+      "sourceUrl": "https://www.cs.com.cn/zzqh2020/2026/11/19/detail_2026111910053181.html",
+      "sourceOrigin": "china",
+      "note": "2026年11月18日收盘价，WTI报83.26美元/桶"
+    },
+    {
+      "id": "metric-usd",
+      "kind": "usd_cny",
+      "icon": "💱",
+      "name": "美元兑人民币",
+      "value": "1美元兑人民币6.7128",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/r/cms/www/chinamoney/data/fx/ccpr.json",
+      "sourceOrigin": "china",
+      "note": "2026年11月19日人民币汇率中间价"
+    },
+    {
+      "id": "metric-eur",
+      "kind": "eur_cny",
+      "icon": "💶",
+      "name": "欧元兑人民币",
+      "value": "1欧元兑人民币7.3444",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/r/cms/www/chinamoney/data/fx/ccpr.json",
+      "sourceOrigin": "china",
+      "note": "2026年11月19日人民币汇率中间价"
+    },
+    {
+      "id": "metric-jpy",
+      "kind": "jpy_cny",
+      "icon": "💴",
+      "name": "日元兑人民币",
+      "value": "100日元兑人民币4.1995",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/r/cms/www/chinamoney/data/fx/ccpr.json",
+      "sourceOrigin": "china",
+      "note": "2026年11月19日人民币汇率中间价"
+    }
+  ],
+  "observation": "今日民生政策与市场信号并行：老龄工作重要指示要求大力发展银发经济，高校毕业生规模预计1299万人，就业服务持续加码。生态与开放两端同时发力，国家公园带动牧民增收，西部陆海新通道指数六年上行。消费与文旅场景活跃，暖冬文旅与雪假试点扩展服务供给。国际上，中韩自贸协定第二阶段谈判实质完成，蒙古国总统辞职获批。科技端，崇左直立人化石延长中国直立人存续时间，实践二十四号卫星入轨。人工智能从示范走向规模化落地。",
+  "sources": [
+    "新华网",
+    "中国新闻网",
+    "光明网",
+    "中国日报中文网",
+    "国际在线",
+    "中国科技网"
+  ],
+  "metricSources": [
+    "上海黄金交易所",
+    "上海市发展和改革委员会",
+    "中国证券报",
+    "中国外汇交易中心"
+  ]
+}

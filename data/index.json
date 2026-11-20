@@ -4,6 +4,14 @@
   "publishAt": "11:00",
   "editions": [
     {
+      "date": "2026-11-20",
+      "issue": 80,
+      "publishAt": "2026-11-20T11:00:00+08:00",
+      "title": "游戏与 Minecraft 每日简报",
+      "headline": "网易Q3游戏净收入229亿元，《无限大》定档2027年1月15日全球上线",
+      "file": "data/2026-11-20.json"
+    },
+    {
       "date": "2026-11-18",
       "issue": 79,
       "publishAt": "2026-11-18T11:00:00+08:00",
@@ -50,14 +58,6 @@
       "title": "游戏与 Minecraft 每日简报",
       "headline": "《影之刃零》海外市场收入占比达 55%",
       "file": "data/2026-11-05.json"
-    },
-    {
-      "date": "2026-11-03",
-      "issue": 73,
-      "publishAt": "2026-11-03T11:00:00+08:00",
-      "title": "游戏与 Minecraft 每日简报",
-      "headline": "《影之刃零》发售 72 小时销量突破 400 万份",
-      "file": "data/2026-11-03.json"
     }
   ]
 }
