@@ -1,0 +1,407 @@
+{
+  "date": "2026-11-21",
+  "issue": 82,
+  "sourcePolicyVersion": 2,
+  "weekday": "星期六",
+  "lunarDate": "农历十月十三",
+  "cutoff": "2026-11-21 05:45（北京时间）",
+  "productionTime": "2026-11-21 05:45（北京时间）",
+  "metricsCutoff": "2026-11-20 24:00（北京时间）",
+  "topStoryIds": ["domestic-02", "international-01", "tech-01"],
+  "sections": {
+    "domestic": [
+      {
+        "id": "domestic-01",
+        "title": "全国电动汽车充电枪总数达2539.1万个",
+        "summary": "国家能源局数据显示，截至10月底全国充电枪达2539.1万个，同比增长36.2%；其中公共充电枪528.3万个，私人充电枪2010.8万个，同比增长42.5%。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-20 14:56",
+        "url": "https://www.news.cn/politics/20261120/234c1ff1bc7c40a79f5ff8bb4f992ab2/c.html"
+      },
+      {
+        "id": "domestic-02",
+        "title": "前10个月我国实际使用外资6069.3亿元",
+        "summary": "商务部数据显示，今年前10个月全国实际使用外资6069.3亿元，同比下降2.4%；高技术产业吸收外资2528.3亿元，同比增长31.3%，占比升至41.7%。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-20 21:03",
+        "url": "https://www.news.cn/fortune/20261120/b9ac995d51e343c69047c295b08872e3/c.html"
+      },
+      {
+        "id": "domestic-03",
+        "title": "前10个月全国一般公共预算收入同比增长4.9%",
+        "summary": "财政部数据显示，前10个月全国一般公共预算收入195671亿元，同比增长4.9%；支出228042亿元，增长1.0%，卫生健康支出增长7.8%。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-20 19:38",
+        "url": "https://www.news.cn/fortune/20261120/f3864ee625d341088c671d111aab9ac9/c.html"
+      },
+      {
+        "id": "domestic-04",
+        "title": "三季度末普惠型小微企业贷款余额38.8万亿元",
+        "summary": "国家金融监督管理总局数据显示，三季度末普惠型小微企业贷款余额38.8万亿元，同比增长6.4%；商业银行不良贷款率1.54%，拨备覆盖率199.49%。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-20 19:50",
+        "url": "https://www.news.cn/fortune/20261120/4f8c472c67814a5d92dde3dba5ad3b0e/c.html"
+      },
+      {
+        "id": "domestic-05",
+        "title": "最高法发文进一步加强人民法庭规范化建设",
+        "summary": "最高法发布意见进一步加强人民法庭规范化建设，提出八方面29条举措；全国人民法庭已由10759个增至11035个，审结案件3400万件，占一审结案35%。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-20 20:27",
+        "url": "https://www.news.cn/legal/20261120/4d180eaade7c4c40bafa0506066e0b09/c.html"
+      },
+      {
+        "id": "domestic-06",
+        "title": "第二批网络安全标识产品目录公开征求意见",
+        "summary": "国家网信办就第二批网络安全标识产品目录公开征求意见，涵盖消费类智能门锁、智能音箱和儿童智能手表，标识分基础级、增强级、领先级三档，反馈截止12月20日。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-20 20:55",
+        "url": "https://www.news.cn/politics/20261120/64773b42b7e645cbaf903e5fa9043923/c.html"
+      },
+      {
+        "id": "domestic-07",
+        "title": "产销、改装、回收：汽车消费全链条发力",
+        "summary": "合肥推行新车预查验，消费者线上注册登记最快10分钟；海南聚焦救护车、旅居车等专用车；梧州报废车拆解量由2023年7723辆增至2025年13308辆。",
+        "source": "光明网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-20 08:35",
+        "url": "https://politics.gmw.cn/2026-11/20/content_39111151.htm"
+      },
+      {
+        "id": "domestic-08",
+        "title": "智慧供热成为北方冬季保供新抓手",
+        "summary": "黑龙江大庆4个小区完成分户供暖改造，2328户居民受益；全省整改供热隐患1.7万项，改造管网1247公里，智慧供热面积达3.8亿平方米。",
+        "source": "中国日报中文网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-20 21:04",
+        "url": "https://cn.chinadaily.com.cn/a/202611/20/WS6b0045e6e4b0e14252fcc8f4.html"
+      },
+      {
+        "id": "domestic-09",
+        "title": "北京扫雪铲冰准备就绪 备好4714台套设备",
+        "summary": "北京全市已备好4714台套除雪车辆设备，11月19日开展雨、落叶、雪叠加工况应急演练；融雪剂坚持精准减量，公园和社区不使用。",
+        "source": "北京市人民政府",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-20 08:38",
+        "url": "https://www.beijing.gov.cn/ywdt/gzdt/202611/t20261120_4953649.html"
+      },
+      {
+        "id": "domestic-10",
+        "title": "台湾民众盼赴大陆旅游更便捷",
+        "summary": "2026台南旅展开幕，大陆山东、河南、湖北、广东、四川五省非遗文创参展；台湾业界和民众呼吁增加直航点、解除禁团令，方便赴大陆旅游。",
+        "source": "中国新闻网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-20 21:05",
+        "url": "https://www.chinanews.com.cn/gn/2026/11-20/10735531.shtml"
+      }
+    ],
+    "international": [
+      {
+        "id": "international-01",
+        "title": "日媒：日本研究引进核潜艇并为无核三原则设例外",
+        "summary": "日本共同社报道，日本政府为修订安保三文件拟定的草案提出启动研究引进核动力潜艇，并拟为无核三原则中不运进一条设例外，引发民间反对。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-21 02:10",
+        "url": "https://www.news.cn/20261121/9f537acabd974f329fcfa56e33ae463a/c.html"
+      },
+      {
+        "id": "international-02",
+        "title": "也门媒体：沙特空袭过去24小时致至少41人死亡",
+        "summary": "胡塞武装控制的马西拉电视台称，沙特过去24小时对也门多地空袭造成至少41人死亡，包括11名儿童和7名妇女，另有28人受伤。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-21 01:36",
+        "url": "https://www.news.cn/20261121/1e5792819b264aaebb2f57612003949a/c.html"
+      },
+      {
+        "id": "international-03",
+        "title": "伊朗称一艘油轮在霍尔木兹海峡触雷爆炸",
+        "summary": "伊朗伊斯兰革命卫队称，一艘油轮在霍尔木兹海峡阿曼海塞卜港入口附近触水雷爆炸起火；伊方称该船在美军支援下试图走非法航道。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-21 01:08",
+        "url": "https://www.news.cn/20261121/2c65bca882bc497b8930eed1f3bf17b5/c.html"
+      },
+      {
+        "id": "international-04",
+        "title": "索马里驱逐阿联酋大使并召回本国大使",
+        "summary": "索马里部长会议要求阿联酋驻索大使72小时内离境，并召回本国驻阿大使，指其未尊重索马里主权；阿联酋称此举充满敌意。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-20 21:38",
+        "url": "https://www.news.cn/world/20261120/d46c534d581b4e23be3deda4cd6c4716/c.html"
+      },
+      {
+        "id": "international-05",
+        "title": "中蒙俄国际旅客列车将每周往返开行",
+        "summary": "自11月25日起，北京经乌兰巴托至伊尔库茨克的V3/4次国际旅客列车改为每周往返开行，全程2666公里、约55小时。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-20 18:33",
+        "url": "https://www.news.cn/world/20261120/6e6406c78f9048e59c6d7c0b2779c0ba/c.html"
+      },
+      {
+        "id": "international-06",
+        "title": "默茨：欧洲将很快加入乌克兰问题谈判",
+        "summary": "德国总理默茨表示，新一版乌克兰问题谈判很快举行，欧洲将与乌克兰、美国、俄罗斯共同参与；上一轮谈判于11月10日至11日在阿布扎比举行。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-20 16:28",
+        "url": "https://www.news.cn/world/20261120/08e32db506704d3686bb87448ff60fff/c.html"
+      },
+      {
+        "id": "international-07",
+        "title": "土耳其卡塔尔共同防御协议不含自动派兵条款",
+        "summary": "土耳其国防部表示，土耳其与卡塔尔本月13日签署的共同防御协议不含自动派兵条款，有效期10年，是否支援须经双方协商一致。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-20 08:04",
+        "url": "https://www.news.cn/world/20261120/197080acb3884a50b326202457596573/c.html"
+      },
+      {
+        "id": "international-08",
+        "title": "欧盟批准匈牙利54亿欧元国防贷款计划",
+        "summary": "欧盟理事会通过匈牙利修订后的国防投资计划，同意通过欧洲安全行动框架提供最高54亿欧元贷款，用于国防项目和军民两用基础设施。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-20 06:42",
+        "url": "https://www.news.cn/world/20261120/f73a0127c9834c57bb47e16bf4c64e6f/c.html"
+      },
+      {
+        "id": "international-09",
+        "title": "特朗普称不会在新年前仓促决定对伊行动",
+        "summary": "特朗普表示不会在新年前仓促决定对伊朗行动，要观察元旦之后态势；他正面临以色列方面要求尽快发动决定性空袭的压力。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-20 05:00",
+        "url": "https://www.news.cn/world/20261120/da95e2b8973f4ac49c65fb10588fadf9/c.html"
+      },
+      {
+        "id": "international-10",
+        "title": "普京：克里米亚大桥遭袭后不再讨论海上停火",
+        "summary": "普京表示，克里米亚大桥近日多次遇袭后，俄方不再讨论海上停火和停止打击能源设施，并承诺报复；乌方承认实施了打击。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-20 03:21",
+        "url": "https://www.news.cn/world/20261120/2ce274d28b2c4ee39a69e00172fae142/c.html"
+      }
+    ],
+    "tech": [
+      {
+        "id": "tech-01",
+        "title": "我国成功发射卫星互联网低轨30组卫星",
+        "summary": "11月20日19时59分，我国在海南商业航天发射场用长征八号甲运载火箭成功发射卫星互联网低轨30组卫星，这是长征系列第679次发射。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-20 22:14",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/20/content_616854.html"
+      },
+      {
+        "id": "tech-02",
+        "title": "39.5亿年！我国科学家发现亚洲最古老岩石",
+        "summary": "中国地质科学院团队在河北卢龙发现约39.5亿年的花岗质片麻岩，为亚洲已知最古老岩石，成果发表于自然杂志。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-20 20:32",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/20/content_616752.html"
+      },
+      {
+        "id": "tech-03",
+        "title": "我国科研团队为理解全球氮循环找到新依据",
+        "summary": "南方科技大学联合团队分析418个海洋气溶胶样品，估算全球海洋每年接收约1280万吨大气沉降氮，成果发表于科学杂志。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-20 19:50",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/20/content_616681.html"
+      },
+      {
+        "id": "tech-04",
+        "title": "我国首个海上注碳增气示范工程陆地建设完工",
+        "summary": "我国首个海上注碳增气技术示范应用工程陆地建设完工，中心平台重1.7万吨，投产后预计每年可在海底封存二氧化碳逾100万吨。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-20 18:55",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/20/content_616651.html"
+      },
+      {
+        "id": "tech-05",
+        "title": "我国新增34家领航级智能工厂",
+        "summary": "工信部等六部门发布第二批领航级智能工厂培育名单，共34家入选，全国领航级智能工厂累计达49家，小米汽车超级工厂在列。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-20 15:55",
+        "url": "https://www.news.cn/info/20261120/6f3471aa55b74f1abacc0b0df9ba2091/c.html"
+      },
+      {
+        "id": "tech-06",
+        "title": "2025年海洋药物和功能制品业增加值达996亿元",
+        "summary": "自然资源部报告显示，2025年全国海洋药物和功能制品业增加值达996亿元，同比增长6.1%，已有8个海洋来源1类新药进入临床。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-20 14:59",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/20/content_616439.html"
+      },
+      {
+        "id": "tech-07",
+        "title": "朱雀三号复用工程化取得重要进展",
+        "summary": "蓝箭航天完成朱雀三号一子级回收的9台天鹊-12A发动机地面验收试车，首次验证入轨级火箭回收后复用工程化流程。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-20 14:51",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/20/content_616415.html"
+      },
+      {
+        "id": "tech-08",
+        "title": "甘肃首个沙戈荒大型风光基地项目并网",
+        "summary": "国家第三批沙戈荒大型风电光伏基地甘肃首个项目首批70万千瓦光伏并网，项目总装机160万千瓦，含风电90万千瓦。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-20 14:41",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/20/content_616425.html"
+      },
+      {
+        "id": "tech-09",
+        "title": "重庆低空中试平台在永川建成投用",
+        "summary": "重庆低空中试平台在永川建成投用，总投资约2.16亿元，建有全国首个基于3D信号模拟的通信导航测试验证环境和卫星互联网中试验证环境。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-20 10:29",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/20/content_616264.html"
+      },
+      {
+        "id": "tech-10",
+        "title": "江苏建成城域1毫秒算力时延圈",
+        "summary": "江苏基本建成城域1ms、省内3ms算力时延圈，在用算力中心超300个，总算力规模超250Eflops，支撑无人物流车等低时延应用。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-20 08:58",
+        "url": "https://www.news.cn/tech/20261120/93828de796a143e3b9fb49d046e778bc/c.html"
+      }
+    ],
+    "ai": [
+      {
+        "id": "ai-01",
+        "title": "双十一智能消费升温，电商平台设词元专区",
+        "summary": "商务部介绍，今年双十一智能眼镜、旅行装备网络零售额同比分别增长42.5%和62.3%，多家电商平台设立词元专区推动AI与消费融合。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-20 08:57",
+        "url": "https://www.news.cn/tech/20261120/c296eec0838347eea957fed1c97dbf71/c.html"
+      },
+      {
+        "id": "ai-02",
+        "title": "2030年我国智能算力占比将超九成",
+        "summary": "中国电子信息产业发展研究院预测，到2030年我国智能算力规模接近10000EFLOPS，占总算力比重超过90%，其中推理需求占85%。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-20 17:11",
+        "url": "https://www.news.cn/world/20261120/d89aa9e291c54aeda0c01e198632fa7d/c.html"
+      },
+      {
+        "id": "ai-03",
+        "title": "南京制造借大模型装上老师傅的经验",
+        "summary": "南京梅钢累计建成107个数字化转型项目，投用75套机器人和14台无人化行车；卫岗乳业数智工厂订单响应速度提升60%。",
+        "source": "中国科技网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-19 19:19",
+        "url": "https://www.stdaily.com/web/gdxw/2026-11/19/content_615970.html"
+      },
+      {
+        "id": "ai-04",
+        "title": "把AI装进手机和相机 深圳企业协同创新",
+        "summary": "荣耀发布以AI智能体为核心的Agentic OS，新一代YOYO智能体任务准确率91.8%；影石全景相机内置三颗芯片，可实现一键成片。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-18 15:48",
+        "url": "https://www.news.cn/tech/20261118/25d1e842262f43bf91239a74b2eea188/c.html"
+      },
+      {
+        "id": "ai-05",
+        "title": "人工智能训练师解锁具身智能产业新图景",
+        "summary": "湖北人形机器人创新中心有40名人工智能训练师，通过手柄遥控和VR训练机器人抓取、整理等动作，每天产出超2.1万条有效数据。",
+        "source": "新华网",
+        "sourceOrigin": "china",
+        "publishedAt": "2026-11-18 08:50",
+        "url": "https://www.news.cn/tech/20261118/bb2e69cb572944eda195593d1f8f332b/c.html"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "id": "metric-gold",
+      "kind": "gold",
+      "icon": "◎",
+      "name": "国内金价",
+      "value": "764.55元/克",
+      "source": "上海黄金交易所",
+      "sourceUrl": "https://www.sge.com.cn/graph/Dailyhq?instid=Au99.99",
+      "sourceOrigin": "china",
+      "note": "2026年11月20日收盘价 Au99.99"
+    },
+    {
+      "id": "metric-oil-cn",
+      "kind": "domestic_oil",
+      "icon": "⛽",
+      "name": "国内油价",
+      "value": "92号汽油8.33元/升",
+      "source": "上海市发展和改革委员会",
+      "sourceUrl": "https://fgw.sh.gov.cn/fgw_jggl/20261112/0f5137f27eff456e9e9c2db749801342.html",
+      "sourceOrigin": "china",
+      "note": "2026年11月12日24时起执行，上海最高零售价"
+    },
+    {
+      "id": "metric-oil-intl",
+      "kind": "international_oil",
+      "icon": "🛢️",
+      "name": "国际油价",
+      "value": "布伦特92.57美元/桶",
+      "source": "新华网",
+      "sourceUrl": "https://www.news.cn/world/20261121/a7bcb149ea324323a3116754a8134cf8/c.html",
+      "sourceOrigin": "china",
+      "note": "2026年11月20日收盘价，WTI报83.98美元/桶"
+    },
+    {
+      "id": "metric-usd",
+      "kind": "usd_cny",
+      "icon": "💱",
+      "name": "美元兑人民币",
+      "value": "1美元兑人民币6.7131",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/ags/ms/cm-u-bk-ccpr/CcprHisNew?lang=CN&startDate=2026-11-20&endDate=2026-11-20&currency=USD/CNY",
+      "sourceOrigin": "china",
+      "note": "2026年11月20日人民币汇率中间价"
+    },
+    {
+      "id": "metric-eur",
+      "kind": "eur_cny",
+      "icon": "💶",
+      "name": "欧元兑人民币",
+      "value": "1欧元兑人民币7.3446",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/ags/ms/cm-u-bk-ccpr/CcprHisNew?lang=CN&startDate=2026-11-20&endDate=2026-11-20&currency=EUR/CNY",
+      "sourceOrigin": "china",
+      "note": "2026年11月20日人民币汇率中间价"
+    },
+    {
+      "id": "metric-jpy",
+      "kind": "jpy_cny",
+      "icon": "💴",
+      "name": "日元兑人民币",
+      "value": "100日元兑人民币4.1961",
+      "source": "中国外汇交易中心",
+      "sourceUrl": "https://www.chinamoney.com.cn/ags/ms/cm-u-bk-ccpr/CcprHisNew?lang=CN&startDate=2026-11-20&endDate=2026-11-20&currency=100JPY/CNY",
+      "sourceOrigin": "china",
+      "note": "2026年11月20日人民币汇率中间价"
+    }
+  ],
+  "observation": "今日民生数据密集发布：前10个月吸收外资6069.3亿元、财政收入增长4.9%，普惠小微贷款余额38.8万亿元，汽车消费与充电设施同步扩容，供暖、扫雪等冬季保障就绪。国际上，日本核潜艇动向与中东局势升温，油价窄幅收涨；国内科技在卫星互联网、深空探测与智能工厂上继续推进，AI加速进入制造与消费场景。",
+  "sources": ["新华网", "光明网", "中国日报中文网", "北京市人民政府", "中国新闻网", "中国科技网"],
+  "metricSources": ["上海黄金交易所", "上海市发展和改革委员会", "中国外汇交易中心", "新华网"]
+}
