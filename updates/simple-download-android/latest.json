@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "appId": "simple-download-android",
   "channel": "stable",
-  "version": "2.3.63",
-  "versionCode": 63,
-  "downloadUrl": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-android-v2.3.63/SimpleDownload-2.3.63-Android.apk",
-  "releasePageUrl": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-android-v2.3.63",
-  "size": 43237980,
-  "sha256": "5f644668dc777ae8787c053a526016353b986cfe1025428088bb8158a88a6f25",
-  "publishedAtUtc": "2026-11-19T17:36:58Z",
-  "notes": "设置新增「显示批次回执」，默认关闭。开启后回执显示在所有下载任务下方。统一作品打开时传给系统的文件类型，沿用系统默认应用。"
+  "version": "2.3.64",
+  "versionCode": 64,
+  "downloadUrl": "https://github.com/Lacr1me/springhues-releases/releases/download/simple-download-android-v2.3.64/SimpleDownload-2.3.64-Android.apk",
+  "releasePageUrl": "https://github.com/Lacr1me/springhues-releases/releases/tag/simple-download-android-v2.3.64",
+  "size": 43238600,
+  "sha256": "b89a638e10d39881216a6d08abfa349d5b82c9beb03f134b45cde016a43def91",
+  "publishedAtUtc": "2026-11-21T19:10:00Z",
+  "notes": "一加 Ace 5 Pro（Android 16）支持下载实况动图，可在系统相册中播放。"
 }
